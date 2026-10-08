@@ -91,10 +91,24 @@ def _as_payload(content: Any) -> Any:
         return text
 
 
+def _paper_for_rail(item: Mapping[str, Any]) -> dict[str, Any]:
+    """证据流右栏要的论文卡：精简三列 + 证据深度。"""
+    evidence = item.get("evidence") if isinstance(item.get("evidence"), Mapping) else {}
+    return {
+        "publicationId": item.get("publicationId"),
+        "title": item.get("title"),
+        "year": item.get("year"),
+        "evidenceLevel": evidence.get("evidenceLevel"),
+        "verificationStatus": evidence.get("verificationStatus"),
+    }
+
+
 def summarize_tool_result(tool_name: str, payload: Any) -> dict[str, Any]:
     """给界面看的**短摘要**：不搬运整包数据，只给规模与关键参数。
 
     长 payload 会撑爆上下文与前端；界面要的是"这一步拿到了什么"，不是全量数据。
+    例外是论文卡列表：证据流右栏需要渲染它们，因此带一份**精简**清单（截断到 20 条），
+    字段与给模型的视图同源，不会把原始载荷漏给前端。
     """
     if not isinstance(payload, Mapping):
         return {"text": _as_text(payload)[:200]}
@@ -114,6 +128,8 @@ def summarize_tool_result(tool_name: str, payload: Any) -> dict[str, Any]:
         summary["paths"] = len(payload["paths"])
     if "publicationId" in payload:
         summary["publicationId"] = payload["publicationId"]
+    if "title" in payload:
+        summary["title"] = payload["title"]
     if isinstance(payload.get("scope"), Mapping):
         summary["scope"] = payload["scope"]
     if "status" in payload and "graphId" in payload:
@@ -121,6 +137,11 @@ def summarize_tool_result(tool_name: str, payload: Any) -> dict[str, Any]:
         summary["graphId"] = payload["graphId"]
     if "mode" in payload:
         summary["mode"] = payload["mode"]
+    papers = payload.get("papers")
+    if isinstance(papers, list):
+        summary["paperItems"] = [
+            _paper_for_rail(item) for item in papers[:20] if isinstance(item, Mapping)
+        ]
     if not summary:
         summary["keys"] = sorted(str(key) for key in payload)[:8]
     return summary

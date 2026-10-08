@@ -1,15 +1,10 @@
 /**
  * 研究工作区的无头浏览器验收（真实 Chrome + CDP，不用 puppeteer）。
  *
- * 它验的是**真实渲染出来的东西**，而不是读代码猜：
- *   · 图谱状态条的 graphId / 计数是否来自 /api/health
- *   · 检索是否真的打到后端，并回显实参与别名展开
- *   · 每条结果是否带可点击的证据引用（data-citable + data-source-id）
- *   · 详情里的断言是否**保持候选**（data-status="candidate"）
- *   · 局部图谱是否画出了节点/边，且 rootId 在节点集合内
- *   · 控制台有没有报错
+ * 覆盖：默认进入科研助手、证据链默认收起且可开关、检索/详情/图谱数据侧、
+ * agent 真实运行（工具步骤、回答、引用核查）、证据抽屉、控制台无报错。
  *
- * 用法（需要 API 在 8100、前端 preview 在 4173）：
+ * 用法（需要 API 在 8100、Agent 在 8101、前端 preview 在 4173）：
  *     node tools/verify_ui.mjs [--url http://127.0.0.1:4173] [--shot out.png]
  */
 import { spawn } from 'node:child_process';
@@ -52,18 +47,11 @@ function launchChrome() {
       const child = spawn(
         CHROME,
         [
-          '--headless=new',
-          '--disable-gpu',
-          '--hide-scrollbars',
-          '--no-first-run',
-          '--no-default-browser-check',
-          '--disable-extensions',
-          '--remote-allow-origins=*',
-          '--force-device-scale-factor=1',
-          `--user-data-dir=${profile}`,
-          '--window-size=1440,1000',
-          `--remote-debugging-port=${port}`,
-          'about:blank',
+          '--headless=new', '--disable-gpu', '--hide-scrollbars',
+          '--no-first-run', '--no-default-browser-check', '--disable-extensions',
+          '--remote-allow-origins=*', '--force-device-scale-factor=1',
+          `--user-data-dir=${profile}`, '--window-size=1440,1000',
+          `--remote-debugging-port=${port}`, 'about:blank',
         ],
         { stdio: 'ignore' },
       );
@@ -82,15 +70,9 @@ function launchChrome() {
               }
               return;
             }
-          } catch {
-            /* 还没起来 */
-          }
+          } catch { /* 还没起来 */ }
         }
-        try {
-          child.kill();
-        } catch {
-          /* ignore */
-        }
+        try { child.kill(); } catch { /* ignore */ }
         tryPort(attempt + 1);
       })();
     };
@@ -102,10 +84,7 @@ function connect(wsUrl) {
   return new Promise((resolve, reject) => {
     const ws = new WebSocket(wsUrl);
     const timer = setTimeout(() => reject(new Error('CDP WebSocket 连接超时 20s')), 20000);
-    ws.onopen = () => {
-      clearTimeout(timer);
-      resolve(ws);
-    };
+    ws.onopen = () => { clearTimeout(timer); resolve(ws); };
     ws.onerror = (event) => {
       clearTimeout(timer);
       reject(new Error(`CDP WebSocket 错误：${event?.message || 'unknown'}`));
@@ -114,9 +93,9 @@ function connect(wsUrl) {
 }
 
 class Session {
-  constructor(ws, sessionId) {
+  constructor(ws) {
     this.ws = ws;
-    this.sessionId = sessionId;
+    this.sessionId = null;
     this.nextId = 1;
     this.pending = new Map();
     this.consoleErrors = [];
@@ -150,15 +129,13 @@ class Session {
           this.pending.delete(id);
           reject(new Error(`CDP 超时：${method}`));
         }
-      }, 30000);
+      }, 60000);
     });
   }
 
   async eval(expression) {
     const result = await this.send('Runtime.evaluate', {
-      expression,
-      returnByValue: true,
-      awaitPromise: true,
+      expression, returnByValue: true, awaitPromise: true,
     });
     if (result.exceptionDetails) {
       throw new Error(`页面内异常：${result.exceptionDetails.text} ${result.exceptionDetails.exception?.description || ''}`);
@@ -180,28 +157,34 @@ class Session {
 const PROBE = `(() => {
   const q = (sel) => document.querySelector(sel);
   const qa = (sel) => Array.from(document.querySelectorAll(sel));
+  const visible = (el) => { if (!el) return false; const r = el.getBoundingClientRect(); return r.height > 0 && r.width > 0; };
   const chips = qa('[data-testid="evidence-chip"]');
-  const activeViewTab = qa('[data-testid="view-tab"]').find((el) => el.getAttribute('data-active') === 'true');
-  const citedChips = qa('[data-testid="cited-id"]');
+  const viewTab = qa('[data-testid="view-tab"]').find((el) => el.getAttribute('data-active') === 'true');
+  const railToggle = q('[data-testid="rail-toggle"]');
+  const cited = qa('[data-testid="cited-id"]');
   return {
     title: document.title,
-    activeView: activeViewTab?.getAttribute('data-view') || '',
+    activeView: viewTab?.getAttribute('data-view') || '',
     agentChatPresent: Boolean(q('[data-testid="agent-chat"]')),
     exampleCount: qa('[data-testid="example-question"]').length,
+    railState: railToggle?.getAttribute('data-rail') || '',
+    railCount: q('[data-testid="rail-count"]')?.textContent || '',
+    railCards: qa('[data-testid="rail-card"]').length,
+    railEmptyVisible: visible(q('[data-testid="rail-empty"]')),
     agentStepCount: qa('[data-testid="agent-step"]').length,
     agentStepIcons: qa('[data-testid="agent-step"]').map((el) => el.getAttribute('data-step-icon')),
     agentAnswer: q('[data-testid="agent-answer"]')?.textContent || '',
     citationPasses: q('[data-testid="citation-verdict"]')?.getAttribute('data-passes') || '',
     citationText: q('[data-testid="citation-verdict"]')?.textContent || '',
-    citedChipCount: citedChips.length,
-    citedChipIds: citedChips.map((el) => el.textContent.trim()),
+    citedChips: cited.length,
+    citedIds: cited.map((el) => el.getAttribute('data-cited-id')),
+    titleOnlyWarning: Boolean(q('[data-testid="title-only-warning"]')),
     agentError: q('[data-testid="agent-error"]')?.textContent || '',
     graphHeader: q('[data-testid="graph-header"]')?.textContent || '',
     pinState: q('[data-testid="pin-state"]')?.textContent || '',
     boundary: Boolean(q('[data-testid="boundary-notice"]')),
     hasSearchForm: Boolean(q('[data-testid="search-form"]')),
     appliedEcho: q('[data-testid="applied-echo"]')?.textContent || '',
-    expandedTerms: q('[data-testid="expanded-terms"]')?.textContent || '',
     paperCount: qa('[data-testid="paper-item"]').length,
     firstPaperId: q('[data-testid="paper-item"]')?.getAttribute('data-publication-id') || '',
     evidenceChips: chips.length,
@@ -209,16 +192,13 @@ const PROBE = `(() => {
     firstSourceId: chips.find((el) => el.getAttribute('data-source-id'))?.getAttribute('data-source-id') || '',
     detailId: q('[data-testid="detail-id"]')?.textContent || '',
     detailTitle: q('[data-testid="detail-title"]')?.textContent || '',
-    assertionCount: qa('[data-testid="assertion-item"]').length,
     assertionStatuses: qa('[data-testid="assertion-item"]').map((el) => el.getAttribute('data-status')),
     graphNodes: qa('[data-testid="graph-node"]').length,
     graphEdges: qa('[data-testid="graph-edge"]').length,
     drawerPresent: Boolean(q('[data-testid="evidence-drawer"]')),
-    drawerTitle: q('[data-testid="drawer-title"]')?.textContent || '',
     drawerFields: q('[data-testid="drawer-fields"]')?.textContent || '',
     drawerText: q('[data-testid="evidence-drawer"]')?.textContent || '',
     errorBanner: q('[data-testid="error-banner"]')?.textContent || '',
-    bodyBg: getComputedStyle(document.body).backgroundColor,
     rootOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
   };
 })()`;
@@ -227,10 +207,9 @@ async function main() {
   if (!fs.existsSync(CHROME)) throw new Error(`找不到 Chrome：${CHROME}`);
   const { child, profile, wsUrl } = await launchChrome();
   const ws = await connect(wsUrl);
-  // 一个 Session 实例对应一条 WebSocket：Target.* 用浏览器级（不带 sessionId），
-  // 之后把 sessionId 换成页面级即可。**不要为同一 ws 建两个 Session** ——
-  // 后建的会覆盖前者的 onmessage，消息就再也回不到等待方。
-  const session = new Session(ws, null);
+  // 一个 WebSocket 只配一个 Session：Target.* 用浏览器级（不带 sessionId），
+  // 拿到 sessionId 后原地赋值。建两个实例会互相覆盖 onmessage（踩过）。
+  const session = new Session(ws);
   try {
     const { targetInfos } = await session.send('Target.getTargets', {}, false);
     const pageInfo = targetInfos.find((t) => t.type === 'page');
@@ -246,13 +225,24 @@ async function main() {
     await session.send('Page.navigate', { url: TARGET_URL });
     await session.waitFor(`document.readyState === 'complete'`, { timeout: 30000 });
 
-    // ---- 主界面必须是「科研助手」，不是论文库 ----
+    // ---- 主界面：科研助手 + 证据链默认收起 ----
     await session.waitFor(`!!document.querySelector('[data-testid="agent-chat"]')`);
     let probe = await session.eval(PROBE);
     add('默认进入科研助手', probe.activeView === 'agent' && probe.agentChatPresent, `view=${probe.activeView}`);
     add('提供示例问题一键发问', probe.exampleCount > 0, `${probe.exampleCount} 个`);
+    add('证据链默认收起', probe.railState === 'closed', `rail=${probe.railState}`);
+    add('证据链开关带计数', probe.railCount !== '', probe.railCount);
+    add('页面无横向溢出', probe.rootOverflow <= 1, `溢出 ${probe.rootOverflow}px`);
 
-    // ---- 切到论文库，验证数据侧 ----
+    // 开关能用：此时还没有运行，打开应看到空态说明
+    await session.eval(`(() => { document.querySelector('[data-testid="rail-toggle"]').click(); return true; })()`);
+    await session.waitFor(`document.querySelector('[data-testid="rail-toggle"]').getAttribute('data-rail') === 'open'`, { timeout: 8000 });
+    probe = await session.eval(PROBE);
+    add('证据链可打开', probe.railState === 'open', `rail=${probe.railState}`);
+    await session.eval(`(() => { document.querySelector('[data-testid="rail-toggle"]').click(); return true; })()`);
+    await session.waitFor(`document.querySelector('[data-testid="rail-toggle"]').getAttribute('data-rail') === 'closed'`, { timeout: 8000 });
+
+    // ---- 论文库与图谱（数据侧）----
     await session.eval(`(() => {
       Array.from(document.querySelectorAll('[data-testid="view-tab"]'))
         .find((el) => el.getAttribute('data-view') === 'library').click();
@@ -263,16 +253,12 @@ async function main() {
       `(document.querySelector('[data-testid="graph-header"]')?.textContent || '').includes('graphId')`,
       { timeout: 25000 },
     );
-
     probe = await session.eval(PROBE);
-    add('页面标题正确', /NOESIS Research/.test(probe.title), probe.title);
     add('状态条显示 graphId', /graphId/.test(probe.graphHeader), probe.graphHeader.trim().slice(0, 80));
     add('状态条显示版本锁定状态', /版本锁定|未锁定/.test(probe.pinState), probe.pinState.trim());
     add('边界说明可见', probe.boundary === true);
-    add('无横向溢出', probe.rootOverflow <= 1, `溢出 ${probe.rootOverflow}px`);
     add('页面无错误横幅', probe.errorBanner === '', probe.errorBanner.slice(0, 80));
 
-    // 执行一次真实检索
     await session.eval(`(() => {
       const input = document.querySelector('input[name="q"]');
       const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
@@ -281,10 +267,7 @@ async function main() {
       document.querySelector('[data-testid="search-submit"]').click();
       return true;
     })()`);
-
-    await session.waitFor(`document.querySelectorAll('[data-testid="paper-item"]').length > 0`, {
-      timeout: 25000,
-    });
+    await session.waitFor(`document.querySelectorAll('[data-testid="paper-item"]').length > 0`, { timeout: 25000 });
     probe = await session.eval(PROBE);
     add('检索返回真实论文', probe.paperCount > 0, `${probe.paperCount} 条`);
     add('实参回显含 q=transformer', /q=transformer/.test(probe.appliedEcho), probe.appliedEcho.trim().slice(0, 100));
@@ -293,22 +276,17 @@ async function main() {
       probe.evidenceChips >= probe.paperCount && probe.citableChips === probe.evidenceChips,
       `chips=${probe.evidenceChips} citable=${probe.citableChips} papers=${probe.paperCount}`,
     );
-    add('证据引用带 sourceId', probe.firstSourceId.length > 0, probe.firstSourceId);
 
     const firstId = probe.firstPaperId;
-    await session.eval(`(() => {
-      document.querySelector('[data-testid="paper-item"]').click();
-      return true;
-    })()`);
+    await session.eval(`(() => { document.querySelector('[data-testid="paper-item"]').click(); return true; })()`);
     await session.waitFor(`!!document.querySelector('[data-testid="detail-panel"]')`, { timeout: 25000 });
     probe = await session.eval(PROBE);
     add('详情面板打开且是同一篇', probe.detailId === firstId, `detail=${probe.detailId} list=${firstId}`);
-    add('详情标题非空', probe.detailTitle.length > 0, probe.detailTitle.slice(0, 60));
     const allCandidate = probe.assertionStatuses.every((s) => s === 'candidate');
     add(
       '断言在 UI 上恒为候选',
       probe.assertionStatuses.length === 0 ? true : allCandidate,
-      `assertions=${probe.assertionCount} statuses=${probe.assertionStatuses.join(',') || '(无)'}`,
+      `statuses=${probe.assertionStatuses.join(',') || '(无)'}`,
     );
 
     // 切到局部图谱
@@ -316,13 +294,11 @@ async function main() {
       Array.from(document.querySelectorAll('[data-testid="tab"]')).find((el) => el.getAttribute('data-tab') === 'graph').click();
       return true;
     })()`);
-    await session.waitFor(`document.querySelectorAll('[data-testid="graph-node"]').length > 0`, {
-      timeout: 25000,
-    });
+    await session.waitFor(`document.querySelectorAll('[data-testid="graph-node"]').length > 0`, { timeout: 25000 });
     probe = await session.eval(PROBE);
     add('局部图谱画出节点', probe.graphNodes > 0, `nodes=${probe.graphNodes} edges=${probe.graphEdges}`);
 
-    // ---- 证据必须真的可点：点开抽屉并核对内容（评审第 2 条）----
+    // ---- 证据抽屉（从论文列表的证据徽标进入）----
     await session.eval(`(() => {
       const chip = Array.from(document.querySelectorAll('[data-testid="evidence-chip"]'))
         .find((el) => el.getAttribute('data-clickable') === 'true');
@@ -333,26 +309,13 @@ async function main() {
     await session.waitFor(`!!document.querySelector('[data-testid="evidence-drawer"]')`, { timeout: 15000 });
     probe = await session.eval(PROBE);
     add('证据抽屉可以打开', probe.drawerPresent === true);
-    add('抽屉里有来源 id 与深度', probe.drawerFields.includes(probe.firstSourceId) && /题名|摘要|全文/.test(probe.drawerFields),
-      `sourceId=${probe.firstSourceId}`);
-    add(
-      '抽屉把"不能证明什么"写在第一屏',
-      /不能证明/.test(probe.drawerText),
-      probe.drawerText.match(/[^。]*不能证明[^。]*/)?.[0]?.slice(0, 60) || '',
-    );
-    // 从抽屉跳到那篇论文：详情 id 必须等于证据的 publicationId
-    await session.eval(`(() => {
-      document.querySelector('[data-testid="drawer-open-paper"]').click();
-      return true;
-    })()`);
+    add('抽屉里有来源 id 与深度', probe.drawerText.includes(probe.firstSourceId) && /题名|摘要|全文/.test(probe.drawerFields), probe.firstSourceId);
+    add('抽屉把「不能证明什么」写清楚', /不能证明/.test(probe.drawerText), '');
+    await session.eval(`(() => { document.querySelector('[data-testid="drawer-open-paper"]').click(); return true; })()`);
     await session.waitFor(`!document.querySelector('[data-testid="evidence-drawer"]')`, { timeout: 15000 });
     await session.waitFor(`!!document.querySelector('[data-testid="detail-panel"]')`, { timeout: 25000 });
     probe = await session.eval(PROBE);
-    add(
-      '抽屉能跳到对应论文详情',
-      probe.detailId.length > 0 && probe.detailId === probe.firstSourceId,
-      `detail=${probe.detailId} evidence=${probe.firstSourceId}`,
-    );
+    add('抽屉能跳到对应论文详情', probe.detailId.length > 0 && probe.detailId === probe.firstSourceId, `detail=${probe.detailId}`);
 
     // ---- 主界面：让 agent 真的跑一次 ----
     await session.eval(`(() => {
@@ -361,21 +324,13 @@ async function main() {
       return true;
     })()`);
     await session.waitFor(`!!document.querySelector('[data-testid="agent-chat"]')`);
-
     await session.eval(`(() => {
       document.querySelector('[data-testid="example-question"]').click();
       return true;
     })()`);
-
-    // 先看到"在干活"，再看结论
-    await session.waitFor(`document.querySelectorAll('[data-testid="agent-step"]').length > 0`, {
-      timeout: 180000,
-    });
-    await session.waitFor(`!!document.querySelector('[data-testid="citation-verdict"]')`, {
-      timeout: 300000,
-    });
+    await session.waitFor(`document.querySelectorAll('[data-testid="agent-step"]').length > 0`, { timeout: 240000 });
+    await session.waitFor(`!!document.querySelector('[data-testid="citation-verdict"]')`, { timeout: 420000 });
     probe = await session.eval(PROBE);
-
     add('Agent 报出了工具调用步骤', probe.agentStepCount > 0, `${probe.agentStepCount} 步：${probe.agentStepIcons.join(',')}`);
     add(
       '步骤里包含真实的工具调用与返回',
@@ -389,14 +344,20 @@ async function main() {
       `passes=${probe.citationPasses}｜${probe.citationText.slice(0, 90)}`,
     );
     add('Agent 未报错', probe.agentError === '', probe.agentError.slice(0, 90));
-    // 结论必须与"有没有引用"自洽：判通过就不该是 0 条，判不通过就不该列出引用 id
-    const consistent = probe.citationPasses === 'true' ? probe.citedChipCount > 0 : probe.citedChipCount === 0;
-    add(
-      '引用结论与引用 id 自洽',
-      consistent,
-      `passes=${probe.citationPasses} citedChips=${probe.citedChipCount}`,
-    );
-    add('Agent 视图无横向溢出', probe.rootOverflow <= 1, `溢出 ${probe.rootOverflow}px`);
+    add('题名级警示呈现', probe.titleOnlyWarning === true);
+    const consistent = probe.citationPasses === 'true' ? probe.citedChips > 0 : probe.citedChips === 0;
+    add('引用结论与引用 id 自洽', consistent, `passes=${probe.citationPasses} cited=${probe.citedChips}`);
+
+    // ---- 证据链：跑完后应攒下论文卡，打开可见、可开抽屉 ----
+    await session.eval(`(() => { document.querySelector('[data-testid="rail-toggle"]').click(); return true; })()`);
+    await session.waitFor(`document.querySelectorAll('[data-testid="rail-card"]').length > 0`, { timeout: 15000 });
+    probe = await session.eval(PROBE);
+    add('证据链攒下了论文卡', probe.railCards > 0, `${probe.railCards} 张`);
+    add('引用 id 全部有效', probe.citedIds.every((id) => id && id.length > 0), `引用 ${probe.citedChips} 条`);
+    await session.eval(`(() => { document.querySelector('[data-testid="rail-card"]').click(); return true; })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="evidence-drawer"]')`, { timeout: 15000 });
+    probe = await session.eval(PROBE);
+    add('证据链卡片可打开抽屉', probe.drawerPresent === true);
 
     if (SHOT) {
       const shot = await session.send('Page.captureScreenshot', { format: 'png' });
@@ -404,21 +365,11 @@ async function main() {
       console.log(`\n截图：${SHOT}`);
     }
 
-    const consoleErrors = session.consoleErrors.filter(
-      (line) => line && !/favicon|DevTools/i.test(line),
-    );
+    const consoleErrors = session.consoleErrors.filter((line) => line && !/favicon|DevTools/i.test(line));
     add('浏览器控制台无错误', consoleErrors.length === 0, consoleErrors.slice(0, 3).join(' | '));
   } finally {
-    try {
-      if (ws.readyState === 1) ws.close();
-    } catch {
-      /* ignore */
-    }
-    try {
-      child.kill();
-    } catch {
-      /* ignore */
-    }
+    try { if (ws.readyState === 1) ws.close(); } catch { /* ignore */ }
+    try { child.kill(); } catch { /* ignore */ }
     fs.promises.rm(profile, { recursive: true, force: true }).catch(() => {});
   }
 

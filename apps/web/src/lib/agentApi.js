@@ -50,6 +50,7 @@ export function createAgentApi(base = DEFAULT_AGENT_BASE) {
   return {
     base,
     health: () => request(base, '/health'),
+    listRuns: (limit = 20) => request(base, `/runs?limit=${encodeURIComponent(limit)}`),
     startRun: (question) =>
       request(base, '/runs', { method: 'POST', body: JSON.stringify({ question }) }),
     getRun: (runId) => request(base, `/runs/${encodeURIComponent(runId)}`),

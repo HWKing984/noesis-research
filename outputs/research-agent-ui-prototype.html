@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NOESIS Research · 科研助手（A+B 融合原型）</title>
+<style>
+/* ===== 设计 token：逐项照抄 NOESIS frontend/src/index.css，不自造 ===== */
+:root{
+  --bg-primary:#ffffff; --bg-secondary:#f7f7f8; --bg-tertiary:#ececed;
+  --border-subtle:rgba(0,0,0,.06); --border-default:rgba(0,0,0,.10); --border-strong:rgba(0,0,0,.16);
+  --text-primary:#1a1a1c; --text-secondary:#525257; --text-tertiary:#8b8b92; --text-muted:#b0b0b5;
+  --accent:#555555; --accent-light:#666666; --accent-dim:rgba(85,85,85,.08); --accent-glow:rgba(85,85,85,.15);
+  --danger:#dc2626; --warning:#d97706; --success:#16a34a;
+  --font-body:'Geist',system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+  --font-serif:'Crimson Pro',Georgia,'Songti SC','STSong','SimSun','Noto Serif SC',serif;
+  --font-mono:'DM Mono','Cascadia Code',Consolas,'SFMono-Regular',Menlo,monospace;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px; --radius-2xl:24px;
+  --sidebar-width:248px; --rail-width:348px;
+  /* 聊天列宽：证据链关/开各有一档，开栏时按剩余宽度走黄金比例 */
+  --chat-max:clamp(680px, calc((100vw - var(--sidebar-width)) / 1.618), 900px);
+}
+body.is-rail{
+  --chat-max:clamp(520px, calc((100vw - var(--sidebar-width) - var(--rail-width)) / 1.618), 760px);
+}
+[data-theme="dark"]{
+  --bg-primary:#212121; --bg-secondary:#171717; --bg-tertiary:#2a2a2a;
+  --border-subtle:rgba(255,255,255,.05); --border-default:rgba(255,255,255,.10); --border-strong:rgba(255,255,255,.15);
+  --text-primary:#ececf1; --text-secondary:#a1a1aa; --text-tertiary:#71717a; --text-muted:#52525b;
+  --accent:#aaaaaa; --accent-light:#cccccc; --accent-dim:rgba(170,170,170,.10); --accent-glow:rgba(170,170,170,.20);
+  --danger:#ef4444; --warning:#f59e0b; --success:#22c55e;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg-secondary);color:var(--text-primary);font-family:var(--font-body);
+  font-size:14px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font-family:inherit;font-size:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0}
+svg{display:block}
+.mono{font-family:var(--font-mono);font-size:12px}
+
+/* ===== 外壳 ===== */
+.app{display:flex;height:100vh;overflow:hidden}
+.sb{width:var(--sidebar-width);flex:0 0 auto;background:var(--bg-primary);
+  border-right:1px solid var(--border-subtle);display:flex;flex-direction:column;padding:12px 10px;gap:2px}
+.sb-brand{display:flex;align-items:center;gap:8px;padding:6px 10px 14px;font-weight:600;font-size:13.5px}
+.sb-brand .logo{width:22px;height:22px;border-radius:6px;background:var(--text-primary);color:var(--bg-primary);
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+.sb-new{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:var(--radius-md);
+  border:1px solid var(--border-default);font-size:13.5px;margin-bottom:10px}
+.sb-new:hover{background:var(--bg-tertiary)}
+.sb-new svg{width:15px;height:15px;stroke:var(--text-secondary);stroke-width:1.7;fill:none}
+.sb-cap{padding:6px 10px 2px;font-size:11.5px;color:var(--text-tertiary)}
+.sb-item{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:var(--radius-md);
+  font-size:12.5px;color:var(--text-secondary);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sb-item:hover{background:var(--bg-tertiary)}
+.sb-item.is-active{background:var(--bg-tertiary);color:var(--text-primary)}
+.sb-item svg{width:14px;height:14px;stroke:var(--text-tertiary);stroke-width:1.7;fill:none;flex:0 0 auto}
+.sb-foot{margin-top:auto;border-top:1px solid var(--border-subtle);padding:10px 10px 4px;
+  font-size:11.5px;color:var(--text-tertiary)}
+.sb-foot .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--success);display:inline-block;margin-right:6px}
+
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:10px;padding:9px 20px;border-bottom:1px solid var(--border-subtle);
+  background:var(--bg-primary);font-size:12.5px;color:var(--text-secondary);flex:0 0 auto}
+.top .crumb{font-weight:500;color:var(--text-primary)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border:1px solid var(--border-subtle);
+  border-radius:999px;font-size:11.5px;color:var(--text-secondary);background:var(--bg-primary)}
+/* 证据链开关：默认关；带计数徽标，让人知道里面有东西 */
+.railtoggle{display:inline-flex;align-items:center;gap:7px;padding:4px 12px;border-radius:999px;
+  border:1px solid var(--border-default);font-size:12px;color:var(--text-secondary);margin-left:auto;transition:all .15s}
+.railtoggle:hover{background:var(--bg-tertiary);color:var(--text-primary)}
+.railtoggle.is-on{background:var(--text-primary);color:var(--bg-primary);border-color:var(--text-primary)}
+.railtoggle.is-on svg{stroke:var(--bg-primary)}
+.railtoggle svg{width:14px;height:14px;stroke:var(--text-secondary);stroke-width:1.7;fill:none}
+.railtoggle .badge{font-family:var(--font-mono);font-size:11px;background:var(--bg-tertiary);
+  color:var(--text-secondary);border-radius:999px;padding:0 7px;line-height:18px}
+.railtoggle.is-on .badge{background:rgba(255,255,255,.18);color:var(--bg-primary)}
+
+.stage{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column}
+.row{display:flex;flex:1;min-height:0;align-items:stretch}
+.chatcol{flex:1;min-width:0;display:flex;flex-direction:column}
+.col{width:100%;max-width:var(--chat-max);margin:auto;padding:26px 32px 30px}
+
+/* ===== 对话 ===== */
+.thread{display:flex;flex-direction:column;gap:22px}
+.msg-user{align-self:flex-end;max-width:72%;background:var(--bg-tertiary);border-radius:var(--radius-2xl);
+  padding:9px 16px;font-size:14px}
+.msg-ai{font-size:14.5px;line-height:1.8}
+.msg-ai p{margin:8px 0}
+.msg-ai ul{margin:6px 0;padding-left:20px}
+.msg-ai li{margin:4px 0}
+.trace{border:1px solid var(--border-subtle);background:var(--bg-primary);border-radius:var(--radius-lg);overflow:hidden}
+.trace-sum{display:flex;align-items:center;gap:9px;width:100%;padding:9px 13px;text-align:left;
+  font-size:12.5px;color:var(--text-secondary)}
+.trace-sum:hover{background:var(--bg-secondary)}
+.trace-sum svg{width:14px;height:14px;stroke:var(--text-tertiary);stroke-width:1.7;fill:none;flex:0 0 auto}
+.trace-sum .n{margin-left:auto;font-family:var(--font-mono);font-size:11.5px;color:var(--text-tertiary)}
+.trace-body{display:none;border-top:1px solid var(--border-subtle);padding:8px 13px 10px}
+.trace.is-open .trace-body{display:block}
+.tstep{display:flex;align-items:baseline;gap:9px;padding:4px 0;font-size:12.5px;color:var(--text-secondary)}
+.tstep .t{font-family:var(--font-mono);font-size:11.5px;color:var(--text-tertiary);flex:0 0 128px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tstep .c{margin-left:auto;font-family:var(--font-mono);font-size:11.5px;color:var(--text-tertiary);white-space:nowrap}
+.pill{display:inline-flex;align-items:center;padding:1px 7px;border:1px solid var(--border-subtle);
+  border-radius:999px;background:var(--bg-primary);font-size:11.5px;color:var(--text-secondary);
+  font-family:var(--font-mono);cursor:pointer;transition:all .15s}
+.pill:hover{background:var(--accent-dim);color:var(--text-primary);border-color:var(--border-default)}
+.okcard{border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:11px 14px;
+  font-size:12.5px;background:var(--bg-primary);display:flex;gap:10px;align-items:flex-start}
+.okcard .ic{width:15px;height:15px;flex:0 0 auto;margin-top:2px}
+.okcard .sub{color:var(--text-tertiary);font-size:11.5px;margin-top:2px}
+.warn{border:1px solid var(--border-subtle);border-left:2px solid var(--warning);border-radius:var(--radius-md);
+  padding:9px 12px;font-size:12.5px;color:var(--text-secondary);background:var(--bg-primary)}
+
+/* ===== 空态 ===== */
+.hero{margin:auto;width:100%;padding:24px 0 30px;text-align:center}
+.hero h1{font-size:22px;font-weight:600;margin:0 0 8px}
+.hero .sub{font-size:13.5px;color:var(--text-secondary);max-width:470px;margin:0 auto}
+.hero .ex{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:20px 0 24px}
+.hero .ex button{padding:7px 14px;border:1px solid var(--border-default);border-radius:999px;
+  font-size:13px;color:var(--text-secondary);background:var(--bg-primary);transition:all .15s}
+.hero .ex button:hover{border-color:var(--border-strong);color:var(--text-primary);background:var(--bg-tertiary)}
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:left}
+.cap{border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:12px 14px;background:var(--bg-primary)}
+.cap .t{font-size:13px;font-weight:500;display:flex;align-items:center;gap:7px}
+.cap .t svg{width:15px;height:15px;stroke:var(--text-tertiary);stroke-width:1.7;fill:none}
+.cap .d{font-size:12px;color:var(--text-tertiary);margin-top:4px;line-height:1.55}
+
+/* ===== 输入区 ===== */
+.composer{position:sticky;bottom:0;padding:10px 0 12px;
+  background:linear-gradient(to top,var(--bg-secondary) 62%,transparent)}
+.cbox{border:1px solid var(--border-default);border-radius:var(--radius-2xl);background:var(--bg-primary);
+  padding:11px 12px 11px 16px;display:flex;align-items:flex-end;gap:10px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.cbox textarea{flex:1;border:none;outline:none;resize:none;font:inherit;font-size:14px;line-height:1.6;
+  color:var(--text-primary);background:transparent;max-height:120px}
+.cbox textarea::placeholder{color:var(--text-muted)}
+.send{width:34px;height:34px;border-radius:50%;background:var(--text-primary);color:var(--bg-primary);
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.send svg{width:15px;height:15px;stroke:currentColor;stroke-width:1.9;fill:none}
+.chint{font-size:11.5px;color:var(--text-tertiary);padding:7px 6px 0}
+
+/* ===== 证据链右栏：默认收起，由 body.is-rail 展开 ===== */
+/* 边线画在内层容器上：收起时外层 width:0 + overflow:hidden 才是真正的 0px，
+   边线挂在 .rail 上会留一条 1px 的ghost 竖线（断言抓到过） */
+.rail{width:0;flex:0 0 auto;overflow:hidden;background:var(--bg-secondary);transition:width .22s ease;display:flex}
+body.is-rail .rail{width:var(--rail-width)}
+.rail-inner{width:var(--rail-width);flex:0 0 auto;display:flex;flex-direction:column;min-height:0;
+  border-left:1px solid var(--border-subtle)}
+.rail-h{padding:13px 18px 9px;font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:8px}
+.rail-h .n{font-family:var(--font-mono);font-size:11.5px;color:var(--text-tertiary);font-weight:400}
+.rail-f{display:flex;gap:6px;padding:0 18px 10px;flex-wrap:wrap}
+.rail-f button{padding:3px 11px;border-radius:999px;border:1px solid var(--border-default);
+  font-size:11.5px;color:var(--text-secondary)}
+.rail-f button.is-on{background:var(--text-primary);color:var(--bg-primary);border-color:var(--text-primary)}
+.rail-body{flex:1;overflow-y:auto;padding:2px 18px 20px;display:flex;flex-direction:column;gap:9px}
+.pcard{border:1px solid var(--border-subtle);border-radius:var(--radius-lg);background:var(--bg-primary);
+  padding:11px 13px;cursor:pointer;text-align:left;transition:border-color .15s}
+.pcard:hover{border-color:var(--border-strong)}
+.pcard .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+.pcard .m{display:flex;align-items:center;gap:7px;margin-top:6px;font-size:11.5px;
+  color:var(--text-tertiary);flex-wrap:wrap}
+.pcard .lv{padding:1px 7px;border-radius:999px;border:1px solid var(--border-subtle);font-family:var(--font-mono)}
+.pcard .ev{margin-top:7px;font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rail-empty{padding:26px 18px;font-size:12.5px;color:var(--text-tertiary);text-align:center;line-height:1.7}
+
+/* ===== 证据抽屉 ===== */
+.mask{position:fixed;inset:0;background:rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.drawer{position:fixed;top:0;right:0;height:100%;width:400px;max-width:92vw;background:var(--bg-primary);
+  border-left:1px solid var(--border-subtle);transform:translateX(102%);transition:transform .24s ease;
+  z-index:41;padding:18px 20px;overflow-y:auto}
+body.is-drawer .mask{opacity:1;pointer-events:auto}
+body.is-drawer .drawer{transform:none}
+.drawer h3{margin:0 0 2px;font-size:14.5px}
+.drawer .id{font-family:var(--font-mono);font-size:11.5px;color:var(--text-tertiary);word-break:break-all}
+.drawer .grid{margin:14px 0;display:flex;flex-direction:column;gap:9px;font-size:12.5px}
+.drawer .grid .r{display:grid;grid-template-columns:76px 1fr;gap:10px}
+.drawer .grid .k{color:var(--text-tertiary)}
+.drawer .note{border:1px solid var(--border-subtle);border-left:2px solid var(--warning);
+  border-radius:var(--radius-md);padding:9px 12px;font-size:12.5px;color:var(--text-secondary);background:var(--bg-secondary)}
+.drawer .acts{display:flex;gap:8px;margin-top:16px}
+.drawer .acts button{padding:7px 13px;border-radius:var(--radius-md);font-size:12.5px;border:1px solid var(--border-default)}
+.drawer .acts .pri{background:var(--text-primary);color:var(--bg-primary);border-color:var(--text-primary)}
+.drawer .close{position:absolute;top:12px;right:14px;width:28px;height:28px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--text-secondary)}
+.drawer .close:hover{background:var(--bg-tertiary)}
+.drawer .close svg{width:14px;height:14px;stroke:currentColor;stroke-width:1.8;fill:none}
+
+/* ===== 状态显隐 ===== */
+.state-empty{display:none}
+body[data-state="empty"] .state-empty{display:flex}
+.state-result{display:none}
+body[data-state="result"] .state-result{display:flex}
+
+/* ===== 评审控制条（外壳，非产品）===== */
+.revbar{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:60;display:flex;
+  align-items:center;gap:10px;background:var(--bg-primary);border:1px solid var(--border-strong);
+  border-radius:14px;padding:8px 12px;box-shadow:0 8px 30px rgba(0,0,0,.14);width:max-content;
+  max-width:calc(100vw - 28px)}
+.revbar .grp{display:flex;align-items:center;gap:5px}
+.revbar .lab{font-size:11.5px;color:var(--text-tertiary);padding:0 2px}
+.revbar button.g{padding:5px 12px;border-radius:999px;border:1px solid var(--border-default);
+  font-size:12.5px;color:var(--text-secondary)}
+.revbar button.g.is-on{background:var(--text-primary);color:var(--bg-primary);border-color:var(--text-primary)}
+.revbar .cost{font-size:11.5px;color:var(--text-tertiary);max-width:300px;line-height:1.45}
+.revbar .cost b{color:var(--text-secondary)}
+body.is-audit .revbar{display:none}
+</style>
+</head>
+<body data-state="empty">
+<div class="app">
+  <aside class="sb">
+    <div class="sb-brand"><span class="logo">N</span>NOESIS Research</div>
+    <button class="sb-new"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>新的研究</button>
+    <div class="sb-cap">本次会话</div>
+    <div class="sb-item is-active"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>transformer 相关论文盘点</div>
+    <div class="sb-cap">历史（持久化后可用）</div>
+    <div class="sb-item"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>扩散模型用于图像生成</div>
+    <div class="sb-item"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>图神经网络做异常检测</div>
+    <div class="sb-foot">
+      <div class="row"><span><span class="dot"></span>图谱已就绪</span><span class="mono">v ed1639…</span></div>
+      <div class="row" style="margin-top:3px"><span>书目 20,000</span><span>候选断言 21,497</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <span class="crumb">科研助手</span>
+      <span class="chip"><span class="dot"></span>live · ed1639…</span>
+      <button class="railtoggle" id="railToggle" data-act="rail">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/></svg>
+        证据链 <span class="badge" id="railCount">49</span>
+      </button>
+    </div>
+
+    <div class="row">
+      <div class="chatcol">
+        <div class="stage">
+          <div class="col state-empty" style="flex-direction:column">
+            <div class="hero">
+              <h1>今天研究什么？</h1>
+              <p class="sub">我会在这 2 万篇文献的候选关系图谱上检索，边查边把过程和证据摆给你。</p>
+              <div class="ex">
+                <button>有哪些关于 transformer 的论文？</button>
+                <button>扩散模型在图像生成上的工作</button>
+                <button>图神经网络用在异常检测的有哪些</button>
+                <button>2025 年 CVPR 的扩散 transformer</button>
+              </div>
+              <div class="caps">
+                <div class="cap"><div class="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>自主检索</div><div class="d">自己决定查什么、查几次，过程全部可见</div></div>
+                <div class="cap"><div class="t"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>句句有来源</div><div class="d">每个事实断句都挂记录 id，可点开核对</div></div>
+                <div class="cap"><div class="t"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>边界诚实</div><div class="d">候选关系不说成结论；没有引用数据就拒答</div></div>
+              </div>
+            </div>
+            <div class="composer">
+              <div class="cbox"><textarea rows="1" placeholder="问一个科研问题…"></textarea>
+                <button class="send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></div>
+              <div class="chint">候选关系图谱 · 题名级证据 · 无引用数据（不回答被引次数/引用链） · 证据链可从右上角打开</div>
+            </div>
+          </div>
+
+          <div class="col state-result" style="flex-direction:column">
+            <div class="thread">
+              <div class="msg-user">有哪些关于 transformer 的论文？</div>
+              <div class="msg-ai">
+                <div class="trace" id="traceA">
+                  <button class="trace-sum" data-act="trace">
+                    <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+                    已检索 7 次 · 命中 66 条记录 · 49 条证据可用
+                    <span class="n">展开</span>
+                  </button>
+                  <div class="trace-body">
+                    <div class="tstep"><span class="t">report_graph_scope</span><span>图谱就绪 · 20,000 书目</span><span class="c">ok</span></div>
+                    <div class="tstep"><span class="t">search_papers</span><span class="mono">q=transformer limit=25</span><span class="c">25 篇</span></div>
+                    <div class="tstep"><span class="t">search_papers</span><span class="mono">q="attention is all you need"</span><span class="c">10 篇</span></div>
+                    <div class="tstep"><span class="t">search_papers</span><span class="mono">q="vision transformer" year=2024</span><span class="c">0 篇</span></div>
+                    <div class="tstep"><span class="t">search_papers</span><span class="mono">q="diffusion transformer"</span><span class="c">7 篇</span></div>
+                    <div class="tstep"><span class="t">search_papers</span><span class="mono">q=transformer year=2025</span><span class="c">8 篇</span></div>
+                    <div class="tstep"><span class="t">get_paper</span><span class="mono">conf/IEEEwisa/LinGHW25</span><span class="c">2 断言</span></div>
+                    <div class="tstep"><span class="t">get_paper_evidence</span><span class="mono">同上</span><span class="c">证据 2 条</span></div>
+                  </div>
+                </div>
+                <h4 style="font-size:15px;margin:16px 0 6px">transformer 相关论文盘点</h4>
+                <p>图谱里与 transformer 直接相关的记录共 25 篇
+                  <span class="pill" data-act="drawer">1</span>，其中 2025 年 8 篇
+                  <span class="pill" data-act="drawer">2</span>。按主题分三块：</p>
+                <ul>
+                  <li><b>视觉 transformer</b>：GaussTR 把高斯 transformer 与基础模型对齐做 3D 空间理解
+                    <span class="pill" data-act="drawer">3</span>；STAPLE 用孪生 transformer 做无参考画质评估
+                    <span class="pill" data-act="drawer">4</span>。</li>
+                  <li><b>扩散 transformer</b>：DiffVecFont 用掩码扩散 transformer 生成矢量字体
+                    <span class="pill" data-act="drawer">5</span>；MotionStone 把运动强度解耦用于图生视频
+                    <span class="pill" data-act="drawer">6</span>。</li>
+                  <li><b>领域应用</b>：ShrimpFormer-X 用 transformer 数虾苗
+                    <span class="pill" data-act="drawer">1</span>，是这套图谱里「方法→任务」候选断言的典型样本。</li>
+                </ul>
+                <p>注意：以上只是「题名里出现了这些词」，不是论文的结论。</p>
+                <div class="okcard" style="margin-top:14px">
+                  <svg class="ic" viewBox="0 0 24 24" style="stroke:var(--success);fill:none;stroke-width:1.8"><path d="M20 6 9 17l-5-5"/></svg>
+                  <div><b>引用核查通过</b><div class="sub">回答里实际引用 39 / 可用 49 条 · 按句可溯率 22/54 = 41% · 证据等级：题名</div></div>
+                </div>
+                <div class="warn" style="margin-top:9px">以上证据全部是<b>题名级</b>：只能证明这些论文存在、题名里出现了相关词，<b>不能证明</b>它们真的做了回答里描述的事。</div>
+              </div>
+            </div>
+            <div class="composer">
+              <div class="cbox"><textarea rows="1" placeholder="继续追问，例如：这几篇里哪些是候选断言？"></textarea>
+                <button class="send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></div>
+              <div class="chint">候选关系图谱 · 题名级证据 · 无引用数据（不回答被引次数/引用链） · 证据链可从右上角打开</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 证据链右栏：默认收起 -->
+      <aside class="rail" aria-label="证据链">
+        <div class="rail-inner">
+          <div class="rail-h">证据链 <span class="n">49 条 · 按命中顺序</span></div>
+          <div class="rail-f">
+            <button class="is-on">全部</button><button>题名级</button><button>候选断言</button><button>2025</button>
+          </div>
+          <div class="rail-body">
+            <div class="pcard" data-act="drawer"><div class="t">ShrimpFormer-X: A Transformer-Based Framework for Counting Shrimp Larvae</div>
+              <div class="m"><span>IEEE WISA 2025</span><span>·</span><span class="lv">题名级</span><span>·</span><span>候选 2 条</span></div>
+              <div class="ev">conf/IEEEwisa/LinGHW25</div></div>
+            <div class="pcard" data-act="drawer"><div class="t">DiffVecFont: Vector Font Generation with Masked Diffusion Transformers</div>
+              <div class="m"><span>CVM 2025</span><span>·</span><span class="lv">题名级</span></div><div class="ev">conf/cvm/LiuKWMA25</div></div>
+            <div class="pcard" data-act="drawer"><div class="t">GaussTR: Aligning Gaussian Transformers for 3D Spatial Understanding</div>
+              <div class="m"><span>CVPR 2025</span><span>·</span><span class="lv">题名级</span></div><div class="ev">conf/cvpr/0001D25</div></div>
+            <div class="pcard" data-act="drawer"><div class="t">STAPLE: Siamese Transformers for No-Reference Image Quality Assessment</div>
+              <div class="m"><span>CVPR 2025</span><span>·</span><span class="lv">题名级</span></div><div class="ev">conf/cvpr/GuptaZB25</div></div>
+            <div class="pcard" data-act="drawer"><div class="t">MotionStone: Decoupled Motion Intensity for Image-to-Video Generation</div>
+              <div class="m"><span>CVPR 2025</span><span>·</span><span class="lv">题名级</span></div><div class="ev">conf/cvpr/JiangLCWLS0W25</div></div>
+            <div class="pcard" data-act="drawer"><div class="t">Anonymous Region Transformer for Transparent Image Generation</div>
+              <div class="m"><span>CVPR 2025</span>·<span class="lv">题名级</span></div><div class="ev">conf/cvpr/PuZTYYYCBZWLWLL25</div></div>
+            <div class="rail-empty">以上为示意数据；真实运行时按检索命中顺序落卡，同一篇论文只出现一次。</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<div class="mask" data-act="close"></div>
+<aside class="drawer" aria-label="证据详情">
+  <button class="close" data-act="close"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <h3>证据详情</h3>
+  <div class="id">conf/IEEEwisa/LinGHW25</div>
+  <div class="grid">
+    <div class="r"><span class="k">论文</span><span>ShrimpFormer-X: A Transformer-Based Framework for Counting Shrimp Larvae</span></div>
+    <div class="r"><span class="k">来源类型</span><span>书目记录</span></div>
+    <div class="r"><span class="k">证据深度</span><span>仅题名</span></div>
+    <div class="r"><span class="k">核验状态</span><span>未核验</span></div>
+    <div class="r"><span class="k">断言状态</span><span>候选 · 未校准（0.99998）</span></div>
+    <div class="r"><span class="k">图谱版本</span><span>ai-literature-ed16399925fac2a599ed</span></div>
+  </div>
+  <div class="note">题名级证据只能证明这篇论文存在、题名里出现了相关词，不能证明论文真的做了某件事。</div>
+  <div class="acts"><button class="pri">查看论文详情</button><button>在 DBLP 打开</button></div>
+</aside>
+
+<div class="revbar">
+  <div class="grp"><span class="lab">状态</span>
+    <button class="g is-on" data-state="empty">提问前</button>
+    <button class="g" data-state="result">检索后</button>
+  </div>
+  <div class="grp"><span class="lab">证据链</span>
+    <button class="g" data-act="railbar">关（默认）</button>
+    <button class="g" data-act="railbar">开</button>
+  </div>
+  <div class="grp"><button class="g" data-theme-toggle>明 / 暗</button></div>
+  <div class="cost"><b>A+B 融合</b> · 证据链<b>默认收起</b>，右上角按钮带计数，点了才展开；
+    键盘 <b>R</b> 切换 / <b>D</b> 切明暗。落码成本：后端已补 paperItems 事件字段，前端 1 个开关 + 1 个右栏组件。</div>
+</div>
+
+<script>
+(function(){
+  var params = new URLSearchParams(location.search);
+  var state = params.get('state') || 'empty';
+  var theme = params.get('theme') || 'light';
+  var railOpen = params.get('rail') === 'open';
+  function apply(){
+    document.body.dataset.state = state;
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.toggle('is-rail', railOpen);
+    document.querySelectorAll('.revbar [data-state]').forEach(function(b){
+      b.classList.toggle('is-on', b.dataset.state === state);
+    });
+    var t = document.getElementById('railToggle');
+    if (t) t.classList.toggle('is-on', railOpen);
+    var bars = document.querySelectorAll('.revbar [data-act="railbar"]');
+    if (bars.length === 2){
+      bars[0].classList.toggle('is-on', !railOpen);
+      bars[1].classList.toggle('is-on', railOpen);
+    }
+  }
+  function toggleRail(){ railOpen = !railOpen; apply(); }
+  var rt = document.getElementById('railToggle');
+  if (rt) rt.addEventListener('click', toggleRail);
+  document.querySelectorAll('.revbar [data-state]').forEach(function(b){
+    b.addEventListener('click', function(){ state = b.dataset.state; apply(); });
+  });
+  document.querySelectorAll('.revbar [data-act="railbar"]').forEach(function(b){
+    b.addEventListener('click', toggleRail);
+  });
+  var tb = document.querySelector('[data-theme-toggle]');
+  if (tb) tb.addEventListener('click', function(){
+    theme = theme === 'light' ? 'dark' : 'light'; apply();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'r' || e.key === 'R') toggleRail();
+    if (e.key === 'd' || e.key === 'D'){ theme = theme === 'light' ? 'dark' : 'light'; apply(); }
+  });
+
+  document.querySelectorAll('[data-act="trace"]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var card = b.closest('.trace');
+      if (card){ card.classList.toggle('is-open');
+        var n = card.querySelector('.trace-sum .n');
+        if (n) n.textContent = card.classList.contains('is-open') ? '收起' : '展开'; }
+    });
+  });
+  function openDrawer(){ document.body.classList.add('is-drawer'); }
+  function closeDrawer(){ document.body.classList.remove('is-drawer'); }
+  document.querySelectorAll('[data-act="drawer"]').forEach(function(b){ b.addEventListener('click', openDrawer); });
+  document.querySelectorAll('.pcard').forEach(function(b){ b.addEventListener('click', openDrawer); });
+  document.querySelectorAll('[data-act="close"]').forEach(function(b){ b.addEventListener('click', closeDrawer); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeDrawer(); });
+
+  apply();
+
+  /* ===== 自检（仅 ?autorun=audit；评审外壳隐藏后测量）=====
+   * 注意：状态一律通过模块级变量 state/railOpen + apply() 设置，
+   * 不能在循环里直接改 dataset 再调 apply() —— apply 会用旧变量把它覆盖回去。 */
+  if (params.get('autorun') !== 'audit') return;
+  document.body.classList.add('is-audit');
+  var results = [];
+  function T(name, ok, detail){ results.push({name:name, ok:!!ok, detail:String(detail == null ? '' : detail)}); }
+  function q(sel){ return document.querySelector(sel); }
+  function qa(sel){ return Array.prototype.slice.call(document.querySelectorAll(sel)); }
+  function visible(el){ var r = el.getBoundingClientRect(); return r.height > 0 && r.width > 0; }
+  function sleep(ms){ return new Promise(function(res){ setTimeout(res, ms); }); }
+  function setState(s, rail){ state = s; railOpen = rail; apply(); return sleep(90); }
+  // 被祖先 overflow:hidden 裁掉的元素不算横向越界（证据链收起时内部 348px 内容全被裁掉）
+  function clippedByAncestor(el){
+    var p = el.parentElement;
+    while (p && p !== document.body){
+      var o = getComputedStyle(p).overflowX;
+      if (o === 'hidden' || o === 'clip' || o === 'auto' || o === 'scroll') return true;
+      p = p.parentElement;
+    }
+    return false;
+  }
+  function countOverflow(scope){
+    var vw = window.innerWidth;
+    var over = 0;
+    qa(scope + ' *').filter(visible).forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if ((r.right > vw + 1 || r.left < -1) && !clippedByAncestor(el)) over++;
+    });
+    return over;
+  }
+
+  var payload = { passed: 0, failed: 0, results: results };
+
+  var chain = Promise.resolve();
+  ['empty', 'result'].forEach(function(s){
+    chain = chain.then(function(){ return setState(s, false); }).then(function(){
+      var stage = q('.chatcol .stage');
+      var col = q('.col.' + (s === 'empty' ? 'state-empty' : 'state-result'));
+      var rail = q('.rail');
+      var out = { overflowX: 0, minFont: 99, maxSvg: 0, clickables: 0, band: 0 };
+      out.overflowX = countOverflow('.chatcol');
+      qa('.chatcol *').filter(visible).forEach(function(el){
+        var fs = parseFloat(getComputedStyle(el).fontSize);
+        if (fs > 0 && fs < out.minFont) out.minFont = fs;
+        var r = el.getBoundingClientRect();
+        if (el.tagName === 'svg' && r.width > out.maxSvg) out.maxSvg = r.width;
+      });
+      out.clickables = qa('.chatcol button, .chatcol .pill').filter(visible).length;
+      if (col && visible(col)){
+        var colTop = col.getBoundingClientRect().top;
+        var maxBottom = 0;
+        qa('.col.' + (s === 'empty' ? 'state-empty' : 'state-result') + ' *').filter(visible).forEach(function(el){
+          var r = el.getBoundingClientRect();
+          if (r.height > 6 && r.width > 6 && r.bottom > maxBottom) maxBottom = r.bottom;
+        });
+        out.band = Math.round((maxBottom - colTop) / stage.clientHeight * 100);
+        out.colW = Math.round(col.getBoundingClientRect().width);
+      }
+      // 证据链默认收起：类不在 + 静态宽度为 0（关闭态没有 transition 参与）
+      T(s + ' · 证据链默认收起', !document.body.classList.contains('is-rail')
+        && getComputedStyle(rail).width === '0px', getComputedStyle(rail).width);
+      T(s + ' · 开关按钮带计数徽标', (q('#railCount') || {}).textContent === '49', (q('#railCount') || {}).textContent);
+      // 一屏看全只对「提问前」是硬约束；检索后的对话按设计要滚动（同交互模型分档），
+      // 这里改断言为「滚动发生在 stage 内、输入区贴底可见」
+      if (s === 'empty'){
+        T('empty · 聊天列一屏内', stage.scrollHeight - stage.clientHeight <= 1,
+          '余量 ' + (stage.scrollHeight - stage.clientHeight) + 'px');
+      } else {
+        // 检索后内容可能一屏放下（收起过程卡后确实放得下），也可能超出 —— 两种都合法；
+        // 硬约束只有一条：输入区贴底可见，不因内容长短跳位
+        var composer = q('.state-result .composer');
+        var cr = composer ? composer.getBoundingClientRect() : { bottom: -1, height: 0 };
+        T('result · 输入区贴底可见', composer && cr.height > 0
+          && cr.bottom <= stage.getBoundingClientRect().bottom + 1,
+          'composer.bottom 超出 ' + Math.round(cr.bottom - stage.getBoundingClientRect().bottom) + 'px');
+      }
+      T(s + ' · 无横向溢出', out.overflowX === 0, out.overflowX + ' 个越界');
+      T(s + ' · 页面级无横向滚动', document.documentElement.scrollWidth <= window.innerWidth + 1,
+        document.documentElement.scrollWidth - window.innerWidth + 'px');
+      T(s + ' · 最小字号 >= 11px', out.minFont >= 11, out.minFont + 'px');
+      T(s + ' · 图标 <= 24px', out.maxSvg <= 24, out.maxSvg + 'px');
+      if (s === 'empty'){
+        T('empty · 内容带 45%~112%', out.band >= 45 && out.band <= 112, out.band + '% (列宽 ' + out.colW + 'px)');
+        T('empty · 可点元素 >= 4', out.clickables >= 4, out.clickables + ' 个');
+      }
+      if (s === 'result'){
+        var trace = q('.trace');
+        T('result · 过程卡默认收起且 <= 64px', trace && trace.getBoundingClientRect().height <= 64,
+          Math.round(trace.getBoundingClientRect().height) + 'px');
+        T('result · 引用上标 >= 6', qa('.state-result .pill').filter(visible).length >= 6,
+          qa('.state-result .pill').filter(visible).length + ' 个');
+        T('result · 引用核查卡存在', !!q('.state-result .okcard'), '');
+        T('result · 题名级警示存在', !!q('.state-result .warn'), '');
+      }
+      return setState(s, true);
+    }).then(function(){
+      // 展开与否用机制断言（类）+ 内层定宽容器（transition 在虚拟时钟下不推进，外层宽度不可信）
+      var inner = q('.rail-inner');
+      T(s + ' · 点开关后证据链展开', document.body.classList.contains('is-rail') && visible(inner)
+        && Math.round(inner.getBoundingClientRect().width) === 348,
+        'inner 宽 ' + Math.round(inner.getBoundingClientRect().width) + 'px');
+      var cards = qa('.rail-body .pcard');
+      T(s + ' · 展开后论文卡 >= 5', cards.length >= 5, cards.length + ' 张');
+      T(s + ' · 展开后无横向溢出', countOverflow('.row') === 0, countOverflow('.row') + ' 个越界');
+      T(s + ' · 展开后页面级无横向滚动', document.documentElement.scrollWidth <= window.innerWidth + 1,
+        document.documentElement.scrollWidth - window.innerWidth + 'px');
+      return setState(s, false);
+    }).then(function(){
+      T(s + ' · 再点一次收起', !document.body.classList.contains('is-rail')
+        && getComputedStyle(q('.rail')).width === '0px', '');
+    });
+  });
+  chain = chain.then(function(){ return setState('result', false); }).then(function(){
+    return sleep(60);
+  }).then(function(){
+    var pill = qa('.state-result .pill').filter(visible)[0];
+    T('可点引用上标存在', !!pill, pill ? pill.textContent : '无');
+    if (pill) pill.click();
+    return sleep(80);
+  }).then(function(){
+    T('抽屉可打开', document.body.classList.contains('is-drawer'), '');
+    var c = q('.drawer .close'); if (c) c.click();
+    return sleep(80);
+  }).then(function(){
+    T('抽屉可关闭', !document.body.classList.contains('is-drawer'), '');
+    var bg = getComputedStyle(document.body).backgroundColor;
+    T('主题生效', bg !== 'rgba(0, 0, 0, 0)', bg);
+    payload.passed = results.filter(function(r){ return r.ok; }).length;
+    payload.failed = results.length - payload.passed;
+    document.title = 'AR::' + JSON.stringify(payload);
+  });
+})();
+</script>
+</body>
+</html>

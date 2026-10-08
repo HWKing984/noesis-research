@@ -1,318 +1,251 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
-import { createAgentApi, describeAgentError, describeStep } from '../lib/agentApi.js';
+import { describeStep } from '../lib/agentApi.js';
 import { citationReport } from '../lib/evidence.js';
+import { renderAnswer } from '../lib/answerRender.jsx';
 
 const EXAMPLES = [
   '有哪些关于 transformer 的论文？',
   '扩散模型在图像生成上的工作有哪些？',
   '图神经网络用在异常检测的有哪些？',
+  '2025 年 CVPR 的扩散 transformer',
 ];
 
 /**
- * 科研助手 —— 本产品的主界面。
- *
- * 一句话输入 → agent 自己去查 → 过程与证据流回来。刻意做得简单：
- * 一个输入框、一串步骤、一段回答、一个引用核查结论。没有多余的栏。
+ * 科研助手（主界面）：一句话提问 → agent 自己去查 → 过程与证据流回来。
+ * 刻意简单：一个输入框、一串步骤、一段回答、一个引用核查结论。
+ * 运行状态由 App 持有（右栏证据链要读同一份事件流），本组件只负责呈现与发起。
  */
-export default function AgentChat({ api: injectedApi, onOpenPaper }) {
-  const api = React.useMemo(() => injectedApi || createAgentApi(), [injectedApi]);
+export default function AgentChat({ run, onAsk, onCited, agentHealth }) {
+  const [draft, setDraft] = useState('');
+  const [traceOpen, setTraceOpen] = useState(false);
 
-  const [question, setQuestion] = useState('');
-  const [runId, setRunId] = useState(null);
-  const [events, setEvents] = useState([]);
-  const [answer, setAnswer] = useState('');
-  const [citation, setCitation] = useState(null);
-  const [status, setStatus] = useState('idle'); // idle | running | ok | failed
-  const [error, setError] = useState(null);
-  const [agentHealth, setAgentHealth] = useState(null);
-  const sourceRef = useRef(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    api
-      .health()
-      .then((payload) => {
-        if (!cancelled) setAgentHealth(payload);
-      })
-      .catch((cause) => {
-        if (!cancelled) setAgentHealth({ agentReady: false, healthError: describeAgentError(cause) });
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [api]);
-
-  useEffect(
-    () => () => {
-      try {
-        sourceRef.current?.close();
-      } catch {
-        /* ignore */
+  const busy = run.status === 'running';
+  const steps = useMemo(() => run.events.map(describeStep).filter(Boolean), [run.events]);
+  const evidenceIds = useMemo(() => {
+    const seen = [];
+    for (const event of run.events) {
+      for (const id of event?.evidenceIds || []) {
+        if (!seen.includes(id)) seen.push(id);
       }
-    },
-    [],
+    }
+    return seen;
+  }, [run.events]);
+  const verdict = run.citation || (run.answer ? citationReport(run.answer, evidenceIds) : null);
+  const blocks = useMemo(
+    () => (run.answer ? renderAnswer(run.answer, verdict?.citedIds || [], onCited) : null),
+    [run.answer, verdict, onCited],
   );
+  const hasThread = run.events.length > 0 || Boolean(run.answer) || Boolean(run.question);
 
-  const ask = useCallback(
-    async (text) => {
-      const prompt = (text ?? question).trim();
-      if (!prompt || status === 'running') return;
-
-      try {
-        sourceRef.current?.close();
-      } catch {
-        /* ignore */
-      }
-
-      setQuestion(prompt);
-      setEvents([]);
-      setAnswer('');
-      setCitation(null);
-      setError(null);
-      setRunId(null);
-      setStatus('running');
-
-      let started;
-      try {
-        started = await api.startRun(prompt);
-      } catch (cause) {
-        setError(describeAgentError(cause));
-        setStatus('failed');
-        return;
-      }
-      setRunId(started.runId);
-
-      const source = new EventSource(api.eventsUrl(started.runId));
-      sourceRef.current = source;
-
-      source.addEventListener('run_started', () => {});
-      source.addEventListener('tool_call', (message) => {
-        setEvents((prev) => [...prev, JSON.parse(message.data)]);
-      });
-      source.addEventListener('tool_result', (message) => {
-        setEvents((prev) => [...prev, JSON.parse(message.data)]);
-      });
-      source.addEventListener('tool_error', (message) => {
-        setEvents((prev) => [...prev, JSON.parse(message.data)]);
-      });
-      source.addEventListener('answer', (message) => {
-        const payload = JSON.parse(message.data);
-        setAnswer(payload.text || '');
-        setCitation(payload.citation || null);
-      });
-      source.addEventListener('failed', (message) => {
-        setEvents((prev) => [...prev, JSON.parse(message.data)]);
-        setStatus('failed');
-      });
-      source.addEventListener('done', () => {
-        setStatus((prev) => (prev === 'failed' ? 'failed' : 'ok'));
-        source.close();
-        sourceRef.current = null;
-      });
-      source.onerror = () => {
-        // 流断了要区分"正常收尾"与"真的连不上"
-        setStatus((prev) => {
-          if (prev === 'running') {
-            setError({
-              title: '事件流中断',
-              detail: '没能读到 Agent 的完整事件流。这次结果不算数，请重试。',
-              kind: 'offline',
-            });
-            return 'failed';
-          }
-          return prev;
-        });
-        source.close();
-        sourceRef.current = null;
-      };
-    },
-    [api, question, status],
-  );
-
-  // 兜底：即使服务端没给 citation 事件，也用同一条纯函数规则在本地算一遍
-  const evidenceIds = events.flatMap((event) => event.evidenceIds || []);
-  const localCitation = answer ? citationReport(answer, [...new Set(evidenceIds)]) : null;
-  const verdict = citation || localCitation;
-
-  const steps = events.map(describeStep).filter(Boolean);
+  const submit = (text) => {
+    const prompt = (text ?? draft).trim();
+    if (!prompt || busy) return;
+    setDraft('');
+    onAsk(prompt);
+  };
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-3xl flex-col" data-testid="agent-chat">
-      <div className="min-h-0 flex-1 overflow-auto px-6 py-6">
-        {status === 'idle' && steps.length === 0 ? (
-          <div className="pt-10 text-center" data-testid="agent-intro">
-            <h2 className="text-[18px] font-semibold">问一句，它自己去查</h2>
-            <p className="mx-auto mt-2 max-w-md text-[13px] text-[var(--ink-muted)]">
-              Agent 会在 2 万篇 DBLP 文献的候选关系图谱上检索，边查边把调用的工具与拿到的证据
-              显示出来。回答里的每句话都要挂来源 id，挂不上就判失败。
+    <div className="stage" data-testid="agent-chat">
+      {!hasThread ? (
+        <div className="col" style={{ flexDirection: 'column' }}>
+          <div className="hero" data-testid="agent-intro">
+            <h1>今天研究什么？</h1>
+            <p className="sub">
+              我会在这 {agentHealth?.scope?.bibliographyTitles ?? '2 万'} 篇文献的候选关系图谱上检索，
+              边查边把过程和证据摆给你。
             </p>
-            <div className="mt-5 flex flex-wrap justify-center gap-2">
+            <div className="ex" data-testid="example-questions">
               {EXAMPLES.map((example) => (
-                <button
-                  key={example}
-                  type="button"
-                  onClick={() => ask(example)}
-                  data-testid="example-question"
-                  className="rounded-full border border-[var(--line)] bg-[var(--panel)] px-3 py-1.5 text-[12px] hover:border-[var(--accent)] hover:text-[var(--accent)]"
-                >
+                <button key={example} type="button" data-testid="example-question" onClick={() => submit(example)}>
                   {example}
                 </button>
               ))}
             </div>
+            <div className="caps">
+              <div className="cap">
+                <div className="t"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>自主检索</div>
+                <div className="d">自己决定查什么、查几次，过程全部可见</div>
+              </div>
+              <div className="cap">
+                <div className="t"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" /><circle cx="12" cy="12" r="9" /></svg>句句有来源</div>
+                <div className="d">每个事实断句都挂记录 id，可点开核对</div>
+              </div>
+              <div className="cap">
+                <div className="t"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01" /><circle cx="12" cy="12" r="9" /></svg>边界诚实</div>
+                <div className="d">候选关系不说成结论；没有引用数据就拒答</div>
+              </div>
+            </div>
             {agentHealth && !agentHealth.agentReady ? (
-              <p className="mt-5 rounded-lg border border-[#f0c9c5] bg-[var(--danger-soft)] px-3 py-2 text-[12px] text-[var(--danger)]">
-                Agent 未就绪：{agentHealth.healthError?.detail || `缺少 ${(agentHealth.missingSettings || []).join(', ')}`}
+              <p
+                style={{
+                  marginTop: 18, borderRadius: 'var(--radius-lg)', border: '1px solid rgba(220,38,38,.35)',
+                  background: 'rgba(220,38,38,.06)', padding: '9px 14px', fontSize: 12.5, color: 'var(--danger)',
+                  textAlign: 'left',
+                }}
+                data-testid="agent-not-ready"
+              >
+                Agent 未就绪：{(agentHealth.missingSettings || []).join(', ') || agentHealth.healthError?.detail || '服务不可用'}
               </p>
             ) : null}
           </div>
-        ) : null}
-
-        {steps.length > 0 ? (
-          <ol className="space-y-1.5" data-testid="agent-steps">
-            {steps.map((step, index) => (
-              <li
-                key={`${step.label}-${index}`}
-                data-testid="agent-step"
-                data-step-icon={step.icon}
-                className={`flex items-start gap-2 rounded border px-3 py-1.5 text-[12px] ${
-                  step.icon === 'error'
-                    ? 'border-[#f0c9c5] bg-[var(--danger-soft)] text-[var(--danger)]'
-                    : 'border-[var(--line)] bg-[var(--panel)]'
-                }`}
-              >
-                <span className="mono mt-[1px] w-4 shrink-0 text-[10px] text-[var(--ink-muted)]">
-                  {index + 1}
-                </span>
-                <span className="font-medium">{step.label}</span>
-                <span className="text-[var(--ink-muted)]">{step.detail}</span>
-                {step.evidenceIds?.length ? (
-                  <span className="mono ml-auto shrink-0 text-[10px] text-[var(--ink-muted)]">
-                    {step.evidenceIds.length} 条证据
-                  </span>
-                ) : null}
-              </li>
-            ))}
-          </ol>
-        ) : null}
-
-        {status === 'running' && steps.length === 0 ? (
-          <p className="mt-4 text-[13px] text-[var(--ink-muted)]" data-testid="agent-thinking">
-            正在检索图谱…
-          </p>
-        ) : null}
-
-        {answer ? (
-          <section className="mt-5" data-testid="agent-answer-block">
-            <h3 className="mb-1.5 text-[13px] font-medium">回答</h3>
-            <div
-              className="whitespace-pre-wrap rounded-lg border border-[var(--line)] bg-[var(--panel)] px-4 py-3 text-[13px] leading-relaxed"
-              data-testid="agent-answer"
-            >
-              {answer}
-            </div>
-
-            {verdict ? (
-              <div
-                className={`mt-3 rounded-lg border px-3 py-2 text-[12px] ${
-                  verdict.passes
-                    ? 'border-[#bfe0c5] bg-[#f2fbf4] text-[#1a7f37]'
-                    : 'border-[#f0c9c5] bg-[var(--danger-soft)] text-[var(--danger)]'
-                }`}
-                data-testid="citation-verdict"
-                data-passes={verdict.passes ? 'true' : 'false'}
-              >
-                <b>{verdict.passes ? '引用核查通过' : '引用核查不通过'}</b>
-                <span className="ml-2">
-                  回答里实际引用 {verdict.cited} / 可用 {verdict.available} 条；
-                  按句可溯率 {verdict.attributedSentences}/{verdict.consideredSentences} ={' '}
-                  {Math.round(verdict.citationRate * 100)}%
-                </span>
-                {!verdict.passes ? (
-                  <div className="mt-1">
-                    这条回答没有任何来源 id —— 按本项目验收口径，它是一次<strong>失败</strong>的回答，
-                    不是"差不多能用"。
-                  </div>
-                ) : null}
-                {verdict.titleOnly ? (
-                  <div
-                    className="mt-2 rounded border border-[var(--candidate-soft)] bg-[var(--candidate-soft)] px-2 py-1 text-[var(--candidate)]"
-                    data-testid="title-only-warning"
-                  >
-                    以上证据全部是<strong>题名级</strong>：只能证明这些论文存在、题名里出现了相关词，
-                    <b>不能证明</b>它们真的做了回答里描述的事。
-                  </div>
-                ) : null}
-                {verdict.citedIds?.length ? (
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {verdict.citedIds.map((id) => (
-                      <button
-                        key={id}
-                        type="button"
-                        onClick={() => onOpenPaper?.(id)}
-                        data-testid="cited-id"
-                        className="mono rounded border border-current px-1.5 py-0.5 text-[11px] hover:underline"
-                      >
-                        {id}
-                      </button>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            ) : null}
-          </section>
-        ) : null}
-
-        {error ? (
-          <div
-            className="mt-4 rounded-lg border border-[#f0c9c5] bg-[var(--danger-soft)] px-3 py-2 text-[12px] text-[var(--danger)]"
-            data-testid="agent-error"
-            role="alert"
-          >
-            <b>{error.title}</b>
-            <div className="mt-0.5">{error.detail}</div>
-          </div>
-        ) : null}
-      </div>
-
-      <form
-        className="border-t border-[var(--line)] bg-[var(--panel)] px-6 py-3"
-        data-testid="agent-form"
-        onSubmit={(event) => {
-          event.preventDefault();
-          ask();
-        }}
-      >
-        <div className="flex items-end gap-2">
-          <textarea
-            value={question}
-            onChange={(event) => setQuestion(event.target.value)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter' && !event.shiftKey) {
-                event.preventDefault();
-                ask();
-              }
-            }}
-            rows={2}
-            placeholder="问一个科研问题，例如：扩散模型在图像生成上的工作有哪些？"
-            data-testid="agent-input"
-            className="min-h-[52px] flex-1 resize-none rounded-lg border border-[var(--line)] px-3 py-2 text-[13px] outline-none focus:border-[var(--accent)]"
-          />
-          <button
-            type="submit"
-            disabled={status === 'running' || question.trim() === ''}
-            data-testid="agent-submit"
-            className="h-[52px] shrink-0 rounded-lg bg-[var(--accent)] px-5 text-[13px] font-medium text-white disabled:opacity-40"
-          >
-            {status === 'running' ? '检索中…' : '问'}
-          </button>
         </div>
-        <p className="mt-1.5 text-[11px] text-[var(--ink-muted)]">
-          {runId ? <span className="mono mr-2">run {runId.slice(0, 8)}</span> : null}
-          图谱为候选断言图；题名级证据只能证明论文存在，不能证明其结论。本图谱无引用数据，
-          不回答「是否必引 / 被引次数 / 引用链」。
-        </p>
-      </form>
+      ) : (
+        <div className="col" style={{ flexDirection: 'column' }}>
+          <div className="thread" data-testid="agent-thread">
+            {run.question ? <div className="msg-user" data-testid="agent-question">{run.question}</div> : null}
+            <div className="msg-ai">
+              {steps.length > 0 ? (
+                <div className={`trace ${traceOpen ? 'is-open' : ''}`} data-testid="agent-trace">
+                  <button
+                    type="button"
+                    className="trace-sum"
+                    data-testid="agent-trace-toggle"
+                    onClick={() => setTraceOpen((prev) => !prev)}
+                  >
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" />
+                    </svg>
+                    已执行 {steps.length} 步 · 可用证据 {evidenceIds.length} 条
+                    <span className="n">{traceOpen ? '收起' : '展开'}</span>
+                  </button>
+                  <div className="trace-body" data-testid="agent-steps">
+                    {steps.map((step, index) => (
+                      <div
+                        key={`${step.label}-${index}`}
+                        className={`tstep ${step.icon === 'error' ? 'is-error' : ''}`}
+                        data-testid="agent-step"
+                        data-step-icon={step.icon}
+                      >
+                        <span className="t">{step.label}</span>
+                        <span>{step.detail}</span>
+                      </div>
+                    ))}
+                    {busy ? (
+                      <div className="tstep" data-testid="agent-step-running">
+                        <span className="t">…</span>
+                        <span>正在检索图谱…</span>
+                      </div>
+                    ) : null}
+                  </div>
+                </div>
+              ) : null}
+
+              {busy && steps.length === 0 ? (
+                <p style={{ color: 'var(--text-tertiary)', fontSize: 13 }} data-testid="agent-thinking">
+                  正在检索图谱…
+                </p>
+              ) : null}
+
+              {blocks ? <div data-testid="agent-answer">{blocks}</div> : null}
+
+              {verdict ? (
+                <>
+                  <div
+                    className={`okcard ${verdict.passes ? '' : 'fail'}`}
+                    style={{ marginTop: 14 }}
+                    data-testid="citation-verdict"
+                    data-passes={verdict.passes ? 'true' : 'false'}
+                  >
+                    <svg
+                      className="ic"
+                      viewBox="0 0 24 24"
+                      style={{
+                        stroke: verdict.passes ? 'var(--success)' : 'var(--danger)',
+                        fill: 'none',
+                        strokeWidth: 1.8,
+                      }}
+                    >
+                      {verdict.passes ? <path d="M20 6 9 17l-5-5" /> : <path d="M18 6 6 18M6 6l12 12" />}
+                    </svg>
+                    <div>
+                      <b>{verdict.passes ? '引用核查通过' : '引用核查不通过'}</b>
+                      <div className="sub">
+                        回答里实际引用 {verdict.cited} / 可用 {verdict.available} 条 · 按句可溯率{' '}
+                        {verdict.attributedSentences}/{verdict.consideredSentences} ={' '}
+                        {Math.round(verdict.citationRate * 100)}% · 证据等级：
+                        {(verdict.evidenceLevels || []).join('、') || '—'}
+                      </div>
+                      {!verdict.passes ? (
+                        <div className="sub" style={{ color: 'var(--danger)' }}>
+                          这条回答没有任何来源 id —— 按本项目验收口径，它是一次失败的回答，不是"差不多能用"。
+                        </div>
+                      ) : null}
+                      {verdict.citedIds?.length ? (
+                        <div className="ids" data-testid="cited-ids">
+                          {verdict.citedIds.map((id) => (
+                            <button
+                              key={id}
+                              type="button"
+                              className="pill"
+                              data-testid="cited-id"
+                              data-cited-id={id}
+                              title={id}
+                              onClick={() => onCited(id)}
+                            >
+                              {id}
+                            </button>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                  {verdict.titleOnly ? (
+                    <div className="warn" style={{ marginTop: 9 }} data-testid="title-only-warning">
+                      以上证据全部是<b>题名级</b>：只能证明这些论文存在、题名里出现了相关词，
+                      <b>不能证明</b>它们真的做了回答里描述的事。
+                    </div>
+                  ) : null}
+                </>
+              ) : null}
+
+              {run.error ? (
+                <div
+                  className="banner"
+                  data-testid="agent-error"
+                  role="alert"
+                  style={{ marginLeft: 0, marginRight: 0 }}
+                >
+                  <div className="t">{run.error.title}</div>
+                  <div className="d">{run.error.detail}</div>
+                </div>
+              ) : null}
+            </div>
+          </div>
+
+          <div className="composer">
+            <div className="cbox">
+              <textarea
+                rows={1}
+                value={draft}
+                placeholder="继续追问，例如：这几篇里哪些是候选断言？"
+                data-testid="agent-input"
+                onChange={(event) => setDraft(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' && !event.shiftKey) {
+                    event.preventDefault();
+                    submit();
+                  }
+                }}
+              />
+              <button
+                type="button"
+                className="send"
+                data-testid="agent-submit"
+                disabled={busy || draft.trim() === ''}
+                onClick={() => submit()}
+                aria-label="发送"
+              >
+                <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
+              </button>
+            </div>
+            <div className="chint" data-testid="agent-hint">
+              {run.runId ? <span className="mono" style={{ marginRight: 8 }}>run {run.runId.slice(0, 8)}</span> : null}
+              候选关系图谱 · 题名级证据 · 无引用数据（不回答被引次数/引用链） · 证据链可从右上角打开
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

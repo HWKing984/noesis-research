@@ -132,6 +132,32 @@ class SummarizeTests(unittest.TestCase):
         # 摘要是"规模"，不是把整包论文搬给前端
         self.assertIsInstance(summary["papers"], int)
 
+    def test_search_results_carry_a_compact_paper_list_for_the_evidence_rail(self) -> None:
+        summary = summarize_tool_result("search_papers", search_payload())
+        items = summary["paperItems"]
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["publicationId"], PAPER_ID)
+        self.assertEqual(items[0]["title"], "ShrimpFormer-X")
+        self.assertEqual(items[0]["evidenceLevel"], "title")
+        self.assertEqual(
+            set(items[0].keys()),
+            {"publicationId", "title", "year", "evidenceLevel", "verificationStatus"},
+            "右栏论文卡只该有这几列",
+        )
+        self.assertNotIn("evidence", items[0])
+
+    def test_paper_list_is_capped_for_the_frontend(self) -> None:
+        payload = search_payload()
+        payload["papers"] = [dict(payload["papers"][0], publicationId=f"conf/x/{i}") for i in range(30)]
+        summary = summarize_tool_result("search_papers", payload)
+        self.assertEqual(summary["papers"], 30)
+        self.assertEqual(len(summary["paperItems"]), 20)
+
+    def test_detail_result_carries_the_paper_title(self) -> None:
+        summary = summarize_tool_result("get_paper", {"publicationId": PAPER_ID, "title": "T"})
+        self.assertEqual(summary["publicationId"], PAPER_ID)
+        self.assertEqual(summary["title"], "T")
+
     def test_graph_summary_keeps_node_and_edge_counts(self) -> None:
         summary = summarize_tool_result("explore_graph", {"nodes": [1, 2], "edges": [1], "paths": [], "mode": "paper", "graphId": PINNED})
         self.assertEqual(summary["nodes"], 2)
