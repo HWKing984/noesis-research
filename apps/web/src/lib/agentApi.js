@@ -50,9 +50,13 @@ export function createAgentApi(base = DEFAULT_AGENT_BASE) {
   return {
     base,
     health: () => request(base, '/health'),
-    listRuns: (limit = 20) => request(base, `/runs?limit=${encodeURIComponent(limit)}`),
-    startRun: (question) =>
-      request(base, '/runs', { method: 'POST', body: JSON.stringify({ question }) }),
+    listSessions: (limit = 20) => request(base, `/sessions?limit=${encodeURIComponent(limit)}`),
+    getSession: (sessionId) => request(base, `/sessions/${encodeURIComponent(sessionId)}`),
+    startRun: (question, sessionId) =>
+      request(base, '/runs', {
+        method: 'POST',
+        body: JSON.stringify(sessionId ? { question, sessionId } : { question }),
+      }),
     getRun: (runId) => request(base, `/runs/${encodeURIComponent(runId)}`),
     eventsUrl: (runId) => `${base}/runs/${encodeURIComponent(runId)}/events`,
   };

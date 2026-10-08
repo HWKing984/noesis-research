@@ -170,6 +170,7 @@ const PROBE = `(() => {
     railState: railToggle?.getAttribute('data-rail') || '',
     railCount: q('[data-testid="rail-count"]')?.textContent || '',
     railCards: qa('[data-testid="rail-card"]').length,
+    sessionItems: qa('[data-testid="session-item"]').length,
     railEmptyVisible: visible(q('[data-testid="rail-empty"]')),
     agentStepCount: qa('[data-testid="agent-step"]').length,
     agentStepIcons: qa('[data-testid="agent-step"]').map((el) => el.getAttribute('data-step-icon')),
@@ -439,6 +440,33 @@ async function main() {
     );
     const consistent = probe.citationPasses === 'true' ? probe.citedChips > 0 : probe.citedChips === 0;
     add('引用结论与引用 id 自洽', consistent, `passes=${probe.citationPasses} cited=${probe.citedChips}`);
+
+    // ---- 连续追问：同一会话第二轮（上下文连续性）----
+    await session.eval(`(() => {
+      const input = document.querySelector('[data-testid="agent-input"]');
+      const setter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
+      setter.call(input, '把上面第一篇论文的完整标题再列一次。');
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      document.querySelector('[data-testid="agent-submit"]').click();
+      return true;
+    })()`);
+    await session.waitFor(`document.querySelectorAll('.message-body--user').length >= 2`, { timeout: 30000 });
+    await session.waitFor(`!!document.querySelector('[data-testid="agent-answer"]')`, { timeout: 420000 });
+    await session.waitFor(
+      `(() => { const t = document.querySelector('[data-testid="agent-hint"]'); return true; })()`,
+      { timeout: 2000 },
+    );
+    // 等流结束：最后一轮的 verdict 稳定出现且侧栏会话只有 1 个（没有自动开新会话）
+    await session.waitFor(
+      `document.querySelectorAll('[data-testid="session-item"]').length === 1`,
+      { timeout: 30000 },
+    );
+    probe = await session.eval(PROBE);
+    add('连续追问不换会话', probe.sessionItems === 1, `会话数 ${probe.sessionItems}`);
+    const userBubbles = await session.eval(`document.querySelectorAll('.message-body--user').length`);
+    const assistantBubbles = await session.eval(`document.querySelectorAll('.message-body--assistant').length`);
+    add('同会话两轮问答同屏', userBubbles >= 2 && assistantBubbles >= 2, `user=${userBubbles} assistant=${assistantBubbles}`);
+    add('追问后有回答', probe.agentAnswer.length > 0, `${probe.agentAnswer.length} 字`);
 
     // ---- 证据链：跑完后应攒下论文卡，打开可见、可开抽屉 ----
     await session.eval(`(() => { document.querySelector('[data-testid="rail-toggle"]').click(); return true; })()`);

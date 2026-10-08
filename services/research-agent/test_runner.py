@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 import sys
 import unittest
 
@@ -578,6 +579,56 @@ class HttpSurfaceTests(unittest.TestCase):
         run_id = client.post("/runs", json={"question": "q"}).json()["runId"]
         client.get(f"/runs/{run_id}/events")
         self.assertEqual(agent.calls, 1, "健康的轮次不重试")
+
+    def test_followup_run_receives_session_history(self) -> None:
+        """连续追问：同一 sessionId 的第二轮，图输入必须带上前一轮的问答。"""
+        recorded = []
+
+        class RecAgent:
+            def stream(self, inp, **_kwargs):
+                recorded.append(list(inp["messages"]))
+                return iter(CITING_CHUNKS)
+
+        app = create_app(
+            settings=self._settings(),
+            client=KGClient("http://stub", expected_graph_id=PINNED),
+            agent_factory=lambda **_kwargs: RecAgent(),
+        )
+        client = TestClient(app)
+        first = client.post("/runs", json={"question": "有哪些 transformer 论文？"}).json()
+        # 等第一轮真正结束（后台线程跑完、问答落会话），再发追问 —— 否则历史还没落
+        deadline = time.time() + 10
+        while time.time() < deadline:
+            record = client.get(f"/runs/{first['runId']}").json()
+            if record["status"] != "running":
+                break
+            time.sleep(0.05)
+        second = client.post(
+            "/runs",
+            json={"question": "第一篇的作者有谁？", "sessionId": first["sessionId"]},
+        )
+        self.assertEqual(second.status_code, 201, second.text)
+        self.assertEqual(second.json()["sessionId"], first["sessionId"])
+        self.assertGreaterEqual(len(recorded[1]), 3, "第二轮输入 = 历史 + 本轮提问")
+        self.assertEqual(recorded[1][0]["role"], "user")
+        self.assertTrue(any(m.get("role") == "assistant" for m in recorded[1]))
+        self.assertEqual(recorded[1][-1]["content"], "第一篇的作者有谁？")
+        session = client.get(f"/sessions/{first['sessionId']}").json()
+        self.assertEqual(session["turnCount"], 2)
+        self.assertEqual(session["turns"][0]["question"], "有哪些 transformer 论文？")
+
+    def test_unknown_session_is_404(self) -> None:
+        client, agent = self._client()
+        resp = client.post("/runs", json={"question": "q", "sessionId": "nope"})
+        self.assertEqual(resp.status_code, 404)
+        self.assertEqual(resp.json()["error"]["code"], "session_not_found")
+        self.assertEqual(agent.calls, 0, "会话不存在时不能开跑")
+
+    def test_new_session_without_sessionid_is_fresh(self) -> None:
+        client, agent = self._client()
+        started = client.post("/runs", json={"question": "q"}).json()
+        self.assertTrue(started["sessionId"])
+        self.assertEqual(agent.calls, 1)
 
     def test_unknown_run_is_404_on_both_endpoints(self) -> None:
         client, _ = self._client()

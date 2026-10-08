@@ -466,6 +466,7 @@ class RunRecord:
     status: str = "running"
     graph_id: str | None = None
     model: str = ""
+    session_id: str | None = None
     created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     events: list[dict[str, Any]] = field(default_factory=list)
     answer: str = ""
@@ -477,6 +478,7 @@ class RunRecord:
             "runId": self.run_id,
             "question": self.question,
             "status": self.status,
+            "sessionId": self.session_id,
             "graphId": self.graph_id,
             "model": self.model,
             "createdAt": self.created_at,
@@ -488,6 +490,82 @@ class RunRecord:
         }
 
 
+
+@dataclass
+class SessionRecord:
+    """一个会话 = 连续的多轮问答。
+
+    ``turns`` 供界面/接口回看；``history`` 是给下一轮注入图输入的消息序列
+    （role/content 字典，langgraph 直接吃），封顶防 token 失控。
+    **纯内存**：进程重启即丢，持久化在后续阶段。
+    """
+
+    session_id: str
+    created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    last_activity: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    title: str = ""
+    turns: list[dict[str, Any]] = field(default_factory=list)
+    history: list[dict[str, str]] = field(default_factory=list)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "sessionId": self.session_id,
+            "title": self.title,
+            "createdAt": self.created_at,
+            "lastActivity": self.last_activity,
+            "turns": self.turns,
+            "turnCount": len(self.turns),
+        }
+
+
+class SessionStore:
+    """线程安全的会话登记表。"""
+
+    def __init__(self, *, max_sessions: int = 100, max_history_messages: int = 24) -> None:
+        self._lock = threading.Lock()
+        self._sessions: dict[str, SessionRecord] = {}
+        self._max_sessions = max_sessions
+        self._max_history_messages = max_history_messages
+
+    def create(self, title: str = "") -> SessionRecord:
+        session = SessionRecord(session_id=uuid.uuid4().hex, title=str(title or "")[:80])
+        with self._lock:
+            self._sessions[session.session_id] = session
+            if len(self._sessions) > self._max_sessions:
+                for stale in sorted(self._sessions.values(), key=lambda s: s.last_activity)[: len(self._sessions) - self._max_sessions]:
+                    self._sessions.pop(stale.session_id, None)
+        return session
+
+    def get(self, session_id: str) -> SessionRecord | None:
+        with self._lock:
+            return self._sessions.get(session_id)
+
+    def list_recent(self, limit: int = 20) -> list[SessionRecord]:
+        with self._lock:
+            return sorted(self._sessions.values(), key=lambda s: s.last_activity, reverse=True)[:limit]
+
+    def append_turn(self, session_id: str, run_id: str, question: str, answer: str) -> None:
+        """一轮问答落会话：turns 供回看，history 供下一轮注入上下文。"""
+        with self._lock:
+            session = self._sessions.get(session_id)
+            if session is None:
+                return
+            session.turns.append({"runId": run_id, "question": question, "answer": answer})
+            if not session.title:
+                session.title = str(question or "")[:80]
+            session.last_activity = datetime.now(timezone.utc).isoformat()
+            session.history.append({"role": "user", "content": str(question or "")})
+            if str(answer or "").strip():
+                session.history.append({"role": "assistant", "content": str(answer)})
+            if len(session.history) > self._max_history_messages:
+                session.history[:] = session.history[-self._max_history_messages:]
+
+    def history(self, session_id: str) -> list[dict[str, str]]:
+        with self._lock:
+            session = self._sessions.get(session_id)
+            return list(session.history) if session else []
+
+
 class RunRegistry:
     """线程安全的运行登记表。Agent 在后台线程里跑，SSE 端按序读取事件。"""
 
@@ -496,8 +574,10 @@ class RunRegistry:
         self._runs: dict[str, RunRecord] = {}
         self._max_runs = max_runs
 
-    def create(self, question: str, *, graph_id: str | None, model: str) -> RunRecord:
-        run = RunRecord(run_id=uuid.uuid4().hex, question=question, graph_id=graph_id, model=model)
+    def create(self, question: str, *, graph_id: str | None, model: str, session_id: str | None = None) -> RunRecord:
+        run = RunRecord(
+            run_id=uuid.uuid4().hex, question=question, graph_id=graph_id, model=model, session_id=session_id
+        )
         with self._lock:
             self._runs[run.run_id] = run
             if len(self._runs) > self._max_runs:

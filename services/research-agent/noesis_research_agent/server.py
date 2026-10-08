@@ -34,7 +34,7 @@ from kg_client import KGClient, KGError, KGGraphMismatch, KGUnavailable, resolve
 
 from .agent import build_agent
 from .config import AgentSettings, ConfigurationError
-from .runner import RunRegistry, RunRecord, translate_chunks
+from .runner import RunRegistry, RunRecord, SessionStore, translate_chunks
 
 logger = logging.getLogger(__name__)
 
@@ -44,18 +44,21 @@ SSE_HEARTBEAT_SECONDS = 10.0
 
 class StartRunRequest(BaseModel):
     question: str = Field(min_length=1, max_length=2000)
+    sessionId: str | None = None
 
 
 class StartRunResponse(BaseModel):
     runId: str
     status: str
     question: str
+    sessionId: str
 
 
 def create_app(
     *,
     settings: AgentSettings | None = None,
     registry: RunRegistry | None = None,
+    sessions: SessionStore | None = None,
     client: KGClient | None = None,
     agent_factory: Any | None = None,
 ) -> FastAPI:
@@ -76,13 +79,14 @@ def create_app(
     )
     app.state.settings = resolved
     app.state.registry = registry or RunRegistry()
+    app.state.sessions = sessions or SessionStore()
     app.state.kg = client or KGClient(
         resolved.kg_base_url,
         expected_graph_id=resolved.expected_graph_id,
         timeout=resolved.kg_timeout,
     )
 
-    def _run_in_background(run: RunRecord) -> None:
+    def _run_in_background(run: RunRecord, history: list[dict[str, str]]) -> None:
         registry_ref = app.state.registry
 
         def append(event: dict[str, Any]) -> None:
@@ -100,8 +104,10 @@ def create_app(
             attempt_events: list[dict[str, Any]] = []
             try:
                 agent = make_agent(client=app.state.kg, settings=resolved)
+                # 多轮上下文：会话历史（封顶后的 role/content 序列）+ 本轮提问
+                input_messages = [*history, {"role": "user", "content": run.question}]
                 chunks = agent.stream(
-                    {"messages": [{"role": "user", "content": run.question}]},
+                    {"messages": input_messages},
                     stream_mode=["updates", "messages"],
                     subgraphs=True,
                 )
@@ -128,7 +134,8 @@ def create_app(
                     continue
                 append(event)
             if is_final:
-                return
+                # 终态：done 已落盘；跳出循环去走会话收尾（本轮问答落会话）
+                break
             if attempt < max_attempts:
                 append({
                     "type": "run_retry",
@@ -138,6 +145,9 @@ def create_app(
                 })
         # 走到这里 = 所有轮次都未取得工具结果：done 已在最后一轮落盘（终态轮不跳过），
         # 登记表状态与闸门判定照实保留
+        # 会话收尾：本轮问答落会话，下一轮就能带上下文（回答为空的失败轮不计入）
+        if run.session_id and run.answer.strip():
+            app.state.sessions.append_turn(run.session_id, run.run_id, run.question, run.answer)
 
     @app.get("/health")
     def health() -> dict[str, Any]:
@@ -175,11 +185,27 @@ def create_app(
                     }
                 },
             )
+        session = None
+        if request.sessionId:
+            session = app.state.sessions.get(request.sessionId)
+            if session is None:
+                return JSONResponse(
+                    status_code=404,
+                    content={"error": {"code": "session_not_found", "message": f"会话不存在或已过期：{request.sessionId}"}},
+                )
+        else:
+            session = app.state.sessions.create(question)
+        history = app.state.sessions.history(session.session_id)
         run = app.state.registry.create(
-            question, graph_id=resolved.expected_graph_id, model=resolved.llm_model
+            question,
+            graph_id=resolved.expected_graph_id,
+            model=resolved.llm_model,
+            session_id=session.session_id,
         )
-        threading.Thread(target=_run_in_background, args=(run,), daemon=True).start()
-        return StartRunResponse(runId=run.run_id, status=run.status, question=run.question)
+        threading.Thread(target=_run_in_background, args=(run, history), daemon=True).start()
+        return StartRunResponse(
+            runId=run.run_id, status=run.status, question=run.question, sessionId=session.session_id
+        )
 
     @app.get("/runs/{run_id}")
     def get_run(run_id: str) -> Any:
@@ -194,6 +220,20 @@ def create_app(
     @app.get("/runs")
     def list_runs(limit: int = 20) -> dict[str, Any]:
         return {"data": [run.to_dict() for run in app.state.registry.list_recent(limit)]}
+
+    @app.get("/sessions")
+    def list_sessions(limit: int = 20) -> dict[str, Any]:
+        return {"data": [s.to_dict() for s in app.state.sessions.list_recent(limit)]}
+
+    @app.get("/sessions/{session_id}")
+    def get_session(session_id: str) -> Any:
+        session = app.state.sessions.get(session_id)
+        if session is None:
+            return JSONResponse(
+                status_code=404,
+                content={"error": {"code": "not_found", "message": f"没有这个会话：{session_id}"}},
+            )
+        return session.to_dict()
 
     @app.get("/runs/{run_id}/events")
     async def stream_events(run_id: str, request: Request) -> Any:

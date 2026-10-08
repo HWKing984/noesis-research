@@ -5,9 +5,10 @@ import { createAgentApi, describeAgentError } from './lib/agentApi.js';
 import AgentChat from './components/AgentChat.jsx';
 import EvidenceRail from './components/EvidenceRail.jsx';
 import Sidebar from './components/Sidebar.jsx';
-import PaperDrawer from './components/PaperDrawer.jsx';
 import { SearchBar, AppliedEcho, PaperList } from './components/SearchPanel.jsx';
+import { DetailPanel, GraphPanel } from './components/InspectorPanel.jsx';
 import {
+  BoundaryNotice,
   EmptyState,
   ErrorBanner,
   EvidenceDrawer,
@@ -19,16 +20,13 @@ const EMPTY_FORM = {
   q: '', method: '', task: '', dataset: '', author: '', venue: '', year: '', limit: '10',
 };
 
-/** 空态建议卡：点卡片 = 预填关键词并检索。 */
-const SUGGESTIONS = [
-  { label: '扩散模型 → image generation', hint: '候选断言 · 方法→任务', q: 'diffusion' },
-  { label: '题名含 transformer 的论文', hint: '题名检索', q: 'transformer' },
-  { label: 'ImageNet 上的分类方法', hint: '数据集候选 · 评测关系', q: 'ImageNet' },
-  { label: 'NeurIPS 2020 · 生成模型', hint: '会议 + 年份组合', q: 'generative' },
+const TABS = [
+  { key: 'detail', label: '论文详情' },
+  { key: 'graph', label: '局部图谱' },
 ];
 
-const IDLE_RUN = {
-  status: 'idle', events: [], answer: '', citation: null, runId: null, error: null, question: '',
+const IDLE_TURN = {
+  runId: null, question: '', events: [], answer: '', citation: null, status: 'idle', error: null,
 };
 
 /** 只把非空字段送给后端；空字段一律不发，保证回显与实参一致。 */
@@ -41,9 +39,8 @@ function toSearchParams(form) {
   return params;
 }
 
-/** 论文库与图谱 —— 检索优先布局：hero 空态 / 吸顶检索 + 结果流 / 论文抽屉。
- *  抽屉状态在 App 层（引用上标共用同一个证据抽屉，证据抽屉叠在论文抽屉之上）。 */
-function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect, themeProp }) {
+/** 论文库与图谱 —— 二级视图。抽屉状态在 App 层（引用上标共用同一个抽屉）。 */
+function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect }) {
   const [health, setHealth] = useState(null);
   const [healthError, setHealthError] = useState(null);
   const [form, setForm] = useState(EMPTY_FORM);
@@ -78,27 +75,22 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
 
   useEffect(() => { loadHealth(); }, [loadHealth]);
 
-  /** override：建议卡预填表单后立即可检索，不等 state 回流（避免 stale closure）。 */
-  const runSearch = useCallback(
-    async (override) => {
-      const source = override || form;
-      setSearching(true);
-      setSearchError(null);
-      try {
-        const payload = await api.searchPapers(toSearchParams(source));
-        setResult(payload);
-        setSelectedId(null);
-        setDetail(null);
-        setSlice(null);
-      } catch (error) {
-        setResult(null);
-        setSearchError(describeApiError(error));
-      } finally {
-        setSearching(false);
-      }
-    },
-    [api, form],
-  );
+  const runSearch = useCallback(async () => {
+    setSearching(true);
+    setSearchError(null);
+    try {
+      const payload = await api.searchPapers(toSearchParams(form));
+      setResult(payload);
+      setSelectedId(null);
+      setDetail(null);
+      setSlice(null);
+    } catch (error) {
+      setResult(null);
+      setSearchError(describeApiError(error));
+    } finally {
+      setSearching(false);
+    }
+  }, [api, form]);
 
   const selectPaper = useCallback(
     async (publicationId) => {
@@ -165,103 +157,82 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
     if (tab === 'graph' && selectedId) loadGraph(selectedId, graphMode);
   }, [tab, selectedId, graphMode, loadGraph]);
 
-  const closeDrawer = useCallback(() => {
-    paperAbortRef.current?.abort();
-    setSelectedId(null);
-    setDetail(null);
-    setSlice(null);
-    setDetailError(null);
-  }, []);
-
   const papers = result?.data || [];
-  const hasQuery = Boolean(result || searchError || searching);
-  const scope = health?.scope || {};
 
   return (
-    <div className="libview">
+    <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
       <GraphHeader health={health} error={healthError} />
-
-      {hasQuery ? (
-        <div className="lib-scroll">
-          <div className="lib-result">
-            <div className="lib-fixedbar">
-              <SearchBar value={form} onChange={setForm} onSubmit={() => runSearch()} busy={searching} />
-            </div>
-            <AppliedEcho meta={result?.meta} count={searching ? null : papers.length} />
-            <ErrorBanner error={searchError} onRetry={() => runSearch()} />
-            {detailError && selectedId ? (
-              <ErrorBanner error={detailError} onRetry={() => selectPaper(selectedId)} />
-            ) : null}
+      <div style={{ display: 'flex', minHeight: 0, flex: 1 }}>
+        <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border-subtle)' }}>
+          <SearchBar value={form} onChange={setForm} onSubmit={runSearch} busy={searching} />
+          <AppliedEcho meta={result?.meta} />
+          <ErrorBanner error={searchError} onRetry={runSearch} />
+          <BoundaryNotice />
+          <div className="stage">
             {searching ? <Loading label="正在检索图谱…" /> : null}
+            {!searching && !result && !searchError ? (
+              <EmptyState>输入条件后点「检索」。检索结果里的每一条都带来源引用，可以直接核对。</EmptyState>
+            ) : null}
             {!searching && result && papers.length === 0 ? (
               <EmptyState>图谱里没有匹配的记录（这是真实的空结果，不是服务不可用）。</EmptyState>
             ) : null}
             {!searching && papers.length > 0 ? (
-              <div style={{ marginTop: 12 }}>
-                <PaperList
-                  papers={papers}
-                  selectedId={selectedId}
-                  onSelect={selectPaper}
-                  onInspect={onInspect}
-                />
-              </div>
+              <PaperList
+                papers={papers}
+                selectedId={selectedId}
+                onSelect={selectPaper}
+                onInspect={onInspect}
+              />
             ) : null}
           </div>
         </div>
-      ) : (
-        <div className="lib-hero">
-          <div className="lib-hero-inner">
-            <h1 className="lib-hero-title">检索文献，核对证据</h1>
-            <p className="lib-hero-sub">
-              <b>{(scope.bibliographyTitles ?? 0).toLocaleString('en-US')}</b> 篇书目 ·{' '}
-              <b>{(scope.modelTitles ?? 0).toLocaleString('en-US')}</b> 篇已建模型 ·{' '}
-              <b>{(scope.candidateAssertions ?? 0).toLocaleString('en-US')}</b> 条候选断言。
-              <br />
-              每一条结果都带来源引用，可以直接核对。
-            </p>
-            <div style={{ width: '100%' }}>
-              <SearchBar value={form} onChange={setForm} onSubmit={() => runSearch()} busy={searching} />
-            </div>
-            <div className="lib-cards">
-              {SUGGESTIONS.map((item) => (
-                <button
-                  key={item.label}
-                  type="button"
-                  className="lib-card"
-                  data-testid="library-suggest"
-                  data-q={item.q}
-                  onClick={() => {
-                    const next = { ...EMPTY_FORM, q: item.q };
-                    setForm(next);
-                    runSearch(next);
-                  }}
-                >
-                  <span className="l">{item.label}</span>
-                  <span className="h">{item.hint}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
-      <PaperDrawer
-        open={Boolean(selectedId)}
-        onClose={closeDrawer}
-        tab={tab}
-        onTab={setTab}
-        selectedId={selectedId}
-        detail={detail}
-        detailBusy={detailBusy}
-        slice={slice}
-        graphBusy={graphBusy}
-        graphMode={graphMode}
-        onModeChange={setGraphMode}
-        onRefresh={() => loadGraph(selectedId, graphMode)}
-        onInspect={onInspect}
-        onOpenPaper={selectPaper}
-        appearance={themeProp}
-      />
+        <aside style={{ width: 480, flex: '0 0 auto', display: 'flex', flexDirection: 'column', background: 'var(--bg-secondary)', minWidth: 0 }}>
+          <nav style={{ display: 'flex', gap: 4, borderBottom: '1px solid var(--border-subtle)', background: 'var(--bg-primary)', padding: '8px 16px 0' }}>
+            {TABS.map((item) => (
+              <button
+                key={item.key}
+                type="button"
+                onClick={() => setTab(item.key)}
+                data-testid="tab"
+                data-tab={item.key}
+                data-active={tab === item.key ? 'true' : 'false'}
+                style={{
+                  padding: '6px 12px', fontSize: 12.5,
+                  borderBottom: `2px solid ${tab === item.key ? 'var(--text-primary)' : 'transparent'}`,
+                  fontWeight: tab === item.key ? 600 : 400,
+                  color: tab === item.key ? 'var(--text-primary)' : 'var(--text-tertiary)',
+                }}
+              >
+                {item.label}
+              </button>
+            ))}
+            {selectedId ? (
+              <span className="mono" style={{ marginLeft: 'auto', paddingBottom: 6, fontSize: 10, color: 'var(--text-muted)' }}>
+                {selectedId}
+              </span>
+            ) : null}
+          </nav>
+          <ErrorBanner error={graphError} onRetry={() => loadGraph(selectedId, graphMode)} />
+          <div className="stage">
+            {!selectedId ? <EmptyState>左侧选择一篇论文后，这里显示详情或局部图谱。</EmptyState> : null}
+            {selectedId && tab === 'detail' ? (
+              detailBusy ? <Loading label="正在读取论文详情…" /> : (
+                <DetailPanel detail={detail} onInspect={onInspect} onOpenPaper={selectPaper} />
+              )
+            ) : null}
+            {selectedId && tab === 'graph' ? (
+              <GraphPanel
+                slice={slice}
+                busy={graphBusy}
+                mode={graphMode}
+                onModeChange={setGraphMode}
+                onRefresh={() => loadGraph(selectedId, graphMode)}
+              />
+            ) : null}
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }
@@ -275,8 +246,9 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
   const [collapsed, setCollapsed] = useState(false);
   const [theme, setTheme] = useState(() => localStorage.getItem('nr-theme') || 'light');
   const [agentHealth, setAgentHealth] = useState(null);
-  const [runs, setRuns] = useState([]);
-  const [run, setRun] = useState(IDLE_RUN);
+  const [sessions, setSessions] = useState([]);
+  const [sessionId, setSessionId] = useState(null);
+  const [turns, setTurns] = useState([]);
   const [inspection, setInspection] = useState(null);
   const [pendingPaper, setPendingPaper] = useState(null);
   const sourceRef = useRef(null);
@@ -295,97 +267,111 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
     sourceRef.current = null;
   };
 
-  const refreshRuns = useCallback(async () => {
+  const refreshSessions = useCallback(async () => {
     try {
-      const payload = await agentApi.listRuns(20);
-      setRuns(payload.data || []);
+      const payload = await agentApi.listSessions(20);
+      setSessions(payload.data || []);
     } catch { /* 侧栏历史拿不到就不显示，不阻塞主流程 */ }
   }, [agentApi]);
 
-  /** 打开一次运行的 SSE 流（新提问与历史重放都走这里；已结束的运行会整段重放）。 */
+  const updateTurn = useCallback((index, patch) => {
+    setTurns((prev) => prev.map((turn, i) => (i === index ? { ...turn, ...patch } : turn)));
+  }, []);
+
+  /** 跟一次运行的 SSE 流，事件落到第 turnIndex 轮上。 */
   const followRun = useCallback(
-    (runId, question) => {
+    (runId, turnIndex) => {
       closeStream();
-      setRun({ ...IDLE_RUN, status: 'running', runId, question });
-      const source = new EventSource(agentApi.eventsUrl(runId));
-      sourceRef.current = source;
-      const append = (m) => setRun((prev) => ({ ...prev, events: [...prev.events, JSON.parse(m.data)] }));
+      const append = (m) => {
+        const event = JSON.parse(m.data);
+        setTurns((prev) => prev.map((turn, i) => (i === turnIndex ? { ...turn, events: [...turn.events, event] } : turn)));
+      };
+      sourceRef.current = new EventSource(agentApi.eventsUrl(runId));
+      const source = sourceRef.current;
       source.addEventListener('tool_step', append);
       source.addEventListener('tool_call', append);
       source.addEventListener('tool_result', append);
       source.addEventListener('tool_error', append);
+      source.addEventListener('run_retry', append);
       source.addEventListener('failed', (m) => {
         const payload = JSON.parse(m.data);
-        setRun((prev) => ({
-          ...prev,
-          events: [...prev.events, payload],
+        updateTurn(turnIndex, {
           status: 'failed',
           error: { title: '运行失败', detail: payload.message || '未知原因' },
-        }));
-      });
-      // 逐字流式：token 增量直接追加到回答上（NOESIS 的打字机效果）
-      source.addEventListener('answer_delta', (m) => {
-        const payload = JSON.parse(m.data);
-        setRun((prev) => ({ ...prev, answer: prev.answer + (payload.delta || '') }));
+        });
       });
       source.addEventListener('answer', (m) => {
         const payload = JSON.parse(m.data);
-        // answer 事件是权威全文（含引用核查），覆盖增量拼接的结果
-        setRun((prev) => ({ ...prev, answer: payload.text || '', citation: payload.citation || null }));
+        updateTurn(turnIndex, { answer: payload.text || '', citation: payload.citation || null });
+      });
+      source.addEventListener('answer_delta', (m) => {
+        const payload = JSON.parse(m.data);
+        setTurns((prev) => prev.map((turn, i) => (i === turnIndex ? { ...turn, answer: turn.answer + (payload.delta || '') } : turn)));
       });
       source.addEventListener('done', () => {
-        setRun((prev) => ({ ...prev, status: prev.status === 'failed' ? 'failed' : 'ok' }));
+        updateTurn(turnIndex, { status: 'ok' });
         closeStream();
-        refreshRuns();
+        refreshSessions();
       });
       source.onerror = () => {
-        setRun((prev) => {
-          if (prev.status !== 'running') return prev;
-          return {
-            ...prev,
-            status: 'failed',
-            error: {
-              title: '事件流中断',
-              detail: '没能读到 Agent 的完整事件流。这次结果不算数，请重试。',
-              kind: 'offline',
-            },
-          };
+        updateTurn(turnIndex, {
+          status: 'failed',
+          error: {
+            title: '事件流中断',
+            detail: '没能读到 Agent 的完整事件流。这次结果不算数，请重试。',
+            kind: 'offline',
+          },
         });
         closeStream();
       };
     },
-    [agentApi, refreshRuns],
+    [agentApi, refreshSessions, updateTurn],
   );
 
   const ask = useCallback(
     async (question) => {
       closeStream();
-      setRun({ ...IDLE_RUN, status: 'running', question });
+      const turnIndex = turns.length;
+      setTurns((prev) => [...prev, { ...IDLE_TURN, status: 'running', question }]);
       setInspection(null);
       let started;
       try {
-        started = await agentApi.startRun(question);
+        started = await agentApi.startRun(question, sessionId || undefined);
       } catch (cause) {
-        setRun((prev) => ({ ...prev, status: 'failed', error: describeAgentError(cause) }));
+        updateTurn(turnIndex, { status: 'failed', error: describeAgentError(cause) });
         return;
       }
-      followRun(started.runId, question);
+      if (started.sessionId && started.sessionId !== sessionId) setSessionId(started.sessionId);
+      followRun(started.runId, turnIndex);
     },
-    [agentApi, followRun],
+    [agentApi, sessionId, turns.length, followRun, updateTurn],
   );
 
-  const openRun = useCallback(
-    (runId) => {
+  const openSession = useCallback(
+    async (id) => {
       setView('agent');
-      const known = runs.find((r) => r.runId === runId);
-      followRun(runId, known?.question || '（历史运行）');
+      try {
+        const session = await agentApi.getSession(id);
+        setSessionId(session.sessionId);
+        setTurns(
+          (session.turns || []).map((turn) => ({
+            ...IDLE_TURN,
+            runId: turn.runId,
+            question: turn.question,
+            answer: turn.answer,
+            status: 'ok',
+          })),
+        );
+        setInspection(null);
+      } catch { /* 会话详情拿不到就不切换，保持当前视图 */ }
     },
-    [runs, followRun],
+    [agentApi],
   );
 
-  const newRun = useCallback(() => {
+  const newResearch = useCallback(() => {
     closeStream();
-    setRun(IDLE_RUN);
+    setSessionId(null);
+    setTurns([]);
     setView('agent');
   }, []);
 
@@ -397,24 +383,26 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
       .catch((cause) => {
         if (!cancelled) setAgentHealth({ agentReady: false, healthError: describeAgentError(cause) });
       });
-    refreshRuns();
+    refreshSessions();
     return () => { cancelled = true; };
-  }, [agentApi, refreshRuns]);
+  }, [agentApi, refreshSessions]);
 
   useEffect(() => closeStream, []);
 
-  // 证据链论文卡：来自运行事件里的 paperItems（与给模型的视图同源），同一篇只出现一次
+  // 证据链论文卡：本会话所有轮次的 paperItems（同一篇只出现一次）
   const papers = useMemo(() => {
     const seen = new Map();
-    for (const event of run.events) {
-      const items = event?.summary?.paperItems;
-      if (!Array.isArray(items)) continue;
-      for (const item of items) {
-        if (item?.publicationId && !seen.has(item.publicationId)) seen.set(item.publicationId, item);
+    for (const turn of turns) {
+      for (const event of turn.events) {
+        const items = event?.summary?.paperItems;
+        if (!Array.isArray(items)) continue;
+        for (const item of items) {
+          if (item?.publicationId && !seen.has(item.publicationId)) seen.set(item.publicationId, item);
+        }
       }
     }
     return [...seen.values()];
-  }, [run.events]);
+  }, [turns]);
 
   const paperTitleById = useMemo(() => {
     const map = new Map();
@@ -422,7 +410,6 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
     return map;
   }, [papers]);
 
-  /** 点引用上标 / 引用 id：打开证据抽屉（能从证据链里拿到题名就带题名）。 */
   const onCited = useCallback(
     (id) => {
       const paper = paperTitleById.get(id);
@@ -432,14 +419,14 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
           sourceId: id,
           publicationId: id,
           graphId: null,
-          evidenceLevel: run.citation?.evidenceLevels?.[0] || 'title',
+          evidenceLevel: 'title',
           assertionStatus: 'none',
           verificationStatus: 'unverified',
         },
         context: { title: paper || id, publicationId: id },
       });
     },
-    [paperTitleById, run.citation],
+    [paperTitleById],
   );
 
   const openPaper = useCallback((publicationId) => {
@@ -453,10 +440,10 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
       <Sidebar
         view={view}
         onView={setView}
-        runs={runs}
-        activeRunId={run.runId}
-        onOpenRun={openRun}
-        onNewRun={newRun}
+        sessions={sessions}
+        activeSessionId={sessionId}
+        onOpenSession={openSession}
+        onNewResearch={newResearch}
         agentHealth={agentHealth}
         theme={theme}
         onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -468,7 +455,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
         {view === 'agent' ? (
           <div style={{ display: 'flex', flex: 1, minHeight: 0, minWidth: 0 }}>
             <AgentChat
-              run={run}
+              turns={turns}
               onAsk={ask}
               onCited={onCited}
               agentHealth={agentHealth}
@@ -478,7 +465,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
               onToggleRail={() => setRailOpen((prev) => !prev)}
               railCount={papers.length}
             />
-            <EvidenceRail papers={papers} onInspect={setInspection} busy={run.status === 'running'} />
+            <EvidenceRail papers={papers} onInspect={setInspection} busy={turns.some((t) => t.status === 'running')} />
           </div>
         ) : (
           <LibraryView
@@ -487,7 +474,6 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
             onConsumeInitial={consumeInitial}
             inspection={inspection}
             onInspect={setInspection}
-            themeProp={theme}
           />
         )}
       </main>

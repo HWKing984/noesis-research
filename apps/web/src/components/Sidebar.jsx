@@ -16,15 +16,14 @@ function sinceLabel(iso) {
 
 /**
  * 侧栏 —— 照搬 NOESIS：可折叠（260px ↔ 60px 图标轨）、分组导航、
- * 「对话记录」区（真实运行记录）、底部状态与主题开关。
+ * 「对话记录」区（真实会话列表，点击续接该会话）、底部状态与主题开关。
  */
 export default function Sidebar({
-  view, onView, runs, activeRunId, onOpenRun, onNewRun,
+  view, onView, sessions, activeSessionId, onOpenSession, onNewResearch,
   agentHealth, theme, onToggleTheme, collapsed, onToggleCollapse,
 }) {
   const ready = Boolean(agentHealth?.agentReady);
   const kgReady = agentHealth?.status ? agentHealth.status === 'ready' : null;
-  const history = (runs || []).filter((r) => r.status !== 'running');
 
   return (
     <aside className={`sidebar ${collapsed ? 'is-collapsed' : ''}`} data-testid="sidebar" data-collapsed={collapsed ? 'true' : 'false'}>
@@ -76,28 +75,28 @@ export default function Sidebar({
 
       <div className="sidebar-section-label">
         对话记录
-        <button type="button" className="sidebar-new-btn" data-testid="new-research" onClick={onNewRun} aria-label="新的研究">
+        <button type="button" className="sidebar-new-btn" data-testid="new-research" onClick={onNewResearch} aria-label="新的研究">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M5 12h14" /></svg>
         </button>
       </div>
       <div className="sidebar-sessions" data-testid="session-list">
-        {history.length === 0 ? (
-          <div className="sidebar-sessions-empty">还没有检索记录</div>
+        {(sessions || []).length === 0 ? (
+          <div className="sidebar-sessions-empty">还没有对话</div>
         ) : (
-          history.map((item) => (
+          (sessions || []).map((session) => (
             <button
-              key={item.runId}
+              key={session.sessionId}
               type="button"
-              className={`session-item ${item.runId === activeRunId ? 'is-active' : ''}`}
-              data-testid="history-run"
-              data-run-id={item.runId}
-              onClick={() => onOpenRun(item.runId)}
-              title={item.question}
+              className={`session-item ${session.sessionId === activeSessionId ? 'is-active' : ''}`}
+              data-testid="session-item"
+              data-session-id={session.sessionId}
+              onClick={() => onOpenSession(session.sessionId)}
+              title={session.title}
             >
               <span className="session-item-icon">{CHAT_ICON}</span>
               <span className="session-item-content">
-                <span className="session-item-title">{item.question}</span>
-                <span className="session-item-time">{sinceLabel(item.createdAt)}</span>
+                <span className="session-item-title">{session.title || '（无标题）'}</span>
+                <span className="session-item-time">{session.turnCount} 轮 · {sinceLabel(session.lastActivity)}</span>
               </span>
             </button>
           ))
