@@ -25,20 +25,28 @@
 - 产出：本仓库目录结构 + `README.md` + 本文档 + `docs/01_source_audit.md`。
 - 验证：目录存在；审计报告含路径 / 行号 / 版本三类证据。
 
-### T2 · 只读 KG Adapter（安全集成第一块砖）
+### T2 · 只读 KG Adapter（安全集成第一块砖）✅ 已完成（2026-10-08，含评审整改）
 
 - 产出：`integrations/knowledge-graph/kg_client.py`，纯标准库，封装 4 个端点：`health` / `search` / `publication` / `graph`。
 - 硬约束：
   1. `503` → `KGUnavailable` 抛出，**绝不返回空结果**（取代 NOESIS `neo4j_client.execute() -> []`）。
   2. `400` → `KGInvalidRequest`；`404` → `KGNotFound`；非 JSON → `KGError`。
-  3. 入参边界与 `course_graph.py:379 / :418` 一致（白名单字段、limit 1–100、offset ≤ 20000、year 2015–2025、graph limit 1–50）。
-  4. `meta.expandedTerms` / `meta.aliasVersion` 原样透传给上层，供"参数回显"。
-- 验证：`integrations/knowledge-graph/test_kg_client.py` 离线单测（注入假 transport，覆盖 4 种错误映射 + 参数构建 + 不静默降级）。
+  3. **200 但结构不符也失败**：`data` 必须是数组/对象且元素类型正确，缺失或类型错一律 `KGError`（`data: []` 仍是合法空结果）。
+  4. 入参边界与 `course_graph.py:379 / :418` 一致（白名单字段、limit 1–100、offset ≤ 20000、year 2015–2025、graph limit 1–50）。
+  5. `meta.expandedTerms` / `meta.aliasVersion` 原样透传给上层，供"参数回显"。
+  6. **服务地址可配置**：`resolve_base_url()` = 显式参数 > `KG_BASE_URL` 环境变量 > 环回默认（容器部署用）。
+  7. **图谱版本一致**：`KGGraphMismatch` + `expected_graph_id` / `KG_EXPECTED_GRAPH_ID`；`assert_graph_version()` 要求服务 `ready` 且 graphId 等于锁定值。仅在响应确实携带 `graphId` 且已设锁时比对，字段缺失不误报。
+  8. **断言按真实形状建模**：`Assertion`（`assertion` / `head` / `tail` 三个子对象），因为 `/api/publication` 返回的是包装结构而非断言属性本身。
+- 验证：
+  - 离线单测 `test_kg_client.py` **40 项**（注入假 transport，覆盖 4 种错误映射 + 12 项结构校验 + 版本一致性 + 配置优先级）。
+  - 真实集成 `tests/integration/test_kg_live.py` **11 项**，对 `127.0.0.1:8765` 实跑通过。
 
-### T3 · 业务 API（`apps/api`）
+### T3 · 业务 API（`apps/api`）—— 已按评审裁剪为 3 个端点
 
-- 产出：FastAPI 应用，落地方案 §六 的核心接口：
-  `GET /api/papers/search` · `GET /api/papers/{id}` · `GET /api/graph/neighbors` · `POST /api/research/runs` · `GET /api/research/runs/{id}/events`(SSE) · `POST /api/research/runs/{id}/cancel` · `POST /api/library/papers` · `POST /api/documents/upload` · `POST /api/reports/{id}/export`。
+- 产出（**仅这三个**，第一轮要的就是闭环）：
+  `GET /api/papers/search` · `GET /api/papers/{id}` · `GET /api/graph/neighbors`
+- 移出第一阶段（见评审意见 P1-7）：`POST /api/library/papers`（收藏）、`POST /api/documents/upload`（上传）、`POST /api/reports/{id}/export`（导出）→ 阶段 2 / 3。
+- 第一轮仍保留（因为它们是"能长期用"的地基）：`POST /api/research/runs`、`GET /api/research/runs/{id}/events`(SSE)、`POST /api/research/runs/{id}/cancel`。
 - 硬约束：错误状态透传（503 不被吞成 200 + 空数组）；Pydantic 契约放 `packages/contracts/`。
 - 验证：契约测试 + 无数据库时返回 503 而非虚假结果。
 
@@ -53,12 +61,25 @@
 ### T5 · 引用闸门（交付前确定性校验）
 
 - 产出：`packages/citation-validator/`，**移植** `services/citation_trace/verify.py:134` 的三阶段降级（精确 → 有界 difflib → 批量 LLM），保留 Apache-2.0 归属头。
+- **证据契约先行（已完成）**：`packages/contracts/evidence.py` 定义统一 `EvidenceRef`，把三件常被混为一谈的事分开：
+  1. `sourceType` / `sourceId` —— 来自哪条记录（`kg_bibliography` / `kg_assertion` / `paper_passage` / `external_record`）
+  2. `evidenceLevel` —— 证据深度（`title` / `abstract` / `fulltext`）：**标题级命中只能证明论文存在**
+  3. `verificationStatus` —— 核验到哪一步了（四级阶梯，见下）
+- **四级阶梯**（准入条件由代码强制，违反即 `EvidenceError`）：
+
+  | `verificationStatus` | 含义 | 硬准入 |
+  |---|---|---|
+  | `unverified` | 尚未核 | — |
+  | `id_valid` | id 能解析到真实记录 | — |
+  | `evidence_supports` | 引文支持该句 | 必须非空 `evidenceText` |
+  | `semantic_verified` | 蕴含成立 | 必须有引文 **且** `evidenceLevel ∈ {abstract, fulltext}` |
+
 - 四项指标（阶段 1 即纳入 CI）：
   1. 引用可溯率 = 事实性断句带有效标识比例（应 100%）
   2. 无证据断言率（应 0%）
   3. 参数回显一致率（应 100%）
   4. 拒答准确率（覆盖全部边界意图：必引 / 被引次数 / 引用链 / 影响力）
-- 验证：单测 + 对现有 18 项 HTTP 验收查询跑端到端一致性。
+- 验证：`packages/contracts/test_evidence.py` **29 项** + 对现有 18 项 HTTP 验收查询跑端到端一致性。
 
 ### T6 · SSE 与运行记录
 
@@ -93,6 +114,18 @@
 | NOESIS 移植模块 | `D:\a-Soft` | 见 `THIRD_PARTY_NOTICES.md` | `citation_trace` 为 openJiuwen Apache-2.0 算法移植，须保留归属 |
 | AI-Literature-KG API | `D:\a-open_source\neo4j` | 本地项目 | 只读消费 |
 
+### 锁定策略（评审 P1-5）
+
+- **现状**：`integrations/` 与 `packages/` 的代码**零第三方依赖**，只 import 标准库 —— 这是刻意的，因为这是 Deep Agents 工具的直接底座。所以现阶段没有可锁的传递闭包。
+- **CI 因此不装任何依赖**：`.github/workflows/ci.yml` 在 Python 3.11 / 3.13 双版本上跑 `compileall` + `scripts/run_all_tests.py`，一条命令本地与 CI 共用。
+- **服务级锁随服务落地**：`services/research-agent/requirements.txt` 目前是**直接依赖 pin**（`deepagents==0.7.23` 等，取自 PyPI 元数据实测）；完整传递闭包锁（`pip-compile` / `uv lock`）在 T4 建 venv 时生成并回填，不预先写一份假锁。
+
+### 复用策略（评审策略调整，已生效）
+
+> **能直接复用的模块就直接复用；有冲突的模块才通过 Adapter 隔离；需要独立业务能力的部分再开发。**
+
+前端相应改为**优先原组件移植**（聊天、Agent 过程、Artifact、局部知识图谱、研究状态展示），只有数据契约或样式冲突时才在边界层隔离 —— 不再只做"行为对齐"。
+
 ---
 
 ## 3 风险表
@@ -119,6 +152,17 @@
 
 ---
 
-## 5 下一步（本计划内的第一个可动手项）
+## 5 当前进度
 
-**T2 只读 KG Adapter** 已经落地：`integrations/knowledge-graph/kg_client.py` + 离线单测。它不依赖 Neo4j 是否运行（注入假 transport 即可验证错误映射），是后续所有 Agent 工具的唯一数据出口。
+| 任务 | 状态 | 证据 |
+|---|---|---|
+| T1 工程骨架 | ✅ | 目录 + 三份文档 |
+| T2 只读 KG Adapter | ✅ | 离线 40 项 + 真实集成 11 项全绿 |
+| 证据契约（T5 前置） | ✅ | `packages/contracts/evidence.py`，29 项 |
+| CI / 统一测试入口 | ✅ | `.github/workflows/ci.yml`、`scripts/run_all_tests.py` |
+| T3 业务 API（3 端点） | ⏭ 下一步 | — |
+| T4 Deep Agents | ⏭ | — |
+| T7 前端移植 | ⏭ | — |
+
+本轮验收目标（评审给定）：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据。**
+

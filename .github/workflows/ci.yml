@@ -1,0 +1,42 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: tests (python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.11 is the floor: deepagents / paper-qa both declare >=3.11.
+        python-version: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # No `pip install`: every module under integrations/ and packages/ is
+      # standard-library only, on purpose. A dependency tree here would mean the
+      # Deep Agents tools inherited one.
+      - name: Syntax gate
+        run: python -m compileall -q integrations packages tests scripts
+
+      - name: Unit + contract tests
+        run: python scripts/run_all_tests.py
+
+      # The live suite self-skips with no service reachable. This step proves the
+      # skip is a *skip* and not a silent pass of a broken import.
+      - name: Live suite must be skipped, not failed
+        run: |
+          python -m unittest discover -s tests/integration -t tests/integration -v 2>&1 | tee live.log
+          grep -Eq "skipped=[1-9]" live.log

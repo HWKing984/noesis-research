@@ -147,3 +147,41 @@
 | Q3 | Deep Agents 接入方式 | 独立 `services/research-agent` venv，用 `langchain-openai` 指向 `LLM_BASE_URL`（OpenAI 兼容） | 中（若改用 Anthropic 官方接线） |
 | Q4 | 前端承载 | `apps/web` 复用 NOESIS 前端体系（React 18 + Vite + Tailwind 4），在右侧加可切换面板 | 中 |
 | Q5 | 用户体系 | 阶段 1 不做多用户；表结构预留 `ownerId` 字段，隔离在阶段 4 落实 | 低 |
+
+---
+
+## 7 真实契约校正（2026-10-08 集成测试产出）
+
+以下是**只有连真实服务才会暴露**的两处契约细节，静态阅读 `course_graph.py` 容易读错。已建模进 `integrations/knowledge-graph/kg_client.py`。
+
+### 7.1 `/api/publication` 的 `assertions` 是包装结构
+
+`course_graph.py` L494：`RETURN properties(a) AS assertion, properties(h) AS head, properties(t) AS tail`。所以每个元素是：
+
+```json
+{"assertion": {"id": "…:Assertion:780c1091…", "pairId": "pair-…", "predicate": "USED_FOR",
+               "status": "candidate", "confidence": 0.9990502, "confidenceCalibrated": false,
+               "source": "model_prediction", "evidence": "…题目…"},
+ "head": {"text": "…", "label": "METHOD", "start": 0, "end": 18, "status": "…"},
+ "tail": {"text": "…", "label": "TASK",   "start": 0, "end": 12, "status": "…"}}
+```
+
+**风险**：直接 `item["status"]` 会拿到 `None`，被当成"没有状态"静默放过 —— 与"候选状态必须透传"的原则冲突。已建模为 `Assertion` 类型（`predicate` / `status` / `is_candidate` / `evidence`），并强制 `assertion`/`head`/`tail` 三个子对象齐备。
+
+### 7.2 `/api/graph` 的 `rootId` 是节点内部复合 id
+
+实测 `rootId = "ai-literature-ed16399925fac2a599ed:Publication:4725bc95…"`，而 DBLP 键在 `props.publicationId = "conf/aaai/0002LCWHL25"`。两者**不等**。
+
+`graph_response()` 里 `add_node({'kind': 'Publication', 'props': publication})` 用的也是复合 `id`，所以 `rootId` 与节点 `id` 一致、与 `publicationId` 不一致。若按直觉拿 `rootId` 去比 `publicationId`，会得到假的"根节点缺失"。
+
+适配器因此强制四项不变量：`rootId ∈ 返回节点集合`、根节点 `kind == "Publication"`、根节点 `props.publicationId == 请求 id`、每条边两端都在返回节点集合内。
+
+### 7.3 线上实测样例（用于回归对照）
+
+| 项 | 值 |
+|---|---|
+| `graphId` | `ai-literature-ed16399925fac2a599ed`（与 `resources/course_graph_runtime.json` 一致） |
+| `scope` | bibliographyTitles 20000 / modelTitles 19999 / rejectedNERTitles 1 / candidateAssertions 21497 |
+| 检索项字段 | `publicationId, title, year, graphId, doi, dblpUrl, urls, type, source, id, pages, modelApplied, modelApplicationStatus, modelRunManifestSha256, modelSampleId, sourceFileSha256` |
+| 作者字段 | `name, signatureName, position, identityStatus, personId, aliases, dblpPid, dblpUrl` |
+| 局部图 `meta` | `wholeGraph: false`、`pathsReturned`、`pathLimit`、`hasMorePaths`、免责 `notice` |

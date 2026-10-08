@@ -2,8 +2,26 @@
 
 基于科学文献知识图谱的智能研究工作平台。定位：**长期使用、管理真实论文、执行完整研究任务、支持多用户与持续扩展**，不以课程演示为终点。
 
-> 状态：**第一阶段 · 源码审计完成，工程骨架已建立，尚未写入业务代码。**
-> 审计结论见 [`docs/01_source_audit.md`](docs/01_source_audit.md)，第一阶段任务分解见 [`docs/02_phase1_plan.md`](docs/02_phase1_plan.md)。
+> 状态：**第一阶段进行中 —— KG Adapter 已通过真实 Neo4j 集成验证（80 项测试全绿）；业务 API 与 Agent 尚未落地。**
+> 文档：[源码审计](docs/01_source_audit.md) · [第一阶段计划](docs/02_phase1_plan.md) · [评审回应](docs/03_review_response.md)
+
+## 0 当前进度
+
+| 模块 | 状态 |
+|---|---|
+| 源码审计 | ✅ `docs/01_source_audit.md` |
+| 架构与阶段计划 | ✅ `docs/02_phase1_plan.md` |
+| 只读 KG Adapter | ✅ 含结构校验、可配置地址、图谱版本一致性 |
+| 证据契约 | ✅ `packages/contracts/evidence.py` |
+| 测试 | ✅ 80 项：离线 40 + 契约 29 + **真实 Neo4j 集成 11** |
+| CI | ✅ Python 3.11 / 3.13 矩阵 |
+| FastAPI 业务服务 | ⏭ 未落地 |
+| Deep Agents / PaperQA2 | ⏭ 未集成 |
+| NOESIS 前端移植 | ⏭ 未迁入 |
+| 用户与研究工作区 | ⏭ 未实现 |
+| Docker 部署 | ⏭ 未完成 |
+
+一次跑全：`python scripts/run_all_tests.py`（无 Neo4j 时集成套件自动 skip）。
 
 ---
 
@@ -16,7 +34,9 @@
 | 论文内容理解 | **PaperQA2**（独立 Python 服务） | 只读 PDF，不写图谱 |
 | 结构化学术知识来源 | **AI-Literature-KG**（`D:\a-open_source\neo4j`） | SciBERT + Neo4j，**只读、版本化** |
 
-主原则：**复用机制，不复用应用**。NOESIS 是学习域系统（账号 / 课程 / 掌握度），整仓迁移会引入无关依赖与鉴权体系。
+主原则：**能直接复用的模块就直接复用；有冲突的模块才通过 Adapter 隔离；需要独立业务能力的部分再开发。**
+
+具体的隔离点：NOESIS 的图客户端（`app/knowledge/graph/neo4j_client.py`）数据库不可用时静默返回空列表、且带 `delete_all()` 写方法，与本项目"不可用即失败、绝不返回离线替代数据"的规则冲突，因此**换成自己的只读适配器**，而不是复用。前端则优先原组件移植（聊天 / Agent 过程 / Artifact / 局部图谱），只在数据契约或样式冲突时隔离。
 
 ## 2 目录
 
@@ -24,11 +44,13 @@
 noesis-research/
 ├── apps/            # web（复用 NOESIS 前端）· api（FastAPI 业务 API）
 ├── services/        # research-agent（Deep Agents）· paper-reader（PaperQA2 适配）· background-worker
-├── integrations/    # knowledge-graph（只读适配器）· openalex · crossref · semantic-scholar
-├── packages/        # evidence（统一证据模型）· contracts（API / Event 契约）· citation-validator
+├── integrations/    # knowledge-graph（只读适配器，已实现）· openalex · crossref · semantic-scholar
+├── packages/        # contracts/evidence.py（统一证据契约，已实现）· citation-validator（待建）
 ├── infra/           # docker-compose 等
-├── docs/            # 审计、计划、决策记录
-└── tests/           # integration / evaluation / e2e
+├── scripts/         # run_all_tests.py（零依赖统一测试入口）
+├── .github/         # ci.yml（Python 3.11 / 3.13 矩阵）
+├── docs/            # 审计 · 计划 · 评审回应
+└── tests/           # integration（真实 Neo4j）· evaluation · e2e
 ```
 
 ## 3 默认假设（审计阶段所定，未改变时按此推进）
