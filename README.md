@@ -2,7 +2,7 @@
 
 基于科学文献知识图谱的智能研究工作平台。定位：**长期使用、管理真实论文、执行完整研究任务、支持多用户与持续扩展**，不以课程演示为终点。
 
-> 状态：**第一阶段链路已通到 Agent —— 只读 KG Adapter + FastAPI + Deep Agents 均已对真实 Neo4j 验收（136 项测试全绿）；真实 LLM 已跑通但被引用闸门判为不合格（详见 `docs/02_phase1_plan.md` §5）；前端与 PaperQA2 尚未接入。**
+> 状态：**科研 Agent Web 闭环已通 —— 在网页里提问 → Agent 自主调工具 → 看着它检索 → 回答带引用 → 点引用看证据（28 项浏览器断言全过）。检索界面降级为二级功能。**
 > 文档：[源码审计](docs/01_source_audit.md) · [第一阶段计划](docs/02_phase1_plan.md) · [评审回应](docs/03_review_response.md) · [参考仓库台账](docs/04_reference_clones.md)
 
 ## 0 当前进度
@@ -14,13 +14,15 @@
 | 只读 KG Adapter | ✅ 含结构校验、可配置地址、图谱版本一致性、**显式禁用环境代理** |
 | 证据契约 | ✅ `packages/contracts/evidence.py` |
 | FastAPI 业务服务 | ✅ 3 个业务端点 + 就绪探针，错误语义完整（503/502/400/404） |
-| **Deep Agent** | ✅ 1 个主 Agent + 5 个只读工具 + 权限收紧（内存态后端、无宿主 shell） |
-| **研究工作区（前端）** | ✅ Vite 5 + React 18 + Tailwind 4：检索 → 详情 → 局部图谱，全程带证据引用 |
-| 测试 | ✅ 136 项 Python + 9 项前端单测 + **15 项无头浏览器断言** |
-| CI | ✅ 四个 job：core（零依赖）· api（FastAPI）· agent（deepagents）· web（pnpm） |
-| PaperQA2 | ⏭ 未集成 |
-| 科研助手对话面板 | ⏭ 未实现（依赖 research runs + SSE） |
-| 用户与研究工作区（多用户） | ⏭ 未实现 |
+| **Deep Agent** | ✅ 1 主 Agent + 5 只读工具；权限收紧（内存态后端、无宿主 shell）；工具返回值分「给模型 / 给界面」两个契约 |
+| **Agent 服务（HTTP + SSE）** | ✅ `POST /runs` · `GET /runs/{id}/events`（SSE 事件流）· `GET /runs/{id}` · `GET /health` |
+| **科研助手界面（主界面）** | ✅ 提问 → 看着它检索 → 回答带引用核查结论 → 点引用跳证据抽屉 |
+| 论文库与图谱（二级视图） | ✅ 检索 / 详情 / 局部图谱；证据可点开抽屉 |
+| 测试 | ✅ Python 159 项（适配器 44 · 契约 29 · API 18 · agent 44 · 真实集成 24）+ 前端 18 项 + **浏览器 28 项** |
+| CI | ✅ 四个 job：core · api · agent · web（`packageManager` 钉到 pnpm@10.33.2） |
+| 运行记录持久化 | ⏭ 只存内存，进程重启即丢 |
+| PaperQA2 / PDF 阅读 | ⏭ 未集成 |
+| 交互式图谱（Sigma 移植） | ⏭ 未做 |
 | Docker 部署 | ⏭ 未完成 |
 
 一次跑全：`python scripts/run_all_tests.py`（无 Neo4j 时集成套件自动 skip；缺 FastAPI / deepagents 时对应套件自动 skip，CI 会断言这些 skip 确实发生）。

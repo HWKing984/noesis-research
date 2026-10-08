@@ -4,10 +4,14 @@ import { EvidenceChip, EvidenceGate } from './StatusPieces.jsx';
 import { countCandidates } from '../lib/evidence.js';
 
 /** 论文详情。作者身份状态、候选断言、引文草稿都原样展示，不加工成"结论"。 */
-export function DetailPanel({ detail }) {
+export function DetailPanel({ detail, onInspect, onOpenPaper }) {
   if (!detail) return null;
   const { publication, authors, venues, mentions, assertions, citationDraft, notice } = detail;
   const candidates = countCandidates(assertions);
+  const publicationContext = {
+    title: publication.title,
+    publicationId: publication.publicationId,
+  };
 
   return (
     <div className="space-y-4 px-5 py-4" data-testid="detail-panel">
@@ -19,7 +23,11 @@ export function DetailPanel({ detail }) {
           {publication.publicationId}
         </div>
         <div className="mt-2 flex flex-wrap items-center gap-1.5">
-          <EvidenceChip reference={publication.evidence} />
+          <EvidenceChip
+            reference={publication.evidence}
+            context={publicationContext}
+            onInspect={onInspect}
+          />
           {publication.doi ? (
             <a
               className="text-[11px] text-[var(--accent)] underline"
@@ -125,7 +133,17 @@ export function DetailPanel({ detail }) {
                   ) : null}
                 </div>
                 <div className="mt-1.5">
-                  <EvidenceChip reference={assertion.evidence} />
+                  <EvidenceChip
+                    reference={assertion.evidence}
+                    context={{
+                      title: assertion.evidenceText || publication.title,
+                      publicationId: publication.publicationId,
+                      predicate: assertion.predicate,
+                      head: assertion.head?.text,
+                      tail: assertion.tail?.text,
+                    }}
+                    onInspect={onInspect}
+                  />
                 </div>
               </li>
             ))}

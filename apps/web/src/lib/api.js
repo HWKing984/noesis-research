@@ -46,7 +46,7 @@ export function publicationPath(publicationId) {
   return `/api/papers/${escaped}`;
 }
 
-async function request(base, path, params) {
+async function request(base, path, params, options = {}) {
   const url = new URL(path, base);
   for (const [key, value] of Object.entries(params || {})) {
     if (value !== '' && value !== null && value !== undefined) {
@@ -56,7 +56,10 @@ async function request(base, path, params) {
 
   let response;
   try {
-    response = await fetch(url, { headers: { Accept: 'application/json' } });
+    response = await fetch(url, {
+      headers: { Accept: 'application/json' },
+      ...options,
+    });
   } catch (cause) {
     throw new ApiError(0, 'network_error', `无法连接研究 API（${base}）：${cause.message}`);
   }
@@ -83,11 +86,12 @@ async function request(base, path, params) {
 export function createResearchApi(base = DEFAULT_API_BASE) {
   return {
     base,
-    health: () => request(base, '/api/health'),
-    searchPapers: (params = {}) => request(base, '/api/papers/search', params),
-    getPaper: (publicationId) => request(base, publicationPath(publicationId)),
-    graphNeighbors: (publicationId, mode = 'paper', limit = 15) =>
-      request(base, '/api/graph/neighbors', { id: publicationId, mode, limit }),
+    health: (options) => request(base, '/api/health', undefined, options),
+    searchPapers: (params = {}, options) => request(base, '/api/papers/search', params, options),
+    getPaper: (publicationId, options) =>
+      request(base, publicationPath(publicationId), undefined, options),
+    graphNeighbors: (publicationId, mode = 'paper', limit = 15, options = {}) =>
+      request(base, '/api/graph/neighbors', { id: publicationId, mode, limit }, options),
   };
 }
 
@@ -97,6 +101,9 @@ export function createResearchApi(base = DEFAULT_API_BASE) {
  */
 export function describeApiError(error) {
   if (!(error instanceof ApiError)) {
+    if (error && (error.name === 'AbortError' || error.code === 20)) {
+      return { title: '已取消', detail: '这次请求已被更新的操作取代。', kind: 'cancelled' };
+    }
     return { title: '未知错误', detail: String(error?.message || error), kind: 'unknown' };
   }
   switch (error.code) {

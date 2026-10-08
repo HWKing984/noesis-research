@@ -20,6 +20,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 _IMPORT_ERROR: str | None = None
 try:
+    # 先导入本包：它会装配 sys.path（kg_client / noesis_research_api 都在别处）
+    import noesis_research_agent  # noqa: F401
+
     from langchain_core.language_models import BaseChatModel
     from langchain_core.messages import AIMessage
     from langchain_core.outputs import ChatGeneration, ChatResult
@@ -227,10 +230,26 @@ class ToolSurfaceTests(unittest.TestCase):
         client, _ = build_client({"/api/publications": [(200, search_payload())]})
         result = tool_by_name(build_tools(client, graph_id=PINNED), "search_papers").invoke({"query": "x"})
         paper = result["papers"][0]
-        self.assertEqual(paper["evidence"]["sourceType"], "kg_bibliography")
         self.assertEqual(paper["evidence"]["sourceId"], paper["publicationId"])
         self.assertEqual(paper["evidence"]["evidenceLevel"], "title")
         self.assertEqual(paper["evidence"]["verificationStatus"], "unverified")
+
+    def test_tool_results_are_compact_for_the_model(self) -> None:
+        """工具返回值要进模型上下文，必须精简 —— 这是成本与延迟的直接约束。"""
+        client, _ = build_client({"/api/publications": [(200, search_payload())]})
+        result = tool_by_name(build_tools(client, graph_id=PINNED), "search_papers").invoke({"query": "x"})
+        paper = result["papers"][0]
+        self.assertEqual(
+            set(paper.keys()),
+            {"publicationId", "title", "year", "doi", "evidence"},
+            "模型视图只该有判断需要的那几列",
+        )
+        self.assertEqual(
+            set(paper["evidence"].keys()),
+            {"sourceId", "evidenceLevel", "verificationStatus"},
+        )
+        self.assertNotIn("urls", paper)
+        self.assertNotIn("modelApplicationStatus", paper)
 
     def test_evidence_tool_keeps_assertions_as_candidates(self) -> None:
         client, _ = build_client({"/api/publication": [(200, detail_payload())]})
@@ -243,8 +262,8 @@ class ToolSurfaceTests(unittest.TestCase):
         self.assertEqual(assertion["status"], "candidate")
         self.assertEqual(assertion["predicate"], "USED_FOR")
         self.assertFalse(assertion["confidenceCalibrated"])
-        self.assertEqual(assertion["evidence"]["sourceType"], "kg_assertion")
-        self.assertEqual(assertion["evidence"]["assertionStatus"], "candidate")
+        self.assertEqual(assertion["evidence"]["sourceId"], result["assertions"][0]["assertionId"])
+        self.assertEqual(assertion["evidence"]["evidenceLevel"], "title")
         self.assertEqual(assertion["evidence"]["verificationStatus"], "unverified")
 
     def test_graph_tool_is_bounded(self) -> None:

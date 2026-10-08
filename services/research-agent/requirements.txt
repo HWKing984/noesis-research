@@ -17,6 +17,11 @@
 # 版本由克隆源码 libs/deepagents/pyproject.toml 与 PyPI 元数据两处独立对上
 deepagents==0.7.23
 
+# --- HTTP + SSE 服务（server.py：POST /runs、GET /runs/{id}/events）---
+# 界面要"看着 agent 干活"，所以 agent 自己也对外提供服务，而不是只做 CLI。
+fastapi==0.142.4
+uvicorn[standard]==0.54.0
+
 # --- LangChain 栈（deepagents 的传递约束，显式声明以便追踪）---
 langchain==1.4.3
 langchain-core==1.6.7

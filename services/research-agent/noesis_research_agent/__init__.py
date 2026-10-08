@@ -19,6 +19,8 @@ from . import _paths  # noqa: F401  (sys.path wiring; must precede any package i
 if TYPE_CHECKING:  # pragma: no cover - typing only
     from .agent import SYSTEM_PROMPT, build_agent, build_backend
     from .config import AgentSettings, ConfigurationError
+    from .runner import RunRegistry, citation_report, translate_chunks
+    from .server import create_app
     from .tools import RESEARCH_TOOL_NAMES, build_tools
 
 __all__ = [
@@ -26,9 +28,13 @@ __all__ = [
     "SYSTEM_PROMPT",
     "AgentSettings",
     "ConfigurationError",
+    "RunRegistry",
     "build_agent",
     "build_backend",
     "build_tools",
+    "citation_report",
+    "create_app",
+    "translate_chunks",
 ]
 
 _LAZY = {
@@ -39,6 +45,10 @@ _LAZY = {
     "ConfigurationError": ("config", "ConfigurationError"),
     "build_tools": ("tools", "build_tools"),
     "RESEARCH_TOOL_NAMES": ("tools", "RESEARCH_TOOL_NAMES"),
+    "RunRegistry": ("runner", "RunRegistry"),
+    "citation_report": ("runner", "citation_report"),
+    "translate_chunks": ("runner", "translate_chunks"),
+    "create_app": ("server", "create_app"),
 }
 
 

@@ -181,8 +181,21 @@ const PROBE = `(() => {
   const q = (sel) => document.querySelector(sel);
   const qa = (sel) => Array.from(document.querySelectorAll(sel));
   const chips = qa('[data-testid="evidence-chip"]');
+  const activeViewTab = qa('[data-testid="view-tab"]').find((el) => el.getAttribute('data-active') === 'true');
+  const citedChips = qa('[data-testid="cited-id"]');
   return {
     title: document.title,
+    activeView: activeViewTab?.getAttribute('data-view') || '',
+    agentChatPresent: Boolean(q('[data-testid="agent-chat"]')),
+    exampleCount: qa('[data-testid="example-question"]').length,
+    agentStepCount: qa('[data-testid="agent-step"]').length,
+    agentStepIcons: qa('[data-testid="agent-step"]').map((el) => el.getAttribute('data-step-icon')),
+    agentAnswer: q('[data-testid="agent-answer"]')?.textContent || '',
+    citationPasses: q('[data-testid="citation-verdict"]')?.getAttribute('data-passes') || '',
+    citationText: q('[data-testid="citation-verdict"]')?.textContent || '',
+    citedChipCount: citedChips.length,
+    citedChipIds: citedChips.map((el) => el.textContent.trim()),
+    agentError: q('[data-testid="agent-error"]')?.textContent || '',
     graphHeader: q('[data-testid="graph-header"]')?.textContent || '',
     pinState: q('[data-testid="pin-state"]')?.textContent || '',
     boundary: Boolean(q('[data-testid="boundary-notice"]')),
@@ -200,6 +213,10 @@ const PROBE = `(() => {
     assertionStatuses: qa('[data-testid="assertion-item"]').map((el) => el.getAttribute('data-status')),
     graphNodes: qa('[data-testid="graph-node"]').length,
     graphEdges: qa('[data-testid="graph-edge"]').length,
+    drawerPresent: Boolean(q('[data-testid="evidence-drawer"]')),
+    drawerTitle: q('[data-testid="drawer-title"]')?.textContent || '',
+    drawerFields: q('[data-testid="drawer-fields"]')?.textContent || '',
+    drawerText: q('[data-testid="evidence-drawer"]')?.textContent || '',
     errorBanner: q('[data-testid="error-banner"]')?.textContent || '',
     bodyBg: getComputedStyle(document.body).backgroundColor,
     rootOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -228,15 +245,26 @@ async function main() {
 
     await session.send('Page.navigate', { url: TARGET_URL });
     await session.waitFor(`document.readyState === 'complete'`, { timeout: 30000 });
-    await session.waitFor(`!!document.querySelector('[data-testid="search-form"]')`);
 
-    // 图谱状态条必须真的拿到数据（而不是一直显示"正在读取"）
+    // ---- 主界面必须是「科研助手」，不是论文库 ----
+    await session.waitFor(`!!document.querySelector('[data-testid="agent-chat"]')`);
+    let probe = await session.eval(PROBE);
+    add('默认进入科研助手', probe.activeView === 'agent' && probe.agentChatPresent, `view=${probe.activeView}`);
+    add('提供示例问题一键发问', probe.exampleCount > 0, `${probe.exampleCount} 个`);
+
+    // ---- 切到论文库，验证数据侧 ----
+    await session.eval(`(() => {
+      Array.from(document.querySelectorAll('[data-testid="view-tab"]'))
+        .find((el) => el.getAttribute('data-view') === 'library').click();
+      return true;
+    })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="search-form"]')`);
     await session.waitFor(
       `(document.querySelector('[data-testid="graph-header"]')?.textContent || '').includes('graphId')`,
       { timeout: 25000 },
     );
 
-    let probe = await session.eval(PROBE);
+    probe = await session.eval(PROBE);
     add('页面标题正确', /NOESIS Research/.test(probe.title), probe.title);
     add('状态条显示 graphId', /graphId/.test(probe.graphHeader), probe.graphHeader.trim().slice(0, 80));
     add('状态条显示版本锁定状态', /版本锁定|未锁定/.test(probe.pinState), probe.pinState.trim());
@@ -293,6 +321,82 @@ async function main() {
     });
     probe = await session.eval(PROBE);
     add('局部图谱画出节点', probe.graphNodes > 0, `nodes=${probe.graphNodes} edges=${probe.graphEdges}`);
+
+    // ---- 证据必须真的可点：点开抽屉并核对内容（评审第 2 条）----
+    await session.eval(`(() => {
+      const chip = Array.from(document.querySelectorAll('[data-testid="evidence-chip"]'))
+        .find((el) => el.getAttribute('data-clickable') === 'true');
+      if (!chip) throw new Error('没有可点击的证据徽标');
+      chip.click();
+      return true;
+    })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="evidence-drawer"]')`, { timeout: 15000 });
+    probe = await session.eval(PROBE);
+    add('证据抽屉可以打开', probe.drawerPresent === true);
+    add('抽屉里有来源 id 与深度', probe.drawerFields.includes(probe.firstSourceId) && /题名|摘要|全文/.test(probe.drawerFields),
+      `sourceId=${probe.firstSourceId}`);
+    add(
+      '抽屉把"不能证明什么"写在第一屏',
+      /不能证明/.test(probe.drawerText),
+      probe.drawerText.match(/[^。]*不能证明[^。]*/)?.[0]?.slice(0, 60) || '',
+    );
+    // 从抽屉跳到那篇论文：详情 id 必须等于证据的 publicationId
+    await session.eval(`(() => {
+      document.querySelector('[data-testid="drawer-open-paper"]').click();
+      return true;
+    })()`);
+    await session.waitFor(`!document.querySelector('[data-testid="evidence-drawer"]')`, { timeout: 15000 });
+    await session.waitFor(`!!document.querySelector('[data-testid="detail-panel"]')`, { timeout: 25000 });
+    probe = await session.eval(PROBE);
+    add(
+      '抽屉能跳到对应论文详情',
+      probe.detailId.length > 0 && probe.detailId === probe.firstSourceId,
+      `detail=${probe.detailId} evidence=${probe.firstSourceId}`,
+    );
+
+    // ---- 主界面：让 agent 真的跑一次 ----
+    await session.eval(`(() => {
+      Array.from(document.querySelectorAll('[data-testid="view-tab"]'))
+        .find((el) => el.getAttribute('data-view') === 'agent').click();
+      return true;
+    })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="agent-chat"]')`);
+
+    await session.eval(`(() => {
+      document.querySelector('[data-testid="example-question"]').click();
+      return true;
+    })()`);
+
+    // 先看到"在干活"，再看结论
+    await session.waitFor(`document.querySelectorAll('[data-testid="agent-step"]').length > 0`, {
+      timeout: 180000,
+    });
+    await session.waitFor(`!!document.querySelector('[data-testid="citation-verdict"]')`, {
+      timeout: 300000,
+    });
+    probe = await session.eval(PROBE);
+
+    add('Agent 报出了工具调用步骤', probe.agentStepCount > 0, `${probe.agentStepCount} 步：${probe.agentStepIcons.join(',')}`);
+    add(
+      '步骤里包含真实的工具调用与返回',
+      probe.agentStepIcons.includes('call') && probe.agentStepIcons.includes('result'),
+      probe.agentStepIcons.join(','),
+    );
+    add('给出了回答', probe.agentAnswer.length > 0, `${probe.agentAnswer.length} 字`);
+    add(
+      '引用核查结论已呈现',
+      probe.citationPasses === 'true' || probe.citationPasses === 'false',
+      `passes=${probe.citationPasses}｜${probe.citationText.slice(0, 90)}`,
+    );
+    add('Agent 未报错', probe.agentError === '', probe.agentError.slice(0, 90));
+    // 结论必须与"有没有引用"自洽：判通过就不该是 0 条，判不通过就不该列出引用 id
+    const consistent = probe.citationPasses === 'true' ? probe.citedChipCount > 0 : probe.citedChipCount === 0;
+    add(
+      '引用结论与引用 id 自洽',
+      consistent,
+      `passes=${probe.citationPasses} citedChips=${probe.citedChipCount}`,
+    );
+    add('Agent 视图无横向溢出', probe.rootOverflow <= 1, `溢出 ${probe.rootOverflow}px`);
 
     if (SHOT) {
       const shot = await session.send('Page.captureScreenshot', { format: 'png' });

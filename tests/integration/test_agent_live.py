@@ -191,8 +191,9 @@ class LiveAgentLoopTests(unittest.TestCase):
         self.assertIn("/", paper["publicationId"], "DBLP keys contain slashes")
         self.assertEqual(paper["evidence"]["sourceId"], paper["publicationId"])
         self.assertEqual(paper["evidence"]["evidenceLevel"], "title")
-        if PINNED:
-            self.assertEqual(paper["evidence"]["graphId"], PINNED)
+        self.assertEqual(paper["evidence"]["verificationStatus"], "unverified")
+        # 图谱版本一致性不再断言在模型视图里（它是精简的，不含 graphId）——
+        # 这条保证由 test_scope_tool_reports_the_pinned_version 与 test_kg_live 负责。
 
         # The answer must quote that real id — this is the "clickable evidence" claim.
         self.assertIn(paper["publicationId"], answer)

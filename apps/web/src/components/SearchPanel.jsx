@@ -97,8 +97,8 @@ export function AppliedEcho({ meta }) {
   );
 }
 
-/** 检索结果列表。每条都带一个可核对的证据引用。 */
-export function PaperList({ papers, selectedId, onSelect }) {
+/** 检索结果列表。每条都带一个可核对的证据引用（点击可打开证据抽屉）。 */
+export function PaperList({ papers, selectedId, onSelect, onInspect }) {
   return (
     <ul className="divide-y divide-[var(--line)]" data-testid="paper-list">
       {papers.map((paper) => {
@@ -121,7 +121,12 @@ export function PaperList({ papers, selectedId, onSelect }) {
               </div>
               <div className="mono mt-1 text-[11px] text-[var(--ink-muted)]">{paper.publicationId}</div>
               <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
-                <EvidenceChip reference={paper.evidence} compact />
+                <EvidenceChip
+                  reference={paper.evidence}
+                  compact
+                  context={{ title: paper.title, publicationId: paper.publicationId }}
+                  onInspect={onInspect}
+                />
                 {paper.modelApplied ? (
                   <span className="rounded bg-[var(--bg)] px-1.5 py-0.5 text-[10px] text-[var(--ink-muted)]">
                     已建模型提及

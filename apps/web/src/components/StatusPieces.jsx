@@ -103,8 +103,15 @@ export function BoundaryNotice() {
   );
 }
 
-/** 证据徽标：把「来源类型 / 证据深度 / 核验状态」三个维度分开显示。 */
-export function EvidenceChip({ reference, compact = false }) {
+/**
+ * 证据徽标 —— **可点击**。
+ *
+ * 评审指出的问题（成立）：它原来只是个 `<span>`，展示了 id 却点不开，
+ * 浏览器测试也只断言了属性存在，等于"每条都带可点击证据"这句话是空话。
+ * 现在它是一个真按钮，点开 {@link EvidenceDrawer}，能看到来源、深度、核验状态、
+ * 图谱版本，并能跳到那篇论文。
+ */
+export function EvidenceChip({ reference, compact = false, context, onInspect }) {
   const info = describeEvidence(reference);
   if (!info.citable) {
     return (
@@ -117,17 +124,46 @@ export function EvidenceChip({ reference, compact = false }) {
       </span>
     );
   }
+
+  const open = () => onInspect?.({ reference, context: context || null });
+
+  if (compact) {
+    return (
+      <button
+        type="button"
+        onClick={open}
+        className="inline-flex items-center gap-1 rounded border border-[var(--accent-soft)] bg-[var(--accent-soft)] px-1.5 py-0.5 text-[11px] text-[var(--accent)] hover:underline"
+        data-testid="evidence-chip"
+        data-citable="true"
+        data-clickable="true"
+        data-source-id={info.sourceId}
+        title={`${info.caveat}（点击查看证据详情）`}
+      >
+        <span>{info.label}</span>
+        <span className="opacity-60">·</span>
+        <span>{info.verificationLabel}</span>
+        {info.assertionLabel ? (
+          <span className="rounded bg-[var(--candidate-soft)] px-1 text-[var(--candidate)]">
+            {info.assertionLabel}
+          </span>
+        ) : null}
+      </button>
+    );
+  }
+
   return (
-    <span
-      className="inline-flex flex-wrap items-center gap-1 rounded border border-[var(--accent-soft)] bg-[var(--accent-soft)] px-1.5 py-0.5 text-[11px] text-[var(--accent)]"
+    <button
+      type="button"
+      onClick={open}
+      className="inline-flex flex-wrap items-center gap-1 rounded border border-[var(--accent-soft)] bg-[var(--accent-soft)] px-1.5 py-0.5 text-[11px] text-[var(--accent)] hover:underline"
       data-testid="evidence-chip"
-      data-citable="true"
+      data-clickable="true"
       data-source-id={info.sourceId}
-      title={info.caveat}
+      title={`${info.caveat}（点击查看证据详情）`}
     >
       <span>{info.label}</span>
-      {!compact ? <span className="opacity-60">·</span> : null}
-      {!compact ? <span>{info.levelLabel}</span> : null}
+      <span className="opacity-60">·</span>
+      <span>{info.levelLabel}</span>
       <span className="opacity-60">·</span>
       <span>{info.verificationLabel}</span>
       {info.assertionLabel ? (
@@ -138,7 +174,122 @@ export function EvidenceChip({ reference, compact = false }) {
           </span>
         </>
       ) : null}
-    </span>
+    </button>
+  );
+}
+
+/**
+ * 证据抽屉：点开一条证据后，把"它到底是什么、能证明什么、不能证明什么"讲清楚。
+ *
+ * 这里刻意把**限制说明**放在第一屏 —— 评审要求的"未支持的断言不能作为已核验结论交付"，
+ * 落到 UI 上就是：题名级证据必须让人一眼看到它不能证明什么。
+ */
+export function EvidenceDrawer({ inspection, onClose, onOpenPaper }) {
+  if (!inspection) return null;
+  const info = describeEvidence(inspection.reference);
+  const context = inspection.context || {};
+  const title = context.title || info.sourceId;
+
+  return (
+    <>
+      <div
+        className="fixed inset-0 z-40 bg-black/25"
+        data-testid="evidence-drawer-backdrop"
+        onClick={onClose}
+      />
+      <aside
+        className="fixed top-0 right-0 z-50 h-full w-[420px] overflow-auto border-l border-[var(--line)] bg-[var(--panel)] px-5 py-4"
+        data-testid="evidence-drawer"
+        role="dialog"
+        aria-label="证据详情"
+      >
+        <div className="flex items-start justify-between gap-3">
+          <h2 className="text-[14px] font-semibold">证据详情</h2>
+          <button
+            type="button"
+            onClick={onClose}
+            data-testid="evidence-drawer-close"
+            className="rounded border border-[var(--line)] px-2 py-0.5 text-[12px] hover:border-[var(--ink-muted)]"
+          >
+            关闭
+          </button>
+        </div>
+
+        <p className="mt-3 text-[13px] leading-snug" data-testid="drawer-title">
+          {title}
+        </p>
+
+        <dl className="mt-3 space-y-2 text-[12px]" data-testid="drawer-fields">
+          <Row label="来源 id">
+            <code className="mono break-all text-[var(--ink)]">{info.sourceId}</code>
+          </Row>
+          <Row label="来源类型">{info.label}</Row>
+          <Row label="证据深度">
+            {info.levelLabel}
+            {inspection.reference?.evidenceLevel === 'title' ? (
+              <span className="ml-1 text-[var(--candidate)]">（仅题名）</span>
+            ) : null}
+          </Row>
+          <Row label="核验状态">{info.verificationLabel}</Row>
+          {info.assertionLabel ? (
+            <Row label="断言状态">
+              <span className="rounded bg-[var(--candidate-soft)] px-1.5 py-0.5 text-[var(--candidate)]">
+                {info.assertionLabel}
+              </span>
+            </Row>
+          ) : null}
+          {info.graphId ? (
+            <Row label="图谱版本">
+              <code className="mono">{info.graphId}</code>
+            </Row>
+          ) : null}
+          {context.predicate ? <Row label="关系谓词">{context.predicate}</Row> : null}
+          {context.head || context.tail ? (
+            <Row label="候选关系">
+              {context.head} → {context.tail}
+            </Row>
+          ) : null}
+        </dl>
+
+        <div className="mt-3 rounded border border-[var(--candidate-soft)] bg-[var(--candidate-soft)] px-3 py-2 text-[12px] text-[var(--candidate)]">
+          {info.caveat}
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {info.publicationId && onOpenPaper ? (
+            <button
+              type="button"
+              onClick={() => {
+                onOpenPaper(info.publicationId);
+                onClose();
+              }}
+              data-testid="drawer-open-paper"
+              className="rounded bg-[var(--accent)] px-3 py-1.5 text-[12px] font-medium text-white"
+            >
+              查看论文详情
+            </button>
+          ) : null}
+          <a
+            href={`https://dblp.org/search?q=${encodeURIComponent(info.sourceId)}`}
+            target="_blank"
+            rel="noreferrer noopener"
+            data-testid="drawer-open-source"
+            className="rounded border border-[var(--line)] px-3 py-1.5 text-[12px]"
+          >
+            在 DBLP 打开来源
+          </a>
+        </div>
+      </aside>
+    </>
+  );
+}
+
+function Row({ label, children }) {
+  return (
+    <div className="grid grid-cols-[84px_1fr] gap-2">
+      <dt className="text-[var(--ink-muted)]">{label}</dt>
+      <dd>{children}</dd>
+    </div>
   );
 }
 
