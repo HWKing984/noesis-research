@@ -98,7 +98,9 @@
 ### T8 · 外部学术源连接器（`integrations/openalex` `crossref` `semantic-scholar`）
 
 - 产出：三个连接器，覆盖 2026 年及以后的论文发现。
+- **优先复用，不重写**（2026-10-08 核实）：`reference/paper-qa` 的 `src/paperqa/clients/` 里 **已存在 `openalex.py` / `crossref.py` / `semantic_scholar.py`**（另有 `unpaywall.py` / `retractions.py`），是 `httpx` + `tenacity` 的完整实现。按评审"能直接复用就直接复用"的原则，这层应优先复用其网络与解析，而不是另写一套。见 `docs/04_reference_clones.md` §2.2。
 - 硬约束：匹配优先级 = **DOI → 精确 arXiv ID → 明确来源标识**；仅标题相似度匹配一律留为「待确认候选」，**不得合并论文身份**。
+  → 注意上游用 `strings_similarity` 做标题相似度匹配；**判定层按本项目规则收紧**，不能沿用其"标题匹配即可定身份"的宽松度。
 - 外部记录进独立业务表，不回写 SciBERT 图谱。
 - 验证：连接器离线契约测试（录制响应）+ 身份匹配的负例测试（相似标题不得自动合并）。
 

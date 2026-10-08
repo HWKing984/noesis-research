@@ -49,9 +49,21 @@ noesis-research/
 ├── infra/           # docker-compose 等
 ├── scripts/         # run_all_tests.py（零依赖统一入口，支持 --require / --expect-skip）
 ├── .github/         # ci.yml（core 零依赖 job + api 装依赖 job）
-├── docs/            # 审计 · 计划 · 评审回应
+├── docs/            # 01 审计 · 02 计划 · 03 评审回应 · 04 参考仓库台账
+├── reference/       # 上游参考源码（浅克隆、不提交、出处见 docs/04）；git-ignored
 └── tests/           # integration（真实 Neo4j + 真实 HTTP）· evaluation · e2e
 ```
+
+### 参考源码（`reference/`，不进版本库）
+
+| 目录 | 上游 | commit | 许可 |
+|---|---|---|---|
+| `deepagents` | langchain-ai/deepagents | `caaa7e7c12d2` | MIT |
+| `paper-qa` | Future-House/paper-qa | `57e89f7223b0` | Apache-2.0 |
+| `neo4j-graphrag-python` | neo4j/neo4j-graphrag-python | `4e3d6dc737c2` | Apache-2.0（部分 PSF-2.0） |
+| `agent-chat-ui` | langchain-ai/agent-chat-ui | `28cfb43a62b7` | MIT |
+
+出处、许可以及「每个仓库该看什么」的核实结论见 [`docs/04_reference_clones.md`](docs/04_reference_clones.md)。
 
 ## 0.1 起服务
 
