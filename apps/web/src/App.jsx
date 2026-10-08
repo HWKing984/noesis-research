@@ -443,7 +443,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
               </button>
             </div>
             <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
-              <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+              <div className="chatcol">
                 <AgentChat run={run} onAsk={ask} onCited={onCited} agentHealth={agentHealth} />
               </div>
               <EvidenceRail papers={papers} onInspect={setInspection} busy={run.status === 'running'} />

@@ -200,6 +200,15 @@ const PROBE = `(() => {
     drawerText: q('[data-testid="evidence-drawer"]')?.textContent || '',
     errorBanner: q('[data-testid="error-banner"]')?.textContent || '',
     rootOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    viewport: window.innerWidth,
+    // 布局几何：主列必须占满侧栏以外的宽度，内容列要在聊天列内居中（.main 规则曾丢失导致整页左挤）
+    sbW: Math.round(q('.sb')?.getBoundingClientRect().width || 0),
+    mainW: Math.round(q('.main')?.getBoundingClientRect().width || 0),
+    chatcolX: Math.round(q('.chatcol')?.getBoundingClientRect().left || -1),
+    chatcolW: Math.round(q('.chatcol')?.getBoundingClientRect().width || 0),
+    colX: Math.round(q('.chatcol .col')?.getBoundingClientRect().left || -1),
+    colW: Math.round(q('.chatcol .col')?.getBoundingClientRect().width || 0),
+    composerInEmpty: visible(q('.col .composer')),
   };
 })()`;
 
@@ -233,6 +242,19 @@ async function main() {
     add('证据链默认收起', probe.railState === 'closed', `rail=${probe.railState}`);
     add('证据链开关带计数', probe.railCount !== '', probe.railCount);
     add('页面无横向溢出', probe.rootOverflow <= 1, `溢出 ${probe.rootOverflow}px`);
+    add(
+      '主列占满侧栏以外宽度',
+      Math.abs(probe.sbW + probe.mainW - probe.viewport) <= 2,
+      `sb=${probe.sbW} main=${probe.mainW} viewport=${probe.viewport}`,
+    );
+    add('提问前有输入区', probe.composerInEmpty === true, '');
+    const leftPad = probe.colX - probe.chatcolX;
+    const rightPad = probe.chatcolX + probe.chatcolW - (probe.colX + probe.colW);
+    add(
+      '内容列在聊天列内居中',
+      Math.abs(leftPad - rightPad) <= 8 && leftPad > 0,
+      `左 ${leftPad}px / 右 ${rightPad}px`,
+    );
 
     // 开关能用：此时还没有运行，打开应看到空态说明
     await session.eval(`(() => { document.querySelector('[data-testid="rail-toggle"]').click(); return true; })()`);

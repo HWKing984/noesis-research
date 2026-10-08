@@ -88,6 +88,8 @@ button { font-family: inherit; font-size: inherit; color: inherit; background: n
 
 /* ===== 应用外壳 ===== */
 .app { display: flex; height: 100vh; overflow: hidden; }
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.chatcol { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 
 /* ---- 侧栏 ---- */
 .sb { width: var(--sidebar-width); flex: 0 0 auto; background: var(--bg-primary);

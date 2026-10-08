@@ -89,6 +89,37 @@ export default function AgentChat({ run, onAsk, onCited, agentHealth }) {
               </p>
             ) : null}
           </div>
+          {/* 提问前也要有输入区：hero 只负责引导，打字入口必须在（原型如此，落码时曾漏掉） */}
+          <div className="composer">
+            <div className="cbox">
+              <textarea
+                rows={1}
+                value={draft}
+                placeholder="问一个科研问题，例如：扩散模型在图像生成上的工作有哪些？"
+                data-testid="agent-input"
+                onChange={(event) => setDraft(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' && !event.shiftKey) {
+                    event.preventDefault();
+                    submit();
+                  }
+                }}
+              />
+              <button
+                type="button"
+                className="send"
+                data-testid="agent-submit"
+                disabled={busy || draft.trim() === ''}
+                onClick={() => submit()}
+                aria-label="发送"
+              >
+                <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
+              </button>
+            </div>
+            <div className="chint" data-testid="agent-hint">
+              候选关系图谱 · 题名级证据 · 无引用数据（不回答被引次数/引用链） · 证据链可从右上角打开
+            </div>
+          </div>
         </div>
       ) : (
         <div className="col" style={{ flexDirection: 'column' }}>
