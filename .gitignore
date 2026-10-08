@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Local env / secrets — never commit provider keys
+.env
+.env.*
+!.env.example
+
+# Local data
+*.log
+tmp/
