@@ -200,4 +200,28 @@ GET /api/graph/neighbors?mode=everything -> 400 code=invalid_request
 
 本轮验收目标（评审给定）：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据** —— 已达成（模型环节用脚本化假模型替代，真实 LLM 需 operator 注入 key）。
 
+### 真实 LLM 也跑了一次，结论是「链路通、模型不合格、闸门拦下」
+
+本机装的是 **ollama（11434）**，有 OpenAI 兼容接口与 `qwen3-vl:8b`，所以真实 LLM 这一步不需要外部凭据、也不需要读 `a-Soft`：
+
+```text
+[kg]    status=ready graphId=ai-literature-ed16399925fac2a599ed scope={bibliographyTitles:20000, ..., candidateAssertions:21497}
+[llm]   model=qwen3-vl:8b base_url=http://127.0.0.1:11434/v1
+--- 工具调用（1 次）---  1. search_papers {"query": "transformer", "limit": 25}
+--- 引用核查 ---
+  工具返回的可用证据 id：25 条
+  回答中实际引用：0 条
+  引用可溯率（按句，启发式）：0/30 = 0%
+  [失败] 回答没有引用任何证据 id —— 按本项目验收口径，这是一次失败的问答，不是成功。
+EXIT=1
+```
+
+三件事同时被证实：
+
+1. **链路是通的**：Agent 自己选了正确的工具、参数打到真实 Neo4j、拿回 25 条真实 `publicationId`；
+2. **闸门是有效的**：这次回答流畅、结构完整、读起来像一篇综述 —— 但它**一条来源都没引用**，闸门据此判失败并返回退出码 1。这正是计划里预警过的失败形态（把约四成的候选边/模型先验揉进流畅回答里）；
+3. **本地 8B 模型不满足契约**：除了 0 引用，它还**编造了工具没有返回的内容**（工具只给题名，回答却给出任务、创新点、会议归属，并断言 "six papers from CVPR 2025 and CVM 2025"），也没有按提示用中文。
+
+因此：数据侧、工具侧、闸门侧都已就绪；**换一个遵守引用契约的模型即可上线问答**。这一步的模型选择属部署决策。
+
 

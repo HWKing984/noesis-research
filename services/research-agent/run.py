@@ -19,13 +19,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Sequence
+
+from noesis_research_agent import _paths  # noqa: F401  (sys.path wiring; MUST precede kg_client)
 
 from kg_client import KGClient
 
-from noesis_research_agent import _paths  # noqa: F401
 from noesis_research_agent.agent import build_agent
 from noesis_research_agent.config import AgentSettings, ConfigurationError
 
@@ -51,7 +53,7 @@ def _message_text(message: Any) -> str:
 
 
 def _collect_evidence_ids(messages: list[Any]) -> list[str]:
-    """Pull every sourceId out of tool results — the citable ids."""
+    """Pull every sourceId out of tool results — the ids the agent *could* cite."""
     found: list[str] = []
     seen: set[str] = set()
 
@@ -78,6 +80,39 @@ def _collect_evidence_ids(messages: list[Any]) -> list[str]:
         except (TypeError, ValueError):
             visit(text)
     return found
+
+
+#: A "considered" sentence: long enough to be a claim rather than a heading or a
+#: bullet fragment. Deliberately a pure rule — the real sentence-level validator
+#: is T5's citation gate, this is only the CLI's honest self-report.
+_SENTENCE_SPLIT = re.compile(r"[。！？!?\n]+")
+_MIN_SENTENCE_CHARS = 8
+
+
+def citation_report(answer: str, available_ids: Sequence[str]) -> dict[str, Any]:
+    """Which source ids the answer actually cites, and how many sentences do.
+
+    Counting ids in *tool results* proves nothing — the model has to put them in
+    the prose. This is the difference between "evidence was available" and
+    "the answer is traceable", and it is the check that catches a fluent answer
+    built on nothing.
+    """
+    ids = [item for item in available_ids if item]
+    cited = [item for item in ids if item in answer]
+    sentences = [
+        sentence.strip()
+        for sentence in _SENTENCE_SPLIT.split(answer)
+        if len(sentence.strip()) >= _MIN_SENTENCE_CHARS
+    ]
+    attributed = [s for s in sentences if any(item in s for item in ids)]
+    return {
+        "available": len(ids),
+        "cited": len(cited),
+        "citedIds": cited,
+        "consideredSentences": len(sentences),
+        "attributedSentences": len(attributed),
+        "citationRate": (len(attributed) / len(sentences)) if sentences else 0.0,
+    }
 
 
 def _blocks(messages: list[Any]) -> tuple[list[dict[str, Any]], str]:
@@ -131,7 +166,8 @@ def main(argv: list[str] | None = None) -> int:
     messages = list(result.get("messages", [])) if isinstance(result, dict) else []
 
     calls, answer = _blocks(messages)
-    evidence = _collect_evidence_ids(messages)
+    available = _collect_evidence_ids(messages)
+    report = citation_report(answer, available)
 
     print(f"--- 工具调用（{len(calls)} 次）---")
     for index, call in enumerate(calls, start=1):
@@ -140,9 +176,17 @@ def main(argv: list[str] | None = None) -> int:
     print("--- 回答 ---")
     print(answer or "(模型没有给出文本回答)")
     print()
-    print(f"--- 可引用证据 id（{len(evidence)} 条）---")
-    for item in evidence:
-        print(f"  {item}")
+    print("--- 引用核查 ---")
+    print(f"  工具返回的可用证据 id：{report['available']} 条")
+    print(f"  回答中实际引用：{report['cited']} 条")
+    print(
+        "  引用可溯率（按句，启发式）："
+        f"{report['attributedSentences']}/{report['consideredSentences']} = {report['citationRate']:.0%}"
+    )
+    if report["cited"] == 0:
+        print("  [失败] 回答没有引用任何证据 id —— 按本项目验收口径，这是一次失败的问答，不是成功。")
+    for item in report["citedIds"]:
+        print(f"  [引用] {item}")
 
     if args.transcript:
         payload = {
@@ -151,7 +195,8 @@ def main(argv: list[str] | None = None) -> int:
             "model": settings.llm_model,
             "toolCalls": calls,
             "answer": answer,
-            "evidenceIds": evidence,
+            "evidenceIds": available,
+            "citation": report,
             "messages": [
                 {"role": _message_role(message), "text": _message_text(message)}
                 for message in messages
@@ -161,7 +206,7 @@ def main(argv: list[str] | None = None) -> int:
         print()
         print(f"[transcript] {args.transcript}")
 
-    return 0 if evidence else 1
+    return 0 if report["cited"] else 1
 
 
 if __name__ == "__main__":

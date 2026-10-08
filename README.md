@@ -2,7 +2,7 @@
 
 基于科学文献知识图谱的智能研究工作平台。定位：**长期使用、管理真实论文、执行完整研究任务、支持多用户与持续扩展**，不以课程演示为终点。
 
-> 状态：**第一阶段链路已通到 Agent —— 只读 KG Adapter + FastAPI + Deep Agents 均已对真实 Neo4j 验收（130 项测试全绿）；前端与 PaperQA2 尚未接入。**
+> 状态：**第一阶段链路已通到 Agent —— 只读 KG Adapter + FastAPI + Deep Agents 均已对真实 Neo4j 验收（136 项测试全绿）；真实 LLM 已跑通但被引用闸门判为不合格（详见 `docs/02_phase1_plan.md` §5）；前端与 PaperQA2 尚未接入。**
 > 文档：[源码审计](docs/01_source_audit.md) · [第一阶段计划](docs/02_phase1_plan.md) · [评审回应](docs/03_review_response.md) · [参考仓库台账](docs/04_reference_clones.md)
 
 ## 0 当前进度
@@ -15,7 +15,7 @@
 | 证据契约 | ✅ `packages/contracts/evidence.py` |
 | FastAPI 业务服务 | ✅ 3 个业务端点 + 就绪探针，错误语义完整（503/502/400/404） |
 | **Deep Agent** | ✅ 1 个主 Agent + 5 个只读工具 + 权限收紧（内存态后端、无宿主 shell） |
-| 测试 | ✅ 130 项：适配器 44 · 契约 29 · API 18 · **Agent 15** · 真实集成 24 |
+| 测试 | ✅ 136 项：适配器 44 · 契约 29 · API 18 · **Agent 21** · 真实集成 24 |
 | CI | ✅ 三个 job：core（零依赖 3.11/3.13）· api（真装 FastAPI）· agent（真装 deepagents） |
 | PaperQA2 | ⏭ 未集成 |
 | NOESIS 前端移植 | ⏭ 未迁入 |

@@ -14,6 +14,7 @@ import json
 import os
 import sys
 import unittest
+from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -322,6 +323,74 @@ class PromptContractTests(unittest.TestCase):
 
     def test_prompt_denies_host_filesystem_access(self) -> None:
         self.assertIn("StateBackend", SYSTEM_PROMPT)
+
+
+class CliTests(unittest.TestCase):
+    """Smoke-test the CLI entry point.
+
+    This exists because a real run found an import-order bug that every other
+    test missed: ``run.py`` imported ``kg_client`` *before* the ``_paths`` wiring
+    ran, so the CLI died with ModuleNotFoundError while the library was fine.
+    """
+
+    def test_run_module_imports_and_needs_llm_settings(self) -> None:
+        import importlib
+
+        module = importlib.import_module("run")
+        with mock.patch.dict(os.environ, {}, clear=False):
+            for name in ("LLM_API_KEY", "LLM_MODEL"):
+                os.environ.pop(name, None)
+            code = module.main(["随便问一句"])
+        self.assertEqual(code, 2, "missing LLM settings must exit 2, not start a run")
+
+    def test_research_tools_are_reachable_through_the_cli_import_graph(self) -> None:
+        import importlib
+
+        module = importlib.import_module("run")
+        self.assertTrue(hasattr(module, "build_agent"))
+        self.assertTrue(hasattr(module, "KGClient"))
+
+    def test_citation_report_counts_ids_in_the_answer_not_in_tool_results(self) -> None:
+        import run as run_module
+
+        available = ["conf/aaai/A25", "conf/cvpr/B25"]
+        answer = (
+            "结论先行：图谱中有两篇相关论文。\n"
+            "依据一：conf/aaai/A25 的题名出现了关键词（证据等级 title，核验状态 unverified）。\n"
+            "依据二：conf/cvpr/B25 同样如此。\n"
+            "局限：题名级证据不能证明论文的具体结论。"
+        )
+        report = run_module.citation_report(answer, available)
+        self.assertEqual(report["available"], 2)
+        self.assertEqual(report["cited"], 2)
+        # 4 considered sentences, 2 of them carry an id.
+        self.assertEqual(report["consideredSentences"], 4)
+        self.assertEqual(report["attributedSentences"], 2)
+        self.assertEqual(report["citationRate"], 0.5)
+
+    def test_citation_report_flags_an_answer_that_cites_nothing(self) -> None:
+        import run as run_module
+
+        available = ["conf/aaai/A25"]
+        answer = "图谱里有不少关于 transformer 的论文，其中若干篇来自 CVPR 2025，涵盖了生成与检测任务。"
+        report = run_module.citation_report(answer, available)
+        self.assertEqual(report["cited"], 0)
+        self.assertEqual(report["citedIds"], [])
+        self.assertEqual(report["citationRate"], 0.0, "an answer citing nothing must score 0")
+
+    def test_citation_report_ignores_short_fragments(self) -> None:
+        import run as run_module
+
+        report = run_module.citation_report("###\nA\n", ["conf/aaai/A25"])
+        self.assertEqual(report["consideredSentences"], 0)
+        self.assertEqual(report["citationRate"], 0.0)
+
+    def test_citation_report_on_an_empty_answer(self) -> None:
+        import run as run_module
+
+        report = run_module.citation_report("", ["conf/aaai/A25"])
+        self.assertEqual(report["cited"], 0)
+        self.assertEqual(report["consideredSentences"], 0)
 
 
 class ConfigurationTests(unittest.TestCase):
