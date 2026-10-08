@@ -5,10 +5,9 @@ import { createAgentApi, describeAgentError } from './lib/agentApi.js';
 import AgentChat from './components/AgentChat.jsx';
 import EvidenceRail from './components/EvidenceRail.jsx';
 import Sidebar from './components/Sidebar.jsx';
+import PaperDrawer from './components/PaperDrawer.jsx';
 import { SearchBar, AppliedEcho, PaperList } from './components/SearchPanel.jsx';
-import { DetailPanel, GraphPanel } from './components/InspectorPanel.jsx';
 import {
-  BoundaryNotice,
   EmptyState,
   ErrorBanner,
   EvidenceDrawer,
@@ -20,9 +19,12 @@ const EMPTY_FORM = {
   q: '', method: '', task: '', dataset: '', author: '', venue: '', year: '', limit: '10',
 };
 
-const TABS = [
-  { key: 'detail', label: '论文详情' },
-  { key: 'graph', label: '局部图谱' },
+/** 空态建议卡：点卡片 = 预填关键词并检索。 */
+const SUGGESTIONS = [
+  { label: '扩散模型 → image generation', hint: '候选断言 · 方法→任务', q: 'diffusion' },
+  { label: '题名含 transformer 的论文', hint: '题名检索', q: 'transformer' },
+  { label: 'ImageNet 上的分类方法', hint: '数据集候选 · 评测关系', q: 'ImageNet' },
+  { label: 'NeurIPS 2020 · 生成模型', hint: '会议 + 年份组合', q: 'generative' },
 ];
 
 const IDLE_RUN = {
@@ -39,7 +41,8 @@ function toSearchParams(form) {
   return params;
 }
 
-/** 论文库与图谱 —— 二级视图。抽屉状态在 App 层（引用上标共用同一个抽屉）。 */
+/** 论文库与图谱 —— 检索优先布局：hero 空态 / 吸顶检索 + 结果流 / 论文抽屉。
+ *  抽屉状态在 App 层（引用上标共用同一个证据抽屉，证据抽屉叠在论文抽屉之上）。 */
 function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect }) {
   const [health, setHealth] = useState(null);
   const [healthError, setHealthError] = useState(null);
@@ -75,22 +78,27 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
 
   useEffect(() => { loadHealth(); }, [loadHealth]);
 
-  const runSearch = useCallback(async () => {
-    setSearching(true);
-    setSearchError(null);
-    try {
-      const payload = await api.searchPapers(toSearchParams(form));
-      setResult(payload);
-      setSelectedId(null);
-      setDetail(null);
-      setSlice(null);
-    } catch (error) {
-      setResult(null);
-      setSearchError(describeApiError(error));
-    } finally {
-      setSearching(false);
-    }
-  }, [api, form]);
+  /** override：建议卡预填表单后立即可检索，不等 state 回流（避免 stale closure）。 */
+  const runSearch = useCallback(
+    async (override) => {
+      const source = override || form;
+      setSearching(true);
+      setSearchError(null);
+      try {
+        const payload = await api.searchPapers(toSearchParams(source));
+        setResult(payload);
+        setSelectedId(null);
+        setDetail(null);
+        setSlice(null);
+      } catch (error) {
+        setResult(null);
+        setSearchError(describeApiError(error));
+      } finally {
+        setSearching(false);
+      }
+    },
+    [api, form],
+  );
 
   const selectPaper = useCallback(
     async (publicationId) => {
@@ -157,82 +165,102 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
     if (tab === 'graph' && selectedId) loadGraph(selectedId, graphMode);
   }, [tab, selectedId, graphMode, loadGraph]);
 
+  const closeDrawer = useCallback(() => {
+    paperAbortRef.current?.abort();
+    setSelectedId(null);
+    setDetail(null);
+    setSlice(null);
+    setDetailError(null);
+  }, []);
+
   const papers = result?.data || [];
+  const hasQuery = Boolean(result || searchError || searching);
+  const scope = health?.scope || {};
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
+    <div className="libview">
       <GraphHeader health={health} error={healthError} />
-      <div style={{ display: 'flex', minHeight: 0, flex: 1 }}>
-        <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border-subtle)' }}>
-          <SearchBar value={form} onChange={setForm} onSubmit={runSearch} busy={searching} />
-          <AppliedEcho meta={result?.meta} />
-          <ErrorBanner error={searchError} onRetry={runSearch} />
-          <BoundaryNotice />
-          <div className="stage">
-            {searching ? <Loading label="正在检索图谱…" /> : null}
-            {!searching && !result && !searchError ? (
-              <EmptyState>输入条件后点「检索」。检索结果里的每一条都带来源引用，可以直接核对。</EmptyState>
+
+      {hasQuery ? (
+        <div className="lib-scroll">
+          <div className="lib-result">
+            <div className="lib-fixedbar">
+              <SearchBar value={form} onChange={setForm} onSubmit={() => runSearch()} busy={searching} />
+            </div>
+            <AppliedEcho meta={result?.meta} count={searching ? null : papers.length} />
+            <ErrorBanner error={searchError} onRetry={() => runSearch()} />
+            {detailError && selectedId ? (
+              <ErrorBanner error={detailError} onRetry={() => selectPaper(selectedId)} />
             ) : null}
+            {searching ? <Loading label="正在检索图谱…" /> : null}
             {!searching && result && papers.length === 0 ? (
               <EmptyState>图谱里没有匹配的记录（这是真实的空结果，不是服务不可用）。</EmptyState>
             ) : null}
             {!searching && papers.length > 0 ? (
-              <PaperList
-                papers={papers}
-                selectedId={selectedId}
-                onSelect={selectPaper}
-                onInspect={onInspect}
-              />
+              <div style={{ marginTop: 12 }}>
+                <PaperList
+                  papers={papers}
+                  selectedId={selectedId}
+                  onSelect={selectPaper}
+                  onInspect={onInspect}
+                />
+              </div>
             ) : null}
           </div>
         </div>
-
-        <aside style={{ width: 480, flex: '0 0 auto', display: 'flex', flexDirection: 'column', background: 'var(--bg-secondary)', minWidth: 0 }}>
-          <nav style={{ display: 'flex', gap: 4, borderBottom: '1px solid var(--border-subtle)', background: 'var(--bg-primary)', padding: '8px 16px 0' }}>
-            {TABS.map((item) => (
-              <button
-                key={item.key}
-                type="button"
-                onClick={() => setTab(item.key)}
-                data-testid="tab"
-                data-tab={item.key}
-                data-active={tab === item.key ? 'true' : 'false'}
-                style={{
-                  padding: '6px 12px', fontSize: 12.5,
-                  borderBottom: `2px solid ${tab === item.key ? 'var(--text-primary)' : 'transparent'}`,
-                  fontWeight: tab === item.key ? 600 : 400,
-                  color: tab === item.key ? 'var(--text-primary)' : 'var(--text-tertiary)',
-                }}
-              >
-                {item.label}
-              </button>
-            ))}
-            {selectedId ? (
-              <span className="mono" style={{ marginLeft: 'auto', paddingBottom: 6, fontSize: 10, color: 'var(--text-muted)' }}>
-                {selectedId}
-              </span>
-            ) : null}
-          </nav>
-          <ErrorBanner error={graphError} onRetry={() => loadGraph(selectedId, graphMode)} />
-          <div className="stage">
-            {!selectedId ? <EmptyState>左侧选择一篇论文后，这里显示详情或局部图谱。</EmptyState> : null}
-            {selectedId && tab === 'detail' ? (
-              detailBusy ? <Loading label="正在读取论文详情…" /> : (
-                <DetailPanel detail={detail} onInspect={onInspect} onOpenPaper={selectPaper} />
-              )
-            ) : null}
-            {selectedId && tab === 'graph' ? (
-              <GraphPanel
-                slice={slice}
-                busy={graphBusy}
-                mode={graphMode}
-                onModeChange={setGraphMode}
-                onRefresh={() => loadGraph(selectedId, graphMode)}
-              />
-            ) : null}
+      ) : (
+        <div className="lib-hero">
+          <div className="lib-hero-inner">
+            <h1 className="lib-hero-title">检索文献，核对证据</h1>
+            <p className="lib-hero-sub">
+              <b>{(scope.bibliographyTitles ?? 0).toLocaleString('en-US')}</b> 篇书目 ·{' '}
+              <b>{(scope.modelTitles ?? 0).toLocaleString('en-US')}</b> 篇已建模型 ·{' '}
+              <b>{(scope.candidateAssertions ?? 0).toLocaleString('en-US')}</b> 条候选断言。
+              <br />
+              每一条结果都带来源引用，可以直接核对。
+            </p>
+            <div style={{ width: '100%' }}>
+              <SearchBar value={form} onChange={setForm} onSubmit={() => runSearch()} busy={searching} />
+            </div>
+            <div className="lib-cards">
+              {SUGGESTIONS.map((item) => (
+                <button
+                  key={item.label}
+                  type="button"
+                  className="lib-card"
+                  data-testid="library-suggest"
+                  data-q={item.q}
+                  onClick={() => {
+                    const next = { ...EMPTY_FORM, q: item.q };
+                    setForm(next);
+                    runSearch(next);
+                  }}
+                >
+                  <span className="l">{item.label}</span>
+                  <span className="h">{item.hint}</span>
+                </button>
+              ))}
+            </div>
           </div>
-        </aside>
-      </div>
+        </div>
+      )}
+
+      <PaperDrawer
+        open={Boolean(selectedId)}
+        onClose={closeDrawer}
+        tab={tab}
+        onTab={setTab}
+        selectedId={selectedId}
+        detail={detail}
+        detailBusy={detailBusy}
+        slice={slice}
+        graphBusy={graphBusy}
+        graphMode={graphMode}
+        onModeChange={setGraphMode}
+        onRefresh={() => loadGraph(selectedId, graphMode)}
+        onInspect={onInspect}
+        onOpenPaper={selectPaper}
+      />
     </div>
   );
 }

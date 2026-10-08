@@ -84,27 +84,60 @@ def create_app(
 
     def _run_in_background(run: RunRecord) -> None:
         registry_ref = app.state.registry
-        try:
-            agent = make_agent(client=app.state.kg, settings=resolved)
-            chunks = agent.stream(
-                {"messages": [{"role": "user", "content": run.question}]},
-                stream_mode=["updates", "messages"],
-            )
-            for event in translate_chunks(
-                chunks,
-                run_id=run.run_id,
-                question=run.question,
-                graph_id=resolved.expected_graph_id,
-                model=resolved.llm_model,
-            ):
-                registry_ref.append(run.run_id, event)
-        except Exception as exc:  # noqa: BLE001 - 必须落成可见事件，不能只打日志
-            logger.exception("research run %s failed", run.run_id)
-            registry_ref.append(
-                run.run_id,
-                {"type": "failed", "runId": run.run_id, "message": f"{type(exc).__name__}: {exc}"},
-            )
-            registry_ref.append(run.run_id, {"type": "done", "runId": run.run_id, "status": "failed"})
+
+        def append(event: dict[str, Any]) -> None:
+            registry_ref.append(run.run_id, event)
+
+        # DeepSeek 偶发"并行工具调用不被执行"：模型发出 tool_calls 后图直接收尾，
+        # 没有任何工具结果，只交一句旁白。这种轮次检测出来**自动重跑一次**；
+        # 事件照实追加（用户能看到两轮），闸门仍然如实判定，不假装成功。
+        #
+        # done 事件的落盘时机：**只在终态轮落**。中间轮落 done 会让界面提前断开
+        # SSE；而"第 1 轮就成功"的运行若始终不落 done，登记表会永远停在 running
+        # （SSE 重放与界面都收不到结束信号——两种方向都实际发生过）。
+        max_attempts = 2
+        for attempt in range(1, max_attempts + 1):
+            attempt_events: list[dict[str, Any]] = []
+            try:
+                agent = make_agent(client=app.state.kg, settings=resolved)
+                chunks = agent.stream(
+                    {"messages": [{"role": "user", "content": run.question}]},
+                    stream_mode=["updates", "messages"],
+                    subgraphs=True,
+                )
+                attempt_events.extend(
+                    translate_chunks(
+                        chunks,
+                        run_id=run.run_id,
+                        question=run.question,
+                        graph_id=resolved.expected_graph_id,
+                        model=resolved.llm_model,
+                    )
+                )
+            except Exception as exc:  # noqa: BLE001 - 必须落成可见事件，不能只打日志
+                logger.exception("research run %s failed", run.run_id)
+                append({"type": "failed", "runId": run.run_id, "message": f"{type(exc).__name__}: {exc}"})
+                append({"type": "done", "runId": run.run_id, "status": "failed"})
+                return
+            got_results = any(e.get("type") == "tool_result" for e in attempt_events)
+            answer_event = next((e for e in attempt_events if e.get("type") == "answer"), None)
+            got_answer = bool((answer_event or {}).get("text", "").strip())
+            is_final = got_results and got_answer
+            for event in attempt_events:
+                if event.get("type") == "done" and not is_final:
+                    continue
+                append(event)
+            if is_final:
+                return
+            if attempt < max_attempts:
+                append({
+                    "type": "run_retry",
+                    "runId": run.run_id,
+                    "attempt": attempt + 1,
+                    "reason": "上一轮模型调用没有取得工具结果，自动重试一次",
+                })
+        # 走到这里 = 所有轮次都未取得工具结果：done 已在最后一轮落盘（终态轮不跳过），
+        # 登记表状态与闸门判定照实保留
 
     @app.get("/health")
     def health() -> dict[str, Any]:

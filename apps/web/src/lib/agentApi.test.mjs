@@ -45,6 +45,13 @@ test('tool_error 与 failed 都归到 error 图标，不会被当成正常步骤
   assert.match(describeStep({ type: 'failed', message: 'boom' }).detail, /boom/);
 });
 
+test('run_retry 事件渲染成可见的重试步骤', () => {
+  const step = describeStep({ type: 'run_retry', attempt: 2, reason: '上一轮模型调用没有取得工具结果，自动重试一次' });
+  assert.equal(step.icon, 'retry');
+  assert.match(step.label, /第 2 轮/);
+  assert.match(step.detail, /没有取得工具结果/);
+});
+
 test('无关事件不产生步骤行', () => {
   assert.equal(describeStep({ type: 'heartbeat' }), null);
   assert.equal(describeStep(null), null);

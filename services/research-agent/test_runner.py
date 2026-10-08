@@ -96,6 +96,19 @@ class ScriptedAgent:
         return iter(self._chunks)
 
 
+class RoundAgent:
+    """每次 stream() 返回下一轮脚本 —— 用于测服务端的"无工具结果自动重试"。"""
+
+    def __init__(self, rounds) -> None:
+        self._rounds = rounds
+        self.calls = 0
+
+    def stream(self, *_args, **_kwargs):
+        index = min(self.calls, len(self._rounds) - 1)
+        self.calls += 1
+        return iter(self._rounds[index])
+
+
 def chunk(node: str, messages) -> dict:
     return {node: {"messages": messages}}
 
@@ -222,6 +235,127 @@ class TranslateTests(unittest.TestCase):
         ]
         deltas = [e for e in self._events(chunks) if e["type"] == "answer_delta"]
         self.assertEqual([e["delta"] for e in deltas], ["正文"])
+
+    def test_tool_json_never_streams_as_answer_even_on_messages_only(self) -> None:
+        """回归（thome 报的问题）：工具返回的原始 JSON 绝不能混进回答正文。
+
+        真实运行里 updates 通道可能一条都不产出 —— ToolMessage 从 messages
+        通道整条流过，旧过滤（只挡 tool_calls）会把它的 JSON 当正文播出。
+        """
+        from langchain_core.messages import AIMessageChunk, ToolMessage
+
+        tool_payload = {
+            "applied": {"q": "transformer", "limit": "25", "offset": "0"},
+            "papers": [
+                {
+                    "publicationId": PAPER_ID,
+                    "title": "ShrimpFormer-X",
+                    "year": 2025,
+                    "evidence": {"sourceId": PAPER_ID, "evidenceLevel": "title", "verificationStatus": "unverified"},
+                }
+            ],
+        }
+        call_id = "call-1"
+        chunks = [
+            ("messages", (AIMessageChunk(content="我先确认图谱就绪状态，再检索。"), {})),
+            ("messages", (AIMessageChunk(content="", tool_calls=[{"name": "search_papers", "args": {"query": "x"}, "id": call_id}]), {})),
+            ("messages", (ToolMessage(content=json.dumps(tool_payload, ensure_ascii=False), tool_call_id=call_id, name="search_papers"), {})),
+            ("messages", (AIMessageChunk(content=f"结论先行：命中 {PAPER_ID}。"), {})),
+        ]
+        events = self._events(chunks)
+        deltas = "".join(e["delta"] for e in events if e["type"] == "answer_delta")
+        assert '{"applied"' not in deltas, f"工具 JSON 泄漏进正文：{deltas[:200]}"
+        assert "publicationId" not in deltas
+
+        kinds = [e["type"] for e in events]
+        assert "tool_call" in kinds, kinds
+        assert "tool_result" in kinds, kinds
+        result = next(e for e in events if e["type"] == "tool_result")
+        self.assertEqual(result["evidenceIds"], [PAPER_ID])
+
+        answer = next(e for e in events if e["type"] == "answer")
+        # 权威全文 = 最后一次工具结果之后的正文，旁白与工具 JSON 都不在
+        self.assertEqual(answer["text"], f"结论先行：命中 {PAPER_ID}。")
+        self.assertTrue(answer["citation"]["passes"])
+        self.assertEqual(answer["citation"]["citedIds"], [PAPER_ID])
+
+    def test_tool_result_not_duplicated_across_channels(self) -> None:
+        """updates 与 messages 都见到同一条工具结果时，事件只发一次；且**迟到的重复
+        副本不得重置正文边界**（跨通道乱序会把已流式输出的回答清掉——实际发生过）。"""
+        from langchain_core.messages import AIMessageChunk, ToolMessage
+
+        payload = json.dumps(search_payload(), ensure_ascii=False)
+        call_id = "call-1"
+        chunks = [
+            ("updates", chunk("tools", [tool_result_message("search_papers", search_payload())])),
+            ("messages", (ToolMessage(content=payload, tool_call_id=call_id, name="search_papers"), {})),
+            ("messages", (AIMessageChunk(content=f"结论：命中 {PAPER_ID}。"), {})),
+            # 迟到的重复副本：若它再次重置边界，上面已流出的正文会被清空
+            ("updates", chunk("tools", [tool_result_message("search_papers", search_payload())])),
+        ]
+        events = self._events(chunks)
+        results = [e for e in events if e["type"] == "tool_result"]
+        self.assertEqual(len(results), 1, "同一 tool_call_id 只发一次")
+        answer = next(e for e in events if e["type"] == "answer")
+        self.assertEqual(answer["text"], f"结论：命中 {PAPER_ID}。")
+
+    def test_tail_survives_late_duplicate_tool_result(self) -> None:
+        """无 updates 权威全文时（updates 通道缺席），回答取自流式 tail，
+        且迟到的重复工具结果不会把 tail 清空。"""
+        from langchain_core.messages import AIMessageChunk, ToolMessage
+
+        call_id = "call-1"
+        chunks = [
+            ("messages", (AIMessageChunk(content="先检索。"), {})),
+            ("messages", (AIMessageChunk(content="", tool_calls=[{"name": "search_papers", "args": {"query": "x"}, "id": call_id}]), {})),
+            ("messages", (ToolMessage(content=json.dumps(search_payload(), ensure_ascii=False), tool_call_id=call_id, name="search_papers"), {})),
+            ("messages", (AIMessageChunk(content=f"结论：命中 {PAPER_ID}。"), {})),
+            # 迟到的重复副本（跨通道乱序）
+            ("messages", (ToolMessage(content=json.dumps(search_payload(), ensure_ascii=False), tool_call_id=call_id, name="search_papers"), {})),
+        ]
+        events = self._events(chunks)
+        answer = next(e for e in events if e["type"] == "answer")
+        self.assertEqual(answer["text"], f"结论：命中 {PAPER_ID}。")
+        self.assertTrue(answer["citation"]["passes"])
+        self.assertEqual(answer["citation"]["citedIds"], [PAPER_ID])
+
+    def test_subgraph_tool_results_are_collected_and_subagent_text_not_streamed(self) -> None:
+        """回归（间歇性漏证据）：deepagents 的 task 工具把工具执行放进子图，
+        不开 subgraphs 就看不到 ToolMessage —— 证据收集会间歇性漏空。
+        三元组 (namespace, mode, payload) 里：工具结果照收；子代理叙述不进回答。
+        """
+        from langchain_core.messages import AIMessageChunk, ToolMessage
+
+        sub_ns = "task:abc123"
+        payload = json.dumps(search_payload(), ensure_ascii=False)
+        chunks = [
+            ("messages", (AIMessageChunk(content="先查一下", role="assistant"), {"langgraph_checkpoint_ns": ""})),
+            (sub_ns, "messages", (AIMessageChunk(content="子代理内部叙述", role="assistant"), {"langgraph_checkpoint_ns": sub_ns})),
+            (sub_ns, "messages", (ToolMessage(content=payload, tool_call_id="call-9", name="search_papers"), {"langgraph_checkpoint_ns": sub_ns})),
+            ("messages", (AIMessageChunk(content=f"结论：见 {PAPER_ID}。"), {"langgraph_checkpoint_ns": ""})),
+        ]
+        events = self._events(chunks)
+        deltas = "".join(e["delta"] for e in events if e["type"] == "answer_delta")
+        self.assertEqual(deltas, f"先查一下结论：见 {PAPER_ID}。", "子代理叙述不得混入回答")
+        results = [e for e in events if e["type"] == "tool_result"]
+        self.assertEqual(len(results), 1, "子图里的工具结果必须被收集")
+        self.assertEqual(results[0]["evidenceIds"], [PAPER_ID])
+        answer = next(e for e in events if e["type"] == "answer")
+        self.assertTrue(answer["citation"]["passes"])
+
+    def test_updates_only_behaviour_unchanged(self) -> None:
+        """旧形态（纯 updates）回归：事件顺序与全文不受消息通道改造影响。"""
+        chunks = [
+            chunk("model", [AIMessage(content="", tool_calls=[{"name": "search_papers", "args": {"query": "transformer"}, "id": "c1"}])]),
+            chunk("tools", [tool_result_message("search_papers", search_payload())]),
+            chunk("model", [AIMessage(content=f"结论先行：图谱里有相关论文。\n依据一：{PAPER_ID}。")]),
+        ]
+        events = self._events(chunks)
+        self.assertEqual(
+            [e["type"] for e in events],
+            ["run_started", "tool_call", "tool_result", "answer", "done"],
+        )
+        self.assertTrue(next(e for e in events if e["type"] == "answer")["citation"]["passes"])
 
     def test_full_happy_path_event_order(self) -> None:
         events = self._events(CITING_CHUNKS)
@@ -375,6 +509,46 @@ class HttpSurfaceTests(unittest.TestCase):
         record = client.get(f"/runs/{run_id}").json()
         self.assertEqual(record["status"], "failed")
         self.assertIn("模型挂了", record["error"])
+
+    def test_run_without_tool_results_is_retried_once_and_then_passes(self) -> None:
+        """DeepSeek 偶发"并行工具调用不被执行、只交一句旁白"——
+        服务端检测到"有调用、无结果"自动重跑一轮；两轮事件照实追加。"""
+        sick_round = [
+            chunk("model", [
+                AIMessage(
+                    content="我先确认图谱状态，并检索相关论文。",
+                    tool_calls=[
+                        {"name": "search_papers", "args": {"query": "transformer"}, "id": f"c{i}"}
+                        for i in range(4)
+                    ],
+                )
+            ]),
+        ]
+        rounds = [sick_round, CITING_CHUNKS]
+        agent = RoundAgent(rounds)
+        app = create_app(
+            settings=self._settings(),
+            client=KGClient("http://stub", expected_graph_id=PINNED),
+            agent_factory=lambda **_kwargs: agent,
+        )
+        client = TestClient(app)
+        run_id = client.post("/runs", json={"question": "有什么关于 transformer 的论文？"}).json()["runId"]
+        body = client.get(f"/runs/{run_id}/events").text
+
+        self.assertIn("event: run_retry", body)
+        self.assertIn("没有取得工具结果", body)
+        self.assertIn("event: tool_result", body, "重试轮的工具结果必须出现")
+        self.assertEqual(body.count("event: done"), 1, "中间轮的 done 不落事件，界面不会提前断开")
+        record = client.get(f"/runs/{run_id}").json()
+        self.assertEqual(record["status"], "ok")
+        self.assertTrue(record["citation"]["passes"])
+        self.assertEqual(agent.calls, 2)
+
+    def test_healthy_run_is_not_retried(self) -> None:
+        client, agent = self._client()
+        run_id = client.post("/runs", json={"question": "q"}).json()["runId"]
+        client.get(f"/runs/{run_id}/events")
+        self.assertEqual(agent.calls, 1, "健康的轮次不重试")
 
     def test_unknown_run_is_404_on_both_endpoints(self) -> None:
         client, _ = self._client()

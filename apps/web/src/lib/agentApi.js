@@ -84,6 +84,12 @@ export function describeAgentError(error) {
 /** 把事件流里的一条事件压成界面上一行可读的步骤。 */
 export function describeStep(event) {
   switch (event?.type) {
+    case 'run_retry':
+      return {
+        icon: 'retry',
+        label: `自动重试（第 ${event.attempt} 轮）`,
+        detail: event.reason || '上一轮没有取得工具结果',
+      };
     case 'tool_call': {
       const args = Object.entries(event.args || {})
         .map(([key, value]) => `${key}=${value}`)

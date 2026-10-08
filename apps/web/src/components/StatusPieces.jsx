@@ -1,42 +1,97 @@
 import React, { useState } from 'react';
 import { describeEvidence, evidenceState } from '../lib/evidence.js';
 
-/** 顶部图谱状态条（论文库视图用）：graphId 与计数只能来自 /api/health。 */
+/** 系统边界说明：把「本系统不做/做不到」直接写给用户看。className 可换皮（信息弹层里复用同一份文案）。 */
+export function BoundaryNotice({ className = 'notice' }) {
+  return (
+    <details className={className} data-testid="boundary-notice">
+      <summary>本系统能做什么、不能做什么</summary>
+      <ul>
+        <li>
+          图谱是<b>候选断言图</b>：方法—任务 / 方法—数据集关系为{' '}
+          <code className="mono">status: candidate</code>，一律标「候选」，不会被讲成已核实事实。
+        </li>
+        <li>证据深度目前只有<b>题名</b>：题名级证据只能证明论文存在、题名里出现了相关词。</li>
+        <li>只有书目与题名；摘要仅 75 篇，全文 0 篇，本系统不托管 PDF。</li>
+        <li>没有引用数据，因此<b>不提供</b>「是否必引 / 被引次数 / 引用链 / 影响力排序」。</li>
+        <li>图谱不可用时会明确报错（503），<b>不会</b>回退成"没有搜到"。</li>
+      </ul>
+    </details>
+  );
+}
+
+const INFO_ICON = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path d="M12 8h.01M11 12h1v4h1M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18z" />
+  </svg>
+);
+
+/**
+ * 顶部图谱状态条（论文库视图）：瘦身版。
+ * 常驻部分只保留「在哪里 + ready」；graphId 全串、版本锁定、书目规模与边界声明收进 ⓘ 弹层。
+ * graphId 与计数仍然只能来自 /api/health —— 弹层打开时必须能看到完整 graphId。
+ */
 export function GraphHeader({ health, error }) {
+  const [infoOpen, setInfoOpen] = useState(false);
   if (error) {
     return (
-      <div className="top" data-testid="graph-header-error">
+      <div className="lib-top" data-testid="graph-header-error">
+        <span className="lib-top-crumb">论文库与图谱</span>
         <span style={{ color: 'var(--danger)' }}>图谱状态未知：{error.title}</span>
       </div>
     );
   }
   if (!health) {
-    return <div className="top" data-testid="graph-header-loading">正在读取图谱状态…</div>;
+    return (
+      <div className="lib-top" data-testid="graph-header-loading">
+        <span className="lib-top-crumb">论文库与图谱</span>
+        <span className="lib-top-status">正在读取图谱状态…</span>
+      </div>
+    );
   }
+  const scope = health.scope || {};
   return (
-    <div className="top" data-testid="graph-header">
-      <span className="crumb">论文库与图谱</span>
-      <span className="chip">
+    <div className="lib-top" data-testid="graph-header">
+      <span className="lib-top-crumb">论文库与图谱</span>
+      <span className="lib-top-status">
         <span
           className="dot"
           style={{ background: health.status === 'ready' ? 'var(--success)' : 'var(--danger)' }}
         />
         {health.status}
       </span>
-      <span>
-        graphId <code className="mono" style={{ color: 'var(--text-primary)' }}>{health.graphId}</code>
-      </span>
-      {health.pinnedGraphId ? (
-        <span data-testid="pin-state">
-          版本锁定 <code className="mono">{String(health.pinnedGraphId).slice(0, 18)}…</code>
-        </span>
-      ) : (
-        <span data-testid="pin-state" style={{ color: 'var(--warning)' }}>未锁定图谱版本</span>
-      )}
-      <span>
-        书目 <b>{health.scope?.bibliographyTitles}</b> · 已建模型 <b>{health.scope?.modelTitles}</b> · 候选断言{' '}
-        <b>{health.scope?.candidateAssertions}</b>
-      </span>
+      <span style={{ marginLeft: 'auto' }} />
+      <button
+        type="button"
+        className="lib-icon-btn"
+        data-testid="info-toggle"
+        aria-label="图谱版本与边界"
+        aria-expanded={infoOpen ? 'true' : 'false'}
+        onClick={() => setInfoOpen((prev) => !prev)}
+      >
+        {INFO_ICON}
+      </button>
+      {infoOpen ? (
+        <div className="lib-info-pop" data-testid="info-popover">
+          <h4>图谱版本与边界</h4>
+          <code className="lib-idfull">{health.graphId}</code>
+          <div className="lib-kv">
+            <span className="k">版本锁定</span>
+            <span data-testid="pin-state">
+              {health.pinnedGraphId
+                ? '已锁定 · 检索与图谱都读这一个版本'
+                : <span style={{ color: 'var(--warning)' }}>未锁定图谱版本</span>}
+            </span>
+            <span className="k">书目规模</span>
+            <span data-testid="scope-counts">
+              {(scope.bibliographyTitles ?? 0).toLocaleString('en-US')} 篇书目 ·{' '}
+              {(scope.modelTitles ?? 0).toLocaleString('en-US')} 篇已建模型 ·{' '}
+              {(scope.candidateAssertions ?? 0).toLocaleString('en-US')} 条候选断言
+            </span>
+          </div>
+          <BoundaryNotice className="lib-pop-details" />
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -50,25 +105,6 @@ export function ErrorBanner({ error, onRetry }) {
       <div className="d">{error.detail}</div>
       {onRetry ? <button type="button" onClick={onRetry}>重试</button> : null}
     </div>
-  );
-}
-
-/** 系统边界说明：把「本系统不做/做不到」直接写给用户看。 */
-export function BoundaryNotice() {
-  return (
-    <details className="notice" data-testid="boundary-notice">
-      <summary>本系统能做什么、不能做什么</summary>
-      <ul>
-        <li>
-          图谱是<b>候选断言图</b>：方法—任务 / 方法—数据集关系为{' '}
-          <code className="mono">status: candidate</code>，一律标「候选」，不会被讲成已核实事实。
-        </li>
-        <li>证据深度目前只有<b>题名</b>：题名级证据只能证明论文存在、题名里出现了相关词。</li>
-        <li>只有书目与题名；摘要仅 75 篇，全文 0 篇，本系统不托管 PDF。</li>
-        <li>没有引用数据，因此<b>不提供</b>「是否必引 / 被引次数 / 引用链 / 影响力排序」。</li>
-        <li>图谱不可用时会明确报错（503），<b>不会</b>回退成"没有搜到"。</li>
-      </ul>
-    </details>
   );
 }
 

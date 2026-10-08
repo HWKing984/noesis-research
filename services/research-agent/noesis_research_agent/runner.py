@@ -183,16 +183,21 @@ def _messages_of(update: Any) -> list[Any]:
     return []
 
 
-def _answer_delta(payload: Any) -> str:
-    """从 langgraph 的 messages 流里取**回答正文增量**。
+def _answer_delta(chunk: Any, metadata: Any = None) -> str:
+    """从 langgraph 的 messages 通道里取**回答正文增量**。
 
-    只认「纯文本、无工具调用」的 AIMessageChunk —— 模型决定调工具的那几帧
-    content 为空或不该当作回答播出去。
+    严格只认 ``AIMessageChunk`` 的纯文本帧，且**只收根图** —— 子代理
+    （deepagents 的 task 工具会开子图）的内部叙述不属于给用户的回答。
+    两类东西也绝不能从这里漏出去：
+    * ``ToolMessage``（type=="tool"）—— 它的 content 是工具返回的原始 JSON，
+      一旦当成回答播出，界面就会把整包工具载荷当正文渲染（实际发生过）；
+    * 模型决定调工具的那几帧（带 tool_calls / tool_call_chunks）。
     """
-    try:
-        chunk, _meta = payload
-    except (TypeError, ValueError):
+    if getattr(chunk, "type", None) != "AIMessageChunk":
         return ""
+    # 子图判定不在这里做：实测根图 chunk 也带非空 langgraph_checkpoint_ns
+    # （"model:<uuid>"），拿它当子图标记会把正文增量全部滤掉 —— 由调用方按
+    # 流三元组的 namespace（根图为空）判定。
     content = getattr(chunk, "content", None)
     if not isinstance(content, str) or not content:
         return ""
@@ -201,6 +206,26 @@ def _answer_delta(payload: Any) -> str:
     if getattr(chunk, "tool_calls", None):
         return ""
     return content
+
+
+def _iter_stream_items(chunks: Iterable[Any]) -> Iterator[tuple[str | None, Any, str | None]]:
+    """把各种流形态统一成 ``(mode, payload, namespace)``。
+
+    * 旧形态（updates 字典）→ ``(None, 原样, None)``；
+    * 单模式元组 ``(mode, payload)`` → namespace None；
+    * 带 ``subgraphs=True`` 的三元组 ``(namespace, mode, payload)`` → 原样。
+    """
+    for item in chunks:
+        if isinstance(item, tuple):
+            if len(item) == 3 and isinstance(item[1], str):
+                namespace, mode, payload = item
+                yield mode, payload, (namespace or None)
+            elif len(item) == 2 and isinstance(item[0], str):
+                yield item[0], item[1], None
+            else:
+                yield None, item, None
+        else:
+            yield None, item, None
 
 
 def translate_chunks(
@@ -215,11 +240,15 @@ def translate_chunks(
 
     按**消息类型**判断，不按节点名 —— 节点名是实现细节。
 
-    支持两种流形态：
+    支持两种流形态，且**消息通道必须能自给自足**（实测 updates 通道在部分
+    运行里一条都不产出，不能依赖它兜底）：
     * 旧形态：直接迭代 updates 字典（离线脚本化测试用）；
     * 双通道：``stream_mode=["updates","messages"]`` 产出的 ``(mode, payload)``
-      元组 —— ``messages`` 通道给出回答正文的 token 增量，翻译成
-      ``answer_delta`` 事件供界面逐字渲染。
+      元组 —— ``messages`` 通道给出正文 token 增量（answer_delta）、
+      工具调用（AIMessageChunk.tool_calls）与工具结果（ToolMessage，type=="tool"）。
+
+    跨通道去重：工具调用按 call id、工具结果按 tool_call_id，先到先得；
+    但**工具边界**（重置"最后一次工具结果之后的正文"）两个通道都要认。
     """
     yield {
         "type": _RUN_STARTED,
@@ -231,75 +260,131 @@ def translate_chunks(
 
     available_ids: list[str] = []
     evidence_levels: set[str] = set()
-    answer = ""
-    for item in chunks:
-        if isinstance(item, tuple) and len(item) == 2 and isinstance(item[0], str):
-            mode, payload = item
-            if mode == "messages":
-                delta = _answer_delta(payload)
-                if delta:
-                    answer += delta
-                    yield {"type": "answer_delta", "runId": run_id, "delta": delta}
+    updates_answer = ""            # updates 通道里最后一条（无工具调用的）AI 文本 = 权威全文
+    streamed_tail = ""             # messages 通道：最后一次工具结果之后的正文增量
+    emitted_call_ids: set[str] = set()
+    seen_tool_result_ids: set[str] = set()
+
+    def collect_tool_payload(tool_name: str, payload: Any) -> list[dict[str, Any]]:
+        # 工具结果无论来自主图还是子图都要收集：证据不问命名空间
+        ids = extract_source_ids(payload)
+        for item in ids:
+            if item not in available_ids:
+                available_ids.append(item)
+        if isinstance(payload, Mapping):
+            papers = payload.get("papers")
+            if isinstance(papers, list):
+                for paper in papers:
+                    evidence = paper.get("evidence") if isinstance(paper, Mapping) else None
+                    level = evidence.get("evidenceLevel") if isinstance(evidence, Mapping) else None
+                    if isinstance(level, str) and level:
+                        evidence_levels.add(level)
+        return [
+            {
+                "type": _TOOL_RESULT,
+                "runId": run_id,
+                "tool": tool_name,
+                "summary": summarize_tool_result(tool_name, payload),
+                "evidenceIds": ids,
+            }
+        ]
+
+    def handle_tool_message(message: Any) -> list[dict[str, Any]]:
+        tool_name = str(getattr(message, "name", "") or "")
+        status = getattr(message, "status", None)
+        if status == "error":
+            return [
+                {
+                    "type": _TOOL_ERROR,
+                    "runId": run_id,
+                    "tool": tool_name,
+                    "message": _as_text(getattr(message, "content", ""))[:400],
+                }
+            ]
+        payload = _as_payload(getattr(message, "content", ""))
+        return collect_tool_payload(tool_name, payload)
+
+    def emit_tool_call(call: Any) -> dict[str, Any] | None:
+        if not isinstance(call, Mapping):
+            return None
+        call_id = str(call.get("id") or "")
+        if call_id and call_id in emitted_call_ids:
+            return None
+        if call_id:
+            emitted_call_ids.add(call_id)
+        return {
+            "type": _TOOL_CALL,
+            "runId": run_id,
+            "tool": str(call.get("name") or ""),
+            "args": call.get("args") or {},
+        }
+
+    for mode, payload, _namespace in _iter_stream_items(chunks):
+        if mode == "messages":
+            chunk = payload[0] if isinstance(payload, tuple) else payload
+            metadata = payload[1] if isinstance(payload, tuple) and len(payload) > 1 else {}
+            msg_type = getattr(chunk, "type", None)
+            if msg_type == "tool":
+                # 边界重置必须在**去重之后**：迟到的重复工具结果副本（跨通道乱序）
+                # 若也重置一次，会把已流式输出的回答正文清掉（实际发生过）
+                call_id = str(getattr(chunk, "tool_call_id", "") or "")
+                if call_id:
+                    if call_id in seen_tool_result_ids:
+                        continue
+                    seen_tool_result_ids.add(call_id)
+                streamed_tail = ""  # 工具边界：之后的正文才是给用户的回答
+                for event in handle_tool_message(chunk):
+                    yield event
                 continue
+            for call in getattr(chunk, "tool_calls", None) or []:
+                event = emit_tool_call(call)
+                if event:
+                    yield event
+            # 正文增量只收根图：子代理（namespace 非空）的内部叙述不进回答
+            if _namespace is None:
+                delta = _answer_delta(chunk, metadata)
+                if delta:
+                    streamed_tail += delta
+                    yield {"type": "answer_delta", "runId": run_id, "delta": delta}
+            continue
+        if mode == "updates":
             updates = [payload]
         else:
-            updates = item.values() if isinstance(item, Mapping) else [item]
+            updates = payload.values() if isinstance(payload, Mapping) else [payload]
         for update in updates:
             for message in _messages_of(update):
                 message_type = getattr(message, "type", None) or getattr(message, "role", None)
 
-                for call in getattr(message, "tool_calls", None) or []:
-                    if not isinstance(call, Mapping):
-                        continue
-                    yield {
-                        "type": _TOOL_CALL,
-                        "runId": run_id,
-                        "tool": str(call.get("name") or ""),
-                        "args": call.get("args") or {},
-                    }
-
                 if message_type == "tool":
-                    tool_name = str(getattr(message, "name", "") or "")
-                    status = getattr(message, "status", None)
-                    if status == "error":
-                        yield {
-                            "type": _TOOL_ERROR,
-                            "runId": run_id,
-                            "tool": tool_name,
-                            "message": _as_text(getattr(message, "content", ""))[:400],
-                        }
-                        continue
-                    payload = _as_payload(getattr(message, "content", ""))
-                    ids = extract_source_ids(payload)
-                    for item in ids:
-                        if item not in available_ids:
-                            available_ids.append(item)
-                    # 记录这次工具给出的证据深度：题名级只能证明"论文存在"，
-                    # 界面必须把这句话讲给用户听，而不是默认读者知道。
-                    if isinstance(payload, Mapping):
-                        papers = payload.get("papers")
-                        if isinstance(papers, list):
-                            for paper in papers:
-                                evidence = paper.get("evidence") if isinstance(paper, Mapping) else None
-                                level = evidence.get("evidenceLevel") if isinstance(evidence, Mapping) else None
-                                if isinstance(level, str) and level:
-                                    evidence_levels.add(level)
-                    yield {
-                        "type": _TOOL_RESULT,
-                        "runId": run_id,
-                        "tool": tool_name,
-                        "summary": summarize_tool_result(tool_name, payload),
-                        "evidenceIds": ids,
-                    }
-                elif message_type == "ai":
-                    text = _as_text(getattr(message, "content", "")).strip()
-                    if text:
-                        answer = text
+                    # 与 messages 通道同权：重置在去重之后（理由同上）
+                    call_id = str(getattr(message, "tool_call_id", "") or "")
+                    if call_id:
+                        if call_id in seen_tool_result_ids:
+                            continue
+                        seen_tool_result_ids.add(call_id)
+                    streamed_tail = ""  # 工具边界（与 messages 通道同权）
+                    for event in handle_tool_message(message):
+                        yield event
+                    continue
 
-    report = citation_report(answer, available_ids)
+                for call in getattr(message, "tool_calls", None) or []:
+                    event = emit_tool_call(call)
+                    if event:
+                        yield event
+
+                if message_type == "ai":
+                    text = _as_text(getattr(message, "content", "")).strip()
+                    if text and not getattr(message, "tool_calls", None):
+                        updates_answer = text
+
+    # 权威全文的取舍：messages 通道是可靠的那条（updates 在部分运行里一条不产出），
+    # 且 tail 恰好是"最后一次工具结果之后"的正文 —— 用户看着它逐字流出来。
+    # updates_answer 只作兜底（纯 updates 形态的离线测试/部署）。
+    final_answer = streamed_tail or updates_answer
+    report = citation_report(final_answer, available_ids)
     report["evidenceLevels"] = sorted(evidence_levels)
     report["titleOnly"] = bool(evidence_levels) and evidence_levels == {"title"}
-    yield {"type": _ANSWER, "runId": run_id, "text": answer, "citation": report}
+    yield {"type": _ANSWER, "runId": run_id, "text": final_answer, "citation": report}
     yield {"type": _DONE, "runId": run_id, "status": "ok"}
 
 

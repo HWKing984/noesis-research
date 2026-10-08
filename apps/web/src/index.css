@@ -384,11 +384,12 @@ body.is-rail .rail { width: var(--rail-width); }
 /* ===================================================================== */
 /* 证据抽屉 / 反馈态 / 论文库（沿用既有结构，走同一套 token）               */
 /* ===================================================================== */
+/* 证据抽屉 z 高于论文抽屉（.lib-drawer z-45）：从论文详情里点证据 chip 时叠上来，关掉后论文抽屉还在 */
 .mask { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.28); opacity: 0;
-  pointer-events: none; transition: opacity 0.2s; z-index: 40; }
+  pointer-events: none; transition: opacity 0.2s; z-index: 49; }
 .drawer { position: fixed; top: 0; right: 0; height: 100%; width: 400px; max-width: 92vw;
   background: var(--bg-primary); border-left: 1px solid var(--border-subtle);
-  transform: translateX(102%); transition: transform 0.24s ease; z-index: 41;
+  transform: translateX(102%); transition: transform 0.24s ease; z-index: 50;
   padding: 18px 20px; overflow-y: auto; }
 body.is-drawer .mask { opacity: 1; pointer-events: auto; }
 body.is-drawer .drawer { transform: none; }
@@ -420,3 +421,148 @@ body.is-drawer .drawer { transform: none; }
 .notice ul { margin: 8px 0 0; padding-left: 20px; }
 .notice li { margin: 3px 0; }
 .empty { padding: 30px 20px; text-align: center; font-size: 13px; color: var(--text-tertiary); }
+
+/* ===================================================================== */
+/* 论文库与图谱 · A 方向（检索优先）：瘦身头部 / hero 空态 / 检索带 / 抽屉    */
+/* ===================================================================== */
+.libview { height: 100%; display: flex; flex-direction: column; min-height: 0; }
+
+/* ---- 瘦身头部：crumb + ready + ⓘ ---- */
+.lib-top { display: flex; align-items: center; gap: 10px; padding: 0 20px; height: 46px;
+  border-bottom: 1px solid var(--border-subtle); background: var(--bg-primary); flex-shrink: 0; position: relative; z-index: 31; }
+.lib-top-crumb { font-size: 13.5px; font-weight: 600; color: var(--text-primary); }
+.lib-top-status { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-tertiary); }
+.lib-icon-btn { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px;
+  border-radius: var(--radius-md); color: var(--text-tertiary); cursor: pointer; flex-shrink: 0;
+  transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out); }
+.lib-icon-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+.lib-icon-btn svg { width: 15px; height: 15px; stroke: currentColor; stroke-width: 1.7; fill: none; }
+.lib-info-pop { position: absolute; top: 52px; right: 20px; z-index: 30; width: 360px; max-width: calc(100vw - 300px);
+  background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: var(--radius-lg);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.08); padding: 14px 16px; }
+[data-theme='dark'] .lib-info-pop { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.4); }
+.lib-info-pop h4 { margin: 0 0 6px; font-size: 12.5px; font-weight: 600; }
+.lib-idfull { display: block; font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary);
+  word-break: break-all; background: var(--bg-secondary); border-radius: 6px; padding: 6px 8px; }
+.lib-kv { display: grid; grid-template-columns: 70px 1fr; gap: 6px 10px; font-size: 12px; margin: 8px 0; }
+.lib-kv .k { color: var(--text-tertiary); }
+.lib-pop-details { margin: 8px 0 0; border: none; border-top: 1px dashed var(--border-subtle);
+  border-radius: 0; background: transparent; padding: 8px 0 0; }
+.lib-pop-details summary { font-size: 12px; color: var(--text-secondary); }
+.lib-pop-details ul { margin: 6px 0 0; }
+.lib-pop-details li { font-size: 11.5px; }
+
+/* ---- 空态 hero ---- */
+.lib-hero { flex: 1; overflow-y: auto; display: flex; flex-direction: column; min-height: 0; }
+.lib-hero-inner { margin: auto; width: 100%; max-width: 760px; padding: 40px 32px 96px;
+  display: flex; flex-direction: column; align-items: center; text-align: center; }
+.lib-hero-title { font-family: var(--font-serif); font-size: 30px; font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.25; margin: 0; color: var(--text-primary); }
+.lib-hero-sub { margin: 10px 0 0; font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+.lib-hero-sub b { color: var(--text-primary); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ---- 检索行（hero 与吸顶共用） ---- */
+.lib-searchbar { width: 100%; }
+.lib-search-row { display: flex; gap: 8px; width: 100%; max-width: 620px; margin: 26px auto 0; position: relative; }
+.lib-fixedbar .lib-search-row { margin-top: 0; }
+.lib-search-wrap { position: relative; flex: 1; min-width: 0; }
+.lib-search-ico { position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); pointer-events: none; display: flex; }
+.lib-search-ico svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 1.8; fill: none; }
+.lib-search-input { width: 100%; height: 46px; border: 1px solid var(--border-default); border-radius: var(--radius-lg);
+  background: var(--bg-elevated); padding: 0 14px 0 40px; font-size: 14px; color: var(--text-primary); outline: none;
+  transition: border-color var(--duration-fast), box-shadow var(--duration-fast); }
+.lib-search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+.lib-search-input::placeholder { color: var(--text-muted); }
+.lib-btn { height: 46px; padding: 0 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-default);
+  background: var(--bg-elevated); font-size: 13px; color: var(--text-secondary); cursor: pointer;
+  display: flex; align-items: center; gap: 6px; flex: 0 0 auto; position: relative; white-space: nowrap;
+  transition: border-color var(--duration-fast), color var(--duration-fast); }
+.lib-btn:hover { border-color: var(--border-strong); color: var(--text-primary); }
+.lib-btn svg { width: 13px; height: 13px; stroke: currentColor; stroke-width: 1.8; fill: none; }
+.lib-btn-n { position: absolute; top: -5px; right: -5px; min-width: 16px; height: 16px; border-radius: 999px;
+  background: var(--text-primary); color: var(--bg-primary); font-size: 10px; display: flex;
+  align-items: center; justify-content: center; padding: 0 4px; }
+.lib-go { height: 46px; padding: 0 22px; border-radius: var(--radius-lg); background: var(--text-primary);
+  color: var(--bg-primary); font-size: 13.5px; font-weight: 600; cursor: pointer; flex: 0 0 auto;
+  transition: opacity var(--duration-fast); }
+.lib-go:disabled { opacity: 0.5; cursor: wait; }
+
+/* ---- 筛选弹层 ---- */
+.lib-filter-pop { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 380px;
+  max-width: calc(100vw - 300px); text-align: left; background: var(--bg-elevated);
+  border: 1px solid var(--border-default); border-radius: var(--radius-lg);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.08); padding: 14px 16px; }
+[data-theme='dark'] .lib-filter-pop { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.4); }
+.lib-filter-pop h4 { margin: 0 0 10px; font-size: 12.5px; font-weight: 600; }
+.lib-filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.lib-filter-grid label { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.lib-filter-grid label span { font-size: 11px; color: var(--text-tertiary); }
+.lib-filter-grid input,
+.lib-filter-grid select { height: 32px; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+  background: var(--bg-primary); padding: 0 8px; font-size: 12.5px; color: var(--text-primary); outline: none; width: 100%; }
+.lib-filter-grid input:focus,
+.lib-filter-grid select:focus { border-color: var(--accent); }
+.lib-filter-foot { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.lib-filter-foot .lbl { font-size: 11px; color: var(--text-tertiary); }
+.lib-filter-foot select { height: 26px; border: 1px solid var(--border-subtle); border-radius: 6px;
+  background: var(--bg-primary); color: var(--text-primary); font-size: 12px; }
+.lib-filter-clear { margin-left: auto; font-size: 11.5px; color: var(--text-tertiary); cursor: pointer; }
+.lib-filter-clear:hover { color: var(--text-primary); text-decoration: underline; }
+
+/* ---- 建议卡 ---- */
+.lib-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 620px; margin-top: 30px; }
+.lib-card { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 14px 16px;
+  background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  cursor: pointer; text-align: left;
+  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out); }
+.lib-card:hover { transform: translateY(-2px); box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.09); border-color: var(--border-default); }
+[data-theme='dark'] .lib-card:hover { box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.45); }
+.lib-card .l { font-size: 13px; color: var(--text-primary); line-height: 1.45; }
+.lib-card .h { font-size: 11px; color: var(--text-tertiary); }
+
+/* ---- 结果态：吸顶检索 + 摘要 + 列表 ---- */
+.lib-scroll { flex: 1; overflow-y: auto; min-height: 0; }
+.lib-result { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 32px 96px;
+  display: flex; flex-direction: column; }
+.lib-fixedbar { position: sticky; top: 0; z-index: 20; background: var(--bg-primary);
+  padding: 10px 0 12px; border-bottom: 1px solid var(--border-subtle); }
+.lib-fixedbar .lib-search-input { height: 40px; }
+.lib-fixedbar .lib-btn, .lib-fixedbar .lib-go { height: 40px; }
+.lib-summary-row { padding: 12px 0 2px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  font-size: 11.5px; color: var(--text-tertiary); }
+.lib-summary-row .n { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.lib-summary-row code { font-family: var(--font-mono); font-size: 11px; background: var(--bg-tertiary);
+  padding: 1px 6px; border-radius: 4px; color: var(--text-secondary); }
+.lib-list-shell { border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  overflow: hidden; background: var(--bg-primary); }
+.lib-list-shell .lib-row:last-child { border-bottom: none; }
+
+/* ---- 论文行（列表项；行用 div[role=button]，内含真 button 的证据 chip） ---- */
+.lib-row { display: flex; align-items: flex-start; gap: 12px; padding: 13px 20px; cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle); transition: background var(--duration-fast) var(--ease-out);
+  position: relative; font: inherit; color: inherit; text-align: left; }
+.lib-row:hover { background: var(--bg-secondary); }
+.lib-row.is-active { background: var(--accent-dim); }
+.lib-row.is-active::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--text-primary); }
+.lib-row-main { flex: 1; min-width: 0; }
+.lib-row-title { font-size: 13.5px; font-weight: 500; line-height: 1.45; color: var(--text-primary); display: block; }
+.lib-row-meta { margin-top: 3px; font-size: 11.5px; color: var(--text-tertiary); display: flex;
+  align-items: center; gap: 6px; flex-wrap: wrap; }
+.lib-row-meta .mono { font-size: 11px; }
+.lib-row-side { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: 0 0 auto; padding-top: 2px; }
+.lib-badge { padding: 1px 8px; border-radius: 999px; background: var(--bg-tertiary); font-size: 10.5px;
+  color: var(--text-tertiary); white-space: nowrap; }
+
+/* ---- 论文抽屉（详情 / 局部图谱 tab；比证据抽屉低一层，证据抽屉叠上来） ---- */
+.lib-mask { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.28); z-index: 44; }
+.lib-drawer { position: fixed; top: 0; right: 0; height: 100%; width: 480px; max-width: 94vw;
+  background: var(--bg-primary); border-left: 1px solid var(--border-subtle); z-index: 45;
+  display: flex; flex-direction: column; }
+.lib-drawer .dw-tabs { display: flex; gap: 4px; align-items: center; border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 18px 0; flex-shrink: 0; }
+.lib-drawer .dw-tabs button { padding: 6px 12px; font-size: 12.5px; border-bottom: 2px solid transparent;
+  color: var(--text-tertiary); cursor: pointer; }
+.lib-drawer .dw-tabs button.is-on { border-bottom-color: var(--text-primary); color: var(--text-primary); font-weight: 600; }
+.lib-drawer .dw-body { flex: 1; overflow-y: auto; padding: 16px 18px 90px; }

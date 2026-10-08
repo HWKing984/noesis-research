@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>局部图谱 · 可拖拽力导向原型</title>
+<style>
+:root{
+  --bg-primary:#ffffff; --bg-secondary:#f7f7f8; --bg-tertiary:#ececed; --bg-elevated:#ffffff; --bg-hover:#e8e8e8;
+  --border-subtle:rgba(0,0,0,.06); --border-default:rgba(0,0,0,.1); --border-strong:rgba(0,0,0,.16);
+  --text-primary:#1a1a1c; --text-secondary:#525257; --text-tertiary:#8b8b92; --text-muted:#b0b0b5;
+  --accent:#555555; --accent-dim:rgba(85,85,85,.08);
+  --warning:#d97706; --success:#16a34a;
+  --font-body:'Geist',system-ui,-apple-system,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;
+  --font-mono:'DM Mono','Cascadia Code',Consolas,'SFMono-Regular',Menlo,monospace;
+  --radius-lg:12px; --radius-md:8px;
+  --shadow-pop:0 8px 28px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.08);
+}
+[data-theme='dark']{
+  --bg-primary:#212121; --bg-secondary:#171717; --bg-tertiary:#2a2a2a; --bg-elevated:#2e2e2e; --bg-hover:#333333;
+  --border-subtle:rgba(255,255,255,.05); --border-default:rgba(255,255,255,.1); --border-strong:rgba(255,255,255,.15);
+  --text-primary:#ececf1; --text-secondary:#a1a1aa; --text-tertiary:#71717a; --text-muted:#52525b;
+  --accent:#aaaaaa; --accent-dim:rgba(170,170,170,.1);
+  --shadow-pop:0 8px 28px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg-secondary);color:var(--text-primary);font-family:var(--font-body);font-size:14px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font-family:inherit;font-size:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0}
+.mono{font-family:var(--font-mono);font-size:12px}
+.dirview{height:100vh;display:flex;flex-direction:column;min-height:0}
+.lib-top{display:flex;align-items:center;gap:10px;padding:0 20px;height:46px;border-bottom:1px solid var(--border-subtle);background:var(--bg-primary);flex-shrink:0}
+.lib-top-crumb{font-size:13.5px;font-weight:600}
+.lib-top-status{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-tertiary)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--success);display:inline-block}
+.g-stage{flex:1;min-height:0;display:flex;flex-direction:column;background:var(--bg-primary);overflow:hidden;position:relative}
+.g-head{padding:12px 22px 8px;display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--border-subtle);flex-shrink:0}
+.g-title{font-size:15px;font-weight:600;line-height:1.4;min-width:0;flex:1}
+.g-title .sub{font-size:11.5px;color:var(--text-tertiary);margin-top:3px;font-weight:400}
+.g-canvas{flex:1;min-height:0;position:relative;overflow:hidden}
+.g-stage>.g-tools,.g-stage>.g-info,.g-stage>.g-hint{z-index:5}
+.g-canvas svg,.g-canvas canvas{display:block;width:100%;height:100%;touch-action:none}
+.g-canvas.is-pan{cursor:grab}.g-canvas.is-pan:active{cursor:grabbing}
+.g-info{position:absolute;left:12px;bottom:12px;max-width:70%;font-size:11.5px;color:var(--text-secondary);background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:6px 12px;pointer-events:none;box-shadow:var(--shadow-pop)}
+.g-tools{position:absolute;right:12px;top:12px;display:flex;gap:6px}
+.g-tool{display:flex;align-items:center;gap:5px;padding:5px 11px;border-radius:999px;border:1px solid var(--border-default);background:var(--bg-elevated);font-size:11.5px;color:var(--text-secondary);cursor:pointer;box-shadow:var(--shadow-pop);white-space:nowrap}
+.g-tool:hover{color:var(--text-primary);border-color:var(--border-strong)}
+.g-tool svg{width:12px;height:12px;stroke:currentColor;stroke-width:1.8;fill:none}
+.g-hint{position:absolute;right:12px;bottom:12px;font-size:10.5px;color:var(--text-muted);background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:4px 10px;pointer-events:none}
+.g-foot{border-top:1px solid var(--border-subtle);padding:10px 22px;flex-shrink:0;background:var(--bg-primary)}
+.g-foot .stats{font-size:12px;color:var(--text-secondary);display:flex;gap:16px;flex-wrap:wrap}
+.g-foot .stats b{color:var(--text-primary)}
+.g-foot .notice{margin-top:8px;border:1px solid var(--border-subtle);border-left:2px solid var(--warning);border-radius:var(--radius-md);padding:7px 11px;font-size:11px;color:var(--text-secondary);line-height:1.6;background:var(--bg-secondary)}
+.g-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;max-width:380px;margin:auto;padding:20px}
+.g-empty .t{font-family:var(--font-body);font-size:19px;font-weight:600;color:var(--text-primary);margin:0 0 8px}
+.g-empty .d{font-size:12.5px;color:var(--text-tertiary);line-height:1.8}
+/* 评审控制条 */
+.review-bar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;width:max-content;max-width:calc(100vw - 32px);display:flex;align-items:center;gap:4px;padding:6px;background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:14px;box-shadow:var(--shadow-pop)}
+.rv-btn{padding:6px 13px;border-radius:9px;font-size:12.5px;color:var(--text-secondary);cursor:pointer;white-space:nowrap}
+.rv-btn:hover{background:var(--bg-hover);color:var(--text-primary)}
+.rv-btn.is-on{background:var(--text-primary);color:var(--bg-primary);font-weight:600}
+.rv-sep{width:1px;height:18px;background:var(--border-default);margin:0 4px}
+.rv-cost{font-size:11px;color:var(--text-tertiary);padding:0 10px 0 6px;max-width:280px;white-space:normal;line-height:1.45}
+.rv-key{display:inline-block;padding:0 4px;border:1px solid var(--border-default);border-radius:4px;font-size:10px;line-height:1.5;margin-right:4px}
+/* 环形（现状）节点样式 */
+.ring-node{cursor:pointer}
+.ring-node:hover circle{stroke:var(--text-primary);stroke-width:1.5}
+</style>
+</head>
+<body>
+<div class="dirview">
+  <div class="lib-top">
+    <span class="lib-top-crumb">论文库与图谱</span>
+    <span class="lib-top-status"><span class="dot"></span>ready</span>
+  </div>
+  <div class="g-stage">
+    <div class="g-head">
+      <div class="g-title">Denoising Diffusion Probabilistic Models
+        <div class="sub" id="gSub">本篇关系 · 真实 Neo4j · 局部路径</div>
+      </div>
+    </div>
+    <div class="g-canvas" id="gCanvas"></div>
+    <div class="g-tools">
+      <button class="g-tool" id="btnReset" data-act="reset"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 2.6-6.4M3 4v5h5"/></svg>重置布局</button>
+      <button class="g-tool" id="btnFit" data-act="fit"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>适应窗口</button>
+    </div>
+    <div class="g-info" id="gInfo">拖动节点 rearrange · 滚轮缩放 · 拖空白平移 · 双击重置 —— 点击节点看属性</div>
+    <div class="g-hint" id="gHint">14 节点 · 17 关系 · 上限 15</div>
+    <div class="g-foot">
+      <div class="stats"><span>节点 <b id="stN">14</b></span><span>关系 <b id="stE">17</b></span><span>路径 <b id="stP">12</b></span><span>graphId <b class="mono" style="font-size:11px">ai-literature-ed16…</b></span></div>
+      <div class="notice">局部有界路径：作者身份可信度以节点 identityStatus 为准，旧图姓名节点未消歧；新图未决署名不跨论文合并。同方法仅表示模型提及，不是引用或已验证语义相似。</div>
+    </div>
+  </div>
+</div>
+<nav class="review-bar" id="reviewBar"></nav>
+<script src="https://unpkg.com/force-graph@1.43.1/dist/force-graph.min.js"></script>
+<script>
+'use strict';
+/* ================= mock（截图里的 ShrimpFormer 局部图） ================= */
+var G_ID = 'ai-literature-ed16399925fac2a599ed';
+var KIND_ZH = { Publication: '论文', Person: '作者', Venue: '会议', Concept: '概念', Task: '任务', Dataset: '数据集', Mention: '提及', Assertion: '断言' };
+var NODES = [
+  { id: 'p0', kind: 'Publication', name: 'ShrimpFormer' },
+  { id: 'per1', kind: 'Person', name: 'Jiaxin Lin' },
+  { id: 'per2', kind: 'Person', name: 'Yuefang Gao' },
+  { id: 'per3', kind: 'Person', name: 'Dong Huang 0' },
+  { id: 'per4', kind: 'Person', name: 'Zihao Wen' },
+  { id: 'ven1', kind: 'Venue', name: 'WISA' },
+  { id: 'm1', kind: 'Mention', name: 'transformer' },
+  { id: 'm2', kind: 'Mention', name: 'shrimp counting' },
+  { id: 'm3', kind: 'Mention', name: 'detection' },
+  { id: 'c1', kind: 'Concept', name: 'counting and' },
+  { id: 'c2', kind: 'Concept', name: 'transformer' },
+  { id: 'c3', kind: 'Concept', name: 'shrimpformer' },
+  { id: 'a1', kind: 'Assertion', name: 'c2 USED_FOR c1' },
+  { id: 'a2', kind: 'Assertion', name: 'c1 EVAL_ON c3' }
+];
+var EDGES = [
+  { s: 'p0', t: 'per1', k: 'WRITTEN_BY' }, { s: 'p0', t: 'per2', k: 'WRITTEN_BY' },
+  { s: 'p0', t: 'per3', k: 'WRITTEN_BY' }, { s: 'p0', t: 'per4', k: 'WRITTEN_BY' },
+  { s: 'p0', t: 'ven1', k: 'PUBLISHED_IN' },
+  { s: 'p0', t: 'm1', k: 'MENTIONS' }, { s: 'p0', t: 'm2', k: 'MENTIONS' }, { s: 'p0', t: 'm3', k: 'MENTIONS' },
+  { s: 'm1', t: 'c2', k: 'DESCRIBES' }, { s: 'm2', t: 'c1', k: 'DESCRIBES' }, { s: 'm3', t: 'c3', k: 'DESCRIBES' },
+  { s: 'a1', t: 'c2', k: 'HEAD' }, { s: 'a1', t: 'c1', k: 'TAIL' },
+  { s: 'a2', t: 'c1', k: 'HEAD' }, { s: 'a2', t: 'c3', k: 'TAIL' },
+  { s: 'c2', t: 'c3', k: 'CO_OCCURS' }, { s: 'c1', t: 'c2', k: 'CO_OCCURS' }
+];
+var PATHS = 12;
+
+var S = { dir: 'A', theme: 'light', hover: null, info: '拖动节点重排 · 滚轮缩放 · 拖空白平移 · 双击重置 —— 点击节点看属性' };
+var engine = null;          // 当前方向的引擎句柄 {destroy, reset, fit, zoomK}
+var ctx = null;
+function byId(id) { for (var i = 0; i < NODES.length; i++) if (NODES[i].id === id) return NODES[i]; return null; }
+function adjSets() {
+  var adj = {}; NODES.forEach(function (n) { adj[n.id] = {}; });
+  EDGES.forEach(function (e) { adj[e.s][e.t] = 1; adj[e.t][e.s] = 1; });
+  return adj;
+}
+var ADJ = adjSets();
+function cssVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+function themeColors() {
+  return {
+    ink: cssVar('--text-primary'), line: cssVar('--border-strong'), sub: cssVar('--text-tertiary'),
+    node: cssVar('--text-secondary'), bg: 'transparent'
+  };
+}
+function nodeR(kind) { return kind === 'Publication' ? 15 : 7; }
+function seedPos(id, i) {
+  var seed = 0; for (var c = 0; c < id.length; c++) seed = (seed * 31 + id.charCodeAt(c)) | 0;
+  var ang = (Math.abs(seed) % 360) * Math.PI / 180, r = 60 + (Math.abs(seed) % 120);
+  return { x: Math.cos(ang) * r, y: Math.sin(ang) * r };
+}
+
+/* ================= 方向 0：现状环形（对照） ================= */
+function mountRing() {
+  var host = document.getElementById('gCanvas');
+  host.innerHTML = '';
+  var C = themeColors();
+  var size = 560, c = size / 2, R = c - 80;
+  var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 ' + size + ' ' + size);
+  svg.style.margin = 'auto'; svg.style.position = 'absolute'; svg.style.inset = '0'; svg.style.maxWidth = '620px';
+  var pos = {}; pos.p0 = [c, c];
+  var others = NODES.filter(function (n) { return n.id !== 'p0'; });
+  others.forEach(function (n, i) {
+    var a = (i / others.length) * Math.PI * 2 - Math.PI / 2;
+    pos[n.id] = [c + R * Math.cos(a), c + R * Math.sin(a)];
+  });
+  var h = '';
+  EDGES.forEach(function (e) {
+    var a = pos[e.s], b = pos[e.t];
+    h += '<line x1="' + a[0] + '" y1="' + a[1] + '" x2="' + b[0] + '" y2="' + b[1] + '" stroke="' + C.line + '" stroke-width="1"/>';
+  });
+  NODES.forEach(function (n) {
+    var p = pos[n.id], r = nodeR(n.kind), isRoot = n.kind === 'Publication';
+    var label = n.kind + ' · ' + n.name;
+    h += '<g class="ring-node" data-node="' + n.id + '" style="font:inherit">' +
+      '<title>' + KIND_ZH[n.kind] + '：' + n.name + '</title>' +
+      '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="' + r + '" fill="' + (isRoot ? C.ink : C.node) + '"/>' +
+      '<text x="' + p[0] + '" y="' + (p[1] - r - 6) + '" text-anchor="middle" font-size="10.5" fill="' + C.sub + '">' + label + '</text></g>';
+  });
+  svg.innerHTML = h;
+  svg.addEventListener('click', function (ev) {
+    var g = ev.target.closest('[data-node]');
+    if (g) showNode(byId(g.getAttribute('data-node')));
+  });
+  host.appendChild(svg);
+  engine = { reset: function () {}, fit: function () {}, zoomK: function () { return 1; } };
+}
+
+/* ================= 方向 A：手写力导向（零依赖） ================= */
+function mountHandwritten() {
+  try { return mountHandwrittenInner(); } catch (e) { window.__diagErr = String(e && e.stack || e).slice(0, 400); throw e; }
+}
+function mountHandwrittenInner() {
+  var host = document.getElementById('gCanvas');
+  host.innerHTML = '';
+  var C = themeColors();
+  var W = host.clientWidth || 800, H = host.clientHeight || 520;
+  var svgNS = 'http://www.w3.org/2000/svg';
+  var svg = document.createElementNS(svgNS, 'svg');
+  var viewport = document.createElementNS(svgNS, 'g');
+  svg.appendChild(viewport); host.appendChild(svg);
+
+  var nodes = NODES.map(function (n, i) {
+    var p = seedPos(n.id, i);
+    return { id: n.id, kind: n.kind, name: n.name, x: p.x, y: p.y, vx: 0, vy: 0, fx: null, fy: null };
+  });
+  var index = {}; nodes.forEach(function (n) { index[n.id] = n; });
+  var edges = EDGES.map(function (e) { return { s: index[e.s], t: index[e.t], k: e.k }; });
+
+  var view = { x: 0, y: 0, k: 1 };
+  var alpha = 1, hover = null, drag = null, pan = null;
+  function applyView() { viewport.setAttribute('transform', 'translate(' + view.x + ',' + view.y + ') scale(' + view.k + ')'); }
+
+  /* DOM */
+  var edgeEls = edges.map(function (e) {
+    var l = document.createElementNS(svgNS, 'line');
+    l.setAttribute('stroke', C.line); l.setAttribute('stroke-width', '1.1');
+    var t = document.createElementNS(svgNS, 'title'); t.textContent = e.k; l.appendChild(t);
+    viewport.appendChild(l); return { el: l, e: e };
+  });
+  var nodeEls = nodes.map(function (n) {
+    var g = document.createElementNS(svgNS, 'g');
+    g.setAttribute('data-node', n.id); g.style.cursor = 'pointer';
+    var isRoot = n.kind === 'Publication', r = nodeR(n.kind);
+    var circle = document.createElementNS(svgNS, 'circle');
+    circle.setAttribute('r', r); circle.setAttribute('fill', isRoot ? C.ink : C.node); circle.setAttribute('stroke', C.bg || 'none');
+    var title = document.createElementNS(svgNS, 'title'); title.textContent = KIND_ZH[n.kind] + '：' + n.name;
+    var label = document.createElementNS(svgNS, 'text');
+    label.setAttribute('text-anchor', 'middle'); label.setAttribute('font-size', '10.5');
+    label.setAttribute('y', -r - 6); label.setAttribute('fill', C.sub);
+    label.textContent = (n.kind === 'Publication' ? '' : KIND_ZH[n.kind] + ' · ') + n.name;
+    g.appendChild(title); g.appendChild(circle); g.appendChild(label);
+    viewport.appendChild(g);
+    return { el: g, circle: circle, label: label, n: n, r: r };
+  });
+
+  function physics() {
+    if (alpha < 0.002) return;
+    /* 斥力（库仑） */
+    for (var i = 0; i < nodes.length; i++) for (var j = i + 1; j < nodes.length; j++) {
+      var a = nodes[i], b = nodes[j];
+      var dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy, d = Math.sqrt(d2) || 0.01;
+      var f = 1200 / (d2 + 160);
+      var fx = dx / d * f, fy = dy / d * f;
+      a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+    }
+    /* 弹簧（沿边） */
+    edges.forEach(function (e) {
+      var dx = e.t.x - e.s.x, dy = e.t.y - e.s.y, d = Math.hypot(dx, dy) || 0.01;
+      var f = (d - 110) * 0.04;
+      var fx = dx / d * f, fy = dy / d * f;
+      e.s.vx += fx; e.s.vy += fy; e.t.vx -= fx; e.t.vy -= fy;
+    });
+    /* 中心引力 + root 锚定 */
+    var cx = 0, cy = 0;
+    nodes.forEach(function (n) {
+      n.vx -= n.x * 0.008 * alpha; n.vy -= n.y * 0.008 * alpha;
+      if (n.kind !== 'Publication') { cx += n.x; cy += n.y; }
+    });
+    /* 积分 + 阻尼 */
+    nodes.forEach(function (n) {
+      if (n.fx !== null) { n.x = n.fx; n.y = n.fy; n.vx = 0; n.vy = 0; return; }
+      n.vx *= 0.82; n.vy *= 0.82;
+      var v = Math.hypot(n.vx, n.vy);
+      if (v > 24) { n.vx = n.vx / v * 24; n.vy = n.vy / v * 24; }
+      n.x += n.vx * alpha; n.y += n.vy * alpha;
+    });
+    alpha *= 0.94;
+  }
+  function paint() {
+    applyView();
+    edgeEls.forEach(function (o) {
+      var s = o.e.s, t = o.e.t;
+      o.el.setAttribute('x1', s.x); o.el.setAttribute('y1', s.y);
+      o.el.setAttribute('x2', t.x); o.el.setAttribute('y2', t.y);
+      var hot = hover && (s.id === hover || t.id === hover);
+      o.el.setAttribute('stroke', hot ? C.ink : C.line);
+      o.el.setAttribute('stroke-width', hot ? 1.6 : 1.1);
+    });
+    nodeEls.forEach(function (o) {
+      o.el.setAttribute('transform', 'translate(' + o.n.x + ',' + o.n.y + ')');
+      var isHover = hover === o.n.id;
+      o.circle.setAttribute('stroke', isHover ? C.ink : 'none');
+      o.circle.setAttribute('stroke-width', isHover ? 1.8 : 0);
+      o.label.setAttribute('opacity', isHover ? 1 : 0.85);
+    });
+  }
+  var raf = 0, autoFitDone = false;
+  function loop() {
+    physics(); paint();
+    if (!autoFitDone && alpha < 0.08) { autoFitDone = true; fit(); }
+    raf = requestAnimationFrame(loop);
+  }
+  loop();
+
+  /* 交互：拖节点 / 平移 / 缩放 / 双击重置 */
+  function toWorld(px, py) {
+    var rect = svg.getBoundingClientRect();
+    return { x: (px - rect.left - view.x) / view.k, y: (py - rect.top - view.y) / view.k };
+  }
+  function nodeAt(px, py) {
+    var w = toWorld(px, py);
+    for (var i = nodeEls.length - 1; i >= 0; i--) {
+      var o = nodeEls[i];
+      if (Math.hypot(o.n.x - w.x, o.n.y - w.y) <= o.r + 6) return o.n;
+    }
+    return null;
+  }
+  svg.addEventListener('pointerdown', function (ev) {
+    var n = nodeAt(ev.clientX, ev.clientY);
+    try { svg.setPointerCapture(ev.pointerId); } catch (e) { /* 合成事件无真实指针 */ }
+    if (n) {
+      var w = toWorld(ev.clientX, ev.clientY);
+      drag = { n: n, ox: n.x - w.x, oy: n.y - w.y };
+      n.fx = n.x; n.fy = n.y; alpha = Math.max(alpha, 0.45);
+    } else {
+      pan = { x: ev.clientX - view.x, y: ev.clientY - view.y };
+      host.classList.add('is-pan');
+    }
+  });
+  svg.addEventListener('pointermove', function (ev) {
+    if (drag) {
+      var w = toWorld(ev.clientX, ev.clientY);
+      drag.n.fx = w.x + drag.ox; drag.n.fy = w.y + drag.oy;
+      alpha = Math.max(alpha, 0.35);
+    } else if (pan) {
+      view.x = ev.clientX - pan.x; view.y = ev.clientY - pan.y;
+    } else {
+      var n = nodeAt(ev.clientX, ev.clientY);
+      if ((n ? n.id : null) !== hover) { hover = n ? n.id : null; svg.style.cursor = n ? 'grab' : ''; showNode(n); }
+    }
+  });
+  function endPointer(ev) {
+    if (drag) { drag.n.fx = null; drag.n.fy = null; drag = null; alpha = Math.max(alpha, 0.3); }
+    pan = null; host.classList.remove('is-pan');
+  }
+  svg.addEventListener('pointerup', endPointer);
+  svg.addEventListener('pointercancel', endPointer);
+  svg.addEventListener('wheel', function (ev) {
+    ev.preventDefault();
+    var rect = svg.getBoundingClientRect();
+    var mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+    var k2 = Math.min(3, Math.max(0.35, view.k * (ev.deltaY < 0 ? 1.12 : 1 / 1.12)));
+    view.x = mx - (mx - view.x) * k2 / view.k;
+    view.y = my - (my - view.y) * k2 / view.k;
+    view.k = k2;
+  }, { passive: false });
+  svg.addEventListener('dblclick', function () { reset(); });
+
+  function reset() {
+    nodes.forEach(function (n) { var p = seedPos(n.id, 0); n.x = p.x * (0.6 + Math.random() * 0.8); n.y = p.y * (0.6 + Math.random() * 0.8); n.vx = 0; n.vy = 0; n.fx = null; n.fy = null; });
+    view = { x: 0, y: 0, k: 1 }; alpha = 1; autoFitDone = false;
+  }
+  function fit() {
+    var minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9;
+    nodes.forEach(function (n) { minX = Math.min(minX, n.x); minY = Math.min(minY, n.y); maxX = Math.max(maxX, n.x); maxY = Math.max(maxY, n.y); });
+    var rect = svg.getBoundingClientRect(), pad = 60;
+    var k = Math.min((rect.width - pad * 2) / Math.max(maxX - minX, 1), (rect.height - pad * 2) / Math.max(maxY - minY, 1), 2.2);
+    view.k = Math.max(0.35, Math.min(k, 2.2));
+    view.x = rect.width / 2 - (minX + maxX) / 2 * view.k;
+    view.y = rect.height / 2 - (minY + maxY) / 2 * view.k;
+  }
+  engine = { reset: reset, fit: fit, zoomK: function () { return view.k; }, pan: view, meanV: function () { var s = 0; nodes.forEach(function (n) { s += Math.hypot(n.vx, n.vy); }); return s / nodes.length; }, stop: function () { cancelAnimationFrame(raf); }, nodes: nodes, nodeEls: nodeEls };
+  window.__A = engine;
+}
+
+/* ================= 方向 B：force-graph（NOESIS react-force-graph-2d 同内核） ================= */
+function mountForceGraph() {
+  var host = document.getElementById('gCanvas');
+  host.innerHTML = '';
+  if (!window.ForceGraph) {
+    host.innerHTML = '<div class="g-empty"><p class="t">force-graph 内核加载失败</p><p class="d">CDN 不可达。落地版走 npm 依赖（react-force-graph-2d），不依赖 CDN。</p></div>';
+    engine = { reset: function () {}, fit: function () {}, zoomK: function () { return 1; } };
+    return;
+  }
+  var C = themeColors();
+  var data = {
+    nodes: NODES.map(function (n) { var p = seedPos(n.id, 0); return { id: n.id, kind: n.kind, name: n.name, x: p.x, y: p.y }; }),
+    links: EDGES.map(function (e, i) { return { source: e.s, target: e.t, kind: e.k, id: 'e' + i }; })
+  };
+  var hover = null;
+  var g = window.ForceGraph()(host)
+    .width(host.clientWidth || 800).height(host.clientHeight || 520)
+    .backgroundColor('rgba(0,0,0,0)')
+    .nodeId('id').nodeLabel(function (n) { return KIND_ZH[n.kind] + '：' + n.name; })
+    .nodeVal(function (n) { return n.kind === 'Publication' ? 9 : 3.5; })
+    .nodeColor(function (n) { return (hover === n.id ? C.ink : (n.kind === 'Publication' ? C.ink : C.node)); })
+    .nodeCanvasObjectMode(function () { return 'after'; })
+    .nodeCanvasObject(function (n, ctx2, globalScale) {
+      var isRoot = n.kind === 'Publication', r = nodeR(n.kind) / Math.max(globalScale * 0.55, 0.8);
+      var isHover = hover === n.id;
+      ctx2.font = (10.5 / globalScale) + 'px sans-serif';
+      ctx2.textAlign = 'center'; ctx2.textBaseline = 'bottom';
+      ctx2.fillStyle = C.sub;
+      var label = (n.kind === 'Publication' ? '' : KIND_ZH[n.kind] + ' · ') + n.name;
+      ctx2.fillText(label, n.x, n.y - (isRoot ? 14 : 9) / Math.max(globalScale * 0.55, 0.8));
+      if (isHover) { ctx2.strokeStyle = C.ink; ctx2.lineWidth = 1.6 / globalScale; ctx2.beginPath(); ctx2.arc(n.x, n.y, (isRoot ? 15 : 7) + 3 / globalScale, 0, 2 * Math.PI); ctx2.stroke(); }
+    })
+    .linkColor(function (l) { return hover && (l.source.id === hover || l.target.id === hover) ? C.ink : C.line; })
+    .linkWidth(function (l) { return hover && (l.source.id === hover || l.target.id === hover) ? 1.6 : 1; })
+    .linkLabel(function (l) { return l.kind; })
+    .d3AlphaDecay(0.03).d3VelocityDecay(0.32)
+    .onNodeHover(function (n) { hover = n ? n.id : null; })
+    .onNodeClick(function (n) { showNode(byId(n.id)); })
+    .graphData(data);
+  g.d3Force('charge').strength(-320);
+  g.d3Force('link').distance(110).strength(0.35);
+  engine = {
+    reset: function () { g.graphData(g.graphData()); },
+    fit: function () { g.zoomToFit(360, 60); },
+    zoomK: function () { return g.zoom(); },
+    stop: function () { g._destructor && g._destructor(); },
+    graph: g
+  };
+  window.__B = engine;
+}
+
+/* ================= 公共 ================= */
+function showNode(n) {
+  var info = document.getElementById('gInfo');
+  if (!n) { info.textContent = S.info; return; }
+  info.textContent = KIND_ZH[n.kind] + '：' + n.name + ' · 属性来自真实 Neo4j（identityStatus / 候选标记）';
+}
+function setSub() {
+  var names = { ring: '现状 · 静态环形 SVG（对照）', A: 'A · 手写力导向（零依赖，SVG 渲染，拖/缩/平移）', B: 'B · force-graph 内核（NOESIS react-force-graph-2d 同引擎，canvas）' };
+  document.getElementById('gSub').textContent = names[S.dir];
+}
+var MOUNTS = { ring: mountRing, A: mountHandwritten, B: mountForceGraph };
+function render() {
+  document.documentElement.dataset.theme = S.theme;
+  if (engine && engine.stop) engine.stop();
+  MOUNTS[S.dir]();
+  setSub();
+  document.getElementById('gHint').textContent = S.dir === 'ring' ? '静态 · 不可交互' : '14 节点 · 17 关系 · 上限 15';
+  renderBar();
+}
+function renderBar() {
+  var dirs = [
+    { key: 'ring', label: '现状', cost: '对照基线：静态环形，不可交互。' },
+    { key: 'A', label: 'A 手写力导向', cost: 'A · 零依赖：~200 行物理（斥力+弹簧+阻尼）+ pointer 拖拽/钉住 + wheel 缩放 + 平移 + 双击重置。SVG 渲染保留，bundle 增量 0。' },
+    { key: 'B', label: 'B force-graph 内核', cost: 'B · NOESIS react-force-graph-2d 同引擎（canvas）。拖拽/缩放/平移开箱即用，后续能力多；bundle 增量 ~173KB（min）。' }
+  ];
+  var cur = dirs.filter(function (d) { return d.key === S.dir; })[0];
+  document.getElementById('reviewBar').innerHTML =
+    dirs.map(function (d, i) {
+      return '<button class="rv-btn ' + (S.dir === d.key ? 'is-on' : '') + '" data-act="dir" data-dir="' + d.key + '"><span class="rv-key">' + (i + 1) + '</span>' + d.label + '</button>';
+    }).join('') +
+    '<span class="rv-sep"></span>' +
+    '<button class="rv-btn" data-act="theme">明暗</button>' +
+    '<span class="rv-cost">' + (cur ? cur.cost : '') + '</span>';
+}
+document.getElementById('reviewBar').addEventListener('click', function (ev) {
+  var b = ev.target.closest('[data-act]'); if (!b) return;
+  if (b.dataset.act === 'dir') { S.dir = b.dataset.dir; render(); }
+  if (b.dataset.act === 'theme') { S.theme = S.theme === 'dark' ? 'light' : 'dark'; render(); }
+});
+document.getElementById('btnReset').addEventListener('click', function () { engine && engine.reset && engine.reset(); });
+document.getElementById('btnFit').addEventListener('click', function () { engine && engine.fit && engine.fit(); });
+document.addEventListener('keydown', function (ev) {
+  if (/INPUT|SELECT|TEXTAREA/.test(ev.target.tagName)) return;
+  if (ev.key === '1') { S.dir = 'ring'; render(); }
+  if (ev.key === '2') { S.dir = 'A'; render(); }
+  if (ev.key === '3') { S.dir = 'B'; render(); }
+  if (ev.key === 't' || ev.key === 'T') { S.theme = S.theme === 'dark' ? 'light' : 'dark'; render(); }
+});
+
+window.__proto = {
+  setTheme: function (t) { S.theme = t; render(); },
+  setDir: function (d) { S.dir = d; render(); },
+  dragNode: async function (idx, dx, dy) {
+    var host = document.getElementById('gCanvas');
+    var svg = host.querySelector('svg');
+    if (S.dir === 'A' && svg) {
+      var n = window.__A.nodes[idx];
+      var rect = svg.getBoundingClientRect();
+      var n2 = window.__A.nodeEls[idx];
+      var sx = rect.left + window.__A.pan.x + n2.n.x * window.__A.pan.k;
+      var sy = rect.top + window.__A.pan.y + n2.n.y * window.__A.pan.k;
+      var fire = function (type, x, y) {
+        svg.dispatchEvent(new PointerEvent(type, { clientX: x, clientY: y, pointerId: 7, bubbles: true }));
+      };
+      var fire = function (type, x, y) {
+        svg.dispatchEvent(new PointerEvent(type, { clientX: x, clientY: y, pointerId: 7, bubbles: true }));
+      };
+      fire('pointerdown', sx, sy);
+      await new Promise(function (r) { setTimeout(r, 60); });
+      for (var s = 1; s <= 6; s++) {
+        fire('pointermove', sx + dx * s / 6, sy + dy * s / 6);
+        await new Promise(function (r) { setTimeout(r, 34); });
+      }
+      fire('pointerup', sx + dx, sy + dy);
+      return true;
+    }
+    if (S.dir === 'B' && window.__B) {
+      var nd = window.__B.graph.graphData().nodes[idx];
+      nd.fx = nd.x + dx / 40; nd.fy = nd.y + dy / 40;
+      setTimeout(function () { nd.fx = null; nd.fy = null; }, 40);
+      return true;
+    }
+    return false;
+  },
+  meanV: function () { return window.__A ? window.__A.meanV() : null; },
+  metrics: function () {
+    var host = document.getElementById('gCanvas');
+    var out = { dir: S.dir, canvasW: host.clientWidth, canvasH: host.clientHeight };
+    if (S.dir === 'A' && window.__A) {
+      out.zoomK = window.__A.pan.k;
+      var ns = window.__A.nodes;
+      var minX = 1e9, maxX = -1e9; ns.forEach(function (n) { minX = Math.min(minX, n.x); maxX = Math.max(maxX, n.x); });
+      out.spread = Math.round(maxX - minX);
+      out.nodeEls = window.__A.nodeEls.length;
+    }
+    if (S.dir === 'B' && window.__B) { out.zoomK = window.__B.graph.zoom(); out.canvasTag = 'canvas'; }
+    if (S.dir === 'ring') out.canvasTag = 'svg-static';
+    out.docOverflowX = document.documentElement.scrollWidth - document.documentElement.clientWidth;
+    return out;
+  },
+  state: function () { return JSON.parse(JSON.stringify(S)); }
+};
+render();
+</script>
+</body>
+</html>

@@ -56,6 +56,24 @@ def wait_port(port: int, timeout: float = 60.0) -> bool:
     return False
 
 
+def assert_ports_free(ports: list[int]) -> None:
+    """起服务前必须确认端口空闲：孤儿进程占着端口时，新服务绑定失败，
+    而请求会打到**旧代码**上 —— 那会让所有"修好了"的结论全部作废（实际发生过）。"""
+    import socket
+
+    occupied = []
+    for port in ports:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(0.6)
+            if sock.connect_ex(("127.0.0.1", port)) == 0:
+                occupied.append(port)
+    if occupied:
+        raise SystemExit(
+            f"[e2e] 端口仍被占用：{occupied}。先停掉常驻服务再跑：\n"
+            "    python scripts/dev_serve.py stop && schtasks /end /tn noesis-dev-serve"
+        )
+
+
 def run_command(command: list[str], *, cwd: Path, label: str) -> int:
     log(f"{label}: {' '.join(command)}")
     completed = subprocess.run(command, cwd=str(cwd))
@@ -95,6 +113,8 @@ def stop(process: subprocess.Popen) -> None:
 def main(argv: list[str]) -> int:
     skip_tests = "--skip-tests" in argv
     failures: list[str] = []
+
+    assert_ports_free([API_PORT, AGENT_PORT, WEB_PORT])
 
     node_tests = [
         NODE,
