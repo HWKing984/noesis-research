@@ -61,6 +61,11 @@ noesis-research/
 ### 起服务
 
 ```bash
+# 一键起全部（API 8100 + Agent 8101 + 前端 4173），常驻运行
+#   LLM 配置优先取环境变量；本机开发缺省只读 NOESIS 工作树的 backend/.env（不打印、不落盘）
+python scripts/dev_serve.py start     # 前台常驻；Ctrl+C 或 stop 停止
+python scripts/dev_serve.py stop      # 按记录的 PID 停止
+
 # 业务 API
 python -m venv .venv
 .venv/Scripts/python -m pip install -r apps/api/requirements.txt
