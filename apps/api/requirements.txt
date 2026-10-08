@@ -1,0 +1,15 @@
+# apps/api runtime dependencies.
+#
+# 与 services/research-agent/requirements.txt 分开维护：API 层不依赖
+# LangChain / Deep Agents，把它拆开可以让 API 在最小依赖下独立起服务。
+#
+# 安装：  python -m venv .venv
+#         .venv/Scripts/python -m pip install -r apps/api/requirements.txt
+
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+
+# 跑 apps/api/test_api.py 需要（fastapi.testclient 依赖 httpx）。
+# 生产运行时不需要，但装上不影响。
+httpx>=0.26.0

@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  tests:
-    name: tests (python ${{ matrix.python-version }})
+  core:
+    name: core (python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -25,18 +25,38 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # No `pip install`: every module under integrations/ and packages/ is
-      # standard-library only, on purpose. A dependency tree here would mean the
-      # Deep Agents tools inherited one.
+      # No `pip install` in this job: integrations/ and packages/ are
+      # standard-library only on purpose — a dependency tree there would be
+      # inherited by the agent tool layer.
       - name: Syntax gate
-        run: python -m compileall -q integrations packages tests scripts
+        run: python -m compileall -q integrations packages tests scripts apps
 
-      - name: Unit + contract tests
-        run: python scripts/run_all_tests.py
+      - name: Offline suites must run; dependency suites must skip cleanly
+        run: python scripts/run_all_tests.py --require adapter,contracts --expect-skip api,live
 
-      # The live suite self-skips with no service reachable. This step proves the
-      # skip is a *skip* and not a silent pass of a broken import.
-      - name: Live suite must be skipped, not failed
-        run: |
-          python -m unittest discover -s tests/integration -t tests/integration -v 2>&1 | tee live.log
-          grep -Eq "skipped=[1-9]" live.log
+  api:
+    name: api (real fastapi)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install API dependencies
+        run: python -m pip install -r apps/api/requirements.txt
+
+      # `--require api` fails if the API suite skips, so a broken import can
+      # never masquerade as a green build.
+      - name: HTTP tests against the real app
+        run: python scripts/run_all_tests.py --require api
+
+      - name: Upload openapi schema
+        run: python -c "import json,sys;sys.path.insert(0,'apps/api');from noesis_research_api.app import create_app;open('openapi.json','w').write(json.dumps(create_app().openapi(),ensure_ascii=False,indent=2))"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openapi
+          path: openapi.json
+

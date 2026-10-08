@@ -41,14 +41,15 @@
   - 离线单测 `test_kg_client.py` **40 项**（注入假 transport，覆盖 4 种错误映射 + 12 项结构校验 + 版本一致性 + 配置优先级）。
   - 真实集成 `tests/integration/test_kg_live.py` **11 项**，对 `127.0.0.1:8765` 实跑通过。
 
-### T3 · 业务 API（`apps/api`）—— 已按评审裁剪为 3 个端点
+### T3 · 业务 API（`apps/api`）✅ 已完成（2026-10-08，3 个端点）
 
-- 产出（**仅这三个**，第一轮要的就是闭环）：
-  `GET /api/papers/search` · `GET /api/papers/{id}` · `GET /api/graph/neighbors`
-- 移出第一阶段（见评审意见 P1-7）：`POST /api/library/papers`（收藏）、`POST /api/documents/upload`（上传）、`POST /api/reports/{id}/export`（导出）→ 阶段 2 / 3。
-- 第一轮仍保留（因为它们是"能长期用"的地基）：`POST /api/research/runs`、`GET /api/research/runs/{id}/events`(SSE)、`POST /api/research/runs/{id}/cancel`。
-- 硬约束：错误状态透传（503 不被吞成 200 + 空数组）；Pydantic 契约放 `packages/contracts/`。
-- 验证：契约测试 + 无数据库时返回 503 而非虚假结果。
+- 产出（**仅这三个业务端点 + 一个就绪探针**，第一轮要的就是闭环）：
+  `GET /api/health` · `GET /api/papers/search` · `GET /api/papers/{publication_id}` · `GET /api/graph/neighbors`
+- 移出第一阶段（评审 P1-7）：`POST /api/library/papers`（收藏）、`POST /api/documents/upload`（上传）、`POST /api/reports/{id}/export`（导出）→ 阶段 2 / 3；`POST /api/research/runs` 等任务类接口 → T6。
+- 错误语义（**没有任何一条把失败变成"空结果"**）：503 `kg_unavailable` / 503 `kg_graph_version_mismatch` / 400 `invalid_request` / 404 `not_found` / **502 `kg_bad_response`（上游 200 但结构不符）** / 500 `internal_error`。
+- 证据随数据走：每条论文与每条候选断言都带 `evidence`；候选断言 `status` 恒为 `candidate`、`confidenceCalibrated` 恒为 `false`。
+- 两个实机才会踩的实现点：`{publication_id:path}` 必须用 `:path`（DBLP 键含斜杠）；该路由必须注册在 `/papers/search` 之后。
+- 验证：`apps/api/test_api.py` **18 项**（HTTP 边界，真实 app + 真实适配器 + 真实 Pydantic，只换 socket）；`tests/integration/test_api_live.py` **8 项**对真实服务跑通；另起真实 uvicorn 打真实 Neo4j 验证通过（见 §5）。
 
 ### T4 · 最小 Deep Agent（`services/research-agent`）
 
@@ -116,8 +117,10 @@
 
 ### 锁定策略（评审 P1-5）
 
-- **现状**：`integrations/` 与 `packages/` 的代码**零第三方依赖**，只 import 标准库 —— 这是刻意的，因为这是 Deep Agents 工具的直接底座。所以现阶段没有可锁的传递闭包。
-- **CI 因此不装任何依赖**：`.github/workflows/ci.yml` 在 Python 3.11 / 3.13 双版本上跑 `compileall` + `scripts/run_all_tests.py`，一条命令本地与 CI 共用。
+- **现状**：`integrations/` 与 `packages/` 的代码**零第三方依赖**，只 import 标准库 —— 这是刻意的，因为这是 Deep Agents 工具的直接底座。API 层（`apps/api`）是第一处引入第三方依赖的地方，因此依赖按层拆开维护（`apps/api/requirements.txt`），不与 Agent 层的 LangChain 栈混在一起。
+- **CI 分两个 job**：
+  - `core`（**不装任何依赖**）：Python 3.11 / 3.13 双版本跑 `compileall` + 离线套件；并断言 `api` / `live` 套件**确实是被跳过**（`--expect-skip`），避免"因为 import 坏了而静默变绿"。
+  - `api`（装 `apps/api/requirements.txt`）：跑 HTTP 套件，并断言 `api` 套件**没被跳过**（`--require`）。
 - **服务级锁随服务落地**：`services/research-agent/requirements.txt` 目前是**直接依赖 pin**（`deepagents==0.7.23` 等，取自 PyPI 元数据实测）；完整传递闭包锁（`pip-compile` / `uv lock`）在 T4 建 venv 时生成并回填，不预先写一份假锁。
 
 ### 复用策略（评审策略调整，已生效）
@@ -157,12 +160,28 @@
 | 任务 | 状态 | 证据 |
 |---|---|---|
 | T1 工程骨架 | ✅ | 目录 + 三份文档 |
-| T2 只读 KG Adapter | ✅ | 离线 40 项 + 真实集成 11 项全绿 |
+| T2 只读 KG Adapter | ✅ | 离线 40 项 + 真实集成 11 项 |
 | 证据契约（T5 前置） | ✅ | `packages/contracts/evidence.py`，29 项 |
-| CI / 统一测试入口 | ✅ | `.github/workflows/ci.yml`、`scripts/run_all_tests.py` |
-| T3 业务 API（3 端点） | ⏭ 下一步 | — |
-| T4 Deep Agents | ⏭ | — |
+| T3 业务 API（3 端点） | ✅ | HTTP 18 项 + 真实集成 8 项 + 真实 uvicorn 冒烟 |
+| CI / 统一测试入口 | ✅ | `.github/workflows/ci.yml` 双 job、`scripts/run_all_tests.py` |
+| T4 Deep Agents | ⏭ 下一步 | — |
 | T7 前端移植 | ⏭ | — |
 
-本轮验收目标（评审给定）：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据。**
+**T3 实机冒烟结果**（真实 uvicorn `127.0.0.1:8100` → 真实 Neo4j）：
+
+```text
+GET /api/health                -> 200  status=ready graphId=ai-literature-ed16399925fac2a599ed
+GET /api/papers/search?q=transformer&limit=3
+                               -> 200  papers=3  applied={"q":"transformer","limit":"3","offset":"0"}
+GET /api/papers/conf/IEEEwisa/LinGHW25
+                               -> 200  authors=4 venues=1 mentions=3 assertions=2
+                                   assertion: USED_FOR / candidate / calibrated=False / 0.9999832
+GET /api/graph/neighbors?id=…&limit=5
+                               -> 200  nodes=6 edges=5 rootId_in_nodes=True
+GET /api/papers/no-such-…      -> 404  code=not_found
+GET /api/graph/neighbors?mode=everything -> 400 code=invalid_request
+```
+
+本轮验收目标（评审给定）：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据** —— 数据侧已全部打通且可点（每条论文/断言都带 `evidence` 引用），剩下的是把 Agent 接上去。
+
 

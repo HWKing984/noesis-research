@@ -176,10 +176,10 @@ python scripts/run_all_tests.py
 ## 5 下一步（按评审给的顺序）
 
 1. ✅ 补全并验证 KG Adapter（响应校验 / 真实 API / 版本一致性）—— **本轮完成**
-2. ⏭ 落地 FastAPI：`/api/papers/search`、`/api/papers/{id}`、`/api/graph/neighbors`
+2. ✅ 落地 FastAPI：`/api/health`、`/api/papers/search`、`/api/papers/{publication_id}`、`/api/graph/neighbors` —— **已完成并对真实 Neo4j 验收**（HTTP 18 项 + 真实集成 8 项 + 真实 uvicorn 冒烟；详见 `docs/02_phase1_plan.md` §5）
 3. ⏭ 接入 Deep Agents：用 `kg_client.py` 注册研究工具，跑通真实论文问答
 4. ⏭ 复用 NOESIS 前端组件（原组件移植优先）
 5. ⏭ 持久化与引用体系（`research_runs`、SSE 重连、证据闸门）
 6. ⏭ 接入 PaperQA2
 
-下一次提交的交付目标按评审定：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据。**
+下一次提交的交付目标按评审定：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据。** 数据侧已就绪 —— 三个端点的每条返回都自带 `evidence` 引用，Agent 只需接线与措辞。
