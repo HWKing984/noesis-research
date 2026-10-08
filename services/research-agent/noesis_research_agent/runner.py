@@ -228,6 +228,20 @@ def _iter_stream_items(chunks: Iterable[Any]) -> Iterator[tuple[str | None, Any,
             yield None, item, None
 
 
+#: 工具名 → 用户能看懂的中文动作名（界面过程卡用这个名字，不用开发者的函数名）
+TOOL_LABELS = {
+    "report_graph_scope": "查询图谱规模",
+    "search_papers": "检索论文",
+    "get_paper": "查看论文详情",
+    "get_paper_evidence": "收集可引用证据",
+    "explore_graph": "探索局部图谱",
+}
+
+
+def tool_label(tool_name: str) -> str:
+    return TOOL_LABELS.get(tool_name, tool_name)
+
+
 def translate_chunks(
     chunks: Iterable[Any],
     *,
@@ -238,17 +252,21 @@ def translate_chunks(
 ) -> Iterator[dict[str, Any]]:
     """把 Agent 的流式输出翻译成本项目的事件流。
 
-    按**消息类型**判断，不按节点名 —— 节点名是实现细节。
+    按**消息类型**判断，不按节点名 —— 节点名的实现细节。
 
-    支持两种流形态，且**消息通道必须能自给自足**（实测 updates 通道在部分
+    支持多种流形态，且**消息通道必须能自给自足**（实测 updates 通道在部分
     运行里一条都不产出，不能依赖它兜底）：
     * 旧形态：直接迭代 updates 字典（离线脚本化测试用）；
-    * 双通道：``stream_mode=["updates","messages"]`` 产出的 ``(mode, payload)``
-      元组 —— ``messages`` 通道给出正文 token 增量（answer_delta）、
-      工具调用（AIMessageChunk.tool_calls）与工具结果（ToolMessage，type=="tool"）。
+    * 双通道：``stream_mode=["updates","messages"]`` 的 ``(mode, payload)``；
+    * 双通道 + 子图：``subgraphs=True`` 的 ``(namespace, mode, payload)``。
 
-    跨通道去重：工具调用按 call id、工具结果按 tool_call_id，先到先得；
-    但**工具边界**（重置"最后一次工具结果之后的正文"）两个通道都要认。
+    工具步骤事件（``tool_step``）：**每次工具执行只发一个事件**，把"调用了什么、
+    带什么参数、拿到什么结果"合成一行用户能看懂的话。注意流式通道里工具调用的
+    参数是**分片**到达的（tool_call_chunks），必须在工具结果到达时拼完整 ——
+    在第一个分片就发事件会让界面上全是"（无参数）"（实际发生过）。
+
+    跨通道去重：工具结果按 tool_call_id，先到先得；但**工具边界**（重置
+    "最后一次工具结果之后的正文"）两个通道都要认。
     """
     yield {
         "type": _RUN_STARTED,
@@ -262,11 +280,57 @@ def translate_chunks(
     evidence_levels: set[str] = set()
     updates_answer = ""            # updates 通道里最后一条（无工具调用的）AI 文本 = 权威全文
     streamed_tail = ""             # messages 通道：最后一次工具结果之后的正文增量
-    emitted_call_ids: set[str] = set()
     seen_tool_result_ids: set[str] = set()
+    # 工具调用参数的两个槽：
+    # * complete_calls：updates 通道 / 带完整 tool_calls 的消息 → 参数已是 Mapping；
+    # * pending_pieces：messages 通道的 tool_call_chunks **分片**（首片带 id 与 index，
+    #   续片只有 index），按 id/index 归并成完整参数。
+    # 两个槽绝不混装 —— dict 与 str 混在一个槽里会出现 dict += str 的类型错误。
+    complete_calls: dict[str, dict[str, Any]] = {}
+    pending_pieces: list[dict[str, Any]] = []
 
-    def collect_tool_payload(tool_name: str, payload: Any) -> list[dict[str, Any]]:
-        # 工具结果无论来自主图还是子图都要收集：证据不问命名空间
+    def remember_calls_from(message: Any) -> None:
+        """记录一次工具调用的完整参数（updates 通道 / 带完整 tool_calls 的消息）。"""
+        for call in getattr(message, "tool_calls", None) or []:
+            if not isinstance(call, Mapping):
+                continue
+            call_id = str(call.get("id") or "")
+            if not call_id:
+                continue
+            args = call.get("args")
+            complete_calls[call_id] = {
+                "name": str(call.get("name") or ""),
+                "args": args if isinstance(args, Mapping) else {},
+            }
+
+    def args_for(call_id: str) -> dict[str, Any]:
+        # 优先用分片拼装的结果（它是流的原始真相）；解析失败再退回 complete 槽 ——
+        # 带分片的 chunk 上派生的 tool_calls 可能是**残缺 JSON 的宽容解析**（args={}），
+        # 不能让它抢占有正确参数的槽。
+        piece = next((p for p in pending_pieces if p.get("id") == call_id), None)
+        if piece is not None:
+            parsed = _as_payload(str(piece.get("args") or ""))
+            if isinstance(parsed, Mapping):
+                return dict(parsed)
+        complete = complete_calls.get(call_id)
+        if isinstance(complete, Mapping):
+            return dict(complete.get("args") or {})
+        return {}
+
+    def tool_step_event(tool_name: str, call_id: str, message: Any) -> list[dict[str, Any]]:
+        """工具结果到达 → 合成一行用户可读的工具步骤（参数此刻才拼得完整）。"""
+        status = getattr(message, "status", None)
+        if status == "error":
+            return [
+                {
+                    "type": _TOOL_ERROR,
+                    "runId": run_id,
+                    "tool": tool_name,
+                    "label": tool_label(tool_name),
+                    "message": _as_text(getattr(message, "content", ""))[:400],
+                }
+            ]
+        payload = _as_payload(getattr(message, "content", ""))
         ids = extract_source_ids(payload)
         for item in ids:
             if item not in available_ids:
@@ -281,9 +345,11 @@ def translate_chunks(
                         evidence_levels.add(level)
         return [
             {
-                "type": _TOOL_RESULT,
+                "type": "tool_step",
                 "runId": run_id,
                 "tool": tool_name,
+                "label": tool_label(tool_name),
+                "args": args_for(call_id),
                 "summary": summarize_tool_result(tool_name, payload),
                 "evidenceIds": ids,
             }
@@ -291,33 +357,8 @@ def translate_chunks(
 
     def handle_tool_message(message: Any) -> list[dict[str, Any]]:
         tool_name = str(getattr(message, "name", "") or "")
-        status = getattr(message, "status", None)
-        if status == "error":
-            return [
-                {
-                    "type": _TOOL_ERROR,
-                    "runId": run_id,
-                    "tool": tool_name,
-                    "message": _as_text(getattr(message, "content", ""))[:400],
-                }
-            ]
-        payload = _as_payload(getattr(message, "content", ""))
-        return collect_tool_payload(tool_name, payload)
-
-    def emit_tool_call(call: Any) -> dict[str, Any] | None:
-        if not isinstance(call, Mapping):
-            return None
-        call_id = str(call.get("id") or "")
-        if call_id and call_id in emitted_call_ids:
-            return None
-        if call_id:
-            emitted_call_ids.add(call_id)
-        return {
-            "type": _TOOL_CALL,
-            "runId": run_id,
-            "tool": str(call.get("name") or ""),
-            "args": call.get("args") or {},
-        }
+        call_id = str(getattr(message, "tool_call_id", "") or "")
+        return tool_step_event(tool_name, call_id, message)
 
     for mode, payload, _namespace in _iter_stream_items(chunks):
         if mode == "messages":
@@ -336,10 +377,37 @@ def translate_chunks(
                 for event in handle_tool_message(chunk):
                     yield event
                 continue
+            # 流式分片的工具调用参数：先按 id/index 归并累积，等结果到达再合成步骤
+            # （续片只有 index 没有 id —— 归并按 index 找到首片建立的条目）
+            for piece in getattr(chunk, "tool_call_chunks", None) or []:
+                if not isinstance(piece, Mapping):
+                    continue
+                piece_id = str(piece.get("id") or "") or None
+                piece_index = piece.get("index")
+                entry = None
+                if piece_id:
+                    entry = next((p for p in pending_pieces if p.get("id") == piece_id), None)
+                if entry is None and piece_index is not None:
+                    entry = next((p for p in pending_pieces if p.get("index") == piece_index), None)
+                if entry is None:
+                    entry = {"id": piece_id, "index": piece_index, "name": "", "args": ""}
+                    pending_pieces.append(entry)
+                if piece_id:
+                    entry["id"] = piece_id
+                if piece.get("name"):
+                    entry["name"] = str(piece["name"])
+                entry["args"] += str(piece.get("args") or "")
             for call in getattr(chunk, "tool_calls", None) or []:
-                event = emit_tool_call(call)
-                if event:
-                    yield event
+                if not isinstance(call, Mapping):
+                    continue
+                call_id = str(call.get("id") or "")
+                if not call_id:
+                    continue
+                args = call.get("args")
+                complete_calls[call_id] = {
+                    "name": str(call.get("name") or ""),
+                    "args": args if isinstance(args, Mapping) else {},
+                }
             # 正文增量只收根图：子代理（namespace 非空）的内部叙述不进回答
             if _namespace is None:
                 delta = _answer_delta(chunk, metadata)
@@ -356,7 +424,7 @@ def translate_chunks(
                 message_type = getattr(message, "type", None) or getattr(message, "role", None)
 
                 if message_type == "tool":
-                    # 与 messages 通道同权：重置在去重之后（理由同上）
+                    # 边界重置必须在**去重之后**（理由同上）
                     call_id = str(getattr(message, "tool_call_id", "") or "")
                     if call_id:
                         if call_id in seen_tool_result_ids:
@@ -367,12 +435,8 @@ def translate_chunks(
                         yield event
                     continue
 
-                for call in getattr(message, "tool_calls", None) or []:
-                    event = emit_tool_call(call)
-                    if event:
-                        yield event
-
                 if message_type == "ai":
+                    remember_calls_from(message)
                     text = _as_text(getattr(message, "content", "")).strip()
                     if text and not getattr(message, "tool_calls", None):
                         updates_answer = text
@@ -420,7 +484,7 @@ class RunRecord:
             "citation": self.citation,
             "error": self.error,
             "eventCount": len(self.events),
-            "toolCallCount": sum(1 for e in self.events if e.get("type") == _TOOL_CALL),
+            "toolStepCount": sum(1 for e in self.events if e.get("type") == "tool_step"),
         }
 
 

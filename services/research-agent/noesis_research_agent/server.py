@@ -119,7 +119,7 @@ def create_app(
                 append({"type": "failed", "runId": run.run_id, "message": f"{type(exc).__name__}: {exc}"})
                 append({"type": "done", "runId": run.run_id, "status": "failed"})
                 return
-            got_results = any(e.get("type") == "tool_result" for e in attempt_events)
+            got_results = any(e.get("type") == "tool_step" for e in attempt_events)
             answer_event = next((e for e in attempt_events if e.get("type") == "answer"), None)
             got_answer = bool((answer_event or {}).get("text", "").strip())
             is_final = got_results and got_answer

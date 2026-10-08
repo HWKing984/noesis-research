@@ -90,25 +90,28 @@ export function describeStep(event) {
         label: `自动重试（第 ${event.attempt} 轮）`,
         detail: event.reason || '上一轮没有取得工具结果',
       };
-    case 'tool_call': {
+    case 'tool_step': {
+      // 服务端已把"调用了什么、带什么参数、拿到什么"合成一个事件；
+      // 这里只负责拼一行人话：动作 + 参数 + 结果规模 + 证据条数。
+      const label = event.label || event.tool;
       const args = Object.entries(event.args || {})
+        .filter(([, value]) => value !== '' && value !== null && value !== undefined)
         .map(([key, value]) => `${key}=${value}`)
-        .join(' ');
-      return { icon: 'call', label: `调用 ${event.tool}`, detail: args || '（无参数）' };
-    }
-    case 'tool_result': {
+        .join(' · ');
       const summary = event.summary || {};
       const bits = [];
-      if (summary.papers != null) bits.push(`${summary.papers} 篇论文`);
+      if (summary.papers != null) bits.push(`命中 ${summary.papers} 篇`);
       if (summary.assertions != null) bits.push(`${summary.assertions} 条候选断言`);
       if (summary.nodes != null) bits.push(`${summary.nodes} 个节点`);
       if (summary.edges != null) bits.push(`${summary.edges} 条关系`);
-      if (summary.mode) bits.push(`视图 ${summary.mode}`);
+      if (summary.title) bits.push(`《${String(summary.title).slice(0, 40)}》`);
+      const scope = summary.scope;
+      if (scope) bits.push(`书目 ${scope.bibliographyTitles} · 候选断言 ${scope.candidateAssertions}`);
       const count = (event.evidenceIds || []).length;
       return {
-        icon: 'result',
-        label: `${event.tool} 返回`,
-        detail: `${bits.length ? bits.join(' · ') : '已返回'}｜可用证据 ${count} 条`,
+        icon: 'tool',
+        label,
+        detail: `${args ? args + ' ｜ ' : ''}${bits.length ? bits.join(' · ') : '已返回'}｜可用证据 ${count} 条`,
         evidenceIds: event.evidenceIds || [],
       };
     }

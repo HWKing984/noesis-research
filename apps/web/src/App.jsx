@@ -43,7 +43,7 @@ function toSearchParams(form) {
 
 /** 论文库与图谱 —— 检索优先布局：hero 空态 / 吸顶检索 + 结果流 / 论文抽屉。
  *  抽屉状态在 App 层（引用上标共用同一个证据抽屉，证据抽屉叠在论文抽屉之上）。 */
-function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect }) {
+function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect, themeProp }) {
   const [health, setHealth] = useState(null);
   const [healthError, setHealthError] = useState(null);
   const [form, setForm] = useState(EMPTY_FORM);
@@ -260,6 +260,7 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
         onRefresh={() => loadGraph(selectedId, graphMode)}
         onInspect={onInspect}
         onOpenPaper={selectPaper}
+        appearance={themeProp}
       />
     </div>
   );
@@ -309,6 +310,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
       const source = new EventSource(agentApi.eventsUrl(runId));
       sourceRef.current = source;
       const append = (m) => setRun((prev) => ({ ...prev, events: [...prev.events, JSON.parse(m.data)] }));
+      source.addEventListener('tool_step', append);
       source.addEventListener('tool_call', append);
       source.addEventListener('tool_result', append);
       source.addEventListener('tool_error', append);
@@ -485,6 +487,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
             onConsumeInitial={consumeInitial}
             inspection={inspection}
             onInspect={setInspection}
+            themeProp={theme}
           />
         )}
       </main>

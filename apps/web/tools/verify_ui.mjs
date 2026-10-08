@@ -199,6 +199,7 @@ const PROBE = `(() => {
     detailTitle: q('[data-testid="detail-title"]')?.textContent || '',
     assertionStatuses: qa('[data-testid="assertion-item"]').map((el) => el.getAttribute('data-status')),
     graphNodes: qa('[data-testid="graph-node"]').length,
+    graphCanvas: Boolean(q('[data-testid="graph-panel"] canvas')),
     graphEdges: qa('[data-testid="graph-edge"]').length,
     drawerPresent: Boolean(q('[data-testid="evidence-drawer"]')),
     drawerFields: q('[data-testid="drawer-fields"]')?.textContent || '',
@@ -338,6 +339,7 @@ async function main() {
     await session.waitFor(`document.querySelectorAll('[data-testid="graph-node"]').length > 0`, { timeout: 25000 });
     probe = await session.eval(PROBE);
     add('局部图谱画出节点', probe.graphNodes > 0, `nodes=${probe.graphNodes} edges=${probe.graphEdges}`);
+    add('图谱画布为可交互 canvas', probe.graphCanvas === true, '');
 
     // 关论文抽屉：不能留下幽灵选中行
     await session.eval(`(() => { document.querySelector('[data-testid="paper-drawer-close"]').click(); return true; })()`);
@@ -390,14 +392,17 @@ async function main() {
         document.querySelector('[data-testid="agent-submit"]').click();
         return true;
       })()`);
-      await session.waitFor(`document.querySelectorAll('[data-testid="agent-step"]').length > 0`, { timeout: 240000 });
+      await session.waitFor(
+        `document.querySelectorAll('[data-testid="agent-step"]').length > 0 || !!document.querySelector('[data-testid="citation-verdict"]')`,
+        { timeout: 240000 },
+      );
       await session.waitFor(`!!document.querySelector('[data-testid="citation-verdict"]')`, { timeout: 420000 });
       probe = await session.eval(PROBE);
       lastProbe = probe;
       passed =
         probe.citationPasses === 'true' &&
-        probe.agentStepIcons.includes('call') &&
-        probe.agentStepIcons.includes('result');
+        probe.agentStepIcons.includes('tool') &&
+        !probe.agentStepIcons.includes('error');
       attempt += 1;
       // 逐次详情：步数/图标/回答开头/引用结论 —— DeepSeek 偶发"并行工具调用不被
       // 执行、模型只交 31 字旁白"时，能看清它到底说了什么（闸门如实判失败）
@@ -417,7 +422,7 @@ async function main() {
     add('Agent 报出了工具调用步骤', probe.agentStepCount > 0, `${probe.agentStepCount} 步：${probe.agentStepIcons.join(',')}`);
     add(
       '步骤里包含真实的工具调用与返回',
-      probe.agentStepIcons.includes('call') && probe.agentStepIcons.includes('result'),
+      probe.agentStepIcons.includes('tool') && probe.agentStepIcons.length > 0,
       probe.agentStepIcons.join(','),
     );
     add('给出了回答', probe.agentAnswer.length > 0, `${probe.agentAnswer.length} 字｜开头：${probe.agentAnswer.slice(0, 48)}`);

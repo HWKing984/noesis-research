@@ -52,10 +52,10 @@ except Exception as exc:  # pragma: no cover - agent venv without web deps
     _HAS_FASTAPI = False
     _FASTAPI_ERROR = f"{type(exc).__name__}: {exc}"
 
-def tool_result_message(tool_name: str, payload: dict) -> ToolMessage:
+def tool_result_message(tool_name: str, payload: dict, call_id: str = "c1") -> ToolMessage:
     return ToolMessage(
         content=json.dumps(payload, ensure_ascii=False),
-        tool_call_id="call-1",
+        tool_call_id=call_id,
         name=tool_name,
     )
 
@@ -268,10 +268,12 @@ class TranslateTests(unittest.TestCase):
         assert "publicationId" not in deltas
 
         kinds = [e["type"] for e in events]
-        assert "tool_call" in kinds, kinds
-        assert "tool_result" in kinds, kinds
-        result = next(e for e in events if e["type"] == "tool_result")
-        self.assertEqual(result["evidenceIds"], [PAPER_ID])
+        assert "tool_step" in kinds, kinds
+        step = next(e for e in events if e["type"] == "tool_step")
+        self.assertEqual(step["label"], "检索论文")
+        self.assertEqual(step["args"], {"query": "x"})
+        self.assertEqual(step["evidenceIds"], [PAPER_ID])
+        self.assertEqual(step["summary"]["papers"], 1)
 
         answer = next(e for e in events if e["type"] == "answer")
         # 权威全文 = 最后一次工具结果之后的正文，旁白与工具 JSON 都不在
@@ -294,7 +296,7 @@ class TranslateTests(unittest.TestCase):
             ("updates", chunk("tools", [tool_result_message("search_papers", search_payload())])),
         ]
         events = self._events(chunks)
-        results = [e for e in events if e["type"] == "tool_result"]
+        results = [e for e in events if e["type"] == "tool_step"]
         self.assertEqual(len(results), 1, "同一 tool_call_id 只发一次")
         answer = next(e for e in events if e["type"] == "answer")
         self.assertEqual(answer["text"], f"结论：命中 {PAPER_ID}。")
@@ -337,11 +339,36 @@ class TranslateTests(unittest.TestCase):
         events = self._events(chunks)
         deltas = "".join(e["delta"] for e in events if e["type"] == "answer_delta")
         self.assertEqual(deltas, f"先查一下结论：见 {PAPER_ID}。", "子代理叙述不得混入回答")
-        results = [e for e in events if e["type"] == "tool_result"]
+        results = [e for e in events if e["type"] == "tool_step"]
         self.assertEqual(len(results), 1, "子图里的工具结果必须被收集")
         self.assertEqual(results[0]["evidenceIds"], [PAPER_ID])
         answer = next(e for e in events if e["type"] == "answer")
         self.assertTrue(answer["citation"]["passes"])
+
+    def test_chunked_tool_call_args_are_assembled_and_step_is_humanized(self) -> None:
+        """流式通道里工具调用参数分片到达：必须拼完整再合成步骤；
+        步骤名用中文动作名，界面不再出现 search_papers 这类函数名。"""
+        from langchain_core.messages import AIMessageChunk, ToolMessage
+
+        tool_payload = search_payload()
+        call_id = "call-1"
+        chunks = [
+            ("messages", (AIMessageChunk(content="", tool_call_chunks=[
+                {"name": "search_papers", "args": "{\"qu", "id": call_id, "index": 0, "type": "tool_call_chunk"},
+            ]), {})),
+            ("messages", (AIMessageChunk(content="", tool_call_chunks=[
+                {"name": None, "args": "ery\": \"transformer\"}", "id": None, "index": 0, "type": "tool_call_chunk"},
+            ]), {})),
+            ("messages", (ToolMessage(content=json.dumps(tool_payload, ensure_ascii=False), tool_call_id=call_id, name="search_papers"), {})),
+        ]
+        events = self._events(chunks)
+        steps = [e for e in events if e["type"] == "tool_step"]
+        self.assertEqual(len(steps), 1)
+        self.assertEqual(steps[0]["label"], "检索论文")
+        self.assertEqual(steps[0]["args"], {"query": "transformer"})
+        self.assertEqual(steps[0]["evidenceIds"], [PAPER_ID])
+        # 事件流里不再出现裸函数名（label 才是给用户看的）
+        self.assertNotIn("search_papers", json.dumps(steps[0].get("label", "")))
 
     def test_updates_only_behaviour_unchanged(self) -> None:
         """旧形态（纯 updates）回归：事件顺序与全文不受消息通道改造影响。"""
@@ -353,7 +380,7 @@ class TranslateTests(unittest.TestCase):
         events = self._events(chunks)
         self.assertEqual(
             [e["type"] for e in events],
-            ["run_started", "tool_call", "tool_result", "answer", "done"],
+            ["run_started", "tool_step", "answer", "done"],
         )
         self.assertTrue(next(e for e in events if e["type"] == "answer")["citation"]["passes"])
 
@@ -362,14 +389,15 @@ class TranslateTests(unittest.TestCase):
         kinds = [e["type"] for e in events]
         self.assertEqual(
             kinds,
-            ["run_started", "tool_call", "tool_result", "answer", "done"],
+            ["run_started", "tool_step", "answer", "done"],
         )
         self.assertEqual(events[1]["tool"], "search_papers")
+        self.assertEqual(events[1]["label"], "检索论文")
         self.assertEqual(events[1]["args"]["query"], "transformer")
-        self.assertEqual(events[2]["evidenceIds"], [PAPER_ID])
-        self.assertEqual(events[2]["summary"]["papers"], 1)
-        self.assertTrue(events[3]["citation"]["passes"])
-        self.assertEqual(events[4]["status"], "ok")
+        self.assertEqual(events[1]["evidenceIds"], [PAPER_ID])
+        self.assertEqual(events[1]["summary"]["papers"], 1)
+        self.assertTrue(events[2]["citation"]["passes"])
+        self.assertEqual(events[3]["status"], "ok")
 
     def test_answer_without_citation_is_still_ok_status_but_gate_fails(self) -> None:
         events = self._events(UNCITED_CHUNKS)
@@ -396,7 +424,8 @@ class TranslateTests(unittest.TestCase):
         events = self._events(chunks)
         kinds = [e["type"] for e in events]
         self.assertIn("tool_error", kinds)
-        self.assertNotIn("tool_result", kinds)
+        self.assertNotIn("tool_step", kinds)
+        self.assertEqual(next(e for e in events if e["type"] == "tool_error")["label"], "检索论文")
 
     def test_run_started_carries_graph_and_model(self) -> None:
         first = self._events([])[0]
@@ -413,7 +442,7 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(events, [])
         self.assertFalse(finished)
 
-        registry.append(run.run_id, {"type": "tool_call", "tool": "t"})
+        registry.append(run.run_id, {"type": "tool_step", "tool": "t"})
         registry.append(run.run_id, {"type": "answer", "text": "a", "citation": {"passes": False}})
         events, finished = registry.since(run.run_id, 0)
         self.assertEqual(len(events), 2)
@@ -424,7 +453,7 @@ class RegistryTests(unittest.TestCase):
         self.assertTrue(finished)
         self.assertEqual(run.status, "ok")
         self.assertEqual(run.answer, "a")
-        self.assertEqual(run.to_dict()["toolCallCount"], 1)
+        self.assertEqual(run.to_dict()["toolStepCount"], 1)
 
     def test_failed_event_marks_status(self) -> None:
         registry = RunRegistry()
@@ -482,12 +511,12 @@ class HttpSurfaceTests(unittest.TestCase):
         self.assertEqual(stream.status_code, 200)
         self.assertIn("text/event-stream", stream.headers["content-type"])
         body = stream.text
-        for kind in ("run_started", "tool_call", "tool_result", "answer", "done"):
+        for kind in ("run_started", "tool_step", "answer", "done"):
             self.assertIn(f"event: {kind}", body)
 
         record = client.get(f"/runs/{run_id}").json()
         self.assertEqual(record["status"], "ok")
-        self.assertEqual(record["toolCallCount"], 1)
+        self.assertEqual(record["toolStepCount"], 1)
         self.assertTrue(record["citation"]["passes"])
         self.assertIn(PAPER_ID, record["answer"])
 
@@ -537,7 +566,7 @@ class HttpSurfaceTests(unittest.TestCase):
 
         self.assertIn("event: run_retry", body)
         self.assertIn("没有取得工具结果", body)
-        self.assertIn("event: tool_result", body, "重试轮的工具结果必须出现")
+        self.assertIn("event: tool_step", body, "重试轮的工具结果必须出现")
         self.assertEqual(body.count("event: done"), 1, "中间轮的 done 不落事件，界面不会提前断开")
         record = client.get(f"/runs/{run_id}").json()
         self.assertEqual(record["status"], "ok")

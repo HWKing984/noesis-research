@@ -8,35 +8,52 @@ import assert from 'node:assert/strict';
 
 import { AgentError, describeAgentError, describeStep } from './agentApi.js';
 
-test('tool_call 步骤把实参摊平成一行', () => {
-  const step = describeStep({ type: 'tool_call', tool: 'search_papers', args: { query: 'transformer', limit: 5 } });
-  assert.equal(step.icon, 'call');
-  assert.match(step.label, /search_papers/);
-  assert.equal(step.detail, 'query=transformer limit=5');
-});
-
-test('tool_call 没参数也不显示 undefined', () => {
-  assert.equal(describeStep({ type: 'tool_call', tool: 'report_graph_scope', args: {} }).detail, '（无参数）');
-});
-
-test('tool_result 步骤只报规模，且带上可用证据条数', () => {
+test('tool_step 步骤用中文动作名 + 参数 + 结果规模合成一行', () => {
   const step = describeStep({
-    type: 'tool_result',
+    type: 'tool_step',
     tool: 'search_papers',
+    label: '检索论文',
+    args: { query: 'transformer', limit: 5 },
     summary: { papers: 10, applied: { q: 'transformer' } },
     evidenceIds: ['a', 'b', 'c'],
   });
-  assert.equal(step.icon, 'result');
-  assert.match(step.detail, /10 篇论文/);
+  assert.equal(step.icon, 'tool');
+  assert.equal(step.label, '检索论文', '用户看到的是中文动作名，不是函数名');
+  assert.match(step.detail, /query=transformer/);
+  assert.match(step.detail, /命中 10 篇/);
   assert.match(step.detail, /可用证据 3 条/);
   assert.deepEqual(step.evidenceIds, ['a', 'b', 'c']);
 });
 
-test('tool_result 对图谱类结果报节点与关系数', () => {
-  const step = describeStep({ type: 'tool_result', tool: 'explore_graph', summary: { nodes: 14, edges: 17, mode: 'paper' }, evidenceIds: [] });
-  assert.match(step.detail, /14 个节点/);
-  assert.match(step.detail, /17 条关系/);
-  assert.match(step.detail, /视图 paper/);
+test('tool_step 没参数也不显示 undefined', () => {
+  const step = describeStep({ type: 'tool_step', tool: 'report_graph_scope', label: '查询图谱规模', args: {}, summary: { status: 'ready' } });
+  assert.match(step.detail, /已返回/);
+  assert.doesNotMatch(step.detail, /undefined/);
+});
+
+test('tool_step 对图谱规模结果报真实计数', () => {
+  const step = describeStep({
+    type: 'tool_step',
+    tool: 'report_graph_scope',
+    label: '查询图谱规模',
+    args: {},
+    summary: { status: 'ready', scope: { bibliographyTitles: 20000, candidateAssertions: 21497 } },
+    evidenceIds: [],
+  });
+  assert.match(step.detail, /书目 20000/);
+  assert.match(step.detail, /候选断言 21497/);
+});
+
+test('tool_step 对论文详情结果带出题名', () => {
+  const step = describeStep({
+    type: 'tool_step',
+    tool: 'get_paper',
+    label: '查看论文详情',
+    args: { publication_id: 'conf/x/1' },
+    summary: { publicationId: 'conf/x/1', title: 'ShrimpFormer-X' },
+    evidenceIds: [],
+  });
+  assert.match(step.detail, /《ShrimpFormer-X》/);
 });
 
 test('tool_error 与 failed 都归到 error 图标，不会被当成正常步骤', () => {

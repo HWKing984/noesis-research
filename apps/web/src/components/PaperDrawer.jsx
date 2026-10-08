@@ -23,6 +23,7 @@ export default function PaperDrawer({
   onRefresh,
   onInspect,
   onOpenPaper,
+  appearance = 'light',
 }) {
   useEffect(() => {
     if (!open) return undefined;
@@ -92,6 +93,7 @@ export default function PaperDrawer({
               mode={graphMode}
               onModeChange={onModeChange}
               onRefresh={onRefresh}
+              appearance={appearance}
             />
           )}
         </div>
