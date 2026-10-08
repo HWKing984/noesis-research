@@ -32,7 +32,7 @@ jobs:
         run: python -m compileall -q integrations packages tests scripts apps
 
       - name: Offline suites must run; dependency suites must skip cleanly
-        run: python scripts/run_all_tests.py --require adapter,contracts --expect-skip api,live
+        run: python scripts/run_all_tests.py --require adapter,contracts --expect-skip api,agent,live
 
   api:
     name: api (real fastapi)
@@ -59,4 +59,22 @@ jobs:
         with:
           name: openapi
           path: openapi.json
+
+  agent:
+    name: research agent (real deepagents)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install agent dependencies
+        run: python -m pip install -r services/research-agent/requirements.txt
+
+      # Also asserts the "no host shell" posture: the suite checks that the
+      # backend is an in-memory StateBackend and not a sandbox backend.
+      - name: Agent tool-surface and safety tests
+        run: python scripts/run_all_tests.py --require agent
 

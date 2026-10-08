@@ -185,3 +185,24 @@
 | 检索项字段 | `publicationId, title, year, graphId, doi, dblpUrl, urls, type, source, id, pages, modelApplied, modelApplicationStatus, modelRunManifestSha256, modelSampleId, sourceFileSha256` |
 | 作者字段 | `name, signatureName, position, identityStatus, personId, aliases, dblpPid, dblpUrl` |
 | 局部图 `meta` | `wholeGraph: false`、`pathsReturned`、`pathLimit`、`hasMorePaths`、免责 `notice` |
+
+### 7.4 另一个只有实跑才暴露的缺陷：适配器会走环境代理，且超时不包装（2026-10-08 修复）
+
+T4 的真实集成测试里，把 KG 客户端指向一个**死端口**（验证"不可用必须报错、不能返回空"）时，
+预期的 `KGUnavailable` 没有出现，而是逃出了一个裸 `TimeoutError`。查下去是**两个叠加的问题**：
+
+1. **`urllib` 默认会读环境代理变量**。`urllib.request.urlopen` 走 `getproxies()`，因此
+   `HTTP_PROXY` / `http_proxy` 一旦被宿主设成某个沙箱代理，指向环回或容器内网地址的
+   `KG_BASE_URL` 也会被塞进那个代理 —— 本机就实测到"连接死端口"变成"等代理超时"。
+2. **超时不是 `URLError`**。`urlopen` 在**读取响应阶段**超时会抛裸 `TimeoutError`
+   （`socket.timeout` 的别名），不是包在 `URLError` 里。适配器只捕获了 `URLError`，
+   于是一个"服务不可用"会被 API 层当成 500 内部错误，而不是 503。
+
+**修复**：`HttpTransport` 改用**自带 `ProxyHandler({})` 的私有 opener**（显式禁用环境代理），
+并把 `TimeoutError` / `OSError` 映射为 `KGUnavailable`、`http.client.HTTPException` 映射为 `KGError`。
+回归用例：裸 `TimeoutError`、`ConnectionResetError`、`BadStatusLine` 各自的映射，
+以及一条**端到端**用例 —— 把 `HTTP_PROXY` 指向死端口、断言本地服务仍能连通（并对照断言
+该环境变量确实对 `urllib` 可见，避免测试空转）。
+
+> 这条正是"验证必须打真实链路"的价值：静态读代码看不出 `urllib` 会读环境代理，
+> 也看不出超时不走 `URLError` 分支。

@@ -56,6 +56,7 @@ on, so it must import in any Python >= 3.11 without dragging a dependency tree.
 """
 from __future__ import annotations
 
+import http.client
 import json
 import os
 import urllib.error
@@ -171,25 +172,52 @@ class Transport(Protocol):
 
 
 class HttpTransport:
-    """``urllib``-based transport for the KG service."""
+    """``urllib``-based transport for the KG service.
 
-    def __init__(self, base_url: str | None = None, *, timeout: float = 10.0) -> None:
+    Uses a **private opener with proxies disabled**. ``urllib`` otherwise honours
+    ``http_proxy`` / ``HTTP_PROXY`` / ``no_proxy`` from the environment, which
+    would route a loopback or in-cluster ``KG_BASE_URL`` through whatever proxy
+    the host happens to export — non-deterministic at best, and wrong when the
+    proxy is a sandbox that refuses localhost.
+
+    Every socket-level failure maps to :class:`KGUnavailable`, including a bare
+    ``TimeoutError`` raised while reading the response (this escapes as an
+    un-wrapped ``TimeoutError``, *not* as ``URLError``, so catching only
+    ``URLError`` would let it reach the caller as a 500 instead of a 503).
+    """
+
+    def __init__(
+        self,
+        base_url: str | None = None,
+        *,
+        timeout: float = 10.0,
+        opener: Any | None = None,
+    ) -> None:
         self.base_url = resolve_base_url(base_url)
         self.timeout = float(timeout)
+        self._opener = opener or urllib.request.build_opener(urllib.request.ProxyHandler({}))
 
     def get(self, path: str, params: Mapping[str, str]) -> tuple[int, bytes]:
         query = urllib.parse.urlencode(list(params.items()))
         url = f"{self.base_url}{path}" + (f"?{query}" if query else "")
         request = urllib.request.Request(url, method="GET", headers={"Accept": "application/json"})
         try:
-            with urllib.request.urlopen(request, timeout=self.timeout) as response:
+            with self._opener.open(request, timeout=self.timeout) as response:
                 return int(response.status), response.read()
         except urllib.error.HTTPError as exc:  # 4xx / 5xx carry a JSON error body
             return int(exc.code), exc.read()
-        except urllib.error.URLError as exc:  # connection refused, DNS, timeout
+        except urllib.error.URLError as exc:  # connection refused, DNS, wrapped timeouts
             # Not an HTTP status: the service itself is unreachable. This is the
             # clearest possible "unavailable" signal, so do not retry silently.
             raise KGUnavailable(f"knowledge graph service unreachable: {exc.reason}") from exc
+        except TimeoutError as exc:  # timeout while reading the response
+            raise KGUnavailable(
+                f"knowledge graph service timed out after {self.timeout:g}s"
+            ) from exc
+        except OSError as exc:  # reset mid-response, broken pipe, ...
+            raise KGUnavailable(f"knowledge graph service connection error: {exc}") from exc
+        except http.client.HTTPException as exc:  # malformed status line / chunking
+            raise KGError(f"knowledge graph service returned a malformed response: {exc}") from exc
 
 
 # ---------------------------------------------------------------------------

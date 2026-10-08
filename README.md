@@ -2,8 +2,8 @@
 
 基于科学文献知识图谱的智能研究工作平台。定位：**长期使用、管理真实论文、执行完整研究任务、支持多用户与持续扩展**，不以课程演示为终点。
 
-> 状态：**第一阶段核心链路已打通 —— 只读 KG Adapter + FastAPI 业务层已对真实 Neo4j 验收（107 项测试全绿）；Deep Agents 与前端尚未接入。**
-> 文档：[源码审计](docs/01_source_audit.md) · [第一阶段计划](docs/02_phase1_plan.md) · [评审回应](docs/03_review_response.md)
+> 状态：**第一阶段链路已通到 Agent —— 只读 KG Adapter + FastAPI + Deep Agents 均已对真实 Neo4j 验收（130 项测试全绿）；前端与 PaperQA2 尚未接入。**
+> 文档：[源码审计](docs/01_source_audit.md) · [第一阶段计划](docs/02_phase1_plan.md) · [评审回应](docs/03_review_response.md) · [参考仓库台账](docs/04_reference_clones.md)
 
 ## 0 当前进度
 
@@ -11,17 +11,18 @@
 |---|---|
 | 源码审计 | ✅ `docs/01_source_audit.md` |
 | 架构与阶段计划 | ✅ `docs/02_phase1_plan.md` |
-| 只读 KG Adapter | ✅ 含结构校验、可配置地址、图谱版本一致性 |
+| 只读 KG Adapter | ✅ 含结构校验、可配置地址、图谱版本一致性、**显式禁用环境代理** |
 | 证据契约 | ✅ `packages/contracts/evidence.py` |
 | FastAPI 业务服务 | ✅ 3 个业务端点 + 就绪探针，错误语义完整（503/502/400/404） |
-| 测试 | ✅ 107 项：离线 40 + 契约 29 + API 18 + **真实 Neo4j 20** |
-| CI | ✅ 双 job：core（零依赖，3.11/3.13）· api（真装 FastAPI） |
-| Deep Agents / PaperQA2 | ⏭ 未集成 |
+| **Deep Agent** | ✅ 1 个主 Agent + 5 个只读工具 + 权限收紧（内存态后端、无宿主 shell） |
+| 测试 | ✅ 130 项：适配器 44 · 契约 29 · API 18 · **Agent 15** · 真实集成 24 |
+| CI | ✅ 三个 job：core（零依赖 3.11/3.13）· api（真装 FastAPI）· agent（真装 deepagents） |
+| PaperQA2 | ⏭ 未集成 |
 | NOESIS 前端移植 | ⏭ 未迁入 |
 | 用户与研究工作区 | ⏭ 未实现 |
 | Docker 部署 | ⏭ 未完成 |
 
-一次跑全：`.venv/Scripts/python scripts/run_all_tests.py`（无 Neo4j 时集成套件自动 skip；无 FastAPI 时 API 套件自动 skip，CI 会断言这个 skip 确实发生）。
+一次跑全：`python scripts/run_all_tests.py`（无 Neo4j 时集成套件自动 skip；缺 FastAPI / deepagents 时对应套件自动 skip，CI 会断言这些 skip 确实发生）。
 
 ---
 
@@ -43,16 +44,34 @@
 ```text
 noesis-research/
 ├── apps/            # api/（FastAPI 业务层，已实现 3 端点）· web/（复用 NOESIS 前端，待建）
-├── services/        # research-agent（Deep Agents）· paper-reader（PaperQA2 适配）· background-worker
+├── services/        # research-agent/（Deep Agent + 5 只读工具，已实现）· paper-reader · background-worker
 ├── integrations/    # knowledge-graph（只读适配器，已实现）· openalex · crossref · semantic-scholar
 ├── packages/        # contracts/evidence.py（统一证据契约，已实现）· citation-validator（待建）
 ├── infra/           # docker-compose 等
 ├── scripts/         # run_all_tests.py（零依赖统一入口，支持 --require / --expect-skip）
-├── .github/         # ci.yml（core 零依赖 job + api 装依赖 job）
+├── .github/         # ci.yml（core 零依赖 · api 装 FastAPI · agent 装 deepagents）
 ├── docs/            # 01 审计 · 02 计划 · 03 评审回应 · 04 参考仓库台账
 ├── reference/       # 上游参考源码（浅克隆、不提交、出处见 docs/04）；git-ignored
-└── tests/           # integration（真实 Neo4j + 真实 HTTP）· evaluation · e2e
+└── tests/           # integration/（真实 Neo4j：KG 11 · API 8 · Agent 5）· evaluation · e2e
 ```
+
+### 起服务
+
+```bash
+# 业务 API
+python -m venv .venv
+.venv/Scripts/python -m pip install -r apps/api/requirements.txt
+KG_EXPECTED_GRAPH_ID=<graphId> .venv/Scripts/python -m uvicorn \
+    noesis_research_api.app:app --app-dir apps/api --port 8100
+
+# 科研 Agent（独立 venv，与 API 依赖分层）
+python -m venv services/research-agent/.venv
+services/research-agent/.venv/Scripts/python -m pip install -r services/research-agent/requirements.txt
+LLM_API_KEY=... LLM_MODEL=... KG_EXPECTED_GRAPH_ID=<graphId> \
+    services/research-agent/.venv/Scripts/python services/research-agent/run.py "有哪些关于 transformer 的论文？"
+```
+
+无 KG 服务时所有端点返回 **503**，不会返回空列表。图谱版本锁定后，任何版本漂移都会变成 503 而不是静默换一版数据。`run.py` 会打印**工具调用轨迹 + 回答 + 可引用证据 id**；一条引用都挂不上的回答退出码为 1。
 
 ### 参考源码（`reference/`，不进版本库）
 

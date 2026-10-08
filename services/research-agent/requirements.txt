@@ -1,27 +1,26 @@
-# research-agent 直接依赖（direct pins）
+# research-agent 直接依赖（人工维护）
 #
-# 状态：**尚未安装、尚未建 venv**。这里锁的是「本工程直接声明的依赖」，
-# 版本取自 PyPI 元数据实测（2026-10-08），不是 pip-compile 出来的完整传递闭包。
-# 建 venv 时用 pip-tools 或 uv 生成 `requirements.lock.txt` 作为完整锁，
-# 并把结果回填到本文件头部。
+# 安装：
+#   python -m venv services/research-agent/.venv
+#   services/research-agent/.venv/Scripts/python -m pip install \
+#       -r services/research-agent/requirements.txt
+#
+# 完整传递闭包见同目录 requirements.lock.txt（pip freeze 生成，2026-10-08，
+# Python 3.13.12 实测）。要完全复现环境就装 lock 文件。
 #
 # 为什么必须独立 venv：
 #   deepagents 要求 langchain-core>=1.6.7，高于 NOESIS 现用的 >=1.4.9；
-#   装进 NOESIS 或 KG 的既有 venv 会连带升级它们的 langchain 栈。
+#   装进 NOESIS 或 KG 的现有 venv 会连带升级它们的 langchain 栈。
 #   见 docs/01_source_audit.md §3。
 
 # --- Agent 运行底座 ---
+# 版本由克隆源码 libs/deepagents/pyproject.toml 与 PyPI 元数据两处独立对上
 deepagents==0.7.23
 
 # --- LangChain 栈（deepagents 的传递约束，显式声明以便追踪）---
-langchain>=1.4.3,<2.0.0
-langchain-core>=1.6.7,<2.0.0
-# 本工程用 NOESIS 已有的 OpenAI 兼容端点（LLM_BASE_URL / LLM_API_KEY），
-# 不接 Anthropic / Google，因此不声明 langchain-anthropic / langchain-google-genai。
-langchain-openai>=1.3.5
-langgraph>=1.2.9
-
-# --- 业务 API（apps/api 落地后启用）---
-fastapi>=0.109.0
-uvicorn[standard]>=0.27.0
-pydantic>=2.5.0
+langchain==1.4.3
+langchain-core==1.6.7
+langgraph==1.2.14
+# 本服务用 OpenAI 兼容端点（LLM_BASE_URL / LLM_API_KEY），不接 Anthropic / Google。
+# 后两者的 SDK 由 deepagents 强制拉进来，这里不主动使用。
+langchain-openai==1.6.7

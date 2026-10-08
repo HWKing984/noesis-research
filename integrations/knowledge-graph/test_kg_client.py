@@ -465,20 +465,93 @@ class ReadOnlySurfaceTests(unittest.TestCase):
             )
 
 
+class _RaisingOpener:
+    """Stand-in for the private urllib opener, to drive socket-level failures."""
+
+    def __init__(self, error: BaseException) -> None:
+        self._error = error
+
+    def open(self, *_args, **_kwargs):  # noqa: ANN002, ANN003
+        raise self._error
+
+
 class HttpTransportTests(unittest.TestCase):
+    def _transport(self, error: BaseException) -> HttpTransport:
+        return HttpTransport("http://kg.invalid:8765", timeout=1.0, opener=_RaisingOpener(error))
+
     def test_connection_error_maps_to_unavailable(self) -> None:
-        transport = HttpTransport("http://127.0.0.1:1", timeout=0.01)
-        original = urllib.request.urlopen
+        with self.assertRaises(KGUnavailable):
+            self._transport(urllib.error.URLError("connection refused")).get("/api/health", {})
 
-        def boom(*_args, **_kwargs):
-            raise urllib.error.URLError("connection refused")
+    def test_bare_timeout_error_maps_to_unavailable(self) -> None:
+        """A timeout while reading the response is NOT wrapped in URLError.
 
-        urllib.request.urlopen = boom  # type: ignore[assignment]
+        Regression guard: catching only ``URLError`` let this escape as a raw
+        TimeoutError, which the API layer would have turned into a 500 instead of
+        a 503 — i.e. an outage disguised as a server bug.
+        """
+        with self.assertRaises(KGUnavailable) as ctx:
+            self._transport(TimeoutError("timed out")).get("/api/health", {})
+        self.assertIn("timed out", str(ctx.exception))
+
+    def test_os_error_maps_to_unavailable(self) -> None:
+        with self.assertRaises(KGUnavailable):
+            self._transport(ConnectionResetError("connection reset")).get("/api/health", {})
+
+    def test_malformed_http_response_maps_to_base_error(self) -> None:
+        import http.client
+
+        with self.assertRaises(KGError) as ctx:
+            self._transport(http.client.BadStatusLine("garbage")).get("/api/health", {})
+        self.assertNotIsInstance(ctx.exception, KGUnavailable)
+        self.assertIn("malformed", str(ctx.exception))
+
+    def test_real_local_service_is_reached_despite_a_broken_proxy_env(self) -> None:
+        """End-to-end proof that a poisoned HTTP_PROXY cannot intercept the call.
+
+        The control assertion matters: it proves the environment really is
+        visible to ``urllib``, so the passing request below is evidence and not
+        a test that would pass anyway.
+        """
+        import http.server
+        import threading
+
+        payload = _body(_health_data())
+
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def do_GET(self):  # noqa: N802 - stdlib naming
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Content-Length", str(len(payload)))
+                self.end_headers()
+                self.wfile.write(payload)
+
+            def log_message(self, *_args):  # noqa: ANN002
+                pass
+
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
         try:
-            with self.assertRaises(KGUnavailable):
-                transport.get("/api/health", {})
+            poisoned = {
+                "HTTP_PROXY": "http://127.0.0.1:1",
+                "http_proxy": "http://127.0.0.1:1",
+                "HTTPS_PROXY": "http://127.0.0.1:1",
+                "https_proxy": "http://127.0.0.1:1",
+            }
+            with mock.patch.dict(os.environ, poisoned):
+                os.environ.pop("no_proxy", None)
+                os.environ.pop("NO_PROXY", None)
+                # Control: urllib does see the poisoned proxy in this environment.
+                self.assertIn("http", urllib.request.getproxies())
+
+                client = KGClient(f"http://127.0.0.1:{server.server_address[1]}", timeout=5.0)
+                report = client.health()
+            self.assertEqual(report.status, "ready")
         finally:
-            urllib.request.urlopen = original  # type: ignore[assignment]
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=5)
 
 
 if __name__ == "__main__":

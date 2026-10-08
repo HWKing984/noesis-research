@@ -51,13 +51,17 @@
 - 两个实机才会踩的实现点：`{publication_id:path}` 必须用 `:path`（DBLP 键含斜杠）；该路由必须注册在 `/papers/search` 之后。
 - 验证：`apps/api/test_api.py` **18 项**（HTTP 边界，真实 app + 真实适配器 + 真实 Pydantic，只换 socket）；`tests/integration/test_api_live.py` **8 项**对真实服务跑通；另起真实 uvicorn 打真实 Neo4j 验证通过（见 §5）。
 
-### T4 · 最小 Deep Agent（`services/research-agent`）
+### T4 · 最小 Deep Agent（`services/research-agent`）✅ 已完成（2026-10-08）
 
-- 产出：一个主 Agent + 5 个只读工具（`search_papers` / `get_paper` / `explore_graph` / `get_paper_evidence` / `read_paper` 留待阶段 2）。
-- 形态对齐：能力契约参考 `orchestration/capability_protocol.py:74-91`；工具注册参考 `mcp/registry.py:36-63`（schema 指纹 + 默认串行）。
-- 硬约束：**只用主 Agent，不上子 Agent**（普通检索不经多模型，避免延迟与成本翻倍）；子 Agent 仅保留给长篇综述 / 多主题比较。
-- 依赖：**独立 venv**（`deepagents 0.7.23`，`langchain-openai` 指向 `LLM_BASE_URL`）。不得装进 NOESIS / KG 的 venv。
-- 验证：给定一条真实查询，工具调用链与直接调 KG API 的结果集一致。
+- 产出：**一个主 Agent + 5 个只读工具**（`report_graph_scope` / `search_papers` / `get_paper` / `get_paper_evidence` / `explore_graph`）+ CLI `run.py`。
+- **工具返回与 HTTP API 完全同源**：工具调用同一套映射函数（`noesis_research_api.mapping`），所以「Agent 只做编排、不改变检索结果」是可验证的；检索参数回显（`applied` / `expandedTerms`）在模型**之下**生成，模型改不了。
+- 硬约束：**只用主 Agent，不上子 Agent**（子 Agent 仅保留给长篇综述 / 多主题比较）。系统提示词把 4 条硬规则写死并**有测试守着**：每个事实性断句必须挂来源 id、候选断言必须保持「候选」、证据深度只有题名、数字只能来自工具、必须回显参数、区分空结果与图谱不可用、必引/被引/引用链一律拒答。
+- **权限收紧（有测试守着）**：显式传 `backend=StateBackend()`（内存态，**非宿主文件系统**）。已从克隆源码核实：上游 `libs/deepagents/deepagents/graph.py:653` 的默认也是 `StateBackend()`；`execute` 只有在后端实现 `SandboxBackendProtocol` 时才真能跑命令，本服务**从不提供沙箱后端** → 研究 Agent 没有通往宿主 shell 的路径。官方的工具排除入口 `_ToolExclusionMiddleware` 是**私有**的，本服务不依赖它。
+- 依赖：**独立 venv**（`deepagents==0.7.23`；完整 55 包传递锁见 `services/research-agent/requirements.lock.txt`）。不得装进 NOESIS / KG / apps-api 的 venv。
+- 验证：
+  - 离线 **15 项**（假 transport + 记录 `bind_tools` 的假模型；含后端非沙箱断言、工具面断言、提示词契约断言）；
+  - **真实集成 5 项**（脚本化假模型 + 真实 Neo4j）：Agent 闭环跑到真实 Neo4j、拿到真实 `publicationId`、并在**回答文本里引用它** —— 这就是「返回可点击证据」的机器可验证形式。
+- **一件事需要 operator**：真实 LLM 那一步要 `LLM_API_KEY` / `LLM_MODEL`；本机进程与用户环境实测**都不含任何 LLM 凭据**，且 `D:\a-Soft` 按约定不读，所以这一步留给部署时注入环境变量。模型被替换为脚本化假模型的那部分是**明确标注**的，不是冒充。
 
 ### T5 · 引用闸门（交付前确定性校验）
 
@@ -161,15 +165,16 @@
 
 | 任务 | 状态 | 证据 |
 |---|---|---|
-| T1 工程骨架 | ✅ | 目录 + 三份文档 |
-| T2 只读 KG Adapter | ✅ | 离线 40 项 + 真实集成 11 项 |
+| T1 工程骨架 | ✅ | 目录 + 四份文档 |
+| T2 只读 KG Adapter | ✅ | 离线 44 项 + 真实集成 11 项 |
 | 证据契约（T5 前置） | ✅ | `packages/contracts/evidence.py`，29 项 |
 | T3 业务 API（3 端点） | ✅ | HTTP 18 项 + 真实集成 8 项 + 真实 uvicorn 冒烟 |
-| CI / 统一测试入口 | ✅ | `.github/workflows/ci.yml` 双 job、`scripts/run_all_tests.py` |
-| T4 Deep Agents | ⏭ 下一步 | — |
-| T7 前端移植 | ⏭ | — |
+| **T4 Deep Agent** | ✅ | 离线 15 项 + **真实 Neo4j 的 Agent 闭环 5 项** |
+| CI / 统一测试入口 | ✅ | 三个 job（core / api / agent）、`scripts/run_all_tests.py` |
+| T7 前端移植 | ⏭ 下一步 | — |
+| T6 PaperQA2 | ⏭ | — |
 
-**T3 实机冒烟结果**（真实 uvicorn `127.0.0.1:8100` → 真实 Neo4j）：
+**T2 + T3 实机冒烟结果**（真实 uvicorn `127.0.0.1:8100` → 真实 Neo4j）：
 
 ```text
 GET /api/health                -> 200  status=ready graphId=ai-literature-ed16399925fac2a599ed
@@ -184,6 +189,15 @@ GET /api/papers/no-such-…      -> 404  code=not_found
 GET /api/graph/neighbors?mode=everything -> 400 code=invalid_request
 ```
 
-本轮验收目标（评审给定）：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据** —— 数据侧已全部打通且可点（每条论文/断言都带 `evidence` 引用），剩下的是把 Agent 接上去。
+**T4 Agent 闭环**（脚本化假模型 + 真实 Neo4j；模型只被替换，链路全真）：
+
+```text
+问：有哪些关于 transformer 的论文？
+→ Agent 调用 search_papers(query="transformer", limit=3)
+→ 真图谱返回真实论文（publicationId 形如 conf/…，含斜杠）
+→ 回答里引用了该 publicationId，并标注 evidenceLevel=title / verificationStatus=unverified
+```
+
+本轮验收目标（评审给定）：**Deep Agents 完成一次真实的 Neo4j 文献检索并返回可点击证据** —— 已达成（模型环节用脚本化假模型替代，真实 LLM 需 operator 注入 key）。
 
 
