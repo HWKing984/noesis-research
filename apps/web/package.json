@@ -1,0 +1,26 @@
+{
+  "name": "noesis-research-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "NOESIS Research 研究工作区前端。技术栈与 NOESIS 一致（Vite 5 + React 18 + Tailwind 4），便于原组件移植。",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "test": "node --test src/lib/evidence.test.mjs"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@vitejs/plugin-react": "^4.2.0",
+    "tailwindcss": "^4.3.2",
+    "vite": "^5.0.0"
+  }
+}

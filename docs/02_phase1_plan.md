@@ -92,12 +92,26 @@
 - 复用参考：`streaming/turn_stream_hub.py`、`rag/streaming/sse.py` 的行为形态（不复制实现）。
 - 验证：断开连接后重连可取回已产生的全部事件；取消后任务状态为 `cancelled`。
 
-### T7 · 前端承载（`apps/web`）
+### T7 · 前端承载（`apps/web`）—— 第一阶段已落地数据侧三段
 
-- 产出：在 NOESIS 前端体系内实现统一研究工作区（概览 / 科研助手 / 论文库 / 知识图谱 / 研究项目 / 研究报告），右侧可切换 论文详情 / PDF 阅读 / 图谱 / 报告 Artifact 面板。
-- 复用参考（**只做行为对齐，不复制样式**）：`AgentPanel.jsx` / `AgentSwimlane.jsx` / `AnswerSummary.jsx` / `ArtifactPanel.jsx` / `GraphPanel.jsx`。
-- 硬约束：候选断言在 UI 上必须与书目字段在文案与视觉上分开显示。
-- 验证：无头浏览器截图 + 局部图交互断言。
+- 产出：Vite 5 + React 18 + Tailwind 4 的 `apps/web`，覆盖**检索 → 详情 → 局部图谱**，
+  全程带证据引用。第一个可点开的界面已经能对着真实图谱工作。
+- **移植纪律（评审调整后的口径）**：能直接复用就复用，冲突才隔离。已核实 `agent-chat-ui` 是
+  Next 16 + React 19，与本项目 Vite + React 18 **不兼容**，只作交互参考；
+  移植对象是 **NOESIS 自身组件**（同栈）。本次实际移植的是
+  `agentEvidence.helpers.js` 的三段式证据闸门**形态**（`covered`/`missing`/`not_required`），
+  按其 `write_id` 形状与本项目不同，故按 `EvidenceRef` 契约重写。
+- 硬约束（有单测守着）：候选断言在 UI 上**恒为「候选」**；证据深度是独立维度
+  （`title` 显示为「仅题名」并附限制说明）；证据缺失显示为「缺失」，不伪装成有来源。
+- 与后端走**同源代理**（Vite `/api` → 8100），所以后端不需要开 CORS。
+- 验证：
+  - 纯逻辑单测 9 项（`node --test`，含与 CLI 同规则的 `citationReport`）；
+  - **无头浏览器 15 项断言全过**（真实 Chrome + CDP，打真实 API + 真实 Neo4j）：
+    状态条真拿到 graphId、检索真返回 10 篇真实论文、**10/10 结果都带可点击证据**、
+    详情与列表 id 一致、断言 `status=candidate` 两条都保持候选、局部图谱 14 节点 / 17 边、
+    无横向溢出、控制台无报错。
+- 尚未实现（后续阶段）：科研助手对话面板（等 T6 的 research runs + SSE）、PDF 阅读、
+  报告 Artifact、研究项目/任务管理。
 
 ### T8 · 外部学术源连接器（`integrations/openalex` `crossref` `semantic-scholar`）
 
@@ -169,9 +183,10 @@
 | T2 只读 KG Adapter | ✅ | 离线 44 项 + 真实集成 11 项 |
 | 证据契约（T5 前置） | ✅ | `packages/contracts/evidence.py`，29 项 |
 | T3 业务 API（3 端点） | ✅ | HTTP 18 项 + 真实集成 8 项 + 真实 uvicorn 冒烟 |
-| **T4 Deep Agent** | ✅ | 离线 15 项 + **真实 Neo4j 的 Agent 闭环 5 项** |
-| CI / 统一测试入口 | ✅ | 三个 job（core / api / agent）、`scripts/run_all_tests.py` |
-| T7 前端移植 | ⏭ 下一步 | — |
+| T4 Deep Agent | ✅ | 离线 21 项 + **真实 Neo4j 的 Agent 闭环 5 项** |
+| **T7 前端（数据侧三段）** | ✅ | 前端单测 9 项 + **无头浏览器 15 项断言** |
+| CI / 统一测试入口 | ✅ | 四个 job（core / api / agent / web） |
+| 科研助手对话面板 | ⏭ 下一步（依赖 T6） | — |
 | T6 PaperQA2 | ⏭ | — |
 
 **T2 + T3 实机冒烟结果**（真实 uvicorn `127.0.0.1:8100` → 真实 Neo4j）：

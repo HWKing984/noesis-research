@@ -78,3 +78,31 @@ jobs:
       - name: Agent tool-surface and safety tests
         run: python scripts/run_all_tests.py --require agent
 
+  web:
+    name: research workspace (web)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install (locked)
+        working-directory: apps/web
+        run: |
+          corepack enable
+          pnpm install --frozen-lockfile
+
+      - name: Evidence-rule unit tests
+        working-directory: apps/web
+        run: pnpm test
+
+      - name: Production build
+        working-directory: apps/web
+        run: pnpm build
+
+      # NOTE: the CDP browser verification (apps/web/tools/verify_ui.mjs) is a
+      # local / pre-deploy gate, not a CI step: it asserts against a live API and
+      # a real Neo4j. Running it here without a graph would prove nothing.
+

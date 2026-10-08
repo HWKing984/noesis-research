@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+/*
+ * 设计基调：极简、浅色、少量颜色。
+ * 只保留两个语义色 —— 主色（可点、可引用）与候选色（候选断言专用）。
+ * 「候选」必须在视觉上自成一档，不能和已核实事实混在一起。
+ */
+:root {
+  --bg: #f7f7f8;
+  --panel: #ffffff;
+  --line: #e6e6e8;
+  --ink: #17181a;
+  --ink-muted: #6b6f76;
+  --accent: #2f5bd7;
+  --accent-soft: #eef2fd;
+  --candidate: #9a6a12;
+  --candidate-soft: #fdf6e6;
+  --danger: #b3261e;
+  --danger-soft: #fdecea;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei',
+    'Hiragino Sans GB', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+}

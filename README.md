@@ -15,11 +15,12 @@
 | 证据契约 | ✅ `packages/contracts/evidence.py` |
 | FastAPI 业务服务 | ✅ 3 个业务端点 + 就绪探针，错误语义完整（503/502/400/404） |
 | **Deep Agent** | ✅ 1 个主 Agent + 5 个只读工具 + 权限收紧（内存态后端、无宿主 shell） |
-| 测试 | ✅ 136 项：适配器 44 · 契约 29 · API 18 · **Agent 21** · 真实集成 24 |
-| CI | ✅ 三个 job：core（零依赖 3.11/3.13）· api（真装 FastAPI）· agent（真装 deepagents） |
+| **研究工作区（前端）** | ✅ Vite 5 + React 18 + Tailwind 4：检索 → 详情 → 局部图谱，全程带证据引用 |
+| 测试 | ✅ 136 项 Python + 9 项前端单测 + **15 项无头浏览器断言** |
+| CI | ✅ 四个 job：core（零依赖）· api（FastAPI）· agent（deepagents）· web（pnpm） |
 | PaperQA2 | ⏭ 未集成 |
-| NOESIS 前端移植 | ⏭ 未迁入 |
-| 用户与研究工作区 | ⏭ 未实现 |
+| 科研助手对话面板 | ⏭ 未实现（依赖 research runs + SSE） |
+| 用户与研究工作区（多用户） | ⏭ 未实现 |
 | Docker 部署 | ⏭ 未完成 |
 
 一次跑全：`python scripts/run_all_tests.py`（无 Neo4j 时集成套件自动 skip；缺 FastAPI / deepagents 时对应套件自动 skip，CI 会断言这些 skip 确实发生）。
@@ -43,13 +44,13 @@
 
 ```text
 noesis-research/
-├── apps/            # api/（FastAPI 业务层，已实现 3 端点）· web/（复用 NOESIS 前端，待建）
-├── services/        # research-agent/（Deep Agent + 5 只读工具，已实现）· paper-reader · background-worker
+├── apps/            # api/（FastAPI，3 端点）· web/（研究工作区，Vite+React+Tailwind）
+├── services/        # research-agent/（1 主 Agent + 5 只读工具）· paper-reader · background-worker
 ├── integrations/    # knowledge-graph（只读适配器，已实现）· openalex · crossref · semantic-scholar
 ├── packages/        # contracts/evidence.py（统一证据契约，已实现）· citation-validator（待建）
 ├── infra/           # docker-compose 等
 ├── scripts/         # run_all_tests.py（零依赖统一入口，支持 --require / --expect-skip）
-├── .github/         # ci.yml（core 零依赖 · api 装 FastAPI · agent 装 deepagents）
+├── .github/         # ci.yml（core / api / agent / web 四个 job）
 ├── docs/            # 01 审计 · 02 计划 · 03 评审回应 · 04 参考仓库台账
 ├── reference/       # 上游参考源码（浅克隆、不提交、出处见 docs/04）；git-ignored
 └── tests/           # integration/（真实 Neo4j：KG 11 · API 8 · Agent 5）· evaluation · e2e
@@ -63,6 +64,9 @@ python -m venv .venv
 .venv/Scripts/python -m pip install -r apps/api/requirements.txt
 KG_EXPECTED_GRAPH_ID=<graphId> .venv/Scripts/python -m uvicorn \
     noesis_research_api.app:app --app-dir apps/api --port 8100
+
+# 研究工作区（前端走同源代理到 8100，后端不需要开 CORS）
+cd apps/web && pnpm install && pnpm build && pnpm preview   # http://127.0.0.1:4173
 
 # 科研 Agent（独立 venv，与 API 依赖分层）
 python -m venv services/research-agent/.venv
