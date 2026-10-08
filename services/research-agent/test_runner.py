@@ -194,6 +194,35 @@ class TranslateTests(unittest.TestCase):
             translate_chunks(chunks, run_id="r1", question="q", graph_id=PINNED, model="m")
         )
 
+    def test_message_stream_becomes_answer_delta_events(self) -> None:
+        """双通道流：messages 通道的正文 token → answer_delta，界面才能逐字渲染。"""
+        from langchain_core.messages import AIMessageChunk
+
+        chunks = [
+            ("messages", (AIMessageChunk(content="图谱里"), {"langgraph_node": "model"})),
+            ("messages", (AIMessageChunk(content=f"有 {PAPER_ID}。"), {"langgraph_node": "model"})),
+            ("updates", chunk("model", [AIMessage(content=f"图谱里有 {PAPER_ID}。")])),
+        ]
+        events = self._events(chunks)
+        deltas = [e for e in events if e["type"] == "answer_delta"]
+        self.assertEqual([e["delta"] for e in deltas], ["图谱里", f"有 {PAPER_ID}。"])
+        answer = next(e for e in events if e["type"] == "answer")
+        self.assertEqual(answer["text"], f"图谱里有 {PAPER_ID}。")
+
+    def test_tool_decision_chunks_are_not_streamed_as_answer(self) -> None:
+        """模型决定调工具的那几帧（带 tool_calls / tool_call_chunks）不能当回答播出去。"""
+        from langchain_core.messages import AIMessageChunk
+
+        deciding = AIMessageChunk(content="", tool_calls=[{"name": "search_papers", "args": {}, "id": "c1"}])
+        with_call_chunk = AIMessageChunk(content="", tool_call_chunks=[{"name": "search_papers", "args": "{}", "id": "c1", "index": 0, "type": "tool_call_chunk"}])
+        chunks = [
+            ("messages", (with_call_chunk, {})),
+            ("messages", (deciding, {})),
+            ("messages", (AIMessageChunk(content="正文"), {})),
+        ]
+        deltas = [e for e in self._events(chunks) if e["type"] == "answer_delta"]
+        self.assertEqual([e["delta"] for e in deltas], ["正文"])
+
     def test_full_happy_path_event_order(self) -> None:
         events = self._events(CITING_CHUNKS)
         kinds = [e["type"] for e in events]

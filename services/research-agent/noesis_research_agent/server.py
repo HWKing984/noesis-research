@@ -88,7 +88,7 @@ def create_app(
             agent = make_agent(client=app.state.kg, settings=resolved)
             chunks = agent.stream(
                 {"messages": [{"role": "user", "content": run.question}]},
-                stream_mode="updates",
+                stream_mode=["updates", "messages"],
             )
             for event in translate_chunks(
                 chunks,

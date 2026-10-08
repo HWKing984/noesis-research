@@ -166,7 +166,7 @@ const PROBE = `(() => {
     title: document.title,
     activeView: viewTab?.getAttribute('data-view') || '',
     agentChatPresent: Boolean(q('[data-testid="agent-chat"]')),
-    exampleCount: qa('[data-testid="example-question"]').length,
+    exampleCount: qa('[data-testid="prompt-card"]').length,
     railState: railToggle?.getAttribute('data-rail') || '',
     railCount: q('[data-testid="rail-count"]')?.textContent || '',
     railCards: qa('[data-testid="rail-card"]').length,
@@ -201,14 +201,21 @@ const PROBE = `(() => {
     errorBanner: q('[data-testid="error-banner"]')?.textContent || '',
     rootOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
     viewport: window.innerWidth,
-    // 布局几何：主列必须占满侧栏以外的宽度，内容列要在聊天列内居中（.main 规则曾丢失导致整页左挤）
-    sbW: Math.round(q('.sb')?.getBoundingClientRect().width || 0),
+    // 布局几何：主列必须占满侧栏以外的宽度，输入容器要在主列内居中
+    // （.main 规则曾丢失导致整页左挤——这类回归必须有几何断言看着）
+    sbW: Math.round(q('.sidebar')?.getBoundingClientRect().width || 0),
     mainW: Math.round(q('.main')?.getBoundingClientRect().width || 0),
-    chatcolX: Math.round(q('.chatcol')?.getBoundingClientRect().left || -1),
-    chatcolW: Math.round(q('.chatcol')?.getBoundingClientRect().width || 0),
-    colX: Math.round(q('.chatcol .col')?.getBoundingClientRect().left || -1),
-    colW: Math.round(q('.chatcol .col')?.getBoundingClientRect().width || 0),
-    composerInEmpty: visible(q('.col .composer')),
+    mainX: Math.round(q('.main')?.getBoundingClientRect().left || -1),
+    containerX: Math.round(q('[data-testid="composer"]')?.getBoundingClientRect().left || -1),
+    containerW: Math.round(q('[data-testid="composer"]')?.getBoundingClientRect().width || 0),
+    composerInEmpty: visible(q('[data-testid="composer"]')),
+    welcomeGlyph: Boolean(q('.welcome-glyph svg')),
+    promptCount: qa('[data-testid="prompt-card"]').length,
+    // SVG 无尺寸规则会退回 300×150 固有尺寸（踩过两次）——图标一律 <= 24px；
+    // 两个按设计放行：空态螺旋标（48，同 NOESIS）与建议卡右下角水印（5.375rem 装饰件）
+    maxSvgW: Math.max(0, ...qa('svg').filter(visible)
+      .filter((el) => !el.closest('.prompt-card-wm') && !el.closest('.welcome-glyph'))
+      .map((el) => el.getBoundingClientRect().width)),
   };
 })()`;
 
@@ -238,7 +245,7 @@ async function main() {
     await session.waitFor(`!!document.querySelector('[data-testid="agent-chat"]')`);
     let probe = await session.eval(PROBE);
     add('默认进入科研助手', probe.activeView === 'agent' && probe.agentChatPresent, `view=${probe.activeView}`);
-    add('提供示例问题一键发问', probe.exampleCount > 0, `${probe.exampleCount} 个`);
+    add('空态建议卡可一键发问', probe.promptCount > 0, `${probe.promptCount} 个`);
     add('证据链默认收起', probe.railState === 'closed', `rail=${probe.railState}`);
     add('证据链开关带计数', probe.railCount !== '', probe.railCount);
     add('页面无横向溢出', probe.rootOverflow <= 1, `溢出 ${probe.rootOverflow}px`);
@@ -248,13 +255,16 @@ async function main() {
       `sb=${probe.sbW} main=${probe.mainW} viewport=${probe.viewport}`,
     );
     add('提问前有输入区', probe.composerInEmpty === true, '');
-    const leftPad = probe.colX - probe.chatcolX;
-    const rightPad = probe.chatcolX + probe.chatcolW - (probe.colX + probe.colW);
+    const containerCenter = probe.containerX + probe.containerW / 2;
+    const mainCenter = probe.mainX + probe.mainW / 2;
     add(
-      '内容列在聊天列内居中',
-      Math.abs(leftPad - rightPad) <= 8 && leftPad > 0,
-      `左 ${leftPad}px / 右 ${rightPad}px`,
+      '输入容器在主列内居中',
+      Math.abs(containerCenter - mainCenter) <= 8 && probe.containerW > 0,
+      `容器中心偏移 ${Math.round(containerCenter - mainCenter)}px`,
     );
+    add('空态含螺旋标与建议卡', probe.welcomeGlyph === true && probe.promptCount >= 4,
+      `prompts=${probe.promptCount}`);
+    add('全部图标 <= 24px', probe.maxSvgW <= 24, `最大 ${Math.round(probe.maxSvgW)}px`);
 
     // 开关能用：此时还没有运行，打开应看到空态说明
     await session.eval(`(() => { document.querySelector('[data-testid="rail-toggle"]').click(); return true; })()`);
@@ -347,7 +357,7 @@ async function main() {
     })()`);
     await session.waitFor(`!!document.querySelector('[data-testid="agent-chat"]')`);
     await session.eval(`(() => {
-      document.querySelector('[data-testid="example-question"]').click();
+      document.querySelector('[data-testid="prompt-card"]').click();
       return true;
     })()`);
     await session.waitFor(`document.querySelectorAll('[data-testid="agent-step"]').length > 0`, { timeout: 240000 });

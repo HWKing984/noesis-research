@@ -39,7 +39,7 @@ function toSearchParams(form) {
   return params;
 }
 
-/** 论文库与图谱 —— 二级视图。抽屉状态在 App 层（agent 视图的引用上标共用同一个抽屉）。 */
+/** 论文库与图谱 —— 二级视图。抽屉状态在 App 层（引用上标共用同一个抽屉）。 */
 function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect }) {
   const [health, setHealth] = useState(null);
   const [healthError, setHealthError] = useState(null);
@@ -243,6 +243,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
 
   const [view, setView] = useState('agent');
   const [railOpen, setRailOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   const [theme, setTheme] = useState(() => localStorage.getItem('nr-theme') || 'light');
   const [agentHealth, setAgentHealth] = useState(null);
   const [runs, setRuns] = useState([]);
@@ -255,6 +256,10 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
     document.documentElement.dataset.theme = theme;
     localStorage.setItem('nr-theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    document.body.classList.toggle('is-rail', railOpen && view === 'agent');
+  }, [railOpen, view]);
 
   const closeStream = () => {
     try { sourceRef.current?.close(); } catch { /* ignore */ }
@@ -288,8 +293,14 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
           error: { title: '运行失败', detail: payload.message || '未知原因' },
         }));
       });
+      // 逐字流式：token 增量直接追加到回答上（NOESIS 的打字机效果）
+      source.addEventListener('answer_delta', (m) => {
+        const payload = JSON.parse(m.data);
+        setRun((prev) => ({ ...prev, answer: prev.answer + (payload.delta || '') }));
+      });
       source.addEventListener('answer', (m) => {
         const payload = JSON.parse(m.data);
+        // answer 事件是权威全文（含引用核查），覆盖增量拼接的结果
         setRun((prev) => ({ ...prev, answer: payload.text || '', citation: payload.citation || null }));
       });
       source.addEventListener('done', () => {
@@ -419,36 +430,26 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
         agentHealth={agentHealth}
         theme={theme}
         onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        collapsed={collapsed}
+        onToggleCollapse={() => setCollapsed((prev) => !prev)}
       />
 
       <main className="main">
         {view === 'agent' ? (
-          <>
-            <div className="top">
-              <span className="crumb">科研助手</span>
-              <span className="chip" data-testid="graph-chip">
-                <span className={`dot ${agentHealth?.status === 'ready' ? '' : 'is-down'}`} />
-                {agentHealth?.status || '…'} · {String(agentHealth?.graphId || '').slice(0, 14) || '—'}
-              </span>
-              <button
-                type="button"
-                className={`rail-toggle ${railOpen ? 'is-on' : ''}`}
-                data-testid="rail-toggle"
-                data-rail={railOpen ? 'open' : 'closed'}
-                onClick={() => setRailOpen((prev) => !prev)}
-              >
-                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M15 4v16" /></svg>
-                证据链
-                <span className="badge" data-testid="rail-count">{papers.length}</span>
-              </button>
-            </div>
-            <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
-              <div className="chatcol">
-                <AgentChat run={run} onAsk={ask} onCited={onCited} agentHealth={agentHealth} />
-              </div>
-              <EvidenceRail papers={papers} onInspect={setInspection} busy={run.status === 'running'} />
-            </div>
-          </>
+          <div style={{ display: 'flex', flex: 1, minHeight: 0, minWidth: 0 }}>
+            <AgentChat
+              run={run}
+              onAsk={ask}
+              onCited={onCited}
+              agentHealth={agentHealth}
+              view={view}
+              onView={setView}
+              railOpen={railOpen}
+              onToggleRail={() => setRailOpen((prev) => !prev)}
+              railCount={papers.length}
+            />
+            <EvidenceRail papers={papers} onInspect={setInspection} busy={run.status === 'running'} />
+          </div>
         ) : (
           <LibraryView
             api={api}

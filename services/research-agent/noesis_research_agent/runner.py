@@ -183,6 +183,26 @@ def _messages_of(update: Any) -> list[Any]:
     return []
 
 
+def _answer_delta(payload: Any) -> str:
+    """从 langgraph 的 messages 流里取**回答正文增量**。
+
+    只认「纯文本、无工具调用」的 AIMessageChunk —— 模型决定调工具的那几帧
+    content 为空或不该当作回答播出去。
+    """
+    try:
+        chunk, _meta = payload
+    except (TypeError, ValueError):
+        return ""
+    content = getattr(chunk, "content", None)
+    if not isinstance(content, str) or not content:
+        return ""
+    if getattr(chunk, "tool_call_chunks", None):
+        return ""
+    if getattr(chunk, "tool_calls", None):
+        return ""
+    return content
+
+
 def translate_chunks(
     chunks: Iterable[Any],
     *,
@@ -194,6 +214,12 @@ def translate_chunks(
     """把 Agent 的流式输出翻译成本项目的事件流。
 
     按**消息类型**判断，不按节点名 —— 节点名是实现细节。
+
+    支持两种流形态：
+    * 旧形态：直接迭代 updates 字典（离线脚本化测试用）；
+    * 双通道：``stream_mode=["updates","messages"]`` 产出的 ``(mode, payload)``
+      元组 —— ``messages`` 通道给出回答正文的 token 增量，翻译成
+      ``answer_delta`` 事件供界面逐字渲染。
     """
     yield {
         "type": _RUN_STARTED,
@@ -206,8 +232,18 @@ def translate_chunks(
     available_ids: list[str] = []
     evidence_levels: set[str] = set()
     answer = ""
-    for chunk in chunks:
-        updates = chunk.values() if isinstance(chunk, Mapping) else [chunk]
+    for item in chunks:
+        if isinstance(item, tuple) and len(item) == 2 and isinstance(item[0], str):
+            mode, payload = item
+            if mode == "messages":
+                delta = _answer_delta(payload)
+                if delta:
+                    answer += delta
+                    yield {"type": "answer_delta", "runId": run_id, "delta": delta}
+                continue
+            updates = [payload]
+        else:
+            updates = item.values() if isinstance(item, Mapping) else [item]
         for update in updates:
             for message in _messages_of(update):
                 message_type = getattr(message, "type", None) or getattr(message, "role", None)
