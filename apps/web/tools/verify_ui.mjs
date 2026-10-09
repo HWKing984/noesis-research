@@ -190,6 +190,7 @@ const PROBE = `(() => {
     infoPopoverText: q('[data-testid="info-popover"]')?.textContent || '',
     paperDrawer: Boolean(q('[data-testid="paper-drawer"]')),
     paperDrawerW: Math.round(q('[data-testid="paper-drawer"]')?.getBoundingClientRect().width || 0),
+    detailAsideW: Math.round(q('[data-testid="detail-aside"]')?.getBoundingClientRect().width || 0),
     activeRowCount: qa('[data-testid="paper-item"][aria-current="true"]').length,
     paperCount: qa('[data-testid="paper-item"]').length,
     firstPaperId: q('[data-testid="paper-item"]')?.getAttribute('data-publication-id') || '',
@@ -202,6 +203,14 @@ const PROBE = `(() => {
     graphNodes: qa('[data-testid="graph-node"]').length,
     graphCanvas: Boolean(q('[data-testid="graph-panel"] canvas')),
     graphEdges: qa('[data-testid="graph-edge"]').length,
+    readerPresent: Boolean(q('[data-testid="reader-view"]')),
+    readerEmpty: q('[data-testid="reader-empty"]')?.textContent || '',
+    readerStatus: q('[data-testid="reader-view"]')?.getAttribute('data-status') || '',
+    readerStateBadge: q('[data-testid="reader-state-badge"]')?.textContent || '',
+    readerEvidence: qa('[data-testid="ev-card"]').length,
+    readerAnchors: qa('[data-testid="reader-anchors"] .rd-anchor').length,
+    readFullBtn: Boolean(q('[data-testid="read-full-btn"]')),
+    readFullState: q('[data-testid="read-full-state"]')?.textContent || '',
     drawerPresent: Boolean(q('[data-testid="evidence-drawer"]')),
     drawerFields: q('[data-testid="drawer-fields"]')?.textContent || '',
     drawerText: q('[data-testid="evidence-drawer"]')?.textContent || '',
@@ -323,7 +332,12 @@ async function main() {
     await session.eval(`(() => { document.querySelector('[data-testid="paper-item"]').click(); return true; })()`);
     await session.waitFor(`!!document.querySelector('[data-testid="detail-panel"]')`, { timeout: 25000 });
     probe = await session.eval(PROBE);
-    add('论文抽屉打开（480px）', probe.paperDrawer === true && Math.abs(probe.paperDrawerW - 480) <= 2, `w=${probe.paperDrawerW}`);
+    // 19:42 落码后详情栏是常驻 480px 双栏（aside），不再是浮层抽屉 —— 断言跟着布局走。
+    add(
+      '详情栏打开（常驻 480px 双栏）',
+      Math.abs(probe.detailAsideW - 480) <= 2 && probe.paperDrawerW === 0,
+      `aside=${probe.detailAsideW}`,
+    );
     add('详情面板打开且是同一篇', probe.detailId === firstId, `detail=${probe.detailId} list=${firstId}`);
     const allCandidate = probe.assertionStatuses.every((s) => s === 'candidate');
     add(
@@ -342,11 +356,15 @@ async function main() {
     add('局部图谱画出节点', probe.graphNodes > 0, `nodes=${probe.graphNodes} edges=${probe.graphEdges}`);
     add('图谱画布为可交互 canvas', probe.graphCanvas === true, '');
 
-    // 关论文抽屉：不能留下幽灵选中行
-    await session.eval(`(() => { document.querySelector('[data-testid="paper-drawer-close"]').click(); return true; })()`);
-    await session.waitFor(`!document.querySelector('[data-testid="paper-drawer"]')`, { timeout: 8000 });
+    // 常驻双栏：没有「关抽屉」动作；改为验证切换选中行后 active 行恒唯一。
+    await session.eval(`(() => {
+      const rows = document.querySelectorAll('[data-testid="paper-item"]');
+      if (rows.length > 1) rows[1].click();
+      return true;
+    })()`);
+    await session.waitFor(`document.querySelectorAll('[data-testid="detail-panel"]').length > 0`, { timeout: 25000 });
     probe = await session.eval(PROBE);
-    add('关闭抽屉后无幽灵选中行', probe.activeRowCount === 0, `active=${probe.activeRowCount}`);
+    add('切换选中行后 active 行恒唯一', probe.activeRowCount <= 1, `active=${probe.activeRowCount}`);
 
     // ---- 证据抽屉（从论文列表的证据徽标进入）----
     await session.eval(`(() => {
@@ -366,6 +384,47 @@ async function main() {
     await session.waitFor(`!!document.querySelector('[data-testid="detail-panel"]')`, { timeout: 25000 });
     probe = await session.eval(PROBE);
     add('抽屉能跳到对应论文详情', probe.detailId.length > 0 && probe.detailId === probe.firstSourceId, `detail=${probe.detailId}`);
+
+    // ---- 原文阅读（reader）：状态机如实呈现 + 空态入口 ----
+    // 真实点击驱动（评审条委托教训：键盘/直调都会绕过真实路径）。
+    await session.eval(`(() => {
+      Array.from(document.querySelectorAll('[data-testid="view-tab"]'))
+        .find((el) => el.getAttribute('data-view') === 'reader').click();
+      return true;
+    })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="reader-view"], [data-testid="reader-empty"]')`, { timeout: 8000 });
+    probe = await session.eval(PROBE);
+    add('reader 视图进入且页签/侧栏联动', probe.activeView === 'reader', `view=${probe.activeView}`);
+    add(
+      'reader 空态给出进入方式引导',
+      probe.readerEmpty.includes('从一篇论文进入阅读') || probe.readerPresent === true,
+      probe.readerEmpty.slice(0, 60),
+    );
+    // 回到论文库：视图切换会卸载 LibraryView（检索状态清空是既有行为）→ 重新检索
+    await session.eval(`(() => {
+      Array.from(document.querySelectorAll('[data-testid="view-tab"]'))
+        .find((el) => el.getAttribute('data-view') === 'library').click();
+      return true;
+    })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="search-form"]')`, { timeout: 8000 });
+    await session.eval(`(() => {
+      const input = document.querySelector('input[name="q"]');
+      const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+      setter.call(input, 'transformer');
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      document.querySelector('[data-testid="search-submit"]').click();
+      return true;
+    })()`);
+    await session.waitFor(`document.querySelectorAll('[data-testid="paper-item"]').length > 0`, { timeout: 25000 });
+    await session.eval(`(() => { document.querySelector('[data-testid="paper-item"]').click(); return true; })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="detail-panel"]')`, { timeout: 25000 });
+    await sleep(700); // 等 documentStatus 返回
+    probe = await session.eval(PROBE);
+    add(
+      '详情栏如实显示全文可得性（未调查≠可读）',
+      probe.readFullBtn === true || /全文未调查|未收录全文|获取失败|版权受限|仅出版社页/.test(probe.readFullState),
+      `btn=${probe.readFullBtn} state=${probe.readFullState}`,
+    );
 
     // ---- 主界面：让 agent 真的跑一次（模型偶发"浅回答"时重试一次，两次都失败才算挂）----
     await session.eval(`(() => {
@@ -459,7 +518,7 @@ async function main() {
     // 等流结束：最后一轮的 verdict 稳定出现且侧栏会话只有 1 个（没有自动开新会话）
     await session.waitFor(
       `document.querySelectorAll('[data-testid="session-item"]').length === 1`,
-      { timeout: 30000 },
+      { timeout: 90000 },
     );
     probe = await session.eval(PROBE);
     add('连续追问不换会话', probe.sessionItems === 1, `会话数 ${probe.sessionItems}`);

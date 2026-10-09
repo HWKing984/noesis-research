@@ -10,6 +10,9 @@ fastapi>=0.109.0
 uvicorn[standard]>=0.27.0
 pydantic>=2.5.0
 
+# 上传端点（POST /api/documents/{id}/upload）解析 multipart 表单必需。
+python-multipart>=0.0.9
+
 # 跑 apps/api/test_api.py 需要（fastapi.testclient 依赖 httpx）。
 # 生产运行时不需要，但装上不影响。
 httpx>=0.26.0

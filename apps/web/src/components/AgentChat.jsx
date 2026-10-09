@@ -77,6 +77,16 @@ export default function AgentChat({ turns, onAsk, onCited, agentHealth, view, on
             >
               论文库
             </button>
+            <button
+              type="button"
+              data-testid="view-tab"
+              data-view="reader"
+              data-active={view === 'reader' ? 'true' : 'false'}
+              className={view === 'reader' ? 'is-on' : ''}
+              onClick={() => onView('reader')}
+            >
+              原文阅读
+            </button>
           </div>
         </div>
         <div className="chat-header-status">

@@ -40,6 +40,8 @@ from kg_client import (
     resolve_expected_graph_id,
 )
 
+from .document_routes import router as document_router
+from .document_store import DocumentStore
 from .models import ErrorModel, ErrorResponse
 from .routes import router
 
@@ -94,12 +96,19 @@ def _error_handler(status_code: int, code: str):
     return handler
 
 
-def create_app(*, settings: Settings | None = None, kg_client: KGClient | None = None) -> FastAPI:
+def create_app(
+    *,
+    settings: Settings | None = None,
+    kg_client: KGClient | None = None,
+    document_store: DocumentStore | None = None,
+) -> FastAPI:
     """Build the application.
 
     ``kg_client`` is injectable so tests can drive the whole HTTP surface
     without a database: a fake transport plus a real client exercises exactly
-    the code path production uses.
+    the code path production uses. ``document_store`` is likewise injectable
+    (tests pass a temp-rooted store); production defaults to
+    ``.data/documents`` under the repository root.
     """
     resolved = settings or Settings.from_env()
     app = FastAPI(
@@ -116,6 +125,14 @@ def create_app(*, settings: Settings | None = None, kg_client: KGClient | None =
         expected_graph_id=resolved.expected_graph_id,
         timeout=resolved.timeout,
     )
+    if document_store is not None:
+        app.state.documents = document_store
+    else:
+        from pathlib import Path
+
+        app.state.documents = DocumentStore(
+            Path(__file__).resolve().parents[3] / ".data" / "documents"
+        )
 
     for exc_type, status_code, code in _ERROR_STATUS:
         app.add_exception_handler(exc_type, _error_handler(status_code, code))
@@ -131,6 +148,7 @@ def create_app(*, settings: Settings | None = None, kg_client: KGClient | None =
         )
 
     app.include_router(router)
+    app.include_router(document_router)
     return app
 
 

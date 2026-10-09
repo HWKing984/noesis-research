@@ -4,6 +4,7 @@ import { createResearchApi, describeApiError } from './lib/api.js';
 import { createAgentApi, describeAgentError } from './lib/agentApi.js';
 import AgentChat from './components/AgentChat.jsx';
 import EvidenceRail from './components/EvidenceRail.jsx';
+import ReaderView from './components/ReaderView.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import { SearchBar, AppliedEcho, PaperList } from './components/SearchPanel.jsx';
 import { DetailPanel, GraphPanel } from './components/InspectorPanel.jsx';
@@ -40,7 +41,7 @@ function toSearchParams(form) {
 }
 
 /** 论文库与图谱 —— 二级视图。抽屉状态在 App 层（引用上标共用同一个抽屉）。 */
-function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect }) {
+function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, onInspect, onOpenReader }) {
   const [health, setHealth] = useState(null);
   const [healthError, setHealthError] = useState(null);
   const [form, setForm] = useState(EMPTY_FORM);
@@ -159,6 +160,25 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
 
   const papers = result?.data || [];
 
+  // 全文可得性（paper-reader 状态机）：详情栏打开时查询，驱动「阅读全文」按钮。
+  const [docRef, setDocRef] = useState(null);
+  useEffect(() => {
+    let cancelled = false;
+    setDocRef(null);
+    if (!selectedId) return undefined;
+    api
+      .documentStatus(selectedId)
+      .then((ref) => {
+        if (!cancelled) setDocRef(ref);
+      })
+      .catch(() => {
+        if (!cancelled) setDocRef(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [api, selectedId]);
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
       <GraphHeader health={health} error={healthError} />
@@ -187,8 +207,8 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
           </div>
         </div>
 
-        <aside style={{ width: 480, flex: '0 0 auto', display: 'flex', flexDirection: 'column', background: 'var(--bg-secondary)', minWidth: 0 }}>
-          <nav style={{ display: 'flex', gap: 4, borderBottom: '1px solid var(--border-subtle)', background: 'var(--bg-primary)', padding: '8px 16px 0' }}>
+        <aside data-testid="detail-aside" style={{ width: 480, flex: '0 0 auto', display: 'flex', flexDirection: 'column', background: 'var(--bg-secondary)', minWidth: 0 }}>
+          <nav style={{ display: 'flex', gap: 4, borderBottom: '1px solid var(--border-subtle)', background: 'var(--bg-primary)', padding: '8px 16px 0', alignItems: 'center' }}>
             {TABS.map((item) => (
               <button
                 key={item.key}
@@ -211,6 +231,32 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
               <span className="mono" style={{ marginLeft: 'auto', paddingBottom: 6, fontSize: 10, color: 'var(--text-muted)' }}>
                 {selectedId}
               </span>
+            ) : null}
+            {selectedId ? (
+              docRef?.status === 'available' ? (
+                <button
+                  type="button"
+                  className="btn btn--ink"
+                  data-testid="read-full-btn"
+                  style={{ marginLeft: 8, marginBottom: 4, flex: '0 0 auto' }}
+                  onClick={() => onOpenReader?.(selectedId)}
+                >
+                  阅读全文 →
+                </button>
+              ) : docRef ? (
+                <span
+                  data-testid="read-full-state"
+                  title={docRef.detail || docRef.status}
+                  style={{
+                    marginLeft: 8, marginBottom: 4, flex: '0 0 auto',
+                    fontSize: 11, padding: '2.5px 9px', borderRadius: 999,
+                    border: '1px solid var(--border-default)', background: 'var(--pill-bg)',
+                    color: 'var(--text-tertiary)', whiteSpace: 'nowrap',
+                  }}
+                >
+                  {docRef.status === 'none' ? '全文未调查' : docRef.status === 'no_oa_found' ? '未收录全文' : docRef.status === 'fetch_failed' ? '获取失败' : docRef.status === 'restricted' ? '版权受限' : '仅出版社页'}
+                </span>
+              ) : null
             ) : null}
           </nav>
           <ErrorBanner error={graphError} onRetry={() => loadGraph(selectedId, graphMode)} />
@@ -251,6 +297,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
   const [turns, setTurns] = useState([]);
   const [inspection, setInspection] = useState(null);
   const [pendingPaper, setPendingPaper] = useState(null);
+  const [readerPaper, setReaderPaper] = useState(null);
   const sourceRef = useRef(null);
 
   useEffect(() => {
@@ -435,6 +482,11 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
   }, []);
   const consumeInitial = useCallback(() => setPendingPaper(null), []);
 
+  const openReader = useCallback((publicationId) => {
+    setReaderPaper(publicationId);
+    setView('reader');
+  }, []);
+
   return (
     <div className="app">
       <Sidebar
@@ -467,6 +519,26 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
             />
             <EvidenceRail papers={papers} onInspect={setInspection} busy={turns.some((t) => t.status === 'running')} />
           </div>
+        ) : view === 'reader' ? (
+          readerPaper ? (
+            <ReaderView
+              api={api}
+              publicationId={readerPaper}
+              title={paperTitleById.get(readerPaper)}
+            />
+          ) : (
+            <div className="reader" data-testid="reader-empty">
+              <div className="rd-state">
+                <div className="rd-state-card">
+                  <div className="rd-state-title">从一篇论文进入阅读</div>
+                  <div className="rd-state-desc">
+                    阅读器一次只读一篇：在「科研助手」的回答里点引用上标，或在「论文库与图谱」打开详情后点
+                    「阅读全文」，即可进入本视图。
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
         ) : (
           <LibraryView
             api={api}
@@ -474,6 +546,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
             onConsumeInitial={consumeInitial}
             inspection={inspection}
             onInspect={setInspection}
+            onOpenReader={openReader}
           />
         )}
       </main>

@@ -46,6 +46,14 @@ export function publicationPath(publicationId) {
   return `/api/papers/${escaped}`;
 }
 
+/** 文档端点同样按段转义：`/api/documents/{pid}/status|file|fetch|upload`。 */
+export function documentPath(publicationId, action = '') {
+  const id = String(publicationId || '').trim();
+  if (!id) throw new ApiError(400, 'invalid_request', '缺少 publicationId');
+  const escaped = id.split('/').map(encodeURIComponent).join('/');
+  return `/api/documents/${escaped}${action ? `/${action}` : ''}`;
+}
+
 async function request(base, path, params, options = {}) {
   const url = new URL(path, base);
   for (const [key, value] of Object.entries(params || {})) {
@@ -92,6 +100,29 @@ export function createResearchApi(base = DEFAULT_API_BASE) {
       request(base, publicationPath(publicationId), undefined, options),
     graphNeighbors: (publicationId, mode = 'paper', limit = 15, options = {}) =>
       request(base, '/api/graph/neighbors', { id: publicationId, mode, limit }, options),
+
+    // -- 原文阅读（paper-reader 端点；状态机见 packages/contracts/document.py） --
+    /** 全文可得性：status ∈ none / 五态。`status:'none'` 表示尚未调查（不是失败）。 */
+    documentStatus: (publicationId, options) =>
+      request(base, documentPath(publicationId, 'status'), undefined, options),
+    /** 服务端按来源优先级抓取；无论成败都返回落库后的 DocumentRef（fetch_failed 也是结论）。 */
+    fetchDocument: (publicationId, sourceUrl, options) =>
+      request(
+        base,
+        documentPath(publicationId, 'fetch'),
+        undefined,
+        { ...options, method: 'POST', headers: { 'Content-Type': 'application/json', ...(options?.headers || {}) }, body: JSON.stringify({ sourceUrl }) },
+      ),
+    /** 用户上传自己有权使用的 PDF；非 PDF（422）在上层如实显示。 */
+    uploadDocument: (publicationId, file, options) =>
+      request(
+        base,
+        documentPath(publicationId, 'upload'),
+        undefined,
+        { ...options, method: 'POST', body: file },
+      ),
+    /** 缓存文件的读取地址（支持 Range）。 */
+    documentFileUrl: (publicationId) => new URL(documentPath(publicationId, 'file'), base).toString(),
   };
 }
 

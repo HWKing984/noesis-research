@@ -70,6 +70,18 @@ export default function Sidebar({
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>
             <span>论文库与图谱</span>
           </button>
+          <button
+            type="button"
+            className={`sidebar-nav-item ${view === 'reader' ? 'is-active' : ''}`}
+            data-testid="view-tab"
+            data-view="reader"
+            data-active={view === 'reader' ? 'true' : 'false'}
+            data-label="原文阅读"
+            onClick={() => onView('reader')}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 3h14a1 1 0 0 1 1 1v17l-6-4-6 4V4a1 1 0 0 1 1-1z" /></svg>
+            <span>原文阅读</span>
+          </button>
         </div>
       </nav>
 
