@@ -1,0 +1,21 @@
+{
+  "verifiedAtUTC": "2026-10-10T09:57:50.3009714Z",
+  "HTTPChecks": 33,
+  "offlineOracleCases": 22,
+  "liveStatus": "ready",
+  "graphId": "ai-literature-63686318d85cccb07afb",
+  "appCodeSha256": "6db2411dc2aa41e4792871d89ed753c36f64de409c7e91cc002ea603c7a27ebd",
+  "runtimeConfigSha256": "8b772f5e84a53d8a71044e1909e76d06c00a0a16b6cd5d363da56745e19f5353",
+  "captureScriptSha256": "86bff6de69f8c234cfdcf671e5046c24c488d62f23cb0ba7438cc6064823bdb1",
+  "guideLinksChecked": 20,
+  "artifactsHashChecked": 10,
+  "screenshots": 8,
+  "downloads": 2,
+  "graphModes": 3,
+  "scriptParseErrors": 0,
+  "productionSourceAndConfigUnchanged": true,
+  "noNewTraining": true,
+  "visualBaseline": "INCONCLUSIVE",
+  "WCAG": "not_fully_audited",
+  "scope": "Read-only local course demo verification, not a new model quality evaluation or full regression."
+}

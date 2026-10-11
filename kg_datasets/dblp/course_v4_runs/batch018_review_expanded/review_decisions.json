@@ -1,0 +1,620 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-3b2975ed8c8b47b976d1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Fusing Visuals with Magnetic Signals",
+          "label": "TASK"
+        },
+        {
+          "text": "Indoor Localization",
+          "label": "TASK"
+        },
+        {
+          "text": "Vision Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Transformer localization role is explicit, but its instrument role in the preceding fusion operation is not separately clear.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Using may attach to localization rather than the complete fusion operation; keep the fusion role unresolved."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Indoor localization explicitly uses a vision transformer."
+        }
+      ],
+      "notes": "Fusion inputs retained; magnetic signals are not a named dataset.\nAI self-review: Localization instrument explicit; fusion attachment unresolved, magnetic signals not dataset."
+    },
+    {
+      "sampleId": "sample-ef87645ce7ab1052b70d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Checked title: microcode control unit and deep-learning processors are hardware components; no named algorithm, concrete inference task or dataset.\nAI self-review: Hardware control unit and processors do not become ML methods merely by mentioning deep learning."
+    },
+    {
+      "sampleId": "sample-cc2a426197697d2673a8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Predicting Elderly Patient Behaviour in Rural Healthcare",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Rural elderly-patient behaviour prediction explicitly uses machine learning."
+        }
+      ],
+      "notes": "Patient cohort and rural healthcare context retained; healthcare is not a dataset.\nAI self-review: Full elderly/rural prediction target retained with explicit machine learning instrument."
+    },
+    {
+      "sampleId": "sample-440f9cc2d59b6eeaa8ef",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Fingered Grasping",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Multi-fingered grasping is explicitly learned with deep reinforcement learning."
+        }
+      ],
+      "notes": "Vision and touch are inputs separated by the method phrase; not fabricated into a discontinuous task or a dataset.\nAI self-review: Grasping operation explicit with deep RL; separated modalities not reconstructed into task span."
+    },
+    {
+      "sampleId": "sample-02af6e7b847cb21fcdcf",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Convolutional Neural Networks with RBF Fuzzy Logic Classification Rules",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Explicit compound classifier is one method; no nested fuzzy-rule entity and no independently stated classification target.\nAI self-review: Full CNN/RBF fuzzy classification mechanism retained as one composite method, no nested rules."
+    },
+    {
+      "sampleId": "sample-b2dc93bb4a1f265fff57",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deeplabv3+",
+          "label": "METHOD"
+        },
+        {
+          "text": "ultrasound image segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Ultrasound image segmentation is explicitly based on Deeplabv3+."
+        }
+      ],
+      "notes": "Improved is general evaluation, not specified architecture; thyroid nodules are noncontiguous target context, not a named dataset.\nAI self-review: Deeplabv3+ spelling/version preserved and explicit ultrasound segmentation; noncontiguous thyroid context disclosed rather than added."
+    },
+    {
+      "sampleId": "sample-59cd0ab7945b8a3fc2b7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "One-Pixel Attacking Medical Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "Deep-learning models are the targets being attacked, not the stated attack-generation instrument."
+        }
+      ],
+      "notes": "Keep perturbation constraint and medical-image object; no named image dataset.\nAI self-review: One-pixel medical-image attack target explicit; deep-learning models are attacked objects, not generators."
+    },
+    {
+      "sampleId": "sample-134af84624ed0ce5656a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deliberate Motion Planning",
+          "label": "TASK"
+        },
+        {
+          "text": "Shallow Convolutional Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Deliberate motion planning explicitly uses a shallow convolutional neural network."
+        }
+      ],
+      "notes": "Robust is general quality; shallow describes architecture.\nAI self-review: Shallow architectural qualifier preserved, robust quality excluded from motion-planning target."
+    },
+    {
+      "sampleId": "sample-5f64fa6386b0966188e6",
+      "entityStatus": "unresolved",
+      "entityReason": "Critical Learning role is unclear; the simulation object is an Ising-embodied network population, and its nested method-versus-complete-task boundary cannot be fixed confidently from the title.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Entity coverage and method/object distinction remain unresolved.",
+      "relations": [],
+      "notes": "No invented named population dataset or unsupported simulated-network instrument relation.\nAI self-review: Critical-learning and network-population simulation boundaries still uncertain; retain quarantine."
+    },
+    {
+      "sampleId": "sample-e4d730cfb54a95282b60",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Bayesian Optimization",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hamiltonian Dynamics",
+          "label": "METHOD"
+        },
+        {
+          "text": "Sparse Artificial Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Optimization and dynamics are identifiable methods, sparse networks are the target family; METHOD-to-METHOD relations are outside current scope.\nAI self-review: Optimization, dynamics and sparse network family are methods; method-to-method role outside contract."
+    },
+    {
+      "sampleId": "sample-581b0b8a135c82783a92",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Voxelwise Intensity Projection",
+          "label": "METHOD"
+        },
+        {
+          "text": "Spatial Representation of Resting State Functional MRI Networks",
+          "label": "TASK"
+        },
+        {
+          "text": "Multimodal Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Projection-to-representation is explicit, multimodal-learning role in representation is not.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Voxelwise projection is explicitly for spatial representation of resting-state functional MRI networks."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Multimodal learning may be a downstream beneficiary of representation, not its instrument."
+        }
+      ],
+      "notes": "MRI networks are task objects, not a named dataset.\nAI self-review: Projection-to-spatial representation explicit, downstream multimodal learning role remains unresolved."
+    },
+    {
+      "sampleId": "sample-757f06ee11ec8f1b49ce",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "OCT Image Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Subretinal Fluid Segmentation",
+          "label": "TASK"
+        },
+        {
+          "text": "Finite Element Structure Modeling",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The modeling method produces images, while direct segmentation role is not established.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "OCT image generation explicitly uses finite-element structure modeling."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Generated images may support a separate segmenter; the title does not establish that finite-element modeling performs segmentation."
+        }
+      ],
+      "notes": "Do not turn input generation into a downstream segmentation algorithm.\nAI self-review: Finite-element modeling generates OCT images; no inferred direct segmentation implementation."
+    },
+    {
+      "sampleId": "sample-d9796be107426216b688",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "context-based prefetching",
+          "label": "TASK"
+        },
+        {
+          "text": "reinforcement learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Context-based prefetching explicitly uses reinforcement learning."
+        }
+      ],
+      "notes": "Semantic locality is a property, not automatically an algorithm; prefetching is the concrete operation.\nAI self-review: Concrete prefetch operation via reinforcement learning; locality property not algorithm."
+    },
+    {
+      "sampleId": "sample-b9fefead0472ddf97057",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ARC-BEV",
+          "label": "METHOD"
+        },
+        {
+          "text": "Attentive Radar-Camera Fusion",
+          "label": "METHOD"
+        },
+        {
+          "text": "3D Object Detection in Bird-Eye-View Space for Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "ARC-BEV names the stated bird-eye-view 3D detector for autonomous driving."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Attentive radar-camera fusion explicitly supplies the detector."
+        }
+      ],
+      "notes": "Detection space and application context retained; no autonomous-driving dataset is named.\nAI self-review: ARC-BEV and attention-based fusion explicitly support full bird-eye-view autonomous-driving detector target."
+    },
+    {
+      "sampleId": "sample-8a13e8c69ef3c0126eb5",
+      "entityStatus": "unresolved",
+      "entityReason": "The classification-model composite occupies the attack-object text; a complete attack-task span would overlap it, while bare attacks omit the target. Nonoverlapping task boundary remains unresolved.",
+      "entities": [
+        {
+          "text": "Deep Neural Network-based Power System Event Classification Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Target-scoped attack task coverage unresolved; no task pair invented solely to retain a negative relation.",
+      "relations": [],
+      "notes": "The model remains an attacked object, not an attack instrument; preserve this semantic distinction without claiming a complete nonoverlapping task inventory.\nAI self-review: The only attack object is contained inside the composite model span; bare Adversarial Attacks does not preserve target scope, so full nonoverlapping task coverage cannot be confidently complete."
+    },
+    {
+      "sampleId": "sample-4193d2457a7806e6aedb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Green Grape Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Algorithm is unspecified, robustness evaluative; varying illumination is separated operating context, not a named dataset.\nAI self-review: Grape-image segmentation task explicit, unnamed robust algorithm not forced into METHOD."
+    },
+    {
+      "sampleId": "sample-0f1bddcc4d8371b8f01b",
+      "entityStatus": "unresolved",
+      "entityReason": "Component-Based Transparency could be a design principle rather than a computational method; task and method inventory not confidently complete.",
+      "entities": [
+        {
+          "text": "Comprehend Intelligent Agent Behaviour",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Transparency instrument role remains unresolved with incomplete entity coverage.",
+      "relations": [],
+      "notes": "Human-autonomy teaming is broad application context; no invented method definition.\nAI self-review: Transparency principle versus computational method unresolved; comprehension operation preserved."
+    },
+    {
+      "sampleId": "sample-b77685daad41d64c05f9",
+      "entityStatus": "unresolved",
+      "entityReason": "Multi-training Framework could denote training software rather than an algorithm; Image Deep Learning is the workload, so framework-versus-method boundaries remain unclear.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No complete algorithm/task inventory can be fixed from the title.",
+      "relations": [],
+      "notes": "GPU Cluster is compute infrastructure, not a named dataset; Efficient does not define a method.\nAI self-review: Multi-training framework software/workload distinction unresolved; GPUs remain infrastructure."
+    },
+    {
+      "sampleId": "sample-c5e0d7ede875e3f35feb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Microwave Medical Image Segmentation",
+          "label": "TASK"
+        },
+        {
+          "text": "Brain Stroke Diagnosis",
+          "label": "TASK"
+        },
+        {
+          "text": "Imaging-Process-Informed Image Processing",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The explicit image-processing role in segmentation does not automatically establish diagnosis performance.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The subtitle describes the imaging-informed image-processing approach for segmentation."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Segmentation is for diagnosis, but a separate diagnostic decision component may be required."
+        }
+      ],
+      "notes": "Preserve pipeline distinction between segmentation and diagnosis; no named medical dataset.\nAI self-review: Imaging-informed processing is segmentation instrument, direct stroke diagnosis role not established."
+    },
+    {
+      "sampleId": "sample-88e5f77104b0c9d3f946",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Agent Reinforcement Learning Based Channel Access Scheme",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full explicitly composed channel-access scheme is one METHOD; no overlapping channel-access TASK invented. Underwater optical wireless networks are application objects.\nAI self-review: RL-based channel access scheme explicitly one composite METHOD; no overlapping synthetic task."
+    },
+    {
+      "sampleId": "sample-361d298553173e4d08eb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Trend Prediction of Influenza and the Associated Pneumonia in Taiwan",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Influenza and associated pneumonia trend prediction in Taiwan explicitly uses machine learning."
+        }
+      ],
+      "notes": "Target and location retained; disease names and Taiwan are not dataset names.\nAI self-review: Influenza/pneumonia prediction target keeps Taiwan with explicit ML role; no disease/location dataset."
+    },
+    {
+      "sampleId": "sample-50fe867bb4a592ec3d1d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Intrusion Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Generative Adversarial Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Both families occur under Using but could provide training or coordination rather than directly detect intrusions.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "GANs may augment non-IID training data rather than serve as intrusion detectors."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "RL may coordinate federation or access; direct detector role cannot be distinguished from the title."
+        }
+      ],
+      "notes": "Federated/Non-IID are learning settings, IIoT context is separated by those settings; neither is a DATASET.\nAI self-review: GAN/RL may be training or coordination tools; Using alone not enough to decide direct detector role."
+    },
+    {
+      "sampleId": "sample-53165943169e3650d9ba",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Checked full title: unspecified ontology-based multi-system is a software/conceptual artifact, SME workers are users; no concrete extraction task or named method/dataset.\nAI self-review: Ontology software for workers has no named method/dataset or concrete scoped operation; checked empty result."
+    },
+    {
+      "sampleId": "sample-8e2a5cfb5e66f531a698",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Real-Time Intrusion Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Real-time intrusion detection explicitly uses machine learning approaches."
+        }
+      ],
+      "notes": "Real-time is operational context; generic Approaches excluded.\nAI self-review: Real-time operational context and ML intrusion-detection relation explicit."
+    },
+    {
+      "sampleId": "sample-80ffe97143a80c8ee26e",
+      "entityStatus": "unresolved",
+      "entityReason": "Neuromorphic Knowledge Representation and Explainability may be broad objectives or concrete operations; the complete task boundary inventory is unclear.",
+      "entities": [
+        {
+          "text": "SNN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Relational Inference",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Known inference role is explicit, but unresolved task coverage prevents complete relations.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Relational inference is explicitly SNN-based."
+        }
+      ],
+      "notes": "Preserve the known local inference role without assigning all knowledge representation or explainability claims to SNN.\nAI self-review: Known SNN inference role explicit; other broad representation/explainability boundaries remain unresolved, not negative."
+    }
+  ]
+}

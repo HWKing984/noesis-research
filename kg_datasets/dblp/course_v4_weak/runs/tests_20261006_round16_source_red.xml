@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="5" time="0.312" timestamp="2026-10-06T22:51:53.883038+08:00" hostname="HWKing"><testcase classname="tests.test_process_dblp_ai.ProcessingRulesTest" name="test_core_cleaning_and_classification" time="0.001" /><testcase classname="tests.test_process_dblp_ai.ProcessingRulesTest" name="test_doi_url_preserves_suffix_and_ignores_query" time="0.000" /><testcase classname="tests.test_process_dblp_ai.ProcessingRulesTest" name="test_local_dtd_streaming_and_security" time="0.050" /><testcase classname="tests.test_process_dblp_ai.ProcessingRulesTest" name="test_output_target_rejects_source_ancestor_and_unmanaged_directory" time="0.003" /><testcase classname="tests.test_process_dblp_ai.ProcessingRulesTest" name="test_snapshot_date_is_explicit_and_not_invented" time="0.022"><failure message="AssertionError: '2026-09-01' is not None">self = &lt;test_process_dblp_ai.ProcessingRulesTest testMethod=test_snapshot_date_is_explicit_and_not_invented&gt;
+
+    def test_snapshot_date_is_explicit_and_not_invented(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            source = directory / 'unrelated.xml.gz'
+            source.write_bytes(b'synthetic input, not a DBLP snapshot')
+            summary = write_outputs(directory, [], {'candidate_count': 0}, source, 42, 2015, 2025)
+&gt;           self.assertIsNone(summary['source']['snapshot'])
+E           AssertionError: '2026-09-01' is not None
+
+tests\test_process_dblp_ai.py:20: AssertionError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,681 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-4e21cc67d4c13b7588bc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Neural Networks Inspired by Differential Equations",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "One differential-equation-inspired network family, no invented equation-solving task.\nAI self-review: Differential-equation-inspired deep network one full architecture."
+    },
+    {
+      "sampleId": "sample-ebb01d1e6dbeaed60727",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Context-Aware Multimodal Representation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Spatio-Temporally Explicit Environmental Modelling",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Context-aware multimodal learning is explicitly for the stated environmental modeling."
+        }
+      ],
+      "notes": "Retain spatial-temporal modeling context.\nAI self-review: Context-aware multimodal learner explicitly supports spatial-temporal environmental modeling."
+    },
+    {
+      "sampleId": "sample-f38626ddfb1d45b09b3b",
+      "entityStatus": "unresolved",
+      "entityReason": "Dynamic nested hierarchies may be a conceptual architecture description rather than an explicit computational procedure.",
+      "entities": [
+        {
+          "text": "Dynamic Nested Hierarchies",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The proposed hierarchy's method role is not settled.",
+      "relations": [],
+      "notes": "Lifelong intelligence is a broad aim, not a defined task.\nAI self-review: Nested hierarchy may be conceptual description; unresolved computational method role."
+    },
+    {
+      "sampleId": "sample-67751549d332b20c0bc4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ContactRL",
+          "label": "METHOD"
+        },
+        {
+          "text": "Safe Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Motion Planning for Contact based Human Robot Collaboration",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "ContactRL explicitly names the contact-collaboration planner."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Motion planning is explicitly safe-reinforcement-learning based."
+        }
+      ],
+      "notes": "Retain safety-constrained learner and human-robot contact context.\nAI self-review: ContactRL/safe learner explicitly plans contact human-robot motion."
+    },
+    {
+      "sampleId": "sample-ff1cfbf3087ed447054f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Adaptation of Embedding Models to Financial Filings",
+          "label": "TASK"
+        },
+        {
+          "text": "LLM Distillation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Financial-filing embedding-model adaptation is explicitly via LLM distillation."
+        }
+      ],
+      "notes": "Embedding models are adaptation objects inside the task, financial filings unnamed input.\nAI self-review: LLM distillation explicitly adapts embedding-model objects to filings."
+    },
+    {
+      "sampleId": "sample-e85e508913af679456fd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Tokenization",
+          "label": "METHOD"
+        },
+        {
+          "text": "LLMs",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Tokenization is explicit processing technique; broken words and performance are properties, no downstream task.\nAI self-review: Tokenization and LLM techniques explicit, performance effect not task."
+    },
+    {
+      "sampleId": "sample-335b578b88859ae5ed7d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "RGB-T salient object detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Modality interactions are unspecified design goal, not a named interaction algorithm.\nAI self-review: RGB-T saliency task explicit, unspecified modality interactions not named algorithm."
+    },
+    {
+      "sampleId": "sample-54fa35073af76f91de53",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "fuzzy credibility neural network",
+          "label": "METHOD"
+        },
+        {
+          "text": "select nanomaterials for nanosensors",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The fuzzy-credibility network explicitly selects nanomaterials for nanosensors."
+        }
+      ],
+      "notes": "Preserve selection object and nanosensor purpose.\nAI self-review: Fuzzy credibility network explicitly selects nanomaterials for sensors."
+    },
+    {
+      "sampleId": "sample-1213ba38976938e33434",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Progressive loss functions",
+          "label": "METHOD"
+        },
+        {
+          "text": "speech enhancement",
+          "label": "TASK"
+        },
+        {
+          "text": "deep neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Progressive loss functions are explicitly for speech enhancement."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Speech enhancement explicitly uses deep neural networks."
+        }
+      ],
+      "notes": "Progressive defines loss mechanism, not generic quality.\nAI self-review: Progressive loss and deep networks explicitly support speech enhancement."
+    },
+    {
+      "sampleId": "sample-57f633ce708e2058b933",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Air Quality Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Singular Spectrum Analysis",
+          "label": "METHOD"
+        },
+        {
+          "text": "Artificial Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Air-quality prediction is explicitly based on singular-spectrum analysis."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The same prediction is explicitly based on artificial neural networks."
+        }
+      ],
+      "notes": "Two fully written method families.\nAI self-review: Singular-spectrum/neural families explicit for air prediction."
+    },
+    {
+      "sampleId": "sample-940e05cf29f4d1434463",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Mapping layperson medical terminology into the Human Phenotype Ontology",
+          "label": "TASK"
+        },
+        {
+          "text": "neural machine translation models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Neural translation models explicitly map lay terminology into HPO."
+        }
+      ],
+      "notes": "HPO is the target ontology inside the task, not a named evaluation dataset.\nAI self-review: Translation models explicitly map terminology to HPO; ontology target not benchmark."
+    },
+    {
+      "sampleId": "sample-e3d84acd4e5ba6e3fec1",
+      "entityStatus": "unresolved",
+      "entityReason": "Classification and quality detection shares rice-cultivar context; the first continuous task boundary is not finalized.",
+      "entities": [
+        {
+          "text": "ResNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "transfer learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "quality detection of rice cultivars",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Coordinated task completeness is unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "ResNet models are explicitly for rice-cultivar quality detection."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Transfer learning is explicitly for the same quality detection."
+        }
+      ],
+      "notes": "Do not add absent rice-cultivar words to Classification.\nAI self-review: Shared rice-cultivar task context unresolved; no fabricated classification span."
+    },
+    {
+      "sampleId": "sample-3c13de4cc8b5ca7b7db3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Computational modeling",
+          "label": "METHOD"
+        },
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Editorial lists technique families and neurodevelopment domains, not a particular computational goal.\nAI self-review: Computational modeling/learning families explicit, editorial domains not tasks."
+    },
+    {
+      "sampleId": "sample-345ba9453698c7b2726f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Swimming dynamics/energy efficiency are study phenomena and properties; no explicit prediction/control task.\nAI self-review: Swimming efficiency is phenomenon/property, learning study no defined operation."
+    },
+    {
+      "sampleId": "sample-6a181a115d617efd944e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "UWB Ranging",
+          "label": "TASK"
+        },
+        {
+          "text": "Denoising Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "UWB ranging explicitly utilizes a denoising network."
+        }
+      ],
+      "notes": "Enhanced is evaluative; ranging context retained.\nAI self-review: Denoising network explicit for UWB ranging; Enhanced excluded."
+    },
+    {
+      "sampleId": "sample-6003790e5762408461ba",
+      "entityStatus": "unresolved",
+      "entityReason": "Iris regional characteristics may be feature outputs or another task object; its operation is unspecified.",
+      "entities": [
+        {
+          "text": "classification",
+          "label": "TASK"
+        },
+        {
+          "text": "deep learning alex network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Additional iris-related operation is not finalized.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Classification is explicitly using the deep-learning alex network."
+        }
+      ],
+      "notes": "Do not silently expand alex into AlexNet or invent iris recognition.\nAI self-review: alex spelling kept, iris-feature operation missing and uncertainty preserved."
+    },
+    {
+      "sampleId": "sample-05cec223b335c0b18cda",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Salient object detection",
+          "label": "TASK"
+        },
+        {
+          "text": "meanshift filtering",
+          "label": "METHOD"
+        },
+        {
+          "text": "fusion of colour information",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Salient-object detection explicitly uses mean-shift filtering."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The detection is explicitly based on colour-information fusion."
+        }
+      ],
+      "notes": "Both explicit filtering/fusion mechanisms preserved.\nAI self-review: Meanshift filtering/colour fusion explicit for saliency detection."
+    },
+    {
+      "sampleId": "sample-5af17abc321a559ab8ee",
+      "entityStatus": "unresolved",
+      "entityReason": "Risk profiles are outputs without an explicit estimation verb, and the coordinated MCI context makes complete task boundaries uncertain.",
+      "entities": [
+        {
+          "text": "screening",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Full screening/risk-profile task coverage is unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The screening procedure is explicitly via a machine-learning framework."
+        }
+      ],
+      "notes": "No omitted risk-estimation operation inserted; no MCI dataset named.\nAI self-review: Risk profiles outputs and shared MCI context prevent complete task boundaries."
+    },
+    {
+      "sampleId": "sample-794d9226c81f89687a11",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Self-attention guided representation learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "image-text matching",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The self-attention-guided learner is explicitly for image-text matching."
+        }
+      ],
+      "notes": "One compound learning mechanism.\nAI self-review: Attention-guided representation learner explicitly image-text matches."
+    },
+    {
+      "sampleId": "sample-26d1923322bce7f98d2c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Visual tracking",
+          "label": "TASK"
+        },
+        {
+          "text": "Siamese convolutional neural network with region proposal and domain specific updating",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Visual tracking explicitly uses the Siamese network with proposal/updating mechanisms."
+        }
+      ],
+      "notes": "Entire composite architecture, no nested member duplication.\nAI self-review: Full Siamese/proposal/updating composite explicitly tracks."
+    },
+    {
+      "sampleId": "sample-d59e231a620853c7a324",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MSHP3D",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-stage cross-modal fusion based on Hybrid Perception",
+          "label": "METHOD"
+        },
+        {
+          "text": "indoor 3D object detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "MSHP3D names the indoor 3D detector."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The hybrid-perception cross-modal fusion is explicitly for indoor detection."
+        }
+      ],
+      "notes": "One complete fusion mechanism and named method.\nAI self-review: MSHP3D/hybrid-perception multimodal fusion explicit for indoor 3D detection."
+    },
+    {
+      "sampleId": "sample-88d714e7e5e9bc357112",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "diagnosis of periapical diseases with dental X-rays",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Periapical diagnosis from dental X-rays is explicitly deep-learning based."
+        }
+      ],
+      "notes": "Efficient removed; disease and modality retained.\nAI self-review: Deep learning diagnoses dental-X-ray periapical disease; efficient excluded."
+    },
+    {
+      "sampleId": "sample-60b96b33a73a2252d6f5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Remote heart rate estimation",
+          "label": "TASK"
+        },
+        {
+          "text": "convolutional neural networks with transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Remote heart-rate estimation is explicitly via the CNN-with-transformer composite."
+        }
+      ],
+      "notes": "One composed network mention.\nAI self-review: CNN-with-transformer composite explicit for remote heart-rate estimation."
+    },
+    {
+      "sampleId": "sample-1abcf59dfffeb7d09b99",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Data Selection",
+          "label": "TASK"
+        },
+        {
+          "text": "Object Detection in Various Lighting Conditions for Autonomous Vehicles",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Two tasks; study framing and data-selection noun do not name an algorithm.\nAI self-review: Data selection/detection are tasks, no named selection algorithm."
+    },
+    {
+      "sampleId": "sample-8f0b9e5ceae022c1bbd6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Foot-constrained spatial-temporal transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "keyframe-based complex motion synthesis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The foot-constrained transformer is explicitly for keyframe motion synthesis."
+        }
+      ],
+      "notes": "Retain motion complexity/input context and foot constraint.\nAI self-review: Foot-constrained transformer explicit for keyframe motion synthesis, contextual modifiers retained."
+    }
+  ]
+}

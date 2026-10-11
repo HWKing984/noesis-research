@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "graphId": "ai-literature-ed16399925fac2a599ed",
+  "bundleManifestSha256": "eace8e388e5cbec2369e16534870aca145000ae678641cb7fb013eddc412ca1f",
+  "startedAtUTC": "2026-10-07T14:45:44.864033+00:00",
+  "batchesCommitted": 0,
+  "databaseReset": false,
+  "error": "Neo4j connection or response unavailable",
+  "liveDatabaseImported": false,
+  "finishedAtUTC": "2026-10-07T14:45:47.130313+00:00"
+}

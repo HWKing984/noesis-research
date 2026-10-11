@@ -1,0 +1,15 @@
+{
+  "provider":"OpenAI via Codex",
+  "model":"unknown_codex_model",
+  "independent":false,
+  "reviews":[
+    {"index":0,"reason":"Read the full preserved SciBERT abstract again: three task names, scientific corpus unnamed, SciBERT and BERT repeated. Unsupervised pretraining is an explicit approach. URL is protected, not another model occurrence. No task names or datasets supplied from title or paper body."},
+    {"index":1,"reason":"Keep quarantine after whole-source review: SQuAD 1.1 and 2.0 cannot provide the second full dataset identity in contiguous flat BIO. All named benchmark candidates remain preserved but this document is not an eligible complete NER sample. Technical prediction/masking operations have explicit objects; no inferred SQuAD 2.0 literal."},
+    {"index":2,"reason":"Full DyGIE++ source supports three named extraction tasks and literal context/disambiguation operations. Preserve the full compound text-span operation under the existing44 task policy. BERT/embeddings/span-graph updates/coreference propagation are explicit technical approaches; four unnamed datasets excluded. No graph-update relation inferred."},
+    {"index":3,"reason":"SpERT source has contiguous joint extraction and recognition/filtering goals. Unlike missing-head method names, these compound TASKs retain the whole literal operation; no atomic decomposition claim. BERT embeddings stays one flat METHOD, BERT pass separately named. Negative sampling is a method, not a benchmark. No named datasets."},
+    {"index":4,"reason":"Rechecked all source sentences: ACE04/ACE05/SciERC explicitly named; no PURE acronym in abstract. End-to-end relation extraction and the pipelined compound task retain qualifiers. Representation learning, early entity fusion and global-context incorporation are implementation methods. Generic model/encoder instances are unnamed; the technical family pre-trained encoders and joint models are source literals. Pair semantics intentionally remain undecided."},
+    {"index":5,"reason":"LUKE is present only in protected source URL/title, not abstract text; do not label it. The five benchmark names and their task descriptions are explicit. The masked-word/entity prediction goal retains its objects. Longest architecture and attention spans correctly suppress nested transformer/attention entities. Wikipedia construction corpus is not a benchmark endpoint."},
+    {"index":6,"reason":"UniversalNER is a METHOD name, so internal NER substring is never a task. Source NER elsewhere is the stated task acronym; open NER keeps open qualifier. Standalone LLMs/model names repeat with consistent family senses. Human subject domains and unnamed datasets excluded. Distillation and instruction-tuned systems do not imply any new relation labels."},
+    {"index":7,"reason":"DocRED is solely a dataset, not a method. Document-level RE and intra-sentence relation extraction are explicit tasks; Wikipedia/Wikidata construction provenance remains excluded. All method references unnamed, so no METHOD endpoint is invented. The resulting zero scoped pairs is a genuine scoped inventory, not positive or negative training evidence."}
+  ]
+}

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="7.910" timestamp="2026-10-08T21:34:24.758705+08:00" hostname="HWKing"><testcase classname="tests.test_benchmark_abstract_training" name="test_benchmark_inputs_and_recall_guard" time="7.661" /></testsuite></testsuites>

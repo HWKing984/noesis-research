@@ -1,0 +1,668 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "generationDecisionsSha256": "6209238d09bacbc5ececd8529b806930cd4dfed8f177ab9e90272a5b0a09b4cf",
+  "judgments": [
+    {
+      "sampleId": "sample-27783f2726da6b1d600a",
+      "verdict": "confirmed",
+      "reason": "Expressway toll-lane optimization/visualization is one complete target with an explicit DL instrument."
+    },
+    {
+      "sampleId": "sample-6ca9aef3596775bf2095",
+      "verdict": "confirmed",
+      "reason": "OCT boundary-segmentation phrase has uncertain method/task boundary; keep quarantine."
+    },
+    {
+      "sampleId": "sample-3d2bda909731e488df22",
+      "verdict": "confirmed",
+      "reason": "LLMs and financial sentiment analysis are explicit review topics; generic Datasets supplies no DATASET name."
+    },
+    {
+      "sampleId": "sample-9d607f60e3920fb23863",
+      "verdict": "confirmed",
+      "reason": "Security/energy efficiency do not specify the DRL-controlled healthcare-IoT operation."
+    },
+    {
+      "sampleId": "sample-a0a802ba0b54f1d7cbe2",
+      "verdict": "confirmed",
+      "reason": "Deep CNN explicitly recognizes finger veins; features are not named datasets."
+    },
+    {
+      "sampleId": "sample-105ae0131e84d616c625",
+      "verdict": "revised",
+      "reason": "Complex Network is the complete family, not the trailing Based adjective; generic image analysis prevents certifying the combined task inventory.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Image Analysis is a generic operation without a specified technical subproblem in the coordinated target.",
+        "entities": [
+          {
+            "text": "Image Recognition and Analysis",
+            "label": "TASK"
+          },
+          {
+            "text": "Complex Network",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Cannot certify complete concrete-task inventory; the recognition association alone is insufficient.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "USED_FOR",
+            "reason": "The complex-network approach is explicitly for image recognition and analysis."
+          }
+        ],
+        "notes": "Keep the original combined target without inventing an image dataset.",
+        "sampleId": "sample-105ae0131e84d616c625"
+      }
+    },
+    {
+      "sampleId": "sample-cf6098cd67d15f034f4d",
+      "verdict": "confirmed",
+      "reason": "ML explicitly classifies rolling bearings; Novel and Techniques add no identity."
+    },
+    {
+      "sampleId": "sample-812b0164bad1ba81ede5",
+      "verdict": "confirmed",
+      "reason": "ThreMA introduces the ontology-based ICT threat-modeling approach; no ontology dataset name."
+    },
+    {
+      "sampleId": "sample-707ab4a66f928d2137ee",
+      "verdict": "confirmed",
+      "reason": "CNN-BiLSTM and hybrid DL detect intrusions; feature selection may only prepare inputs."
+    },
+    {
+      "sampleId": "sample-25c2c26896ccbb0d9c72",
+      "verdict": "confirmed",
+      "reason": "Trailing KG-DEMATEL-ISM-MICMAC clearly modifies risk analysis, but graph-construction scope is uncertain."
+    },
+    {
+      "sampleId": "sample-e1d49523af375090ae23",
+      "verdict": "confirmed",
+      "reason": "Multiscale CNN and calcification-bearing mammogram classification are literal."
+    },
+    {
+      "sampleId": "sample-70fafbcfafe55d01c8d2",
+      "verdict": "confirmed",
+      "reason": "Preserve explicit associations quoted in correction title, without treating the notice as a new experiment or merging paper identity."
+    },
+    {
+      "sampleId": "sample-b60d6ba921873f9cbe65",
+      "verdict": "confirmed",
+      "reason": "Physical transformer core-loss estimation uses a loss-separation model; no neural Transformer is inferred."
+    },
+    {
+      "sampleId": "sample-d4342081244a05ec3eb9",
+      "verdict": "confirmed",
+      "reason": "Two-level progressive-attention convolutional network directly performs fine-grained recognition."
+    },
+    {
+      "sampleId": "sample-a091d2e5353ba33e8bde",
+      "verdict": "confirmed",
+      "reason": "GDP-indicator role and investment forecaster role are not interchangeable; keep the pair uncertain."
+    },
+    {
+      "sampleId": "sample-f07330345b73435a553b",
+      "verdict": "confirmed",
+      "reason": "Fuzzy region competition and Gaussian mixture model explicitly perform remote-sensing segmentation."
+    },
+    {
+      "sampleId": "sample-ec2e7fdcbba355fa2b0a",
+      "verdict": "confirmed",
+      "reason": "Recursive CNN explicitly detects exploit kits; Image Game is framing."
+    },
+    {
+      "sampleId": "sample-0e90ecfd600ca65b7c34",
+      "verdict": "confirmed",
+      "reason": "GFHANet and its literal expansion explicitly detect salient sonar objects."
+    },
+    {
+      "sampleId": "sample-1e73aabb803d45307c7d",
+      "verdict": "confirmed",
+      "reason": "Party prediction is a stated model target, not verified evidence of future political outcomes; historical data is unnamed."
+    },
+    {
+      "sampleId": "sample-9e32036afdd829350b7d",
+      "verdict": "confirmed",
+      "reason": "Rotation-invariant local-binary convolution architecture is explicit without a stated downstream task."
+    },
+    {
+      "sampleId": "sample-38f95a4ef234add62f33",
+      "verdict": "confirmed",
+      "reason": "Thai morning-glory price forecasting explicitly uses DL; crop identity is not DATASET."
+    },
+    {
+      "sampleId": "sample-b29ca66e882d3023a6d3",
+      "verdict": "confirmed",
+      "reason": "DRL is an explicit charging instrument; sensor networks are the application context."
+    },
+    {
+      "sampleId": "sample-1311a25f0e38c9bd9d61",
+      "verdict": "confirmed",
+      "reason": "Inverted Transformer forecasts traffic; sleep-control execution may be downstream of those forecasts."
+    },
+    {
+      "sampleId": "sample-0d9d10e113acea62f4d8",
+      "verdict": "confirmed",
+      "reason": "The literal demand-forecasting phrase retains cooling/building context, including original awkward grammar."
+    },
+    {
+      "sampleId": "sample-b012e6cc1c5912aa5e1d",
+      "verdict": "confirmed",
+      "reason": "GLoU-MiT and Mamba-guided U-mix Transformer explicitly segment UAV pavement cracks."
+    },
+    {
+      "sampleId": "sample-1d888aa2fcc0f0261e13",
+      "verdict": "confirmed",
+      "reason": "Facility data model may be a schema, not an energy-management algorithm; keep unresolved resource role."
+    },
+    {
+      "sampleId": "sample-4194df171f6a8b2c4e0a",
+      "verdict": "confirmed",
+      "reason": "DL explicitly extracts non-debris glacier areas; time-series remote-sensing input is unnamed."
+    },
+    {
+      "sampleId": "sample-d3cc8f40228f5dc41008",
+      "verdict": "confirmed",
+      "reason": "Metaheuristic-assisted ANN explicitly supports PV-system design/control as a full composite."
+    },
+    {
+      "sampleId": "sample-05b18d7cfdb9bdd8ca92",
+      "verdict": "confirmed",
+      "reason": "Transformer Semantics lacks disambiguating context; do not invent neural or physical identity."
+    },
+    {
+      "sampleId": "sample-bc359ad650be89da3f72",
+      "verdict": "confirmed",
+      "reason": "Review title explicitly associates ML and coffee classification without proving a new test."
+    },
+    {
+      "sampleId": "sample-9c270d968047e0d8d31a",
+      "verdict": "confirmed",
+      "reason": "Environmental sustainability is a broad goal, not a specific literal computational task."
+    },
+    {
+      "sampleId": "sample-1a242f9591992da91cf8",
+      "verdict": "confirmed",
+      "reason": "Generative AI writing assistance is explicit; ChatGPT authorship question does not settle its implementing role."
+    },
+    {
+      "sampleId": "sample-6c8478ab5b0cc42cd55f",
+      "verdict": "revised",
+      "reason": "Machine Learning is the actual method family; trailing Based only links it to the independent intrusion task and should not extend its boundary.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Machine Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Intrusion Detection in IoT",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "IoT intrusion detection explicitly is ML-based."
+          }
+        ],
+        "notes": "Research trends and challenges are framing; no IoT dataset named.",
+        "sampleId": "sample-6c8478ab5b0cc42cd55f"
+      }
+    },
+    {
+      "sampleId": "sample-16613ff3e5a31ec78891",
+      "verdict": "confirmed",
+      "reason": "ML-service platform is software; integer-discretization evaluation versus technique role remains unresolved."
+    },
+    {
+      "sampleId": "sample-eb435f0b46db3107be1b",
+      "verdict": "confirmed",
+      "reason": "Separable Gaussian networks explicitly concern function approximation; bare structure/analysis is framing."
+    },
+    {
+      "sampleId": "sample-e002e8d4107b0c4e1b75",
+      "verdict": "confirmed",
+      "reason": "DNN stages COPD, but formula-driven pre-training is not necessarily itself the staging method."
+    },
+    {
+      "sampleId": "sample-b4a63a1f5b76639647ce",
+      "verdict": "confirmed",
+      "reason": "Spectroscopy measures inputs; black-plastic recycling does not literally identify the classifier target operation."
+    },
+    {
+      "sampleId": "sample-dabed6901429bcf0e4d7",
+      "verdict": "confirmed",
+      "reason": "FedDKD and decentralized-distillation FL form named/expanded complete methods without a task."
+    },
+    {
+      "sampleId": "sample-d81cceb480ee3d6cf0a1",
+      "verdict": "confirmed",
+      "reason": "Bare classification lacks object; unnamed corresponding classifier cannot complete the task inventory."
+    },
+    {
+      "sampleId": "sample-836ff7a17a5475018a2b",
+      "verdict": "confirmed",
+      "reason": "Multiple-attention DNN explicitly forecasts metro flow; devices are measurement hardware."
+    },
+    {
+      "sampleId": "sample-10d5e074af3a3ae0e844",
+      "verdict": "confirmed",
+      "reason": "Multibranch cross-pseudo supervision explicitly supports medical segmentation; training settings are not dataset names."
+    },
+    {
+      "sampleId": "sample-63ac15dee904600e1517",
+      "verdict": "confirmed",
+      "reason": "Full multimodal-mixup encoder implements multimodal translation; no nested method inside the task."
+    },
+    {
+      "sampleId": "sample-e908462f9d814dcb1a3b",
+      "verdict": "revised",
+      "reason": "Consistency and difference share the networks head; preserve a group, remove individual group relations, and keep ICDN/Transformer relations separately.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "ICDN",
+            "label": "METHOD"
+          },
+          {
+            "text": "transformer",
+            "label": "METHOD"
+          },
+          {
+            "text": "multimodal sentiment analysis",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [
+          {
+            "text": "consistency and difference networks",
+            "label": "METHOD"
+          }
+        ],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "ICDN explicitly targets multimodal sentiment analysis."
+          },
+          {
+            "head": "e2",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "The integration Transformer explicitly supports multimodal sentiment analysis."
+          }
+        ],
+        "notes": "The consistency/difference phrase may share its networks head.",
+        "sampleId": "sample-e908462f9d814dcb1a3b"
+      }
+    },
+    {
+      "sampleId": "sample-ec61bda74f3a96c5c94b",
+      "verdict": "confirmed",
+      "reason": "Cyber resilience is a broad goal; no concrete defensive LLM task appears."
+    },
+    {
+      "sampleId": "sample-2104cfe1fd52b15fdf93",
+      "verdict": "confirmed",
+      "reason": "Transformer-based self-supervised pre-training is a full composite explicitly for time-series prediction."
+    },
+    {
+      "sampleId": "sample-81bdd33c13961f1e169c",
+      "verdict": "revised",
+      "reason": "The acceleration task contains an identifiable CNN target; complete flat inventory is overconfident, so preserve the pruning association but quarantine the overlap.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "CNN target identity overlaps the full accelerating-networks task in the flat schema.",
+        "entities": [
+          {
+            "text": "RFPruning",
+            "label": "METHOD"
+          },
+          {
+            "text": "pruning",
+            "label": "METHOD"
+          },
+          {
+            "text": "accelerating convolutional neural networks",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Incomplete flat target/method inventory despite clear pruning-to-acceleration association.",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "RFPruning explicitly accelerates CNNs by pruning."
+          },
+          {
+            "head": "e2",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "Pruning is explicitly the acceleration method."
+          }
+        ],
+        "notes": "Retraining-free is procedure qualifier; the CNN target is nested in the full acceleration task, not separately labeled.",
+        "sampleId": "sample-81bdd33c13961f1e169c"
+      }
+    },
+    {
+      "sampleId": "sample-fb5c5284ae80458cc96c",
+      "verdict": "confirmed",
+      "reason": "Unnamed Semantic Web assistant framework does not identify an algorithm or operation."
+    },
+    {
+      "sampleId": "sample-b9db7a74abc46181405d",
+      "verdict": "confirmed",
+      "reason": "Educational personalization is explicit, while analytics/decision-making subtasks lack specific computation/object."
+    },
+    {
+      "sampleId": "sample-a85f4f2e9d697d0834bc",
+      "verdict": "confirmed",
+      "reason": "DxFormer is a diagnostic system, but a disease/task operation is not literally stated; do not synthesize one."
+    },
+    {
+      "sampleId": "sample-d6c43e5e7a7484510929",
+      "verdict": "confirmed",
+      "reason": "Attention networks predict phenotype from single-cell RNA-seq; unnamed modality is not DATASET."
+    },
+    {
+      "sampleId": "sample-b28ffa58b714171bfead",
+      "verdict": "confirmed",
+      "reason": "Hierarchical DL predicts GO annotations; protein-knowledge integration may be input preparation."
+    },
+    {
+      "sampleId": "sample-b94510b839a27c91fa9d",
+      "verdict": "confirmed",
+      "reason": "DeepLUCIA and named learning annotator explicitly predict chromatin loops; no unnamed assay becomes a dataset."
+    },
+    {
+      "sampleId": "sample-eddb40b137a47e7a3fcd",
+      "verdict": "confirmed",
+      "reason": "DCSO is an ontology and data-management plans are documents, not named datasets or learning methods."
+    },
+    {
+      "sampleId": "sample-9a0449ee7fbc675fbf28",
+      "verdict": "confirmed",
+      "reason": "Neural causal model explicitly estimates electricity demand; Bolivia/El Espino is case location."
+    },
+    {
+      "sampleId": "sample-90763c5daaccdc91d9af",
+      "verdict": "confirmed",
+      "reason": "Crop production is a broad application objective; keep uncertain rather than a concrete DL prediction task."
+    },
+    {
+      "sampleId": "sample-5bf6ccc54be5d98526cc",
+      "verdict": "confirmed",
+      "reason": "Model-for-metastasis wording does not literally state prediction; ultrasound features are unnamed inputs."
+    },
+    {
+      "sampleId": "sample-a0e115b8cc420e4999b4",
+      "verdict": "confirmed",
+      "reason": "Classical ML and DL explicitly address sleep-stage classification; review is not new experimental evidence."
+    },
+    {
+      "sampleId": "sample-da120d95ecfe143a1e0a",
+      "verdict": "confirmed",
+      "reason": "ML-assisted drift-capacity prediction is stated; columns/alloy bars are physical target context."
+    },
+    {
+      "sampleId": "sample-792bbacc47f19f0d18bf",
+      "verdict": "confirmed",
+      "reason": "Elastic structural analysis is a concrete mechanics computation explicitly using GNN, not generic analysis."
+    },
+    {
+      "sampleId": "sample-9e4c18d707ab502263d8",
+      "verdict": "confirmed",
+      "reason": "The LLM/UML assessment question states an investigated use, not demonstrated expert-grade performance."
+    },
+    {
+      "sampleId": "sample-5b0a3a88e82489697ef3",
+      "verdict": "confirmed",
+      "reason": "Both DL and transfer learning explicitly address breast-cell segmentation; early diagnosis is motivation."
+    },
+    {
+      "sampleId": "sample-2080c057eedc0230e180",
+      "verdict": "revised",
+      "reason": "PAD diagnosis is specific, but management does not identify a computational intervention; do not certify the entire coordinated target as complete.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Peripheral artery disease management is not a specified technical computational operation.",
+        "entities": [
+          {
+            "text": "machine learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "peripheral artery disease diagnosis and management",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Full diagnosis-and-management target cannot be certified as complete from the title.",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "The systematic review explicitly concerns ML for PAD diagnosis/management."
+          }
+        ],
+        "notes": "A title association is not evidence of an implemented clinical decision aid.",
+        "sampleId": "sample-2080c057eedc0230e180"
+      }
+    },
+    {
+      "sampleId": "sample-9f4594f89fb8c2a34af5",
+      "verdict": "confirmed",
+      "reason": "Multichannel CNN explicitly detects wisdom teeth in panoramic radiographs; clinical knowledge is input."
+    },
+    {
+      "sampleId": "sample-be5cc06bc03ee88f6d88",
+      "verdict": "confirmed",
+      "reason": "MFA-Net and its full association-network expansion explicitly segment medical images."
+    },
+    {
+      "sampleId": "sample-a349e399c318ba1bf889",
+      "verdict": "confirmed",
+      "reason": "RSAFormer and region-self-attention Transformer explicitly segment polyps."
+    },
+    {
+      "sampleId": "sample-38ed4e50664172cccdec",
+      "verdict": "confirmed",
+      "reason": "ML explicitly identifies at-risk fathers; neither title nor annotation proves valid clinical screening."
+    },
+    {
+      "sampleId": "sample-7931ec718b636538873c",
+      "verdict": "confirmed",
+      "reason": "From ontology to code lacks a literal operation/model name; do not add unstated code generation."
+    },
+    {
+      "sampleId": "sample-4eeab490e8f894c47ff2",
+      "verdict": "confirmed",
+      "reason": "Decomposed-subspace learning is explicitly for bidirectional image generation; supervised is setting."
+    },
+    {
+      "sampleId": "sample-5bb83d0e31edfbb6acb3",
+      "verdict": "confirmed",
+      "reason": "Gaussian-convolution-vector histogram explicitly supports leaf recognition; no named leaf dataset."
+    },
+    {
+      "sampleId": "sample-4c6c2295c24c977235e6",
+      "verdict": "confirmed",
+      "reason": "Full tail-fin removal for mass estimation is stated with a computer-vision instrument."
+    },
+    {
+      "sampleId": "sample-516df4ed8426b5f0666c",
+      "verdict": "confirmed",
+      "reason": "AgroPortal is a vocabulary/ontology repository, not automatically a dataset release or learning algorithm."
+    },
+    {
+      "sampleId": "sample-37d67b4149e408ec058f",
+      "verdict": "confirmed",
+      "reason": "GCN explicitly tracks animals in dense groups; crowd slogan is data, not an instruction."
+    },
+    {
+      "sampleId": "sample-591b9b06f5e44584b5ce",
+      "verdict": "confirmed",
+      "reason": "Knowledge-driven DL explicitly diagnoses dairy-cow diseases; illness reports are unnamed data."
+    },
+    {
+      "sampleId": "sample-16d100a889039bea3c51",
+      "verdict": "confirmed",
+      "reason": "FL is explicit; optical network/control-plane architecture is infrastructure, not a stated separate computation."
+    },
+    {
+      "sampleId": "sample-b27e08948099ba39892d",
+      "verdict": "confirmed",
+      "reason": "Keep nIntroduction typo and computer-vision family; special-section introduction is not experimental evidence."
+    },
+    {
+      "sampleId": "sample-2307618b0b3457ad6226",
+      "verdict": "confirmed",
+      "reason": "Social-network diffusion models describe propagation, not generative diffusion; no downstream task is named."
+    },
+    {
+      "sampleId": "sample-cf8934dbcf274e2061e7",
+      "verdict": "confirmed",
+      "reason": "Ship Detector is an artifact noun; uncertain full detection-task boundary remains quarantined."
+    },
+    {
+      "sampleId": "sample-f17621ea4ca9bf3e1ce1",
+      "verdict": "confirmed",
+      "reason": "Review explicitly links DL and driving pedestrian detection, not a new evaluation."
+    },
+    {
+      "sampleId": "sample-5349c555680b9e9dc342",
+      "verdict": "confirmed",
+      "reason": "NLP explicitly summarizes related blogs; preserve literal apostrophe and unnamed inputs."
+    },
+    {
+      "sampleId": "sample-417d7374cfe262155818",
+      "verdict": "confirmed",
+      "reason": "Correction title quotes ANN/Spark anomaly association; Spark is platform and notice is not an independent experiment."
+    },
+    {
+      "sampleId": "sample-e600ea317b099dac7058",
+      "verdict": "confirmed",
+      "reason": "Quoted LSTM detection association is clear, while quantum PSO may tune the detector; correction remains separate."
+    },
+    {
+      "sampleId": "sample-d79c6104d7b52c7641dd",
+      "verdict": "confirmed",
+      "reason": "Traffic encoding is explicit, but the literal prediction phrase lacks a target; keep incomplete task inventory."
+    },
+    {
+      "sampleId": "sample-602c566da2b32a49014b",
+      "verdict": "confirmed",
+      "reason": "ML segmentation is clear; finite elements may consume anatomy, and full CT task span cannot be reconstructed."
+    },
+    {
+      "sampleId": "sample-a7c059f3374a2a3fe54b",
+      "verdict": "confirmed",
+      "reason": "ML predicts post-thrombectomy outcomes; radiomics is an input feature, not a separately named model/dataset."
+    },
+    {
+      "sampleId": "sample-d45524689496b596f46a",
+      "verdict": "confirmed",
+      "reason": "Image processing and ML explicitly concern CT stroke diagnosis without any clinical accuracy claim."
+    },
+    {
+      "sampleId": "sample-b75f3fcc8d94e8c3a7ab",
+      "verdict": "confirmed",
+      "reason": "ML disease prediction/diagnosis association is explicit; preprocessing may only provide inputs."
+    },
+    {
+      "sampleId": "sample-c1712747da83351a971e",
+      "verdict": "confirmed",
+      "reason": "Visual-language foundation models are named; diagnostic/analytical application categories do not specify tasks."
+    },
+    {
+      "sampleId": "sample-410ea04d8be469a0de8f",
+      "verdict": "confirmed",
+      "reason": "DualA-Net and adaptive dual-branch network explicitly segment medical images; generalizable is a quality claim."
+    },
+    {
+      "sampleId": "sample-741f7256b59cfc49e8aa",
+      "verdict": "confirmed",
+      "reason": "Iowa Gambling Task is a behavioral protocol, not automatically DATASET; cognitive model versus task execution stays uncertain."
+    },
+    {
+      "sampleId": "sample-e643de943d919878b2c1",
+      "verdict": "confirmed",
+      "reason": "ANN explicitly addresses portfolio management with risk/uncertain-return constraints; no investment advice is asserted."
+    },
+    {
+      "sampleId": "sample-b79ef8111c9f91d92f31",
+      "verdict": "confirmed",
+      "reason": "Correlation utilization does not specify the sensor scheduling/control operation; goals alone do not establish a task."
+    },
+    {
+      "sampleId": "sample-8d9f84816cbaf6f401b9",
+      "verdict": "confirmed",
+      "reason": "Spatiotemporal-decoupling Transformer explicitly recognizes 3D skeleton-based driver actions."
+    },
+    {
+      "sampleId": "sample-035b63232f0466d421fa",
+      "verdict": "confirmed",
+      "reason": "Backstepping controller and RBF NN are complete methods; physical platform does not supply an absent task literal."
+    },
+    {
+      "sampleId": "sample-85608f6165e278fc1ee1",
+      "verdict": "confirmed",
+      "reason": "Neural network and signal processing are explicit families; large-scale systems is context, not task."
+    },
+    {
+      "sampleId": "sample-f127524b51dbfa8a8005",
+      "verdict": "confirmed",
+      "reason": "Deep RL explicitly performs UAV mission planning; no simulator dataset is inferred."
+    },
+    {
+      "sampleId": "sample-5069563073a4bff61415",
+      "verdict": "confirmed",
+      "reason": "Cybersecurity KG construction is a specific operation; survey supplies no named constructing model."
+    },
+    {
+      "sampleId": "sample-3647e05a8577eab7e57b",
+      "verdict": "confirmed",
+      "reason": "Public safety is broad policy context without a concrete ML detection/prediction task."
+    },
+    {
+      "sampleId": "sample-63918192ba5a1eaf45bf",
+      "verdict": "confirmed",
+      "reason": "ML-driven sea-ice retrieval is clear, but the full assessment task overlaps entities; keep uncertainty."
+    },
+    {
+      "sampleId": "sample-01a32ec086d2214a3ed3",
+      "verdict": "confirmed",
+      "reason": "ML cloud services are selected products, not the selector; no automatic task-executing model is established."
+    },
+    {
+      "sampleId": "sample-59ae68e319ef63e6320e",
+      "verdict": "confirmed",
+      "reason": "Differential privacy qualifies the full federated-learning method; non-IID is distribution setting."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+ "passed": 11,
+ "failed": 0,
+ "checks": [
+  {
+   "name": "未调查返回 status=none（不是失败）",
+   "ok": true,
+   "detail": "{\"documentId\": \"doc-7d858ca9a988d167\", \"publicationId\": \"conf/nips/VaswaniSPUJGKP17\", \"status\": \"none\", \"detail\": \"full-text availability has not been investigated yet\"}"
+  },
+  {
+   "name": "真下载 arXiv 1706.03762",
+   "ok": true,
+   "detail": "2215244 bytes"
+  },
+  {
+   "name": "upload 真 PDF → available 且 sha256 一致",
+   "ok": true,
+   "detail": "status=available sha=bdfaa68d8984…"
+  },
+  {
+   "name": "file 端点回真 PDF",
+   "ok": true,
+   "detail": "2215244 bytes"
+  },
+  {
+   "name": "Range → 206 且片段一致",
+   "ok": true,
+   "detail": "bytes 0-1023/2215244"
+  },
+  {
+   "name": "越界 Range → 416",
+   "ok": true,
+   "detail": "bytes */2215244"
+  },
+  {
+   "name": "status 持久化为 available",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "fetch 真抓取 → available（完整下载链）",
+   "ok": true,
+   "detail": "status=available size=6768044 detail="
+  },
+  {
+   "name": "抓取文件可读且为 PDF",
+   "ok": true,
+   "detail": "6768044 bytes"
+  },
+  {
+   "name": "白名单外域名被拒（SSRF 防护）且落 fetch_failed",
+   "ok": true,
+   "detail": "status=fetch_failed detail=host not allowed: evil.example.com"
+  },
+  {
+   "name": "已缓存文档重复 fetch 幂等（200 + available + fetched=False）",
+   "ok": true,
+   "detail": "status=available fetched=False"
+  }
+ ]
+}

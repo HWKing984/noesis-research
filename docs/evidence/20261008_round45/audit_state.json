@@ -1,0 +1,51 @@
+{
+  "status": "completed",
+  "version": "abstract_train_benchmark_expansion_v1",
+  "trainQueue": 62,
+  "NERtrain": 58,
+  "NERexcluded": 4,
+  "entitySupport": {
+    "TASK": 218,
+    "METHOD": 405,
+    "DATASET": 55
+  },
+  "DATASETSourcePapers": 20,
+  "knownPairs": 271,
+  "relationSupport": {
+    "EVALUATED_ON": 61,
+    "USED_FOR": 184,
+    "NO_RELATION": 26
+  },
+  "unknownPairs": 1659,
+  "eligiblePairs": 1930,
+  "completeRelationDocuments": 11,
+  "addedTrainPapers": 4,
+  "oldReceiptLinesPreserved": 58,
+  "maxMarkedTokens": 333,
+  "opaqueDevFilesIdentical": 9,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "heldOutAbstractsAccessed": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "independentHumanGold": false,
+  "selectionBias": "targeted reading-comprehension benchmark papers; not representative independent evaluation",
+  "BIORecomputed": 58,
+  "actualSourcesParsed": 4,
+  "sourceRequestWallSpacingsSeconds": [
+    15.100272,
+    15.098972,
+    15.109734
+  ],
+  "newLiteralDatasetNames": [
+    "DROP",
+    "HotpotQA",
+    "RACE",
+    "TriviaQA"
+  ],
+  "literalDatasetNames": 31,
+  "newEVALUATED_ONSourcePapers": 1,
+  "engineeringTests": 373,
+  "regressionSeconds": 234.534,
+  "regressionScope": "D_drive_isolated_process_temp; C_drive_previous_rename_problem_not_fixed"
+}

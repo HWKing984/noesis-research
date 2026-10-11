@@ -1,0 +1,30 @@
+{
+  "signaturesExamined": 88762,
+  "priorRejectionEntries": 9064,
+  "changedRejectionReasons": 4,
+  "beforeDecisionCounts": {
+    "no_valid_orcid": 7396,
+    "no_disambiguated_crosswalk": 1657,
+    "exact_base_name_mismatch": 1,
+    "single_publication_support_only": 6,
+    "recovered_source_crosswalk": 2,
+    "contradictory_orcid_authority": 2
+  },
+  "afterDecisionCounts": {
+    "no_valid_orcid": 7396,
+    "no_disambiguated_crosswalk": 1654,
+    "exact_base_name_mismatch": 3,
+    "single_publication_support_only": 8,
+    "recovered_source_crosswalk": 2,
+    "contradictory_orcid_authority": 1
+  },
+  "beforeORCIDConflicts": 2,
+  "afterORCIDConflicts": 1,
+  "identityLinksChanged": 0,
+  "remainingUnresolved": 9062,
+  "databaseWritten": false,
+  "xmlScanned": false,
+  "networkAccess": false,
+  "scope": "Replay existing sealed inventory only; author aliases, labels, graph and resolved identities remain unchanged.",
+  "limitations": "No new authority evidence or independent real-world verification; refusal reason corrections cannot justify new links."
+}

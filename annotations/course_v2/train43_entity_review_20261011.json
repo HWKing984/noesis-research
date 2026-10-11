@@ -1,0 +1,249 @@
+{
+  "version": "train43_full_abstract_ai_review_20261011",
+  "inputZip": "D:/Users/Y7000P/Downloads/v2_train65_cot_binding_fixed_20261011.zip",
+  "reviewer": "Codex AI, same-session source reading; not independent human annotation",
+  "scope": "METHOD/TASK/DATASET, original abstract, Unicode right-open spans, flat non-overlapping mentions. Named technical classes and explicit technical operations only; no title/URL supplementation. Existing explicit model names take precedence over a containing operation. Additions are per-paper decisions, not a global lexicon.",
+  "iterationCompact": {
+    "goal": "Finish one source-reading pass over the remaining 43 train abstracts and produce actual revised candidates",
+    "baseline": "65 abstracts / 841 mentions / 176 weak positive relations, CoT fix included",
+    "constraints": "Keep the other 22 documents and all dev/test data unchanged; no fit, inference, model promotion or new F1",
+    "nextStep": "Review withdrawn/touched relations and complete fixed dev20; do not turn unresolved pairs into negatives"
+  },
+  "relationRebindings": [
+    {
+      "arxivId": "2208.08300", "headId": "e1", "tailId": "e2", "label": "USED_FOR",
+      "reason": "The unchanged source sentence explicitly introduces the Transformer model to predict the future price of stocks. The larger head is the same directly attributed model, not a new inherited actor."
+    },
+    {
+      "arxivId": "2110.14168", "headId": "e4", "tailId": "e5", "label": "USED_FOR",
+      "reason": "The unchanged source says training verifiers to judge the correctness of model completions. Verifiers is the model head; removal of training from its name leaves the same direct purpose predicate."
+    },
+    {
+      "arxivId": "2107.10847", "headId": "e10", "tailId": "e8", "label": "USED_FOR",
+      "reason": "Two preserved consecutive sentences introduce the RL parameter-tuning policy and then name our RL policy RLQP. The shortened tune parameters target is supported by the same predicate; retain discourse_inferred rather than pretend the naming is in the predicate sentence."
+    }
+  ],
+  "documents": [
+    {
+      "arxivId": "2303.17448",
+      "replace": [{"id": "e15", "text": "knowledge-data-driven heterogeneous CD method", "label": "METHOD"}],
+      "reason": "The descriptive model phrase is a technical method class; the internal CD is not a separate flat TASK. Retain the newly supplied dependence-learning operation. Changed regions are an output, not an additional isolated TASK; unnamed three datasets are not DATASET entities."
+    },
+    {
+      "arxivId": "2208.08300",
+      "replace": [{"id": "e1", "text": "Transformer model"}, {"id": "e3", "text": "transformer model"}, {"id": "e8", "text": "transformer model"}],
+      "add": {"METHOD": ["machine learning model"], "TASK": ["represent the time series features"]},
+      "reason": "Keep complete model-class boundaries and explicit time-series representation operation. NLP/CV are explicitly called tasks in this abstract, not inferred from industry. DSE is an exchange, not a named evaluation dataset."
+    },
+    {
+      "arxivId": "2208.08485",
+      "add": {"METHOD": ["complex-valued graph shift operators", "GSO", "graph filters", "GF"], "TASK": ["representation, precessing, analysis, and visualization of large-scale structured data over graphs"]},
+      "reason": "Read graph operators and filters as explicit technical constructs with local abbreviations; preserve source spelling precessing. GS denotes a signal object, not a task/model/dataset. Existing graph-signal processing and power-grid tasks are retained."
+    },
+    {
+      "arxivId": "2510.09914",
+      "add": {"METHOD": ["generative modeling", "knowledge-enhanced generative models", "generative models"], "TASK": ["generates drug candidates", "producing molecules designed for multiple targets"]},
+      "reason": "Add omitted technical method-family and explicit generation operations. Knowledge graphs and generated molecules are resources/outputs, not automatically METHOD or DATASET. Do not infer evaluation relationships from claimed binding affinity."
+    },
+    {
+      "arxivId": "2407.18827",
+      "add": {"METHOD": ["foundation models"], "TASK": ["extract information relevant to the datasets, modeling, sensing, and AM system categories", "extract information from the broader design and manufacturing literature"]},
+      "reason": "The final demonstration and prospective literature extraction operations are explicit. AM/AI are domain/context terms here; datasets is unnamed. Anonymous proposed framework/tool is not supplied a fabricated method name."
+    },
+    {
+      "arxivId": "1708.07747",
+      "reason": "All Fashion-MNIST/MNIST prose mentions are covered. Preserve the complete benchmarking operation under flat annotation; do not create a nested machine-learning entity inside it or annotate the download URL. No evaluated model is named."
+    },
+    {
+      "arxivId": "2110.14168",
+      "replace": [{"id": "e3", "text": "transformer models"}, {"id": "e4", "text": "verifiers"}],
+      "add": {"METHOD": ["language models"], "TASK": ["generate many candidate solutions", "select the one ranked highest by the verifier"]},
+      "reason": "training is an operation, not part of the verifier model name. Complete transformer model boundary; add explicit candidate generation/selection. In the selection TASK, the generic verifier is not a nested second entity. GSM8K is named twice."
+    },
+    {
+      "arxivId": "2406.01574",
+      "reason": "All named benchmarks and prompting methods are present. Preserve the already fixed CoT e13 to MMLU-Pro e15 relation. Accuracy, prompt sensitivity, question attributes and benchmark modifications do not create additional named TASK/DATASET entities."
+    },
+    {
+      "arxivId": "1609.02907",
+      "replace": [{"id": "e3", "text": "localized first-order approximation of spectral graph convolutions"}],
+      "add": {"METHOD": ["convolutional architecture"], "TASK": ["learns hidden layer representations"]},
+      "reason": "Retain the complete approximation method and explicit representation-learning operation. Citation networks and a knowledge graph dataset are unnamed; do not import Cora/Citeseer/GCN from external knowledge or the title."
+    },
+    {
+      "arxivId": "2009.03300",
+      "remove": ["e1"],
+      "replace": [{"id": "e2", "text": "GPT-3 model"}],
+      "reason": "Measuring a model's multitask accuracy is metric evaluation, not the target task itself. GPT-3 is explicit; MMLU is absent from this abstract and must not be copied from its known title. Mathematics/history/law are listed subjects, not standalone task entities."
+    },
+    {
+      "arxivId": "2509.00025",
+      "add": {"METHOD": ["machine learning models", "machine learning"]},
+      "reason": "Add the omitted technical family mentions outside existing entities. Preserve source spelling LTSMs instead of silently correcting it to LSTMs. The small dataset is unnamed; spoken language processing research is context rather than an extra asserted task."
+    },
+    {
+      "arxivId": "2105.15057",
+      "reason": "All explicit DNN/UAP methods and technical goals are present. Dominant patterns and feature-space outputs are representations, not an independently named algorithm. find such patterns is an underspecified anaphoric operation, not a standalone new task label. Preserve NeuralNetworks source spelling."
+    },
+    {
+      "arxivId": "2008.07342",
+      "add": {"METHOD": ["statistical analyses", "projection methodologies", "statistical analytics"], "TASK": ["observe value and order relationships between features, feature groups, and COVID-19 occurrences"]},
+      "reason": "Add explicit statistical/projection method families and the concrete association-analysis operation. Record representations and pandemic features are outputs; public datasets have no names. Do not label COVID-19 as a dataset."
+    },
+    {
+      "arxivId": "1903.07107",
+      "replace": [{"id": "e5", "text": "reinforcement learning", "label": "METHOD"}, {"id": "e8", "text": "topology and weight evolving NNs"}],
+      "add": {"METHOD": ["evolutionary algorithm"], "TASK": ["state-to-action mapping", "control the population diversity and average fitness improvement"]},
+      "reason": "Reinforcement learning is a technical paradigm in this phrase, not a TASK named problems. The evolving topology/weights characterize the neural model. Add explicit mapping and evolutionary-training control operations. Open AI is a platform, not a named dataset."
+    },
+    {
+      "arxivId": "2410.14398",
+      "add": {"METHOD": ["discrete Markov Chain"], "TASK": ["estimating the posterior class probability", "denoising"]},
+      "reason": "Add explicit posterior estimation, denoising and Markov-chain method. Preserve NP/DNG/Stable Diffusion and named MNIST/CIFAR10. Safety, image quality and guidance accuracy are effects, not extra task names."
+    },
+    {
+      "arxivId": "2412.10656",
+      "replace": [{"id": "e3", "text": "surface-input fully connected neural network model"}, {"id": "e5", "text": "surface-input Residual neural network model"}, {"id": "e7", "text": "multiple-input fully connected neural network model"}, {"id": "e9", "text": "multiple-input residual neural network model"}],
+      "add": {"METHOD": ["Taylor-series expansion", "neural networks", "physics-based models"]},
+      "reason": "Complete the four explicit model-class boundaries; add the Taylor expansion, standalone neural-network family, and physics-based baseline. EKE is a physical quantity, not DATASET. The global ocean reanalysis dataset is not named."
+    },
+    {
+      "arxivId": "2408.04326",
+      "add": {"TASK": ["identify and segment the most prominent objects in images", "segmentation", "comprehensively utilize the multi-level information"]},
+      "reason": "Add the defining SOD operation and explicit multi-level component operation; segmentation is a named technical task. Existing SAM/MDSAM/modules are retained. Source-code URL is excluded and multiple SOD datasets is not a named DATASET."
+    },
+    {
+      "arxivId": "2512.15363",
+      "add": {"METHOD": ["retrieval-augmented generation frameworks"], "TASK": ["search for suitable datasets", "search for datasets", "offline knowledge base construction", "online query processing", "constructs a high-quality, dynamically updatable task-dataset knowledge graph", "online retrieval", "dataset discovery"]},
+      "reason": "Add explicit dataset-search, graph-construction and query/retrieval operations, plus the RAG comparison family. CS-TDS is the only named benchmark. A task-dataset knowledge graph is a constructed resource, not itself a new dataset name. Source identity/date is inherited without alteration."
+    },
+    {
+      "arxivId": "2507.22101",
+      "reason": "Listed technical methods and farming tasks are covered. Agriculture and global food production are domains. Survey co-occurrence does not establish each method-task combination. No named dataset is supplied."
+    },
+    {
+      "arxivId": "2506.20241",
+      "add": {"METHOD": ["neurosymbolic AI", "fine-tuning"], "TASK": ["convert unstructured data into structured formats", "annotating reasoning steps"]},
+      "reason": "Add source-explicit neurosymbolic technique, preprocessing/annotation actions, and standalone fine-tuning. Keep DeepSeek model version intact. Structured dataset is unnamed; effectiveness and computational complexity are metrics."
+    },
+    {
+      "arxivId": "2509.03845",
+      "add": {"METHOD": ["mean field games", "MFGs", "MFG model"], "TASK": ["Designing suitable reward functions"]},
+      "reason": "Add the named game-model family and local abbreviations outside the complete latent-variable model, and reward-design operation. Unknown objectives and simulated scenarios do not create datasets or negative facts."
+    },
+    {
+      "arxivId": "2312.14977",
+      "add": {"METHOD": ["partial differential equation (PDE) diffusion models"], "TASK": ["adding noise to the available training data"]},
+      "reason": "Add the explicitly qualified PDE diffusion-model family and training-noise operation. Generic output/process descriptions do not fabricate image-generation or denoising text not present here; machine learning in a teaching-course list is contextual."
+    },
+    {
+      "arxivId": "2509.20659",
+      "replace": [{"id": "e1", "text": "transfer learning"}, {"id": "e5", "text": "transfer learning"}, {"id": "e11", "text": "transfer learning"}],
+      "add": {"METHOD": ["domain classifier"], "TASK": ["extracts domain-invariant features"]},
+      "reason": "Remove the dangling grammatical -based suffix; retain adjacent beam-prediction tasks under flat annotation. Add both domain classifiers and the explicit feature-extraction operation. Target/source domains are not named datasets."
+    },
+    {
+      "arxivId": "2307.03130",
+      "add": {"TASK": ["edit and debug the knowledge base (KB) queries", "maps KoPL programs into graphical elements", "slot filling", "auto-completion", "debug the KoPL program"]},
+      "reason": "Add explicit query debugging, program visualization, slot filling and completion operations. KoPL alone is a programming language/resource rather than an algorithm; KoPL execution engine is already a METHOD. URL strings are excluded."
+    },
+    {
+      "arxivId": "2411.04637",
+      "replace": [{"id": "e4", "text": "generating synthetic training data", "label": "TASK"}, {"id": "e7", "text": "hybrid annotation", "label": "METHOD"}],
+      "add": {"TASK": ["controlling the quality of the final dataset"]},
+      "reason": "Generating training data is an explicit operation, not an invented model name. Hybrid annotation is the strategy in the workshop. Active learning and hybrid labeling remain METHOD; unspecified dataset is not DATASET."
+    },
+    {
+      "arxivId": "2503.00416",
+      "replace": [{"id": "e11", "text": "real-time classifier"}],
+      "add": {"TASK": ["mitigate latency-related vulnerabilities"]},
+      "reason": "Remove lightweight as an efficiency modifier while retaining real-time technical qualification. Add explicit latency-vulnerability mitigation goal. Keep LLama-3/GPT-4o spellings, and exclude numeric classifier scores from TASK."
+    },
+    {
+      "arxivId": "2110.02932",
+      "reason": "This is a practitioner interview study, not a new computational model paper. Preserve explicit machine-learning method/deployment mentions, but do not convert practitioner affiliations or human-resource tensions into model tasks or label each occupational ML acronym as an algorithm. No named DATASET is present."
+    },
+    {
+      "arxivId": "1812.11737",
+      "reason": "All explicit deep-learning/FiLM methods and quantifier/VQA tasks are present. Approximate number system is described as an emerging internal mechanism, not a separately executed named model. Psycholinguistic experiments and visual scenes have no dataset names."
+    },
+    {
+      "arxivId": "2110.08010",
+      "add": {"DATASET": ["TREC Incident Streams", "IS"], "TASK": ["categorised according to information types"]},
+      "reason": "TREC Incident Streams/IS is explicitly the named evaluation track/benchmark; mark its kind as benchmark_track in the review notes, not as a raw standalone corpus. Add the source-literal categorisation operation. No benchmark relation is inferred automatically."
+    },
+    {
+      "arxivId": "2506.16934",
+      "replace": [{"id": "e8", "text": "diffusion transformer backbone"}],
+      "add": {"METHOD": ["single-radiotracer positron emission tomography", "PET"], "TASK": ["multi-tracer PET imaging", "PET imaging", "captures multi-level feature representations", "detail preservation"]},
+      "reason": "Add explicit imaging technique/abbreviation and non-overlapping PET imaging tasks, feature-capture operation and preservation goal. Texture masks are intermediate conditioning data, not methods. Brain/chest 3D PET datasets are unnamed."
+    },
+    {
+      "arxivId": "2407.20251",
+      "add": {"METHOD": ["sampling"], "TASK": ["compress complex input data", "creation of novel optimal designs", "quantifies both aleatoric and epistemic uncertainties"]},
+      "reason": "Add explicit compression, generative design and uncertainty-quantification operations, plus latent-space sampling method. Latent spaces/designs are outputs. Objective counts and uncertainty magnitudes are not datasets or asserted evaluation relationships."
+    },
+    {
+      "arxivId": "2409.13884",
+      "replace": [{"id": "e15", "text": "central LLM"}],
+      "add": {"METHOD": ["centralized method", "decentralized method"], "TASK": ["reduces bias"]},
+      "reason": "The centralized/decentralized communication arrangements are explicitly distinguished technical approaches, not anonymous our method. Extend the central-LLM role qualifier and add the later bias-reduction mention. Social groups are not named datasets."
+    },
+    {
+      "arxivId": "2107.10847",
+      "replace": [{"id": "e8", "text": "tune parameters"}],
+      "reason": "Parameter tuning is the task; accelerate convergence is a performance purpose, not part of its minimum boundary. Preserve source-local RLQP evaluation heads and named QPLIB/Netlib LP/Maros-Meszaros. Large-scale machine learning is broad context here, not an extra specific task."
+    },
+    {
+      "arxivId": "2402.17595",
+      "add": {"TASK": ["coordinatizing the space of matrices by their singular values and singular vectors"]},
+      "reason": "Add the explicit matrix-parameterization operation. Keep matrix sensing/learning and complete Spectral NN names. Implicit regularization is studied as a phenomenon, not an independently applied named regularizer; singular values/vectors are representations."
+    },
+    {
+      "arxivId": "2402.14245",
+      "replace": [{"id": "e17", "text": "policy learning", "label": "TASK"}],
+      "add": {"TASK": ["provide automated preference feedback", "offer analysis and preference feedback"]},
+      "reason": "guides policy learning makes it the explicit training target; preference-based policy learning earlier remains a method family. Add preference-feedback operations. Preserve reward-model to Meta-World attribution and do not propagate it to CriticGPT's every component."
+    },
+    {
+      "arxivId": "2206.08747",
+      "remove": ["e9"],
+      "add": {"TASK": ["capture the relationship between picosecond laser machining parameters", "create the desired cuts", "captures the interconnection between laser parameters and the engraved channel dimensions"]},
+      "reason": "Add explicit parameter-association and cut-creation operations. Remove predicting the outputs as an underspecified generic task mention; preserve the fully specified channel-dimension and required-input predictions. Generic machining context and ceramic material are not dataset names."
+    },
+    {
+      "arxivId": "2310.02147",
+      "replace": [{"id": "e6", "text": "Whittle index based Q-learning algorithm"}],
+      "reason": "Complete the technical algorithm-class boundary. Preserve explicit RMAB, Whittle-index and value-function approximation tasks; rate guarantees and Q-function values are not additional TASK/DATASET names."
+    },
+    {
+      "arxivId": "2510.26830",
+      "add": {"TASK": ["improves resilience to adversarial attacks"]},
+      "reason": "Add the explicitly stated adversarial-resilience goal. Gaussian noise is the distribution used by the named noise-injection method, not a second autonomous model. Unqualified candidate outputs are not added as a specific task. Three named benchmarks remain intact."
+    },
+    {
+      "arxivId": "2107.09145",
+      "add": {"TASK": ["penalizes feature attributions", "identifies predictive features"]},
+      "reason": "Add explicit attribution-penalty training operation and predictive-feature identification. Wavelet transform is a method/representation family already covered; the nested learn ... wavelet transform phrase does not duplicate it under flat annotation. No named dataset is provided."
+    },
+    {
+      "arxivId": "2509.18445",
+      "add": {"METHOD": ["numerical solvers"], "TASK": ["spatial reasoning", "continuous-time modeling"]},
+      "reason": "Add the numerical-solver baseline family and explicitly named GNN/ODE component operations. Structural mechanics, elastic bodies and discretized meshes are domains/objects, not dataset names. Do not infer each component's evaluation from the full framework."
+    },
+    {
+      "arxivId": "2509.19325",
+      "add": {"TASK": ["data curation"]},
+      "reason": "Add the explicit data-quality preparation goal. Finance/coding/health/legal are expressly domains here, not independent specific task labels. Percentages, harmful outputs and alignment are not named datasets; gpt-4o capitalization remains original."
+    },
+    {
+      "arxivId": "2208.08554",
+      "reason": "All explicit GNN families and EDA/security detection/reverse-engineering/attack tasks are covered. IP/HT inside an existing coordinated detection TASK are not nested entities. Hardware security by itself is a domain, not a new operation; unnamed benchmarks remain unlabelled."
+    },
+    {
+      "arxivId": "2510.03955",
+      "add": {"METHOD": ["fine-tuning"], "TASK": ["fine-tune the model's responses"]},
+      "reason": "Add the training paradigm and explicit fine-tuning action; the two kinds reflect family versus operation wording. Preserve TimeWarp's direct data-construction relation. The preference dataset is not named and indirect downstream effects remain unresolved, not negative."
+    }
+  ]
+}

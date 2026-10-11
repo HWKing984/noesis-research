@@ -1,0 +1,43 @@
+{
+  "seed": 20261011,
+  "NER": "same frozen checkpoint; original argmax vs existing legal BIO Viterbi; no fitting",
+  "RE": "one 6-epoch fit from same pinned SciBERT; only training loss weighted by inverse evidence-group class frequency",
+  "loss": "mean(CE_per_example * class_weight); weights fixed before dev evaluation",
+  "classWeights": {
+    "USED_FOR": 0.4268707482993197,
+    "EVALUATED_ON": 2.8850574712643677,
+    "NO_RELATION": 3.217948717948718
+  },
+  "sampling": "identical 251 group samples per epoch and order to original run",
+  "samplingClassCounts": {
+    "EVALUATED_ON": 29,
+    "USED_FOR": 196,
+    "NO_RELATION": 26
+  },
+  "checkpointSelection": "same adjudicated 3-class dev macro F1, earliest tie",
+  "pipeline": "predeclared full 2x2 decoder/loss comparison, fixed argmax label decision, no threshold tuning",
+  "labelMutation": false,
+  "newHardNegatives": 0,
+  "NERretraining": false,
+  "testContentAccess": false,
+  "productionPromotion": false,
+  "V1Comparison": "deferred, no same-scope V1 claim",
+  "baselineRun": "D:\\a-open_source\\neo4j\\outputs\\v2_textscope_once_20261011_run",
+  "base": "D:\\a-open_source\\neo4j\\kg_datasets\\models\\scibert_24f92d32",
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\scripts\\run_v2_targeted_controls.py": "470877476674ccf653220d6391e51dc68b357e47a57a19309091f7095f955e1f",
+    "D:\\a-open_source\\neo4j\\scripts\\run_v2_textscope_once.py": "dc7f3941710cc9dc458e52895ec08c2da372ecfcb314379c459a99665d359478",
+    "D:\\a-open_source\\neo4j\\scripts\\course_bio_constraints.py": "0e30e9386ca7eecc50aea86b9167e5aa6cfc20bb39cd825a16ebed29df1301ec",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "D:\\a-open_source\\neo4j\\scripts\\course_v2_textscope_metrics.py": "6c7e120878eb3b5a6229ccd133450f7cb89bdac24ba4d7762d2f92e67ecb8b32",
+    "D:\\a-open_source\\neo4j\\scripts\\course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "D:\\a-open_source\\neo4j\\resources\\course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "D:\\a-open_source\\neo4j\\schemas\\annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_train65_dev20_textscope_20261011_final\\manifest.json": "2b3a046f8e05d3d86d075d8b6b89b095f2cf67c372ae23b8b5d7134fa1831e84",
+    "D:\\a-open_source\\neo4j\\outputs\\v2_textscope_once_20261011_run\\execution_contract.json": "c85b5e649b1661d6146d76da61bc9c71a5bb2bf87aa4fe0724ca61d83a0dc424",
+    "D:\\a-open_source\\neo4j\\outputs\\v2_textscope_once_20261011_run\\sampling_plan.json": "989445e12edd46705bb6c8d3af65b15e490beb67fb1b209e720b113a63bafc18",
+    "D:\\a-open_source\\neo4j\\outputs\\v2_textscope_once_20261011_run\\ner\\best_model\\model.safetensors": "f2a13e4607ca84f70494b0ce9c3dd8f02086f9c64e06a79d552fc62572a08538",
+    "D:\\a-open_source\\neo4j\\outputs\\v2_textscope_once_20261011_run\\re\\best_model\\model.safetensors": "24656331eb70a6379856c58ba5a399958267267cc25f58615f8fc0778295315a"
+  }
+}

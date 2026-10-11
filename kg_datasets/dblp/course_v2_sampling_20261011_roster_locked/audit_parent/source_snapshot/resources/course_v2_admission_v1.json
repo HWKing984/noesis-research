@@ -1,0 +1,20 @@
+{
+  "version": "course_v2_admission_v1",
+  "parent": "kg_datasets/dblp/course_v2_identity_guard_20261010",
+  "parentManifestSha256": "841195e01bd90e964e2cb4456d664cd6bf535148a24813c4f855512dd35a524c",
+  "externalAudit": "D:/Users/Y7000P/Downloads/v2_identity_guard_independent_deep_audit_20261010.md",
+  "externalAuditSha256": "9c5dcb7a4c0049450f6a7b9b1dbaaf9fba7b0d71b4acf414cae08f530ff04ebb",
+  "externalResults": "D:/Users/Y7000P/Downloads/v2_identity_guard_independent_probe_results_20261010.json",
+  "externalResultsSha256": "0f3dfcd514c7f41201eb48d27f373170414efb76d07e7bc95393bd74871f6019",
+  "activeMetadataGuard": "scripts/course_v2_admission.py:prelock",
+  "activeContentBinding": "scripts/course_v2_admission.py:bind_content",
+  "activeFinalGuard": "scripts/course_v2_admission.py:finalize",
+  "activeBuildEntry": "scripts/finalize_v2_admission.py (runs the frozen test inventory internally; no external XML option)",
+  "scope": "Modern arXiv identity-capable fresh AI abstracts only; not representative of all DBLP. Population/sample remain empty. Final checks bind exact UTF-8 content, official-source identity and artifact-backed source/near-duplicate reviews to locked context. Recorded reviews do not cryptographically attest origin or prove semantic independence.",
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "productionMutationAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false
+}

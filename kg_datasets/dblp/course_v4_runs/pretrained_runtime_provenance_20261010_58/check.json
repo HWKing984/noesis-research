@@ -1,0 +1,28 @@
+{
+  "checkedAtUTC": "2026-10-10T02:23:25.207694+00:00",
+  "kind": "post_run_provenance_not_inference_time_seal",
+  "status": "passed",
+  "metadataURL": "https://huggingface.co/api/models/urchade/gliner_medium-v2.1/revision/40ec419335d09393f298636f471328b722c6da9e?blobs=true",
+  "officialRevision": "40ec419335d09393f298636f471328b722c6da9e",
+  "weightsSha256": "922214c0c60f7835bb5c00f52ad1769d38518d5183f85de7bc03893a8403c023",
+  "metadataSha256": "fe687eb302519b5a82d80cc1e1d9be40bfe028e4f2f9d188e69f052e3c2df1b9",
+  "downloadReceiptSha256": "ef8d89e10269d77e9d6b24c77e385a586a91dac324ad3e7ec495b80a91518920",
+  "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cudaRuntime": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "versions": {
+    "torch": "2.8.0+cu126",
+    "transformers": "4.57.1",
+    "gliner": "0.2.29",
+    "sentencepiece": "0.2.1",
+    "protobuf": "6.33.5"
+  },
+  "originalRunModified": false,
+  "currentHelperSha256": {
+    "course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "course_abstract_v1.py": "1327e537f46a260a18b215899fa72341f32fd0864fb45fed5f89c30358af85a6"
+  },
+  "checkerSha256": "3dac1998e69d276ec6d42cc11807500a7726f3a1b34daa4c1d8b7bd6610f2099"
+}

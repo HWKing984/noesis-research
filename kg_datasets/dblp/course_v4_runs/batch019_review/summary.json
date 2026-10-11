@@ -1,0 +1,66 @@
+{
+  "referenceDocuments": 2000,
+  "generationReceiptDocuments": 25,
+  "pendingGenerationDocuments": 1975,
+  "aiReviewedDocuments": 25,
+  "humanReviewedDocuments": 0,
+  "humanGoldAvailable": false,
+  "challengeDocuments": 1,
+  "nerEligibleDocuments": 17,
+  "relationEligibleDocuments": 14,
+  "nerEligibleSplits": {
+    "train": 17,
+    "dev": 0,
+    "test": 0
+  },
+  "relationEligibleSplits": {
+    "train": 14,
+    "dev": 0,
+    "test": 0
+  },
+  "entitySupport": {
+    "train": {
+      "METHOD": 22,
+      "TASK": 19,
+      "DATASET": 0
+    },
+    "dev": {
+      "METHOD": 0,
+      "TASK": 0,
+      "DATASET": 0
+    },
+    "test": {
+      "METHOD": 0,
+      "TASK": 0,
+      "DATASET": 0
+    }
+  },
+  "relationSupport": {
+    "train": {
+      "USED_FOR": 17,
+      "EVALUATED_ON": 0,
+      "NO_RELATION": 1
+    },
+    "dev": {
+      "USED_FOR": 0,
+      "EVALUATED_ON": 0,
+      "NO_RELATION": 0
+    },
+    "test": {
+      "USED_FOR": 0,
+      "EVALUATED_ON": 0,
+      "NO_RELATION": 0
+    }
+  },
+  "nerTrainingReady": false,
+  "relationTrainingReady": false,
+  "trainingStarted": false,
+  "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+  "notice": "Readiness requires nonzero per-class support, not a quality guarantee. Hashes detect drift, not authentic AI execution or semantic truth.",
+  "round": "candidate_aware_ai_review",
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "sourceResponseSha256": "a096791a1893ac3fa961418a960190af7dba459c2df2fb9e3a53521249af0c83",
+  "previousReceiptSha256": "46b74d72a3065b9ac64863e984d8c37fa9c610f30555f55106612d20d71880fc",
+  "modelCallExecutedByImporter": false
+}

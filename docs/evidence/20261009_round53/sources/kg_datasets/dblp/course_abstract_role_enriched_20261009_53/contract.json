@@ -1,0 +1,32 @@
+{
+  "version": "abstract_role_enrichment_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_boundary_inputs_20261009_52",
+  "snapshotManifestSha256": "11632f91ce901ab910f8001d6b15d79fcfe0e563580ada1a6193d7dcb0b91f63",
+  "relationContract": "resources/course_abstract_relation_v1.json",
+  "relationContractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "revisionCohort": [
+    "1903.10404",
+    "2506.20241",
+    "2407.20251",
+    "2107.09145",
+    "1903.10676",
+    "1909.03546",
+    "1909.07755",
+    "2010.12812",
+    "2010.01057",
+    "2308.03279",
+    "1906.06127"
+  ],
+  "selection": "All original52 train abstracts containing case-insensitive distill|prun|compress|quantiz plus all seven new52 BIO-complete abstracts, in source order, before new judgments or RE predictions. A distill token in a model name is a selection match, not evidence of a distillation method. No dev/error-score targeting, new collection or paper replacement.",
+  "goal": "Add source-local task/benchmark judgments and explicit receiver-versus-operator contrasts. Diagnose frozen46 RE on added training pairs before considering any fit; cannot fix all endpoint errors by training RE.",
+  "entityPolicy": "All70 training references and NER fields/status/group mentions remain unchanged; five quarantines retained. Freeze65 NER rows as opaque ner_train_frozen.jsonl from52, separately bound to their original NER receipt snapshot. New relation receipts are not silently substituted for NER receipts.",
+  "positivePolicy": "Use explicit source attribution, distinct model/component/receiver roles and supported named coreference. Retain local occurrence grain; repeated names are correlated, not independent tasks or evaluation trials. No evaluation inherited by architectural components from our model.",
+  "negativePolicy": "Only parent's explicit_argument_role_contrast or explicit_dataset_use_contrast with preserved literal excerpt and record-local role explanation. Absence, training mention, poor performance, co-occurrence and untested components alone remain UNRESOLVED, never negative.",
+  "preservation": "All271 previously resolved training rows remain semantically and byte-serialization-equivalent; allNER spans and reference text are immutable. No retractions or automatic completion. Any conflicting prior label fails closed.",
+  "review": "Actual whole-source AI judgment then same-session pair/source self-review; labels ai_pseudo, independentHumanGold=false. Every selected document has a disposition, including empty groups. Unknown inventory and exclusions disclosed.",
+  "diagnostic": "Frozen46 conditional RE on added known TRAIN reference pairs only; disclose type-majority baseline, confusion, per-class support and coverage. No NER fitting, RE fitting, pipeline/test metric or calibrated correctness claim.",
+  "trainingAllowed": false,
+  "testContentAccessAllowed": false,
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true
+}

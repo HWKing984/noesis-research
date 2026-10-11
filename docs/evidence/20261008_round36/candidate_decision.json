@@ -1,0 +1,17 @@
+{
+  "candidateRE": "rejected_dev_regression",
+  "oldConditionalModuleAllClassMacroF1": 0.8816266136027348,
+  "candidateConditionalModuleAllClassMacroF1": 0.8547570384282531,
+  "candidateNERPipeline": "not_promoted_recall_and_coverage_gates_failed",
+  "pipelineBaselineRecall": 0.4782608695652174,
+  "candidateNERWithOldRERecall": 0.391304347826087,
+  "recallRegression": 0.08695652173913043,
+  "allowedAbsoluteRecallRegression": 0.02,
+  "pipelineDocumentCoverage": 0.2631578947368421,
+  "minimumDocumentCoverage": 0.8,
+  "pipelineReferenceEVALUATED_ON": 0,
+  "automaticPromotionAllowed": false,
+  "qualityPromotionPassed": false,
+  "testEvaluated": false,
+  "notice": "Rejecting a candidate is a real development result, not training failure. The new module cannot replace the better old checkpoint. Conditional module scores and five-document pipeline scores are not overall knowledge correctness."
+}

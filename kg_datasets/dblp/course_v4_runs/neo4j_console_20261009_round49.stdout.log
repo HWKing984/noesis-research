@@ -1,0 +1,64 @@
+Directories in use:
+home:         D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34
+config:       D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\conf
+logs:         D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\logs
+plugins:      D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\plugins
+import:       D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\import
+data:         D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\data
+certificates: D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\certificates
+licenses:     D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\licenses
+run:          D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\run
+Starting Neo4j.
+2026-10-09 01:47:04.169+0000 INFO  Logging config in use: File 'D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\conf\user-logs.xml'
+2026-10-09 01:47:04.184+0000 ERROR 
+----------------------------------LICENSE AGREEMENT REQUIRED-----------------------------------
+
+In order to use Neo4j Enterprise Edition you must accept the license agreement.
+
+The license agreement is available at https://neo4j.com/terms/licensing/
+If you have a support contract the following terms apply https://neo4j.com/terms/support-terms/
+
+If you do not have a commercial license and want to evaluate the Software
+please read the terms of the evaluation agreement before you accept.
+https://neo4j.com/terms/enterprise_us/
+
+(c) Neo4j Sweden AB. All Rights Reserved.
+Use of this Software without a proper commercial license, or evaluation license
+with Neo4j, Inc. or its affiliates is prohibited.
+Neo4j has the right to terminate your usage if you are not compliant.
+
+Please contact us about licensing via https://neo4j.com/contact-us/
+
+More information is also available at: https://neo4j.com/licensing/
+
+To accept the commercial license agreement, run
+    neo4j-admin server license --accept-commercial
+To accept the terms of the evaluation agreement, run
+    neo4j-admin server license --accept-evaluation
+
+----------------------------------LICENSE AGREEMENT REQUIRED-----------------------------------
+
+
+2026-10-09 01:47:04.349+0000 INFO  Starting...
+2026-10-09 01:47:07.196+0000 INFO  ======== Neo4j 2026.08.0 ========
+2026-10-09 01:47:08.283+0000 INFO  This instance is ServerId{10d00eb6} (10d00eb6-63ea-43f5-91f8-4143e66e76fd)
+2026-10-09 01:47:09.759+0000 INFO  X-Forward header processing enabled with security controls
+2026-10-09 01:47:09.759+0000 WARN  SECURITY WARNING: X-Forward headers accepted from any source - configure allow_proxies
+2026-10-09 01:47:09.761+0000 WARN  SECURITY WARNING: X-Forward headers accept any hostname - configure allow_hosts
+2026-10-09 01:47:10.214+0000 INFO  Resolved endpoints with LIST{endpoints:'[localhost:6000]'} to '[localhost:6000]'
+2026-10-09 01:47:10.707+0000 INFO  Resolved endpoints with LIST{endpoints:'[localhost:6000]'} to '[localhost:6000]'
+2026-10-09 01:47:12.863+0000 INFO  Sending metrics to CSV file at D:\DevData\neo4j-desktop-data\Application\Data\dbmss\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\metrics
+2026-10-09 01:47:12.913+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2026-10-09 01:47:12.929+0000 INFO  Bolt enabled on localhost:7687.
+2026-10-09 01:47:12.932+0000 INFO  Bolt (Routing) enabled on localhost:7688.
+2026-10-09 01:47:12.951+0000 INFO  Fleet discovery broadcasts have been enabled for 3 networks: 192.168.134.255, 192.168.150.255, 172.24.255.255
+2026-10-09 01:47:13.931+0000 INFO  This server has built-in support for online monitoring through Fleet Manager. Visit https://console.neo4j.io to get started!
+2026-10-09 01:47:14.155+0000 INFO  HTTP enabled on localhost:7474.
+2026-10-09 01:47:14.157+0000 INFO  Remote interface available at http://localhost:7474/
+2026-10-09 01:47:14.159+0000 INFO  id: B6FB4D3BBF475EDE48EBA35AADE9AC68BDB5FEBD0D872A64E9FC3893C438862F
+2026-10-09 01:47:14.161+0000 INFO  name: system
+2026-10-09 01:47:14.162+0000 INFO  creationDate: 2026-09-10T04:18:03.288Z
+2026-10-09 01:47:14.163+0000 INFO  Started.
+2026-10-09 01:49:02.015+0000 INFO  Neo4j Server shutdown initiated by request
+2026-10-09 01:49:02.018+0000 INFO  Stopping...
+终止批处理操作吗(Y/N)? 2026-10-09 01:49:13.300+0000 INFO  Stopped.

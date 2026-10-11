@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "localDocLinksChecked": 236,
+  "missingLinks": 0,
+  "evidenceManifestSha256": "9c6988b07627484be72762073dcee20f6d1e6bc53891f7fd6bd533d2948895de",
+  "captureManifestSha256": "808be0b91545f8569e80bbe2fb0673db35670aa6d0da59218f2f003cf4f108dc",
+  "sourceFilesStillBound": true,
+  "screenshotSize": [
+    1280,
+    2300
+  ],
+  "visualInspection": "readable_complete_footer_not_clipped",
+  "snapshotManifestSha256": "a8a0495ead304ef943e8c1a89d344a2168b6bef5a8baab36c6970e999f8ea9db",
+  "reviewed": 1208,
+  "pending": 792,
+  "ner": 956,
+  "relationPairs": 837,
+  "humanGold": false,
+  "newTrainingOrInference": false
+}

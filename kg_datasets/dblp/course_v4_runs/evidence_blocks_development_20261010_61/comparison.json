@@ -1,0 +1,271 @@
+{
+  "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+  "NER52": {
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+        "truePositive": 87,
+        "predicted": 126,
+        "reference": 125,
+        "precision": 0.6904761904761905,
+        "recall": 0.696,
+        "f1": 0.6932270916334662
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 53,
+          "predicted": 80,
+          "reference": 64,
+          "precision": 0.6625,
+          "recall": 0.828125,
+          "f1": 0.7361111111111112
+        },
+        "TASK": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 25,
+          "predicted": 36,
+          "reference": 46,
+          "precision": 0.6944444444444444,
+          "recall": 0.5434782608695652,
+          "f1": 0.6097560975609756
+        },
+        "DATASET": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 9,
+          "predicted": 10,
+          "reference": 15,
+          "precision": 0.9,
+          "recall": 0.6,
+          "f1": 0.72
+        }
+      }
+    },
+    "invalidTransitions": 15,
+    "inferenceFeaturesContainLabels": false
+  },
+  "comparison": {
+    "RE57": {
+      "reference_entity_module": {
+        "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+        "entityScope": "reference_entity_module",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 27,
+        "positiveMicro": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 52,
+          "predicted": 96,
+          "reference": 52,
+          "precision": 0.5416666666666666,
+          "recall": 1.0,
+          "f1": 0.7027027027027027
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 39,
+            "predicted": 76,
+            "reference": 39,
+            "precision": 0.5131578947368421,
+            "recall": 1.0,
+            "f1": 0.6782608695652174
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 13,
+            "predicted": 20,
+            "reference": 13,
+            "precision": 0.65,
+            "recall": 1.0,
+            "f1": 0.7878787878787878
+          }
+        },
+        "positiveMacroF1": 0.7330698287220025,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "negativeDecisions": 4,
+        "notice": "Exact local mention-predicate expression. All candidates and zero-positive complete blocks retained. NO_RELATION output is abstention/no edge, not true-negative document accuracy. Exposed AI dev, not final test or production truth."
+      },
+      "predicted_entity_pipeline": {
+        "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+        "entityScope": "predicted_entity_pipeline",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 27,
+        "positiveMicro": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 22,
+          "predicted": 88,
+          "reference": 52,
+          "precision": 0.25,
+          "recall": 0.4230769230769231,
+          "f1": 0.3142857142857143
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 20,
+            "predicted": 78,
+            "reference": 39,
+            "precision": 0.2564102564102564,
+            "recall": 0.5128205128205128,
+            "f1": 0.3418803418803419
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 2,
+            "predicted": 10,
+            "reference": 13,
+            "precision": 0.2,
+            "recall": 0.15384615384615385,
+            "f1": 0.17391304347826086
+          }
+        },
+        "positiveMacroF1": 0.2578966926793014,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "negativeDecisions": 2,
+        "notice": "Exact local mention-predicate expression. All candidates and zero-positive complete blocks retained. NO_RELATION output is abstention/no edge, not true-negative document accuracy. Exposed AI dev, not final test or production truth."
+      }
+    },
+    "RE60": {
+      "reference_entity_module": {
+        "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+        "entityScope": "reference_entity_module",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 27,
+        "positiveMicro": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 52,
+          "predicted": 94,
+          "reference": 52,
+          "precision": 0.5531914893617021,
+          "recall": 1.0,
+          "f1": 0.7123287671232876
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 39,
+            "predicted": 74,
+            "reference": 39,
+            "precision": 0.527027027027027,
+            "recall": 1.0,
+            "f1": 0.6902654867256637
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 13,
+            "predicted": 20,
+            "reference": 13,
+            "precision": 0.65,
+            "recall": 1.0,
+            "f1": 0.7878787878787878
+          }
+        },
+        "positiveMacroF1": 0.7390721373022258,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "negativeDecisions": 6,
+        "notice": "Exact local mention-predicate expression. All candidates and zero-positive complete blocks retained. NO_RELATION output is abstention/no edge, not true-negative document accuracy. Exposed AI dev, not final test or production truth."
+      },
+      "predicted_entity_pipeline": {
+        "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+        "entityScope": "predicted_entity_pipeline",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 27,
+        "positiveMicro": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 22,
+          "predicted": 89,
+          "reference": 52,
+          "precision": 0.24719101123595505,
+          "recall": 0.4230769230769231,
+          "f1": 0.3120567375886525
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 20,
+            "predicted": 79,
+            "reference": 39,
+            "precision": 0.25316455696202533,
+            "recall": 0.5128205128205128,
+            "f1": 0.3389830508474576
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+            "truePositive": 2,
+            "predicted": 10,
+            "reference": 13,
+            "precision": 0.2,
+            "recall": 0.15384615384615385,
+            "f1": 0.17391304347826086
+          }
+        },
+        "positiveMacroF1": 0.25644804716285924,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "negativeDecisions": 1,
+        "notice": "Exact local mention-predicate expression. All candidates and zero-positive complete blocks retained. NO_RELATION output is abstention/no edge, not true-negative document accuracy. Exposed AI dev, not final test or production truth."
+      }
+    }
+  },
+  "support": {
+    "USED_FOR": {
+      "mentionPairs": 39,
+      "blocks": 13,
+      "independentSourcePapers": 7
+    },
+    "EVALUATED_ON": {
+      "mentionPairs": 13,
+      "blocks": 4,
+      "independentSourcePapers": 3
+    }
+  },
+  "coverage": {
+    "target": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+    "lockedQueue": 31,
+    "sourcePapers": 8,
+    "NERBlocks": 30,
+    "entities": {
+      "TASK": 46,
+      "METHOD": 64,
+      "DATASET": 15
+    },
+    "completeBlocks": 27,
+    "blockCoverage": 0.8709677419354839,
+    "eligibleReferencePairs": 125,
+    "pairStates": {
+      "USED_FOR": 47,
+      "NOT_EXPRESSED": 55,
+      "UNRESOLVED": 10,
+      "EVALUATED_ON": 13
+    },
+    "completePositiveSupport": {
+      "USED_FOR": 39,
+      "EVALUATED_ON": 13
+    },
+    "zeroPositiveCompleteBlocks": 12,
+    "trainableNegativePairs": 0,
+    "independentHumanGold": false,
+    "trainingExecuted": false,
+    "testEvaluated": false,
+    "notice": "Exposed targeted AI dev, correlated mentions/blocks. Local non-expression is not a factual negative. Original whole-abstract evaluation unchanged."
+  },
+  "allModuleCandidates": 100,
+  "allPipelineCandidates": 90,
+  "trained": false,
+  "testEvaluated": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "oldWholeAbstractMetricsReplaced": false,
+  "notice": "A separately locked exposed local expression diagnostic, not a substitute for full abstracts or independent test. Repeated mentions and blocks do not increase independent paper support."
+}

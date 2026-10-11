@@ -1,0 +1,27 @@
+{
+  "version": "abstract_occurrence_v1",
+  "trainCohort": 58,
+  "freshlyRejudged": 2,
+  "inheritedReceipts": 56,
+  "nerCandidates": 50,
+  "excludedNER": 8,
+  "entitySupport": {
+    "TASK": 189,
+    "METHOD": 378,
+    "DATASET": 44
+  },
+  "resolvedRelationSupport": {
+    "EVALUATED_ON": 43,
+    "USED_FOR": 151,
+    "NO_RELATION": 7
+  },
+  "unresolvedPairs": 1644,
+  "eligibleRelationPairs": 1845,
+  "completeRelationDocuments": 6,
+  "independentHumanGold": false,
+  "devContentAccessed": false,
+  "testContentAccessed": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false
+}

@@ -1,0 +1,8 @@
+{
+  "trainingExecuted": false,
+  "freeDiskBytes": 1174929408,
+  "requiredDiskBytesByExisting54Policy": 1506824700,
+  "belowExisting54DiskBudget": true,
+  "reason": "No new training contract; existing one-checkpoint disk budget is also unmet. Source evidence/inference only; no lowered reserve or historical deletion.",
+  "historicalDeletion": false
+}

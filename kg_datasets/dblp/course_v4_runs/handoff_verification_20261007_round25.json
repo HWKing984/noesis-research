@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-07T03:48:44.600028+00:00",
+  "sourceCopiesVerified": 18,
+  "relativeDocumentLinksChecked": 306,
+  "missingLinks": [],
+  "documentsSha256": {
+    "README.md": "14aa144e071d0ca61a60f2bdc3098c8a4e7c44f5346c82de90dacef12be5d826",
+    "docs/course_v4_progress.md": "d7d11c271871e887653cf7dedae56d9b682350e936f498282936bf7646777485",
+    "docs/course_v4_plan.md": "da9608780ac8e65cdc949f80e9e4fafbb7b753bd4890ad9cc02bc390c74b5e25",
+    "docs/course_v4_runbook.md": "eb1cd9d5480cd557e3a6e2e53351cc01c5a61d2f5f247dfbaa1b65c54eee6ca0",
+    "docs/course_v4_report_evidence.md": "c1ed7dac8135675d93da76435a44d4a39ae355507fcc246920bcff4883fe0536",
+    "docs/course_v4_graph_application.md": "0d29deab2b6cbace9bb50bf4ef42b25d15726752d409fe638cb76b36a0c53649",
+    "docs/course_v4_corpus_inference_round25.md": "08c880455b09bed53cc7cbb75cc9a7afe347d15ec03ef24197410295f4e5932d"
+  },
+  "evidenceManifestSha256": "9182a47e625d5bf9b9931f7607142de4983a9905bd2c79dddef3bb02cdc0de35",
+  "capturesSha256": "e1b00ef1eea6c7b72d50f4266d60bda3f9cf48df3816cb5b663df2e8ece2b126",
+  "verificationSha256": "be43b9c55e748c0b0c75564b9133eb5bb238cc868db272e081399c650680245b",
+  "imageSha256": "32419e8a7c84dd799e09812f85fd4acb5f97ca7b7a5380ec6795609195b1f7db",
+  "imageBytes": 214221,
+  "imageSize": [
+    1280,
+    2300
+  ],
+  "visualReview": "Actual saved image viewed; body and source footer visible without clipping. Not original terminal or Neo4j UI.",
+  "readOnlyNeo4jDiscovery": {
+    "checkedAtUTC": "2026-10-07T03:48:06.7346945Z",
+    "action": "read_only_discovery_no_password",
+    "status": "reachable",
+    "neo4jVersion": "2026.08.0",
+    "neo4jEdition": "enterprise",
+    "boltDirect": "bolt://127.0.0.1:7687",
+    "authenticated": false,
+    "databaseWriteExecuted": false
+  },
+  "trainingExecuted": false,
+  "evaluationExecuted": false,
+  "databaseWriteExecuted": false,
+  "humanGold": false,
+  "qualityPromotionPassed": false
+}

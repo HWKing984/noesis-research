@@ -1,0 +1,676 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-9ccf2cd98f2dd31c2b58",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Negative Nudging",
+          "label": "METHOD"
+        },
+        {
+          "text": "Quantify the LLM Hallucination",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Negative nudging is explicitly to quantify LLM hallucination."
+        }
+      ],
+      "notes": "The inspected LLM belongs to the task object, not an overlapping instrument mention.\nAI self-review: Negative nudging explicitly performs hallucination quantification; the inspected LLM remains within the task rather than an instrument span."
+    },
+    {
+      "sampleId": "sample-244064bcb4d730639671",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Generative AI",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The generative technique family is mentioned, but apps, legal risks and the Act do not name a computational task or dataset.\nAI self-review: Generative AI is a technique family; risks, apps and a legal Act do not supply a concrete computational task or dataset."
+    },
+    {
+      "sampleId": "sample-db6941be9d9e4b7e5d2a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Generative AI",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "AI Assistants are unspecified applications, while generative AI identifies a technique family. Knowledge creation/retention/use are broad thematic goals, not specified computational tasks.\nAI self-review: The generative family is explicit; generic assistants, knowledge management aims and minitrack introduction do not name another specific method/task."
+    },
+    {
+      "sampleId": "sample-5641bebb667e84ac15fc",
+      "entityStatus": "unresolved",
+      "entityReason": "Climate-sensor design and calibration algorithms admit shared-object/task-versus-method readings.",
+      "entities": [
+        {
+          "text": "Climate-Sensor Design",
+          "label": "TASK"
+        },
+        {
+          "text": "Calibration Algorithms",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Calibration's role and task coverage remain ambiguous.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "The title does not clearly assign calibration algorithms to performing sensor design."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The sensor-design/calibration goals explicitly use machine learning, conditional on task coverage."
+        }
+      ],
+      "notes": "Cape Point is geographical experiment context, not a named dataset; Agile is excluded.\nAI self-review: Calibration algorithms and design have unresolved coordinated roles; Cape Point is geographical context, not an experiment dataset name."
+    },
+    {
+      "sampleId": "sample-7eb638c7eed0635dcdf4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "High-Frequency Limitation Deep Reinforcement Learning Based Energy Management",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The title explicitly names a learning-based management Strategy, hence one composite procedure without nested methods/tasks. The aircraft is application context, not a dataset.\nAI self-review: The frequency-limited learning-based management strategy is one composite method; retain the mechanism and exclude its overlapping inner task."
+    },
+    {
+      "sampleId": "sample-603fa5d47df2bc0edf48",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "BGEK",
+          "label": "METHOD"
+        },
+        {
+          "text": "External Knowledge-Enhanced Graph Convolutional Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Rumor Detection in Online Social Networks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "BGEK names the approach for rumor detection."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The knowledge-enhanced graph networks are explicitly for the specified rumor-detection task."
+        }
+      ],
+      "notes": "Retain the enhancement mechanism and online-network setting.\nAI self-review: BGEK and its full enhanced graph-network description explicitly serve online-social-network rumor detection; both literal mentions are distinct."
+    },
+    {
+      "sampleId": "sample-f8378e36d4a73cdc40c6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pick and Place Multi Robot Coordination",
+          "label": "TASK"
+        },
+        {
+          "text": "Multi-agent Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The coordinated pick-and-place goal explicitly uses multi-agent deep reinforcement learning."
+        }
+      ],
+      "notes": "Pick and Place is the jointly stated manipulation operation; no words are reconstructed or robots treated as dataset names.\nAI self-review: Pick and place is a conventional joint manipulation goal; using directly supports the multi-agent deep reinforcement-learning relation."
+    },
+    {
+      "sampleId": "sample-2e2d585b676f62a930b0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "pitch extraction",
+          "label": "TASK"
+        },
+        {
+          "text": "jointly trained deep BLSTM Recurrent Neural Networks with bottleneck features",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Pitch extraction is explicitly based on the jointly trained bottleneck-feature network."
+        }
+      ],
+      "notes": "Novel is excluded; joint training, BLSTM and bottleneck features specify the method mechanism.\nAI self-review: The complete jointly trained bottleneck-feature BLSTM mechanism is explicitly the basis for pitch extraction; no dataset is named."
+    },
+    {
+      "sampleId": "sample-e8069651f64b0492e6c0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Gradient Statistics Aware Power Control",
+          "label": "METHOD"
+        },
+        {
+          "text": "Over-the-Air Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The statistics-aware control procedure and communication-learning family are methods; fading channels are a setting. No overlapping power-control task is added.\nAI self-review: Statistics-aware control and over-the-air federated learning are methods; fading channels are context, not a benchmark or extra task."
+    },
+    {
+      "sampleId": "sample-d910c556fbc2debfb662",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Human-Sensors & Physics Aware Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Wildfire Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Nowcasting",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The jointly sensor/physics-aware method is explicitly for wildfire detection."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Nowcasting is the other explicitly stated goal of that method."
+        }
+      ],
+      "notes": "The two awareness properties describe one combined method, not distinct ellipted member models. Nowcasting is retained literally without adding Wildfire to its span.\nAI self-review: Sensor/physics awareness jointly qualifies one learning method; detection and nowcasting are explicitly stated task goals without reconstructed words."
+    },
+    {
+      "sampleId": "sample-a7b61d4363441d5834d8",
+      "entityStatus": "unresolved",
+      "entityReason": "Decision Making is an underspecified beneficiary goal rather than a clearly defined computational task.",
+      "entities": [
+        {
+          "text": "Big Textual Data Analytics",
+          "label": "TASK"
+        },
+        {
+          "text": "Transformer-Based Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Decision Making",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The decision-making task role remains unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Textual analytics explicitly uses transformer-based deep learning."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Analytics helping decisions does not unambiguously mean the model itself performs a defined decision task."
+        }
+      ],
+      "notes": "No classifier/planner or named big-data dataset is invented.\nAI self-review: Textual analytics uses the transformer method; generic decision making remains an underspecified beneficiary and cannot be forced into a positive pair."
+    },
+    {
+      "sampleId": "sample-f3567ea22dd09361cceb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Fuzzy-based Image Segmentation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The fuzzy-based segmentation is an explicitly qualified composite procedure; its embedded task is not duplicated. Diabetic retinopathy describes application context.\nAI self-review: Fuzzy-based segmentation is a qualified composite procedure; retinopathy is application context and no inner overlapping task is duplicated."
+    },
+    {
+      "sampleId": "sample-723a155dd8d2a0391272",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-Level in situ Generation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The in-situ generation mechanism is stated but its object is not a separately explicit task. Memory-Efficient is evaluative.\nAI self-review: Neural networks and multilevel in-situ generation are explicit technique mentions; memory efficiency is an objective without a separate stated operation."
+    },
+    {
+      "sampleId": "sample-c0fd77afb68c65c839e8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hiding CNN Parameters",
+          "label": "TASK"
+        },
+        {
+          "text": "Guided Grad-CAM",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "NO_RELATION",
+          "reason": "The neural network is the protected object whose parameters are hidden, not the named hiding instrument."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Parameter hiding explicitly uses guided Grad-CAM."
+        }
+      ],
+      "notes": "The directed negative concerns the protected-model role; CNN stays inside the maximal hiding task.\nAI self-review: Guided Grad-CAM is the stated hiding instrument; the other neural mention identifies the protected model, supporting only a directed title-scoped negative."
+    },
+    {
+      "sampleId": "sample-d2ed7a6245ff31076a2f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Damage Identification",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The damage-identification system is explicitly based on deep learning."
+        }
+      ],
+      "notes": "System is a generic carrier; no damage dataset is named.\nAI self-review: Based on directly links deep learning to damage identification; System is a carrier and no damage benchmark is named."
+    },
+    {
+      "sampleId": "sample-aceae84d7590a95868f7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine learning based rate adaptation with elastic feature selection",
+          "label": "METHOD"
+        },
+        {
+          "text": "HTTP-based streaming",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The complete learning-based adaptation procedure is explicitly for HTTP streaming."
+        }
+      ],
+      "notes": "Retain the feature-selection mechanism in the composite method rather than adding overlapping inner entities.\nAI self-review: Retain rate adaptation and elastic selection as one learning-based mechanism; for supplies its HTTP-streaming application."
+    },
+    {
+      "sampleId": "sample-ae6f3e5a27d092606cb3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Exact Conversion of In-Context Learning to Model Weights",
+          "label": "TASK"
+        },
+        {
+          "text": "Linearized-Attention Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The transformer may be the receiving model rather than the conversion instrument.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Conversion in that architecture does not clearly identify it as the method performing conversion."
+        }
+      ],
+      "notes": "Exact specifies the formal conversion target, not a fabricated accuracy. The in-context-learning object is not an overlapping inner method.\nAI self-review: Conversion in an architecture does not establish that the architecture performs conversion; the known entity spans can stay complete with an unresolved relation."
+    },
+    {
+      "sampleId": "sample-08c8acdd804a43f14d6a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Automatically Interpreting Millions of Features in Large Language Models",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The model is the feature-interpretation object inside the maximal task, not a separately asserted interpretation algorithm. No actual feature count is computed here.\nAI self-review: The maximal feature-interpretation task contains the inspected models; no actual interpretation method or named feature dataset is stated."
+    },
+    {
+      "sampleId": "sample-6b6888733646eaa5f57d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "EfficientNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Model Scaling",
+          "label": "TASK"
+        },
+        {
+          "text": "Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The title does not distinguish EfficientNet as the scaling instrument versus a resulting architecture.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "The colon associates EfficientNet with scaling research but does not settle the directed instrument role."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "NO_RELATION",
+          "reason": "Convolutional networks are explicitly the models to which scaling applies, not the stated scaling instrument."
+        }
+      ],
+      "notes": "Do not import knowledge of the unseen paper's compound-scaling procedure. Retain full known entities but exclude unresolved relation input.\nAI self-review: EfficientNet may be the architecture resulting from scaling, not the scaling procedure; replace the unsupported direct positive with an unresolved role."
+    },
+    {
+      "sampleId": "sample-0580aa5adc66e9ce0426",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Revenue and Expenditure Forecast",
+          "label": "TASK"
+        },
+        {
+          "text": "Cloud Audit Warning of Pension Insurance Fund for Urban Workers",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The forecast goal is explicitly based on a neural network."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The audit-warning goal is the other stated network-based operation."
+        }
+      ],
+      "notes": "Both tasks have literal objects; no missing pension-fund words are reconstructed for the earlier forecast span.\nAI self-review: Forecast and cloud audit warning are two written operations based on the network; no absent pension qualifier is reconstructed in the first task."
+    },
+    {
+      "sampleId": "sample-b369fe9a25d21f51fd72",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ProcNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Cross-Modal Process Recommendation",
+          "label": "TASK"
+        },
+        {
+          "text": "LLMs",
+          "label": "METHOD"
+        },
+        {
+          "text": "GCNs",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "ProcNet names the process-recommendation approach."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Recommendation explicitly uses LLMs."
+        },
+        {
+          "head": "e4",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "GCNs are the other explicit recommendation mechanism."
+        }
+      ],
+      "notes": "Cross-modal defines the recommendation problem; the method abbreviations are fully separate mentions.\nAI self-review: ProcNet and both fully written via mechanisms serve cross-modal process recommendation; no LLM/GCN shared-head group is implied."
+    },
+    {
+      "sampleId": "sample-341550d725a85923dfe5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "RGB-depth Fusion",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection in Autonomous Vehicles",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The RGB-depth fusion framework is explicitly for object detection in autonomous vehicles."
+        }
+      ],
+      "notes": "Fusion is the specified multimodal mechanism, while Framework is a generic carrier. RGB/depth inputs are not named datasets.\nAI self-review: RGB-depth fusion names the multimodal mechanism; for directly connects it to the autonomous-vehicle detection task."
+    },
+    {
+      "sampleId": "sample-07a6e6717920648ebcb5",
+      "entityStatus": "unresolved",
+      "entityReason": "Visual saliency may denote an input feature/property or the named computational approach.",
+      "entities": [
+        {
+          "text": "Visual saliency",
+          "label": "METHOD"
+        },
+        {
+          "text": "object detection in computer vision systems",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The method status of the saliency mention is unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The saliency-based approach is explicitly to object detection, conditional on the method interpretation."
+        }
+      ],
+      "notes": "Do not invent a saliency algorithm or a dataset from the generic real-life application setting.\nAI self-review: Visual saliency still permits property/feature rather than procedure interpretations; retain the explicit conditional detection candidate outside training."
+    },
+    {
+      "sampleId": "sample-ec53aceaa843c28c05da",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Mastitis Prediction in Livestock",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Applicability is investigated, rather than unambiguously asserting actual use for the task.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "The title asks about applicability to improvement; it does not establish the method-task use as a fact."
+        }
+      ],
+      "notes": "Prediction object and livestock setting are retained. No experimental result or negative relation is inferred.\nAI self-review: The title investigates applicability rather than asserts implemented use; retain the livestock prediction entities with an unresolved pair."
+    }
+  ]
+}

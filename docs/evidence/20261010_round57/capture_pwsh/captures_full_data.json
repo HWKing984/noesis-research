@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "kind": "actual_browser_render_capture",
+  "reason": "01_data.png at1100px clipped only the source footer; preserve it and capture the same unchanged page at1600px.",
+  "image": "01_data_full.png",
+  "sourcePage": "01_data.html",
+  "sourcePageSha256": "453030d60d720bffbb1193e46ddea0dbd128aaaa0cc8a60c9d07cf07e49db3fb",
+  "sha256": "8ee318209bfbd4739e82129083f42b1026fe0600f899452268c8d07661619539",
+  "bytes": 111771,
+  "capturedAt": "2026-10-10T01:41:14.5590553Z",
+  "viewportWidth": 1280,
+  "viewportHeight": 1600,
+  "exitCode": 0,
+  "originalConsoleScreenshot": false,
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-fullcapture-44413e9e6bae40db98fb87d682afb16f",
+  "commandArguments": ["--headless=new", "--disable-gpu", "--disable-background-networking", "--no-first-run", "--no-default-browser-check", "--hide-scrollbars", "--force-device-scale-factor=1", "--window-size=1280,1600", "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_round57\\capture_pwsh\\01_data_full.png", "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-fullcapture-44413e9e6bae40db98fb87d682afb16f", "file:///D:/a-open_source/neo4j/docs/evidence/20261010_round57/capture_pwsh/01_data.html"]
+}

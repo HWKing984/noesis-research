@@ -1,0 +1,22 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_runs/diverse_role_development_20261010_57/manifest.json": "716c5cd973681636bfef1bf08be94165f8bc8d6d8f339b618758f2015688ed1a",
+    "kg_datasets/dblp/course_v4_identity_alias_audit_20261010_57/manifest.json": "606bbfe87ad41b73b3c762fb73746fc14241ab2ce3673d15b886f6fe699ed792",
+    "kg_datasets/dblp/course_v4_runs/concept_alias_candidates_20261010_57/manifest.json": "f401a4419ffe1c1747b076b341e3526a19ab81416405214041a15e016146fa0a",
+    "kg_datasets/dblp/course_v4_runs/tests_quality57_final_fixed.xml": "22a3946e1071f5982c6ace4ad9d984cfa2b7e67f0df160288fb6e12fb902bf98",
+    "kg_datasets/dblp/course_v4_runs/coverage_quality57_combined.json": "158c20ab745f9bbd4f2ff6e7c4fae254d555f45030b889ad5dc35d1f925d7741",
+    "annotations/course_v4/seal_diverse_fit_20261010_57.py": "560b7b716166920529088cbf1e78fa8ef267eb60dc8c848262f9eb9e18a2344e",
+    "scripts/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "tests/conftest.py": "92c3e07e20bf040fadf0da4e6567f687e4c69cba9b0dc8273c490119a1e73fe7",
+    "kg_datasets/dblp/course_v4_runs/tests_quality57_final.xml": "95b8f895ffea6a34b2e97c2588d5908ce12cb288c724e8e0911da832169abd4a"
+  },
+  "filesSha256": {
+    "01_data.html": "453030d60d720bffbb1193e46ddea0dbd128aaaa0cc8a60c9d07cf07e49db3fb",
+    "02_training.html": "5f75750a8e96a522492a40853bfbdec2307ce6fe8a98aefdf7d30186273618bb",
+    "03_predictions.html": "9e3d41a86c5ebadfc8a99abc6d0a28b2d6b9ea2c678003837b9e6b6e1f4d2ab9",
+    "04_traceability.html": "483f70917bdd93069a8988f8585051a3290fe9d3718d6f4be63c048ebc6de643",
+    "audit_state.json": "07efe93f6c00d6e40cb55dc87baba3173a2cd21e88c89d02518c87aa61a42b96",
+    "prediction_changes_46_to57.jsonl": "fc2853f587032e00e04899d4adb9cd9cdc87eefeb8955d29f2c2d0390cb9e21a"
+  }
+}

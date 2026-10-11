@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-08T14:16:08.777307+00:00",
+  "audit": {
+    "run47ManifestSha256": "35b0b9ea70f210a3728a9ddbccf66c6c4aeabdc65bc15059930b98170be2ed27",
+    "run48ManifestSha256": "489bf9095484c76a79786b0a8427a93320e2ed30154ed29df95a85cd6eac5497",
+    "regression47Sha256": "e1810a997aa5d15126cbd093e84d0eb1a19ccc731b32b6f6ae0f8c3537fb6924",
+    "regression48Sha256": "1d57effed13f3fbc80af670a68258ad1f0696a6771d69ea1cf63d0d3baf7e963",
+    "engineeringTests": 376,
+    "regressionSeconds": 188.341,
+    "illegalBefore": 65,
+    "illegalLegalDecoder": 0,
+    "rawIllegalAfterAbstention": 65,
+    "abstainedEntities": 6,
+    "abstainedPairs": 2,
+    "trainSpansPreserved": 678,
+    "pipelineBefore": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "truePositive": 50,
+      "predicted": 169,
+      "reference": 84,
+      "precision": 0.2958579881656805,
+      "recall": 0.5952380952380952,
+      "f1": 0.3952569169960474
+    },
+    "pipelineLegal": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "truePositive": 50,
+      "predicted": 193,
+      "reference": 84,
+      "precision": 0.25906735751295334,
+      "recall": 0.5952380952380952,
+      "f1": 0.36101083032490977
+    },
+    "pipelineAbstention": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "truePositive": 50,
+      "predicted": 167,
+      "reference": 84,
+      "precision": 0.2994011976047904,
+      "recall": 0.5952380952380952,
+      "f1": 0.398406374501992
+    },
+    "gates": {
+      "pipelinePrecisionNonRegression": false,
+      "pipelineF1NonRegression": false,
+      "pipelineRecallRegressionWithinGuard": true,
+      "referenceDATASETSupport": true,
+      "completeReferenceEVALUATED_ONSupport": false,
+      "completeDocumentCoverage": false,
+      "NERMicroF1Against46": true,
+      "DATASETRecallAgainst46": true
+    },
+    "testEvaluated": false,
+    "labelsChanged": false,
+    "modelPromoted": false
+  },
+  "previousVerificationSha256": "921ff3e1890e8eef489653d6bd5d7eb0a6f3868d76b53986c61f0589f88a50e0",
+  "evidenceManifestSha256": "d4138bb1b8f0e3e7d829dfd4d70594e1740513dc702a0b4b65cfecf05509dfab",
+  "capturesSha256": "4d6051bb93da50ea3bb387c12285a4b8abcbc1bc7f8b17203044fcc5e109c924",
+  "qualityPromotionPassed": false,
+  "modelPromoted": false
+}

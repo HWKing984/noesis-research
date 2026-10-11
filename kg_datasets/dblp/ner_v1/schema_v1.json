@@ -1,0 +1,27 @@
+{
+  "version": "v1-candidate",
+  "status": "pending_human_pilot",
+  "entity_labels": [
+    "METHOD",
+    "TASK",
+    "DATASET",
+    "DOMAIN"
+  ],
+  "offsets": "Unicode codepoints, [start,end), unchanged CSV title",
+  "flat_non_overlapping": true,
+  "relation_pairs": {
+    "USED_FOR": [
+      "METHOD",
+      "TASK"
+    ],
+    "EVALUATED_ON": [
+      "METHOD",
+      "DATASET"
+    ],
+    "APPLIED_TO": [
+      "METHOD",
+      "DOMAIN"
+    ]
+  },
+  "negative_label": "NO_RELATION"
+}

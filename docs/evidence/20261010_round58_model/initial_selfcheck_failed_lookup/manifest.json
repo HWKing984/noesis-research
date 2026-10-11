@@ -1,0 +1,8 @@
+{
+  "kind": "failed_readonly_prediction_audit",
+  "status": "failed_no_synthetic_fallback",
+  "checkerSha256": "4ebaba675dc4b23a320c1a309603940cb695aa455caa5ea219a58e1a8ab855fe",
+  "filesSha256": {
+    "prediction_check.json": "b546ed8312fd06419a4bf023436240956b1112c43d52851c7d01b7a515c80cea"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "valid": true,
+  "nodes": {
+    "persons": {
+      "rows": 72694,
+      "unique_ids": 72694,
+      "empty_ids": 0
+    },
+    "publications": {
+      "rows": 20000,
+      "unique_ids": 20000,
+      "empty_ids": 0
+    },
+    "venues": {
+      "rows": 3205,
+      "unique_ids": 3205,
+      "empty_ids": 0
+    },
+    "topics": {
+      "rows": 8,
+      "unique_ids": 8,
+      "empty_ids": 0
+    }
+  },
+  "edges": {
+    "authored": {
+      "rows": 88762,
+      "dangling_edges": 0,
+      "duplicate_rows": 0,
+      "repeated_endpoint_pairs": 1,
+      "wrong_types": 0
+    },
+    "published_in": {
+      "rows": 19998,
+      "dangling_edges": 0,
+      "duplicate_rows": 0,
+      "repeated_endpoint_pairs": 0,
+      "wrong_types": 0
+    },
+    "about": {
+      "rows": 21223,
+      "dangling_edges": 0,
+      "duplicate_rows": 0,
+      "repeated_endpoint_pairs": 0,
+      "wrong_types": 0
+    }
+  },
+  "errors": [],
+  "missing_authors": 102,
+  "missing_venues": 2,
+  "missing_doi": 3027,
+  "year_distribution": {
+    "2015": 287,
+    "2016": 382,
+    "2017": 570,
+    "2018": 933,
+    "2019": 1326,
+    "2020": 1580,
+    "2021": 1990,
+    "2022": 2212,
+    "2023": 2752,
+    "2024": 3794,
+    "2025": 4174
+  },
+  "type_distribution": {
+    "inproceedings": 8002,
+    "article": 11998
+  },
+  "array_format": "semicolon-delimited inherited v1; literal semicolons may be ambiguous; pilot uses titles only",
+  "raw_source": {
+    "path": "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\dblp.xml.gz",
+    "bytes": 1099942087,
+    "md5": "41abb87b4e8b8a2e3c470efd6528ad88"
+  },
+  "source_csv_sha256": {
+    "about.csv": "97de8b09017164d6d834535635ae9d7be3737e5dd9426d71eb44586df31953a8",
+    "authored.csv": "f2fbe133bde8e41e8f7fa9bb04db8109c0e0763ffde28c716976a46a021f9da7",
+    "persons.csv": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60",
+    "publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "published_in.csv": "bcdf029c0733954c013c77714bad5ee7b7ef17d213221aa94c89e01515370715",
+    "topics.csv": "b0f022b1b207a877ba6eb63101b007c486067718acfe607b55d7dce21b82b077",
+    "venues.csv": "0b5baa6293cf14826f8e191d766e344bd7c30890087c9fbca1e34f7f64324606"
+  },
+  "script_sha256": {
+    "annotation_core.py": "f3c2080e547d278c2ee5aaeea2532819ffbcd08a98738aec9ef6f3cd9d841a5a",
+    "prepare_ner.py": "471514fb48382e5c2025c616927428e5106849646d94f2810b674ed23bc771dc",
+    "process_dblp_ai.py": "efc22715bc7b413c110930a468d2ff6ec762c32b73b5c54849e6433dc053d3d2"
+  },
+  "doi_recovery_changes": []
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "actual_application_failure_state_evidence_not_successful_database_import",
+  "sourceSha256": {
+    "scripts/course_graph.py": "41441df70fd10b4ea9a5b27b9be6768ce67f8e1104b6754fe39d6c46a0e97937",
+    "scripts/capture_course_app.ps1": "1b7545578272f4fee97adf54b5de96ab50313415e09a035f69b5a2fa711d0030",
+    "resources/course_literature.html": "50e7a518627e8586013054157db80be323559116245d4124e727e722572cb609",
+    "tests/test_course_graph.py": "1a5bb4205019c1f2434bdde150e2424b9327064b37562bab11d9e0c04da81e9f",
+    "docs/course_v4_graph_application.md": "a146dd9ab576034076a261ad8e918363f0fa882e175f1baad75b5d8a314a1a1d",
+    "README.md": "e48df39261460be576116922bd1179f2ca4c768cd0f28fd52ed4d98702c27331",
+    "docs/course_v4_progress.md": "6459b004d9c86c3db78c955bed3a411fc82ab9cdcf4ee9eb2ee04e52c8b5d432",
+    "docs/course_v4_plan.md": "46992b2719dc2cd4774a814f20d3757e3e5c00ca88dcefc398da6314888020b6",
+    "docs/course_v4_runbook.md": "c8240e61b53ee1e5527c22517b2101d77bd335cf41be56f54ff7918578a5d62e",
+    "docs/course_v4_report_evidence.md": "69cb42c10fe6fd7c17ce1ad0b5ba72e4cfc1c327cf3a7df487a6463898b7a8e6"
+  },
+  "filesSha256": {
+    "app_1440.png": "c147b668246d16b14515718ddffb1e81f604854a533c6e6da2413cf1a5d01d79",
+    "app_375.png": "9282a9de638e8491154256fbcb4a73741c00a26a995da2359420fa05c01d6aee",
+    "app_768.png": "f3e21dc1556dfd056361576ae51570f60b104d1501e15e1bee4883f98e64e5e9",
+    "browser_dom.json": "e48667673014b14411301f854456dd5594ca1d39e9b3ef738d8280275330cb26",
+    "captures.json": "d3b6a25da3cc9b7e78f4cae4dcf93fb7aab8a030ba4c70f66b678fee89568a29",
+    "chrome_app_375.jpg": "fc294535851d1915c1416d47b4be4ce5470668aeb172b679223397a4b2932e95",
+    "chrome_app_768.jpg": "b487cd8fb668108013cfa6ca78d99fb77eca00edd0032c541497bf81188da11d",
+    "lighthouse.json": "b13aa7bc5ead737ccc3d7f162d60ed8baf99672957fa62afc3220a914ac8cfe5"
+  },
+  "reportScreenshots": [
+    "app_1440.png",
+    "chrome_app_768.jpg",
+    "chrome_app_375.jpg"
+  ],
+  "croppedEdge375Excluded": true,
+  "visualRegression": "INCONCLUSIVE_no_baseline",
+  "successFlowAcceptance": "blocked_by_401"
+}

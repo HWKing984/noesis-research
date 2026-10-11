@@ -1,0 +1,186 @@
+{
+  "NER": {
+    "scibert52": {
+      "micro": {
+        "evaluationTarget": "exposed_dev_AI_reference",
+        "truePositive": 138,
+        "predicted": 196,
+        "reference": 184,
+        "precision": 0.7040816326530612,
+        "recall": 0.75,
+        "f1": 0.7263157894736842
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 98,
+          "predicted": 120,
+          "reference": 116,
+          "precision": 0.8166666666666667,
+          "recall": 0.8448275862068966,
+          "f1": 0.8305084745762712
+        },
+        "TASK": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 28,
+          "predicted": 60,
+          "reference": 53,
+          "precision": 0.4666666666666667,
+          "recall": 0.5283018867924528,
+          "f1": 0.49557522123893805
+        },
+        "DATASET": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 12,
+          "predicted": 16,
+          "reference": 15,
+          "precision": 0.75,
+          "recall": 0.8,
+          "f1": 0.7741935483870968
+        }
+      }
+    },
+    "gliner": {
+      "micro": {
+        "evaluationTarget": "exposed_dev_AI_reference",
+        "truePositive": 59,
+        "predicted": 89,
+        "reference": 184,
+        "precision": 0.6629213483146067,
+        "recall": 0.32065217391304346,
+        "f1": 0.43223443223443225
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 48,
+          "predicted": 51,
+          "reference": 116,
+          "precision": 0.9411764705882353,
+          "recall": 0.41379310344827586,
+          "f1": 0.5748502994011976
+        },
+        "TASK": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 0,
+          "predicted": 13,
+          "reference": 53,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DATASET": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 11,
+          "predicted": 25,
+          "reference": 15,
+          "precision": 0.44,
+          "recall": 0.7333333333333333,
+          "f1": 0.55
+        }
+      }
+    }
+  },
+  "pipeline": {
+    "scibert52": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 7,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 59,
+        "predicted": 176,
+        "reference": 84,
+        "precision": 0.3352272727272727,
+        "recall": 0.7023809523809523,
+        "f1": 0.45384615384615384
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 59,
+          "predicted": 168,
+          "reference": 84,
+          "precision": 0.35119047619047616,
+          "recall": 0.7023809523809523,
+          "f1": 0.46825396825396826
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 8,
+          "reference": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        }
+      },
+      "positiveMacroF1": 0.46825396825396826,
+      "supportedPositiveClasses": [
+        "USED_FOR"
+      ],
+      "negativeDecisions": 7,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    },
+    "gliner": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 7,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 0,
+        "predicted": 50,
+        "reference": 84,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 25,
+          "reference": 84,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 25,
+          "reference": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        }
+      },
+      "positiveMacroF1": 0.0,
+      "supportedPositiveClasses": [
+        "USED_FOR"
+      ],
+      "negativeDecisions": 4,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    }
+  },
+  "NERDocuments": 16,
+  "completeDocuments": 7,
+  "lockedQueue": 19,
+  "documentCoverage": 0.3684210526315789,
+  "testEvaluated": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "thresholdSearch": false,
+  "inferenceFeatures": "original_text_and_fixed_label_descriptions_only",
+  "peakNERGPUBytes": 896794112,
+  "versions": {
+    "gliner": "0.2.29",
+    "torch": "2.8.0+cu126",
+    "transformers": "4.57.1",
+    "sentencepiece": "0.2.1"
+  },
+  "externalPretrainingOverlapUnknown": true,
+  "notice": "AI-reference exposed dev only; zero-shot baseline is not the required course training experiment or final test."
+}

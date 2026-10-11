@@ -1,0 +1,18 @@
+{
+  "version": "abstract_occurrence_v1",
+  "parentContract": "resources/course_abstract_v1.json",
+  "parentContractSha256": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+  "upstreams": [
+    {"folder": "kg_datasets/dblp/course_abstract_relation_inputs_20261008_36", "manifestSha256": "8464b73aa19faf4f39d7b2f3d11251ad2b9a30ca6ecb25d95d5b66e826ae0b35", "prefix": "train_"},
+    {"folder": "kg_datasets/dblp/course_abstract_expansion_reviewed_20261008_37", "manifestSha256": "2fb4c86668f8c9ac0639ba53d98a360d199cd48c52cb0767a6d1ddab68070f71", "prefix": ""}
+  ],
+  "revisionCohort": ["2110.02932", "2409.13884"],
+  "selection": "Two pre-existing TRAIN quarantines explicitly attributed to contextual family/discipline or nested lexical-modifier ambiguity, identified before this revision. Not selected using dev/test model errors or prediction scores.",
+  "occurrencePolicy": "For each declared literal, enumerate every standalone occurrence using the historical word/hyphen boundary rule. Explicit per-occurrence METHOD/TASK/DATASET, OUT_OF_SCOPE or WITHIN_ENTITY judgment and reason. WITHIN_ENTITY must point to a covering selected entity. No global type propagation, URL entity, silent overlap resolution or omitted declared occurrence.",
+  "scopeClarification": "Unspecified machine-learning families are METHOD when locally described as technical methods or deployed systems; ML practitioners/community/development limitations are not methods merely because the abbreviation is shared. A task word that only modifies an explicit method name is part of that METHOD span; a separately stated task is TASK. Truly asserted overlapping entities and coordinated shared heads still require quarantine, not precedence-based deletion.",
+  "sourcePolicy": "Exact source Unicode, unchanged source identifiers, original train paper groups and flat BIO schema. Reuse immutable receipts for non-revised documents. Fresh generation and same-session review for each revised document, with separate upstream-receipt binding.",
+  "relationPolicy": "Discard inherited endpoint IDs in each revised document. Rebuild all typed candidates as UNRESOLVED before any explicit evidence judgment. Inherit unchanged resolved relations from round36 for every other document. Unknown is never NO_RELATION.",
+  "experiment": "Train annotation representation repair and strict tokenizer/BIO preflight only. No retraining, model inference, dev relabeling, final-test access or online graph write. A larger usable train cohort is not evidence of model improvement.",
+  "automaticPromotionAllowed": false,
+  "qualityPromotionPassed": false
+}

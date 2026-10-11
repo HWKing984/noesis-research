@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>摘要数据扩充与标注预检 · 2026-10-08</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>摘要数据扩充与标注预检 · 2026-10-08</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<h2>来源与数据队列</h2><table><thead><tr><th>项目</th><th>实际结果</th></tr></thead><tbody><tr><td>导出API</td><td>5批请求超时，保存失败；没有合成摘要替代</td></tr><tr><td>官方摘要页</td><td>60次请求成功，57篇题名匹配、3篇隔离</td></tr><tr><td>已有来源</td><td>18篇题名匹配；1篇旧题名不匹配隔离</td></tr><tr><td>整篇摘要</td><td>75篇；train37 / dev19 / test19；最大386token，无截断</td></tr><tr><td>试标</td><td>8段原文 / 7个论文组，仅train；9个DATASET、5个METHOD、5个TASK</td></tr><tr><td>关系</td><td>5条USED_FOR、2条EVALUATED_ON；均是AI参考标签</td></tr><tr><td>复核与对齐</td><td>同会话AI复核8段、修订2处边界；BIO严格往返一致</td></tr><tr><td>模型状态</td><td>本轮未重训、未评测模型、未晋级；360工程检查通过，不等于语义准确率</td></tr></tbody></table><h2>真实原文与AI标注示例</h2><div class="title">We introduce <mark class="METHOD">Codex<small>METHOD</small></mark>, a <mark class="METHOD">GPT<small>METHOD</small></mark> language model fine-tuned on publicly available code from GitHub, and study its <mark class="TASK">Python code-writing<small>TASK</small></mark> capabilities.</div><div class="title">On <mark class="DATASET">HumanEval<small>DATASET</small></mark>, a new evaluation set we release to measure functional correctness for <mark class="TASK">synthesizing programs from docstrings<small>TASK</small></mark>, our model solves 28.8% of the problems, while <mark class="METHOD">GPT-3<small>METHOD</small></mark> solves 0% and <mark class="METHOD">GPT-J<small>METHOD</small></mark> solves 11.4%.</div><p>75篇整篇摘要仍待单独标注；8段试标不冒称整篇摘要已标注。没有独立人工金标准。报告继续暂停。</p><footer>证据页生成时间：2026-10-08T01:27:19.184070+00:00<br>来源：<div class="path">course_abstract_sources_20261008_32</div><div class="path">course_abstract_pages_20261008_32</div><div class="path">course_abstract_pilot_20261008_32</div><div class="path">course_abstract_pilot_reviewed_ready_20261008_32</div><div class="path">course_abstract_queue_20261008_32</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

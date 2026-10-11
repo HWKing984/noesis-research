@@ -1,0 +1,167 @@
+{
+  "checkedAtUTC": "2026-10-06T15:33:08.360903+00:00",
+  "valid": true,
+  "originalInputsUnchanged": 21,
+  "historicalRunDirectories": 166,
+  "historicalHashedRunOutputs": 1120,
+  "historicalArchivedSourcesVerified": 96,
+  "previousAuditSourceFilesUnchanged": 17,
+  "exportVersions": 11,
+  "hashedExportFiles": 97,
+  "latestSnapshot": "course_v4_training_inputs_11",
+  "snapshotManifestSha256": "1bd4930f706a666ea681fae2a99924cfd36b9acb20b16c8c870d4e5b529d2815",
+  "annotation": {
+    "reviewedDocuments": 908,
+    "newPapersAnnotated": 0,
+    "fixedEntityREJudgments": 144,
+    "relationCompleteTestDocuments": 138,
+    "inheritedNERQuarantine": 56,
+    "newREUnresolvedDocuments": 6,
+    "trainDevNERAndREByteIdenticalTo10": true,
+    "allNEREntitiesAndStatusesUnchanged": true,
+    "testNERFileBytesChangedForAnnotationHash": true
+  },
+  "evaluation": {
+    "runManifestSha256": "ce9697e286c4532d9e6b18b114b7d96eae65432e5b4f3cadfbc4629b0d4191af",
+    "dataSealSha256": "3e94546f85cc0837ffc3b794966175659b641927a99db715a27eab892afcef82",
+    "weightsUnchanged": true,
+    "noTraining": true,
+    "noRepeatedNERTestInference": true,
+    "devServingParity": {
+      "predictionsAndMetricsIdentical": true,
+      "pairs": 162,
+      "checkpointSelectionRepeated": false
+    },
+    "modulePositiveMicroF1": 0.9924812030075187,
+    "pipelinePositiveMicroF1": 0.6007326007326007,
+    "coverage": 0.69,
+    "moduleErrorPairs": 2,
+    "pipelineErrorDocuments": 51,
+    "metricsRecomputedFromPredictions": true
+  },
+  "regression": {
+    "tests": 338,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 226.841,
+    "xmlSha256": "7d75bda2284edd46ee97d7cbc564672d6f7fa26d6253535c354f06aef79181e2",
+    "coverageIsStatementNotSemantic": true,
+    "coverage": {
+      "scripts\\evaluate_course_relation.py": {
+        "covered_lines": 181,
+        "num_statements": 188,
+        "percent_covered": 96.27659574468085,
+        "percent_covered_display": "96",
+        "missing_lines": 7,
+        "excluded_lines": 0,
+        "percent_statements_covered": 96.27659574468085,
+        "percent_statements_covered_display": "96"
+      },
+      "scripts\\export_course_evidence.py": {
+        "covered_lines": 234,
+        "num_statements": 395,
+        "percent_covered": 59.24050632911393,
+        "percent_covered_display": "59",
+        "missing_lines": 161,
+        "excluded_lines": 0,
+        "percent_statements_covered": 59.24050632911393,
+        "percent_statements_covered_display": "59"
+      }
+    }
+  },
+  "screenshots": {
+    "totalVerifiedPNG": 16,
+    "newPNGVisuallyInspected": true,
+    "realBrowserCaptureNotConsoleOrNeo4j": true,
+    "files": [
+      {
+        "path": "docs\\evidence\\20261006_round07\\01_data.png",
+        "sha256": "a303891b757313fbad33b326e9f2e1ecfa4befa45ced03b1b50dfc328ef57088"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round07\\02_training.png",
+        "sha256": "de6efa66f99fb6c43936bb302ab5a1b85a1eebc716ea63506dc55d9a96699919"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round07\\03_predictions.png",
+        "sha256": "15dda0d7d1a974724902f5d5afb460a027f016e87a900dae5cd42555203acde6"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round07\\04_traceability.png",
+        "sha256": "da959422cbcca4bc249df0ed964ad42a2b949915dbf2ffa6f447dc6d4ee84fdf"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round08\\01_data.png",
+        "sha256": "929798d6c196cd9d55c0e66275569975ac633091fe7ef82c06288fda796c0e68"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round08\\02_training.png",
+        "sha256": "474e1ba23e77f6d6374b0824f9121d00059b34c73ead5240839e53c0fd0f0fdf"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round08\\03_predictions.png",
+        "sha256": "01a66dee5ac52fe61d8bf6b64c4f572740af41afc311b5ae299fc54e0f897918"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round08\\04_traceability.png",
+        "sha256": "5297218ac5ac75f9cdc8e78b7bc2b8ba9b6ea2acb1bf46df9cb3f598aaca2c2b"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round08\\05_development.png",
+        "sha256": "385e48304918f6324bad8b2b8d8e30a166e589b83b5f8f70c61f3b506fb953fd"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round09\\06_final_test.png",
+        "sha256": "bbb71d1f76fbfef18787d00ec81e1dee2bcc7f90c4670f39df74bb9e99ce7144"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round11\\07_relation_development.png",
+        "sha256": "0e7a65bfa73e9c35fdc8d9c18892e6e5b09fe307af5aa30746b3653946cb38f2"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round14\\07_relation_development.png",
+        "sha256": "c4e0f0f591f5dcb525aceaba34a45779e63d0bdc2a5936903b1427561e8fb9a8"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round15\\07_relation_development.png",
+        "sha256": "4f9f31456f4524e9bcf80b757d665b0f701a5c8b9174b4a6a0eb0f3576e212dc"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round16_ner\\06_final_test.png",
+        "sha256": "5f9b04c3de1a434b9232312bc9cb51f6cf143771aca0ccdb926aa140d78ceda5"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round16_re\\07_relation_development.png",
+        "sha256": "0bccf47c441bf76060b89b164c6abc90b6abe022a22f001497819e5eef6204ee"
+      },
+      {
+        "path": "docs\\evidence\\20261006_round17\\08_relation_test.png",
+        "sha256": "a14a4533198ab49e9b9698a62e11942400cd969a2555abf98f84bc2df3c1b9dc"
+      }
+    ]
+  },
+  "currentSourceArchive": {
+    "path": "kg_datasets\\dblp\\course_v4_runs\\handoff_sources_20261006_17",
+    "manifestSha256": "1b02a1c4d2c49e07d5815781b353fc58f01f1b323ed04e2a444833be53bd9daf",
+    "sourceSha256": {
+      "scripts/evaluate_course_relation.py": "70690a2484659ebbcce3a3b21e763f52c3dfb4bc153098682f352803512ff054",
+      "scripts/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+      "scripts/capture_course_evidence.ps1": "996a49f6de46736227ca0d9c4eb83c34d03c60f9f41577c52dc548db95e1fa9c",
+      "tests/test_course_relation_test.py": "c921524205c3ae76413c60c83db2e6f11befc1de38b5683ccecca82d0fda7e44",
+      "annotations/course_v4/test_relation_20261006.py": "aa854e6c45685cba7852d2cdb3f4ce56a2b0892e016edd2d71e921b1773380d9",
+      "annotations/course_v4/re_test_data_20261006.json": "3e94546f85cc0837ffc3b794966175659b641927a99db715a27eab892afcef82",
+      "README.md": "5264c82ea7bb0fd6f14561ca4037dc5a5c0fd469b335ca631bfcc2930f87ea0a",
+      "docs/course_v4_relation_test.md": "42b9c1310181dceadfc840bc54bcb8c15bd84b489c56047c4fb46d990dd652d8",
+      "docs/course_v4_progress.md": "c968e87c8651b75b2f927bf73e3babb16b46e40c41139e84082ad086257cfe77",
+      "docs/course_v4_plan.md": "acd7349b2dc0cc9493cff1d56bac4aac882eb409dd9503a4c1bc6ae29b948617",
+      "docs/course_v4_runbook.md": "904a68ba83e7b3513bd35478660a5daf73e2541c87f2b2c5cde3722308827962",
+      "docs/course_v4_report_evidence.md": "e7477f0bdcdf67b7fd876db28ff4584c8778220a56b780b62a05e881164f5d76"
+    }
+  },
+  "localDocLinks": {
+    "checked": 314,
+    "missing": 0
+  },
+  "next": "provenance-labeled model candidate facts and Neo4j literature search app; no retuning on these sealed test results"
+}

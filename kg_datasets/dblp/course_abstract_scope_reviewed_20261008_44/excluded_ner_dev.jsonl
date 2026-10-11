@@ -1,0 +1,3 @@
+{"sampleId": "sample-f0879a37f4b10d7be8b6", "reason": "The task name Exploration with Intrinsic Motivation contains a METHOD surface. Flat nonoverlapping labels cannot represent both without an explicit boundary policy; keep partial labels and quarantine."}
+{"sampleId": "sample-acbaf9094be5068beb66", "reason": "The repair-task surface nests a DNN method mention and benchmark controllers are unnamed. Retain partial spans, exclude the nested task, and quarantine rather than create incomplete NER supervision."}
+{"sampleId": "sample-b7d5c061e2d0268bc193", "reason": "Evaluation metrics, visualization methods and generative-method names are intermixed; their METHOD boundaries are not settled by the current flat schema. Do not train these omitted constructs as O."}

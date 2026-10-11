@@ -1,0 +1,4 @@
+WARNING! You are using an unsupported Java runtime.
+* Please use Java(TM) 21 or Java(TM) 25 to run Neo4j.
+* Please see https://neo4j.com/docs/ for Neo4j installation instructions.
+WARNING: Using incubator modules: jdk.incubator.vector

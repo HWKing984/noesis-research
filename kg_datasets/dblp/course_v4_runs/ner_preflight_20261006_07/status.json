@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "mode": "preflight",
+  "trainingStarted": false,
+  "formalTrainingStarted": false,
+  "testEvaluated": false,
+  "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+  "createdAt": "2026-10-06T00:48:56.158311+00:00",
+  "config": {
+    "seed": 20261006,
+    "samples": 24,
+    "steps": 120,
+    "batch_size": 8,
+    "learning_rate": 5e-05,
+    "max_length": 128
+  },
+  "elapsedSeconds": 45.76106560000335,
+  "testTokenized": false,
+  "finishedAt": "2026-10-06T00:49:41.919632+00:00"
+}

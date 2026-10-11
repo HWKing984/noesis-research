@@ -1,0 +1,23 @@
+{
+  "version": "whole_abstract_expressed_relation_v2",
+  "parentProtocolUnchanged": "resources/course_v2_supervision_protocol_v1.json",
+  "userRequestedChange": "Review complete abstracts; NO_RELATION may mean an explicitly adjudicated absence of the target relation in that source, without requiring an explicit denial sentence.",
+  "positiveSchema": {
+    "USED_FOR": "METHOD -> TASK, with source-local actor/predicate attribution and declared purpose role.",
+    "EVALUATED_ON": "METHOD -> DATASET, attributed evaluation; use as construction/training data is not itself evaluation."
+  },
+  "NO_RELATION": "An explicit per-document source-read rule confirms that the whole abstract does not express the positive relation for these endpoints, after checking actor/object role, aliases, pronouns and context. Not a full-text or real-world denial.",
+  "UNRESOLVED": "Uncertain implicit contribution, component/whole transfer, or class/instance/coreference remains masked. No bulk conversion, including the five protected historical contrasts.",
+  "entityScope": "Flat contiguous METHOD/TASK/DATASET; no entities from titles or URLs; named-entity overlaps are not duplicated. Shared-object coordinated tasks may stay one continuous span; no character-length deletion rule.",
+  "weakReference": true,
+  "independentHumanGold": false,
+  "reviewCompletedBy": "AI, not independent verification",
+  "trainRosterSize": 65,
+  "devRosterSize": 20,
+  "testRosterSize": 20,
+  "testTextRead": false,
+  "trainingAllowed": false,
+  "automaticPromotionAllowed": false,
+  "evaluation": "Strict NER relative to this AI reference. RE reports scored-scope P/R/F1, masked prediction counts, coverage and conservative full-universe bounds; partial-reference scores are not complete end-to-end F1.",
+  "nextAction": "User reviews labels and accepts this snapshot; then explicitly authorize one SciBERT exploratory run with frozen train/dev identities and test text sealed."
+}

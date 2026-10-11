@@ -1,0 +1,37 @@
+{
+  "captures": [
+    {
+      "sourcePageSha256": "de7a5a4d77cae5f39a447e9dfeeaa7e81ea5d3d3b6903a9c46b89ca26a74fa44",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1900",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round16_ner\\06_final_test.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e63005ffa4a94b6ebef29fb7bec9bb99",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round16_ner/06_final_test.html"
+      ],
+      "sha256": "5f9b04c3de1a434b9232312bc9cb51f6cf143771aca0ccdb926aa140d78ceda5",
+      "image": "06_final_test.png",
+      "originalConsoleScreenshot": false,
+      "viewportHeight": 1900,
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round16_ner/06_final_test.html",
+      "sourcePage": "06_final_test.html",
+      "capturedAt": "2026-10-06T14:59:41.8251525Z",
+      "bytes": 164622
+    }
+  ],
+  "generatedFromRealArtifacts": true,
+  "originalConsoleScreenshot": false,
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e63005ffa4a94b6ebef29fb7bec9bb99",
+  "finishedAt": "2026-10-06T14:59:41.8348208Z",
+  "browserVersion": "154.0.4258.53",
+  "viewportWidth": 1280,
+  "renderer": "installed_Microsoft_Edge_headless",
+  "status": "completed",
+  "kind": "actual_browser_render_capture"
+}

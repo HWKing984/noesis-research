@@ -1,0 +1,13 @@
+{
+  "kind": "explicit_train_only_role_priority_selection",
+  "documents": 25,
+  "sourceSnapshotManifestSha256": "9727dad008ab4750292e5bde3a2d8be2f68b7e2f3e1f0f3ed5ab64b4ec219fde",
+  "sourceDatasetManifestSha256": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+  "selectionCodeSha256": "7eacfdbfbfec62ace1111efb122a40b5055fda0cfaef6c82d06dad75da346e6d",
+  "modelCallExecutedBySelector": false,
+  "semanticLabelsCreatedBySelector": false,
+  "notice": "Purposive train-only sampling after dev error analysis; not random, blind or unbiased. No dev/test titles included. Jobs contain only anonymous ID, original title and title hash.",
+  "filesSha256": {
+    "jobs.jsonl": "4196c2a2431f9b17e55079cec900d467f7091abcf52b336bd2fe020fc70a228e"
+  }
+}

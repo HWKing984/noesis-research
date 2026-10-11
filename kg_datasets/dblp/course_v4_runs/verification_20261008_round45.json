@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-08T11:59:59.189740+00:00",
+  "audit": {
+    "status": "completed",
+    "version": "abstract_train_benchmark_expansion_v1",
+    "trainQueue": 62,
+    "NERtrain": 58,
+    "NERexcluded": 4,
+    "entitySupport": {
+      "TASK": 218,
+      "METHOD": 405,
+      "DATASET": 55
+    },
+    "DATASETSourcePapers": 20,
+    "knownPairs": 271,
+    "relationSupport": {
+      "EVALUATED_ON": 61,
+      "USED_FOR": 184,
+      "NO_RELATION": 26
+    },
+    "unknownPairs": 1659,
+    "eligiblePairs": 1930,
+    "completeRelationDocuments": 11,
+    "addedTrainPapers": 4,
+    "oldReceiptLinesPreserved": 58,
+    "maxMarkedTokens": 333,
+    "opaqueDevFilesIdentical": 9,
+    "trainingExecuted": false,
+    "inferenceExecuted": false,
+    "heldOutAbstractsAccessed": false,
+    "modelPromoted": false,
+    "qualityPromotionPassed": false,
+    "independentHumanGold": false,
+    "selectionBias": "targeted reading-comprehension benchmark papers; not representative independent evaluation",
+    "BIORecomputed": 58,
+    "actualSourcesParsed": 4,
+    "sourceRequestWallSpacingsSeconds": [
+      15.100272,
+      15.098972,
+      15.109734
+    ],
+    "newLiteralDatasetNames": [
+      "DROP",
+      "HotpotQA",
+      "RACE",
+      "TriviaQA"
+    ],
+    "literalDatasetNames": 31,
+    "newEVALUATED_ONSourcePapers": 1,
+    "engineeringTests": 373,
+    "regressionSeconds": 234.534,
+    "regressionScope": "D_drive_isolated_process_temp; C_drive_previous_rename_problem_not_fixed"
+  },
+  "previousVerificationSha256": "56d091cb3f0ddeb32e2d2af9a2d73464cd6ff4bc891145d799d0abd5b159fd49",
+  "finalTrainManifestSha256": "efbd9c2fc1f1e89f7cfc2cc59ec2df239e534f763d07a4a38b92d9464016e167",
+  "evidenceManifestSha256": "d1aba6b22a2ba64d708a421c8af5dafb1d64fc4f8099c49e0763a129704a79ca",
+  "capturesSha256": "871eaf8b36b0904b8df5f0ecc050a02924fc4672d618cd8e0cade8681477d535",
+  "qualityPromotionPassed": false
+}

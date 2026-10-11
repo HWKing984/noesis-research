@@ -1,0 +1,53 @@
+{
+  "version": "abstract_dev_supplement_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_benchmark_inputs_20261008_45",
+  "snapshotManifestSha256": "efbd9c2fc1f1e89f7cfc2cc59ec2df239e534f763d07a4a38b92d9464016e167",
+  "corpusSha256": "bc88db81e0c68156c2fcacdbf8523e77b81be9b5d811163da2ed30f3edf3ca8a",
+  "metadataLock": "kg_datasets/dblp/course_abstract_pages_20261008_32/selection_lock.json",
+  "metadataLockSha256": "e79ff9e828e47da3314da100bd95e26f20c3c13ca12deddc5931b9627ad9d36a",
+  "seeds": [
+    {
+      "arxivId": "1907.11692",
+      "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach"
+    },
+    {
+      "arxivId": "1909.11942",
+      "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations"
+    },
+    {
+      "arxivId": "2003.10555",
+      "title": "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators"
+    },
+    {
+      "arxivId": "2006.03654",
+      "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention"
+    },
+    {
+      "arxivId": "1906.08237",
+      "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding"
+    },
+    {
+      "arxivId": "1910.10683",
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+    },
+    {
+      "arxivId": "1910.13461",
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension"
+    },
+    {
+      "arxivId": "1908.10084",
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+    }
+  ],
+  "selection": "Fixed eight language-representation/model papers selected before new abstract responses, labels or model predictions. Reject normalized title/arXiv ID overlap with the entire 20000-paper registry, old train/dev references and original train/dev/test selection metadata; no replacement after failure. This is a targeted external development slice, not a random population sample or final test.",
+  "collection": "Reuse official arXiv citation metadata parser and bounded HTTP client; retain original HTML and Unicode abstract, verify title/ID, respect current robots and serial delay >=15.1s, reject >512 tokens without truncation.",
+  "annotation": "Reuse current METHOD/TASK/DATASET boundaries and explicit attribution/role-contrast relation policy. Actual AI generation followed by actual same-session source review. No model predictions are annotation inputs; UNRESOLVED never defaults to NO_RELATION. Preserve missing/quarantined documents in the denominator.",
+  "evaluation": "Separate supplementary-development denominators and bias disclosures. Never relabel or overwrite old dev/test, backfill historical F1 or count supplement as production papers. No independent human/model gold claim. Old promotion gates are unchanged; new scores require a separate frozen comparison lock.",
+  "crawlDelaySeconds": 15.1,
+  "maxTokens": 512,
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false,
+  "reportExpansionPaused": true
+}

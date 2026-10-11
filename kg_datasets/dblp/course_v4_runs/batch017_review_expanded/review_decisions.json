@@ -1,0 +1,705 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-79d9da04cc6fdf77f060",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Recipe2Vec",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-modal Recipe Representation Learning",
+          "label": "TASK"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Recipe2Vec names the recipe representation learner."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Recipe representation learning explicitly uses graph neural networks."
+        }
+      ],
+      "notes": "Recipe modality retained; recipes are generic input, not a named dataset.\nAI self-review: Recipe2Vec and graph neural networks explicitly perform multimodal recipe representation; no named collection."
+    },
+    {
+      "sampleId": "sample-919c989c9048bb37a17f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Supervised Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Medical Data Analysis is a broad application area without a specified prediction or extraction operation; Bio-Ontologies are unnamed conceptual resources, not a DATASET.\nAI self-review: Supervised learning identifiable; broad medical analysis and unnamed bio-ontologies do not specify scoped tasks/datasets."
+    },
+    {
+      "sampleId": "sample-bfc9b8a77957eba79406",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Online ECG Emotion Recognition for Unknown Subjects",
+          "label": "TASK"
+        },
+        {
+          "text": "Hypergraph-Based Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Online ECG emotion recognition for unseen subjects explicitly uses hypergraph-based transfer learning."
+        }
+      ],
+      "notes": "ECG is modality, not a named dataset; unknown-subject cohort retained.\nAI self-review: Online ECG recognition preserves unknown-subject cohort; hypergraph-based transfer mechanism explicit."
+    },
+    {
+      "sampleId": "sample-e17edaa37e3cfbe2fd9f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Checked full title: natural language processing is a broad field here; including signed languages does not specify a concrete extraction or prediction task.\nAI self-review: Signed languages and NLP remain field-level inclusion, not specified entity types; scoped empty result actually checked."
+    },
+    {
+      "sampleId": "sample-8ca76f83051c17a56001",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LSTM",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Trading Financial Instruments",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "LSTM is explicitly compared as a model for trading financial instruments."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Transformers are explicitly compared as models for trading financial instruments."
+        }
+      ],
+      "notes": "No trading benchmark is named; comparison alone does not establish EVALUATED_ON.\nAI self-review: Both models explicit for trading instruments; comparison has no named evaluation dataset."
+    },
+    {
+      "sampleId": "sample-af73dc13bb3939db6c5f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Copy Mechanism",
+          "label": "METHOD"
+        },
+        {
+          "text": "Handling Knowledge Base Elements",
+          "label": "TASK"
+        },
+        {
+          "text": "SPARQL Neural Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The direct element-handling role is explicit, but translation-wide effect is not separately established.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The copy mechanism is explicitly for handling knowledge-base elements."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "The subtitle locates the element-handling operation in SPARQL translation; its translation-wide role is not independently asserted."
+        }
+      ],
+      "notes": "Translation and its concrete handling subproblem are separate task spans; no invented corpus.\nAI self-review: Copy-to-element handling explicit; title not enough for translation-wide separate relation, retain unresolved."
+    },
+    {
+      "sampleId": "sample-c3cc332bb6531729105d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Arbitrary-Shaped Text Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Hierarchical Feature Refinement",
+          "label": "METHOD"
+        },
+        {
+          "text": "Nonlinear-Enhanced Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Hierarchical feature refinement is explicitly used for arbitrary-shaped text detection."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The nonlinear-enhanced transformers are explicitly used for arbitrary-shaped text detection."
+        }
+      ],
+      "notes": "Two fully written method phrases, not shared-head ellipsis.\nAI self-review: Both methods fully written and detection roles explicit; no shared-head reconstruction."
+    },
+    {
+      "sampleId": "sample-c2960760d6ad380cf21d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Agent Pattern Formation",
+          "label": "TASK"
+        },
+        {
+          "text": "Distributed Model-Free Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Distributed model-free deep reinforcement learning is the stated pattern formation approach."
+        }
+      ],
+      "notes": "Distributed/model-free are architecture and learning-mechanism qualifiers; generic Approach excluded.\nAI self-review: Distributed/model-free are real mechanism qualifiers for multi-agent pattern formation."
+    },
+    {
+      "sampleId": "sample-c9dc0544a532aef60bad",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Predictive Analytics of COVID-19",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Neural networks explicitly perform COVID-19 predictive analytics."
+        }
+      ],
+      "notes": "Predictive operation and disease target are explicit; COVID-19 is not a dataset name.\nAI self-review: Predictive operation has explicit disease target; COVID-19 not a dataset."
+    },
+    {
+      "sampleId": "sample-0560f668d201ac74fcd8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Dynamic Graph Learning",
+          "label": "TASK"
+        },
+        {
+          "text": "Tensorized Lightweight Graph Convolutional Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Dynamic graph learning explicitly uses the tensorized graph convolutional network."
+        }
+      ],
+      "notes": "Tensorized architecture retained; internal Lightweight cannot be excised without a discontinuous invented span.\nAI self-review: Tensorized graph network architecture retained as continuous span; dynamic graph learning role explicit."
+    },
+    {
+      "sampleId": "sample-3fed203c4c0666d5f3a7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Visual Explanation",
+          "label": "TASK"
+        },
+        {
+          "text": "Attention Mechanism",
+          "label": "METHOD"
+        },
+        {
+          "text": "Actor-Critic-based Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Attention explicitly supplies the visual explanation."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "Actor-critic deep RL is the setting being explained, not the stated explanation instrument."
+        }
+      ],
+      "notes": "Do not reverse the interpretation object into the explanation method.\nAI self-review: Attention explains actor-critic learning; do not treat explanation object as its own explanation instrument."
+    },
+    {
+      "sampleId": "sample-d76afe59148ea75fb6c0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Dissimilarity Representation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Offline Handwritten Signature Verification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Dissimilarity representation is explicitly for offline handwritten signature verification."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Transfer learning is explicitly for offline handwritten signature verification."
+        }
+      ],
+      "notes": "No signature dataset is named.\nAI self-review: Dissimilarity representation and transfer learning both explicitly used for complete signature-verification target."
+    },
+    {
+      "sampleId": "sample-39bbc2e501292ef75d26",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Representing logical relations",
+          "label": "TASK"
+        },
+        {
+          "text": "Probabilistic Logical Dynamical Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Logical relations are explicitly represented by the named neural network."
+        }
+      ],
+      "notes": "Automatically is a general execution modifier; complete probabilistic/logical/dynamical architecture retained.\nAI self-review: Full network modifiers retained; logical relation representation explicit, automatically not needed in task."
+    },
+    {
+      "sampleId": "sample-9a01f11fc9bfd25924c8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Transformer Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Predicting Anti-HIV Active Molecules",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Graph transformer networks explicitly predict anti-HIV active molecules."
+        }
+      ],
+      "notes": "Molecules are prediction objects, not a named dataset.\nAI self-review: Graph transformer family explicit for anti-HIV active molecule prediction."
+    },
+    {
+      "sampleId": "sample-70437f726fa1f96e3b33",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DR.QG",
+          "label": "METHOD"
+        },
+        {
+          "text": "Closed-Domain Question Answering",
+          "label": "TASK"
+        },
+        {
+          "text": "Retrieving Documents",
+          "label": "TASK"
+        },
+        {
+          "text": "Question Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Main question-answering role is clear, but named-system roles for both inner operations need more than the title.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "DR.QG names the approach enhancing closed-domain question answering."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Retrieval is an inner operation; the title does not separately establish that the complete DR.QG system implements it."
+        },
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Question generation is an inner operation and its whole-system instrument role is not separately established."
+        }
+      ],
+      "notes": "No TASK-to-TASK pairs are generated; no invented retrieval benchmark.\nAI self-review: DR.QG main QA role explicit; inner retrieval/generation whole-system claims remain unresolved, no task-to-task labels."
+    },
+    {
+      "sampleId": "sample-e3fb24f286c37dd16068",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Marathon Bib Number Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Marathon bib recognition explicitly uses deep learning."
+        }
+      ],
+      "notes": "Retain marathon/bib object, not bare Recognition.\nAI self-review: Deep learning explicitly recognizes marathon bib numbers, object preserved."
+    },
+    {
+      "sampleId": "sample-bc4e8adec5447a5300c4",
+      "entityStatus": "unresolved",
+      "entityReason": "The incentive may be a computational mechanism rather than a generic policy; the title alone does not settle METHOD coverage.",
+      "entities": [
+        {
+          "text": "Truth Discovery",
+          "label": "TASK"
+        },
+        {
+          "text": "Crowdsourced Binary-Choice Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Possible incentive-method coverage unresolved; do not turn absent identified methods into completed negatives.",
+      "relations": [],
+      "notes": "Known tasks preserved; uncertain incentive type not forced into METHOD or omitted from complete coverage.\nAI self-review: Personalized privacy-preserving incentive may itself be a recognizable computational mechanism; excluding it while declaring coverage complete is too certain."
+    },
+    {
+      "sampleId": "sample-9c81655b30a002ea7a6a",
+      "entityStatus": "unresolved",
+      "entityReason": "The title does not clearly delimit a concrete prediction or simulation target; an unspecified Predictive Model is not a separately identified architecture.",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Incomplete target interpretation prevents a complete relation inventory.",
+      "relations": [],
+      "notes": "Big Data and COVID-19 are not dataset names; do not invent a continuous simulation task spanning unrelated clauses.\nAI self-review: Prediction/simulation scope unclear; machine learning known, unidentified predictive model not invented."
+    },
+    {
+      "sampleId": "sample-7373dadbf9aea9f57519",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Exploiting Visual Features",
+          "label": "TASK"
+        },
+        {
+          "text": "Bayesian Gated Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Disordered Speech Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Visual feature exploitation explicitly uses Bayesian gated neural networks."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The same explicit method-feature construction is stated for disordered speech recognition."
+        }
+      ],
+      "notes": "Visual feature exploitation is a concrete technical subtask; speech disorder context retained.\nAI self-review: Bayesian gating explicitly links visual feature exploitation to disordered-speech recognition."
+    },
+    {
+      "sampleId": "sample-1ae916a995bfd6c962e8",
+      "entityStatus": "unresolved",
+      "entityReason": "Shared mispronunciation object for Detection and Diagnosis cannot be represented as two full continuous task spans without inventing text or an unsupported combined task boundary.",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Mispronunciation Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Detection capability is explicit but diagnosis task coverage is unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Prompted language models are explicitly assigned mispronunciation detection abilities."
+        }
+      ],
+      "notes": "Task coordination uncertainty is not METHOD groupMentions; incomplete document remains excluded rather than a negative.\nAI self-review: Bare Diagnosis loses the shared mispronunciation object; cannot invent a noncontiguous Mispronunciation Diagnosis span or mark complete coverage."
+    },
+    {
+      "sampleId": "sample-cf9390ed3cc6d09f5069",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Sentiment Analysis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Machine learning is explicitly harnessed for sentiment analysis."
+        }
+      ],
+      "notes": "Discord user reviews are material from a platform, not a named dataset; classification models are unspecified members.\nAI self-review: Machine learning sentiment role explicit; Discord is platform and user reviews unnamed material."
+    },
+    {
+      "sampleId": "sample-5841461c38bcbafe38fe",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Autoscoring Feature for Korean Language Spoken by Foreigners",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The autoscoring feature is explicitly based on machine learning."
+        }
+      ],
+      "notes": "Autoscoring target, language and speaker cohort retained; Feature is internal to the only continuous target phrase.\nAI self-review: Scoring feature target keeps Korean language and speaker cohort continuously, method family separately stated."
+    },
+    {
+      "sampleId": "sample-71144685c7cfd2ee911b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Human Activity Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Framework is unspecified; ontology is an unnamed conceptual artifact, not a dataset or identifiable algorithm.\nAI self-review: Activity recognition explicit; generic framework and ontology not forced into computational method or dataset."
+    },
+    {
+      "sampleId": "sample-426a362d8e0f858af171",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Fall Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "3D Convolutional Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The fall detection system is explicitly based on 3D convolutional neural networks."
+        }
+      ],
+      "notes": "Alert Systems are application artifacts, not a separately delimited alert-generation task; Accuracy is not part of task.\nAI self-review: 3D CNN fall detection explicit; alert-system artifact not a fabricated alert-generation task."
+    },
+    {
+      "sampleId": "sample-09b75b2c5967b6abc91c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Networks with Linear Threshold Activations",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full activation-qualified network family; Structure and Algorithms are unspecified study aspects, not named tasks.\nAI self-review: Activation-qualified network family fully preserved; unspecified structure/algorithm topics not TASK."
+    }
+  ]
+}

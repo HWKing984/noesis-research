@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "createdAtUTC": "2026-10-07T07:56:40.327450+00:00",
+  "trainingStarted": false,
+  "testInferenceStarted": true,
+  "databaseWritten": false,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "finishedAtUTC": "2026-10-07T07:57:02.964090+00:00",
+  "elapsedSeconds": 22.639999999999418
+}

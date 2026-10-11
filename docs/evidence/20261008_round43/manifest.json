@@ -1,0 +1,29 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "02_training.html": "74d1d6b069c743d0b7e3bfe14786c54974d64c9e69777cc565fff6f2b24d7aad",
+    "04_traceability.html": "0656d8a34bb22c954da2af53f64a869663d6d06322d01d7f8ff90a4c9b63afc7",
+    "audit_state.json": "a9ff5069c6542986cd65c431de6646f2aa24a373190c43a68e282697c7087469",
+    "sources/README.md": "80d04499bec7bc3db283880d436d9d6a1f65576b83c30db0ce35be3623ec6d7f",
+    "sources/docs/system_status_round43.md": "6661cb8da820d3116bbc207b88d4f039eb554746a8046ff4888e15af52f60fd9",
+    "sources/resources/course_abstract_task_boundary_v1.json": "3d95dd848e19c4f09a35ce95f0c719f40d54aa6c3ad2738b922745a767d2e0d6",
+    "sources/resources/course_abstract_train_audit_v1.json": "285f4d7acbf2c7902687c7ae5f6bea2c0b354c5664437a81f673d0d70d6ab148",
+    "sources/scripts/audit_abstract_ner_training.py": "926b7d70c81f6309974664a235e02d11e55a3e2a38d37f09e619797b5fa97e5f",
+    "sources/scripts/revise_train_task_boundary.py": "361ee17504b5e54e1dfeaa5152a7f947c72af51319159386b0d0f7c6d0423960",
+    "sources/tests/test_train_ner_audit.py": "7ac9253460a7144cf386ed7ec649f265c44c432f213e4e76b43f7c69364427d1",
+    "sources/kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43/changed_generation_receipts.jsonl": "821d1d9bb7c44199dc0defc28eab6bee14711d5c69c08a61ebf6198a41de9fd1",
+    "sources/kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43/manifest.json": "401267ceeb46e8f0f0b6e25f6fdf09d9f1caaaf8654d29d21ce1f56f22bbb5a1",
+    "sources/kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43/revision.json": "e6005ae19ddfa9f509c25c46331bd3a020a2c583b793cf7ee6a52d8b2c1a7c0e",
+    "sources/kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43/summary.json": "db1999e3b1e3fb481ff6e893730c55c60cb75b8c009abc70e8c022ad4fde67c5",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round43_boundary_fixed.xml": "93d1fed71283391382cbe1c16c41c8ee35f8ddb7149c6f590cbfaf5911ed20fe",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round43_final_workspace_temp.xml": "8a8c51ed9b60fa2d49faea41fad52254878eac45fc2f662b0e2c3ba019d1e13d",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round43_targeted.xml": "d147b841e7b99870da104fefec9d8a4d756e071d52601088ebf0eed4107a5c64",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_train_diagnostic_20261008_43/audit.json": "dbc807b4db22c190b8958a91b48603193151278b3e8d096fbccac5506d2de4b5",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_train_diagnostic_20261008_43/manifest.json": "47de2c98efdf3bc92849b7f32c32a40cb005c53e0c19aee62df348e3cb759bd8",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_train_diagnostic_20261008_43/new42_train_errors.jsonl": "beea47acd860cbbb42e362497f891825ad9f55189f9f02e0f3997f03411d4b55",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_train_diagnostic_20261008_43/old35_train_errors.jsonl": "f1424e2d604057911cee362a8f81617ba6574ebb6c1bb39a095508abe2620204",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_train_diagnostic_20261008_43/status.json": "67cd993f4384a3e8ec6f18747fe48e624591419af4617f112795c24339251d92",
+    "sources/annotations/course_v4/abstract_train_dataset_audit_20261008_43.json": "3d3312efbb77d56ba09adfae8caada6bf232155cb88127ce5410b47068584403",
+    "sources/annotations/course_v4/seal_train_audit_20261008_round43.py": "51059970759fff94a1f4740d97daa9430e72d6b39210535d8eb310d087bd9147"
+  }
+}

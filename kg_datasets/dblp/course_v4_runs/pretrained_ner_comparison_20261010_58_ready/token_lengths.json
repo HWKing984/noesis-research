@@ -1,0 +1,82 @@
+[
+  {
+    "sampleId": "sample-c0a2636f606888105d1f",
+    "words": 199,
+    "subtokensWithLabels": 235
+  },
+  {
+    "sampleId": "sample-3c01b60042cb47c20cb3",
+    "words": 237,
+    "subtokensWithLabels": 272
+  },
+  {
+    "sampleId": "sample-c7aed6adce784e82aae9",
+    "words": 176,
+    "subtokensWithLabels": 209
+  },
+  {
+    "sampleId": "sample-f863f86126309bf600b1",
+    "words": 160,
+    "subtokensWithLabels": 204
+  },
+  {
+    "sampleId": "sample-c24ab7542b82fab6cdc7",
+    "words": 245,
+    "subtokensWithLabels": 268
+  },
+  {
+    "sampleId": "sample-99cad010fa0f5aea712d",
+    "words": 198,
+    "subtokensWithLabels": 226
+  },
+  {
+    "sampleId": "sample-e6a06d7413acbec18afb",
+    "words": 168,
+    "subtokensWithLabels": 211
+  },
+  {
+    "sampleId": "sample-9742b3da1324a5043ecb",
+    "words": 154,
+    "subtokensWithLabels": 185
+  },
+  {
+    "sampleId": "sample-f98a9e11f5274459f8cb",
+    "words": 191,
+    "subtokensWithLabels": 231
+  },
+  {
+    "sampleId": "sample-5736563134796e96b781",
+    "words": 203,
+    "subtokensWithLabels": 240
+  },
+  {
+    "sampleId": "sample-c34d070f70260ae08b2d",
+    "words": 201,
+    "subtokensWithLabels": 223
+  },
+  {
+    "sampleId": "sample-d741cb1278b46bcb73ef",
+    "words": 153,
+    "subtokensWithLabels": 187
+  },
+  {
+    "sampleId": "sample-dadd5cbabfba370abe3d",
+    "words": 146,
+    "subtokensWithLabels": 164
+  },
+  {
+    "sampleId": "sample-9dc13e801c1a65dd6c94",
+    "words": 190,
+    "subtokensWithLabels": 217
+  },
+  {
+    "sampleId": "sample-1f686dadb0098365609e",
+    "words": 198,
+    "subtokensWithLabels": 234
+  },
+  {
+    "sampleId": "sample-16bd37185d1d8bbd53cb",
+    "words": 265,
+    "subtokensWithLabels": 310
+  }
+]

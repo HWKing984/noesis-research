@@ -1,0 +1,3 @@
+# Data, evidence and source snapshots use byte-exact SHA-256 contracts.
+# Preserve their original bytes on every platform, including Windows clones.
+* -text

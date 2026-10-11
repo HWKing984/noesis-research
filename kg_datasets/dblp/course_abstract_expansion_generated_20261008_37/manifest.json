@@ -1,0 +1,15 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/course_abstract_train_sources_20261008_37/manifest.json": "698a0ff6e5e451123cc382ce94f8c4add17c44ea1056c7f4253f6abe6543dbbb",
+    "annotations/course_v4/abstract_expansion_decisions_20261008_37.json": "ea44e0eb06c334e15614da6ac44a43b285073124882ef1a243f86346751eb34b",
+    "scripts/compile_abstract_annotations.py": "16c33870897bdcfb18cbca9219c6929f48bceb6e8a5ec32e983355e4ed8f7016",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5"
+  },
+  "filesSha256": {
+    "annotation_policy.json": "7a9b7c33db0d4679dd0f521604783b3ea31c9d6fd594fea8edc424f96ef5bec3",
+    "generation_receipts.jsonl": "387f8865120f53fdc3be51939e402265c3c26f3f243e05782017b63a08e83e06",
+    "references.jsonl": "c2ef771fbe4e7c2749142a8fca646b1dc4269c88e295b919e7e5adc25aba365e",
+    "summary.json": "bff4c25da3d33f79ec7744858a8f72ddf7c66c62c5e6a484cb460c46fe1afb6a"
+  }
+}

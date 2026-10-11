@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "step": "pilot_production_graph_export",
+  "errorType": "ValueError",
+  "cause": "Relative --production CLI path was passed to Path.relative_to with an absolute workspace root.",
+  "command": "python scripts/course_graph.py export --bundle kg_datasets/dblp/course_v4_graph_pilot_20261007_25 --production kg_datasets/dblp/course_v4_runs/corpus_pilot_20261007_25",
+  "outputCreated": false,
+  "modelInferenceFailed": false,
+  "databaseWriteExecuted": false,
+  "fix": "Resolve production path before source manifest verification and input binding.",
+  "regression": "tests/test_course_graph.py::test_production_export_resolves_relative_cli_path",
+  "notice": "Saved after the actual failing command; not an original console transcript or model failure."
+}

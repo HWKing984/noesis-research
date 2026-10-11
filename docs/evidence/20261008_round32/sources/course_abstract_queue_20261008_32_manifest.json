@@ -1,0 +1,21 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/course_abstract_pages_20261008_32/manifest.json": "a8f5a3fc6bba56511498119a856d9fc9a9168bbffc0ef6a2b6b60cc7a387423e",
+    "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "kg_datasets/dblp/processed_ai/publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "annotations/course_v4/prepare_abstract_queue_20261008_round32.py": "6accef1afa7cf442256ae9e641892e49d5fe04ba247f22c2ef356b1d0366d93e",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0"
+  },
+  "filesSha256": {
+    "contract.json": "972ceec3db43dae5545fc6669345effeac288adfa6922bab1bac316f589c0207",
+    "dev_jobs.jsonl": "a50ffb4492b29bb069e5ed7b4248dfd299ad2df18f9fffcc758fa4279fcfa7d1",
+    "dev_references.jsonl": "5d5b990c462c7b4673f106efc77d5e78fa73d8cf5abf7535d0676827c9cd48f2",
+    "excluded.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "summary.json": "1631de0c031b7ac2a1205356553c9e8ad7bbe2ff395dabe0125ae4de4d217de8",
+    "test_jobs.jsonl": "3413176f9c8b56ed2f09ff8adbce5256bd07206f2ef0dfa0851004c6e9ca69e1",
+    "test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+    "train_jobs.jsonl": "6f3ca1ba115d4235cecf1f5582e9b454712c11e87ae58444c9809c229c3350b4",
+    "train_references.jsonl": "94f1796893f5cbbbad8e028aef9ae25f23f0efe306912dcbdc0be6ba41cc5d44"
+  }
+}

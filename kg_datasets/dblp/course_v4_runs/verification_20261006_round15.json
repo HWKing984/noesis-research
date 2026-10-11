@@ -1,0 +1,176 @@
+{
+  "checkedAtUTC": "2026-10-06T14:34:29.431689+00:00",
+  "valid": true,
+  "originalInputsUnchanged": 21,
+  "runDirectories": 166,
+  "hashedRunOutputs": 1120,
+  "archivedSourcesVerified": 96,
+  "exportVersions": 10,
+  "hashedExportFiles": 88,
+  "latestSnapshot": "course_v4_training_inputs_10",
+  "latestSnapshotManifestSha256": "fc70d7865c59791dc48bc5947e54bd5e07c20cc1a08eb755fe6fdb0f009f3e09",
+  "annotation": {
+    "reviewedDocuments": 908,
+    "noNewLabelsThisRound": true,
+    "old883ReceiptsPrefixUnchanged": true,
+    "devTestNERAndREByteIdenticalTo09": true,
+    "pendingTrainOnly": 1092
+  },
+  "relation": {
+    "run": "re_entity_development_20261006_15",
+    "manifestSha256": "b857e74d2e66712892d45d32ccf92ae471a0878a28b0fc6174deb5ef90e156a5",
+    "representation": "entity_markers",
+    "classifierInputSize": 1536,
+    "epochs": 6,
+    "steps": 258,
+    "pairCounts": {
+      "train": 343,
+      "dev": 162
+    },
+    "eachTrainPairOncePerEpoch": true,
+    "selectedMetricsRecomputed": true,
+    "bestCheckpoint": "checkpoint_epoch_03",
+    "encoderAndHeadUpdated": true,
+    "reloadPredictionsIdentical": true,
+    "metrics": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "entityScope": "reviewed_reference_entities",
+      "accuracy": 0.9814814814814815,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 156,
+        "predicted": 158,
+        "reference": 157,
+        "precision": 0.9873417721518988,
+        "recall": 0.9936305732484076,
+        "f1": 0.9904761904761905
+      },
+      "positiveMacroF1": 0.8301282051282051,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 155,
+          "predicted": 157,
+          "reference": 155,
+          "precision": 0.9872611464968153,
+          "recall": 1.0,
+          "f1": 0.9935897435897436
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 1,
+          "predicted": 1,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "NO_RELATION": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 3,
+          "predicted": 4,
+          "reference": 5,
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.6666666666666666
+        }
+      },
+      "confusionLabels": [
+        "USED_FOR",
+        "EVALUATED_ON",
+        "NO_RELATION"
+      ],
+      "confusionMatrix": [
+        [
+          155,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "confusionAxes": "rows_reference_columns_prediction"
+    },
+    "allClassMacroF1": 0.7756410256410255,
+    "devTradeoff": "negative correct 3/5 vs14 1/5; EVALUATED_ON correct 1/2 vs14 2/2",
+    "testEvaluated": false,
+    "testTokenized": false,
+    "endToEndEvaluated": false,
+    "promotedToConfirmedGraphFacts": false
+  },
+  "freeze": {
+    "lockSha256": "e4010d162f525221de7da30cf4c412892564a1da894d1271a72f1ddfa1893978",
+    "weightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+    "preTrainingCompactSha256": "0ee98cfb0ebdab2381cfd6e29ec304a762433f95317564fa2af48c5fa5d7517b",
+    "compactBeforeTrainingAndLockAfterTraining": true,
+    "allLockBindingsVerified": true,
+    "testRelationLabelsPreviouslySeen": false,
+    "testTitlesPreviouslySeenForNER": true
+  },
+  "frozenNER": {
+    "weightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "finalTestManifestUnchanged": true,
+    "noRetrainingOrRetestingThisRound": true
+  },
+  "screenshots": {
+    "bundle": "docs/evidence/20261006_round15",
+    "newBoundPageAndSourceFiles": 29,
+    "newPNGVisuallyInspected": true,
+    "totalVerifiedPNG": 13,
+    "sourceAndPNGHashesVerified": true,
+    "manifestSha256": "1040f6fb00d9f91337899a584fda2c30b7c8e6a0605f713bd108eb5178089320",
+    "capturesSha256": "0d04be27f93bd9ae524681b676d7e4539a6146e472c061be8d1304262e26e44f",
+    "pngSha256": "4f9f31456f4524e9bcf80b757d665b0f701a5c8b9174b4a6a0eb0f3576e212dc",
+    "originalConsoleScreenshot": false,
+    "originalNeo4jScreenshot": false
+  },
+  "regression": {
+    "tests": 328,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xmlSeconds": 57.639,
+    "xmlSha256": "2919761ed77f3a6c466bd65e974680330d38ac713816db3cd5ff1a529707d0de",
+    "extraCPUModelCheckSha256": "aa5b34f9054434de0e77262d69065ae321a3caf7045613594583d9b86fc12402",
+    "coverage": {
+      "scripts\\course_relation_model.py": {
+        "covered_lines": 28,
+        "num_statements": 28,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0,
+        "percent_statements_covered": 100.0,
+        "percent_statements_covered_display": "100"
+      },
+      "scripts\\train_course_relation.py": {
+        "covered_lines": 308,
+        "num_statements": 325,
+        "percent_covered": 94.76923076923077,
+        "percent_covered_display": "95",
+        "missing_lines": 17,
+        "excluded_lines": 0,
+        "percent_statements_covered": 94.76923076923077,
+        "percent_statements_covered_display": "95"
+      }
+    },
+    "coverageIsNotSemanticAccuracy": true
+  },
+  "localDocLinks": {
+    "checked": 259,
+    "missing": 0
+  },
+  "next": "complete RE test annotation without altering frozen NER; implement readonly reference-entity and frozen NER pipeline evaluation; Neo4j app follows"
+}

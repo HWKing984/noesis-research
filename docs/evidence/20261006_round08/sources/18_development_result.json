@@ -1,0 +1,108 @@
+{
+  "evaluationScope": "dev_selected_ai_reference_agreement_not_final_test",
+  "trainDocuments": 397,
+  "devDocuments": 167,
+  "epochs": 6,
+  "steps": 300,
+  "initialDev": {
+    "loss": 2.038616560556816,
+    "invalidTransitions": 1664,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 2,
+        "predicted": 566,
+        "reference": 359,
+        "precision": 0.0035335689045936395,
+        "recall": 0.005571030640668524,
+        "f1": 0.004324324324324324
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 2,
+          "predicted": 247,
+          "reference": 208,
+          "precision": 0.008097165991902834,
+          "recall": 0.009615384615384616,
+          "f1": 0.008791208791208791
+        },
+        "TASK": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 15,
+          "reference": 148,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DATASET": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 304,
+          "reference": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "bestDev": {
+    "loss": 0.6400389693054116,
+    "invalidTransitions": 82,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 275,
+        "predicted": 373,
+        "reference": 359,
+        "precision": 0.7372654155495979,
+        "recall": 0.766016713091922,
+        "f1": 0.7513661202185792
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 169,
+          "predicted": 220,
+          "reference": 208,
+          "precision": 0.7681818181818182,
+          "recall": 0.8125,
+          "f1": 0.7897196261682243
+        },
+        "TASK": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 104,
+          "predicted": 150,
+          "reference": 148,
+          "precision": 0.6933333333333334,
+          "recall": 0.7027027027027027,
+          "f1": 0.697986577181208
+        },
+        "DATASET": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 2,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666
+        }
+      }
+    }
+  },
+  "bestCheckpoint": "checkpoint_epoch_04",
+  "selection": "strict_dev_entity_micro_f1_earliest_tie",
+  "classifierChanged": true,
+  "encoderChanged": true,
+  "reloadPredictionsIdentical": true,
+  "passed": true,
+  "dictionaryDevF1": 0.2782931354359926,
+  "devUsedForGradient": false,
+  "testEvaluated": false,
+  "testTokenized": false,
+  "humanGold": false,
+  "formalReadiness": false,
+  "notice": "Dev selects checkpoint and is not an untouched final test; AI self-reviewed labels are not human gold."
+}

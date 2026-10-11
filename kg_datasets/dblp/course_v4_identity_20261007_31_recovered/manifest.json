@@ -1,0 +1,19 @@
+{
+  "kind": "local_dblp_identity_recovery",
+  "inputSha256": {
+    "kg_datasets/dblp/dblp.xml.gz": "22f960525255e4c12b537e0d55b2d62bd6e1ec20087dec05f7688cf0c9daa3b7",
+    "kg_datasets/dblp/dblp-2023-06-28.dtd": "03ec35cb34a4227572a0e89da407b06b6e44a6cc23e19cabc3b49b702a5f897d",
+    "scripts/course_identity.py": "17cd32acbccd59a96dbec1e889416db63b7da57eed3d45de28e526397ef67621",
+    "kg_datasets/dblp/processed_ai/publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "kg_datasets/dblp/processed_ai/persons.csv": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60",
+    "kg_datasets/dblp/processed_ai/authored.csv": "f2fbe133bde8e41e8f7fa9bb04db8109c0e0763ffde28c716976a46a021f9da7"
+  },
+  "authorityURL": "https://dblp.dagstuhl.de/faq/12451885.html",
+  "filesSha256": {
+    "profiles.json": "b79ecbb0a617f3f4ad85a599d5973579c2f771dca6a9e985e5918ac598c62acc",
+    "redirects.json": "1f41f97af27747a44dd3e2acc9701e41870f0cd14e682a51a23cfcfa28e9720a",
+    "signatures.jsonl": "284531d71af488c9497e37d8731d0404297e470f37a00c5e17e549ef6b236219",
+    "status.json": "b7c8ac2a9b2be8a44600db09b0993a54880746dd005c0fdff504912b1549970b",
+    "summary.json": "f53dd879e7a09f58170d1291721552490a533793d766909992b0297702746014"
+  }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.318" timestamp="2026-10-06T22:44:54.132748+08:00" hostname="HWKing"><testcase classname="tests.test_course_ner_training" name="test_final_test_cli_rejects_equals_form_tuning_before_evaluation[--seed=123]" time="0.002"><failure message="Failed: Test tuning option reached evaluation">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000026C18E1B360&gt;
+option = '--seed=123'
+
+    @pytest.mark.parametrize('option',['--seed=123','--learning-rate=0.1'])
+    def test_final_test_cli_rejects_equals_form_tuning_before_evaluation(monkeypatch,option):
+        monkeypatch.setattr(sys,'argv',['train_course_ner.py','evaluate-test','--dataset','unused',
+                            '--snapshot','unused','--model','unused','--output','unused','--selection','unused',option])
+        monkeypatch.setattr(ner,'evaluate_test',lambda *args:pytest.fail('Test tuning option reached evaluation'))
+        with pytest.raises(SystemExit) as error:
+&gt;           ner.main()
+
+tests\test_course_ner_training.py:255: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\train_course_ner.py:660: in main
+    state = evaluate_test(args.dataset, args.snapshot, args.model, args.selection, args.output, args.device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (WindowsPath('unused'), WindowsPath('unused'), WindowsPath('unused'), WindowsPath('unused'), WindowsPath('unused'), 'auto')
+
+&gt;   monkeypatch.setattr(ner,'evaluate_test',lambda *args:pytest.fail('Test tuning option reached evaluation'))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: Test tuning option reached evaluation
+
+tests\test_course_ner_training.py:253: Failed</failure></testcase><testcase classname="tests.test_course_ner_training" name="test_final_test_cli_rejects_equals_form_tuning_before_evaluation[--learning-rate=0.1]" time="0.001"><failure message="Failed: Test tuning option reached evaluation">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000026C18E1AEA0&gt;
+option = '--learning-rate=0.1'
+
+    @pytest.mark.parametrize('option',['--seed=123','--learning-rate=0.1'])
+    def test_final_test_cli_rejects_equals_form_tuning_before_evaluation(monkeypatch,option):
+        monkeypatch.setattr(sys,'argv',['train_course_ner.py','evaluate-test','--dataset','unused',
+                            '--snapshot','unused','--model','unused','--output','unused','--selection','unused',option])
+        monkeypatch.setattr(ner,'evaluate_test',lambda *args:pytest.fail('Test tuning option reached evaluation'))
+        with pytest.raises(SystemExit) as error:
+&gt;           ner.main()
+
+tests\test_course_ner_training.py:255: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\train_course_ner.py:660: in main
+    state = evaluate_test(args.dataset, args.snapshot, args.model, args.selection, args.output, args.device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (WindowsPath('unused'), WindowsPath('unused'), WindowsPath('unused'), WindowsPath('unused'), WindowsPath('unused'), 'auto')
+
+&gt;   monkeypatch.setattr(ner,'evaluate_test',lambda *args:pytest.fail('Test tuning option reached evaluation'))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: Test tuning option reached evaluation
+
+tests\test_course_ner_training.py:253: Failed</failure></testcase></testsuite></testsuites>

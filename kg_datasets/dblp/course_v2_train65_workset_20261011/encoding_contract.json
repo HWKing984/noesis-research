@@ -1,0 +1,43 @@
+{
+  "kind": "model_input_compatibility_not_training_authorization",
+  "input": "whole_original_abstract",
+  "maxTokens": 512,
+  "truncation": false,
+  "tokenizer": "kg_datasets/models/scibert_24f92d32",
+  "bioLabels": [
+    "O",
+    "B-METHOD",
+    "I-METHOD",
+    "B-TASK",
+    "I-TASK",
+    "B-DATASET",
+    "I-DATASET"
+  ],
+  "relationLabels": [
+    "USED_FOR",
+    "EVALUATED_ON",
+    "NO_RELATION"
+  ],
+  "NERHelper": "scripts/train_course_ner.py:encode_row",
+  "REHelper": "scripts/train_course_relation.py:encode_pair",
+  "trainingAllowed": false,
+  "featuresExclude": [
+    "evidence",
+    "taskRole",
+    "notes",
+    "sourceURL",
+    "title",
+    "dev_reference",
+    "test_reference"
+  ],
+  "NERInput": "ner22_candidates.jsonl",
+  "REInput": "relation_positive_candidates.jsonl",
+  "NEREncoded": "ner_encoded.jsonl",
+  "REEncoded": "relation_encoded.jsonl",
+  "blockingItems": [
+    "43 training abstracts pending V2 semantic revision",
+    "No admitted explicit negative pairs under current broad scope",
+    "Fixed dev20 is AI draft, not complete scored reference",
+    "Independent final test reference remains unprepared and sealed"
+  ]
+}

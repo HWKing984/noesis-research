@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "scope": "readonly_dev_replay_no_training_or_test_inference",
+  "relation": [
+    {
+      "run": "re_roles_allclass_development_20261006_14",
+      "pairs": 162,
+      "metricsAndPredictionsIdentical": true,
+      "allUnlabeledLogitsIdentical": true,
+      "weightsUnchanged": true
+    },
+    {
+      "run": "re_entity_development_20261006_15",
+      "pairs": 162,
+      "metricsAndPredictionsIdentical": true,
+      "allUnlabeledLogitsIdentical": true,
+      "weightsUnchanged": true
+    }
+  ],
+  "ner": {
+    "documents": 167,
+    "devMetricsAndPredictionsIdentical": true,
+    "testInferenceExecuted": false,
+    "weightsUnchanged": true
+  },
+  "sourceSha256": {
+    "scripts\\train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "scripts\\train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts\\course_relation_model.py": "6cd814207310208dd01c9abeb0c4f68f3082c5c0b8cd331a9f9d1197faad979d"
+  }
+}

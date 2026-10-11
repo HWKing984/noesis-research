@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "trainingStarted": true,
+  "testEvaluated": false,
+  "testTokenized": false,
+  "modelPromoted": false,
+  "createdAtUTC": "2026-10-08T03:01:17.811386+00:00",
+  "settings": {
+    "seed": 20261008,
+    "epochs": 6,
+    "batchSize": 4,
+    "learningRate": 2e-05,
+    "balancedLoss": true,
+    "representation": "entity_markers",
+    "initialization": "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03",
+    "initialWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+  },
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "classWeights": {
+    "USED_FOR": 0.4482758620689655,
+    "EVALUATED_ON": 1.5116279069767442,
+    "NO_RELATION": 9.285714285714286
+  },
+  "finishedAtUTC": "2026-10-08T03:02:55.798122+00:00",
+  "elapsedSeconds": 97.98670049999782,
+  "steps": 294,
+  "endToEndDevEvaluated": true
+}

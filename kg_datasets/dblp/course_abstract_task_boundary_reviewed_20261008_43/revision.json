@@ -1,0 +1,23 @@
+{
+  "sampleId": "sample-f50e3264cb44031bf342",
+  "sourceTextSha256": "ff56a01af2224720cc8d795cfaf3cc9502de2a5396fbc37e6c1b31f5615a38b4",
+  "oldReceiptSha256": "2b82b109edacb25e1812f35a03da348fd95e6eed20446af777e5914ad25d027a",
+  "newReceiptSha256": "f6ce8354147078674fcacf313e34069af892659a35a1b6a647f23e5758980573",
+  "before": {
+    "entityId": "e3",
+    "start": 377,
+    "end": 393,
+    "text": "object detection",
+    "label": "TASK"
+  },
+  "after": {
+    "entityId": "e3",
+    "start": 362,
+    "end": 393,
+    "text": "remote sensing object detection",
+    "label": "TASK"
+  },
+  "inheritedEntities": 20,
+  "affectedUnknownPairs": 10,
+  "independent": false
+}

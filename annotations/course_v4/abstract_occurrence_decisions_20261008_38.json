@@ -1,0 +1,68 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "policy": "Whole source TRAIN abstracts re-read with explicit occurrence judgments. No model predictions or dev/test contents consulted. Technical families versus people/discipline are distinguished locally; lexical modifiers inside a method name are not independently nested tasks. Same-session AI reference, not gold. Unjudged relationships remain UNRESOLVED.",
+  "documents": [
+    {
+      "arxivId": "2110.02932",
+      "textSha256": "76fe5f5d13fc911cc0cc6d111f9c3e387ce29d3f522c760cf7d19a1ce9252fee",
+      "entityStatus": "complete",
+      "reason": "The opening explicitly says using machine learning (ML) methods; the deployment mention refers to the technical family, not the practitioners. Other ML occurrences denote people, community or the development field. The qualitative analysis is the study design, outside scoped scientific AI methods; interviews are not a named DATASET, and privacy/resource constraints are not named computational TASKs. This is a versioned contextual clarification, not proof that the paper is original AI model research.",
+      "mentions": [
+        {"text": "machine learning", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Explicit technical methods used by practitioners, under the inherited family-inclusive scope."}]},
+        {"text": "ML", "occurrences": [
+          {"occurrence": 1, "label": "METHOD", "reason": "Parenthetical abbreviation of machine learning methods in the same sentence."},
+          {"occurrence": 2, "label": "OUT_OF_SCOPE", "reason": "ML Practitioners is a population, not a model or method."},
+          {"occurrence": 3, "label": "OUT_OF_SCOPE", "reason": "ML community denotes people in a field."},
+          {"occurrence": 4, "label": "OUT_OF_SCOPE", "reason": "ML development difficulties describe a professional workflow, not a scientific method name."},
+          {"occurrence": 5, "label": "METHOD", "reason": "Deploying ML with limited resources refers to deployed technical systems in the family."},
+          {"occurrence": 6, "label": "OUT_OF_SCOPE", "reason": "Holistic understanding of ML limitations is a field-level discussion rather than a specified technical method."},
+          {"occurrence": 7, "label": "OUT_OF_SCOPE", "reason": "Responsible ML development for all is a research-agenda field/workflow descriptor."}
+        ]},
+        {"text": "qualitative analysis", "occurrences": [{"occurrence": 1, "label": "OUT_OF_SCOPE", "reason": "Interview study design, not a scoped scientific AI model family."}]},
+        {"text": "performance optimization", "occurrences": [{"occurrence": 1, "label": "OUT_OF_SCOPE", "reason": "An organizational tension without a named computational problem or model solution."}]}
+      ],
+      "relationGroups": []
+    },
+    {
+      "arxivId": "2409.13884",
+      "textSha256": "20091a2c451394ee2d5020620a7685aa8452c8582ba4c0e52c3285e4e641b546",
+      "entityStatus": "complete",
+      "reason": "Keep the explicit family/model names and four locally stated computational objectives. The first debiasing is only a lexical modifier within the proposed method name; the second is explicitly the task for the approaches. Factuality is a quality property; centralized/decentralized and unnamed baseline are structural descriptors rather than named methods. No dataset is named. Relation endpoints are rebuilt from this new span order, never copied from the quarantined receipt.",
+      "mentions": [
+        {"text": "Large Language Models", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Explicit technical model family."}]},
+        {"text": "LLMs", "occurrences": [
+          {"occurrence": 1, "label": "METHOD", "reason": "Parenthetical model-family abbreviation."},
+          {"occurrence": 2, "label": "METHOD", "reason": "Model family whose reasoning/factuality is improved."},
+          {"occurrence": 3, "label": "METHOD", "reason": "Model family that is the object of bias reduction, not necessarily its operator."},
+          {"occurrence": 4, "label": "METHOD", "reason": "Model family being debiased; this mention alone does not support an operator relationship."},
+          {"occurrence": 5, "label": "METHOD", "reason": "Model family in which measured bias is reduced."}
+        ]},
+        {"text": "bias mitigation", "occurrences": [{"occurrence": 1, "label": "TASK", "reason": "Explicit computational objective addressed by the listed techniques."}]},
+        {"text": "data augmentation", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Named technical strategy."}]},
+        {"text": "zero-shot prompting", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Named prompting strategy."}]},
+        {"text": "model fine-tuning", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Named technical training strategy."}]},
+        {"text": "multi-LLM approaches", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Explicit technical model-composition family."}]},
+        {"text": "reasoning", "occurrences": [{"occurrence": 1, "label": "TASK", "reason": "Explicit model capability improved by the approaches; retain the inherited task scope."}]},
+        {"text": "multi-LLM debiasing framework", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Full proposed method-family name, not a name automatically split into METHOD and TASK."}]},
+        {"text": "reducing bias", "occurrences": [{"occurrence": 1, "label": "TASK", "reason": "Explicit computational objective introduced by aimed at."}]},
+        {"text": "debiasing", "occurrences": [
+          {"occurrence": 1, "label": "WITHIN_ENTITY", "container": {"text": "multi-LLM debiasing framework", "occurrence": 1}, "reason": "Lexical modifier within the full METHOD name, not an independently asserted nested TASK at this occurrence."},
+          {"occurrence": 2, "label": "TASK", "reason": "For debiasing LLMs explicitly states the task of the approaches."}
+        ]},
+        {"text": "LLM", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "A single central language model in the proposed technical structure."}]},
+        {"text": "multi-LLM framework", "occurrences": [{"occurrence": 1, "label": "METHOD", "reason": "Explicit shortened family name; no automatic alias merge."}]},
+        {"text": "factuality", "occurrences": [{"occurrence": 1, "label": "OUT_OF_SCOPE", "reason": "Output quality property, not a named task under the retained annotation scope."}]},
+        {"text": "centralized method", "occurrences": [{"occurrence": 1, "label": "OUT_OF_SCOPE", "reason": "Structural approach descriptor, not a technical proper/family name."}]},
+        {"text": "decentralized method", "occurrences": [{"occurrence": 1, "label": "OUT_OF_SCOPE", "reason": "Structural approach descriptor, not a technical proper/family name."}]},
+        {"text": "reduces bias", "occurrences": [{"occurrence": 1, "label": "OUT_OF_SCOPE", "reason": "Performance-reporting verb phrase, not an additional named TASK occurrence."}]}
+      ],
+      "relationGroups": [
+        {"heads": ["e4", "e5", "e6"], "tails": ["e3"], "label": "USED_FOR", "supportExcerpt": "Despite significant advancements in bias mitigation techniques using data augmentation, zero-shot prompting, and model fine-tuning, biases continuously persist, including subtle biases that may elude human detection.", "reason": "The source explicitly states that these three technical strategies are used for bias mitigation; incomplete effectiveness is not NO_RELATION."},
+        {"heads": ["e7"], "tails": ["e8"], "label": "USED_FOR", "supportExcerpt": "Recent research has shown a growing interest in multi-LLM approaches, which have been demonstrated to be effective in improving the quality of reasoning and factuality in LLMs.", "reason": "The multi-LLM approaches explicitly improve model reasoning; no relationship is assigned to the LLMs that are the targets of improvement."},
+        {"heads": ["e10"], "tails": ["e11"], "label": "USED_FOR", "supportExcerpt": "Building on this approach, we propose a novel multi-LLM debiasing framework aimed at reducing bias in LLMs.", "reason": "Aimed at directly ties the proposed framework to the bias-reduction objective."},
+        {"heads": ["e10"], "tails": ["e13"], "label": "USED_FOR", "supportExcerpt": "Building on this approach, we propose a novel multi-LLM debiasing framework aimed at reducing bias in LLMs. Our work is the first to introduce and evaluate two distinct approaches within this framework for debiasing LLMs", "reason": "Within this framework for debiasing locally and explicitly refers to the immediately introduced framework; not an alias/type-based automatic edge."}
+      ]
+    }
+  ]
+}

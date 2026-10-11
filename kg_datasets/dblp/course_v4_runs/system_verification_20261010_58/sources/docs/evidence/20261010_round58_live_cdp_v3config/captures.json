@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "exceptions": [],
+  "networkErrors": [],
+  "WCAG": "not_fully_audited",
+  "INP": "not_measured",
+  "captures": [
+    {
+      "sha256": "0aed08e382f4cb11a71117b8fcec1d1413180c5f860dc1711c7dfb55a6923cb8",
+      "observed": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Efficient Continual Learning in Neural Machine Translation: A Low-Rank Adaptation Approach."
+        ],
+        "labels": true
+      },
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_round58_live_cdp_v3config\\search_1440.png"
+    },
+    {
+      "sha256": "8e410c6751705dbecf95341fc009ab384893b7288bcd5d79ab2b3f1a33858359",
+      "observed": {
+        "width": 768,
+        "scrollWidth": 753,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Efficient Continual Learning in Neural Machine Translation: A Low-Rank Adaptation Approach."
+        ],
+        "labels": true
+      },
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_round58_live_cdp_v3config\\search_768.png"
+    },
+    {
+      "sha256": "0db7f12394aff3c5cc0db9d6b92bf2037c5c369e3d3133079f8e282ed5a68008",
+      "observed": {
+        "width": 375,
+        "scrollWidth": 360,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Efficient Continual Learning in Neural Machine Translation: A Low-Rank Adaptation Approach."
+        ],
+        "labels": true
+      },
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_round58_live_cdp_v3config\\search_375.png"
+    }
+  ],
+  "baselineComparison": "INCONCLUSIVE_no_baseline",
+  "liveGraphId": "ai-literature-63686318d85cccb07afb",
+  "appCodeSha256": "6db2411dc2aa41e4792871d89ed753c36f64de409c7e91cc002ea603c7a27ebd",
+  "vocabulary": {
+    "version": "typed_controlled_aliases_v3",
+    "sha256": "8046177aa77160b0ce78b8d10c7f2ede43e18d8ce59b9e86220292cf38756a91",
+    "aliasesAreCuratedNotFacts": true,
+    "modelReliabilityPromoted": false
+  },
+  "helperSha256": "df4320949071270c807a11c908c31f1a3dcdf9af7345adf726c1d4902cbb4564",
+  "wrapperSha256": "338e3d7d88f997fb54cd09fcd26d7a048e8e43c58845436b05535fd2d6100968",
+  "capturedAtUTC": "2026-10-10T02:28:28.1463724Z"
+}

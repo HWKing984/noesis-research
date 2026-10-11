@@ -1,0 +1,15 @@
+{
+  "kind": "whole_source_inspection_not_annotation_revision",
+  "scope": "Eight unchanged TRAIN NER quarantines inspected; no new label/receipt or training admission asserted. Source wording and prior reasons preserved in round38 snapshot.",
+  "independent": false,
+  "documents": [
+    {"arxivId": "2404.01036", "action": "retain_quarantine", "reason": "GenAI tools and pedagogic capabilities are described, but mapping subject knowledge/critical thinking/assessment practices to scoped computational TASKs remains unsettled. The representation adapter alone does not define the missing taxonomy."},
+    {"arxivId": "1804.07461", "action": "retain_quarantine", "reason": "The shared-head multi-task and transfer learning phrase cannot be silently reconstructed into two nonliteral contiguous names under flat BIO. Preserve the existing group mention; a discontiguous/group-specific policy would need a separately locked experiment."},
+    {"arxivId": "2009.03300", "action": "retain_quarantine", "reason": "The text explicitly calls 57 subject categories tasks, but law/history versus computational task-name scope is unresolved. MMLU is not named in this abstract; do not borrow its title/name to fill a dataset entity or turn uncertain subjects into O."},
+    {"arxivId": "2105.15057", "action": "retain_quarantine", "reason": "The exact source includes Deep NeuralNetworks, outputof and DNN-specific. The last compound is not covered by the preserved standalone selector rule; do not normalize source text or label an arbitrary enlarged adjective merely to satisfy BIO."},
+    {"arxivId": "2507.22101", "action": "retain_quarantine", "reason": "The survey includes conventional/advanced method families and future-direction descriptors, while current complete-name boundaries are not consistently settled. Existing partial named models/tasks remain evidence rather than complete labels; no dataset names can be inferred from datasets as a plural noun."},
+    {"arxivId": "2510.02719", "action": "retain_quarantine", "reason": "The 14 datasets and seven NLP tasks are unnamed; reasoning may denote a capability or an inference procedure. Generic model-family inclusion alone does not settle all task/method mentions. Do not auto-admit an incomplete all-O or family-only document."},
+    {"arxivId": "2208.08611", "action": "retain_quarantine", "reason": "A brief business/platform proposal is weak research content. Machine learning as the core and IP evaluation do not establish a specific scientific method or clean training taxonomy; do not boost coverage by treating this as an unambiguous all-O study."},
+    {"arxivId": "2312.14977", "action": "retain_quarantine", "reason": "The introduction mixes generative families, a physical PDE diffusion analogy and course subjects. Per-occurrence selection can express the distinction but does not itself settle the full model/task inventory. Preserve the physical-diffusion exclusion and partial generative-model evidence until a complete source-level rule review."}
+  ]
+}

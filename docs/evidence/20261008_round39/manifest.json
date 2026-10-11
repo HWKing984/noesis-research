@@ -1,0 +1,31 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "04_traceability.html": "17a2d362d5b1a639fe3bee61d92668b3f4f22ff6fe31c53d6db07f9ac23f7c96",
+    "09_annotation_expansion.html": "5dfe9bab1a663f24e25ae16f276c63ff41cd6b03d17f9780b715acb374b4582b",
+    "audit_state.json": "41af29f0ae26aa45341e0a7327d587250e1b119579475a936f21ce49061af771",
+    "relation_cases.json": "d937480017fd553a0dc7a160bde0fd7d23c145b93509f6dea24bf17e4ed97206",
+    "sources/README.md": "13f34c9d34c5d5d3d432248f100d5bf38f603cd25a3bfe33da6eef020fa4f9dd",
+    "sources/docs/system_status_round39.md": "d2c7edac1c2f267b72f6ba43ca7c63ebd23e05beab5c66c390e2fe47ee7878b2",
+    "sources/resources/course_abstract_relation_enrichment_v1.json": "c0b0c8dcc673d0514cc8393cfb55816e497dd6e97f1e381f017cea249d2c74a5",
+    "sources/scripts/enrich_abstract_relations.py": "2995f7c100b0c7631a30d30cbdaff3dbbdd98fd4d38dfab3ac4b253027a705b5",
+    "sources/tests/test_relation_enrichment.py": "e99224941a10e032580de59597d6a7c3f615f6fd81b1b5862b48989a88d0c899",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/additional_relation_train.jsonl": "7c4975cf710686db9fad4d9df25c4b9452baff1d41364e9d5d9ade9d544ddadd",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/excluded_ner.jsonl": "7c55b57ea5d318fa237ba4d882eb0bf1aaed60bc4b1f139629be868a4c27f2eb",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/full_relation_train.jsonl": "c0b031fb3f388be151dc2b007442a38825eaa203afaae43491db0787a107112e",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/generation_receipts.jsonl": "ec3bfe4ace0741d5ab5ba7c3283442c0a84b75d52e0debed255d616014bbc66a",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/manifest.json": "92b23b40237d8e20b0848cf63db8acaf98431d3388b65c5dd2dcdef463a61954",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/ner_train.jsonl": "459d632dc38169cae832ff3f0cc6f0d3a3b4e963b7d371ed4660236cbc02f17f",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/origins.jsonl": "d20003ee8445eb4f593f8e86e2aff4e1126eaed8455c1d652888cc1b094c41f0",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/references.jsonl": "67e37e5f20a0ac6b1fd9ba24fddd274e5ea1263dbdfb15f59ef0d648d894b0c5",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/relation_train.jsonl": "25da4df39d49494f570d04e55b9de66e89afc7baf9ee45f8885f0b57015d7922",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/reviewed_receipts.jsonl": "5fcc9bc3f19ce5f1d922a371bb18eece099e189d6933553e438e296f3c6e9826",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/summary.json": "65d9262e090608e60bda2a3c83d89e60bc5852e3b8657e87a38c78e29ddda92e",
+    "sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/token_alignment.jsonl": "7e07fda8f176514475c8141e9c3d74eadc1e84759ef08c7176c82e4c19dacf37",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round39.xml": "ee97e24f7b73574abab6f2bfa9bd42efe50d1861fba74d680b981486e7c97d3d",
+    "sources/annotations/course_v4/abstract_quarantine_triage_20261008_39.json": "258b2b58e627a84e4c4367ec2e3ceee9451fdda346f49aefcb5056f5f98727c3",
+    "sources/annotations/course_v4/abstract_relation_enrichment_decisions_20261008_39.json": "35361184d330b993186111aff3ad73d574600d9d2f41faeb9a946d7e8b2b6b6e",
+    "sources/annotations/course_v4/abstract_relation_enrichment_reviews_20261008_39.json": "73d0b1ef4b9a6f60fc04a9c16ac1115e1c1c40e91be142d9e801040fc434c471",
+    "sources/annotations/course_v4/seal_relation_enrichment_20261008_round39.py": "39ad44afa275eb2037b741d7309101fa477954537a485bb54147ce5953fddede"
+  }
+}

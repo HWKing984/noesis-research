@@ -1,0 +1,37 @@
+{
+  "generatedFromRealArtifacts": true,
+  "viewportWidth": 1280,
+  "status": "completed",
+  "captures": [
+    {
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261008_round33\\09_annotation_expansion.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-49f39dce50c44587abf9b91b6178fff0",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round33/09_annotation_expansion.html"
+      ],
+      "capturedAt": "2026-10-08T01:48:55.2498599Z",
+      "image": "09_annotation_expansion.png",
+      "viewportHeight": 2300,
+      "sourcePage": "09_annotation_expansion.html",
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round33/09_annotation_expansion.html",
+      "bytes": 178861,
+      "originalConsoleScreenshot": false,
+      "sha256": "b5ba42a31a012232ba733b722c18fd4543956875ddc77c44e6aecdfb1fc09ed7",
+      "sourcePageSha256": "ca1bc7611a3ffc07180429a156c3e83bbc80ad325ac73471580a0c679bd48d66"
+    }
+  ],
+  "browserVersion": "154.0.4258.62",
+  "renderer": "installed_Microsoft_Edge_headless",
+  "originalConsoleScreenshot": false,
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-49f39dce50c44587abf9b91b6178fff0",
+  "kind": "actual_browser_render_capture",
+  "finishedAt": "2026-10-08T01:48:55.2570906Z"
+}

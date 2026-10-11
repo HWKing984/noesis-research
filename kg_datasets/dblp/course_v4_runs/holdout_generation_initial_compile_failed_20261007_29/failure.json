@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "stage": "literal_span_compilation_before_inference",
+  "error": "Literal absent or repeated without a valid explicit occurrence",
+  "diagnostic": "Only row 78 failed: BERT is independently present and also a substring of DistilBERT.",
+  "originalDecisions": "kg_datasets/dblp/course_v4_runs/holdout_generation_decisions_20261007_29.json",
+  "correction": "Explicitly select occurrence 1 for the independent BERT mention; no use of model predictions.",
+  "testInferenceExecuted": false,
+  "originalArtifactsOverwritten": false
+}

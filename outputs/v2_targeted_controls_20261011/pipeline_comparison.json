@@ -1,0 +1,210 @@
+{
+  "argmax_NER_original_RE": {
+    "scope": "adjudicated_reference_scope_only",
+    "referenceComplete": false,
+    "fullPipelineF1": null,
+    "conditionalPositiveMetrics": {
+      "TP": 132,
+      "FP": 927,
+      "FN": 181,
+      "precision": 0.12464589235127478,
+      "recall": 0.4217252396166134,
+      "f1": 0.1924198250728863
+    },
+    "perClassConditionalMetrics": {
+      "EVALUATED_ON": {
+        "TP": 32,
+        "FP": 88,
+        "FN": 20,
+        "precision": 0.26666666666666666,
+        "recall": 0.6153846153846154,
+        "f1": 0.37209302325581395
+      },
+      "USED_FOR": {
+        "TP": 100,
+        "FP": 839,
+        "FN": 161,
+        "precision": 0.10649627263045794,
+        "recall": 0.3831417624521073,
+        "f1": 0.16666666666666666
+      }
+    },
+    "positiveReferenceTriples": 313,
+    "referencePairs": 974,
+    "maskedReferencePairs": 613,
+    "referencePairCoverage": 0.37063655030800824,
+    "maskedPredictionCount": 180,
+    "allPositivePredictionCount": 1239,
+    "duplicatePredictionCount": 0,
+    "maskedReferencePairsByPossibleClass": {
+      "USED_FOR": 550,
+      "EVALUATED_ON": 63
+    },
+    "fullUniverseBounds": {
+      "precisionLower": 0.10653753026634383,
+      "precisionUpper": 0.25181598062953997,
+      "recallConservativeLower": 0.14254859611231102,
+      "recallUpper": 0.6328600405679513,
+      "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+    },
+    "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+    "candidatePairs": 1320,
+    "rejectedPairs": 81
+  },
+  "legal_NER_original_RE": {
+    "scope": "adjudicated_reference_scope_only",
+    "referenceComplete": false,
+    "fullPipelineF1": null,
+    "conditionalPositiveMetrics": {
+      "TP": 143,
+      "FP": 1089,
+      "FN": 170,
+      "precision": 0.11607142857142858,
+      "recall": 0.45686900958466453,
+      "f1": 0.18511326860841423
+    },
+    "perClassConditionalMetrics": {
+      "EVALUATED_ON": {
+        "TP": 38,
+        "FP": 80,
+        "FN": 14,
+        "precision": 0.3220338983050847,
+        "recall": 0.7307692307692307,
+        "f1": 0.4470588235294118
+      },
+      "USED_FOR": {
+        "TP": 105,
+        "FP": 1009,
+        "FN": 156,
+        "precision": 0.09425493716337523,
+        "recall": 0.40229885057471265,
+        "f1": 0.15272727272727274
+      }
+    },
+    "positiveReferenceTriples": 313,
+    "referencePairs": 974,
+    "maskedReferencePairs": 613,
+    "referencePairCoverage": 0.37063655030800824,
+    "maskedPredictionCount": 211,
+    "allPositivePredictionCount": 1443,
+    "duplicatePredictionCount": 0,
+    "maskedReferencePairsByPossibleClass": {
+      "USED_FOR": 550,
+      "EVALUATED_ON": 63
+    },
+    "fullUniverseBounds": {
+      "precisionLower": 0.0990990990990991,
+      "precisionUpper": 0.24532224532224534,
+      "recallConservativeLower": 0.15442764578833693,
+      "recallUpper": 0.6755725190839694,
+      "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+    },
+    "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+    "candidatePairs": 1539,
+    "rejectedPairs": 96
+  },
+  "argmax_NER_weighted_RE": {
+    "scope": "adjudicated_reference_scope_only",
+    "referenceComplete": false,
+    "fullPipelineF1": null,
+    "conditionalPositiveMetrics": {
+      "TP": 130,
+      "FP": 879,
+      "FN": 183,
+      "precision": 0.1288404360753221,
+      "recall": 0.41533546325878595,
+      "f1": 0.19667170953101362
+    },
+    "perClassConditionalMetrics": {
+      "EVALUATED_ON": {
+        "TP": 32,
+        "FP": 89,
+        "FN": 20,
+        "precision": 0.2644628099173554,
+        "recall": 0.6153846153846154,
+        "f1": 0.3699421965317919
+      },
+      "USED_FOR": {
+        "TP": 98,
+        "FP": 790,
+        "FN": 163,
+        "precision": 0.11036036036036036,
+        "recall": 0.37547892720306514,
+        "f1": 0.17058311575282856
+      }
+    },
+    "positiveReferenceTriples": 313,
+    "referencePairs": 974,
+    "maskedReferencePairs": 613,
+    "referencePairCoverage": 0.37063655030800824,
+    "maskedPredictionCount": 175,
+    "allPositivePredictionCount": 1184,
+    "duplicatePredictionCount": 0,
+    "maskedReferencePairsByPossibleClass": {
+      "USED_FOR": 550,
+      "EVALUATED_ON": 63
+    },
+    "fullUniverseBounds": {
+      "precisionLower": 0.1097972972972973,
+      "precisionUpper": 0.25760135135135137,
+      "recallConservativeLower": 0.14038876889848811,
+      "recallUpper": 0.625,
+      "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+    },
+    "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+    "candidatePairs": 1320,
+    "rejectedPairs": 136
+  },
+  "legal_NER_weighted_RE": {
+    "scope": "adjudicated_reference_scope_only",
+    "referenceComplete": false,
+    "fullPipelineF1": null,
+    "conditionalPositiveMetrics": {
+      "TP": 141,
+      "FP": 1037,
+      "FN": 172,
+      "precision": 0.11969439728353141,
+      "recall": 0.4504792332268371,
+      "f1": 0.1891348088531187
+    },
+    "perClassConditionalMetrics": {
+      "EVALUATED_ON": {
+        "TP": 38,
+        "FP": 81,
+        "FN": 14,
+        "precision": 0.31932773109243695,
+        "recall": 0.7307692307692307,
+        "f1": 0.4444444444444444
+      },
+      "USED_FOR": {
+        "TP": 103,
+        "FP": 956,
+        "FN": 158,
+        "precision": 0.09726156751652502,
+        "recall": 0.3946360153256705,
+        "f1": 0.15606060606060607
+      }
+    },
+    "positiveReferenceTriples": 313,
+    "referencePairs": 974,
+    "maskedReferencePairs": 613,
+    "referencePairCoverage": 0.37063655030800824,
+    "maskedPredictionCount": 203,
+    "allPositivePredictionCount": 1381,
+    "duplicatePredictionCount": 0,
+    "maskedReferencePairsByPossibleClass": {
+      "USED_FOR": 550,
+      "EVALUATED_ON": 63
+    },
+    "fullUniverseBounds": {
+      "precisionLower": 0.10209992758870384,
+      "precisionUpper": 0.2490948587979725,
+      "recallConservativeLower": 0.15226781857451405,
+      "recallUpper": 0.6666666666666666,
+      "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+    },
+    "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+    "candidatePairs": 1539,
+    "rejectedPairs": 158
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "lockedAtUTC": "2026-10-07T07:38:54.205085+00:00",
+  "models": {
+    "ner": {
+      "developmentRun": "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28",
+      "checkpoint": "checkpoint_epoch_05",
+      "developmentManifestSha256": "7ce1cf5f4ad58bb53a12e7437460291d2451b28e900789fce213fcbf3a7699d2",
+      "weightsSha256": "d1498733c4ba5a772d0d1cfcc233b1ba52897569de336d0b967e1c6c7bcd0fac",
+      "config": {
+        "seed": 20261006,
+        "samples": 24,
+        "steps": 120,
+        "batch_size": 8,
+        "learning_rate": 5e-05,
+        "max_length": 128,
+        "epochs": 6
+      }
+    },
+    "re": {
+      "developmentRun": "kg_datasets/dblp/course_v4_runs/re_expanded_development_20261007_28",
+      "checkpoint": "checkpoint_epoch_01",
+      "developmentManifestSha256": "5a9492ec8ba173e39f0a18c6cce42b4884e168742471dc5a438334884bc0480d",
+      "weightsSha256": "74bc5fb008e6a1d4202a7fa6dbe42aba2b2c79496a591f7c7e30e211691bb48e",
+      "config": {
+        "seed": 20261006,
+        "batch_size": 8,
+        "learning_rate": 2e-05,
+        "max_length": 128,
+        "epochs": 6,
+        "balanced_loss": true,
+        "selection_metric": "all_class_macro",
+        "representation": "entity_markers"
+      }
+    }
+  },
+  "referenceSha256": "2102e15d4cbda9c23c3b71644448aceeb6b6f439e101195521ffe6e5c3c60e32",
+  "datasetManifestSha256": "30d6fa7ad82f188794136fb452e79e76c29f8e4f667da9d46751efdafcdbba84",
+  "reservedPolicySha256": "6876feffc0bf4742ff6096a7d3e3d52fdd04503731c1f777c05cc389e6efe1bc",
+  "annotationSchemaSha256": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+  "annotationConfigSha256": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+  "oldProductionRun": "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25",
+  "oldProductionManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+  "evaluationPolicy": "one frozen NER/module/pipeline evaluation on all eligible reviewed titles; disclose exclusions and zero supports",
+  "promotionGates": {
+    "pipelineF1AtLeastOldOnSameTitles": true,
+    "pipelinePrecisionAtLeastOldOnSameTitles": true,
+    "minimumReferenceRareEntitySupport": 10,
+    "minimumReferenceRareRelationSupport": 10,
+    "rareNERDevNonRegression": false
+  },
+  "promotionNotice": "The NER DATASET dev slice already regressed: no automatic deployment even if new overall scores improve.",
+  "labelsSeenBeforeThisSelection": false,
+  "humanGold": false,
+  "independentAnnotator": false,
+  "noTestTuning": true,
+  "oldProductionCorpusPreviouslyInferred": true
+}

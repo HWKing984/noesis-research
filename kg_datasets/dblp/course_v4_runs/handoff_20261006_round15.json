@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "localDocLinksChecked": 261,
+  "missing": 0,
+  "selectionLockUnchanged": true,
+  "reportsSha256": {
+    "README.md": "fbac7d03f26ce9aafa493e0fe36d4a6b83dd78ed5862a340673b454210bb7eb5",
+    "docs\\course_v4_ai_prompt.md": "6eb18d89232376f8515449455d424dfb762a17c05e30431d09532de2f04c0ad8",
+    "docs\\course_v4_ner_development.md": "34a1c519aa57922eb1ab89043631bdcac98a9b4a8092fe6b68a31cd67ef5ce3c",
+    "docs\\course_v4_ner_smoke.md": "1daa886cdeb658697cbd55976fa95af61e960f3fa8d42f1595cc0c764f9526ff",
+    "docs\\course_v4_ner_test.md": "ef5961341450b7d09d33f4883f17b1e7025329d117239dc47fd35ccc49680a3c",
+    "docs\\course_v4_plan.md": "fd9d83f57e56b9a2a2177be5dbbb1a07a7b33afae8431032a10131901e8760de",
+    "docs\\course_v4_progress.md": "2373ec3c5d920cf06feb582188ebd52297ad411dd9ae487d1080534adb188023",
+    "docs\\course_v4_relation_development.md": "49befe5f4ed186a7b10924440520a14691c76bc5c4e2b8aaa6a25e4621b4b5d8",
+    "docs\\course_v4_relation_entity.md": "31c6ebe30319b978f74cb1652f1fea97994623534c2267a7bb203a571d39bbaa",
+    "docs\\course_v4_relation_roles.md": "31121074bbbcff4d86c31576407c25e01dccf37b2d9d5ab3de28ee01295707ac",
+    "docs\\course_v4_report_evidence.md": "8a991a6d1bbf9c7e858089e965f8c2d9c5052bb4bc8aaac010134c16e83244ad",
+    "docs\\course_v4_runbook.md": "1ab774bef9c09a31819da62f1f9b01edd8d8f691d02fb9dbcc92776cc4a6651b"
+  }
+}

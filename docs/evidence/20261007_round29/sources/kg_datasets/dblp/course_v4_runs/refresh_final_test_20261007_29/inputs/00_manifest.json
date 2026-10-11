@@ -1,0 +1,20 @@
+{
+  "kind": "reserved_refresh_test_only",
+  "createdAtUTC": "2026-10-07T07:38:54.205085+00:00",
+  "schemaSha256": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+  "configSha256": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_runs/refresh_lock_20261007_28.json": "6876feffc0bf4742ff6096a7d3e3d52fdd04503731c1f777c05cc389e6efe1bc",
+    "kg_datasets/dblp/ner_v1/corpus_manifest.jsonl": "bc88db81e0c68156c2fcacdbf8523e77b81be9b5d811163da2ed30f3edf3ca8a",
+    "kg_datasets/dblp/course_v4_weak/manifest.json": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+    "annotations/course_v4/prepare_holdout_20261007_round29.py": "a72556bc01cb328aa5b9e68bf17fee03ac700cf6cc3a6dbca52803b7e056d7fa"
+  },
+  "filesSha256": {
+    "ai_prompt.md": "6eb18d89232376f8515449455d424dfb762a17c05e30431d09532de2f04c0ad8",
+    "config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "references.jsonl": "0423e07419411a20643ca08af8fe574f9772ea4ee7f9e776c0be21114d61c690",
+    "response_schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "jobs/generation.jsonl": "aaf5edcf9ca24ee87a8efb096668c25226c7c66ccf01a781afe214963c98ff41"
+  }
+}

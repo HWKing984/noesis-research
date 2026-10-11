@@ -1,0 +1,11 @@
+{
+  "license": "CC0-1.0",
+  "source_policy": "https://info.arxiv.org/help/api/tou.html",
+  "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+  "policy_checked_on": "2026-10-08",
+  "redistribute_metadata": true,
+  "robotsURL": "https://arxiv.org/robots.txt",
+  "robotsSha256": "eda2bc852443f3f29d31eb04d37b26476654dc33b29256fb882819da23d189a5",
+  "crawlDelaySeconds": 15.1,
+  "policyCorrection": "HTML crawl delay follows robots (15s), not legacy API minimum (3s); historical round32 source evidence retained unchanged."
+}

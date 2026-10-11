@@ -1,0 +1,19 @@
+{
+  "version": "abstract_train_expansion_v1",
+  "previousTrain": 29,
+  "additionalQueue": 21,
+  "additionalEligible": 19,
+  "additionalExcluded": 2,
+  "trainDocuments": 48,
+  "devDocuments": 16,
+  "trainEntitySupport": {
+    "TASK": 185,
+    "METHOD": 362,
+    "DATASET": 44
+  },
+  "devRowsUnchanged": true,
+  "devRowsSha256": "aeb3d889a88a21065e842088a038b0db73901fc83b3a31a200d0bb7e1219942e",
+  "testConsumed": false,
+  "trainingExecuted": false,
+  "modelPromoted": false
+}

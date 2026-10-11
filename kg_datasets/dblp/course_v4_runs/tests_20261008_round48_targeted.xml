@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="13.361" timestamp="2026-10-08T22:08:28.750899+08:00" hostname="HWKing"><testcase classname="tests.test_abstract_abstention" name="test_conservative_bio_abstention_preserves_valid_spans" time="13.153" /></testsuite></testsuites>

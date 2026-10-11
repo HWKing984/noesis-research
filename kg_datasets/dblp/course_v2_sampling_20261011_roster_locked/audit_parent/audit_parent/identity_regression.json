@@ -1,0 +1,122 @@
+[
+  {
+    "test": "case_prefix_mixed_case",
+    "metadata": {
+      "publicationId": "guard-fixture:case_prefix_mixed_case",
+      "groupId": "guard-fixture-group:case_prefix_mixed_case",
+      "arxivId": "arXiv:2107.03374v2",
+      "split": "test"
+    },
+    "expectedReject": true,
+    "syntheticMetadataOnly": true,
+    "actualPaperExistenceVerified": false,
+    "before": {
+      "rejected": false,
+      "reason": null
+    },
+    "after": {
+      "rejected": true,
+      "reason": "Exposed paper cannot enter new evaluation"
+    }
+  },
+  {
+    "test": "case_prefix_caps",
+    "metadata": {
+      "publicationId": "guard-fixture:case_prefix_caps",
+      "groupId": "guard-fixture-group:case_prefix_caps",
+      "arxivId": "ARXIV:2107.03374v2",
+      "split": "test"
+    },
+    "expectedReject": true,
+    "syntheticMetadataOnly": true,
+    "actualPaperExistenceVerified": false,
+    "before": {
+      "rejected": false,
+      "reason": null
+    },
+    "after": {
+      "rejected": true,
+      "reason": "Exposed paper cannot enter new evaluation"
+    }
+  },
+  {
+    "test": "case_corpus_dblp_alias",
+    "metadata": {
+      "publicationId": "guard-fixture:case_corpus_dblp_alias",
+      "groupId": "guard-fixture-group:case_corpus_dblp_alias",
+      "arxivId": "arxiv:1708.00052",
+      "split": "test"
+    },
+    "expectedReject": true,
+    "syntheticMetadataOnly": true,
+    "actualPaperExistenceVerified": false,
+    "before": {
+      "rejected": false,
+      "reason": null
+    },
+    "after": {
+      "rejected": true,
+      "reason": "Exposed paper cannot enter new evaluation"
+    }
+  },
+  {
+    "test": "case_named_dblp_url_alias",
+    "metadata": {
+      "publicationId": "guard-fixture:case_named_dblp_url_alias",
+      "groupId": "guard-fixture-group:case_named_dblp_url_alias",
+      "arxivId": "arxiv:1511.00111",
+      "split": "test"
+    },
+    "expectedReject": true,
+    "syntheticMetadataOnly": true,
+    "actualPaperExistenceVerified": false,
+    "before": {
+      "rejected": false,
+      "reason": null
+    },
+    "after": {
+      "rejected": true,
+      "reason": "Exposed paper cannot enter new evaluation"
+    }
+  },
+  {
+    "test": "control_lowercase_prefix",
+    "metadata": {
+      "publicationId": "guard-fixture:control_lowercase_prefix",
+      "groupId": "guard-fixture-group:control_lowercase_prefix",
+      "arxivId": "arxiv:2107.03374v2",
+      "split": "test"
+    },
+    "expectedReject": true,
+    "syntheticMetadataOnly": true,
+    "actualPaperExistenceVerified": false,
+    "before": {
+      "rejected": true,
+      "reason": "Exposed paper cannot enter new evaluation"
+    },
+    "after": {
+      "rejected": true,
+      "reason": "Exposed paper cannot enter new evaluation"
+    }
+  },
+  {
+    "test": "control_fresh_synthetic",
+    "metadata": {
+      "publicationId": "guard-fixture:control_fresh_synthetic",
+      "groupId": "guard-fixture-group:control_fresh_synthetic",
+      "arxivId": "arxiv:2610.88888",
+      "split": "test"
+    },
+    "expectedReject": false,
+    "syntheticMetadataOnly": true,
+    "actualPaperExistenceVerified": false,
+    "before": {
+      "rejected": false,
+      "reason": null
+    },
+    "after": {
+      "rejected": false,
+      "reason": null
+    }
+  }
+]

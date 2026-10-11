@@ -1,0 +1,48 @@
+{
+  "version": "sampling_frame_v1",
+  "samplingFrameLocked": true,
+  "fullDBLPRepresentative": false,
+  "protocolSha256": "5eb3d732612789e61eacc1b5fe5aa0534fca70391010c69dd8f95cff125f0b45",
+  "exclusionsSha256": "432723de8a1b74b4a875dd6dce93e835a6f8303c2b9ebe634f15f26e85aacdd2",
+  "aliasIndexSha256": "2456adc07911943f2bb4800efcbcfd5a1b832ac68aced740a3c601d08b5a4d19",
+  "sourcePages": [
+    {
+      "file": "sources/listing_0.html",
+      "sha256": "80f68196b072ecb097acc301743ee318267caf08ceaebc7197f13a09d9eb08ff",
+      "sourceURL": "https://arxiv.org/list/cs.AI/2025-02?skip=0&show=2000",
+      "status": 200,
+      "fetchedAtUTC": "2026-10-10T16:12:18.358396+00:00",
+      "records": 2000,
+      "bytes": 3416393
+    },
+    {
+      "file": "sources/listing_2000.html",
+      "sha256": "9eec30fb1386b76706b08200c41655b9d75623b1d92d3858d20dd2781e9b16c2",
+      "sourceURL": "https://arxiv.org/list/cs.AI/2025-02?skip=2000&show=2000",
+      "status": 200,
+      "fetchedAtUTC": "2026-10-10T16:12:27.582953+00:00",
+      "records": 1654,
+      "bytes": 2885527
+    }
+  ],
+  "sourceListingCount": 3654,
+  "eligiblePopulationCount": 3597,
+  "excludedPopulationCount": 57,
+  "populationSha256": "a2d85db7fec530fbe3125a63098c59a18f64507a8d09ea66f0c91122ef0c2a0a",
+  "selectedMembersSha256": "77aeac45ae1da0bb806574dfae2392d1f6c7c3fa8926d45678ab6d6767e3cdf7",
+  "seed": 20261011,
+  "samplingMethod": "python_random_sample_without_replacement_publication_group_v1",
+  "samplingPython": "3.14.7",
+  "selectionCounts": {
+    "dev": 20,
+    "test": 20,
+    "challenge": 0
+  },
+  "inclusionProbabilities": {
+    "dev": 0.005560189046427579,
+    "test": 0.005560189046427579
+  },
+  "contentBindingCompleted": false,
+  "evaluationAuthorized": false,
+  "scope": "Finite metadata listing snapshot: cs.AI February 2025 after canonical historical exposure exclusion. Not all arXiv, all AI or all DBLP; metadata isolation alone is not proof of semantic independence."
+}

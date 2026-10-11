@@ -1,0 +1,37 @@
+{
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-20c75155bdba4fa39fa28fbe67706ef2",
+  "captures": [
+    {
+      "viewportHeight": 2300,
+      "originalConsoleScreenshot": false,
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round17/08_relation_test.html",
+      "sha256": "a14a4533198ab49e9b9698a62e11942400cd969a2555abf98f84bc2df3c1b9dc",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round17\\08_relation_test.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-20c75155bdba4fa39fa28fbe67706ef2",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round17/08_relation_test.html"
+      ],
+      "sourcePageSha256": "feeac6fc23f77f3e857d23a6c5ac02607e13199749762a97873cd7427cfd6375",
+      "sourcePage": "08_relation_test.html",
+      "capturedAt": "2026-10-06T15:30:46.0714553Z",
+      "bytes": 158509,
+      "image": "08_relation_test.png"
+    }
+  ],
+  "renderer": "installed_Microsoft_Edge_headless",
+  "originalConsoleScreenshot": false,
+  "finishedAt": "2026-10-06T15:30:46.0891529Z",
+  "browserVersion": "154.0.4258.53",
+  "kind": "actual_browser_render_capture",
+  "generatedFromRealArtifacts": true,
+  "viewportWidth": 1280,
+  "status": "completed"
+}

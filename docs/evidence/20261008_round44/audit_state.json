@@ -1,0 +1,30 @@
+{
+  "sourceReviewedTrainDocuments": 11,
+  "NERtrain": 54,
+  "NERexcluded": 4,
+  "entitySupport": {
+    "TASK": 196,
+    "METHOD": 403,
+    "DATASET": 44
+  },
+  "freshReviewedDocumentsComparedTo43": 6,
+  "unchangedReceiptLines": 52,
+  "knownRelations": 267,
+  "unknownPairs": 1647,
+  "eligiblePairs": 1914,
+  "completeRelationDocuments": 8,
+  "newZeroCandidateDocuments": 2,
+  "rejudgedTouchingPairs": 8,
+  "oldInventoryRelationsPreserved": 45,
+  "newInventoryUnknownPairs": 15,
+  "BIORecomputed": 54,
+  "opaqueDevFilesIdentical": 9,
+  "engineeringTests": 372,
+  "regressionSeconds": 144.788,
+  "regressionScope": "D_drive_isolated_process_temp; C_drive_previous_rename_problem_not_fixed",
+  "trainingExecuted": false,
+  "testSemanticallyRead": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "independentHumanGold": false
+}

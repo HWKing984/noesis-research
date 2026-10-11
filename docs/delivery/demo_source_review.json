@@ -1,0 +1,1339 @@
+[
+  {
+    "arxivId": "2107.03374",
+    "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+    "sourceReadBy": "AI assistant",
+    "humanReviewed": true,
+    "confirmationSource": "explicit_user_chat",
+    "note": "Codex 的研究模型、独立生产版本和泛称 GPT 不混同；HumanEval 上的性能可归属研究模型，GPT 不自动继承。重复采样的效果证据保留原文上下文，不凭共现连边。",
+    "relations": [
+      {
+        "arxivId": "2107.03374",
+        "attribution": "Its refers to introduced Codex, not to every GPT model or the separately mentioned production version.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 139,
+          "start": 0,
+          "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 18,
+          "entityId": "e1",
+          "label": "METHOD",
+          "start": 13,
+          "text": "Codex"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 139,
+            "start": 0,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "Its refers to introduced Codex, not to every GPT model or the separately mentioned production version.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g1",
+        "tail": {
+          "end": 125,
+          "entityId": "e3",
+          "label": "TASK",
+          "start": 106,
+          "text": "Python code-writing"
+        },
+        "taskRole": "downstream_application",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e1:e3",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "Our model is the introduced Codex; GPT-3 and GPT-J have separate named results. Zero success is still evaluation, not NO_RELATION.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 410,
+          "start": 13,
+          "text": "Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 18,
+          "entityId": "e1",
+          "label": "METHOD",
+          "start": 13,
+          "text": "Codex"
+        },
+        "label": "EVALUATED_ON",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 410,
+            "start": 202,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "Our model is the introduced Codex; GPT-3 and GPT-J have separate named results. Zero success is still evaluation, not NO_RELATION.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g2",
+        "tail": {
+          "end": 214,
+          "entityId": "e5",
+          "label": "DATASET",
+          "start": 205,
+          "text": "HumanEval"
+        },
+        "taskRole": "not_applicable",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e1:e5",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "All three named tested systems attempt the benchmark's explicit synthesis task; USED_FOR does not require successful answers on every task item.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 410,
+          "start": 13,
+          "text": "Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 18,
+          "entityId": "e1",
+          "label": "METHOD",
+          "start": 13,
+          "text": "Codex"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 410,
+            "start": 202,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "All three named tested systems attempt the benchmark's explicit synthesis task; USED_FOR does not require successful answers on every task item.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g3",
+        "tail": {
+          "end": 323,
+          "entityId": "e6",
+          "label": "TASK",
+          "start": 286,
+          "text": "synthesizing programs from docstrings"
+        },
+        "taskRole": "downstream_application",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e1:e6",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "Our model is the introduced Codex; GPT-3 and GPT-J have separate named results. Zero success is still evaluation, not NO_RELATION.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 410,
+          "start": 202,
+          "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 376,
+          "entityId": "e7",
+          "label": "METHOD",
+          "start": 371,
+          "text": "GPT-3"
+        },
+        "label": "EVALUATED_ON",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 410,
+            "start": 202,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "Our model is the introduced Codex; GPT-3 and GPT-J have separate named results. Zero success is still evaluation, not NO_RELATION.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g2",
+        "tail": {
+          "end": 214,
+          "entityId": "e5",
+          "label": "DATASET",
+          "start": 205,
+          "text": "HumanEval"
+        },
+        "taskRole": "not_applicable",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e7:e5",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "All three named tested systems attempt the benchmark's explicit synthesis task; USED_FOR does not require successful answers on every task item.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 410,
+          "start": 202,
+          "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 376,
+          "entityId": "e7",
+          "label": "METHOD",
+          "start": 371,
+          "text": "GPT-3"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 410,
+            "start": 202,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "All three named tested systems attempt the benchmark's explicit synthesis task; USED_FOR does not require successful answers on every task item.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g3",
+        "tail": {
+          "end": 323,
+          "entityId": "e6",
+          "label": "TASK",
+          "start": 286,
+          "text": "synthesizing programs from docstrings"
+        },
+        "taskRole": "downstream_application",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e7:e6",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "Our model is the introduced Codex; GPT-3 and GPT-J have separate named results. Zero success is still evaluation, not NO_RELATION.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 410,
+          "start": 202,
+          "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 396,
+          "entityId": "e8",
+          "label": "METHOD",
+          "start": 391,
+          "text": "GPT-J"
+        },
+        "label": "EVALUATED_ON",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 410,
+            "start": 202,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "Our model is the introduced Codex; GPT-3 and GPT-J have separate named results. Zero success is still evaluation, not NO_RELATION.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g2",
+        "tail": {
+          "end": 214,
+          "entityId": "e5",
+          "label": "DATASET",
+          "start": 205,
+          "text": "HumanEval"
+        },
+        "taskRole": "not_applicable",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e8:e5",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "All three named tested systems attempt the benchmark's explicit synthesis task; USED_FOR does not require successful answers on every task item.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 410,
+          "start": 202,
+          "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 396,
+          "entityId": "e8",
+          "label": "METHOD",
+          "start": 391,
+          "text": "GPT-J"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 410,
+            "start": 202,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "All three named tested systems attempt the benchmark's explicit synthesis task; USED_FOR does not require successful answers on every task item.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g3",
+        "tail": {
+          "end": 323,
+          "entityId": "e6",
+          "label": "TASK",
+          "start": 286,
+          "text": "synthesizing programs from docstrings"
+        },
+        "taskRole": "downstream_application",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e8:e6",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "This method explicitly refers to repeated sampling; our problems refers to HumanEval problems in the preceding result sentence. The strategy receives its own reported result, unlike an unevaluated architectural component.",
+        "coreferenceEvidence": [
+          {
+            "anaphorContextSpan": {
+              "end": 640,
+              "start": 561,
+              "text": "Using this method, we solve 70.2% of our problems with 100 samples per problem."
+            },
+            "antecedentContextSpan": {
+              "end": 560,
+              "start": 411,
+              "text": "Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+            },
+            "evidenceLevel": "discourse_inferred",
+            "explanation": "This method refers to the immediately preceding repeated sampling strategy, not the distinct production Codex actor.",
+            "kind": "strategy_reference",
+            "referentAliasIds": [
+              "e9"
+            ],
+            "resolvedEntityId": "e9",
+            "resolvedEntitySpan": {
+              "end": 454,
+              "start": 437,
+              "text": "repeated sampling"
+            },
+            "triggerSpan": {
+              "end": 578,
+              "start": 567,
+              "text": "this method"
+            }
+          },
+          {
+            "anaphorContextSpan": {
+              "end": 640,
+              "start": 561,
+              "text": "Using this method, we solve 70.2% of our problems with 100 samples per problem."
+            },
+            "antecedentContextSpan": {
+              "end": 410,
+              "start": 202,
+              "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+            },
+            "evidenceLevel": "discourse_inferred",
+            "explanation": "Our problems is interpreted as the HumanEval problems introduced in the prior benchmark result context. Record the full antecedent sentence, but retain the existing label as an AI source-local coreference judgment rather than a new independent result.",
+            "kind": "benchmark_discourse_resolution",
+            "referentAliasIds": [
+              "e5"
+            ],
+            "resolvedEntityId": "e5",
+            "resolvedEntitySpan": {
+              "end": 214,
+              "start": 205,
+              "text": "HumanEval"
+            },
+            "triggerSpan": {
+              "end": 610,
+              "start": 598,
+              "text": "our problems"
+            }
+          }
+        ],
+        "coreferenceFactId": "2107.03374:repeated_sampling_on_humaneval",
+        "coreferenceStatus": "ai_source_local_discourse_review_not_independent_gold",
+        "evidence": {
+          "end": 640,
+          "start": 205,
+          "text": "HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 454,
+          "entityId": "e9",
+          "label": "METHOD",
+          "start": 437,
+          "text": "repeated sampling"
+        },
+        "label": "EVALUATED_ON",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 560,
+            "start": 411,
+            "text": "Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          {
+            "end": 640,
+            "start": 561,
+            "text": "Using this method, we solve 70.2% of our problems with 100 samples per problem."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "This method explicitly refers to repeated sampling; our problems refers to HumanEval problems in the preceding result sentence. The strategy receives its own reported result, unlike an unevaluated architectural component.",
+        "relationEvidenceLevel": "discourse_inferred",
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g4",
+        "tail": {
+          "end": 214,
+          "entityId": "e5",
+          "label": "DATASET",
+          "start": 205,
+          "text": "HumanEval"
+        },
+        "taskRole": "not_applicable",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e9:e5",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "2107.03374",
+        "attribution": "Working solutions and our problems resolve to the immediately stated program-synthesis benchmark task. This is explicit strategy operation, not abstract-level task inheritance.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 640,
+          "start": 286,
+          "text": "synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem."
+        },
+        "groupId": "abstract-paper-2107.03374",
+        "head": {
+          "end": 454,
+          "entityId": "e9",
+          "label": "METHOD",
+          "start": 437,
+          "text": "repeated sampling"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 560,
+            "start": 411,
+            "text": "Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          {
+            "end": 640,
+            "start": 561,
+            "text": "Using this method, we solve 70.2% of our problems with 100 samples per problem."
+          }
+        ],
+        "publicationId": "arxiv:2107.03374",
+        "reason": "Working solutions and our problems resolve to the immediately stated program-synthesis benchmark task. This is explicit strategy operation, not abstract-level task inheritance.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "sourceReceiptSha256": "dd7db1026a6086b2a8861bf0ad041607fb92f841bb17e510e8493b4cea2cd575",
+        "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+        "split": "train",
+        "supportGroup": "2107.03374:g5",
+        "tail": {
+          "end": 323,
+          "entityId": "e6",
+          "label": "TASK",
+          "start": 286,
+          "text": "synthesizing programs from docstrings"
+        },
+        "taskRole": "downstream_application",
+        "taskSubRole": null,
+        "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "textKind": "abstract",
+        "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+        "sourceReviewDecision": "Retained after complete-source read: Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation.",
+        "pairId": "sample-3921fe8b1cb01ddb7dd1:e9:e6",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      }
+    ]
+  },
+  {
+    "arxivId": "1606.05250",
+    "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
+    "sourceReadBy": "AI assistant",
+    "humanReviewed": true,
+    "confirmationSource": "explicit_user_chat",
+    "note": "SQuAD 名称及缩写、reading comprehension、logistic regression 的跨度可核对。模型 F1=51.0% 是论文作者报告的结果，不是本项目抽取成绩。冻结标签可能漏掉 answer the questions，候选修订未用于训练，交付不改标签。",
+    "relations": [
+      {
+        "arxivId": "1606.05250",
+        "attribution": "The sole dataset being presented/analyzed is Stanford Question Answering Dataset (SQuAD); which directly attaches the reported score to logistic regression.",
+        "coreferenceEvidence": [
+          {
+            "anaphorContextSpan": {
+              "end": 425,
+              "start": 278,
+              "text": "We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees."
+            },
+            "antecedentContextSpan": {
+              "end": 277,
+              "start": 0,
+              "text": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage."
+            },
+            "evidenceLevel": "discourse_inferred",
+            "explanation": "The dataset refers to the named SQuAD dataset introduced in the first sentence. The later baseline F1 result is interpreted in this sole evaluation-dataset discourse context; this remains an AI attribution, not a new explicit on SQuAD string.",
+            "kind": "sole_dataset_discourse_context",
+            "referentAliasIds": [
+              "e1",
+              "e2"
+            ],
+            "resolvedEntityId": "e1",
+            "resolvedEntitySpan": {
+              "end": 50,
+              "start": 15,
+              "text": "Stanford Question Answering Dataset"
+            },
+            "triggerSpan": {
+              "end": 300,
+              "start": 289,
+              "text": "the dataset"
+            }
+          },
+          {
+            "anaphorContextSpan": {
+              "end": 506,
+              "start": 471,
+              "text": "which achieves an F1 score of 51.0%"
+            },
+            "antecedentContextSpan": {
+              "end": 469,
+              "start": 426,
+              "text": "We build a strong logistic regression model"
+            },
+            "evidenceLevel": "direct",
+            "explanation": "Which syntactically attaches the result to the logistic regression model, not to the earlier parsing trees. Apply the same evidence chain to full-name and acronym mentions; do not add or change evaluation labels.",
+            "kind": "relative_clause_model_actor",
+            "referentAliasIds": [
+              "e4"
+            ],
+            "resolvedEntityId": "e4",
+            "resolvedEntitySpan": {
+              "end": 463,
+              "start": 444,
+              "text": "logistic regression"
+            },
+            "triggerSpan": {
+              "end": 476,
+              "start": 471,
+              "text": "which"
+            }
+          }
+        ],
+        "coreferenceFactId": "1606.05250:logistic_regression_on_squad",
+        "coreferenceStatus": "ai_source_local_discourse_review_not_independent_gold",
+        "evidence": {
+          "end": 563,
+          "start": 15,
+          "text": "Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%)."
+        },
+        "groupId": "abstract-paper-1606.05250",
+        "head": {
+          "end": 463,
+          "entityId": "e4",
+          "label": "METHOD",
+          "start": 444,
+          "text": "logistic regression"
+        },
+        "label": "EVALUATED_ON",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 563,
+            "start": 426,
+            "text": "We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%)."
+          }
+        ],
+        "publicationId": "arxiv:1606.05250",
+        "reason": "The sole dataset being presented/analyzed is Stanford Question Answering Dataset (SQuAD); which directly attaches the reported score to logistic regression.",
+        "relationEvidenceLevel": "discourse_inferred",
+        "sampleId": "sample-897a80e58031f4e2f42c",
+        "sourceReceiptSha256": "2a68530727edb07e2b807a46fe63b2159cd147a66db3867bb16415f0cafee303",
+        "sourceURL": "http://arxiv.org/abs/1606.05250v3",
+        "split": "train",
+        "supportGroup": "1606.05250:g1",
+        "tail": {
+          "end": 50,
+          "entityId": "e1",
+          "label": "DATASET",
+          "start": 15,
+          "text": "Stanford Question Answering Dataset"
+        },
+        "taskRole": "not_applicable",
+        "taskSubRole": null,
+        "text": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%). However, human performance (86.8%) is much higher, indicating that the dataset presents a good challenge problem for future research.\n  The dataset is freely available at https://stanford-qa.com",
+        "textKind": "abstract",
+        "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "73119317af963e9bd7b09dbb2fff4c04ae7cca643f1bb618e40729fc9f72ef12",
+        "sourceReviewDecision": "Retained after complete-source read: The logistic regression model is evaluated on the described SQuAD benchmark; retain both explicit dataset aliases and reading-comprehension purpose.",
+        "pairId": "sample-897a80e58031f4e2f42c:e4:e1",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "1606.05250",
+        "attribution": "The sole dataset being presented/analyzed is Stanford Question Answering Dataset (SQuAD); which directly attaches the reported score to logistic regression.",
+        "coreferenceEvidence": [
+          {
+            "anaphorContextSpan": {
+              "end": 425,
+              "start": 278,
+              "text": "We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees."
+            },
+            "antecedentContextSpan": {
+              "end": 277,
+              "start": 0,
+              "text": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage."
+            },
+            "evidenceLevel": "discourse_inferred",
+            "explanation": "The dataset refers to the named SQuAD dataset introduced in the first sentence. The later baseline F1 result is interpreted in this sole evaluation-dataset discourse context; this remains an AI attribution, not a new explicit on SQuAD string.",
+            "kind": "sole_dataset_discourse_context",
+            "referentAliasIds": [
+              "e1",
+              "e2"
+            ],
+            "resolvedEntityId": "e1",
+            "resolvedEntitySpan": {
+              "end": 50,
+              "start": 15,
+              "text": "Stanford Question Answering Dataset"
+            },
+            "triggerSpan": {
+              "end": 300,
+              "start": 289,
+              "text": "the dataset"
+            }
+          },
+          {
+            "anaphorContextSpan": {
+              "end": 506,
+              "start": 471,
+              "text": "which achieves an F1 score of 51.0%"
+            },
+            "antecedentContextSpan": {
+              "end": 469,
+              "start": 426,
+              "text": "We build a strong logistic regression model"
+            },
+            "evidenceLevel": "direct",
+            "explanation": "Which syntactically attaches the result to the logistic regression model, not to the earlier parsing trees. Apply the same evidence chain to full-name and acronym mentions; do not add or change evaluation labels.",
+            "kind": "relative_clause_model_actor",
+            "referentAliasIds": [
+              "e4"
+            ],
+            "resolvedEntityId": "e4",
+            "resolvedEntitySpan": {
+              "end": 463,
+              "start": 444,
+              "text": "logistic regression"
+            },
+            "triggerSpan": {
+              "end": 476,
+              "start": 471,
+              "text": "which"
+            }
+          }
+        ],
+        "coreferenceFactId": "1606.05250:logistic_regression_on_squad",
+        "coreferenceStatus": "ai_source_local_discourse_review_not_independent_gold",
+        "evidence": {
+          "end": 563,
+          "start": 52,
+          "text": "SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%)."
+        },
+        "groupId": "abstract-paper-1606.05250",
+        "head": {
+          "end": 463,
+          "entityId": "e4",
+          "label": "METHOD",
+          "start": 444,
+          "text": "logistic regression"
+        },
+        "label": "EVALUATED_ON",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 563,
+            "start": 426,
+            "text": "We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%)."
+          }
+        ],
+        "publicationId": "arxiv:1606.05250",
+        "reason": "The sole dataset being presented/analyzed is Stanford Question Answering Dataset (SQuAD); which directly attaches the reported score to logistic regression.",
+        "relationEvidenceLevel": "discourse_inferred",
+        "sampleId": "sample-897a80e58031f4e2f42c",
+        "sourceReceiptSha256": "2a68530727edb07e2b807a46fe63b2159cd147a66db3867bb16415f0cafee303",
+        "sourceURL": "http://arxiv.org/abs/1606.05250v3",
+        "split": "train",
+        "supportGroup": "1606.05250:g1",
+        "tail": {
+          "end": 57,
+          "entityId": "e2",
+          "label": "DATASET",
+          "start": 52,
+          "text": "SQuAD"
+        },
+        "taskRole": "not_applicable",
+        "taskSubRole": null,
+        "text": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%). However, human performance (86.8%) is much higher, indicating that the dataset presents a good challenge problem for future research.\n  The dataset is freely available at https://stanford-qa.com",
+        "textKind": "abstract",
+        "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "73119317af963e9bd7b09dbb2fff4c04ae7cca643f1bb618e40729fc9f72ef12",
+        "sourceReviewDecision": "Retained after complete-source read: The logistic regression model is evaluated on the described SQuAD benchmark; retain both explicit dataset aliases and reading-comprehension purpose.",
+        "pairId": "sample-897a80e58031f4e2f42c:e4:e2",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "1606.05250",
+        "attribution": "The preceding dataset definition identifies reading comprehension as the scored task. No model/task name is imported from the title.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 563,
+          "start": 66,
+          "text": "reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%)."
+        },
+        "groupId": "abstract-paper-1606.05250",
+        "head": {
+          "end": 463,
+          "entityId": "e4",
+          "label": "METHOD",
+          "start": 444,
+          "text": "logistic regression"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 563,
+            "start": 426,
+            "text": "We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%)."
+          }
+        ],
+        "publicationId": "arxiv:1606.05250",
+        "reason": "The preceding dataset definition identifies reading comprehension as the scored task. No model/task name is imported from the title.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-897a80e58031f4e2f42c",
+        "sourceReceiptSha256": "2a68530727edb07e2b807a46fe63b2159cd147a66db3867bb16415f0cafee303",
+        "sourceURL": "http://arxiv.org/abs/1606.05250v3",
+        "split": "train",
+        "supportGroup": "1606.05250:g2",
+        "tail": {
+          "end": 87,
+          "entityId": "e3",
+          "label": "TASK",
+          "start": 66,
+          "text": "reading comprehension"
+        },
+        "taskRole": "downstream_application",
+        "taskSubRole": null,
+        "text": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%). However, human performance (86.8%) is much higher, indicating that the dataset presents a good challenge problem for future research.\n  The dataset is freely available at https://stanford-qa.com",
+        "textKind": "abstract",
+        "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "73119317af963e9bd7b09dbb2fff4c04ae7cca643f1bb618e40729fc9f72ef12",
+        "sourceReviewDecision": "Retained after complete-source read: The logistic regression model is evaluated on the described SQuAD benchmark; retain both explicit dataset aliases and reading-comprehension purpose.",
+        "pairId": "sample-897a80e58031f4e2f42c:e4:e3",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      }
+    ]
+  },
+  {
+    "arxivId": "1905.00537",
+    "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+    "sourceReadBy": "AI assistant",
+    "humanReviewed": true,
+    "confirmationSource": "explicit_user_chat",
+    "note": "pretraining / transfer learning 与 language understanding 是背景用途；摘要提出 SuperGLUE，但未表达这些方法在 SuperGLUE 上的评测，不自动生成 EVALUATED_ON。",
+    "relations": [
+      {
+        "arxivId": "1905.00537",
+        "attribution": "This sentence explicitly connects the two method families to the language-understanding task. It is a background methodological claim, not this paper's measured model result; no benchmark evaluation edge is inferred.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 172,
+          "start": 0,
+          "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks."
+        },
+        "groupId": "abstract-paper-1905.00537",
+        "head": {
+          "end": 56,
+          "entityId": "e1",
+          "label": "METHOD",
+          "start": 45,
+          "text": "pretraining"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 172,
+            "start": 0,
+            "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks."
+          }
+        ],
+        "publicationId": "arxiv:1905.00537",
+        "reason": "This sentence explicitly connects the two method families to the language-understanding task. It is a background methodological claim, not this paper's measured model result; no benchmark evaluation edge is inferred.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-d25f6ae1049046b1cbe9",
+        "sourceReceiptSha256": "9350dfa4edab9291a6c1aef505dfa29245bb560f79235ff8663359846b8b9cbb",
+        "sourceURL": "http://arxiv.org/abs/1905.00537v3",
+        "split": "train",
+        "supportGroup": "1905.00537:g1",
+        "tail": {
+          "end": 165,
+          "entityId": "e3",
+          "label": "TASK",
+          "start": 143,
+          "text": "language understanding"
+        },
+        "taskRole": "background_method_use",
+        "taskSubRole": null,
+        "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks. The GLUE benchmark, introduced a little over one year ago, offers a single-number metric that summarizes progress on a diverse set of such tasks, but performance on the benchmark has recently surpassed the level of non-expert humans, suggesting limited headroom for further research. In this paper we present SuperGLUE, a new benchmark styled after GLUE with a new set of more difficult language understanding tasks, a software toolkit, and a public leaderboard. SuperGLUE is available at super.gluebenchmark.com.",
+        "textKind": "abstract",
+        "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "089dd1adde6fffd02edbd02b4f99f6f6fdcd2419490f739c7e39009a8769ca89",
+        "sourceReviewDecision": "Retained after complete-source read: Pretraining/transfer learning are background methods for language understanding. SuperGLUE is newly introduced; the abstract reports no evaluation of these methods on it.",
+        "pairId": "sample-d25f6ae1049046b1cbe9:e1:e3",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "head": {
+          "end": 56,
+          "entityId": "e1",
+          "label": "METHOD",
+          "start": 45,
+          "text": "pretraining"
+        },
+        "tail": {
+          "end": 491,
+          "entityId": "e5",
+          "label": "DATASET",
+          "start": 482,
+          "text": "SuperGLUE"
+        },
+        "label": "NO_RELATION",
+        "evidence": {
+          "start": 471,
+          "end": 526,
+          "text": "we present SuperGLUE, a new benchmark styled after GLUE"
+        },
+        "contextEvidence": [
+          {
+            "end": 56,
+            "entityId": "e1",
+            "label": "METHOD",
+            "start": 45,
+            "text": "pretraining",
+            "role": "actor_mention"
+          },
+          {
+            "end": 491,
+            "entityId": "e5",
+            "label": "DATASET",
+            "start": 482,
+            "text": "SuperGLUE",
+            "role": "target_mention"
+          }
+        ],
+        "relationEvidenceLevel": "discourse_inferred",
+        "reason": "The full abstract introduces SuperGLUE without reporting evaluations of pretraining or transfer-learning methods on that benchmark; no model/dataset coreference supplies such a result.",
+        "taskRole": null,
+        "supportGroup": "1905.00537:textscope:57ee5d7f60ca",
+        "negativeBasis": "REVIEWED_NOT_EXPRESSED_IN_WHOLE_ABSTRACT",
+        "sourceReviewDecision": "Pretraining/transfer learning are background methods for language understanding. SuperGLUE is newly introduced; the abstract reports no evaluation of these methods on it.",
+        "decisionRule": "train:1905.00537:0",
+        "arxivId": "1905.00537",
+        "sampleId": "sample-d25f6ae1049046b1cbe9",
+        "publicationId": "arxiv:1905.00537",
+        "groupId": "abstract-paper-1905.00537",
+        "sourceURL": "http://arxiv.org/abs/1905.00537v3",
+        "split": "train",
+        "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks. The GLUE benchmark, introduced a little over one year ago, offers a single-number metric that summarizes progress on a diverse set of such tasks, but performance on the benchmark has recently surpassed the level of non-expert humans, suggesting limited headroom for further research. In this paper we present SuperGLUE, a new benchmark styled after GLUE with a new set of more difficult language understanding tasks, a software toolkit, and a public leaderboard. SuperGLUE is available at super.gluebenchmark.com.",
+        "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+        "textKind": "abstract",
+        "pairId": "sample-d25f6ae1049046b1cbe9:e1:e5",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "trainingAuthorized": false,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "head": {
+          "end": 56,
+          "entityId": "e1",
+          "label": "METHOD",
+          "start": 45,
+          "text": "pretraining"
+        },
+        "tail": {
+          "end": 645,
+          "entityId": "e8",
+          "label": "DATASET",
+          "start": 636,
+          "text": "SuperGLUE"
+        },
+        "label": "NO_RELATION",
+        "evidence": {
+          "start": 471,
+          "end": 526,
+          "text": "we present SuperGLUE, a new benchmark styled after GLUE"
+        },
+        "contextEvidence": [
+          {
+            "end": 56,
+            "entityId": "e1",
+            "label": "METHOD",
+            "start": 45,
+            "text": "pretraining",
+            "role": "actor_mention"
+          },
+          {
+            "end": 645,
+            "entityId": "e8",
+            "label": "DATASET",
+            "start": 636,
+            "text": "SuperGLUE",
+            "role": "target_mention"
+          }
+        ],
+        "relationEvidenceLevel": "discourse_inferred",
+        "reason": "The full abstract introduces SuperGLUE without reporting evaluations of pretraining or transfer-learning methods on that benchmark; no model/dataset coreference supplies such a result.",
+        "taskRole": null,
+        "supportGroup": "1905.00537:textscope:57ee5d7f60ca",
+        "negativeBasis": "REVIEWED_NOT_EXPRESSED_IN_WHOLE_ABSTRACT",
+        "sourceReviewDecision": "Pretraining/transfer learning are background methods for language understanding. SuperGLUE is newly introduced; the abstract reports no evaluation of these methods on it.",
+        "decisionRule": "train:1905.00537:0",
+        "arxivId": "1905.00537",
+        "sampleId": "sample-d25f6ae1049046b1cbe9",
+        "publicationId": "arxiv:1905.00537",
+        "groupId": "abstract-paper-1905.00537",
+        "sourceURL": "http://arxiv.org/abs/1905.00537v3",
+        "split": "train",
+        "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks. The GLUE benchmark, introduced a little over one year ago, offers a single-number metric that summarizes progress on a diverse set of such tasks, but performance on the benchmark has recently surpassed the level of non-expert humans, suggesting limited headroom for further research. In this paper we present SuperGLUE, a new benchmark styled after GLUE with a new set of more difficult language understanding tasks, a software toolkit, and a public leaderboard. SuperGLUE is available at super.gluebenchmark.com.",
+        "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+        "textKind": "abstract",
+        "pairId": "sample-d25f6ae1049046b1cbe9:e1:e8",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "trainingAuthorized": false,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "arxivId": "1905.00537",
+        "attribution": "This sentence explicitly connects the two method families to the language-understanding task. It is a background methodological claim, not this paper's measured model result; no benchmark evaluation edge is inferred.",
+        "coreferenceEvidence": [],
+        "coreferenceFactId": null,
+        "coreferenceStatus": null,
+        "evidence": {
+          "end": 172,
+          "start": 0,
+          "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks."
+        },
+        "groupId": "abstract-paper-1905.00537",
+        "head": {
+          "end": 78,
+          "entityId": "e2",
+          "label": "METHOD",
+          "start": 61,
+          "text": "transfer learning"
+        },
+        "label": "USED_FOR",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "negativeBasis": null,
+        "predicateSpans": [
+          {
+            "end": 172,
+            "start": 0,
+            "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks."
+          }
+        ],
+        "publicationId": "arxiv:1905.00537",
+        "reason": "This sentence explicitly connects the two method families to the language-understanding task. It is a background methodological claim, not this paper's measured model result; no benchmark evaluation edge is inferred.",
+        "relationEvidenceLevel": null,
+        "sampleId": "sample-d25f6ae1049046b1cbe9",
+        "sourceReceiptSha256": "9350dfa4edab9291a6c1aef505dfa29245bb560f79235ff8663359846b8b9cbb",
+        "sourceURL": "http://arxiv.org/abs/1905.00537v3",
+        "split": "train",
+        "supportGroup": "1905.00537:g1",
+        "tail": {
+          "end": 165,
+          "entityId": "e3",
+          "label": "TASK",
+          "start": 143,
+          "text": "language understanding"
+        },
+        "taskRole": "background_method_use",
+        "taskSubRole": null,
+        "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks. The GLUE benchmark, introduced a little over one year ago, offers a single-number metric that summarizes progress on a diverse set of such tasks, but performance on the benchmark has recently surpassed the level of non-expert humans, suggesting limited headroom for further research. In this paper we present SuperGLUE, a new benchmark styled after GLUE with a new set of more difficult language understanding tasks, a software toolkit, and a public leaderboard. SuperGLUE is available at super.gluebenchmark.com.",
+        "textKind": "abstract",
+        "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+        "trainingAuthorized": false,
+        "upstreamReceiptSha256": "089dd1adde6fffd02edbd02b4f99f6f6fdcd2419490f739c7e39009a8769ca89",
+        "sourceReviewDecision": "Retained after complete-source read: Pretraining/transfer learning are background methods for language understanding. SuperGLUE is newly introduced; the abstract reports no evaluation of these methods on it.",
+        "pairId": "sample-d25f6ae1049046b1cbe9:e2:e3",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "head": {
+          "end": 78,
+          "entityId": "e2",
+          "label": "METHOD",
+          "start": 61,
+          "text": "transfer learning"
+        },
+        "tail": {
+          "end": 491,
+          "entityId": "e5",
+          "label": "DATASET",
+          "start": 482,
+          "text": "SuperGLUE"
+        },
+        "label": "NO_RELATION",
+        "evidence": {
+          "start": 471,
+          "end": 526,
+          "text": "we present SuperGLUE, a new benchmark styled after GLUE"
+        },
+        "contextEvidence": [
+          {
+            "end": 78,
+            "entityId": "e2",
+            "label": "METHOD",
+            "start": 61,
+            "text": "transfer learning",
+            "role": "actor_mention"
+          },
+          {
+            "end": 491,
+            "entityId": "e5",
+            "label": "DATASET",
+            "start": 482,
+            "text": "SuperGLUE",
+            "role": "target_mention"
+          }
+        ],
+        "relationEvidenceLevel": "discourse_inferred",
+        "reason": "The full abstract introduces SuperGLUE without reporting evaluations of pretraining or transfer-learning methods on that benchmark; no model/dataset coreference supplies such a result.",
+        "taskRole": null,
+        "supportGroup": "1905.00537:textscope:57ee5d7f60ca",
+        "negativeBasis": "REVIEWED_NOT_EXPRESSED_IN_WHOLE_ABSTRACT",
+        "sourceReviewDecision": "Pretraining/transfer learning are background methods for language understanding. SuperGLUE is newly introduced; the abstract reports no evaluation of these methods on it.",
+        "decisionRule": "train:1905.00537:0",
+        "arxivId": "1905.00537",
+        "sampleId": "sample-d25f6ae1049046b1cbe9",
+        "publicationId": "arxiv:1905.00537",
+        "groupId": "abstract-paper-1905.00537",
+        "sourceURL": "http://arxiv.org/abs/1905.00537v3",
+        "split": "train",
+        "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks. The GLUE benchmark, introduced a little over one year ago, offers a single-number metric that summarizes progress on a diverse set of such tasks, but performance on the benchmark has recently surpassed the level of non-expert humans, suggesting limited headroom for further research. In this paper we present SuperGLUE, a new benchmark styled after GLUE with a new set of more difficult language understanding tasks, a software toolkit, and a public leaderboard. SuperGLUE is available at super.gluebenchmark.com.",
+        "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+        "textKind": "abstract",
+        "pairId": "sample-d25f6ae1049046b1cbe9:e2:e5",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "trainingAuthorized": false,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      },
+      {
+        "head": {
+          "end": 78,
+          "entityId": "e2",
+          "label": "METHOD",
+          "start": 61,
+          "text": "transfer learning"
+        },
+        "tail": {
+          "end": 645,
+          "entityId": "e8",
+          "label": "DATASET",
+          "start": 636,
+          "text": "SuperGLUE"
+        },
+        "label": "NO_RELATION",
+        "evidence": {
+          "start": 471,
+          "end": 526,
+          "text": "we present SuperGLUE, a new benchmark styled after GLUE"
+        },
+        "contextEvidence": [
+          {
+            "end": 78,
+            "entityId": "e2",
+            "label": "METHOD",
+            "start": 61,
+            "text": "transfer learning",
+            "role": "actor_mention"
+          },
+          {
+            "end": 645,
+            "entityId": "e8",
+            "label": "DATASET",
+            "start": 636,
+            "text": "SuperGLUE",
+            "role": "target_mention"
+          }
+        ],
+        "relationEvidenceLevel": "discourse_inferred",
+        "reason": "The full abstract introduces SuperGLUE without reporting evaluations of pretraining or transfer-learning methods on that benchmark; no model/dataset coreference supplies such a result.",
+        "taskRole": null,
+        "supportGroup": "1905.00537:textscope:57ee5d7f60ca",
+        "negativeBasis": "REVIEWED_NOT_EXPRESSED_IN_WHOLE_ABSTRACT",
+        "sourceReviewDecision": "Pretraining/transfer learning are background methods for language understanding. SuperGLUE is newly introduced; the abstract reports no evaluation of these methods on it.",
+        "decisionRule": "train:1905.00537:0",
+        "arxivId": "1905.00537",
+        "sampleId": "sample-d25f6ae1049046b1cbe9",
+        "publicationId": "arxiv:1905.00537",
+        "groupId": "abstract-paper-1905.00537",
+        "sourceURL": "http://arxiv.org/abs/1905.00537v3",
+        "split": "train",
+        "text": "In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks. The GLUE benchmark, introduced a little over one year ago, offers a single-number metric that summarizes progress on a diverse set of such tasks, but performance on the benchmark has recently surpassed the level of non-expert humans, suggesting limited headroom for further research. In this paper we present SuperGLUE, a new benchmark styled after GLUE with a new set of more difficult language understanding tasks, a software toolkit, and a public leaderboard. SuperGLUE is available at super.gluebenchmark.com.",
+        "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+        "textKind": "abstract",
+        "pairId": "sample-d25f6ae1049046b1cbe9:e2:e8",
+        "labelSource": "codex_ai_source_read_weak_reference",
+        "independentHumanGold": false,
+        "annotationStatus": "adjudicated_pending_user_acceptance",
+        "adjudicated": true,
+        "trainingAuthorized": false,
+        "evaluationAuthorized": false,
+        "masked": false,
+        "referenceComplete": true,
+        "scopeVersion": "whole_abstract_expressed_relation_v2"
+      }
+    ]
+  }
+]

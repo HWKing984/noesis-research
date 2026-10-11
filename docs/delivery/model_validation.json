@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-11",
+  "V1_actualWeightReloadAndFivePaperInference": true,
+  "V1_fivePaperEntitiesMatchLiveGraph": true,
+  "V1_fivePaperPositiveRelationsMatchLiveGraph": true,
+  "safeTensorHeadersOpened": {"V1_NER":199,"V1_RE":201,"V2_NER":199,"V2_RE":201,"V2_WEIGHTED_RE":201},
+  "weightSHA256Inventory": "models.json",
+  "V2TrainingReexecuted": false,
+  "V2ReloadEvidence": "Original frozen run results record successful reload and prediction identity; current delivery checks actual file hashes and safe tensor headers, not a new V2 evaluation.",
+  "productionReplacementAllowed": false
+}

@@ -1,0 +1,61 @@
+{
+  "finishedAt": "2026-10-08T04:50:34.3529220Z",
+  "captures": [
+    {
+      "sha256": "1c40ba00680c65e258b5c48e2e219aa3d33feaa823322f3c16dfaf4f6e687192",
+      "image": "03_predictions.png",
+      "sourcePage": "03_predictions.html",
+      "originalConsoleScreenshot": false,
+      "bytes": 131515,
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round38/03_predictions.html",
+      "capturedAt": "2026-10-08T04:50:33.6054555Z",
+      "viewportHeight": 1300,
+      "sourcePageSha256": "fe44451544253e6e1c3000814cfae86b1bbfb875c0d40f1d4c79c68026ffaf81",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261008_round38\\03_predictions.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-1fdf94e77e204b19aa5aec848fbddf39",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round38/03_predictions.html"
+      ]
+    },
+    {
+      "sha256": "6ce2c2dff1ab21e330121a6fbe2d343b6d8208fc0d7a6bbb37ac79c705ec762a",
+      "image": "09_annotation_expansion.png",
+      "sourcePage": "09_annotation_expansion.html",
+      "originalConsoleScreenshot": false,
+      "bytes": 173913,
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round38/09_annotation_expansion.html",
+      "capturedAt": "2026-10-08T04:50:34.3519648Z",
+      "viewportHeight": 2300,
+      "sourcePageSha256": "1346a2285f063cf65340f600094311c949689d56ccbfbdd3a8d73612b58c8637",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261008_round38\\09_annotation_expansion.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-1fdf94e77e204b19aa5aec848fbddf39",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round38/09_annotation_expansion.html"
+      ]
+    }
+  ],
+  "generatedFromRealArtifacts": true,
+  "browserVersion": "154.0.4258.62",
+  "kind": "actual_browser_render_capture",
+  "viewportWidth": 1280,
+  "status": "completed",
+  "originalConsoleScreenshot": false,
+  "renderer": "installed_Microsoft_Edge_headless",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-1fdf94e77e204b19aa5aec848fbddf39"
+}

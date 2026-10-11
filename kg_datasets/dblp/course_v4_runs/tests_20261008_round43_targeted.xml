@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.203" timestamp="2026-10-08T15:29:01.066091+08:00" hostname="HWKing"><testcase classname="" name="tests.test_train_ner_audit" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\a-open_source\neo4j\tests\test_train_ner_audit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_train_ner_audit.py:3: in &lt;module&gt;
+    import audit_abstract_ner_training as audit
+E   ModuleNotFoundError: No module named 'audit_abstract_ner_training'</error></testcase></testsuite></testsuites>

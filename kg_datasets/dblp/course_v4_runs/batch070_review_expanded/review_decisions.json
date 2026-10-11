@@ -1,0 +1,732 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-45e30b893156af52abf0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Differentiating Viral and Bacterial Infections",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The machine-learning model explicitly differentiates viral and bacterial infections."
+        }
+      ],
+      "notes": "Routine blood values are unnamed clinical inputs.\nAI self-review: Viral/bacterial differentiation concrete task, routine blood values unnamed."
+    },
+    {
+      "sampleId": "sample-22a45b6790e157d9b9dc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Joint Generative-Contrastive Representation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Anomalous Sound Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Joint generative-contrastive learning is explicitly for anomalous-sound detection."
+        }
+      ],
+      "notes": "One joint training mechanism.\nAI self-review: Joint generative-contrastive mechanism explicit for anomalous-sound detection."
+    },
+    {
+      "sampleId": "sample-f12fd85ff69ecbd3d81b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Grouping Boundary Proposals",
+          "label": "TASK"
+        },
+        {
+          "text": "Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Grouping is an explicit subproblem, not a named grouping algorithm; Fast/Interactive removed from base task.\nAI self-review: Boundary grouping and segmentation are tasks, grouping algorithm unnamed."
+    },
+    {
+      "sampleId": "sample-3fa6e7f6f2bef1bb5451",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Personalized Soups",
+          "label": "METHOD"
+        },
+        {
+          "text": "Large Language Model Alignment",
+          "label": "TASK"
+        },
+        {
+          "text": "Post-hoc Parameter Merging",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Personalized Soups names the alignment approach."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "LLM alignment is explicitly via post-hoc parameter merging."
+        }
+      ],
+      "notes": "Personalized is adaptation setting outside base alignment task.\nAI self-review: Soups and parameter merging explicit alignment methods, personalization setting excluded."
+    },
+    {
+      "sampleId": "sample-91ca25a007f698f80b2a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Distributed Training",
+          "label": "METHOD"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Frontier is computing infrastructure, not DATASET; optimizing training lacks a named new optimizer.\nAI self-review: Frontier infrastructure not dataset, distributed training/LLM methods explicit."
+    },
+    {
+      "sampleId": "sample-aba10fe2d94ea3aac43e",
+      "entityStatus": "unresolved",
+      "entityReason": "The last Dance may name the proposed attack method or be a rhetorical headline; the named-method role is not explicit.",
+      "entities": [
+        {
+          "text": "backdoor attack",
+          "label": "TASK"
+        },
+        {
+          "text": "diffusion models",
+          "label": "METHOD"
+        },
+        {
+          "text": "bayesian",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Possible named-method entity coverage remains unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The backdoor attack is explicitly via diffusion models."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "A Bayesian approach is explicitly used for the backdoor attack."
+        }
+      ],
+      "notes": "Diffusion and Bayesian attack-use relations retained as provisional whole-document candidates; no headline algorithm identity invented.\nAI self-review: Bayesian/diffusion attack roles explicit but last Dance could name method or rhetorical headline; preserve uncertainty."
+    },
+    {
+      "sampleId": "sample-1c318dc97af55d37982c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Universal Physics Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Explicit architecture, no task or corpus.\nAI self-review: Universal physics transformers explicit architecture, no task."
+    },
+    {
+      "sampleId": "sample-57cf6c490bed82fb35a4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Scale Spatial-Temporal Self-Attention Graph Convolutional Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Skeleton-based Action Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The complete self-attention GCN architecture is explicitly for skeleton action recognition."
+        }
+      ],
+      "notes": "Preserve all spatial-temporal/scale mechanisms.\nAI self-review: Full multiscale spatial-temporal attention GCN retained for skeleton recognition."
+    },
+    {
+      "sampleId": "sample-11b028da62aeb4234869",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Expert Large Language Model Architecture",
+          "label": "METHOD"
+        },
+        {
+          "text": "Verilog Code Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The multi-expert LLM architecture explicitly generates Verilog code."
+        }
+      ],
+      "notes": "Architecture supplies composite-method head; Verilog is output language.\nAI self-review: Multi-expert model architecture explicit for Verilog code generation."
+    },
+    {
+      "sampleId": "sample-0a34b678fd7000e0c8a5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Architectural modifications and adversarial robustness are unspecified changes/properties, no defined task.\nAI self-review: Architectural modifications unspecified and robustness property, learning family only."
+    },
+    {
+      "sampleId": "sample-4969939dde3c4d52654b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Distilling Large Language Models into Cross-Encoders",
+          "label": "METHOD"
+        },
+        {
+          "text": "Passage Re-ranking",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The LLM-to-cross-encoder distillation is explicitly for passage reranking."
+        }
+      ],
+      "notes": "One source-to-target distillation mechanism without nested models.\nAI self-review: Full distillation-to-cross-encoder procedure explicit for passage reranking."
+    },
+    {
+      "sampleId": "sample-16a73e5d7509dd5b175e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Travel Choice Modeling",
+          "label": "TASK"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Prompt-Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Travel-choice modeling is explicitly enhanced with LLMs."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Prompt-learning explicitly names the approach to the stated modeling."
+        }
+      ],
+      "notes": "Approach excluded as generic.\nAI self-review: LLM/prompt learner explicitly supports travel-choice modeling."
+    },
+    {
+      "sampleId": "sample-ffcb14a5605ea4b8908d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "PADRe",
+          "label": "METHOD"
+        },
+        {
+          "text": "Polynomial Attention",
+          "label": "METHOD"
+        },
+        {
+          "text": "Vision Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Attention replacement and transformer are methods; efficiency is a property, not a downstream task.\nAI self-review: PADRe polynomial-attention replacement and transformer methods, no task."
+    },
+    {
+      "sampleId": "sample-897b8d1c217c22946ce9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "BFTBrain",
+          "label": "METHOD"
+        },
+        {
+          "text": "BFT Consensus",
+          "label": "TASK"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "BFTBrain explicitly names the consensus approach."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "BFT consensus is explicitly with reinforcement learning."
+        }
+      ],
+      "notes": "Adaptive is a process descriptor outside the base consensus task.\nAI self-review: BFTBrain/RL explicitly supports BFT consensus."
+    },
+    {
+      "sampleId": "sample-35f144f798c02779cb14",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Continuous Control",
+          "label": "TASK"
+        },
+        {
+          "text": "Model-Based Sequence Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Model-Free Control",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The headline-level continuous-control instrument link is not direct.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Continuous control is headline context; direct sequence-learner use there is not explicit."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Sequence reinforcement learning is explicitly for model-free control."
+        }
+      ],
+      "notes": "Slow decision frequencies are performance context.\nAI self-review: Sequence learner model-free control explicit, headline continuous-control relation uncertain."
+    },
+    {
+      "sampleId": "sample-0db2fdb61489434f0f21",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Full Ranking",
+          "label": "TASK"
+        },
+        {
+          "text": "Long-Context Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Full ranking is explicitly explored with long-context LLMs."
+        }
+      ],
+      "notes": "Sliding windows are criticized context, not a named evaluated algorithm.\nAI self-review: Long-context LLM explicitly performs full ranking, sliding-window critique not algorithm entity."
+    },
+    {
+      "sampleId": "sample-9d985df2101a06c58f34",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Agent Collaboration with Tool Use",
+          "label": "METHOD"
+        },
+        {
+          "text": "Online Planning in Complex Table Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Tool-using multi-agent collaboration is explicitly for online planning in table QA."
+        }
+      ],
+      "notes": "One combined planning task preserves table-QA context; no nested QA task.\nAI self-review: Tool-using multiagent collaboration explicit for table-QA planning."
+    },
+    {
+      "sampleId": "sample-5c46ce1c633c0d1273d7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Birds Eye View Perception",
+          "label": "TASK"
+        },
+        {
+          "text": "Frozen Foundation Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "DINOv2",
+          "label": "METHOD"
+        },
+        {
+          "text": "Metric3Dv2",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Birds-eye-view perception is explicitly revisited with frozen foundation models."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "DINOv2 is explicitly listed as a foundation model used in that perception."
+        },
+        {
+          "head": "e4",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Metric3Dv2 is explicitly listed in the same perception-model use."
+        }
+      ],
+      "notes": "Models after Perception is generic; retain frozen-model mechanism.\nAI self-review: DINOv2/Metric3Dv2 explicitly listed frozen model instruments for BEV perception."
+    },
+    {
+      "sampleId": "sample-cd58288bbc215640563b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Diffusion Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "conditional MRI generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Diffusion models are explicitly for conditional MRI generation."
+        }
+      ],
+      "notes": "MRI modality is not dataset.\nAI self-review: Conditional MRI generation explicitly uses diffusion models."
+    },
+    {
+      "sampleId": "sample-a1257808fadfcffb5683",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Hetu v2 explicitly names a software system; SPMD annotations are programming representation, not algorithm/dataset.\nAI self-review: Hetu v2 software system not algorithm/dataset, deep-learning family explicit."
+    },
+    {
+      "sampleId": "sample-1f30dd321269b4cdd1f4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Bilateral Team Formation",
+          "label": "TASK"
+        },
+        {
+          "text": "Cooperative Multi-Agent Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The RL family is contextual to team formation, not directly used-for in the wording.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Team formation in cooperative RL does not explicitly make the learner the formation instrument."
+        }
+      ],
+      "notes": "No named team-forming method given.\nAI self-review: Cooperative RL context does not directly assert team-forming instrument."
+    },
+    {
+      "sampleId": "sample-52e04b4842fc31291bdc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MIHBench",
+          "label": "DATASET"
+        },
+        {
+          "text": "Mitigating Multi-Image Hallucinations",
+          "label": "TASK"
+        },
+        {
+          "text": "Multimodal Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "EVALUATED_ON",
+          "reason": "MIHBench is explicitly presented as benchmarking multi-image hallucinations in multimodal LLMs."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "NO_RELATION",
+          "reason": "The multimodal LLMs are the models whose hallucinations are mitigated, not the mitigation instrument."
+        }
+      ],
+      "notes": "Benchmarking with Bench name supports evaluation-suite role; no mitigation algorithm invented.\nAI self-review: Bench plus Benchmarking supports explicit evaluation suite; models are mitigation objects, not mitigators."
+    },
+    {
+      "sampleId": "sample-557411f79710c1c35ec4",
+      "entityStatus": "unresolved",
+      "entityReason": "Consortium may refer to organizational actors or an ensemble of models, so its method boundary is uncertain.",
+      "entities": [
+        {
+          "text": "Neuromuscular Reflex Analysis",
+          "label": "TASK"
+        },
+        {
+          "text": "Fine-Tuned Vision-Language Model Consortium",
+          "label": "METHOD"
+        },
+        {
+          "text": "gpt-oss Reasoning LLM Enabled Decision Support System",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The analysis instrument roles are not explicit.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Role in standardization does not explicitly establish the model consortium as the analyzer."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "The decision-support system is discussed as a standardization role, not a direct reflex-analysis assertion."
+        }
+      ],
+      "notes": "No OpenAI identity or performance claim beyond the literal title.\nAI self-review: Consortium may be organizational not ensemble; standardization roles not direct analysis instruments."
+    },
+    {
+      "sampleId": "sample-73c360627838edffeae2",
+      "entityStatus": "unresolved",
+      "entityReason": "MATA may name an assessment protocol rather than a dataset; the parenthetic transliteration is not another entity.",
+      "entities": [
+        {
+          "text": "MATA",
+          "label": "DATASET"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The assessment-resource category and evaluation-on role remain uncertain.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "An assessment name does not determine whether MATA is a dataset, metric or protocol."
+        }
+      ],
+      "notes": "Telugu abilities are broad assessment scope, not a defined language task.\nAI self-review: MATA assessment may be protocol/metric rather than data, transliteration not extra entity."
+    },
+    {
+      "sampleId": "sample-4432f99cd54f20c598de",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "OmniMRI",
+          "label": "METHOD"
+        },
+        {
+          "text": "Unified Vision-Language Foundation Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "MRI Interpretation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "OmniMRI explicitly names the MRI interpretation model."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The unified vision-language foundation model is explicitly for MRI interpretation."
+        }
+      ],
+      "notes": "Generalist is generalization framing; retain multimodal architecture.\nAI self-review: OmniMRI/unified vision-language foundation model explicitly interprets MRI."
+    }
+  ]
+}

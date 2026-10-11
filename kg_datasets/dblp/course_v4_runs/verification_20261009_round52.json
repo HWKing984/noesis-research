@@ -1,0 +1,354 @@
+{
+  "passed": true,
+  "trainingExecuted": true,
+  "NERtrain": 65,
+  "NERsteps": 198,
+  "NERepochs": 6,
+  "selectedEpoch": 6,
+  "RETrained": false,
+  "addedNERDocuments": 7,
+  "newNERExcluded": 1,
+  "entitySupport": {
+    "METHOD": 458,
+    "TASK": 260,
+    "DATASET": 69
+  },
+  "frozenREFilesAndDevPreserved": 11,
+  "runManifestSha256": "5ff3914572b590806a7637ceb5d4e49d2cb4609a9d0f51d43357271211fbd10f",
+  "engineeringTests": {
+    "tests": 388,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "regressionSeconds": 141.779,
+  "historicalNER": {
+    "old": {
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 130,
+          "predicted": 183,
+          "reference": 184,
+          "precision": 0.7103825136612022,
+          "recall": 0.7065217391304348,
+          "f1": 0.7084468664850136
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 94,
+            "predicted": 113,
+            "reference": 116,
+            "precision": 0.831858407079646,
+            "recall": 0.8103448275862069,
+            "f1": 0.8209606986899564
+          },
+          "TASK": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 26,
+            "predicted": 55,
+            "reference": 53,
+            "precision": 0.4727272727272727,
+            "recall": 0.49056603773584906,
+            "f1": 0.48148148148148145
+          },
+          "DATASET": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 10,
+            "predicted": 15,
+            "reference": 15,
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "invalidTransitions": 65,
+      "inferenceFeaturesContainLabels": false
+    },
+    "new": {
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 138,
+          "predicted": 196,
+          "reference": 184,
+          "precision": 0.7040816326530612,
+          "recall": 0.75,
+          "f1": 0.7263157894736842
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 98,
+            "predicted": 120,
+            "reference": 116,
+            "precision": 0.8166666666666667,
+            "recall": 0.8448275862068966,
+            "f1": 0.8305084745762712
+          },
+          "TASK": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 28,
+            "predicted": 60,
+            "reference": 53,
+            "precision": 0.4666666666666667,
+            "recall": 0.5283018867924528,
+            "f1": 0.49557522123893805
+          },
+          "DATASET": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 12,
+            "predicted": 16,
+            "reference": 15,
+            "precision": 0.75,
+            "recall": 0.8,
+            "f1": 0.7741935483870968
+          }
+        }
+      },
+      "invalidTransitions": 56,
+      "inferenceFeaturesContainLabels": false
+    }
+  },
+  "pipeline": {
+    "old": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "entityScope": "predicted_NER_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 7,
+      "positiveMicro": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "truePositive": 50,
+        "predicted": 169,
+        "reference": 84,
+        "precision": 0.2958579881656805,
+        "recall": 0.5952380952380952,
+        "f1": 0.3952569169960474
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+          "truePositive": 50,
+          "predicted": 163,
+          "reference": 84,
+          "precision": 0.3067484662576687,
+          "recall": 0.5952380952380952,
+          "f1": 0.4048582995951417
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+          "truePositive": 0,
+          "predicted": 6,
+          "reference": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        }
+      },
+      "positiveMacroF1": 0.4048582995951417,
+      "supportedPositiveClasses": [
+        "USED_FOR"
+      ],
+      "negativeDecisions": 8,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed.",
+      "missedReferencePrimaryCauses": {
+        "missing": 11,
+        "boundary": 23
+      }
+    },
+    "new": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "entityScope": "predicted_NER_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 7,
+      "positiveMicro": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "truePositive": 59,
+        "predicted": 178,
+        "reference": 84,
+        "precision": 0.33146067415730335,
+        "recall": 0.7023809523809523,
+        "f1": 0.45038167938931295
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+          "truePositive": 59,
+          "predicted": 170,
+          "reference": 84,
+          "precision": 0.34705882352941175,
+          "recall": 0.7023809523809523,
+          "f1": 0.4645669291338583
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+          "truePositive": 0,
+          "predicted": 8,
+          "reference": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        }
+      },
+      "positiveMacroF1": 0.4645669291338583,
+      "supportedPositiveClasses": [
+        "USED_FOR"
+      ],
+      "negativeDecisions": 5,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed.",
+      "missedReferencePrimaryCauses": {
+        "missing": 10,
+        "boundary": 15
+      }
+    }
+  },
+  "supplementNER": {
+    "old": {
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 70,
+          "predicted": 110,
+          "reference": 109,
+          "precision": 0.6363636363636364,
+          "recall": 0.6422018348623854,
+          "f1": 0.639269406392694
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 39,
+            "predicted": 62,
+            "reference": 55,
+            "precision": 0.6290322580645161,
+            "recall": 0.7090909090909091,
+            "f1": 0.6666666666666666
+          },
+          "TASK": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 19,
+            "predicted": 33,
+            "reference": 39,
+            "precision": 0.5757575757575758,
+            "recall": 0.48717948717948717,
+            "f1": 0.5277777777777778
+          },
+          "DATASET": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 12,
+            "predicted": 15,
+            "reference": 15,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          }
+        }
+      },
+      "invalidTransitions": 7,
+      "inferenceFeaturesContainLabels": false
+    },
+    "new": {
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 74,
+          "predicted": 109,
+          "reference": 109,
+          "precision": 0.6788990825688074,
+          "recall": 0.6788990825688074,
+          "f1": 0.6788990825688074
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 39,
+            "predicted": 63,
+            "reference": 55,
+            "precision": 0.6190476190476191,
+            "recall": 0.7090909090909091,
+            "f1": 0.6610169491525424
+          },
+          "TASK": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 21,
+            "predicted": 30,
+            "reference": 39,
+            "precision": 0.7,
+            "recall": 0.5384615384615384,
+            "f1": 0.6086956521739131
+          },
+          "DATASET": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 14,
+            "predicted": 16,
+            "reference": 15,
+            "precision": 0.875,
+            "recall": 0.9333333333333333,
+            "f1": 0.9032258064516129
+          }
+        }
+      },
+      "invalidTransitions": 11,
+      "inferenceFeaturesContainLabels": false
+    }
+  },
+  "endpointMismatch": {
+    "old": {
+      "head+tail": 14,
+      "head": 11,
+      "tail": 83,
+      "relation_only": 11
+    },
+    "new": {
+      "tail": 89,
+      "head": 12,
+      "head+tail": 7,
+      "relation_only": 11
+    }
+  },
+  "gates": {
+    "checks": {
+      "pipelinePrecisionNonRegression": true,
+      "pipelineF1NonRegression": true,
+      "pipelineRecallRegressionWithinGuard": true,
+      "referenceDATASETSupport": true,
+      "completeReferenceEVALUATED_ONSupport": false,
+      "completeDocumentCoverage": false,
+      "DATASETRecallRegressionWithinGuard": true
+    },
+    "developmentGatesPassed": false,
+    "blockedBy": [
+      "completeReferenceEVALUATED_ONSupport",
+      "completeDocumentCoverage"
+    ],
+    "parentGates": {
+      "sameDevPipelinePrecisionNonRegression": true,
+      "sameDevPipelineF1NonRegression": true,
+      "maxAbsoluteRecallRegression": 0.02,
+      "minimumReferenceDATASETDev": 10,
+      "minimumReferenceEVALUATED_ONDev": 10,
+      "minimumReferenceRareSupportFinalTest": 10,
+      "minimumDocumentCoverage": 0.8,
+      "independentHumanGoldRequired": false,
+      "automaticPromotionAllowed": false,
+      "notice": "Support minima are operational guards, not statistical proof; insufficient support permits exploratory dev training only, not reliability claims or final promotion."
+    },
+    "finalTestExecuted": false,
+    "finalRareSupportKnown": false,
+    "qualityPromotionPassed": false,
+    "modelPromoted": false,
+    "notice": "Development guards are not final promotion. No final test, independent gold or automatic deployment.",
+    "independentHumanGoldRequired": false
+  },
+  "originalDevAndReservedTestUnchanged": true,
+  "testContentConsumed": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "authorWorkPerformed": false,
+  "conceptWorkPerformed": false,
+  "reportExpansionPaused": true,
+  "evidenceManifestSha256": "43beda5cbc3f85babdfabda9665d64dc07b60fbfc101f56cdbc1606e00f61525",
+  "actualBrowserCaptures": 2
+}

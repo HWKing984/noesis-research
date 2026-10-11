@@ -1,0 +1,27 @@
+{
+  "generated_at_utc": "2026-10-05T07:19:33.096597+00:00",
+  "schema_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+  "rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+  "status": "candidate",
+  "outputs_sha256": {
+    "blind_50_a.html": "0d515e8552e40d91f4c95faaa3cf617c409ac22089ce21a043d035727a66f1bb",
+    "blind_50_b.html": "934be99445e206888ca81ee8ea6e9385cfce9d3dc1ab7161219db498fb88359b",
+    "blind_50_reference.jsonl": "a084d6d010eb3cf068472275663487a558065b8eabd0836981e63c7d8903f719",
+    "boundary_decisions.json": "619ae9861d30606c9efd9c5122e5be5193a335fbb2dc01c0f2cdf321ec0bec8e",
+    "legacy_reference/blind_50_reference.jsonl": "797c199bcb310bd8779c8570790a07c8f4c10bd1cd8d4fa50c83d2d7ee7581a3",
+    "legacy_reference/pilot_200.jsonl": "f53212fb47ea8875354aa50ad108acd9186805b1609c2908bfd3ce97bfd0972a",
+    "legacy_reference/rare_candidates_train.jsonl": "116d39ffe1eb503d1c13a9d9b0bda4c675e29b47dd91f87576f0f9047382ff49",
+    "pilot20_ai_candidates.jsonl": "ec7daf3a7500a19c54641bb9d38c995e3a5547639b9c4fe3fcbaf1ce0a10771b",
+    "pilot20_ai_review.html": "805761d8731328d8d8ec8f76548ab6fea65019309d19e4f53807effaa78ef962",
+    "pilot20_blind_reference.jsonl": "e3b322a9abc3c2b22dbcad21f41b358a41e3ce5795a5338bc50389cb65fb7422",
+    "pilot20_blind_review.html": "ab89dd31d52cf75857ff11229690ea5944fbf2a2f6a1b0bcd075866fd2e7a19b",
+    "pilot_200.jsonl": "66bfb3cb4dc417d07a04a2ae4ad2f0b5a916b649f7e7339d5ef7e28259939cdb",
+    "pilot_review.html": "bd70b5bfdd185cc3c4496095b7e186c8bd8a2bd65e6dbd1b63e345307c134b23",
+    "rare_candidates_train.jsonl": "134eed30a9e75cefd05b428c134d2bfb832544851bfd9d14d1b7f9356a87c576",
+    "rare_review.html": "cb88f4d0a3698ac0810f6458b525f519b93ee9aea93957c156d31f4907079cec",
+    "source_review/AI-Literature-KG-pilot20-boundary-review.md": "ee1bcc0aa0ba7e0e0a26ce44d5a06af651aef748495601e4d3d690112ff6a4bf",
+    "source_review/pilot20_boundary_review.csv": "69533ccdd5afe3bc34e4cb013c08b576b1f6bd73525a2fa9c4261ade07c46313",
+    "source_review/pilot20_boundary_review.json": "0d8bc4691e71bccd6a01d98cffdf0ed7fffebb501b3ae736f68fde088a58f1f9",
+    "summary.json": "779304d1e541345f8fa344236015213f5f5fdb74c0916bf1d939b4e0dd3759f3"
+  }
+}

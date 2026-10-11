@@ -1,0 +1,187 @@
+{
+  "selected": [
+    {
+      "publicationId": "journals/corr/abs-2307-03130",
+      "arxivId": "2307.03130",
+      "title": "VisKoP: Visual Knowledge oriented Programming for Interactive Knowledge Base Question Answering.",
+      "groupId": "paper-group-91912be68824448ff013",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2411-04637",
+      "arxivId": "2411.04637",
+      "title": "Hands-On Tutorial: Labeling with LLM and Human-in-the-Loop.",
+      "groupId": "paper-group-4a253e7e88cf896171dd",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2503-00416",
+      "arxivId": "2503.00416",
+      "title": "Breaking the Loop: Detecting and Mitigating Denial-of-Service Vulnerabilities in Large Language Models.",
+      "groupId": "paper-group-51eba04d3a0d59696859",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2110-02932",
+      "arxivId": "2110.02932",
+      "title": "Machine Learning Practices Outside Big Tech: How Resource Constraints Challenge Responsible Development.",
+      "groupId": "paper-group-637f405df7fbe7490aff",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1812-11737",
+      "arxivId": "1812.11737",
+      "title": "The meaning of \"most\" for visual question answering models.",
+      "groupId": "paper-group-0acabc91e234d21c6637",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2503-01309",
+      "arxivId": "2503.01309",
+      "title": "OnlineAnySeg: Online Zero-Shot 3D Segmentation by Visual Foundation Model Guided 2D Mask Merging.",
+      "groupId": "paper-group-42e394d51832d4e8ed25",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2110-08010",
+      "arxivId": "2110.08010",
+      "title": "Transformer-based Multi-task Learning for Disaster Tweet Categorisation.",
+      "groupId": "paper-group-cde55a240b4f14912c55",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2103-11133",
+      "arxivId": "2103.11133",
+      "title": "Water Need Models and Irrigation Decision Systems: A Survey on Machine Learning and Control Theory.",
+      "groupId": "paper-group-e67d9828b152ffead49d",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2506-16934",
+      "arxivId": "2506.16934",
+      "title": "PET Tracer Separation Using Conditional Diffusion Transformer with Multi-latent Space Learning.",
+      "groupId": "paper-group-8aae17871b2caf4e659c",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2407-20251",
+      "arxivId": "2407.20251",
+      "title": "An Uncertainty-aware Deep Learning Framework-based Robust Design Optimization of Metamaterial Units.",
+      "groupId": "paper-group-010f46ae8a7d4c58665f",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2409-13884",
+      "arxivId": "2409.13884",
+      "title": "A Multi-LLM Debiasing Framework.",
+      "groupId": "paper-group-25b5445f35fce8029428",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2107-10847",
+      "arxivId": "2107.10847",
+      "title": "Accelerating Quadratic Optimization with Reinforcement Learning.",
+      "groupId": "paper-group-eff0f17a971730b7fee1",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2402-17595",
+      "arxivId": "2402.17595",
+      "title": "Implicit Regularization via Spectral Neural Networks and Non-linear Matrix Sensing.",
+      "groupId": "paper-group-3fa400ebb151b25c8941",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2402-14245",
+      "arxivId": "2402.14245",
+      "title": "Enhancing Robotic Manipulation with AI Feedback from Multimodal Large Language Models.",
+      "groupId": "paper-group-ad664398fa938e6691c0",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2206-08747",
+      "arxivId": "2206.08747",
+      "title": "Machine Learning-Driven Process of Alumina Ceramics Laser Machining.",
+      "groupId": "paper-group-eac58bf70ef5e63fad2c",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2310-02147",
+      "arxivId": "2310.02147",
+      "title": "Finite-Time Analysis of Whittle Index based Q-Learning for Restless Multi-Armed Bandits with Neural Network Function Approximation.",
+      "groupId": "paper-group-920f57fae7469903a42d",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1909-11730",
+      "arxivId": "1909.11730",
+      "title": "\"Good Robot!\": Efficient Reinforcement Learning for Multi-Step Visual Tasks via Reward Shaping.",
+      "groupId": "paper-group-bc21d67e4c751061b958",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2510-26830",
+      "arxivId": "2510.26830",
+      "title": "SmoothGuard: Defending Multimodal Large Language Models with Noise Perturbation and Clustering Aggregation.",
+      "groupId": "paper-group-9774a9ebbbc53cfb1bd0",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2107-09145",
+      "arxivId": "2107.09145",
+      "title": "Adaptive wavelet distillation from neural networks through interpretations.",
+      "groupId": "paper-group-5469f2b764afbcf1223e",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-18445",
+      "arxivId": "2509.18445",
+      "title": "MeshODENet: A Graph-Informed Neural Ordinary Differential Equation Neural Network for Simulating Mesh-Based Physical Systems.",
+      "groupId": "paper-group-18edaeb8895efa6ccfec",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-19325",
+      "arxivId": "2509.19325",
+      "title": "How Much of Your Data Can Suck? Thresholds for Domain Performance and Emergent Misalignment in LLMs.",
+      "groupId": "paper-group-77ca99c04b3ec13c9f3b",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2208-08554",
+      "arxivId": "2208.08554",
+      "title": "Embracing Graph Neural Networks for Hardware Security (Invited Paper).",
+      "groupId": "paper-group-2f75b407330a938d0dbf",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2510-03955",
+      "arxivId": "2510.03955",
+      "title": "Harnessing Synthetic Preference Data for Enhancing Temporal Understanding of Video-LLMs.",
+      "groupId": "paper-group-719554894a5554326230",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2408-00275",
+      "arxivId": "2408.00275",
+      "title": "A Reinforcement Learning Based Motion Planner for Quadrotor Autonomous Flight in Dense Environment.",
+      "groupId": "paper-group-8a6b49f7a60a174d4ff3",
+      "split": "train"
+    }
+  ],
+  "lockedAtUTC": "2026-10-08T03:59:01.434910+00:00",
+  "selection": "Next 24 train members of round32 pre-response uniform paper-group lock, excluding every previously requested page and exposed cached ID. No dev-error, model-score or keyword targeting; failed/mismatched/overlength sources are excluded and disclosed, never replaced.",
+  "inputSha256": {
+    "resources/course_abstract_expansion_v1.json": "fddd961940e7e967d431490af6d058c215c3d14c84dc213b6dc18953e71f0480",
+    "resources/course_abstract_v1.json": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+    "scripts/collect_train_abstracts.py": "d121a9bf2a12f89d2446dc87956fc67d9b132dc728d56c8c079aaa5a20329851",
+    "scripts/collect_course_abstract_pages.py": "4aea32450612164cd82392a502093d1946e9b7161ec6cdb3c848826ba4d6d004",
+    "scripts/fetch_abstract_pilot.py": "eadc8583ce16ff7ffe72636b484b576d6494bcd810b88ec292e3038c266db620",
+    "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/manifest.json": "acfe489a3c8e4d574b8fd0472008ca92bf66f2a092ad50922b7c2868b3979645",
+    "kg_datasets/dblp/course_abstract_sources_20261008_32/manifest.json": "10f7554bf6ff1305f07cf18a9d9077467a539ea6fdc55c21fc3b6c7aa840cd7f",
+    "kg_datasets/dblp/course_abstract_pages_20261008_32/manifest.json": "a8f5a3fc6bba56511498119a856d9fc9a9168bbffc0ef6a2b6b60cc7a387423e",
+    "kg_datasets/dblp/course_abstract_train_reviewed_20261008_33/manifest.json": "84e6d06ad5165f4069b920cc7611e1e9ab4eecb5f04c9c741767628841ae8097",
+    "kg_datasets/dblp/course_abstract_dev_reviewed_20261008_35/manifest.json": "1a680382e959687823fa6300637149dd4d26af4d31f56de1b6a95fa2fe51bb9e"
+  }
+}

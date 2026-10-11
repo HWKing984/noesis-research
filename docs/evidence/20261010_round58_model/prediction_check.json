@@ -1,0 +1,394 @@
+{
+  "status": "passed",
+  "qualityPromotionPassed": false,
+  "testParsedOrEvaluated": false,
+  "modelCalled": false,
+  "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+  "independentHumanGold": false,
+  "externalPretrainingOverlapUnknown": true,
+  "scores": {
+    "scibert52": {
+      "NER": {
+        "micro": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 138,
+          "predicted": 196,
+          "reference": 184,
+          "precision": 0.7040816326530612,
+          "recall": 0.75,
+          "f1": 0.7263157894736842
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "exposed_dev_AI_reference",
+            "truePositive": 98,
+            "predicted": 120,
+            "reference": 116,
+            "precision": 0.8166666666666667,
+            "recall": 0.8448275862068966,
+            "f1": 0.8305084745762712
+          },
+          "TASK": {
+            "evaluationTarget": "exposed_dev_AI_reference",
+            "truePositive": 28,
+            "predicted": 60,
+            "reference": 53,
+            "precision": 0.4666666666666667,
+            "recall": 0.5283018867924528,
+            "f1": 0.49557522123893805
+          },
+          "DATASET": {
+            "evaluationTarget": "exposed_dev_AI_reference",
+            "truePositive": 12,
+            "predicted": 16,
+            "reference": 15,
+            "precision": 0.75,
+            "recall": 0.8,
+            "f1": 0.7741935483870968
+          }
+        }
+      },
+      "pipeline": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "entityScope": "cached_frozen_NER_predicted_entities",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 7,
+        "positiveMicro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 59,
+          "predicted": 176,
+          "reference": 84,
+          "precision": 0.3352272727272727,
+          "recall": 0.7023809523809523,
+          "f1": 0.45384615384615384
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 59,
+            "predicted": 168,
+            "reference": 84,
+            "precision": 0.35119047619047616,
+            "recall": 0.7023809523809523,
+            "f1": 0.46825396825396826
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 0,
+            "predicted": 8,
+            "reference": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0
+          }
+        },
+        "positiveMacroF1": 0.46825396825396826,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "negativeDecisions": 7,
+        "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+      },
+      "candidateLabels": {
+        "USED_FOR": 168,
+        "NO_RELATION": 7,
+        "EVALUATED_ON": 8
+      }
+    },
+    "gliner": {
+      "NER": {
+        "micro": {
+          "evaluationTarget": "exposed_dev_AI_reference",
+          "truePositive": 59,
+          "predicted": 89,
+          "reference": 184,
+          "precision": 0.6629213483146067,
+          "recall": 0.32065217391304346,
+          "f1": 0.43223443223443225
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "exposed_dev_AI_reference",
+            "truePositive": 48,
+            "predicted": 51,
+            "reference": 116,
+            "precision": 0.9411764705882353,
+            "recall": 0.41379310344827586,
+            "f1": 0.5748502994011976
+          },
+          "TASK": {
+            "evaluationTarget": "exposed_dev_AI_reference",
+            "truePositive": 0,
+            "predicted": 13,
+            "reference": 53,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "DATASET": {
+            "evaluationTarget": "exposed_dev_AI_reference",
+            "truePositive": 11,
+            "predicted": 25,
+            "reference": 15,
+            "precision": 0.44,
+            "recall": 0.7333333333333333,
+            "f1": 0.55
+          }
+        }
+      },
+      "pipeline": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "entityScope": "cached_frozen_NER_predicted_entities",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 7,
+        "positiveMicro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 50,
+          "reference": 84,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 0,
+            "predicted": 25,
+            "reference": 84,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 0,
+            "predicted": 25,
+            "reference": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0
+          }
+        },
+        "positiveMacroF1": 0.0,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "negativeDecisions": 4,
+        "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+      },
+      "candidateLabels": {
+        "EVALUATED_ON": 25,
+        "USED_FOR": 25,
+        "NO_RELATION": 4
+      }
+    }
+  },
+  "endpointCoverage": {
+    "scibert52": {
+      "both": 59,
+      "headOnly": 14,
+      "tailOnly": 11,
+      "neither": 0,
+      "bothBoundariesIgnoringType": 59
+    },
+    "gliner": {
+      "both": 0,
+      "headOnly": 45,
+      "tailOnly": 0,
+      "neither": 39,
+      "bothBoundariesIgnoringType": 0
+    }
+  },
+  "byteIdenticalReplaySha256": {
+    "gliner_raw_predictions.jsonl": "cbafcf6b7cd50c51379b3572ad9961f8edcc865f2b953a6d7f5c2cc07def859c",
+    "gliner_ner_predictions.jsonl": "663a3fb0fe5325adadc6de7279e0eaf46870c1900b6360c6c43ca2e3aaafedf9",
+    "gliner_relation_predictions.jsonl": "ee85555626e6459cc5446803f7a208d6423a4eda7a269a31024823e9490583e2",
+    "scibert52_relation_predictions.jsonl": "0d400a25894548b2a96b36766f381f7757204347a90bff0672808ebbe831d40a",
+    "token_lengths.json": "65e7b62daf273c1b6c531fb9305da7b2d07cc09efdc4e376c49e4cca2d629c53"
+  },
+  "inputSha256": {
+    ".runtime-gliner\\gliner\\__init__.py": "d621cdd7ff8572db552f04e5ced20fb4b11d7d8fccb3336c6bb243e840503858",
+    ".runtime-gliner\\gliner\\config.py": "8a5a521da4fe5299868b846c51cc67a904b6327a72efa1648c22df938c96587e",
+    ".runtime-gliner\\gliner\\data_processing\\__init__.py": "46af4e03db3828fd93993d4eddb689053d2b9a379c05031453f034ee60805c89",
+    ".runtime-gliner\\gliner\\data_processing\\collator.py": "b6fcce993130b7b4f3c3539ee828a98b886e185b688eeb224b99e16a7bab3362",
+    ".runtime-gliner\\gliner\\data_processing\\processor.py": "46bef57b653d5991776f151882d82f49e6121610b40ba51edc6d4172742e6d01",
+    ".runtime-gliner\\gliner\\data_processing\\tokenizer.py": "2dd8c7762ae6cd8fcd8dbf062e16f5441d44814373611d7b6be3a87ed08c5d9a",
+    ".runtime-gliner\\gliner\\data_processing\\utils.py": "5e2c9025cb2c14df05736b80fd7cc677e0edd4373f630eb69bb61ab40db00ba8",
+    ".runtime-gliner\\gliner\\decoding\\__init__.py": "469e1706634818bd26a35006e503dafb5077650c418249fd7c329831a6301e3a",
+    ".runtime-gliner\\gliner\\decoding\\decoder.py": "bc744959db5937ca3c218102189e8416bdc6a5cb5dcf40de843b9394d3dca5e8",
+    ".runtime-gliner\\gliner\\decoding\\trie\\__init__.py": "eb6ba1fe656f3b0ad0f7ba293be75c9716f5db253687dbc41340efb804ce70ce",
+    ".runtime-gliner\\gliner\\decoding\\trie\\python_labels_trie.py": "8507f5c29d7056f6f030cb2d37e6084d95e8ff964c0418abd23320de0ffb04e4",
+    ".runtime-gliner\\gliner\\decoding\\utils.py": "447759eaa67000291bfda5f80875a2d0941e91b56c03169bbb783528c195838f",
+    ".runtime-gliner\\gliner\\evaluation\\__init__.py": "e2692693dba27ba5803ea9eaa1a95e3c158314193211b11b7409163722bae87c",
+    ".runtime-gliner\\gliner\\evaluation\\evaluate_ner.py": "97288f8868b16145696739efb37cf472a0ee75f75e68957c85f114786346e4dd",
+    ".runtime-gliner\\gliner\\evaluation\\evaluator.py": "52f66c1df1ad8c5ecbd90b17293bb412bcb9ddd0ffce6add1b0b361cbc4ab83e",
+    ".runtime-gliner\\gliner\\evaluation\\utils.py": "33b54d2ffd17e81a42fb44ce99a7bda6dd80d57fa4894875da36bc9c53afcf13",
+    ".runtime-gliner\\gliner\\infer_packing.py": "08bfab9934fc5d9f6f535382f6c2d4b6feba747980f58e43a96fa3cfac563631",
+    ".runtime-gliner\\gliner\\model.py": "cc1c03ed1540de4c6b836f544921e0a2de33cfae6ad4d8aeb35dc08845d867fe",
+    ".runtime-gliner\\gliner\\modeling\\__init__.py": "9f5aea153eb9300a9fda6e83b523d9cb7bcee9cfd1a7c4890466290522ce1696",
+    ".runtime-gliner\\gliner\\modeling\\base.py": "121ce030f6ed9137315bc8486031c7901f433ef52f5881343773cdb46e8e9e3f",
+    ".runtime-gliner\\gliner\\modeling\\cache.py": "ae35007b6abfb9547903b3c51ea53f5096b1edb4b4964fc00d4783af33ccf4f9",
+    ".runtime-gliner\\gliner\\modeling\\context_encoders.py": "73c7d8e4efd78ec9de291eeb7d4715922f8cfa6e736082e3d7640de9ad6c4e20",
+    ".runtime-gliner\\gliner\\modeling\\decoder.py": "288c84daee403dc072774a5494dc79b825c708d193f4016e2e510eba5bd42d3e",
+    ".runtime-gliner\\gliner\\modeling\\encoder.py": "473204b1378ab462a7dbe24ea7f66f1291266b63d3d6afac9ab888b692108b7f",
+    ".runtime-gliner\\gliner\\modeling\\layers.py": "614b5960fc21db7fa04d520564e721d5bc35bed723daf366dc798edad89ccabc",
+    ".runtime-gliner\\gliner\\modeling\\loss_functions.py": "5e9f49fc1d808a903cff90a440b8f0c75da3bd1fcfd24ea17e661f2c18673ce5",
+    ".runtime-gliner\\gliner\\modeling\\multitask\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".runtime-gliner\\gliner\\modeling\\multitask\\relations_layers.py": "0eed8c33d2e2092cbfb8239628c014dff92c3605bb97a119c1ccbf5cce83c0cc",
+    ".runtime-gliner\\gliner\\modeling\\multitask\\triples_layers.py": "06a4cff68ce5d21c920d163b1c7f83e2834df496211ee84a9d9a94f8eaa9f02f",
+    ".runtime-gliner\\gliner\\modeling\\outputs.py": "f3929b57602af56c58318b4b5b86113ec7f33cc95c030d5aba04c0a049d5d810",
+    ".runtime-gliner\\gliner\\modeling\\scorers.py": "bc7ec66a566a102e5913421cd3fd7f315307990ddf1319665d4ee5111714e96e",
+    ".runtime-gliner\\gliner\\modeling\\span_rep.py": "dba08bc90d09164ea72a66331dd802149520d68661b71abfdd20d25602981e81",
+    ".runtime-gliner\\gliner\\modeling\\utils.py": "ad99baafbca0c401b48e48a6983f793d377d8249469db8b9be689613f4e1e652",
+    ".runtime-gliner\\gliner\\multitask\\__init__.py": "facd166ea2daa1a386a5589dda4b9686f012f2495dc41836b45e4df1422ca0e1",
+    ".runtime-gliner\\gliner\\multitask\\base.py": "9ffb3b9461878cc405ecb789411e5da779e5e046925c43f644411dc19cf52c37",
+    ".runtime-gliner\\gliner\\multitask\\classification.py": "b574276346120b7cd9b3f0fe6282ebc37af37a770b416f67690e68125f735922",
+    ".runtime-gliner\\gliner\\multitask\\open_extraction.py": "211e6dfc3c8357c5b8b3499145185cfeb6fe134c60f2496f3d00c4d23fddf485",
+    ".runtime-gliner\\gliner\\multitask\\question_answering.py": "45209525d64441496338a6f9b94a60e390ab170c97933de55ee5c65ada13647e",
+    ".runtime-gliner\\gliner\\multitask\\relation_extraction.py": "83573cc4a361cc3d7b567e0a6885da251c4cd00300d8613a221673bed2cfdf37",
+    ".runtime-gliner\\gliner\\multitask\\summarization.py": "30f9fa3a764799cfaf05ae2917fa7c874e23b307d963d4703d252d2baa822738",
+    ".runtime-gliner\\gliner\\runtime\\__init__.py": "4482d87541e4f48092736186b497c285d2931aecd4d151a5752385ddabb0738d",
+    ".runtime-gliner\\gliner\\runtime\\base.py": "c0c25cb7a468ce2ebd7421c620e79e20074522d4645b3519e9573e4f6c44777e",
+    ".runtime-gliner\\gliner\\runtime\\onnx.py": "e8c678a47c961a8bfdf8b102d8ff49e169a9c1b6b841fdeccc314557b6b58546",
+    ".runtime-gliner\\gliner\\runtime\\openvino.py": "1aaeac33b8da4b242b61eeca84ae59d2a152bb82fabe52f0faf2f6b5fd09001f",
+    ".runtime-gliner\\gliner\\serve\\__init__.py": "14a8c246b318c29638dd9a31e29b74535505f8eb66748e266c36eb0e1c413350",
+    ".runtime-gliner\\gliner\\serve\\__main__.py": "826cdb8e10796c076de7693bc5d25062ef39b18d9a01e839a2dc6e80395bd6fd",
+    ".runtime-gliner\\gliner\\serve\\client.py": "842cd4a91d857889094317f41bd7e0e48d2cbe578e7b98bf16689efd2a502fe3",
+    ".runtime-gliner\\gliner\\serve\\config.py": "0492e912b5434c710fce04ac44836f36e7911c25c38dfdc33500fa88aecc5a40",
+    ".runtime-gliner\\gliner\\serve\\memory.py": "3775952a3768e6d3a3ceae265ddf6bc030263ebc3206704631ab582cc67006fb",
+    ".runtime-gliner\\gliner\\serve\\server.py": "394cd2872595e7fa6a20b575d68a0eaa9aad5689271a9f5b6db2590a23e8124d",
+    ".runtime-gliner\\gliner\\streaming.py": "fd1ee34bd485421d8483b3f784a39f29c0e8d4cc66d0657625c652fef3051267",
+    ".runtime-gliner\\gliner\\training\\__init__.py": "368f50088704eebaa84b674e948fd79a5018412322b3884d0d69c0657f6e05e3",
+    ".runtime-gliner\\gliner\\training\\trainer.py": "191f8cc424f123f6fe8532aa138ea0d4b3b0295db06460b24a547c3c1a4c78da",
+    ".runtime-gliner\\gliner\\utils.py": "e304365fdf2f7e71772206d190facb64861cb3cec59cf329257efbef6064725a",
+    "annotations\\course_v4\\check_pretrained_ner_20261010_58.py": "7b5e91fd03f3369f5538810949a496f275c12f61030a29bcd75dd19095d06e72",
+    "kg_datasets\\dblp\\course_abstract_boundary_inputs_20261009_52\\full_relation_dev.jsonl": "2d4294be6eed97f16fe7ff4ea37a9daf923a1fa189823a892f82e48756e39785",
+    "kg_datasets\\dblp\\course_abstract_boundary_inputs_20261009_52\\manifest.json": "11632f91ce901ab910f8001d6b15d79fcfe0e563580ada1a6193d7dcb0b91f63",
+    "kg_datasets\\dblp\\course_abstract_boundary_inputs_20261009_52\\ner_dev.jsonl": "be782d45305b87ecd24dfafd731a2c1b12aa30ee2211a539565df502b6a19d59",
+    "kg_datasets\\dblp\\course_abstract_boundary_inputs_20261009_52\\relation_dev.jsonl": "4759d9ed2832ec586731555e68abab3bbc2ccbc9bad81d0e9a17835bb59b89e9",
+    "kg_datasets\\dblp\\course_abstract_queue_20261008_32\\test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+    "kg_datasets\\dblp\\course_v4_runs\\abstract_boundary_development_20261009_52\\manifest.json": "5ff3914572b590806a7637ceb5d4e49d2cb4609a9d0f51d43357271211fbd10f",
+    "kg_datasets\\dblp\\course_v4_runs\\abstract_boundary_development_20261009_52\\new_ner_dev_predictions.jsonl": "96c21033e214f94607c1d4536931b9c3dbcc246feb1f845f735bc08c0d29d5aa",
+    "kg_datasets\\dblp\\course_v4_runs\\diverse_role_development_20261010_57\\manifest.json": "716c5cd973681636bfef1bf08be94165f8bc8d6d8f339b618758f2015688ed1a",
+    "kg_datasets\\dblp\\course_v4_runs\\diverse_role_development_20261010_57\\re\\checkpoint_epoch_06\\model.safetensors": "1cdcdf5580a8ab8d03b2c6173ff853e6a1962fc947851518673530f3e166f687",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\comparison.json": "1147ce0601df26bca4513126e5c7cf770bba86113246708511b0a3a287ea7054",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\gliner_ner_predictions.jsonl": "663a3fb0fe5325adadc6de7279e0eaf46870c1900b6360c6c43ca2e3aaafedf9",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\gliner_raw_predictions.jsonl": "cbafcf6b7cd50c51379b3572ad9961f8edcc865f2b953a6d7f5c2cc07def859c",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\gliner_relation_predictions.jsonl": "ee85555626e6459cc5446803f7a208d6423a4eda7a269a31024823e9490583e2",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\manifest.json": "c6a24649a82784efd6960fc5c857cd15c431900ed874824879d613a50c6ec4aa",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\scibert52_relation_predictions.jsonl": "0d400a25894548b2a96b36766f381f7757204347a90bff0672808ebbe831d40a",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\status.json": "2b53d786b0819eec8e8f6469a69a88fb77a5827af2b848d2ffc9755604e71deb",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_ready\\token_lengths.json": "65e7b62daf273c1b6c531fb9305da7b2d07cc09efdc4e376c49e4cca2d629c53",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\comparison.json": "1147ce0601df26bca4513126e5c7cf770bba86113246708511b0a3a287ea7054",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\gliner_ner_predictions.jsonl": "663a3fb0fe5325adadc6de7279e0eaf46870c1900b6360c6c43ca2e3aaafedf9",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\gliner_raw_predictions.jsonl": "cbafcf6b7cd50c51379b3572ad9961f8edcc865f2b953a6d7f5c2cc07def859c",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\gliner_relation_predictions.jsonl": "ee85555626e6459cc5446803f7a208d6423a4eda7a269a31024823e9490583e2",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\manifest.json": "8846abec60560fa791709ee1196d4da5828d89056df9428631d272c77015e8ae",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\scibert52_relation_predictions.jsonl": "0d400a25894548b2a96b36766f381f7757204347a90bff0672808ebbe831d40a",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\status.json": "ec6fa9a39cdba04348b980bc9bba104926461d08297f8e1184a023f00912c935",
+    "kg_datasets\\dblp\\course_v4_runs\\pretrained_ner_comparison_20261010_58_replay\\token_lengths.json": "65e7b62daf273c1b6c531fb9305da7b2d07cc09efdc4e376c49e4cca2d629c53",
+    "kg_datasets\\models\\deberta_tokenizer_8ccc9b6f\\config.json": "649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b",
+    "kg_datasets\\models\\deberta_tokenizer_8ccc9b6f\\spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+    "kg_datasets\\models\\deberta_tokenizer_8ccc9b6f\\tokenizer_config.json": "3f3978e0c036f2c2588cac34a6047cbb0af0b0dc1814254e291028529805496d",
+    "kg_datasets\\models\\gliner_medium_v21_40ec4193\\gliner_config.json": "a8f3c2ecc57deb70077be6940962aa60e82d861a153a5cd2839b91795968ae7d",
+    "kg_datasets\\models\\gliner_medium_v21_40ec4193\\model.safetensors": "922214c0c60f7835bb5c00f52ad1769d38518d5183f85de7bc03893a8403c023",
+    "resources\\course_pretrained_ner_comparison_v1.json": "3180fc269bcd29a164dab2560463509253fc5e9c38b0add9ef899b72f7d54305",
+    "resources\\course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "schemas\\annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "scripts\\compare_pretrained_ner.py": "627529db5b05664cf7963d9c06b9677fb81a4382edc64dc671c830b528f08cf4",
+    "scripts\\course_abstract_v1.py": "1327e537f46a260a18b215899fa72341f32fd0864fb45fed5f89c30358af85a6",
+    "scripts\\course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "scripts\\course_relation_model.py": "6cd814207310208dd01c9abeb0c4f68f3082c5c0b8cd331a9f9d1197faad979d",
+    "scripts\\course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts\\evaluate_course_relation.py": "70690a2484659ebbcce3a3b21e763f52c3dfb4bc153098682f352803512ff054",
+    "scripts\\export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "scripts\\train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts\\train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "tests\\test_pretrained_ner_comparison.py": "9683c2fe665f1ec75761a6ef0fb8f267a52cfda439a7cd4f708adb5f2b940568"
+  },
+  "examples": [
+    {
+      "publicationId": "journals/corr/abs-2403-13872",
+      "predicted": {
+        "start": 973,
+        "end": 1001,
+        "text": "future state prediction task",
+        "label": "TASK"
+      },
+      "reference": {
+        "entityId": "e10",
+        "start": 973,
+        "end": 996,
+        "text": "future state prediction",
+        "label": "TASK"
+      }
+    },
+    {
+      "publicationId": "journals/corr/abs-1904-04163",
+      "predicted": {
+        "start": 787,
+        "end": 826,
+        "text": "speech recognition N-bestrescoring task",
+        "label": "TASK"
+      },
+      "reference": {
+        "entityId": "e17",
+        "start": 787,
+        "end": 821,
+        "text": "speech recognition N-bestrescoring",
+        "label": "TASK"
+      }
+    },
+    {
+      "publicationId": "journals/corr/abs-2404-09802",
+      "predicted": {
+        "start": 757,
+        "end": 793,
+        "text": "Temporal Convolutional Network (TCN)",
+        "label": "METHOD"
+      },
+      "reference": {
+        "entityId": "e7",
+        "start": 757,
+        "end": 787,
+        "text": "Temporal Convolutional Network",
+        "label": "METHOD"
+      }
+    },
+    {
+      "publicationId": "journals/corr/abs-2411-06463",
+      "predicted": {
+        "start": 1301,
+        "end": 1307,
+        "text": "ResNet",
+        "label": "DATASET"
+      },
+      "reference": {
+        "entityId": "e12",
+        "start": 1301,
+        "end": 1307,
+        "text": "ResNet",
+        "label": "METHOD"
+      }
+    }
+  ],
+  "NERDocuments": 16,
+  "NERQueue": 19,
+  "completeDocuments": 7,
+  "relationQueue": 19,
+  "positiveSupport": {
+    "USED_FOR": 84
+  },
+  "maximumWords": 265,
+  "maximumSubtokensWithLabels": 310,
+  "spanWidthIssues": [],
+  "versionsRecordedByRun": {
+    "gliner": "0.2.29",
+    "torch": "2.8.0+cu126",
+    "transformers": "4.57.1",
+    "sentencepiece": "0.2.1"
+  },
+  "legacyNestedEvaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+  "checkedAtUTC": "2026-10-10T02:20:40.429063+00:00"
+}

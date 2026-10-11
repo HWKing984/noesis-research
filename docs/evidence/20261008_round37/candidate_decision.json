@@ -1,0 +1,34 @@
+{
+  "candidateNER": "rejected_pipeline_precision_and_f1_regression",
+  "baseline": "round35_abstract_NER_with_frozen_old_RE",
+  "previousPipeline": {
+    "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+    "truePositive": 18,
+    "predicted": 74,
+    "reference": 46,
+    "precision": 0.24324324324324326,
+    "recall": 0.391304347826087,
+    "f1": 0.3
+  },
+  "candidatePipeline": {
+    "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+    "truePositive": 20,
+    "predicted": 105,
+    "reference": 46,
+    "precision": 0.19047619047619047,
+    "recall": 0.43478260869565216,
+    "f1": 0.26490066225165565
+  },
+  "pipelinePrecisionChange": -0.05276705276705279,
+  "pipelineF1Change": -0.03509933774834434,
+  "pipelineRecallChange": 0.04347826086956519,
+  "titleBaselineRecallRegression": 0.043478260869565244,
+  "allowedAbsoluteRecallRegression": 0.02,
+  "pipelineDocumentCoverage": 0.2631578947368421,
+  "minimumDocumentCoverage": 0.8,
+  "pipelineReferenceEVALUATED_ON": 0,
+  "automaticPromotionAllowed": false,
+  "qualityPromotionPassed": false,
+  "testEvaluated": false,
+  "notice": "Data-only exploratory dev experiment. Tiny NER micro change does not establish improvement; pipeline P/F1 regress. Original gates, source/dev labels and production stay unchanged."
+}

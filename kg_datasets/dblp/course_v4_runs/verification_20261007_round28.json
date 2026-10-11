@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-07T07:34:38.363699+00:00",
+  "engineeringTests": 353,
+  "readOnlyNeo4jQueries": 4,
+  "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+  "immutableSourceSha256": {
+    "kg_datasets/dblp/course_v4_training_inputs_17/manifest.json": "44b4cded1460294e23d7b6d53303ddace56296fb1c0f2eacff4d009c667df9ef",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/manifest.json": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+    "kg_datasets/dblp/course_v4_graph_20261007_18_final/manifest.json": "da86ef12159470ce99d8392e5a4d5f688ea1232a84ef433ab5b58e3c062186a7",
+    "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04/model.safetensors": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03/model.safetensors": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+  },
+  "graphManifestSha256": "246e695ec3aa0ae32af5287955f9acf1a6e8502ca1c56078b8538a34eb30126b",
+  "documentsSha256": {
+    "README.md": "f8fa87a644a16f9eef0aa7133e7373a2e3cc9f74eb0a9609d0e50b7d5719a0fa",
+    "docs/course_complete_report_20261007.md": "fbd430f12529b25daa045a3f655c375936970ca162bc0e1c759e09410c0b1b86",
+    "docs/course_complete_report_20261007.html": "cc04a84e80693e9d8d8a7f5aff1fad4a36425493bad2b11a839d83e62a268825",
+    "docs/course_v4_delivery_round28.md": "1af670a2f317be23a81676d3540588df18a03d401bd57420d9f3f924eaf59f0a",
+    "docs/course_v4_progress.md": "474c72ba6b3408ac52c9fa8e31aa5be09b38c39cae1961c01c4f98f760fcb1cb",
+    "docs/course_v4_plan.md": "533941bc42b689b1c72c14abaebcb0f1b3be124067d1a70c76d8b0cc36307875",
+    "docs/course_v4_runbook.md": "54801e8121c05cd82ef9e51fea8b35f9c1c1729f521c8ce779d561de281272ce",
+    "docs/course_v4_report_evidence.md": "24a702f0f3ff1870b50c459890488a8b3e38e760de68305782b9b08052f3e061",
+    "docs/course_v4_graph_application.md": "21a26ff5cd2f3b22ff6f0d9fcea30d84808003e8b5b72e926a1d25b4b8a44549",
+    "docs/course_v4_ner_development.md": "34a1c519aa57922eb1ab89043631bdcac98a9b4a8092fe6b68a31cd67ef5ce3c",
+    "docs/course_v4_ner_test.md": "1f0a7e23362666884201613b7922ddf09a238e346630f16553cf816d5b308b28",
+    "docs/course_v4_relation_entity.md": "a23d7efa69015b9d5eed79eab839867d5784c1e3773b4f27344a5a5cd1e3eb57",
+    "docs/course_v4_relation_test.md": "42b9c1310181dceadfc840bc54bcb8c15bd84b489c56047c4fb46d990dd652d8",
+    "docs/course_v4_corpus_inference_round25.md": "08c880455b09bed53cc7cbb75cc9a7afe347d15ec03ef24197410295f4e5932d",
+    "docs/course_v4_live_application_round26.md": "a972f6a26111c5d6454c122818cf8bf8fb6707972717802bf7c4bdda43f6b13b",
+    "docs/course_v4_chinese_search_round27.md": "b3adc53ac010223630a7db868f343f219f561022614105c2bf4ffc8764d4b16e"
+  },
+  "evidenceManifestSha256": "8f8b2adf617aa10265a81539cdb725c63bfa77f2fe25fc901e697a2c228ccafa",
+  "archiveSha256": "39b1bc33764704958e52aa11a5fd5cb967e2cc438b82689e9639bfca349a594d",
+  "archiveMembers": 120,
+  "candidateWeights": {
+    "ner_expanded_development_20261007_28": {
+      "checkpoint": "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/checkpoint_epoch_05/model.safetensors",
+      "sha256": "d1498733c4ba5a772d0d1cfcc233b1ba52897569de336d0b967e1c6c7bcd0fac",
+      "includedInArchive": false,
+      "testEvaluated": false,
+      "promoted": false
+    },
+    "re_expanded_development_20261007_28": {
+      "checkpoint": "kg_datasets/dblp/course_v4_runs/re_expanded_development_20261007_28/checkpoint_epoch_01/model.safetensors",
+      "sha256": "74bc5fb008e6a1d4202a7fa6dbe42aba2b2c79496a591f7c7e30e211691bb48e",
+      "includedInArchive": false,
+      "testEvaluated": false,
+      "promoted": false
+    }
+  },
+  "holdoutDocuments": 200,
+  "holdoutLabelsPending": true,
+  "modelRetrained": true,
+  "modelPromoted": false,
+  "newFinalTestEvaluated": false,
+  "databaseWritten": false,
+  "qualityPromotionPassed": false,
+  "passwordWrittenToArtifacts": false
+}

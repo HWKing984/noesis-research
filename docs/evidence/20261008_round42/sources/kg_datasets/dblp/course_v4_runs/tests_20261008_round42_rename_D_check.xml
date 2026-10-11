@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.148" timestamp="2026-10-08T15:02:29.341910+08:00" hostname="HWKing"><testcase classname="tests.test_process_dblp_ai.ProcessingRulesTest" name="test_snapshot_date_is_explicit_and_not_invented" time="0.039" /></testsuite></testsuites>

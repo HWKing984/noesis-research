@@ -1,0 +1,16 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_runs/pair_window_development_20261010_60/manifest.json": "26cbe3ff862ee79e93524aea363aa9f1ac6e16025ed8a80960978f22f52292c8",
+    "kg_datasets/dblp/course_v4_runs/tests_pair_window60_related.xml": "4cee916458dc2f3e913d088ed3661fbfca68cf94a0124693d2516b418c76c238",
+    "annotations/course_v4/check_pair_window_20261010_60.py": "517170ff14da0f5ee4aae7eebeb527c62212079fc0b0f5ef094f21e6f8702339",
+    "scripts/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "scripts/capture_course_evidence.ps1": "3b2c3581fad0a109ed4ab26604c3e49768a2b70a8f32c7738dd5b784e3eee8c2",
+    "resources/course_pair_window_training_v1.json": "7d94b8d2c5a52517ad5040c88b9d4604d5f6dc6beb3e52dc8ffb52aac11f27db",
+    "resources/course_graph_quality_v3_runtime.json": "8b772f5e84a53d8a71044e1909e76d06c00a0a16b6cd5d363da56745e19f5353"
+  },
+  "filesSha256": {
+    "07_relation_development.html": "beb9b5e6afedf280b4db64f023e6d4f500fb393d5be5623e65aaad7ecaa481c9",
+    "check.json": "f38006c379952dca2413f7a75ea88ff87e3a972445aa7b841483eae3c875c98b"
+  }
+}

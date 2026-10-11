@@ -1,0 +1,75 @@
+{
+  "version": "train65_ai_workset_v1",
+  "sourceDocuments": 70,
+  "oldNERDocuments": 65,
+  "legacyQuarantinedDocuments": 5,
+  "reusedV2Documents": 12,
+  "newAIReviewedDocuments": 10,
+  "pendingV2Documents": 43,
+  "candidateNERDocuments": 22,
+  "newEntitySupport": {
+    "DATASET": 22,
+    "TASK": 74,
+    "METHOD": 50
+  },
+  "candidateEntitySupport": {
+    "DATASET": 42,
+    "METHOD": 149,
+    "TASK": 132
+  },
+  "newRelationSupport": {
+    "EVALUATED_ON": 4,
+    "USED_FOR": 21
+  },
+  "candidateRelationSupport": {
+    "EVALUATED_ON": 21,
+    "USED_FOR": 89
+  },
+  "positiveEvidenceGroupsDescriptiveOnly": 50,
+  "newUnresolvedPairs": 386,
+  "newLegalCandidatePairs": 411,
+  "encodedNERDocuments": 22,
+  "encodedPositiveRelationPairs": 110,
+  "encodingExclusions": 0,
+  "ordinaryThreeClassREReady": false,
+  "negativeRelations": 0,
+  "devStructuralIntake": {
+    "structuralChecksPassed": true,
+    "documents": 20,
+    "entityCounts": {
+      "METHOD": 165,
+      "TASK": 87,
+      "DATASET": 23
+    },
+    "positiveRelations": {
+      "USED_FOR": 45,
+      "EVALUATED_ON": 9
+    },
+    "legalCandidatePairs": 834,
+    "explicitUnresolvedExamples": 1,
+    "unadjudicatedOrUnresolvedPairs": 780,
+    "negativeRelations": 0,
+    "standaloneArtifactsEqualArchive": {
+      "dev20_relation_review.csv": true,
+      "dev20_annotation_review.html": true
+    },
+    "externalZipSha256": "8d6641eeb73029ff837e3067b242792c3ab08d8b1783b80401aa1144ffc2211f",
+    "sourceJSONLSha256": "b24e53dc3442d44973313125f8c9c9c5a6a39e82135681b91377c08302610d33",
+    "semanticReviewExhaustive": false,
+    "formalF1Authorized": false,
+    "devReturnedToTraining": false,
+    "testContentRead": false,
+    "externalScriptsExecuted": false
+  },
+  "trainingAuthorized": false,
+  "formalF1Authorized": false,
+  "testContentRead": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "independentHumanGold": false,
+  "sourceIdentityOverlapWithFixedDevTest": 0,
+  "exactTrainDevTextOverlap": 0,
+  "originalTwelveRosterUnchanged": true,
+  "sourceFilesUnchanged": true,
+  "notice": "Executable tokenizer inputs only, not fitting authorization. New labels are AI self-reviewed candidates; unresolved pairs are masked. No independent near-duplicate certification or exhaustive relation truth is claimed."
+}

@@ -1,0 +1,136 @@
+{
+  "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+  "pipelineDocumentCoverage": 0.2631578947368421,
+  "previous": {
+    "old_NER_old_RE": {
+      "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+      "entityScope": "predicted_NER_entities_without_reference_features",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 5,
+      "positiveMicro": {
+        "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+        "truePositive": 22,
+        "predicted": 256,
+        "reference": 46,
+        "precision": 0.0859375,
+        "recall": 0.4782608695652174,
+        "f1": 0.1456953642384106
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+          "truePositive": 22,
+          "predicted": 256,
+          "reference": 46,
+          "precision": 0.0859375,
+          "recall": 0.4782608695652174,
+          "f1": 0.1456953642384106
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+          "truePositive": 0,
+          "predicted": 0,
+          "reference": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "positiveMacroF1": 0.1456953642384106,
+      "supportedPositiveClasses": [
+        "USED_FOR"
+      ],
+      "negativeDecisions": 9,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    },
+    "new_NER_old_RE": {
+      "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+      "entityScope": "predicted_NER_entities_without_reference_features",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 5,
+      "positiveMicro": {
+        "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+        "truePositive": 18,
+        "predicted": 74,
+        "reference": 46,
+        "precision": 0.24324324324324326,
+        "recall": 0.391304347826087,
+        "f1": 0.3
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+          "truePositive": 18,
+          "predicted": 73,
+          "reference": 46,
+          "precision": 0.2465753424657534,
+          "recall": 0.391304347826087,
+          "f1": 0.3025210084033613
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+          "truePositive": 0,
+          "predicted": 1,
+          "reference": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        }
+      },
+      "positiveMacroF1": 0.3025210084033613,
+      "supportedPositiveClasses": [
+        "USED_FOR"
+      ],
+      "negativeDecisions": 6,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    }
+  },
+  "expandedNER_oldRE": {
+    "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+    "entityScope": "predicted_NER_entities_without_reference_features",
+    "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+    "documents": 5,
+    "positiveMicro": {
+      "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+      "truePositive": 20,
+      "predicted": 105,
+      "reference": 46,
+      "precision": 0.19047619047619047,
+      "recall": 0.43478260869565216,
+      "f1": 0.26490066225165565
+    },
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+        "truePositive": 20,
+        "predicted": 103,
+        "reference": 46,
+        "precision": 0.1941747572815534,
+        "recall": 0.43478260869565216,
+        "f1": 0.2684563758389262
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "exposed_dev_AI_reference_not_final_test",
+        "truePositive": 0,
+        "predicted": 2,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      }
+    },
+    "positiveMacroF1": 0.2684563758389262,
+    "supportedPositiveClasses": [
+      "USED_FOR"
+    ],
+    "negativeDecisions": 5,
+    "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed.",
+    "missedReferencePrimaryCauses": {
+      "missing": 5,
+      "boundary": 21
+    }
+  },
+  "rawResultUnmodified": true,
+  "metadataCorrectionOnly": true,
+  "testEvaluated": false
+}

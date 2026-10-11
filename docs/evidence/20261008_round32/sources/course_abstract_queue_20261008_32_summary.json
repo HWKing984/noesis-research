@@ -1,0 +1,15 @@
+{
+  "usableAbstracts": 75,
+  "bySplit": {
+    "train": 37,
+    "dev": 19,
+    "test": 19
+  },
+  "excluded": 0,
+  "exclusionReasons": {},
+  "annotated": false,
+  "trainingExecuted": false,
+  "testEvaluated": false,
+  "maxTokens": 386,
+  "modelPromoted": false
+}

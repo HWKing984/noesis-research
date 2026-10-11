@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "graphId": "ai-literature-ed16399925fac2a599ed",
+  "graphManifestSha256": "eace8e388e5cbec2369e16534870aca145000ae678641cb7fb013eddc412ca1f",
+  "metricsReadOnly": true,
+  "historicalExporterSnapshotVerified": true,
+  "currentEntrypointDifferentFromHistoricalExporter": true,
+  "modelRetrained": false,
+  "testInferenceRepeated": false,
+  "databaseWritten": false,
+  "serviceRestarted": false,
+  "newDefaultEntrypointAppliedToRunningService": false,
+  "scope": "Offline default CLI and existing live health only; no new browser interaction acceptance or full live node/edge recount."
+}

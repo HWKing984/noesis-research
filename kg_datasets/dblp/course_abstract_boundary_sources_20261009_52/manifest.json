@@ -1,0 +1,35 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_boundary_expansion_v1.json": "2afeb3de0e4f8cc0a6c6df1b1d17c8cf67a3fed72de6ce50a605a234c4e8b51b",
+    "scripts/expand_boundary_abstracts.py": "10ed09bec3920bd2616b73abf303c571f18b43aae2ed4b1c5d338d2fefd8e349",
+    "kg_datasets/dblp/ner_v1/corpus_manifest.jsonl": "bc88db81e0c68156c2fcacdbf8523e77b81be9b5d811163da2ed30f3edf3ca8a",
+    "kg_datasets/dblp/course_abstract_pages_20261008_32/selection_lock.json": "e79ff9e828e47da3314da100bd95e26f20c3c13ca12deddc5931b9627ad9d36a",
+    "kg_datasets/dblp/course_abstract_benchmark_inputs_20261008_45/manifest.json": "efbd9c2fc1f1e89f7cfc2cc59ec2df239e534f763d07a4a38b92d9464016e167",
+    "kg_datasets/dblp/course_abstract_supplement_reviewed_20261009_49/manifest.json": "2fc9aeaefa200100de611e5940ee5fa3cf6bbcfcea520f3700542be11f8c82f7",
+    "scripts/collect_train_abstracts.py": "d121a9bf2a12f89d2446dc87956fc67d9b132dc728d56c8c079aaa5a20329851",
+    "scripts/collect_course_abstract_pages.py": "4aea32450612164cd82392a502093d1946e9b7161ec6cdb3c848826ba4d6d004",
+    "scripts/expand_train_benchmarks.py": "7822d6b9c053e2b7938abb268ea8c05c5f820d2c001b48dca1366557adfa155d",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "resources/course_graph_runtime.json": "93a0beba5afdeb177afe0c6eb12567869ef8b0c502cd127b353f1dde3ccbc0fc",
+    "resources/course_graph_quality_runtime.json": "7a6b854207e95ea1b8b0a810ab8b271b30120c534c841b531d3d2fd5efa8070e",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1"
+  },
+  "filesSha256": {
+    "page_001.html": "7ca8f17367b0fe3f36bb24faab0c27f98ea799273d3762c48602d76da43925b6",
+    "page_002.html": "69a765f830a8383cc7cd37c236fb786a94cf62033ffd186103294ead8c1ec69f",
+    "page_004.html": "234b2120a51d25e8ea5a21d53106fac50616cb52182718ec33be04441826a9b5",
+    "page_005.html": "6c099a68a174a9fa41324541443de0becb292adc819797ea069984eb5488a30f",
+    "page_006.html": "143825623ec0d7381bb6c2f933c57815b630ce482ca7e455d657f6f4653d383e",
+    "page_007.html": "8150d3c711e4c562715af0227a958ebe89d5e287617a7c3335a3d0b8e699ebe1",
+    "page_008.html": "d95d7a4f2179f571b4e7f7a97d24adde41bff9954b66f8e1d6f7729b9a0259e8",
+    "policy.json": "495e32b46fdbd425168ba057bed97bb679e54e1de544f80cf781675a570d22df",
+    "requests.json": "1125027aca451d760f1a383cc19e1911252ba8221bb3e6f8b71618686c8585f5",
+    "robots.txt": "eda2bc852443f3f29d31eb04d37b26476654dc33b29256fb882819da23d189a5",
+    "selection_lock.json": "45c0fa56375a8296571e276361edb149993d8ec09c43054a975a5e8144e111bd",
+    "summary.json": "4f96c72ab0f0abf4393b15e9a8c1fea806227144af05ccb22d090dbee6147908",
+    "train_references.jsonl": "9c6a62d8b82229b993383d41fbd4ec4710f6f75d8d296a3b5de46728046dba13"
+  }
+}

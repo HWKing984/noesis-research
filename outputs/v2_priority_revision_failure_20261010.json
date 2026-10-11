@@ -1,0 +1,11 @@
+{
+  "stage": "priority_revision_generation_before_final_junit_completed",
+  "error": "FileNotFoundError: outputs/v2_priority_revision_verified_20261010.xml",
+  "cause": "Generation was invoked while the final pytest session was still running; its JUnit output had not yet been written.",
+  "preservedPartialOutput": "kg_datasets/dblp/course_v2_priority_revision_20261010",
+  "partialOutputIsSealed": false,
+  "partialOutputIsDelivery": false,
+  "repair": "Wait for successful test process completion; validate JUnit before output directory creation; add regression; rebuild in a new _final directory.",
+  "trainingExecuted": false,
+  "productionMutation": false
+}

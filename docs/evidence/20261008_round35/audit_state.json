@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "engineeringTests": 363,
+  "trainDocuments": 29,
+  "devDocuments": 16,
+  "devQueueDocuments": 19,
+  "datasetReferenceDocuments": 4,
+  "strictCounts": {
+    "METHOD": {
+      "FP": 15,
+      "FN": 25
+    },
+    "TASK": {
+      "FP": 34,
+      "FN": 22
+    },
+    "DATASET": {
+      "FP": 11,
+      "FN": 2
+    }
+  },
+  "allEntityAgreementDocuments": 0,
+  "devMetricsRecomputedFromSavedSpans": true,
+  "eachEpochTrainCoverageVerified": true,
+  "modelRetrained": true,
+  "relationTrained": false,
+  "testEvaluated": false,
+  "testContentConsumed": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "databaseWritten": false,
+  "serviceRestarted": false,
+  "productionGraphManifestSha256": "eace8e388e5cbec2369e16534870aca145000ae678641cb7fb013eddc412ca1f",
+  "runManifestSha256": "95a3c250100aa89452af0381f142f4a6b9df3e1336a1c4ed956b386e01f5a269",
+  "bestWeightsSha256": "14a1cce3d3cf5da3ac61e6bd651d14713215879b5ce679bd56ec8d2b47e87a96",
+  "evaluationTarget": "dev_ai_reference_not_human_gold",
+  "scope": "Offline candidate and immutable artifacts audited. No new live browser acceptance or pipeline/final-test performance; source integrity hashing does not consume test text semantically."
+}

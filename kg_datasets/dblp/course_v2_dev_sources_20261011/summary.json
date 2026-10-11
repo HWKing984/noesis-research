@@ -1,0 +1,14 @@
+{
+  "status": "dev_sources_collected_pending_annotation",
+  "requestedDevDocuments": 20,
+  "collectedDevDocuments": 20,
+  "failedDevRequests": 0,
+  "testRequests": 0,
+  "testContentParsed": false,
+  "annotatedDocuments": 0,
+  "sourceIdentityVerifiedDocuments": 20,
+  "semanticIndependenceProven": false,
+  "trainingAuthorized": false,
+  "evaluationAuthorized": false,
+  "trainingExecuted": false
+}

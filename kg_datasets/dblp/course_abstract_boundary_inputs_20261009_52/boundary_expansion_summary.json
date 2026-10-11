@@ -1,0 +1,17 @@
+{
+  "NERtrain": 65,
+  "originalNER": 58,
+  "addedNER": 7,
+  "newNERExcluded": 1,
+  "entitySupport": {
+    "TASK": 260,
+    "METHOD": 458,
+    "DATASET": 69
+  },
+  "knownRETrainUnchanged": 271,
+  "preservedDevAndREFiles": 11,
+  "trainingExecuted": false,
+  "testAccessed": false,
+  "qualityPromotionPassed": false,
+  "independentHumanGold": false
+}

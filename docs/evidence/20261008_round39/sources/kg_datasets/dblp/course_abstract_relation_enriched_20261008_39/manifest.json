@@ -1,0 +1,30 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_relation_enrichment_v1.json": "c0b0c8dcc673d0514cc8393cfb55816e497dd6e97f1e381f017cea249d2c74a5",
+    "resources/course_abstract_relation_v1.json": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+    "kg_datasets/dblp/course_abstract_occurrence_reviewed_20261008_38/manifest.json": "dc9f22fa3dd41b550008f6d699d08ef61bd5799cd085ef4a8d2c04fd99559eab",
+    "annotations/course_v4/abstract_relation_enrichment_decisions_20261008_39.json": "35361184d330b993186111aff3ad73d574600d9d2f41faeb9a946d7e8b2b6b6e",
+    "annotations/course_v4/abstract_relation_enrichment_reviews_20261008_39.json": "73d0b1ef4b9a6f60fc04a9c16ac1115e1c1c40e91be142d9e801040fc434c471",
+    "scripts/enrich_abstract_relations.py": "2995f7c100b0c7631a30d30cbdaff3dbbdd98fd4d38dfab3ac4b253027a705b5",
+    "scripts/course_abstract_relation.py": "96aa877e8d95c34e9768460818625b9c358a14d6ca46eb7d32a4fea203a96bdf",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0"
+  },
+  "filesSha256": {
+    "additional_relation_train.jsonl": "7c4975cf710686db9fad4d9df25c4b9452baff1d41364e9d5d9ade9d544ddadd",
+    "excluded_ner.jsonl": "7c55b57ea5d318fa237ba4d882eb0bf1aaed60bc4b1f139629be868a4c27f2eb",
+    "full_relation_train.jsonl": "c0b031fb3f388be151dc2b007442a38825eaa203afaae43491db0787a107112e",
+    "generation_receipts.jsonl": "ec3bfe4ace0741d5ab5ba7c3283442c0a84b75d52e0debed255d616014bbc66a",
+    "ner_train.jsonl": "459d632dc38169cae832ff3f0cc6f0d3a3b4e963b7d371ed4660236cbc02f17f",
+    "origins.jsonl": "d20003ee8445eb4f593f8e86e2aff4e1126eaed8455c1d652888cc1b094c41f0",
+    "references.jsonl": "67e37e5f20a0ac6b1fd9ba24fddd274e5ea1263dbdfb15f59ef0d648d894b0c5",
+    "relation_train.jsonl": "25da4df39d49494f570d04e55b9de66e89afc7baf9ee45f8885f0b57015d7922",
+    "reviewed_receipts.jsonl": "5fcc9bc3f19ce5f1d922a371bb18eece099e189d6933553e438e296f3c6e9826",
+    "summary.json": "65d9262e090608e60bda2a3c83d89e60bc5852e3b8657e87a38c78e29ddda92e",
+    "token_alignment.jsonl": "7e07fda8f176514475c8141e9c3d74eadc1e84759ef08c7176c82e4c19dacf37"
+  }
+}

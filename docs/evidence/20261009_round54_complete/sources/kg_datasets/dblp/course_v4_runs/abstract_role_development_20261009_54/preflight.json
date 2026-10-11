@@ -1,0 +1,10 @@
+{
+  "freeDiskBytes": 2702327808,
+  "requiredBytes": 1506824700,
+  "availableCPUBytes": 2563837952,
+  "requiredCPUBytes": 1416302584,
+  "GPUFreeBytes": 7451181056,
+  "GPUFreeRequiredBytes": 3000000000,
+  "historicalDeletion": false,
+  "testContentConsumed": false
+}

@@ -1,0 +1,9 @@
+{
+  "requested": 24,
+  "fetched": 24,
+  "usableTrainAbstracts": 21,
+  "excluded": 3,
+  "testAccessed": false,
+  "trainingExecuted": false,
+  "modelPromoted": false
+}

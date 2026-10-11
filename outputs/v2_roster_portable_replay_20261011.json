@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "archiveSha256": "8940c2c2026511ab0aad01cf4259d5ca852934b36b3ec6c3175632935c053e08",
+  "startedAtUTC": "2026-10-11T01:20:22.985992+00:00",
+  "shortExtractionRoot": "D:\\Temp\\kg-6eaff9e8",
+  "longExtractionRoot": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-roster-replay-9c5655df7d094d4ebb01235092f74500",
+  "commands": [
+    {
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-I",
+        "-B",
+        "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/source_snapshot/scripts/prepare_v2_sampling.py",
+        "--verify",
+        "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2"
+      ],
+      "cwd": "D:\\Temp\\kg-6eaff9e8",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"sourceListingCount\": 3654,\n  \"eligiblePopulationCount\": 3579,\n  \"metadataMembers\": 40,\n  \"counts\": {\n    \"train\": 12,\n    \"dev\": 20,\n    \"test\": 20\n  },\n  \"samplingFrameLocked\": true,\n  \"trainingRosterLocked\": true,\n  \"contentBindingCompleted\": false,\n  \"acceptedNegativePairs\": 0,\n  \"trainingAuthorized\": false,\n  \"evaluationAuthorized\": false,\n  \"semanticIndependenceProven\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-I",
+        "-B",
+        "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/source_snapshot/scripts/collect_v2_dev.py",
+        "--bundle",
+        "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2",
+        "--verify",
+        "kg_datasets/dblp/course_v2_dev_sources_20261011"
+      ],
+      "cwd": "D:\\Temp\\kg-6eaff9e8",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"dev_sources_collected_pending_annotation\",\n  \"requestedDevDocuments\": 20,\n  \"collectedDevDocuments\": 20,\n  \"failedDevRequests\": 0,\n  \"testRequests\": 0,\n  \"testContentParsed\": false,\n  \"annotatedDocuments\": 0,\n  \"sourceIdentityVerifiedDocuments\": 20,\n  \"semanticIndependenceProven\": false,\n  \"trainingAuthorized\": false,\n  \"evaluationAuthorized\": false,\n  \"trainingExecuted\": false,\n  \"verification\": \"passed\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "trainingAuthorized": false,
+  "evaluationAuthorized": false,
+  "independentMemberHashChecks": 736,
+  "longPathReplay": {
+    "status": "failed_missing_extraction_files_not_bypassed",
+    "missingFiles": [
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2010.01057.requests.json",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/prepare_v2_evidence_pilot.py",
+        "fullPathLength": 265
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/parent_references.jsonl",
+        "fullPathLength": 263
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2503.01309.manifest.json",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/parent_manifest.json",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2010.01057.request.json",
+        "fullPathLength": 263
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/parent_source_provenance_sidecars.jsonl",
+        "fullPathLength": 279
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/evaluate_course_relation.py",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/review_v2_evidence_pilot.py",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/parent_reviewed_receipts.jsonl",
+        "fullPathLength": 270
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/resources/course_v2_priority_revision_v1.json",
+        "fullPathLength": 274
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2503.01309.contract.json",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/verify_v2_priority_bundle.py",
+        "fullPathLength": 265
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/resources/course_v4_config.json",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/check_history/v2_entity_completion_verified_20261010.xml",
+        "fullPathLength": 269
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/docs/course_v2_task_scope_v1.md",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/annotations/course_v4/v2_priority_decisions_20261010.json",
+        "fullPathLength": 286
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/tests/test_v2_evidence_pilot.py",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2010.01057.manifest.json",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/train_course_relation.py",
+        "fullPathLength": 261
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/source_snapshot/annotations/course_v4/v2_priority_decisions_20261010.json",
+        "fullPathLength": 273
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/tests/test_v2_entity_completion.py",
+        "fullPathLength": 263
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/schemas/annotation_course_v4.schema.json",
+        "fullPathLength": 269
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/course_relation_model.py",
+        "fullPathLength": 261
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2503.01309.request.json",
+        "fullPathLength": 263
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/v2_entity_completion_decisions_20261010.json",
+        "fullPathLength": 284
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/v2_semantic_revision_independent_audit_20261010.md",
+        "fullPathLength": 290
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/source_snapshot/annotations/course_v4/v2_priority_decisions_20261010.json",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/completion_checks.xml",
+        "fullPathLength": 261
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/tests/test_v2_semantic_revision.py",
+        "fullPathLength": 263
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/source_snapshot/resources/course_v2_priority_revision_v1.json",
+        "fullPathLength": 261
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/collect_course_abstract_pages.py",
+        "fullPathLength": 269
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/parent_change_ledger.jsonl",
+        "fullPathLength": 266
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/parent_39_checks.xml",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/tests/test_v2_priority_revision.py",
+        "fullPathLength": 263
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2503.01309.requests.json",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/complete_v2_evidence_pilot.py",
+        "fullPathLength": 266
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/source_snapshot/scripts/__pycache__/finalize_v2_supervision.cpython-314.pyc",
+        "fullPathLength": 262
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/check_history/v2_entity_completion_preflight_20261010.xml",
+        "fullPathLength": 270
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/source_snapshot/annotations/course_v4/v2_supervision_decisions_20261010.json",
+        "fullPathLength": 263
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/export_course_evidence.py",
+        "fullPathLength": 262
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/2010.01057.contract.json",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/parent_contract.json",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/source_snapshot/resources/course_v2_supervision_protocol_v1.json",
+        "fullPathLength": 264
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/source_snapshot/annotations/course_v4/v2_supervision_decisions_20261010.json",
+        "fullPathLength": 276
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_sampling_20261011_roster_locked_v2/audit_parent/audit_parent/audit_parent/audit_parent/source_snapshot/scripts/fetch_abstract_pilot.py",
+        "fullPathLength": 260
+      },
+      {
+        "file": "kg_datasets/dblp/course_v2_admission_20261010/audit_parent/audit_parent/audit_parent/audit_parent/audit_sources/v2_semantic_revision_independent_audit_20261010.md",
+        "fullPathLength": 261
+      }
+    ],
+    "reason": "Windows Expand-Archive omitted deeply nested paths in the long destination. Use a short extraction root; preserve original manifest and missing-file failures."
+  },
+  "independentPytestCases": 96,
+  "independentPytestRunId": "85c43eb6-28fc-4ff4-8733-9affe54da7ec",
+  "independentTestReceiptSha256": "c910f6342f124a37f79ea030cff555c6263aad6ac4ddb83f1ecbb433d8719762",
+  "notice": "Same 96 engineering cases replayed, not 192 distinct checks; no model inference, training or new test text read.",
+  "endedAtUTC": "2026-10-11T01:20:35.783699+00:00"
+}

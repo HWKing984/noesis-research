@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "trainingStarted": true,
+  "testEvaluated": false,
+  "testTokenized": false,
+  "modelPromoted": false,
+  "createdAtUTC": "2026-10-08T02:25:26.388488+00:00",
+  "settings": {
+    "seed": 20261008,
+    "epochs": 6,
+    "batchSize": 2,
+    "learningRate": 2e-05,
+    "initialization": "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04",
+    "initialWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "selection": "strict_dev_entity_micro_f1_earliest_tie",
+    "decoder": "drop_orphan_I_no_B_repair",
+    "precision": "deterministic_eager_FP32"
+  },
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "cudaVersion": "12.6",
+  "finishedAtUTC": "2026-10-08T02:25:48.541227+00:00",
+  "elapsedSeconds": 22.151055800000904,
+  "peakCUDAbytes": 2278442496,
+  "steps": 90
+}

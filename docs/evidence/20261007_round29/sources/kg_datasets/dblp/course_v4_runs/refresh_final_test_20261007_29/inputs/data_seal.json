@@ -1,0 +1,26 @@
+{
+  "sealedAtUTC": "2026-10-07T07:56:37.165884+00:00",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_holdout_20261007_29/manifest.json": "30d6fa7ad82f188794136fb452e79e76c29f8e4f667da9d46751efdafcdbba84",
+    "kg_datasets/dblp/course_v4_holdout_inputs_20261007_29/manifest.json": "3d770a5abedca34b952cf3da8ffb9ce0e672e98d21418ab2dc6ca394072f0c4c",
+    "kg_datasets/dblp/course_v4_runs/refresh_selection_20261007_29.json": "98f181baf0d73ebb119e6eac4be6dfe77b38803242bb260a204f83c671bb2979",
+    "resources/course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "scripts/evaluate_course_refresh.py": "ced5b3e18032a6944dbc489b3384f94cc3e2d4655180d85d35f2bf539ad6142a",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "scripts/course_relation_model.py": "6cd814207310208dd01c9abeb0c4f68f3082c5c0b8cd331a9f9d1197faad979d",
+    "scripts/infer_course_corpus.py": "694fe56aac2618c7020106d2a3d715727d4ec0b16699d71973fee4034074d432",
+    "scripts/evaluate_course_relation.py": "70690a2484659ebbcce3a3b21e763f52c3dfb4bc153098682f352803512ff054",
+    "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/manifest.json": "7ce1cf5f4ad58bb53a12e7437460291d2451b28e900789fce213fcbf3a7699d2",
+    "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/checkpoint_epoch_05/model.safetensors": "d1498733c4ba5a772d0d1cfcc233b1ba52897569de336d0b967e1c6c7bcd0fac",
+    "kg_datasets/dblp/course_v4_runs/re_expanded_development_20261007_28/manifest.json": "5a9492ec8ba173e39f0a18c6cce42b4884e168742471dc5a438334884bc0480d",
+    "kg_datasets/dblp/course_v4_runs/re_expanded_development_20261007_28/checkpoint_epoch_01/model.safetensors": "74bc5fb008e6a1d4202a7fa6dbe42aba2b2c79496a591f7c7e30e211691bb48e"
+  },
+  "NERDocuments": 187,
+  "pipelineDocuments": 175,
+  "testInferenceExecuted": false,
+  "humanGold": false,
+  "independentAnnotator": false
+}

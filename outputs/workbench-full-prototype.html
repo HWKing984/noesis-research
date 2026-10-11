@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>noesis-research · 完整工作台原型（对话 / 论文库 / 原文阅读 链路）</title>
+<style>
+/* ===== 设计 token：逐字取自 noesis-research/apps/web/src/index.css（即 NOESIS 同源） ===== */
+:root{
+  --bg-primary:#ffffff; --bg-secondary:#f7f7f8; --bg-tertiary:#ececed;
+  --bg-surface:#e3e3e5; --bg-elevated:#ffffff; --bg-hover:#e8e8e8;
+  --border-subtle:rgba(0,0,0,.06); --border-default:rgba(0,0,0,.1); --border-strong:rgba(0,0,0,.16);
+  --text-primary:#1a1a1c; --text-secondary:#525257; --text-tertiary:#8b8b92; --text-muted:#b0b0b5;
+  --accent:#555555; --accent-light:#666666; --accent-dim:rgba(85,85,85,.08); --accent-glow:rgba(85,85,85,.15);
+  --chip-active-bg:#d9d9db; --chip-active-fg:#1a1a1c; --pill-bg:#f1f1f3;
+  --user-bubble:#bae6fd; --user-text:#0c4a6e;
+  --danger:#dc2626; --warning:#d97706; --success:#16a34a;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px;
+  --font-body:'Geist',system-ui,-apple-system,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;
+  --font-serif:'Crimson Pro',Georgia,'Times New Roman',serif;
+  --font-mono:'DM Mono','Cascadia Code',Consolas,Menlo,monospace;
+  --hl-bg:rgba(255,196,0,.32); --hl-user:rgba(85,140,220,.24); --sel-bg:rgba(96,125,180,.28);
+  --paper:#ffffff; --paper-text:#26262a; --paper-meta:#7a7a80;
+  --shadow-pop:0 8px 28px rgba(0,0,0,.14);
+}
+:root[data-theme="dark"]{
+  --bg-primary:#212121; --bg-secondary:#171717; --bg-tertiary:#2a2a2a;
+  --bg-surface:#2f2f2f; --bg-elevated:#2e2e2e; --bg-hover:#333333;
+  --border-subtle:rgba(255,255,255,.05); --border-default:rgba(255,255,255,.1); --border-strong:rgba(255,255,255,.15);
+  --text-primary:#ececf1; --text-secondary:#a1a1aa; --text-tertiary:#71717a; --text-muted:#52525b;
+  --accent:#aaaaaa; --accent-light:#cccccc; --accent-dim:rgba(170,170,170,.1); --accent-glow:rgba(170,170,170,.2);
+  --chip-active-bg:#4a4a4d; --chip-active-fg:#ececf1; --pill-bg:#2e2e2e;
+  --user-bubble:#0c4a6e; --user-text:#e0f2fe;
+  --danger:#ef4444; --warning:#f59e0b; --success:#22c55e;
+  --hl-bg:rgba(255,196,0,.24); --hl-user:rgba(110,150,220,.26); --sel-bg:rgba(120,150,200,.30);
+  --paper:#262628; --paper-text:#cfcfd4; --paper-meta:#8a8a90;
+  --shadow-pop:0 8px 28px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+button{font-family:inherit;font-size:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0}
+input{font-family:inherit;font-size:inherit;color:inherit;background:none;border:none;outline:none}
+::selection{background:var(--sel-bg)}
+html,body{height:100%}
+body{font-family:var(--font-body);font-size:13px;color:var(--text-primary);background:var(--bg-secondary);overflow:hidden}
+svg{flex:0 0 auto}
+.ic{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+.ic svg{width:15px;height:15px}
+.ic-13 svg{width:13px;height:13px}
+.ic-18 svg{width:18px;height:18px}
+.ic-20 svg{width:20px;height:20px}
+
+#app{display:flex;height:100vh;padding-bottom:92px}
+#main{flex:1;min-width:0;display:flex;flex-direction:column}
+#stage{flex:1;min-height:0;position:relative;overflow:hidden}
+
+/* ===== 侧栏（noesis-research Sidebar） ===== */
+#sidebar{width:260px;flex:0 0 260px;background:var(--bg-secondary);border-right:1px solid var(--border-subtle);display:flex;flex-direction:column;padding:0 0 10px;overflow:hidden;--sidebar-text:#3d3d44}
+:root[data-theme="dark"] #sidebar{--sidebar-text:#cfcfd6}
+.sb-head{padding:12px;border-bottom:1px solid var(--border-subtle);flex-shrink:0}
+.sb-logo{display:flex;align-items:center;gap:8px;min-height:36px}
+.sb-logo-mark{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:22px;height:22px}
+.sb-logo-mark svg{display:block;width:100%;height:100%;overflow:visible}
+.sb-logo-name{font-size:.9rem;font-weight:600;color:var(--sidebar-text);letter-spacing:.22em;white-space:nowrap;line-height:1}
+.sb-toggle{margin-left:auto;display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:var(--radius-sm);color:var(--sidebar-text)}
+.sb-toggle:hover{background:var(--bg-hover)}
+.sb-toggle svg{width:15px;height:15px;stroke-width:1.75}
+.sb-nav{display:flex;flex-direction:column;gap:2px;padding:12px 8px;border-bottom:1px solid var(--border-subtle);flex-shrink:0}
+.sb-group-label{font-size:.7rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;padding:4px 12px}
+.sb-item{display:flex;align-items:center;gap:10px;width:100%;padding:8px 12px;border-radius:var(--radius-md);color:var(--sidebar-text);font-size:.875rem;font-weight:500;text-align:left}
+.sb-item:hover{color:var(--text-primary);background:var(--bg-hover)}
+.sb-item.is-active{color:var(--sidebar-text);font-weight:600;background:var(--bg-hover)}
+.sb-item .ic svg{width:16px;height:16px}
+.sb-sec{display:flex;align-items:center;justify-content:space-between;padding:12px 12px 6px;flex-shrink:0}
+.sb-sec-label{font-size:.75rem;font-weight:600;color:var(--text-secondary);letter-spacing:.02em}
+.sb-new{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:var(--radius-sm);color:var(--sidebar-text)}
+.sb-new:hover{color:var(--accent);background:var(--accent-dim)}
+.sb-sessions{flex:1;overflow-y:auto;padding:0 8px 8px}
+.sess{display:flex;align-items:center;gap:10px;width:100%;padding:9px 12px;border-radius:var(--radius-md);text-align:left;color:var(--text-secondary)}
+.sess:hover{background:var(--bg-hover)}
+.sess.is-active{background:var(--bg-tertiary)}
+.sess-t{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
+.sess-title{font-size:12.5px;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:185px}
+.sess-time{font-size:11px;color:var(--text-tertiary)}
+.sb-foot{display:flex;align-items:center;gap:8px;padding:10px 12px 2px;border-top:1px solid var(--border-subtle);flex-shrink:0}
+.sb-foot .who{font-size:12px;color:var(--text-tertiary);flex:1;display:flex;align-items:center;gap:6px;white-space:nowrap;overflow:hidden}
+.sb-foot .dot{width:6px;height:6px;border-radius:50%;background:var(--success);flex:0 0 auto}
+.sb-theme{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:var(--radius-sm);color:var(--text-tertiary);flex:0 0 auto}
+.sb-theme:hover{background:var(--bg-hover)}
+
+/* ===== 工作台公共头 ===== */
+.ws{height:100%;display:flex;flex-direction:column;background:var(--bg-primary)}
+.ws-head{flex:0 0 auto;position:relative;display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border-subtle);min-height:54px}
+.ws-title{font-size:.875rem;font-weight:600;white-space:nowrap;flex:0 0 auto}
+.mode-tabs{display:flex;background:var(--bg-tertiary);border-radius:999px;padding:3px;gap:2px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.mode-tabs button{padding:4px 14px;border-radius:999px;font-size:12px;color:var(--text-secondary);white-space:nowrap}
+.mode-tabs button.is-on{background:var(--bg-primary);color:var(--text-primary);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.head-actions{display:flex;align-items:center;gap:6px;flex:0 0 auto;margin-left:auto}
+.ws-body{flex:1;min-height:0;display:flex}
+.ws-body>*{min-width:0}
+
+/* 徽章 */
+.st{display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:2.5px 9px;border-radius:999px;border:1px solid var(--border-default);background:var(--pill-bg);color:var(--text-secondary);white-space:nowrap}
+.st .dot{width:6px;height:6px;border-radius:50%;flex:0 0 auto}
+.st--ghost{border-style:dashed;color:var(--text-tertiary)}
+.st--solid{background:var(--chip-active-bg);border-color:transparent;color:var(--chip-active-fg)}
+.kg-pill{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--text-tertiary);white-space:nowrap}
+.kg-pill b{font-weight:500;color:var(--text-secondary)}
+.sha,.pid{font-family:var(--font-mono);font-size:11px;color:var(--text-muted)}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:6px 12px;border-radius:var(--radius-md);border:1px solid var(--border-default);color:var(--text-secondary);white-space:nowrap}
+.btn:hover{background:var(--bg-hover);color:var(--text-primary)}
+.btn--ink{background:var(--text-primary);color:var(--bg-primary);border-color:transparent}
+.btn--ink:hover{background:var(--text-primary);opacity:.88;color:var(--bg-primary)}
+
+/* ===== 对话视图 ===== */
+.chat-col{flex:1;display:flex;flex-direction:column;min-width:0}
+.chat-scroll{flex:1;overflow-y:auto;padding:22px 0 12px}
+.chat-inner{max-width:760px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:14px}
+.proc-card{width:100%;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--radius-md);border:1px solid var(--border-subtle);background:var(--bg-secondary);color:var(--text-tertiary);font-size:12px;text-align:left}
+.proc-card .ic svg{width:13px;height:13px}
+.msg{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.msg-user{align-self:flex-end;max-width:86%;background:var(--user-bubble);color:var(--user-text);padding:9px 13px;border-radius:14px 14px 4px 14px;font-size:13px;line-height:1.55}
+.msg-bot{max-width:100%;background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:4px 14px 14px 14px;padding:12px 15px;font-size:13px;line-height:1.68;color:var(--text-primary)}
+.msg-bot .msg-text sub,.msg-bot .msg-text sup{font-size:.72em}
+.sup{display:inline-flex;align-items:center;justify-content:center;min-width:16px;height:16px;padding:0 3px;margin:0 1px;border-radius:5px;background:var(--accent-dim);color:var(--accent);font-size:11px;font-family:var(--font-mono);vertical-align:super;line-height:1}
+.sup:hover{background:var(--accent-glow);color:var(--text-primary)}
+.sup-cite{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.sup-cite .lbl{font-size:11px;color:var(--text-muted)}
+.composer{flex:0 0 auto;max-width:760px;width:100%;margin:8px auto 0;padding:0 24px 4px}
+.composer-box{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg-primary);border:1px solid var(--border-default);border-radius:var(--radius-xl)}
+.composer-box:focus-within{border-color:var(--border-strong);box-shadow:0 0 0 3px var(--accent-dim)}
+.composer-box input{flex:1;font-size:13px}
+.composer-pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--text-secondary);border:1px solid var(--border-default);border-radius:999px;padding:3.5px 10px;white-space:nowrap}
+.composer-pill b{font-weight:600}
+.composer-pill:hover{background:var(--bg-hover)}
+.send-btn{width:28px;height:28px;border-radius:999px;background:var(--text-primary);color:var(--bg-primary);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.disclaim{max-width:760px;margin:6px auto 0;padding:0 24px 10px;font-size:11px;color:var(--text-muted);text-align:center}
+/* 证据链右栏（EvidenceRail） */
+.erail{width:348px;flex:0 0 348px;border-left:1px solid var(--border-subtle);background:var(--bg-secondary);display:flex;flex-direction:column}
+.erail-head{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border-subtle)}
+.erail-scroll{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
+.ecard{width:100%;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:11px 13px;border-radius:var(--radius-lg);background:var(--bg-primary);border:1px solid var(--border-subtle)}
+.ecard:hover{border-color:var(--border-strong)}
+.ecard .t{font-size:12.5px;font-weight:500;line-height:1.4;width:100%}
+.ecard .m{font-size:11px;color:var(--text-tertiary);width:100%}
+
+/* ===== 论文库视图 ===== */
+.lib-scroll{flex:1;overflow-y:auto}
+.lib-inner{max-width:860px;margin:0 auto;padding:0 24px 30px}
+.lib-sum{display:flex;align-items:center;gap:10px;padding:12px 0 10px;font-size:12px;color:var(--text-tertiary);flex-wrap:wrap}
+.lib-sum b{color:var(--text-secondary);font-weight:500}
+.lrow{display:flex;flex-direction:column;align-items:flex-start;gap:6px;width:100%;text-align:left;padding:13px 14px;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);background:var(--bg-primary);margin-bottom:8px;cursor:pointer}
+.lrow:hover{border-color:var(--border-strong)}
+.lrow .t{font-size:13.5px;font-weight:500;line-height:1.4;width:100%}
+.lrow .m{font-size:11.5px;color:var(--text-tertiary);width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lrow .b{display:flex;align-items:center;gap:8px;flex-wrap:wrap;width:100%}
+.qa-chip{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--text-secondary);background:var(--pill-bg);border:1px solid var(--border-default);border-radius:999px;padding:2px 9px}
+.qa-chip:hover{background:var(--accent-dim)}
+
+/* ===== 阅读器（C 形态 + A/B 对照） ===== */
+.pdf-col{flex:1;display:flex;flex-direction:column;position:relative;background:var(--bg-tertiary);min-width:0}
+.pdf-toolbar{flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:7px 14px;border-bottom:1px solid var(--border-subtle);background:var(--bg-primary)}
+.pdf-pageinfo{font-size:12px;color:var(--text-secondary);font-family:var(--font-mono)}
+.pdf-zoom{display:flex;align-items:center;gap:2px;margin-left:auto}
+.zbtn{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--text-secondary)}
+.zbtn:hover{background:var(--bg-hover)}
+.pdf-scroll{flex:1;overflow-y:auto;position:relative;padding:18px 24px 30px}
+.paper-page{max-width:640px;margin:0 auto 16px;background:var(--paper);color:var(--paper-text);border:1px solid var(--border-default);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.07);padding:30px 34px 26px;font-family:var(--font-serif);font-size:11.5px;line-height:1.66}
+.paper-page sub,.paper-page sup{font-size:10.5px}
+.pp-head{display:flex;justify-content:space-between;font-family:var(--font-body);font-size:11px;color:var(--paper-meta);margin-bottom:14px;gap:12px}
+.pp-title{font-size:17px;font-weight:700;text-align:center;line-height:1.3;margin:2px 0 8px}
+.pp-authors{font-size:11px;text-align:center;color:var(--paper-meta);margin-bottom:12px}
+.pp-h1{font-size:13.5px;font-weight:700;margin:13px 0 5px;font-family:var(--font-serif)}
+.pp-h2{font-size:12.5px;font-weight:700;margin:11px 0 4px;font-family:var(--font-serif)}
+.pp-abs-label{font-weight:700;text-align:center;display:block;margin:4px 0 4px}
+.two-col{column-count:2;column-gap:24px;text-align:justify;hyphens:auto}
+.eq{font-family:var(--font-serif);font-style:italic;text-align:center;margin:9px 0;font-size:13px}
+.eq .tag{font-style:normal;font-family:var(--font-body);font-size:11px;color:var(--paper-meta);margin-left:10px}
+.t1{border-collapse:collapse;margin:8px auto;font-family:var(--font-body);font-size:11px;width:100%}
+.t1 th,.t1 td{border-bottom:1px solid rgba(128,128,128,.35);padding:3px 6px;text-align:center}
+.t1 th{font-weight:600;border-bottom-width:1.5px}
+.t1 .cap{font-size:11px;color:var(--paper-meta);text-align:left;display:block;margin-top:3px}
+.fig2{display:flex;align-items:center;justify-content:center;gap:6px;margin:10px 0 4px;font-family:var(--font-body)}
+.fig2 .fnode{border:1.2px solid currentColor;border-radius:5px;padding:5px 9px;font-size:11px;color:var(--paper-text)}
+.fig2 .farr{color:var(--paper-meta);font-size:11px}
+.hl{background:var(--hl-bg);border-bottom:1.5px solid var(--warning);border-radius:2px;cursor:pointer;transition:box-shadow .3s}
+.hl.hl-user{background:var(--hl-user);border-bottom-color:var(--accent-light)}
+.hl.is-pulse{animation:hlpulse 2.4s ease-out}
+@keyframes hlpulse{0%{box-shadow:0 0 0 0 rgba(217,119,6,.55)}70%{box-shadow:0 0 0 9px rgba(217,119,6,0)}100%{box-shadow:0 0 0 0 rgba(217,119,6,0)}}
+.pp-foot{display:flex;justify-content:center;font-family:var(--font-body);font-size:11px;color:var(--paper-meta);margin-top:12px}
+.pdf-state{flex:1;display:flex;align-items:center;justify-content:center;padding:30px}
+.pdf-state-card{width:min(460px,92%);background:var(--bg-primary);border:1px solid var(--border-default);border-radius:var(--radius-xl);padding:30px 30px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.st-ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+.st-ic svg{width:22px;height:22px}
+.st-title{font-size:15.5px;font-weight:600}
+.st-desc{font-size:12.5px;color:var(--text-secondary);line-height:1.6;max-width:360px}
+.st-btns{display:flex;gap:8px;margin-top:6px;justify-content:center;flex-wrap:wrap}
+.st-src{font-size:11px;color:var(--text-tertiary);margin-top:8px;line-height:1.5}
+/* C：目录列 + 证据流 */
+.outline-col{width:242px;flex:0 0 242px;border-right:1px solid var(--border-subtle);display:flex;flex-direction:column;background:var(--bg-secondary)}
+.ol-label{font-size:11px;color:var(--text-muted);padding:12px 14px 6px}
+.ol-scroll{flex:1;overflow-y:auto;padding:0 8px 14px}
+.ol-item{display:flex;align-items:center;gap:7px;width:100%;text-align:left;padding:5.5px 8px;border-radius:7px;font-size:12px;color:var(--text-secondary)}
+.ol-item:hover{background:var(--bg-hover)}
+.ol-item.lvl2{padding-left:24px;font-size:11.5px;color:var(--text-tertiary)}
+.ol-item.has-anchor::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--warning);margin-left:auto;opacity:.85}
+.ol-sep{border-top:1px solid var(--border-subtle);margin:10px 6px}
+.anchor-row{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;text-align:left;padding:8px 9px;border-radius:var(--radius-md)}
+.anchor-row:hover{background:var(--bg-hover)}
+.anchor-row .a-quote{font-size:11.5px;color:var(--text-secondary);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.anchor-row .a-page{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary)}
+.ev-col{width:376px;flex:0 0 376px;border-left:1px solid var(--border-subtle);display:flex;flex-direction:column;background:var(--bg-secondary)}
+.ev-head{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border-subtle)}
+.ev-scroll{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px}
+.ev-card{background:var(--bg-primary);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:12px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.ev-kind{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--text-tertiary)}
+.ev-kind .kk{font-weight:500;color:var(--text-secondary)}
+.ev-quote{font-family:var(--font-serif);font-style:italic;font-size:11.5px;color:var(--text-secondary);border-left:2px solid var(--border-strong);padding:2px 0 2px 9px;line-height:1.5}
+.ev-quote sub{font-size:.75em}
+.ev-text{font-size:12.5px;line-height:1.62}
+.ev-text sub{font-size:.72em}
+.ev-fx{width:100%;background:var(--pill-bg);border:1px dashed var(--border-strong);border-radius:var(--radius-md);padding:8px 10px;font-family:var(--font-serif);font-style:italic;font-size:12.5px;text-align:center}
+.ev-flag{font-size:11px;color:var(--warning);display:inline-flex;align-items:center;gap:4px}
+.ev-acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.ev-mini{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--text-secondary);border:1px solid var(--border-default);border-radius:999px;padding:3.5px 10px}
+.ev-mini:hover{background:var(--bg-hover)}
+.ev-note{font-size:11.5px;color:var(--text-tertiary);line-height:1.5}
+/* A 对照：文献列 + AI 面板；B 对照：论文带 + 抽屉 */
+.papers-col{width:270px;flex:0 0 270px;border-right:1px solid var(--border-subtle);display:flex;flex-direction:column;background:var(--bg-secondary)}
+.psearch{margin:10px 10px 6px;display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:var(--radius-md);background:var(--bg-primary);border:1px solid var(--border-default);color:var(--text-tertiary)}
+.psearch input{flex:1;font-size:12.5px;color:var(--text-primary)}
+.plist{flex:1;overflow-y:auto;padding:4px 8px 12px}
+.prow{width:100%;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:10px 10px 9px;border-radius:var(--radius-lg);border:1px solid transparent}
+.prow:hover{background:var(--bg-hover)}
+.prow.is-active{background:var(--bg-primary);border-color:var(--border-default)}
+.prow-title{font-size:12.5px;font-weight:500;line-height:1.35;color:var(--text-primary);display:block;width:100%}
+.prow-meta{font-size:11px;color:var(--text-tertiary);width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prow-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%}
+.ai-col{width:348px;flex:0 0 348px;border-left:1px solid var(--border-subtle);display:flex;flex-direction:column;background:var(--bg-secondary)}
+.ai-head{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border-subtle)}
+.ai-head-title{font-size:13px;font-weight:600}
+.ai-mode{font-size:11px;color:var(--text-tertiary);display:flex;align-items:center;gap:4px;margin-left:auto}
+.ai-scroll{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px}
+.ai-empty{margin:auto;text-align:center;color:var(--text-tertiary);font-size:12.5px;line-height:1.7;padding:30px 20px}
+.ai-composer{flex:0 0 auto;display:flex;align-items:center;gap:8px;margin:10px;padding:9px 12px;background:var(--bg-primary);border:1px solid var(--border-default);border-radius:var(--radius-lg)}
+.ai-composer input{flex:1;font-size:12.5px}
+.ai-hint{font-size:11px;color:var(--text-muted);padding:0 14px 10px;line-height:1.5}
+.strip-wrap{flex:0 0 auto;border-bottom:1px solid var(--border-subtle);background:var(--bg-primary)}
+.strip{overflow-x:auto;padding:8px 14px}
+.strip-inner{display:flex;gap:8px;width:max-content;min-width:100%;align-items:center}
+.chip{display:flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;border:1px solid var(--border-default);font-size:12px;color:var(--text-secondary);white-space:nowrap;flex:0 0 auto}
+.chip .dot{width:6px;height:6px;border-radius:50%}
+.chip.is-active{background:var(--chip-active-bg);color:var(--chip-active-fg);border-color:transparent;font-weight:500}
+.chip:hover:not(.is-active){background:var(--bg-hover)}
+.pdf-col--wide .paper-page{max-width:680px}
+.cmdk-btn{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-tertiary);border:1px solid var(--border-default);border-radius:999px;padding:5px 12px;white-space:nowrap}
+.cmdk-btn:hover{background:var(--bg-hover)}
+.cmdk-mask{position:absolute;inset:0;background:rgba(0,0,0,.28);display:flex;align-items:flex-start;justify-content:center;padding-top:110px;z-index:30}
+.cmdk{width:min(520px,92%);background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:var(--radius-lg);box-shadow:var(--shadow-pop);overflow:hidden}
+.cmdk-input{display:flex;align-items:center;gap:9px;padding:12px 14px;border-bottom:1px solid var(--border-subtle);color:var(--text-tertiary)}
+.cmdk-input input{flex:1;font-size:13.5px}
+.cmdk-list{max-height:300px;overflow-y:auto;padding:6px}
+.cmdk-row{display:flex;align-items:center;gap:9px;width:100%;text-align:left;padding:9px 10px;border-radius:var(--radius-md)}
+.cmdk-row:hover{background:var(--bg-hover)}
+.cmdk-row .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12.5px}
+.ai-drawer{width:360px;flex:0 0 360px;border-left:1px solid var(--border-subtle);display:flex;flex-direction:column;background:var(--bg-secondary)}
+.ai-rail{width:34px;flex:0 0 34px;border-left:1px solid var(--border-subtle);display:flex;flex-direction:column;align-items:center;padding-top:14px;gap:10px;color:var(--text-tertiary);background:var(--bg-secondary)}
+.ai-rail:hover{color:var(--text-primary);background:var(--bg-hover)}
+.rail-txt{writing-mode:vertical-rl;font-size:11.5px;letter-spacing:2px}
+
+/* ===== 论文详情抽屉（全局） ===== */
+.drawer-mask{position:fixed;inset:0;background:rgba(0,0,0,.24);z-index:44}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:480px;max-width:94vw;background:var(--bg-primary);border-left:1px solid var(--border-default);z-index:45;display:flex;flex-direction:column;box-shadow:-12px 0 32px rgba(0,0,0,.10)}
+:root[data-theme="dark"] .drawer{box-shadow:-12px 0 32px rgba(0,0,0,.45)}
+.dr-head{flex:0 0 auto;display:flex;align-items:flex-start;gap:10px;padding:14px 16px;border-bottom:1px solid var(--border-subtle)}
+.dr-title{font-size:14.5px;font-weight:600;line-height:1.4;flex:1;min-width:0}
+.dr-x{flex:0 0 auto;width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--text-tertiary)}
+.dr-x:hover{background:var(--bg-hover);color:var(--text-primary)}
+.dr-scroll{flex:1;overflow-y:auto;padding:14px 16px 20px;display:flex;flex-direction:column;gap:12px}
+.dr-meta{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.dr-pid{font-family:var(--font-mono);font-size:11px;color:var(--text-muted)}
+.dr-sec{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.dr-label{font-size:11px;font-weight:600;color:var(--text-tertiary);letter-spacing:.06em;text-transform:uppercase}
+.dr-abs{font-family:var(--font-serif);font-size:12.5px;line-height:1.66;color:var(--text-secondary)}
+.dr-assert{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:9px 11px;border:1px solid var(--border-subtle);border-radius:var(--radius-md);background:var(--bg-secondary)}
+.dr-assert .a{font-size:12.5px;color:var(--text-primary)}
+.dr-assert .a b{font-weight:600}
+.dr-assert .m{font-size:11px;color:var(--text-tertiary)}
+.cand{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;color:var(--warning);border:1px solid var(--warning);border-radius:999px;padding:0.5px 7px;opacity:.9}
+.dr-act{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:12px;border:1px solid var(--border-default);border-radius:var(--radius-lg);background:var(--bg-secondary)}
+.dr-act-note{font-size:11.5px;color:var(--text-tertiary);line-height:1.55}
+.dr-btnrow{display:flex;gap:8px;flex-wrap:wrap}
+.typing-caret::after{content:'▍';color:var(--text-tertiary);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ===== 划词浮条 / toast / 评审条 ===== */
+#selpop{position:fixed;z-index:60;display:flex;gap:2px;padding:3px;background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:10px;box-shadow:var(--shadow-pop)}
+#selpop[hidden]{display:none}
+.selp-btn{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:5px 10px;border-radius:7px;color:var(--text-secondary);white-space:nowrap}
+.selp-btn:hover{background:var(--bg-hover);color:var(--text-primary)}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:104px;z-index:70;background:var(--text-primary);color:var(--bg-primary);font-size:12.5px;padding:9px 16px;border-radius:10px;box-shadow:var(--shadow-pop);max-width:min(560px,86vw)}
+#toast[hidden]{display:none}
+#rbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;gap:14px;padding:10px 16px;background:var(--bg-elevated);border-top:1px solid var(--border-default);flex-wrap:wrap;width:max-content;max-width:100vw;margin-left:auto;margin-right:auto;border-left:1px solid var(--border-subtle);border-right:1px solid var(--border-subtle);border-radius:12px 12px 0 0}
+.rbar-seg{display:flex;gap:4px;background:var(--bg-tertiary);border-radius:10px;padding:3px}
+.rbar-dir{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:8px;color:var(--text-secondary);white-space:nowrap}
+.rbar-dir:hover{color:var(--text-primary)}
+.rbar-dir.is-active{background:var(--bg-primary);color:var(--text-primary);font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.rbar-dir .kbd{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);border:1px solid var(--border-default);border-radius:4px;padding:0 4px}
+.rbar-cost{font-size:11.5px;color:var(--text-tertiary);line-height:1.45;white-space:normal;max-width:400px}
+.rbar-cost b{color:var(--text-secondary);font-weight:500}
+.rbar-keys{font-size:11px;color:var(--text-muted);margin-left:auto;white-space:nowrap}
+.rbar-theme{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;color:var(--text-secondary);border:1px solid var(--border-default)}
+.rbar-theme:hover{background:var(--bg-hover)}
+.banner{flex:0 0 auto;display:flex;align-items:flex-start;gap:10px;padding:9px 16px;background:var(--accent-dim);border-bottom:1px solid var(--border-subtle);font-size:12px;color:var(--text-secondary);line-height:1.55}
+.banner b{color:var(--text-primary);font-weight:500}
+.banner-x{margin-left:auto;color:var(--text-tertiary);flex:0 0 auto;padding:2px}
+.banner-x:hover{color:var(--text-primary)}
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar"></aside>
+  <div id="main"><div id="stage"></div></div>
+</div>
+<div id="selpop" hidden></div>
+<div id="toast" hidden></div>
+<div id="rbar"></div>
+
+<script>
+'use strict';
+/* ===== 图标（lucide 线性） ===== */
+const P={
+check:'<path d="M20 6 9 17l-5-5"/>',ext:'<path d="M7 17 17 7"/><path d="M8 7h9v9"/>',
+ban:'<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/>',
+refresh:'<path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v5h-5"/>',
+lock:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>',
+file:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/>',
+upload:'<path d="M12 16V4"/><path d="m6 10 6-6 6 6"/><path d="M4 20h16"/>',
+send:'<path d="M22 2 15 22l-4-9-9-4Z"/>',
+spark:'<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z"/>',
+hl:'<path d="m9 11-6 6v3h9l3-3"/><path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4"/>',
+bookmark:'<path d="M6 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17l-6-4-6 4Z"/>',
+x:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+msg:'<path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/>',
+net:'<circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.9 7.6-4.8"/><path d="m8.2 13.1 7.6 4.8"/>',
+note:'<path d="M4 4h16v10l-6 6H4Z"/><path d="M14 20v-6h6"/>',
+chevL:'<path d="m15 18-6-6 6-6"/>',chevR:'<path d="m9 18 6-6-6-6"/>',
+minus:'<path d="M5 12h14"/>',plus:'<path d="M12 5v14"/><path d="M5 12h14"/>',
+alert:'<path d="M10.3 4.2 1.9 18a2 2 0 0 0 1.7 3h16.8a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 10v4"/><path d="M12 17.5h.01"/>',
+chat:'<path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/>',
+book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+zap:'<path d="M13 2 4 14h6l-1 8 9-12h-6Z"/>',
+sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>',
+clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/>',
+arrowR:'<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>',
+};
+function ic(n,cls){return '<span class="ic'+(cls?' '+cls:'')+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(P[n]||P.file)+'</svg></span>';}
+const SPIRAL='M 2.4,24.25 A 16.5,16.5 0 0 1 18.9,7.75 A 10.2,10.2 0 0 1 29.1,17.95 A 6.3,6.3 0 0 1 22.8,24.25 A 3.9,3.9 0 0 1 18.9,20.35 A 2.4,2.4 0 0 1 21.3,17.95 A 1.5,1.5 0 0 1 22.8,19.45';
+
+/* ===== 数据 ===== */
+const STATUS={
+  available:{label:'全文可读',dot:'var(--success)',ic:'check'},
+  publisher_link_only:{label:'仅出版社页',dot:'var(--accent)',ic:'ext'},
+  no_oa_found:{label:'未收录全文',dot:'var(--text-muted)',ic:'ban',ghost:1},
+  fetch_failed:{label:'获取失败 · 可重试',dot:'var(--warning)',ic:'refresh'},
+  restricted:{label:'需上传 PDF',dot:'var(--accent)',ic:'lock',solid:1},
+};
+const PAPERS=[
+ {id:'attention',pid:'conf/nips/VaswaniSPUJGKP17',title:'Attention Is All You Need',authors:'Vaswani et al. · Google Brain / Google Research / U. Toronto',year:2017,venue:'NeurIPS 2017 · arXiv:1706.03762',status:'available',kg:'引文支持',sha:'9f2a41c7e8b3d605',full:true,
+  abs:'The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.',
+  asserts:[['Transformer','USED_FOR','机器翻译','0.99998'],['自注意力','PART_OF','Transformer 架构','0.99871']]},
+ {id:'resnet',pid:'conf/cvpr/HeZRS16',title:'Deep Residual Learning for Image Recognition',authors:'He, Zhang, Ren, Sun · Microsoft Research',year:2015,venue:'CVPR 2016 · arXiv:1512.03385',status:'available',kg:'仅题名',sha:'3c8e02b1a4f79d66',
+  abs:'Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously.',
+  asserts:[['ResNet','USED_FOR','图像分类','0.99764']]},
+ {id:'gpt3',pid:'conf/nips/BrownMRSKDNSSAA20',title:'Language Models are Few-Shot Learners',authors:'Brown et al. · OpenAI',year:2020,venue:'NeurIPS 2020 · arXiv:2005.14165',status:'available',kg:'仅题名',sha:'b71d9e2043ca85f2',
+  abs:'We train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting.',
+  asserts:[['GPT-3','EVALUATED_FOR','小样本学习','0.99612']]},
+ {id:'elsevier',pid:'journals/dke/ChenO23',title:'Adaptive Retrieval for Knowledge-Intensive Tasks',authors:'Chen, Ouyang · 2023',year:2023,venue:'Data & Knowledge Engineering (Elsevier)',status:'publisher_link_only',kg:'仅题名',asserts:[]},
+ {id:'acm',pid:'journals/thri/WuI21',title:'Curriculum Scheduling in Embodied Agents',authors:'Wu, Ilic · 2021',year:2021,venue:'ACM Trans. on Human-Robot Interaction',status:'no_oa_found',kg:'仅题名',asserts:[]},
+ {id:'timeout',pid:'conf/icml/KaplanN24',title:'Sparse Mixture-of-Experts Routing',authors:'Kaplan, Nado · 2024',year:2024,venue:'OA 源（ACM DL）· 重试 3 次超时',status:'fetch_failed',kg:'未核验',asserts:[]},
+ {id:'nature',pid:'journals/nature/FerruzS22',title:'Protein Complex Assembly at Scale',authors:'Ferruz, Schmidt · 2022',year:2022,venue:'Nature（出版社版权）',status:'restricted',kg:'仅题名',asserts:[]},
+];
+const paperById=id=>PAPERS.find(p=>p.id===id);
+const STATUS_CARD={
+  publisher_link_only:{ic:'ext',tone:'var(--accent)',title:'未获取到全文 PDF',desc:'OpenAlex 与 Semantic Scholar 均未提供开放获取 PDF，仅找到出版社落地页。系统不会伪装已有全文 —— 可以先访问出版社页面确认，或上传自己有权使用的 PDF。',btns:[{t:'访问出版社页面',act:'ext',ink:1},{t:'上传 PDF',act:'upload'}]},
+  no_oa_found:{ic:'ban',tone:'var(--text-muted)',title:'未收录全文（no_oa_found）',desc:'已按优先级查询 arXiv / OpenAlex best_oa_location / Semantic Scholar openAccessPdf，均无开放获取版本。这是真实不存在，不是获取失败 —— 两类状态永远分开呈现。',btns:[{t:'上传 PDF',act:'upload',ink:1}]},
+  fetch_failed:{ic:'refresh',tone:'var(--warning)',title:'获取失败（fetch_failed）',desc:'确认存在 OA 全文，但下载连接 3 次超时。失败与不存在是两回事：这条状态可重试。',btns:[{t:'重试获取',act:'retry',ink:1},{t:'上传 PDF',act:'upload'}]},
+  restricted:{ic:'lock',tone:'var(--accent)',title:'受限获取（restricted）',desc:'该论文在出版社版权限制内，机构订阅之外无法合法自动获取。可以挂接机构代理后重试，或直接上传你有权使用的 PDF。',btns:[{t:'挂机构代理重试',act:'retry'},{t:'上传 PDF',act:'upload',ink:1}]},
+};
+const Q_A={q:'为什么要除以 √d<sub>k</sub>？',html:true,
+ a:'当键向量维度 d<sub>k</sub> 增大时，点积 q·k 的方差随 d<sub>k</sub> 线性变大，softmax 容易被推进梯度极小的饱和区。除以 √d<sub>k</sub> 把方差归一回 O(1)，缓解饱和与梯度消失。原文 §3.2.1 明确写了这一动机：To counteract this effect, we scale the dot products by 1/√d<sub>k</sub>.',
+ cites:[{page:4,label:'p.4 §3.2.1',anchor:'hl-scaling'},{page:4,label:'p.4 Eq.(1)'},{page:8,label:'p.8 App. A'}]};
+const GENERIC_EXPLAIN='该段落位于 §3.2，讨论注意力机制的设计动机。结合上下文：作者先说明点积注意力的计算方式，再解释缩放因子的必要性。（原型演示文案；真实实现由 PaperQA2 在全文索引上检索证据后作答，每条结论附页码定位。）';
+const SCALING_EXPLAIN='这句是缩放点积注意力的核心动机：当 d<sub>k</sub> 较大时，点积是 d<sub>k</sub> 个独立项之和，方差随维度线性增长，大量分量进入 softmax 饱和区后梯度趋近于零。除以 √d<sub>k</sub> 将方差归一，保证训练初期梯度健康。';
+function explainFor(q){return /suspect|scale|gradient/i.test(q)?SCALING_EXPLAIN:GENERIC_EXPLAIN;}
+
+const S={
+  view:'agent',layout:'C',theme:'light',paper:'attention',drawer:null,railOpen:false,cmdk:false,cmdkQ:'',banner:true,
+  agentMsgs:[
+    {role:'user',text:'Transformer 之后有哪些注意力机制的改进工作？'},
+    {role:'assistant',html:true,
+     text:'检索了图谱中 2017 年后的相关论文（4 步 · 25 篇候选）。后续改进大致沿三条线：<br>· <b>效率化</b> —— 稀疏 / 线性注意力变体，把 O(n²) 复杂度往下压<sup class="sup" data-act="sup" data-pid="attention">1</sup><br>· <b>残差与深度</b> —— 注意力堆叠后训练稳定性依赖残差结构<sup class="sup" data-act="sup" data-pid="resnet">2</sup><br>· <b>检索增强</b> —— 把外部知识检索接入生成过程<sup class="sup" data-act="sup" data-pid="elsevier">3</sup><br>如果要看第 1 条线原始论文里缩放点积的动机，可以直接进阅读器看 §3.2.1。'},
+  ],
+  evidence:[
+    {kind:'qa',q:'Table 1 的最大路径长度对比说明什么？',text:'自注意力的最大路径长度是 O(1)，循环层是 O(n)。路径越短，长程依赖越容易学习。',cites:[{page:3,label:'p.3 Table 1',anchor:null}],time:'16:42'},
+    {kind:'explain',quote:'To counteract this effect, we scale the dot products by 1/√d<sub>k</sub>.',html:true,text:SCALING_EXPLAIN,cites:[{page:4,label:'p.4 §3.2.1',anchor:'hl-scaling'}],time:'16:39'},
+    {kind:'formula',fx:'MultiHead(Q,K,V) = Concat(head_1 … head_8) W_o',text:'视觉模型解析：8 个头并行投影到 d_k = 64 的子空间，输出拼接后经 W_o 变换回 d_model = 512。',flag:'需视觉模型 · 未配置时如实降级',cites:[{page:4,label:'p.4 Eq.(1)',anchor:null}],time:'16:35'},
+  ],
+};
+let TYPERS=[];
+
+/* ===== 工具 ===== */
+const q=(s,el)=>(el||document).querySelector(s);
+const qa=(s,el)=>Array.from((el||document).querySelectorAll(s));
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function toast(t){const el=q('#toast');el.textContent=t;el.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>{el.hidden=true;},2400);}
+function clearTypers(){TYPERS.forEach(clearInterval);TYPERS=[];}
+function typewrite(el,full){
+  if(!el)return;
+  const plain=full.replace(/<[^>]+>/g,'');let i=0;el.classList.add('typing-caret');
+  const iv=setInterval(()=>{i+=3;if(i<plain.length){el.textContent=plain.slice(0,i);}else{el.innerHTML=full;el.classList.remove('typing-caret');clearInterval(iv);}},26);
+  TYPERS.push(iv);
+}
+function goPage(page,anchor){
+  const sc=q('.pdf-scroll');if(!sc){toast('当前视图没有阅读区');return;}
+  const pg=sc.querySelector('[data-page="'+page+'"]');
+  if(!pg){toast('原型仅内置这篇论文的第 1 / 3 / 4 页演示页面');return;}
+  sc.scrollTo({top:pg.offsetTop-14,behavior:'smooth'});
+  if(anchor){const a=sc.querySelector('#'+anchor);if(a){a.classList.remove('is-pulse');void a.offsetWidth;a.classList.add('is-pulse');setTimeout(()=>a.classList.remove('is-pulse'),2600);}}
+}
+function stBadge(p){const s=STATUS[p.status];return '<span class="st'+(s.ghost?' st--ghost':'')+(s.solid?' st--solid':'')+'" data-state="'+p.status+'"><span class="dot" style="background:'+(s.ghost?'transparent;border:1.5px solid var(--text-muted)':s.dot)+'"></span>'+s.label+'</span>';}
+function citesRow(cites){return '<div class="mx-cites" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">'+cites.map(c=>'<button class="cite" data-act="cite" data-page="'+c.page+'"'+(c.anchor?' data-anchor="'+c.anchor+'"':'')+' style="display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:11px;color:var(--text-secondary);background:var(--pill-bg);border:1px solid var(--border-default);border-radius:999px;padding:2px 9px;white-space:nowrap">'+ic('file','ic-13')+c.label+'</button>').join('')+'</div>';}
+
+/* ===== 侧栏 ===== */
+function renderSidebar(){
+  q('#sidebar').innerHTML=
+  '<div class="sb-head"><div class="sb-logo">'+
+  '<span class="sb-logo-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="'+SPIRAL+'" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round"/></svg></span>'+
+  '<span class="sb-logo-name">research</span>'+
+  '<button class="sb-toggle" data-noop title="真机 260↔60 可折叠">'+ic('chevL')+'</button></div></div>'+
+  '<nav class="sb-nav"><div class="sb-group-label">研究区</div>'+
+  '<button class="sb-item'+(S.view==='agent'?' is-active':'')+'" data-act="view" data-view="agent">'+ic('chat')+'<span>科研助手</span></button>'+
+  '<button class="sb-item'+(S.view==='library'?' is-active':'')+'" data-act="view" data-view="library">'+ic('book')+'<span>论文库与图谱</span></button>'+
+  '<button class="sb-item'+(S.view==='reader'?' is-active':'')+'" data-act="view" data-view="reader">'+ic('file')+'<span>原文阅读</span></button>'+
+  '</nav>'+
+  '<div class="sb-sec"><span class="sb-sec-label">对话记录</span><button class="sb-new" data-noop title="新的研究">'+ic('plus','ic-13')+'</button></div>'+
+  '<div class="sb-sessions">'+
+  '<button class="sess is-active" data-act="view" data-view="agent">'+ic('chat')+'<span class="sess-t"><span class="sess-title">Transformer 后注意力改进工作</span><span class="sess-time">刚刚</span></span></button>'+
+  '<button class="sess" data-act="view" data-view="agent">'+ic('chat')+'<span class="sess-t"><span class="sess-title">diffusion → image generation 证据链</span><span class="sess-time">2 小时前</span></span></button>'+
+  '</div>'+
+  '<div class="sb-foot"><span class="who"><span class="dot"></span>Agent 就绪 · deepseek-flash</span><button class="sb-theme" data-noop>'+ic('moon','ic-13')+'</button></div>';
+}
+
+/* ===== 视图：对话 ===== */
+function agentMsgHtml(m){
+  if(m.role==='user')return '<div class="msg"><div class="msg-user">'+(m.html?m.text:esc(m.text))+'</div></div>';
+  if(m.role==='assistant')return '<div class="msg"><div class="msg-bot"><span class="msg-text">'+(m.html?m.text:esc(m.text))+'</span>'+(m.cites?citesRow(m.cites):'')+'</div></div>';
+  if(m.role==='explain')return '<div class="msg"><div class="msg-explain" style="max-width:100%;background:var(--bg-primary);border:1px solid var(--border-default);border-left:3px solid var(--accent-light);border-radius:var(--radius-md);padding:10px 12px;font-size:12.5px;line-height:1.6"><div style="font-family:var(--font-serif);font-style:italic;font-size:11.5px;color:var(--text-secondary);border-left:2px solid var(--border-strong);padding:2px 0 2px 9px;margin-bottom:7px;line-height:1.5">'+(m.html?m.quote:esc(m.quote))+'</div><span class="msg-text" data-full="'+esc(m.text)+'"></span>'+(m.cites?citesRow(m.cites):'')+'</div></div>';
+  return '';
+}
+function renderAgent(){
+  const supCount=3;
+  let body='<div class="chat-col">'+
+  '<div class="chat-scroll"><div class="chat-inner">'+
+  '<button class="proc-card" data-act="noop">'+ic('zap','ic-13')+'研究过程 · 4 步工具调用 · 25 篇候选（已收起，真机可展开）</button>'+
+  S.agentMsgs.map(agentMsgHtml).join('')+
+  '</div></div>'+
+  '<div class="composer"><div class="composer-box">'+
+  '<button class="composer-pill" data-act="rail">'+ic('shield','ic-13')+'证据链 <b>'+supCount+'</b></button>'+
+  '<input id="ask-input" placeholder="继续追问，或换一个研究问题…">'+
+  '<button class="send-btn" data-act="send">'+ic('send','ic-13')+'</button></div></div>'+
+  '<div class="disclaim">回答基于 KG 图谱证据与全文索引；引用可点开论文详情，进而进入原文阅读。</div></div>';
+  if(S.railOpen){
+    body+='<div class="erail"><div class="erail-head">'+ic('shield')+'<span class="ai-head-title">证据链</span><span class="ai-mode">3 张论文卡 · 按回答顺序</span></div><div class="erail-scroll">'+
+    ['attention','resnet','elsevier'].map((pid,i)=>{const p=paperById(pid);
+      return '<button class="ecard" data-act="drawer" data-pid="'+p.id+'"><span class="t">'+(i+1)+'. '+esc(p.title)+'</span><span class="m">'+esc(p.authors)+' · '+p.year+'</span><span class="b" style="display:flex;gap:6px;align-items:center;width:100%">'+stBadge(p)+'</span></button>';}).join('')+
+    '<div class="ev-note">真机：EvidenceRail 默认收起，顶栏开关带计数徽标；卡片 = 回答实际引用的论文（paperItems）。</div></div></div>';
+  }
+  return headFor('agent')+'<div class="ws-body">'+body+'</div>';
+}
+/* ===== 视图：论文库 ===== */
+function renderLibrary(){
+  const rows=PAPERS.map(p=>
+    '<div class="lrow" role="button" tabindex="0" data-act="drawer" data-pid="'+p.id+'">'+
+    '<span class="t">'+esc(p.title)+'</span>'+
+    '<span class="m">'+esc(p.authors)+' · '+p.year+' · '+esc(p.venue)+'</span>'+
+    '<span class="b">'+stBadge(p)+kgBadge(p)+
+    (p.asserts.length?'<button class="qa-chip" data-act="noop">'+ic('net','ic-13')+'证据 '+p.asserts.length+'</button>':'')+
+    '</span></div>').join('');
+  return headFor('library')+'<div class="ws-body"><div class="lib-scroll"><div class="lib-inner">'+
+  '<div class="lib-sum"><b>8 条结果</b><span>·</span><span>q=attention</span><span>·</span>'+ic('shield','ic-13')+'<span>graphId 已锁定 · 实参回显在真机展开</span></div>'+
+  rows+
+  '<div class="ev-note" style="margin-top:8px">点任意行开论文详情抽屉 —— <b style="color:var(--text-secondary);font-weight:500">available 的行里才有「阅读全文」主按钮</b>；点第 4 行（仅出版社页）对比五态的如实呈现。</div>'+
+  '</div></div></div>';
+}
+function kgBadge(p){return '<span class="kg-pill">'+ic('net','ic-13')+'图谱：<b>'+p.kg+'</b></span>';}
+/* ===== 视图：阅读器 ===== */
+function page1(p){
+  return '<article class="paper-page" data-page="1"><div class="pp-head"><span>'+esc(p.venue)+'</span><span>p. 1</span></div>'+
+  '<h1 class="pp-title">'+esc(p.title)+'</h1><div class="pp-authors">'+esc(p.authors)+'</div>'+
+  '<span class="pp-abs-label">Abstract</span><p style="text-align:justify">'+esc(p.abs)+'</p>'+
+  '<div class="pp-h1">1&nbsp;&nbsp;Introduction</div><div class="two-col"><p>Deep learning has driven progress in tasks across modalities; the central question of this work is how structural choices determine what a model can learn efficiently.</p></div>'+
+  '<div class="pp-foot">1</div></article>';
+}
+function page3(){
+  return '<article class="paper-page" data-page="3"><div class="pp-head"><span>NIPS 2017</span><span>Attention Is All You Need · p. 3</span></div>'+
+  '<div class="pp-h1">3&nbsp;&nbsp;Model Architecture</div>'+
+  '<div class="two-col"><p>Most competitive neural sequence transduction models have an encoder-decoder structure. Here, the encoder maps an input sequence of symbol representations to a sequence of continuous representations, which the decoder then generates an output sequence of symbols one element at a time.</p>'+
+  '<table class="t1"><tr><th>Layer Type</th><th>Complexity / Layer</th><th>Sequential Ops</th><th>Max Path Length</th></tr>'+
+  '<tr><td>Self-Attention</td><td>O(n²·d)</td><td>O(1)</td><td>O(1)</td></tr>'+
+  '<tr><td>Recurrent</td><td>O(n·d²)</td><td>O(n)</td><td>O(n)</td></tr>'+
+  '<tr><td>Convolutional</td><td>O(k·n·d²)</td><td>O(1)</td><td>O(log_k(n))</td></tr></table>'+
+  '<span class="t1 cap">Table 1: Maximum path lengths, per-layer complexity and minimum number of sequential operations for different layer types.</span></div>'+
+  '<div class="pp-h2">3.2&nbsp;&nbsp;Attention</div>'+
+  '<div class="two-col"><p>An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values and output are all vectors. The output is computed as a weighted sum of the values.</p></div>'+
+  '<div class="eq">Attention(<i>Q, K, V</i>) = softmax(<i>QK</i><sup>T</sup> / √<i>d</i><sub>k</sub>)<i>V</i><span class="tag">(1)</span></div>'+
+  '<div class="pp-foot">3</div></article>';
+}
+function page4(){
+  return '<article class="paper-page" data-page="4"><div class="pp-head"><span>NIPS 2017</span><span>Attention Is All You Need · p. 4</span></div>'+
+  '<div class="pp-h2">3.2.1&nbsp;&nbsp;Scaled Dot-Product Attention</div>'+
+  '<p>We call our particular attention Scaled Dot-Product Attention. The input consists of queries and keys of dimension <i>d</i><sub>k</sub>. We compute the dot products of the query with all keys, divide each by √<i>d</i><sub>k</sub>, and apply a softmax function to obtain the weights on the values.</p>'+
+  '<div class="fig2"><span class="fnode">MatMul</span><span class="farr">→</span><span class="fnode">Scale</span><span class="farr">→</span><span class="fnode">Mask (opt.)</span><span class="farr">→</span><span class="fnode">SoftMax</span><span class="farr">→</span><span class="fnode">MatMul</span></div>'+
+  '<div class="two-col" style="margin-top:8px"><p><span class="hl" id="hl-scaling" title="AI 引用锚 · p.4 §3.2.1">We suspect that for large values of <i>d</i><sub>k</sub>, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients. To counteract this effect, we scale the dot products by 1/√<i>d</i><sub>k</sub>.</span> The scaling factor keeps the variance of the dot products stable across dimensions.</p>'+
+  '<p>Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions.</p></div>'+
+  '<div class="pp-foot">4</div></article>';
+}
+function pdfPages(p){
+  if(p.status!=='available')return stateCard(p);
+  const pages=[page1(p)];if(p.full){pages.push(page3(),page4());}
+  return '<div class="pdf-toolbar"><span class="pdf-pageinfo">1 / '+(p.full?15:8)+'</span>'+
+  '<span class="sha">'+(p.full?'已缓存 · sha256:'+p.sha:'已缓存')+'</span>'+
+  '<div class="pdf-zoom"><button class="zbtn" data-act="zoom">'+ic('minus','ic-13')+'</button><span style="font-size:12px;color:var(--text-secondary)">100%</span><button class="zbtn" data-act="zoom">'+ic('plus','ic-13')+'</button></div></div>'+
+  '<div class="pdf-scroll">'+pages.join('')+'</div>';
+}
+function stateCard(p){
+  const c=STATUS_CARD[p.status];
+  return '<div class="pdf-toolbar"><span class="pdf-pageinfo">— / —</span></div>'+
+  '<div class="pdf-state"><div class="pdf-state-card">'+
+  '<div class="st-ic" style="background:var(--pill-bg);color:'+c.tone+'">'+ic(c.ic,'ic-20')+'</div>'+
+  '<div class="st-title">'+c.title+'</div><div class="st-desc">'+c.desc+'</div>'+
+  '<div class="st-btns">'+c.btns.map(b=>'<button class="btn'+(b.ink?' btn--ink':'')+'" data-act="'+b.act+'">'+b.t+'</button>').join('')+'</div>'+
+  '<div class="st-src">全文来源优先级：arXiv / OpenReview → OpenAlex best_oa_location → Semantic Scholar openAccessPdf → 用户上传<br>来源、SHA-256 与获取时间全部落库，引用可追溯。</div>'+
+  '</div></div>';
+}
+function outlineCol(){
+  const tocs=[['Abstract',1,0],['1&nbsp;&nbsp;Introduction',1,0],['2&nbsp;&nbsp;Background',1,0],['3&nbsp;&nbsp;Model Architecture',1,0],['3.1&nbsp;&nbsp;Encoder – Decoder',2,0],['3.2&nbsp;&nbsp;Attention',2,1],['3.2.1&nbsp;&nbsp;Scaled Dot-Product',2,1],['3.2.2&nbsp;&nbsp;Multi-Head',2,0],['4&nbsp;&nbsp;Why Self-Attention',1,0],['5&nbsp;&nbsp;Training',1,0],['6&nbsp;&nbsp;Results',1,0],['7&nbsp;&nbsp;Conclusion',1,0]];
+  const anchors=[
+    {quote:'…we scale the dot products by 1/√d<sub>k</sub>',html:true,page:4,anchor:'hl-scaling',label:'p.4 §3.2.1'},
+    {quote:'Table 1: Maximum path lengths…',page:3,anchor:null,label:'p.3 Table 1'},
+    {quote:'Attention(Q,K,V) = softmax(…)',page:4,anchor:null,label:'p.4 Eq.(1)'}];
+  return '<div class="outline-col"><div class="ol-label">目录</div><div class="ol-scroll">'+
+  tocs.map(t=>'<button class="ol-item'+(t[2]===2?' lvl2':'')+(t[2]>=1?' has-anchor':'')+'" data-act="go-page" data-page="'+t[1]+'">'+t[0]+'</button>').join('')+
+  '<div class="ol-sep"></div><div class="ol-label">批注与引用锚</div>'+
+  anchors.map(a=>'<button class="anchor-row" data-act="cite" data-page="'+a.page+'"'+(a.anchor?' data-anchor="'+a.anchor+'"':'')+'><span class="a-quote">'+(a.html?a.quote:esc(a.quote))+'</span><span class="a-page">'+a.label+'</span></button>').join('')+
+  '<div class="ol-sep"></div><div class="ol-label">最近阅读 · P2</div>'+
+  '<button class="anchor-row" data-act="sel-paper" data-id="attention"><span class="a-quote" style="-webkit-line-clamp:1">Attention Is All You Need</span><span class="a-page">读到 p.4 · 全文可读</span></button>'+
+  '<button class="anchor-row" data-act="sel-paper" data-id="timeout"><span class="a-quote" style="-webkit-line-clamp:1">Sparse Mixture-of-Experts Routing</span><span class="a-page">昨天 · 获取失败</span></button>'+
+  '<button class="anchor-row" data-act="sel-paper" data-id="nature"><span class="a-quote" style="-webkit-line-clamp:1">Protein Complex Assembly at Scale</span><span class="a-page">上周 · 需上传</span></button>'+
+  '</div></div>';
+}
+function evidenceCol(){
+  const cards=S.evidence.map(e=>{
+    let body='';
+    if(e.kind==='qa')body='<div class="ev-quote" style="border-left:none;padding:0;font-style:normal;font-weight:600;color:var(--text-primary)">'+(e.html?e.q:esc(e.q))+'</div><div class="ev-text">'+(e.html?e.text:esc(e.text))+'</div>';
+    if(e.kind==='explain')body='<div class="ev-quote">'+(e.html?e.quote:esc(e.quote))+'</div><div class="ev-text" data-full="'+esc(e.text)+'"></div>';
+    if(e.kind==='formula')body='<div class="ev-fx">'+esc(e.fx)+'</div><div class="ev-text">'+(e.html?e.text:esc(e.text))+'</div><span class="ev-flag">'+ic('alert','ic-13')+e.flag+'</span>';
+    if(e.kind==='note')body='<div class="ev-quote">'+(e.html?e.quote:esc(e.quote))+'</div><div class="ev-note">我的批注 · 仅本机保存</div>';
+    return '<div class="ev-card"><span class="ev-kind">'+(e.kind==='qa'?ic('msg','ic-13')+'<span class="kk">提问</span>':e.kind==='explain'?ic('spark','ic-13')+'<span class="kk">划词解释</span>':e.kind==='formula'?ic('zap','ic-13')+'<span class="kk">公式解析</span>':ic('bookmark','ic-13')+'<span class="kk">批注</span>')+'<span style="opacity:.6">· '+e.time+'</span></span>'+
+    body+citesRow(e.cites)+
+    '<div class="ev-acts"><button class="ev-mini" data-act="kg">'+ic('net','ic-13')+'关联图谱断言</button><button class="ev-mini" data-act="ask-agent" data-quote="'+esc((e.quote||e.q||'').replace(/<[^>]+>/g,'').slice(0,60))+'">'+ic('chat','ic-13')+'带去问助手</button></div></div>';
+  }).join('');
+  return '<div class="ev-col"><div class="ev-head">'+ic('note')+'<span class="ai-head-title">证据流</span><span class="ai-mode">'+S.evidence.length+' 条 · 按时间</span></div>'+
+  '<div class="ev-scroll">'+cards+'</div>'+
+  '<div class="ai-composer"><input id="ask-input" placeholder="问这篇论文…"><button class="send-btn" data-act="send">'+ic('send','ic-13')+'</button></div>'+
+  '<div class="ai-hint">解释、问答、批注沉淀为带页码锚的证据卡，可回跳原文、可带去问助手（P3）、可入图谱（P4）。</div></div>';
+}
+function papersCol(){
+  return '<div class="papers-col">'+
+  '<div class="psearch">'+ic('search','ic-13')+'<input placeholder="检索论文（布局对照 A 专用）" data-noop><kbd style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);border:1px solid var(--border-default);border-radius:4px;padding:1px 5px">⌘K</kbd></div>'+
+  '<div class="plist">'+PAPERS.map(p=>'<button class="prow'+(p.id===S.paper?' is-active':'')+'" data-act="sel-paper" data-id="'+p.id+'"><span class="prow-title">'+esc(p.title)+'</span><span class="prow-meta">'+esc(p.authors)+' · '+p.year+'</span><span class="prow-badges">'+stBadge(p)+kgBadge(p)+'</span></button>').join('')+'</div></div>';
+}
+function aiPanel(msgs,variant){
+  const has=msgs&&msgs.length;
+  return '<div class="'+(variant==='drawer'?'ai-drawer':'ai-col')+'">'+
+  '<div class="ai-head">'+ic('spark')+'<span class="ai-head-title">科研助手</span>'+
+  (variant==='drawer'?'<button style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;color:var(--text-tertiary)" data-act="pin" title="收起">'+ic('x','ic-13')+'</button>':'')+
+  '<span class="ai-mode">'+ic('shield','ic-13')+'全文证据 RAG</span></div>'+
+  '<div class="ai-scroll">'+(has?msgs.map(agentMsgHtml).join(''):'<div class="ai-empty">'+ic('spark','ic-20')+'开始阅读后，可以：<br>· 选中正文任意段落 → 点「解释」<br>· 直接提问，回答带页码引用<br>· 引用可点击跳页并高亮原文</div>')+'</div>'+
+  '<div class="ai-composer"><input id="ask-input" placeholder="问这篇论文…"><button class="send-btn" data-act="send">'+ic('send','ic-13')+'</button></div>'+
+  '<div class="ai-hint">回答基于该论文全文索引；每条引用含页码与原文 quote，可点击定位。</div></div>';
+}
+function stripBar(){
+  return '<div class="strip-wrap"><div class="strip"><div class="strip-inner">'+
+  PAPERS.map(p=>'<button class="chip'+(p.id===S.paper?' is-active':'')+'" data-act="sel-paper" data-id="'+p.id+'"><span class="dot" style="background:'+(STATUS[p.status].ghost?'transparent;border:1.5px solid var(--text-muted)':STATUS[p.status].dot)+'"></span>'+esc(p.title.length>30?p.title.slice(0,30)+'…':p.title)+'</button>').join('')+
+  '</div></div></div>';
+}
+function cmdkHtml(){
+  const list=PAPERS.filter(p=>!S.cmdkQ||p.title.toLowerCase().includes(S.cmdkQ.toLowerCase())).map(p=>
+    '<button class="cmdk-row" data-act="cmdk-pick" data-id="'+p.id+'">'+ic('file','ic-13')+'<span class="t">'+esc(p.title)+'</span>'+stBadge(p)+'</button>').join('')||'<div class="ev-note" style="padding:10px 12px">无匹配论文</div>';
+  return '<div class="cmdk-mask" data-act="cmdk-close"><div class="cmdk"><div class="cmdk-input">'+ic('search','ic-13')+'<input id="cmdk-input" placeholder="跳转到论文…" value="'+esc(S.cmdkQ)+'"></div><div class="cmdk-list">'+list+'</div></div></div>';
+}
+function renderReader(){
+  const p=paperById(S.paper);
+  let body='';
+  if(S.layout==='A'){
+    body='<div class="ws-body">'+papersCol()+'<div class="pdf-col">'+pdfPages(p)+'</div>'+aiPanel(S.agentMsgs)+'</div>';
+  }else if(S.layout==='B'){
+    body=stripBar()+'<div class="ws-body"><div class="pdf-col pdf-col--wide">'+pdfPages(p)+'</div>'+
+    (S.railOpen?aiPanel(S.agentMsgs,'drawer'):'')+
+    '<button class="ai-rail" data-act="rail" title="打开 AI 助手">'+ic(S.railOpen?'chevR':'spark')+'<span class="rail-txt">AI 助手</span></button></div>';
+  }else{
+    body='<div class="ws-body">'+outlineCol()+'<div class="pdf-col">'+pdfPages(p)+'</div>'+evidenceCol()+'</div>';
+  }
+  return headFor('reader')+bannerHtml()+body+(S.cmdk?cmdkHtml():'');
+}
+function headFor(view){
+  const titles={agent:'科研助手',library:'论文库与图谱',reader:'原文阅读'};
+  const p=paperById(S.paper);
+  let right='';
+  if(view==='reader')right='<span class="ws-doc" style="font-size:12.5px;color:var(--text-tertiary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 1 auto;min-width:0;max-width:200px" title="'+esc(p.title)+'">'+esc(p.title)+'</span>'+stBadge(p)+
+  '<button class="cmdk-btn" data-act="cmdk">'+ic('search','ic-13')+'切换论文<kbd style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted)">⌘K</kbd></button>';
+  if(view==='agent')right='<button class="cmdk-btn" data-act="rail">'+ic('shield','ic-13')+'证据链 <b style="font-weight:600">3</b></button>';
+  return '<div class="ws"><div class="ws-head"><span class="ws-title">'+titles[view]+'</span>'+
+  '<div class="mode-tabs">'+['agent','library','reader'].map((v,i)=>'<button class="'+(v===view?'is-on':'')+'" data-act="view" data-view="'+v+'">'+['对话','论文库','原文阅读'][i]+'</button>').join('')+'</div>'+
+  '<div class="head-actions">'+right+'</div></div>';
+}
+function bannerHtml(){
+  if(!S.banner)return '';
+  return '<div class="banner">'+ic('alert','ic-13')+'<span><b>完整链路原型</b>：① 对话视图点回答里的引用 <b>1 / 2 / 3</b> → 论文详情抽屉 → <b>阅读全文</b> 进阅读器；② 论文库视图点结果行（对比第 1 行与第 4 行的五态差异）；③ 阅读器里选中正文 → 解释 / 批注 / <b>带去问助手</b>（回流）。侧栏或底部 1/2/3 切视图，D 切主题。</span><button class="banner-x" data-act="banner-close">'+ic('x','ic-13')+'</button></div>';
+}
+/* ===== 详情抽屉 ===== */
+function drawerHtml(){
+  if(!S.drawer)return '';
+  const p=paperById(S.drawer);
+  const asserts=p.asserts.map(a=>'<div class="dr-assert"><span class="a"><b>'+esc(a[0])+'</b> — '+esc(a[1])+' → <b>'+esc(a[2])+'</b></span><span class="m">置信度 '+a[3]+' · <span class="cand">candidate · 未人工核验</span></span></div>').join('');
+  let act='';
+  if(p.status==='available'){
+    act='<div class="dr-act"><div class="dr-btnrow"><button class="btn btn--ink" data-act="read-full">'+ic('book','ic-13')+'阅读全文</button><button class="btn" data-act="ext">'+ic('ext','ic-13')+'arXiv</button></div><div class="dr-act-note">全文已缓存（sha256:'+p.sha+'）。进入阅读器后：AI 引用可跳页高亮，选中正文可解释 / 批注。</div></div>';
+  }else{
+    const c=STATUS_CARD[p.status];
+    act='<div class="dr-act"><div class="dr-btnrow">'+c.btns.map(b=>'<button class="btn'+(b.ink?' btn--ink':'')+'" data-act="'+b.act+'">'+b.t+'</button>').join('')+'</div><div class="dr-act-note">'+c.desc+'</div></div>';
+  }
+  return '<div class="drawer-mask" data-act="drawer-close"></div>'+
+  '<div class="drawer"><div class="dr-head"><span class="dr-title">'+esc(p.title)+'</span><button class="dr-x" data-act="drawer-close">'+ic('x','ic-13')+'</button></div>'+
+  '<div class="dr-scroll">'+
+  '<div class="dr-meta">'+stBadge(p)+'<span class="dr-pid">'+esc(p.pid)+'</span><span style="font-size:12px;color:var(--text-tertiary)">'+esc(p.authors)+' · '+p.year+' · '+esc(p.venue)+'</span></div>'+
+  (p.abs?'<div class="dr-sec"><span class="dr-label">摘要</span><span class="dr-abs">'+esc(p.abs)+'</span></div>':'')+
+  '<div class="dr-sec"><span class="dr-label">图谱证据</span>'+(asserts||'<div class="dr-assert"><span class="a" style="color:var(--text-tertiary)">该论文在图谱中暂无候选断言（仅题名节点）。</span></div>')+'<span class="dr-act-note">候选断言来自弱监督抽取，永远以 candidate 呈现；边界与来源在真机的 ⓘ 弹层。</span></div>'+
+  '<div class="dr-sec"><span class="dr-label">全文</span>'+act+'</div>'+
+  '</div></div>';
+}
+/* ===== 渲染入口 ===== */
+function render(){
+  clearTypers();
+  renderSidebar();
+  let body='';
+  if(S.view==='agent')body=renderAgent();
+  else if(S.view==='library')body=renderLibrary();
+  else body=renderReader();
+  q('#stage').innerHTML='<div class="ws" data-view="'+S.view+'">'+body+'</div>'+drawerHtml();
+  const inp=q('#ask-input');if(inp)inp.addEventListener('keydown',e=>{if(e.key==='Enter')sendAsk();});
+  const ci=q('#cmdk-input');if(ci){ci.focus();ci.addEventListener('input',()=>{S.cmdkQ=ci.value;render();const c2=q('#cmdk-input');if(c2){c2.focus();c2.setSelectionRange(c2.value.length,c2.value.length);}});}
+  hidePop();renderRbar();
+}
+function renderRbar(){
+  const viewNames=[['agent','对话'],['library','论文库'],['reader','原文阅读']];
+  let html='<div class="rbar-seg">'+viewNames.map((v,i)=>'<button class="rbar-dir'+(S.view===v[0]?' is-active':'')+'" data-act="view" data-view="'+v[0]+'"><span class="kbd">'+(i+1)+'</span>'+v[1]+'</button>').join('')+'</div>';
+  if(S.view==='reader'){
+    html+='<div class="rbar-seg">'+[['A','三栏'],['B','沉浸'],['C','台账·拍板']].map(l=>'<button class="rbar-dir'+(S.layout===l[0]?' is-active':'')+'" data-act="layout" data-layout="'+l[0]+'">'+l[1]+'</button>').join('')+'</div>';
+  }
+  const costs={
+    agent:'<b>对话视图（已上线复刻）</b>：点回答里的引用上标 1/2/3 → 论文详情抽屉 → available 的论文有「阅读全文」→ 直接进阅读器。',
+    library:'<b>论文库视图（已上线复刻）</b>：结果行直接带五态徽章；点行开详情抽屉 —— 对比第 1 行（可读）与第 4 行（仅出版社页）。',
+    reader:'<b>阅读器（拍板 C·台账）</b>：P1 落骨架 + 会话内轻量证据流；P2 补阅读记录与证据卡持久化；P4 图谱断言联动（只挂证据指针）。布局对照 A/B 可切。',
+  };
+  html+='<span class="rbar-cost">'+costs[S.view]+'</span><span class="rbar-keys">1/2/3 切视图 · D 切主题 · Esc 关面板</span>'+
+  '<button class="rbar-theme" data-act="theme" title="切换主题">'+ic(S.theme==='light'?'moon':'sun','ic-13')+'</button>';
+  q('#rbar').innerHTML=html;
+}
+/* ===== 交互动作 ===== */
+function sendAsk(){
+  const inp=q('#ask-input');if(!inp||!inp.value.trim())return;
+  const text=inp.value.trim();inp.value='';
+  S.agentMsgs.push({role:'user',text});
+  setTimeout(()=>{S.agentMsgs.push({role:'assistant',text:'（原型演示）真实实现由研究 Agent 调用全文索引检索证据后回答，并给出可点击的页码引用；证据进入统一 EvidenceRef。',cites:[{page:4,label:'p.4 §3.2.1',anchor:'hl-scaling'}]});render();const sc=q('.chat-scroll,.ai-scroll,.ev-scroll');if(sc)sc.scrollTop=sc.scrollHeight;},520);
+  render();const sc=q('.chat-scroll,.ai-scroll,.ev-scroll');if(sc)sc.scrollTop=sc.scrollHeight;
+}
+function openDrawer(pid){S.drawer=pid;render();}
+function closeDrawer(){S.drawer=null;render();}
+function askFromReader(quote){
+  const short=quote.length>46?quote.slice(0,46)+'…':quote;
+  S.view='agent';
+  S.agentMsgs.push({role:'user',html:true,text:'这段展开讲讲（来自阅读器 p.4 §3.2.1 划词）：<i>「'+esc(short)+'」</i>'});
+  setTimeout(()=>{S.agentMsgs.push({role:'assistant',html:true,text:'（原型演示）真实实现：Agent 收到带页码的划词上下文，在全文索引上检索证据后回答，回答里的引用可跳回阅读器对应页。',cites:[{page:4,label:'p.4 §3.2.1',anchor:'hl-scaling'}]});render();const sc=q('.chat-scroll');if(sc)sc.scrollTop=sc.scrollHeight;},520);
+  render();
+}
+/* 划词浮条 */
+const pop=q('#selpop');
+function hidePop(){pop.hidden=true;}
+function showPopAt(rect){
+  pop.innerHTML='<button class="selp-btn" data-sact="ex">'+ic('spark','ic-13')+'解释</button>'+
+  '<button class="selp-btn" data-sact="note">'+ic('bookmark','ic-13')+'批注</button>'+
+  '<button class="selp-btn" data-sact="ask">'+ic('chat','ic-13')+'问助手</button>';
+  pop.hidden=false;
+  const L=Math.max(8,Math.min(rect.left,window.innerWidth-260));
+  let T=rect.bottom+8;
+  if(T+44>window.innerHeight-100)T=rect.top-46;
+  pop.style.left=L+'px';pop.style.top=T+'px';
+}
+pop.addEventListener('mousedown',e=>e.preventDefault());
+pop.addEventListener('click',e=>{
+  const b=e.target.closest('[data-sact]');if(!b)return;
+  const sel=window.getSelection();const txt=sel?sel.toString().trim():'';
+  const act=b.getAttribute('data-sact');
+  const cites=[{page:4,label:'p.4 §3.2.1',anchor:'hl-scaling'}];
+  const time=new Date().toTimeString().slice(0,5);
+  if(act==='ex'){
+    const text=explainFor(txt);
+    if(S.view==='reader'&&S.layout==='C'){S.evidence.unshift({kind:'explain',quote:txt,text,cites,time});render();typewrite(q('.ev-card .ev-text'),text);}
+    else{S.agentMsgs.push({role:'explain',quote:txt,text,cites});render();typewrite(q('.ai-scroll .msg:last-child .msg-text, .chat-scroll .msg:last-child .msg-text'),text);}
+    toast('已基于全文索引生成解释 · 引用 p.4 可点击跳转');
+  }
+  if(act==='note'){
+    try{const r=sel.getRangeAt(0);const span=document.createElement('span');span.className='hl hl-user';r.surroundContents(span);}catch(err){}
+    if(S.view==='reader'&&S.layout==='C'){S.evidence.unshift({kind:'note',quote:txt,time,cites:[{page:4,label:'p.4',anchor:null}]});render();}
+    else toast('批注已保存 · p.4（C 形态的证据流里可见）');
+  }
+  if(act==='ask')askFromReader(txt);
+  hidePop();if(sel)sel.removeAllRanges();
+});
+document.addEventListener('mouseup',e=>{
+  if(pop.contains(e.target))return;
+  setTimeout(()=>{
+    const sel=window.getSelection();
+    if(!sel||!sel.rangeCount){hidePop();return;}
+    const txt=sel.toString().trim();
+    let node=sel.anchorNode;if(node&&node.nodeType===3)node=node.parentElement;
+    const inPaper=node&&node.closest&&node.closest('.paper-page');
+    if(txt.length>2&&txt.length<800&&inPaper){showPopAt(sel.getRangeAt(0).getBoundingClientRect());}
+    else hidePop();
+  },10);
+});
+document.addEventListener('scroll',hidePop,true);
+/* 事件委托：document 级（评审条/抽屉都在 stage 外） */
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-act]');if(!el)return;
+  const act=el.getAttribute('data-act');
+  if(act==='view'){S.view=el.getAttribute('data-view');S.cmdk=false;render();}
+  if(act==='layout'){S.layout=el.getAttribute('data-layout');render();}
+  if(act==='theme'){S.theme=S.theme==='light'?'dark':'light';document.documentElement.dataset.theme=S.theme;render();}
+  if(act==='banner-close'){S.banner=false;render();}
+  if(act==='sup'||act==='drawer'){S.drawer=el.getAttribute('data-pid');render();}
+  if(act==='drawer-close'){S.drawer=null;render();}
+  if(act==='read-full'){S.paper=el.getAttribute('data-pid')||S.drawer;S.view='reader';S.drawer=null;render();toast('从'+(el.getAttribute('data-from')||'详情')+'进入阅读器 · 引用可跳页');}
+  if(act==='cite'){goPage(+(el.getAttribute('data-page')||4),el.getAttribute('data-anchor'));}
+  if(act==='go-page'){goPage(+(el.getAttribute('data-page')||1));}
+  if(act==='sel-paper'){S.paper=el.getAttribute('data-id');S.cmdk=false;render();}
+  if(act==='rail'){S.railOpen=!S.railOpen;render();}
+  if(act==='pin'){S.railOpen=false;render();}
+  if(act==='cmdk'){S.cmdk=true;S.cmdkQ='';render();}
+  if(act==='cmdk-close'){S.cmdk=false;render();}
+  if(act==='cmdk-pick'){S.paper=el.getAttribute('data-id');S.cmdk=false;S.view='reader';render();}
+  if(act==='send')sendAsk();
+  if(act==='ask-agent')askFromReader(el.getAttribute('data-quote')||'');
+  if(act==='ext')toast('原型不外跳 —— 真实实现新开出版社 / arXiv 落地页');
+  if(act==='upload')toast('上传：接 paper-reader /upload 端点（校验 %PDF- 魔数 + SHA-256 落库）');
+  if(act==='retry')toast('重试：走 SSRF 加固的私有 opener（禁环境代理 · 重定向上限 · 大小上限）');
+  if(act==='zoom')toast('缩放：react-pdf-highlighter-extended 自带，原型略');
+  if(act==='kg')toast('关联图谱断言：P4 范围 —— 只给候选断言挂证据指针，不写图谱');
+  if(act==='noop'){}
+});
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT'){if(e.key==='Escape'&&S.cmdk){S.cmdk=false;render();}return;}
+  if(e.key==='1'||e.key==='2'||e.key==='3'){S.view=['agent','library','reader'][+e.key-1];S.cmdk=false;render();}
+  if(e.key==='d'||e.key==='D'){S.theme=S.theme==='light'?'dark':'light';document.documentElement.dataset.theme=S.theme;render();}
+  if(e.key==='Escape'){if(S.cmdk){S.cmdk=false;render();}else if(S.drawer){S.drawer=null;render();}else hidePop();}
+});
+render();
+/* 探针 */
+window.__probe={
+  get view(){return S.view;},get theme(){return S.theme;},get paper(){return S.paper;},get drawer(){return S.drawer;},
+  pdfScroll:()=>{const s=q('.pdf-scroll');return s?{top:s.scrollTop,h:s.scrollHeight}:null;},
+  hlVisible:()=>{const h=q('#hl-scaling');if(!h)return false;const r=h.getBoundingClientRect();return r.width>0&&r.height>0;},
+  clickable:()=>qa('#stage button,#rbar button,.lrow,input').filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0;}).length,
+  evCount:()=>S.evidence.length,
+};
+</script>
+</body>
+</html>

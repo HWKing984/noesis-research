@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.832" timestamp="2026-10-08T23:49:17.539729+08:00" hostname="HWKing"><testcase classname="tests.test_supplementary_dev" name="test_supplementary_development_contract_and_labels" time="0.508"><failure message="KeyError: 'publicationId'">def test_supplementary_development_contract_and_labels():
+        assert len(preparation.locked()['seeds'])==8
+        text='Alpha performs tagging. Bench is a named benchmark.'
+        ref={'sampleId':'sample-'+'a'*20,'arxivId':'9999.12345','text':text,'textSha256':hashlib.sha256(text.encode()).hexdigest()}
+        decision={'arxivId':ref['arxivId'],'textSha256':ref['textSha256'],'mentions':{'METHOD':['Alpha'],'TASK':['tagging'],'DATASET':['Bench']},'groups':[{'heads':['e1'],'tails':['e2'],'label':'USED_FOR','supportExcerpt':'Alpha performs tagging.','reason':'Explicit performer/task, not benchmark evaluation.'}]}
+        result=preparation.compile_decision(decision,ref)
+        assert [r['label'] for r in result['relations']]==['USED_FOR','UNRESOLVED'] and result['relationStatus']=='unresolved'
+        decision['groups'][0]['label']='NO_RELATION'
+        with pytest.raises(ValueError,match='explicit contrast'): preparation.compile_decision(decision,ref)
+&gt;       with pytest.raises(ValueError): preparation.reject_identity_overlap(preparation.locked()['seeds'],[],[preparation.locked()['seeds'][0]])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_supplementary_dev.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\expand_train_benchmarks.py:33: in reject_identity_overlap
+    if any(r['publicationId'] in aliases or r.get('arxivId') in ids or title_key(r.get('text', r.get('title', ''))) in titles for r in registry+existing): raise ValueError('Existing paper identity; never force a held-out group to train')
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+.0 = &lt;list_iterator object at 0x000001D21AF55840&gt;
+
+&gt;   if any(r['publicationId'] in aliases or r.get('arxivId') in ids or title_key(r.get('text', r.get('title', ''))) in titles for r in registry+existing): raise ValueError('Existing paper identity; never force a held-out group to train')
+           ^^^^^^^^^^^^^^^^^^
+E   KeyError: 'publicationId'
+
+scripts\expand_train_benchmarks.py:33: KeyError</failure></testcase></testsuite></testsuites>

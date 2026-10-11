@@ -1,0 +1,17 @@
+{
+  "trainDiagnosticMetricsAndErrorsRecomputed": true,
+  "changedTrainSpanCount": 1,
+  "unchangedReceiptLines": 57,
+  "revisedTrainBIORecomputed": 50,
+  "opaqueDevFilesIdentical": 9,
+  "knownRelationCount": 267,
+  "unknownPairs": 1578,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "testSemanticallyRead": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "engineeringTests": 371,
+  "regressionSeconds": 162.153,
+  "regressionScope": "D_drive_isolated_process_temp; C_drive_previous_rename_problem_not_fixed"
+}

@@ -1,0 +1,64 @@
+{
+  "attack_tests": [
+    {
+      "test": "case_prefix_mixed_case",
+      "expected_reject": true,
+      "actual_rejected": false,
+      "test_passed": false,
+      "reason": null,
+      "result": {
+        "test": 1
+      }
+    },
+    {
+      "test": "case_prefix_caps",
+      "expected_reject": true,
+      "actual_rejected": false,
+      "test_passed": false,
+      "reason": null,
+      "result": {
+        "test": 1
+      }
+    },
+    {
+      "test": "case_corpus_dblp_alias",
+      "expected_reject": true,
+      "actual_rejected": false,
+      "test_passed": false,
+      "reason": null,
+      "result": {
+        "test": 1
+      }
+    },
+    {
+      "test": "control_lowercase_prefix",
+      "expected_reject": true,
+      "actual_rejected": true,
+      "test_passed": true,
+      "reason": "Exposed paper cannot enter new evaluation",
+      "result": null
+    },
+    {
+      "test": "control_fresh",
+      "expected_reject": false,
+      "actual_rejected": false,
+      "test_passed": true,
+      "reason": null,
+      "result": {
+        "test": 1
+      }
+    }
+  ],
+  "relation_counts": {
+    "EVALUATED_ON": 17,
+    "UNRESOLVED": 599,
+    "USED_FOR": 68
+  },
+  "changed_labels": 5,
+  "changed_support": 8,
+  "positive_export": 85,
+  "source_papers": 11,
+  "support_groups": 29,
+  "top_two_support_group_mentions": 30,
+  "metadata_history_rows": 20138
+}

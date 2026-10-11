@@ -1,0 +1,13 @@
+{
+  "createdAt": "2026-10-06T14:24:48.687523+00:00",
+  "scope": "before_training_single_representation_comparison",
+  "documentSha256": "04d209b7e07072abf31fe7638e0b65346474c6b6db2dca65645c0ad69d5ecf6c",
+  "trainingBeforeText": "# 显式实体对表示单项开发对照（15）\n\n## 训练前约定\n\n本轮目标：减少把受保护、被调度、受益的模型错误认作任务执行者，服务于可追溯的候选文献关联查询。决策者为课程项目使用者；不将模型预测直接提升为确定事实。\n\n假设：同一句中存在多个实体角色时，只用SciBERT pooled CLS可能不足以区分指定实体对。只改分类表示为两个开始标记的上下文向量按METHOD头、TASK/DATASET尾顺序拼接，768+768→1536，经原dropout与三类线性头。文本前后顺序不改变语义头尾。原CLS为768维；编码器、原有五个unused标记词表、类型约束和输入信息不变。不加网络层、不引入新依赖。\n\n该表示选择参考[Soares等，ACL 2019，Matching the Blanks](https://aclanthology.org/P19-1279.pdf)中的ENTITY MARKERS / ENTITY START比较；这里只借鉴标记表示，不复现其matching-the-blanks预训练或宣称论文中的性能适用于本课程数据。\n\n锁定数据`course_v4_training_inputs_10`（manifest SHA-256 `fc70d7865c59791dc48bc5947e54bd5e07c20cc1a08eb755fe6fdb0f009f3e09`；运行前以实际清单核对）。508/200/200篇AI判断，累计908篇；train/dev关系343/162条，来自264/113篇题名，支持316/3/24与155/2/5。没有新增标签；人工gold为false。同会话候选感知AI复核的相关误差仍存在。测试关系尚无标签，不读取关系test、不调整已冻结NER。\n\n与14比较：相同基础SciBERT版本、seed20261006、batch8、lr2e-5、max128、6轮258步、FP32 eager、train逆频率损失、三类macro F1选epoch，平分取较早。每轮每条train实体对恰好一次。初始化头形状不同，不能宣称相同随机数流、同样逐步梯度或多seed稳定性。新表示独立从基础权重训练，不从14继续微调。\n\n主要开发指标：三类macro F1；同时报告正关系micro/macro、各类P/R/F1及支持、混淆矩阵、全部错误。仅当三类macro严格优于14（75.6580%）、正micro不低于14（98.4227%），且NO_RELATION精度不低于50%时，才将其作为下一阶段冻结候选；不满足就保留14，不根据本轮结果反复改门槛。该条件只是有限dev的选择门槛，不是泛化/图谱事实验收。EVALUATED_ON仅2条、NO仅5条，任何提升都须披露小支持和开发选择偏差。\n\n错误预算：不能为负类高分隐藏新增正例漏报；不允许dev/test回灌、截断静默丢样本、把未决视为负例、理由或参考标签进入模型forward、架构/词表不一致仍加载成功。成功工程检查不等于关系正确性。\n\nMLE技能用于先声明单项假设与门槛，Python测试技能用于先失败再实现，PyTorch技能用于实际梯度、形状和安全重载一致性。复用现有训练、评估、证据生成器；不增加框架或无限堆模型。\n\n## 实际结果\n\n待真实训练后填写；本节不预写成功。下一步在开发候选确定后再冻结RE并完成测试标签、参考实体模块和冻结NER→RE端到端评估。\n",
+  "snapshotSha256": "fc70d7865c59791dc48bc5947e54bd5e07c20cc1a08eb755fe6fdb0f009f3e09",
+  "promotionGates": {
+    "allClassMacroStrictlyGreaterThan": 0.7565799482732389,
+    "positiveMicroAtLeast": 0.9842271293375394,
+    "negativePrecisionAtLeast": 0.5
+  },
+  "testEvaluated": false
+}

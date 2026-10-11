@@ -1,0 +1,32 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "02_training.html": "bcc4aa458b303a93b133389a80ce1a29ed37a579548ff73e81a262d4e3b49059",
+    "04_traceability.html": "d0ec49caf7ca40de15f9a531d9975fac0dfa9af7a4d64f02e75f5ea866eaace5",
+    "audit_state.json": "34347d370309bd617043879c638f16d67f1002320f1f5a9a5213fd40ab574b34",
+    "sources/resources/course_abstract_abstention_v1.json": "6239d8a0ee6705c656645a15c06e1596e9f9ba80af6cb1d105d037d3e9708fa1",
+    "sources/resources/course_abstract_decoder_v1.json": "fb90d2d7bdc30a1a348b94c4cfb526f58274fb50c1de6d8feb77ae5005f422b5",
+    "sources/scripts/capture_course_evidence.ps1": "3b2c3581fad0a109ed4ab26604c3e49768a2b70a8f32c7738dd5b784e3eee8c2",
+    "sources/scripts/course_bio_abstention.py": "8ae8e3a44d5cd1f924691502abf1d55d71f882b859d80404b230ca43e953a093",
+    "sources/scripts/evaluate_abstract_abstention.py": "11f87dc74357d11b7c69161c98704aaebdc8918d6d71b0bca1bfac59f5c40165",
+    "sources/scripts/evaluate_abstract_decoder.py": "9a2a5cc847bf168c127361e3bb8a2fdbd993cd6272f676ea0d43e4008030fb2c",
+    "sources/scripts/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "sources/tests/test_abstract_abstention.py": "679fe326e9ef8f4fee73b4d9673f8e72c47c8f2b4fc9945a07acb5fe2c1d1265",
+    "sources/tests/test_abstract_decoder.py": "accda0a34df266b154bb5a0590a0b9e3fbdf97a3ac12ded84af47b922c11f30d",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round47_workspace_temp.xml": "e1810a997aa5d15126cbd093e84d0eb1a19ccc731b32b6f6ae0f8c3537fb6924",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round48_workspace_temp.xml": "1d57effed13f3fbc80af670a68258ad1f0696a6771d69ea1cf63d0d3baf7e963",
+    "sources/kg_datasets/dblp/course_v4_runs/verification_20261008_round46.json": "921ff3e1890e8eef489653d6bd5d7eb0a6f3868d76b53986c61f0589f88a50e0",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/abstained_pairs.jsonl": "d6c56c43ceef1082b2bd66a8df94114d66640a444952ba4bebec56d00dd2bbba",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/abstention_ledger.jsonl": "bf48551c4acb4024d779bf6826d88b064ca481109185ca13b530d2ab82c70538",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/development_result.json": "cefb92750ee11a2deb892df7b8db16687294b364ca394fb2394c7994aa07de74",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/false_relations.jsonl": "5f28db527ac27544ef1e0cb5b41518e321f123a6c5fdcdff5761efc23bd9a40a",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/manifest.json": "489bf9095484c76a79786b0a8427a93320e2ed30154ed29df95a85cd6eac5497",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/selection_lock.json": "69e5787bc666de7f8899380be38401651632b47a160d48906dfc75ae51115620",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/status.json": "c20112eca2ce005bd51fd3973f16e86a3f50cd718744911ffab05eb96cec949d",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_decoder_development_20261008_47/development_result.json": "cd3cefc23aa58217c9004dcc898de86e6fedd3ad4404457fc9b7927e64a06cc8",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_decoder_development_20261008_47/manifest.json": "35b0b9ea70f210a3728a9ddbccf66c6c4aeabdc65bc15059930b98170be2ed27",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_decoder_development_20261008_47/selection_lock.json": "ad585809e3398ed042add8fbd5ac6ac02e1613baa92af3eaf3a684f57d821c58",
+    "sources/kg_datasets/dblp/course_v4_runs/abstract_decoder_development_20261008_47/status.json": "4e38a4287f9f993bcaa5b9d700d488382052e87043e7af8ae4b5e58e202837e0",
+    "sources/annotations/course_v4/seal_decoder_abstention_20261008_round48.py": "59d03a8dda74481d2397f6ee1153d283da7e04cceeb0977835851a4bbfd12ebc"
+  }
+}

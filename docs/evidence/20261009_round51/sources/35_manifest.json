@@ -1,0 +1,67 @@
+{
+  "graphId": "ai-literature-d9ea83983092461ebfe4",
+  "createdAtUTC": "2026-10-09T02:38:17.365039+00:00",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_graph_production_20261007_25/manifest.json": "246e695ec3aa0ae32af5287955f9acf1a6e8502ca1c56078b8538a34eb30126b",
+    "kg_datasets/dblp/course_v4_identity_crosswalk_20261009_51/manifest.json": "a7eec07d788abcbcfb9871c46b1a82b41a6ca5dc198892dafe1befdf53659a53",
+    "scripts/course_resolution.py": "78d57c37a2baf368e80bc43d66778529196cab28c2b8b60e3c1566a127f49f6e",
+    "scripts/course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57"
+  },
+  "scope": {
+    "bibliographyTitles": 20000,
+    "modelTitles": 19999,
+    "pipelinePairs": 22574,
+    "negativeDecisionsExcluded": 1077,
+    "modelAppliedToFullCorpus": false,
+    "testQueueCoverage": null,
+    "production": true,
+    "rejectedRelationPairs": 0,
+    "processedModelTitles": 20000,
+    "rejectedNERTitles": 1
+  },
+  "counts": {
+    "nodes": {
+      "Publication": 20000,
+      "Venue": 3205,
+      "Concept": 29878,
+      "Mention": 44904,
+      "Assertion": 21497,
+      "Person": 75155
+    },
+    "edges": {
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 44904,
+      "DENOTES": 44904,
+      "SUPPORTED_BY": 21497,
+      "HAS_HEAD": 21497,
+      "HAS_TAIL": 21497,
+      "AUTHORED": 88762
+    }
+  },
+  "liveDatabaseImported": false,
+  "modelSourceManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+  "exporterCodeSha256": "78d57c37a2baf368e80bc43d66778529196cab28c2b8b60e3c1566a127f49f6e",
+  "notice": "DBLP profile-author resolution and exact typed vocabulary aliases; unresolved signatures never merged. Original predictions and title evidence unchanged, not verified facts.",
+  "filesSha256": {
+    "edges.jsonl": "8476c025c5c606c75088108437c96476e670836f6a9d3eed649cf5105e049ade",
+    "nodes.jsonl": "9713ebd39871cef1286e6b712f791937f307e16413263bd562c7142052060e62",
+    "resolution_summary.json": "ef9b6e0df1cf72d7dc48598c97191aad4f914c0429249a913f40552e1105bfba"
+  },
+  "resolution": {
+    "oldPersonNodes": 72694,
+    "newPersonNodes": 75155,
+    "resolvedPersonNodes": 66093,
+    "unresolvedSignatureNodes": 9062,
+    "oldConceptNodes": 29885,
+    "newConceptNodes": 29878,
+    "controlledConceptNodes": 20,
+    "sourceConceptsGrouped": 7,
+    "authorSignatures": 88762,
+    "literalMentionsUnchanged": true,
+    "candidateAssertionCountUnchanged": true,
+    "modelReliabilityPromoted": false
+  },
+  "baseGraphId": "ai-literature-1020b3aaea22e8e72eb2",
+  "vocabularySha256": "11b68491aaca0960e78a08218c6366521526464dae98fe2c060dc14a2a28d29c",
+  "baseExporterCodeSha256": "619d323aa9a85a642b3b9e6e1cb5329e4b4782f27f328e0894c920b38bc9f755"
+}

@@ -1,0 +1,83 @@
+{
+  "metrics": [
+    {
+      "task": "NER09",
+      "metrics": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 235,
+        "predicted": 320,
+        "reference": 312,
+        "precision": 0.734375,
+        "recall": 0.7532051282051282,
+        "f1": 0.7436708860759493
+      },
+      "documents": 144,
+      "queueDocuments": 200,
+      "documentCoverage": 0.72
+    },
+    {
+      "task": "RE17_reference_entities",
+      "metrics": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 132,
+        "predicted": 133,
+        "reference": 133,
+        "precision": 0.9924812030075187,
+        "recall": 0.9924812030075187,
+        "f1": 0.9924812030075187
+      },
+      "documents": 138,
+      "queueDocuments": 200,
+      "documentCoverage": 0.69
+    },
+    {
+      "task": "pipeline17",
+      "metrics": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 82,
+        "predicted": 140,
+        "reference": 133,
+        "precision": 0.5857142857142857,
+        "recall": 0.6165413533834586,
+        "f1": 0.6007326007326007
+      },
+      "documents": 138,
+      "queueDocuments": 200,
+      "documentCoverage": 0.69
+    },
+    {
+      "task": "NER29_candidate",
+      "metrics": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 267,
+        "predicted": 383,
+        "reference": 416,
+        "precision": 0.6971279373368147,
+        "recall": 0.6418269230769231,
+        "f1": 0.6683354192740926
+      },
+      "documents": 187,
+      "queueDocuments": 200,
+      "documentCoverage": 0.935
+    },
+    {
+      "task": "pipeline29_candidate",
+      "metrics": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 81,
+        "predicted": 163,
+        "reference": 200,
+        "precision": 0.49693251533742333,
+        "recall": 0.405,
+        "f1": 0.4462809917355372
+      },
+      "documents": 175,
+      "queueDocuments": 200,
+      "documentCoverage": 0.875
+    }
+  ],
+  "modelInferenceExecuted": false,
+  "newMetricResult": false,
+  "evaluationTarget": "AI_reference_not_human_gold",
+  "notice": "Stored scores from distinct queues and entity scopes; no pooled ranking or full-corpus error estimate."
+}

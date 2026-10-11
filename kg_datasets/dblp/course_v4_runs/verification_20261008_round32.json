@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-08T01:27:33.851564+00:00",
+  "engineeringTests": 360,
+  "summaries": {
+    "course_abstract_sources_20261008_32": {
+      "status": "partial",
+      "selected": 100,
+      "usableAbstracts": 18,
+      "bySplit": {
+        "train": 18
+      },
+      "quarantinedTitleMismatches": 1,
+      "failedRequests": 5,
+      "annotated": false,
+      "trainingExecuted": false,
+      "modelPromoted": false,
+      "policy": {
+        "license": "CC0-1.0",
+        "source_policy": "https://info.arxiv.org/help/api/tou.html",
+        "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+        "policy_checked_on": "2026-10-08",
+        "redistribute_metadata": true
+      }
+    },
+    "course_abstract_pages_20261008_32": {
+      "status": "completed",
+      "requestedNew": 60,
+      "freshMatched": 57,
+      "usableAbstracts": 75,
+      "bySplit": {
+        "train": 37,
+        "dev": 19,
+        "test": 19
+      },
+      "quarantinedTitleMismatches": 4,
+      "failedRequests": 0,
+      "annotated": false,
+      "trainingExecuted": false,
+      "testEvaluated": false,
+      "modelPromoted": false
+    },
+    "course_abstract_pilot_20261008_32": {
+      "documents": 8,
+      "paperGroups": 7,
+      "entityCounts": {
+        "DATASET": 9,
+        "METHOD": 5,
+        "TASK": 5
+      },
+      "relationCounts": {
+        "USED_FOR": 5,
+        "EVALUATED_ON": 2
+      },
+      "labelSource": "ai_pseudo",
+      "selfReviewCompleted": false,
+      "independentHumanGold": false,
+      "trainingExecuted": false,
+      "modelPromoted": false,
+      "testSourcesUsed": false,
+      "titleLabelsReused": false
+    },
+    "course_abstract_pilot_reviewed_ready_20261008_32": {
+      "documents": 8,
+      "paperGroups": 7,
+      "entityCounts": {
+        "DATASET": 9,
+        "METHOD": 5,
+        "TASK": 5
+      },
+      "relationCounts": {
+        "USED_FOR": 5,
+        "EVALUATED_ON": 2
+      },
+      "selfReviewed": 8,
+      "revisedBoundaries": 2,
+      "strictTokenAlignmentPassed": true,
+      "maxTokens": 56,
+      "independentHumanGold": false,
+      "trainingExecuted": false,
+      "testEvaluated": false,
+      "modelPromoted": false,
+      "notice": "Targeted train-only AI pilot. No independent dev/test abstracts acquired. Not automatically compatible with title-only training contracts."
+    },
+    "course_abstract_queue_20261008_32": {
+      "usableAbstracts": 75,
+      "bySplit": {
+        "train": 37,
+        "dev": 19,
+        "test": 19
+      },
+      "excluded": 0,
+      "exclusionReasons": {},
+      "annotated": false,
+      "trainingExecuted": false,
+      "testEvaluated": false,
+      "maxTokens": 386,
+      "modelPromoted": false
+    }
+  },
+  "immutableSourceSha256": {
+    "kg_datasets/dblp/course_v4_training_inputs_17/manifest.json": "44b4cded1460294e23d7b6d53303ddace56296fb1c0f2eacff4d009c667df9ef",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/manifest.json": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+    "kg_datasets/dblp/course_v4_graph_20261007_18_final/manifest.json": "da86ef12159470ce99d8392e5a4d5f688ea1232a84ef433ab5b58e3c062186a7",
+    "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04/model.safetensors": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03/model.safetensors": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+    "kg_datasets/dblp/course_v4_graph_production_20261007_25/manifest.json": "246e695ec3aa0ae32af5287955f9acf1a6e8502ca1c56078b8538a34eb30126b",
+    "kg_datasets/dblp/course_v4_runs/refresh_final_test_20261007_29/test_result.json": "49fad7b77c58e18afc30ad01a0c1b864e2f26db1b2e45b25f46bbbc5d617351c",
+    "docs/evidence/20261007_round30/manifest.json": "3dda8e2fee98606c60a1070b380e612d7a8bff700ced92c0de7e1b98f1b9db28"
+  },
+  "evidenceManifestSha256": "497302ad066239521f6cd258f739a7a635dfc79ff02cea7a67e1f0a318904370",
+  "capturesSha256": "1a2ffdc8b309437bdf433dd59a3967c29986c6491cf19c9e156b843da06b04b3",
+  "modelRetrained": false,
+  "testEvaluated": false,
+  "databaseWritten": false,
+  "qualityPromotionPassed": false,
+  "titleLabelsModified": false,
+  "reportExpansionPaused": true
+}

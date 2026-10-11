@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Users\\Y7000P\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "D:\\a-open_source\\neo4j\\tests\\test_course_ui.cjs"
+  ],
+  "returncode": 0,
+  "stdout": "PASS: bounded snapshot export, literal text, remove/reset, stale search, permalink and directed path explanations\n",
+  "stderr": "",
+  "checkedAtUTC": "2026-10-09T02:14:08.835064+00:00"
+}

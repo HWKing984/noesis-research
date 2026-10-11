@@ -1,0 +1,12 @@
+{
+  "status": "failed_before_output_creation_and_before_training",
+  "errorType": "FileNotFoundError",
+  "missingPath": "kg_datasets/models/scibert_24f92d32/tokenizer.json",
+  "cause": "New wrapper unnecessarily bound tokenizer export files absent from the original SciBERT cache, which loads its tokenizer from existing vocab.txt/config.json.",
+  "repair": "Bind actual base vocab.txt/config.json as frozen42 does; still bind all exported tokenizer files for original initialization and frozen42 checkpoints.",
+  "trainingStarted": false,
+  "outputCreated": false,
+  "weightsChanged": false,
+  "syntheticFallback": false,
+  "parameterRetuning": false
+}

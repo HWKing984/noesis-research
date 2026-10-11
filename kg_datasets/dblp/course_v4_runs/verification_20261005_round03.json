@@ -1,0 +1,47 @@
+{
+  "queue": {
+    "valid": true,
+    "documents": 2000
+  },
+  "artifacts": {
+    "checkedAt": "2026-10-05T22:43:20.4339093+08:00",
+    "valid": true,
+    "originalInputs": 21,
+    "runDirectories": 42,
+    "hashedRunOutputs": 220,
+    "exportVersions": [
+      {
+        "version": "01",
+        "files": 8
+      },
+      {
+        "version": "02",
+        "files": 8
+      },
+      {
+        "version": "03",
+        "files": 9
+      },
+      {
+        "version": "04",
+        "files": 9
+      }
+    ],
+    "receiptDocuments": 188,
+    "pendingDocuments": 1812,
+    "pendingUnique": true,
+    "pendingAnnotatedIntersection": 0,
+    "pendingAnonymous": true,
+    "annotatedCrossSplitGroups": 0,
+    "nerDocuments": {
+      "train": 91,
+      "dev": 64,
+      "test": 0
+    },
+    "relationExamples": {
+      "train": 80,
+      "dev": 59,
+      "test": 0
+    }
+  }
+}

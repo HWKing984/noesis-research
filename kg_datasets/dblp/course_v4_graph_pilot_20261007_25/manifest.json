@@ -1,0 +1,50 @@
+{
+  "graphId": "ai-literature-01e80da789dbde51866b",
+  "createdAtUTC": "2026-10-07T03:35:30.279496+00:00",
+  "inputSha256": {
+    "kg_datasets\\dblp\\processed_ai\\publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "kg_datasets\\dblp\\processed_ai\\persons.csv": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60",
+    "kg_datasets\\dblp\\processed_ai\\venues.csv": "0b5baa6293cf14826f8e191d766e344bd7c30890087c9fbca1e34f7f64324606",
+    "kg_datasets\\dblp\\processed_ai\\authored.csv": "f2fbe133bde8e41e8f7fa9bb04db8109c0e0763ffde28c716976a46a021f9da7",
+    "kg_datasets\\dblp\\processed_ai\\published_in.csv": "bcdf029c0733954c013c77714bad5ee7b7ef17d213221aa94c89e01515370715",
+    "kg_datasets\\dblp\\course_v4_runs\\corpus_pilot_20261007_25\\manifest.json": "69191a478d1ec712b047e5d676d8be9e423fba4e63e9d4d33dcfc65432e97d56",
+    "kg_datasets\\dblp\\course_v4_weak\\manifest.json": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940"
+  },
+  "scope": {
+    "bibliographyTitles": 20000,
+    "modelTitles": 64,
+    "pipelinePairs": 65,
+    "negativeDecisionsExcluded": 1,
+    "modelAppliedToFullCorpus": false,
+    "testQueueCoverage": null,
+    "production": true,
+    "rejectedRelationPairs": 0
+  },
+  "counts": {
+    "nodes": {
+      "Publication": 20000,
+      "Person": 72694,
+      "Venue": 3205,
+      "Concept": 117,
+      "Mention": 137,
+      "Assertion": 64
+    },
+    "edges": {
+      "AUTHORED": 88762,
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 137,
+      "DENOTES": 137,
+      "SUPPORTED_BY": 64,
+      "HAS_HEAD": 64,
+      "HAS_TAIL": 64
+    }
+  },
+  "liveDatabaseImported": false,
+  "modelSourceManifestSha256": "69191a478d1ec712b047e5d676d8be9e423fba4e63e9d4d33dcfc65432e97d56",
+  "exporterCodeSha256": "8aedd21134ede021acfff8ccc613e200da4568e631ed2e450e6a1363a7313dc4",
+  "notice": "Predictions are candidate assertions, not DBLP facts. No CITES, no human gold, no calibrated confidence. Topic-rule edges intentionally not mixed into this bundle.",
+  "filesSha256": {
+    "nodes.jsonl": "437d3e5e63bab2422c3984615ad381e0ae17c8d09b2d1797ab9f4f8d0e36085f",
+    "edges.jsonl": "8ed02efac857f655c26ae5d1adfad9d66f95c4087713eef5dd276083448a5978"
+  }
+}

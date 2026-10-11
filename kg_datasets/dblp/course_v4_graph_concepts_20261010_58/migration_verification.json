@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "literalAndModelPropertiesPreserved": true,
+  "personPropertiesPreserved": true,
+  "allEdgeSignaturesAndEndpointsPreserved": true,
+  "sourceConceptAliasesPreserved": true,
+  "onlyThreeApprovedMethodGroupsMerged": true,
+  "actualAdditionalConceptReductions": 3,
+  "counts": {
+    "nodes": {
+      "Publication": 20000,
+      "Venue": 3205,
+      "Concept": 29836,
+      "Mention": 44904,
+      "Assertion": 21497,
+      "Person": 75155
+    },
+    "edges": {
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 44904,
+      "DENOTES": 44904,
+      "SUPPORTED_BY": 21497,
+      "HAS_HEAD": 21497,
+      "HAS_TAIL": 21497,
+      "AUTHORED": 88762
+    }
+  },
+  "modelSourceUnchanged": true,
+  "graphId": "ai-literature-63686318d85cccb07afb",
+  "liveDatabaseImported": false,
+  "runtimeSwitched": false,
+  "trainingExecuted": false,
+  "qualityPromotionPassed": false,
+  "notice": "Offline structural/evidence parity, not semantic accuracy, online retrieval acceptance or global concept resolution."
+}

@@ -1,0 +1,34 @@
+{
+  "lockedQueue": 8,
+  "annotated": 8,
+  "selfReviewed": true,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "testEvaluated": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "selectionBias": "Fixed eight language-representation/model papers selected before new abstract responses, labels or model predictions. Reject normalized title/arXiv ID overlap with the entire 20000-paper registry, old train/dev references and original train/dev/test selection metadata; no replacement after failure. This is a targeted external development slice, not a random population sample or final test.",
+  "oldDevUnchanged": true,
+  "NER": 7,
+  "entities": {
+    "TASK": 39,
+    "METHOD": 55,
+    "DATASET": 15
+  },
+  "knownPairs": 88,
+  "eligiblePairs": 478,
+  "unknownPairs": 390,
+  "relationSupport": {
+    "USED_FOR": 70,
+    "NO_RELATION": 4,
+    "EVALUATED_ON": 14
+  },
+  "completeDocuments": 0,
+  "completeCoverage": 0.0,
+  "EVALSourcePapers": 3,
+  "completeEVALSupport": 0,
+  "completeEVALPapers": 0,
+  "quarantinedNER": 1,
+  "strictBIOPassed": true
+}

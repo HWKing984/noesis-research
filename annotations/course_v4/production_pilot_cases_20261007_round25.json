@@ -1,0 +1,34 @@
+{
+  "kind": "title_only_qualitative_AI_inspection_not_gold_or_accuracy_evaluation",
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "modelOutputsChanged": false,
+  "thresholdsOrWeightsChanged": false,
+  "cases": [
+    {
+      "sampleId": "corpus-6befb3b6c5682661c256",
+      "title": "A 3D multi-layer CMOS-RRAM accelerator for neural network.",
+      "verdict": "flag_hardware_as_method",
+      "reason": "The title describes accelerator hardware. Predicted METHOD span '3D multi-layer CMOS-RRAM' omits accelerator and should not be treated as a confirmed learning method; retain neural network family separately."
+    },
+    {
+      "sampleId": "corpus-950e5c7974dabace610f",
+      "title": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+      "verdict": "plausible_title_association_not_verified_fact",
+      "reason": "Machine Learning and Diagnosis of Defects in Chiplet Interconnects are literal method and concrete task spans. Association plausible from title, without proving experiments or efficacy."
+    },
+    {
+      "sampleId": "corpus-eea73ed743e3cca75a16",
+      "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+      "verdict": "plausible_title_association_not_verified_fact",
+      "reason": "Diffusion Models and Denoising Monte Carlo Renders supply literal method/task association. No accuracy or performance conclusion from title."
+    },
+    {
+      "sampleId": "corpus-12b90e196e9e4786279b",
+      "title": "Rotation Invariant Convolutions for 3D Point Clouds Deep Learning.",
+      "verdict": "flag_input_as_task",
+      "reason": "Predicted TASK '3D Point Clouds' is an input/object without a stated recognition, segmentation or other operation. The positive relation to it is therefore a candidate requiring review, not a confirmed task fact."
+    }
+  ],
+  "notice": "Four deliberately selected qualitative cases, same-session AI inspection, not a random sample, independent review, human gold or population precision estimate. No prediction is edited based on this file."
+}

@@ -1,0 +1,114 @@
+{
+  "status": "candidate_pending_human_pilot",
+  "source_review": {
+    "documents": 20,
+    "proposed_entities": 46,
+    "proposed_by_label": {
+      "METHOD": 24,
+      "TASK": 21,
+      "DATASET": 1
+    },
+    "baseline_entities": 21,
+    "strict_matches": 10
+  },
+  "adopted_candidates": {
+    "valid": true,
+    "documents": 20,
+    "entity_counts": {
+      "METHOD": 23,
+      "TASK": 21,
+      "DATASET": 1
+    },
+    "reviews": {
+      "entity_review": {
+        "draft": 20
+      },
+      "relation_review": {
+        "draft": 20
+      },
+      "domain_review": {
+        "draft": 20
+      }
+    },
+    "errors": [],
+    "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+    "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+    "scope_exclusion_counts": {
+      "TASK_TO_TASK_OUT_OF_SCOPE": 3,
+      "COORDINATED_INDIVIDUAL_RELATIONS_EXCLUDED": 1
+    },
+    "schema_status": "candidate_pending_human_pilot",
+    "training_ready": false,
+    "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+  },
+  "pilot": {
+    "valid": true,
+    "documents": 200,
+    "entity_counts": {
+      "METHOD": 133,
+      "TASK": 70,
+      "DATASET": 1
+    },
+    "reviews": {
+      "entity_review": {
+        "draft": 200
+      },
+      "relation_review": {
+        "draft": 200
+      },
+      "domain_review": {
+        "draft": 200
+      }
+    },
+    "errors": [],
+    "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+    "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+    "scope_exclusion_counts": {
+      "TASK_TO_TASK_OUT_OF_SCOPE": 5,
+      "COORDINATED_INDIVIDUAL_RELATIONS_EXCLUDED": 1
+    },
+    "schema_status": "candidate_pending_human_pilot",
+    "training_ready": false,
+    "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+  },
+  "rare": {
+    "valid": true,
+    "documents": 100,
+    "entity_counts": {
+      "METHOD": 82,
+      "TASK": 13,
+      "DATASET": 6
+    },
+    "reviews": {
+      "entity_review": {
+        "draft": 100
+      },
+      "relation_review": {
+        "draft": 100
+      },
+      "domain_review": {
+        "draft": 100
+      }
+    },
+    "errors": [],
+    "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+    "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+    "scope_exclusion_counts": {
+      "TASK_TO_TASK_OUT_OF_SCOPE": 1
+    },
+    "schema_status": "candidate_pending_human_pilot",
+    "training_ready": false,
+    "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+  },
+  "blank20": 20,
+  "blank50": 50,
+  "human_completed": 0,
+  "training_started": false,
+  "changed_case": 6,
+  "change_notice": "46 source proposals retained; 45 policy candidates after composite merge, not semantic accuracy/F1",
+  "limitations": [
+    "Only 20 deliberately selected training-side cases; no population accuracy or model F1",
+    "The unchanged dictionary remains incomplete on the other titles",
+    "No human gold, no scope freeze, no automatic canonical split or graph write"
+  ]
+}

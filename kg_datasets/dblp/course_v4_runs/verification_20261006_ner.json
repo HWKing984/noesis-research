@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-06T08:35:06.2942204+08:00",
+  "valid": true,
+  "originalInputs": 21,
+  "runDirectories": 130,
+  "hashedRunOutputs": 720,
+  "exportVersions": {"01": 8, "02": 8, "03": 9, "04": 9, "05": 9, "06": 9},
+  "annotationDocumentsUnchanged": 608,
+  "trainingSnapshot": "course_v4_training_inputs_06",
+  "preflight": {"train": 338, "dev": 167, "rejected": 0, "testTokenized": false},
+  "smoke": {
+    "canonicalRun": "ner_smoke_20261006_02",
+    "previousRun": "ner_smoke_20261006_01",
+    "passed": true,
+    "trainingStarted": true,
+    "formalTrainingStarted": false,
+    "testEvaluated": false,
+    "rows": 24,
+    "allRowsVerifiedTrain": true,
+    "allGradientIdsVerifiedSelected": true,
+    "gradientSteps": 120,
+    "archivedInputsVerified": 9,
+    "initialTokenLoss": 2.143906385503351,
+    "finalTokenLoss": 0.0001976049496925481,
+    "strictInSampleEntityF1": 1.0,
+    "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+    "humanGold": false,
+    "reproducibility": {
+      "scope": "same_host_environment_seed_two_fresh_runs_only",
+      "inputsIdentical": true,
+      "stepLogsIdentical": true,
+      "predictionsIdentical": true,
+      "weightsIdentical": true,
+      "trainInputsSha256": "e99bbe4c76f53f812aa377be456976dc752dc49865fc28ffc724f6255230e0d3",
+      "stepLogsSha256": "94cc74ba6303318246449bf202ba5697dea8bd8d742f8b5de8e0a95f5d66be87",
+      "predictionsSha256": "19748b4e08d164848da8ae567fe3e4d4b2189869e98cc09cb9d6ccc4e175a2d3",
+      "weightsSha256": "853458ecc122bf2256efd71406153ad0e056e7043e9544a85c00cc45013e8196"
+    }
+  },
+  "tests": {"passed": 299, "failures": 0, "errors": 0, "skipped": 0, "xmlSeconds": 14.113},
+  "coverage": {
+    "source": "unit_checks_plus_actual_gpu_smoke_02",
+    "combinedStatementsAndBranchesPercent": 95.16702203269368,
+    "trainerStatementsAndBranchesPercent": 91.54929577464789,
+    "initialSmokeCoverageInvalid": true,
+    "notice": "Code path coverage is not annotation or model semantic accuracy."
+  }
+}

@@ -1,0 +1,1426 @@
+{
+  "provider": "current_codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "generationDecisionsSha256": "fbdbe55a851e5872e1f151206597439e0638dbb5cc0d81f8ff0574d17d278c33",
+  "judgments": [
+    {
+      "sampleId": "sample-7340071b52b7be651fd5",
+      "verdict": "confirmed",
+      "reason": "Physical sensor object excluded; complete NARX network name retained."
+    },
+    {
+      "sampleId": "sample-1286bb6594502627f981",
+      "verdict": "confirmed",
+      "reason": "Review wording still explicitly links learning to automated test generation."
+    },
+    {
+      "sampleId": "sample-0763c492f6e1c4c3d3ca",
+      "verdict": "confirmed",
+      "reason": "Named framework and model family are METHODs, not an invented comparison task."
+    },
+    {
+      "sampleId": "sample-e4d9fcc1f2b1daf84292",
+      "verdict": "confirmed",
+      "reason": "CT scans are input; detection and learning spans and direction are correct."
+    },
+    {
+      "sampleId": "sample-dad020382642dd3c8467",
+      "verdict": "confirmed",
+      "reason": "gcca is the means for both the explicit representation subtask and disease-analysis goal."
+    },
+    {
+      "sampleId": "sample-2ce4a322b6f9b17f42f2",
+      "verdict": "confirmed",
+      "reason": "Full feature-based self-representation mechanism and SAR detection context retained."
+    },
+    {
+      "sampleId": "sample-c1273dc52a0571e226e2",
+      "verdict": "confirmed",
+      "reason": "Coordinated mushroom-species task and two explicit means are nonoverlapping."
+    },
+    {
+      "sampleId": "sample-9f96d7cd8f1236e9556b",
+      "verdict": "confirmed",
+      "reason": "The named application is explicitly for automated discovery."
+    },
+    {
+      "sampleId": "sample-8e7635fb95b090185af7",
+      "verdict": "confirmed",
+      "reason": "Metric alias and descriptive metric both refer to text-to-image evaluation."
+    },
+    {
+      "sampleId": "sample-93823078a4ddc646d3a2",
+      "verdict": "confirmed",
+      "reason": "Privacy/helpfulness perceptions do not identify another operational task."
+    },
+    {
+      "sampleId": "sample-6882fef214de578ddbb7",
+      "verdict": "confirmed",
+      "reason": "Knowledge graph embedding for fault detection has explicit syntax."
+    },
+    {
+      "sampleId": "sample-1af84a464c8519082459",
+      "verdict": "confirmed",
+      "reason": "Reaction-diffusion is physical, so no AI diffusion label is added."
+    },
+    {
+      "sampleId": "sample-26d505c9ca9e080d6918",
+      "verdict": "confirmed",
+      "reason": "Ontology-driven planning representations are an explicit planning means."
+    },
+    {
+      "sampleId": "sample-2724335d6de22aa15e31",
+      "verdict": "confirmed",
+      "reason": "Graphene context and tree-based algorithm structure are complete."
+    },
+    {
+      "sampleId": "sample-a88448b431900fb11169",
+      "verdict": "confirmed",
+      "reason": "Load monitoring based on learning is explicit."
+    },
+    {
+      "sampleId": "sample-1561ddd2a10bd4ff1c57",
+      "verdict": "confirmed",
+      "reason": "Socio-technical augmented-democracy boundary remains unresolved."
+    },
+    {
+      "sampleId": "sample-ee7f673b06ae2c62e3bf",
+      "verdict": "confirmed",
+      "reason": "Method alias and graph-network architecture are explicit for video QA."
+    },
+    {
+      "sampleId": "sample-ec5f4b015d238520d757",
+      "verdict": "confirmed",
+      "reason": "Full transformer-based graph architecture is not split into nested methods."
+    },
+    {
+      "sampleId": "sample-42f45415fa3128aed163",
+      "verdict": "confirmed",
+      "reason": "Twitter is unnamed input, not a DATASET."
+    },
+    {
+      "sampleId": "sample-52dd62d80e000879b78f",
+      "verdict": "confirmed",
+      "reason": "LIGO is an observatory; both denoising means target the specified wave-noise removal."
+    },
+    {
+      "sampleId": "sample-7b5ab82c90b792d5a38c",
+      "verdict": "confirmed",
+      "reason": "Coordinated cross-property analysis still lacks a stable specific task boundary."
+    },
+    {
+      "sampleId": "sample-310bfe9013786dd5ce68",
+      "verdict": "confirmed",
+      "reason": "Wearable context is part of cough detection, excluding generic system."
+    },
+    {
+      "sampleId": "sample-f7f296937c442ca502bf",
+      "verdict": "confirmed",
+      "reason": "Physical memory arrays are not method/dataset labels."
+    },
+    {
+      "sampleId": "sample-a3ef2374f15159691a93",
+      "verdict": "revised",
+      "reason": "Remove the dangling based/-based connector before an independent task; retain the full identified learning mechanism.",
+      "replacement": {
+        "sampleId": "sample-a3ef2374f15159691a93",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Machine Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Urban Canyon Path Loss Prediction",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "Machine-learning-based directly modifies the path-loss prediction task."
+          }
+        ],
+        "notes": "Hyphenated adjectival family retained; measurements are unnamed input."
+      }
+    },
+    {
+      "sampleId": "sample-a38875947b439ac25ebc",
+      "verdict": "confirmed",
+      "reason": "Complete deep-learning Mobile-Net composite is correctly retained."
+    },
+    {
+      "sampleId": "sample-be2c109fe8c1b48423d9",
+      "verdict": "confirmed",
+      "reason": "Missing-view setting excluded; graph network is used for classification."
+    },
+    {
+      "sampleId": "sample-819546dd8927ef58ce89",
+      "verdict": "confirmed",
+      "reason": "Prompt-recovery target models remain inside the complete task, not nested."
+    },
+    {
+      "sampleId": "sample-b59a9f6b4c8f9380dc51",
+      "verdict": "confirmed",
+      "reason": "Both RL and graph representation explicitly support timetable rescheduling."
+    },
+    {
+      "sampleId": "sample-1674ffde4d94bdd30d77",
+      "verdict": "confirmed",
+      "reason": "Language-specific NLP target present, no resource name invented."
+    },
+    {
+      "sampleId": "sample-eddd832d4f753d463076",
+      "verdict": "confirmed",
+      "reason": "Full multi-agent RL mechanism and MANET routing context retained."
+    },
+    {
+      "sampleId": "sample-9b750c78a6e6c0bc6c19",
+      "verdict": "confirmed",
+      "reason": "Reasoning task and three explicit means are present; every scoped pair judged."
+    },
+    {
+      "sampleId": "sample-f48977dd35d65832bbc0",
+      "verdict": "confirmed",
+      "reason": "Dust detection context retained and generic method excluded."
+    },
+    {
+      "sampleId": "sample-0ab745537f9cadbb057a",
+      "verdict": "confirmed",
+      "reason": "Detector alias and feature-selection/learning components are explicitly specified."
+    },
+    {
+      "sampleId": "sample-bce79f185499e6e88f16",
+      "verdict": "confirmed",
+      "reason": "Code-smell prevalence does not name a classifier or detection operation."
+    },
+    {
+      "sampleId": "sample-d7b98c2bda22e5c6265d",
+      "verdict": "confirmed",
+      "reason": "Full tire-production forecasting object retained."
+    },
+    {
+      "sampleId": "sample-88b93090e06150a3c649",
+      "verdict": "confirmed",
+      "reason": "Reviewed use for health prediction is explicit; unnamed databases excluded."
+    },
+    {
+      "sampleId": "sample-5ef6ed6e5aab7b04ec93",
+      "verdict": "confirmed",
+      "reason": "Generation subtask and concept-discovery goal are both explicitly connected."
+    },
+    {
+      "sampleId": "sample-f5a5ce25d4a2d63f525a",
+      "verdict": "confirmed",
+      "reason": "Contiguous asymptotic ensemble and oscillometric estimation context retained."
+    },
+    {
+      "sampleId": "sample-10d24fea348b718d15fb",
+      "verdict": "confirmed",
+      "reason": "Framework robustness study supplies no independently named operational task."
+    },
+    {
+      "sampleId": "sample-0b2a06e5671d0a8ace29",
+      "verdict": "confirmed",
+      "reason": "Average treatment effect is part of the inference target."
+    },
+    {
+      "sampleId": "sample-7cdf6ad3a6997a06fd9d",
+      "verdict": "confirmed",
+      "reason": "Modern is generic; CNN for smoke detection remains explicit."
+    },
+    {
+      "sampleId": "sample-61e082e72b7931dc2331",
+      "verdict": "confirmed",
+      "reason": "Alternative versus composite training regimes remains an unresolved boundary issue."
+    },
+    {
+      "sampleId": "sample-614c86036d7c49cc3bcd",
+      "verdict": "confirmed",
+      "reason": "Both named system and latent diffusion means support makeup customization."
+    },
+    {
+      "sampleId": "sample-d2783065c83b3d8c8c1a",
+      "verdict": "confirmed",
+      "reason": "IoT botnet-identification context retained, no traffic dataset invented."
+    },
+    {
+      "sampleId": "sample-23087c8b0127c4ac4293",
+      "verdict": "confirmed",
+      "reason": "Surveillance and live CCTV context remain in the concrete crime-detection target."
+    },
+    {
+      "sampleId": "sample-b5c7ca20c7e899e2a29a",
+      "verdict": "confirmed",
+      "reason": "Named benchmark is clear but introduction is not explicit evaluated-on evidence."
+    },
+    {
+      "sampleId": "sample-f28db168f888953137af",
+      "verdict": "revised",
+      "reason": "Resolve the literal LLM and Code Translation boundaries without the linking suffix; explicit based syntax supports use.",
+      "replacement": {
+        "sampleId": "sample-f28db168f888953137af",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "label": "METHOD",
+            "text": "LLM"
+          },
+          {
+            "label": "TASK",
+            "text": "Code Translation"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "LLM-based explicitly states the means for code translation."
+          }
+        ],
+        "notes": "The based connector separates identified LLM family and code-translation task; evaluation framing does not invalidate this use relation."
+      }
+    },
+    {
+      "sampleId": "sample-c513eb7ed5b4b11f8f7e",
+      "verdict": "confirmed",
+      "reason": "Shared system head preserved as a group challenge, not a method endpoint."
+    },
+    {
+      "sampleId": "sample-98824090feab07ac9557",
+      "verdict": "confirmed",
+      "reason": "LiDAR is a sensor; layer-based mechanism is explicitly for the stated tasks."
+    },
+    {
+      "sampleId": "sample-fd71614d9c276b037592",
+      "verdict": "confirmed",
+      "reason": "Prefix sharing is the specified LLM-inference mechanism, not DATASET."
+    },
+    {
+      "sampleId": "sample-f86c0a8c93ef72baaaee",
+      "verdict": "confirmed",
+      "reason": "Minimax kernel learning has explicit proximal causal-inference application."
+    },
+    {
+      "sampleId": "sample-ade0d9673b9df03af2ed",
+      "verdict": "confirmed",
+      "reason": "Value-iteration architecture retained as a composite method."
+    },
+    {
+      "sampleId": "sample-4d1babb829adcd881845",
+      "verdict": "confirmed",
+      "reason": "Relational-bias composite is a method without a separate task."
+    },
+    {
+      "sampleId": "sample-4cdef7d736ff19b7b6fb",
+      "verdict": "confirmed",
+      "reason": "Distillation is defense means; networks are protected targets, preserving role negative."
+    },
+    {
+      "sampleId": "sample-9588763c28c21481bc02",
+      "verdict": "confirmed",
+      "reason": "Robot scene-understanding context retained; vision is a modality."
+    },
+    {
+      "sampleId": "sample-89489a96df8ba02bb3be",
+      "verdict": "confirmed",
+      "reason": "Full feature-interaction graph architecture and multimodal medical task retained."
+    },
+    {
+      "sampleId": "sample-18b5ba1ab961062ad3f6",
+      "verdict": "confirmed",
+      "reason": "Temperature/material qualification belongs to the physical evaluation target."
+    },
+    {
+      "sampleId": "sample-31fda5e945d993e4c522",
+      "verdict": "confirmed",
+      "reason": "Analysis for networks does not determine method versus target role."
+    },
+    {
+      "sampleId": "sample-d71a622c0ab14eb3ca62",
+      "verdict": "revised",
+      "reason": "Remove the dangling based/-based connector before an independent task; retain the full identified learning mechanism.",
+      "replacement": {
+        "sampleId": "sample-d71a622c0ab14eb3ca62",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "JUNO",
+            "label": "METHOD"
+          },
+          {
+            "text": "Jump-Start Reinforcement Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Node Selection for UWB Indoor Localization",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "JUNO is introduced as node selection for indoor localization."
+          },
+          {
+            "head": "e2",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "The RL-based modifier explicitly supplies the node-selection mechanism."
+          }
+        ],
+        "notes": "Retain UWB localization context in the task; based is literal method qualification."
+      }
+    },
+    {
+      "sampleId": "sample-19e1b1ffb84bd907992d",
+      "verdict": "confirmed",
+      "reason": "Transfer models are pruned objects, not named pruning means."
+    },
+    {
+      "sampleId": "sample-3bb86f96ea9df8b85def",
+      "verdict": "confirmed",
+      "reason": "Bayesian inference explicitly uncovers latent model themes; target is not nested."
+    },
+    {
+      "sampleId": "sample-b5eff38bf1c2c206dc7a",
+      "verdict": "confirmed",
+      "reason": "Federated vector-quantization phrase remains ambiguous; no invented relation."
+    },
+    {
+      "sampleId": "sample-2ff945b525a4ee0ec8b6",
+      "verdict": "confirmed",
+      "reason": "Distillation is explicitly for CNN design and federated-learning target."
+    },
+    {
+      "sampleId": "sample-9548e0937a5e1f8225ab",
+      "verdict": "confirmed",
+      "reason": "Swarm ensemble explicitly targets federated learning."
+    },
+    {
+      "sampleId": "sample-71401f9e01d433624b84",
+      "verdict": "confirmed",
+      "reason": "Parallelism mechanism and wireless federated-learning context retained."
+    },
+    {
+      "sampleId": "sample-95f23eb2e5cfa09899bb",
+      "verdict": "confirmed",
+      "reason": "Cross attention and instrument-aware RL have independent complete names."
+    },
+    {
+      "sampleId": "sample-8f5a496204fcb08c5d23",
+      "verdict": "confirmed",
+      "reason": "Tracking-method/task ambiguity remains honestly unresolved."
+    },
+    {
+      "sampleId": "sample-ce792c0b41801974dbb7",
+      "verdict": "confirmed",
+      "reason": "Actor ontology is a representation; generic modeling is not another task."
+    },
+    {
+      "sampleId": "sample-74c9775eb546739ca073",
+      "verdict": "confirmed",
+      "reason": "Question does not resolve a positive use assertion or successful elimination."
+    },
+    {
+      "sampleId": "sample-9e25e0372f1f80982a7e",
+      "verdict": "confirmed",
+      "reason": "Motion-capture datasets are not named benchmarks."
+    },
+    {
+      "sampleId": "sample-237f371dd957569774e9",
+      "verdict": "confirmed",
+      "reason": "Image synthesis and downstream segmentation are explicit goals for both means."
+    },
+    {
+      "sampleId": "sample-06497fb6a89d2c018928",
+      "verdict": "revised",
+      "reason": "Downgrade contextual role negatives to UNRESOLVED; no relation is not justified solely by missing explicit means wording.",
+      "replacement": {
+        "sampleId": "sample-06497fb6a89d2c018928",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Breaking Distributed Backdoor Defenses",
+            "label": "TASK"
+          },
+          {
+            "text": "Federated Learning",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "The contextual in/for setting does not conclusively determine target versus method use.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "The title identifies a setting or analyzed system, but does not conclusively rule in or rule out method use."
+          }
+        ],
+        "notes": "Non-IID is a setting; the attack method is not identified in the title."
+      }
+    },
+    {
+      "sampleId": "sample-5f2d1fcf1afc6821b9ab",
+      "verdict": "confirmed",
+      "reason": "Bibliometric research is study framing, not a concrete operational task."
+    },
+    {
+      "sampleId": "sample-538f3810792907322d28",
+      "verdict": "confirmed",
+      "reason": "Feedback learning is explicitly to improve the target networks, not nested."
+    },
+    {
+      "sampleId": "sample-449c5044ce4899b4ba88",
+      "verdict": "confirmed",
+      "reason": "Full microscopy task and transformer framework are nonoverlapping."
+    },
+    {
+      "sampleId": "sample-816eb3015db9d7ba2fe9",
+      "verdict": "confirmed",
+      "reason": "Complex-product planning target and enhanced RL architecture retained."
+    },
+    {
+      "sampleId": "sample-9763fe1a44c92e0e336c",
+      "verdict": "confirmed",
+      "reason": "Transformers are extraction sources, not extraction means: role negative."
+    },
+    {
+      "sampleId": "sample-27b180cc2d4bd01fa401",
+      "verdict": "confirmed",
+      "reason": "Occupancy maps are input context, not named DATASET."
+    },
+    {
+      "sampleId": "sample-91766adad8bb8c889775",
+      "verdict": "confirmed",
+      "reason": "Independent BERT occurrence 1 and the five other model names do not overlap."
+    },
+    {
+      "sampleId": "sample-29a77443126fcd8eaa3c",
+      "verdict": "confirmed",
+      "reason": "Named package and neural means explicitly solve differential equations."
+    },
+    {
+      "sampleId": "sample-e126370a60ed46163088",
+      "verdict": "confirmed",
+      "reason": "Filtered-observation mechanism is explicitly for model-based multi-agent RL."
+    },
+    {
+      "sampleId": "sample-f4d4cfb0c5e0e598cc69",
+      "verdict": "confirmed",
+      "reason": "Source-code representation is the target; structure/context are generic inputs."
+    },
+    {
+      "sampleId": "sample-e707ddeafd52dcce51c1",
+      "verdict": "revised",
+      "reason": "Remove the dangling based/-based connector before an independent task; retain the full identified learning mechanism.",
+      "replacement": {
+        "sampleId": "sample-e707ddeafd52dcce51c1",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Deep Reinforcement Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "QoS Aware Routing in Software Defined Networks",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "The RL-based modifier explicitly qualifies QoS-aware routing."
+          }
+        ],
+        "notes": "Retain the network context in the task."
+      }
+    },
+    {
+      "sampleId": "sample-de403ef78b62df542de2",
+      "verdict": "revised",
+      "reason": "Keep the full contiguous feedback composite and remove its nested metric component; one method endpoint.",
+      "replacement": {
+        "sampleId": "sample-de403ef78b62df542de2",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "positive feedback method based on F-measure value",
+            "label": "METHOD"
+          },
+          {
+            "text": "Salient Object Detection",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "The whole F-measure-based feedback mechanism is explicitly for saliency detection."
+          }
+        ],
+        "notes": "F-measure is a metric used as a method component, not a dataset; generic method/value excluded."
+      }
+    },
+    {
+      "sampleId": "sample-467cab7127abfd776dc9",
+      "verdict": "confirmed",
+      "reason": "KG-based XAI composite explicitly targets process analysis."
+    },
+    {
+      "sampleId": "sample-4e489c49fa29bed5eb30",
+      "verdict": "revised",
+      "reason": "Remove the dangling based/-based connector before an independent task; retain the full identified learning mechanism.",
+      "replacement": {
+        "sampleId": "sample-4e489c49fa29bed5eb30",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "DeepPERF",
+            "label": "METHOD"
+          },
+          {
+            "text": "Deep Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Improving Software Performance",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "DeepPERF is introduced for improving software performance."
+          },
+          {
+            "head": "e2",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "The deep-learning-based approach is explicitly for this performance task."
+          }
+        ],
+        "notes": "Approach is generic; retain literal adjectival method boundary."
+      }
+    },
+    {
+      "sampleId": "sample-0f361a61c2601831cd6c",
+      "verdict": "confirmed",
+      "reason": "Latent graph prediction is the stated means for representation learning."
+    },
+    {
+      "sampleId": "sample-94d743fa9b4929d2079f",
+      "verdict": "confirmed",
+      "reason": "Named exam clear; an introduced exam for LLMs is not evaluated-on evidence."
+    },
+    {
+      "sampleId": "sample-b77c10e6a0998f28037d",
+      "verdict": "confirmed",
+      "reason": "Privacy and Byzantine mechanism modifiers form one complete composite."
+    },
+    {
+      "sampleId": "sample-6c5c6011f13bb9081749",
+      "verdict": "confirmed",
+      "reason": "QAT and LLM are method classes; no method-method relationship invented."
+    },
+    {
+      "sampleId": "sample-a8aeb92e0e125fab6428",
+      "verdict": "confirmed",
+      "reason": "Model family is part of the transferability-evaluation object, not nested."
+    },
+    {
+      "sampleId": "sample-2dc852fe0e9ffbe1f233",
+      "verdict": "confirmed",
+      "reason": "ECG context retained; two-level CNN and interval-difference means are explicit."
+    },
+    {
+      "sampleId": "sample-ce9835d053d53299f37b",
+      "verdict": "confirmed",
+      "reason": "Entire neural anchoring mechanism retained."
+    },
+    {
+      "sampleId": "sample-f9cdedd35eece3d086dc",
+      "verdict": "confirmed",
+      "reason": "Two complete interpretability means have no omitted shared head."
+    },
+    {
+      "sampleId": "sample-19cfeeaf382588db9d12",
+      "verdict": "confirmed",
+      "reason": "Task-versus-model interpretation of contextualized translation remains unresolved."
+    },
+    {
+      "sampleId": "sample-71585c28b3cbc04d9a46",
+      "verdict": "confirmed",
+      "reason": "Named pooling is for a model class; no concrete task invented."
+    },
+    {
+      "sampleId": "sample-6b4f91f077fc758e712c",
+      "verdict": "confirmed",
+      "reason": "Medical segmentation target clear; training settings are not dataset names."
+    },
+    {
+      "sampleId": "sample-8a9dde7301a43f55d899",
+      "verdict": "confirmed",
+      "reason": "Safety shield explicitly targets the RL-navigation problem."
+    },
+    {
+      "sampleId": "sample-d09182f955ff4bbbabea",
+      "verdict": "revised",
+      "reason": "Efficient Communication is generic activity/performance wording, not a separate identified technique; ADMM is the explicit means.",
+      "replacement": {
+        "sampleId": "sample-d09182f955ff4bbbabea",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Privacy-Preserving Vertical Federated Learning",
+            "label": "TASK"
+          },
+          {
+            "text": "ADMM",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "USED_FOR",
+            "reason": "Communication with ADMM explicitly improves the vertical federated-learning task."
+          }
+        ],
+        "notes": "Privacy preserving specifies the target setting; no separate nested RL family."
+      }
+    },
+    {
+      "sampleId": "sample-46f3795f48233d33c272",
+      "verdict": "revised",
+      "reason": "Remove generic approach suffix while retaining the ensemble simulation mechanism; preserve unresolved network role.",
+      "replacement": {
+        "sampleId": "sample-46f3795f48233d33c272",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "ensemble simulation",
+            "label": "METHOD"
+          },
+          {
+            "text": "artificial neural network",
+            "label": "METHOD"
+          },
+          {
+            "text": "chlorophyll a simulation in Lake Poyang, China",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "The network application role is not fully resolved from the title.",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e3",
+            "label": "USED_FOR",
+            "reason": "The ensemble simulation is illustrated by the chlorophyll simulation task."
+          },
+          {
+            "head": "e2",
+            "tail": "e3",
+            "label": "UNRESOLVED",
+            "reason": "The title says an approach for neural network but does not resolve the network role in the example."
+          }
+        ],
+        "notes": "Retain the concrete geographical task; no named dataset."
+      }
+    },
+    {
+      "sampleId": "sample-2c411be3ec006d3f2bd1",
+      "verdict": "confirmed",
+      "reason": "Era wording is not an explicit LLM recommendation-use assertion."
+    },
+    {
+      "sampleId": "sample-f7d01e63e4e6f3d8e12e",
+      "verdict": "confirmed",
+      "reason": "SAR classification and deep learning are explicit, casing preserved."
+    },
+    {
+      "sampleId": "sample-7c16c430a12825be75a2",
+      "verdict": "confirmed",
+      "reason": "Dysarthric speech context retained; interpretable is general qualification."
+    },
+    {
+      "sampleId": "sample-a4904e6d1c6c6915210f",
+      "verdict": "confirmed",
+      "reason": "Frame-selection operation is not literally supplied; boundary unresolved."
+    },
+    {
+      "sampleId": "sample-7327f1df6987ae81b00d",
+      "verdict": "confirmed",
+      "reason": "Translation tools are a technical family, not an unspecified dataset."
+    },
+    {
+      "sampleId": "sample-b2dbe9d03c38e87fa56a",
+      "verdict": "confirmed",
+      "reason": "Evolution and network classes identified; trend/challenge is generic framing."
+    },
+    {
+      "sampleId": "sample-db1d5449dcaef3328fd4",
+      "verdict": "confirmed",
+      "reason": "Creative homogeneity is a studied property, not an operational target."
+    },
+    {
+      "sampleId": "sample-9562b76837c6810b3427",
+      "verdict": "confirmed",
+      "reason": "Knowledge representation and textual hierarchy explicitly support disambiguation."
+    },
+    {
+      "sampleId": "sample-f70e1c062746790c5d19",
+      "verdict": "confirmed",
+      "reason": "Vision transformer and L2 regularization both explicitly support action recognition."
+    },
+    {
+      "sampleId": "sample-ba6843761838dbcbe7c3",
+      "verdict": "confirmed",
+      "reason": "Alpha, DBI, transformer and zero-day detection literals are exact and nonoverlapping."
+    },
+    {
+      "sampleId": "sample-9ec2639c732674dd3b3c",
+      "verdict": "confirmed",
+      "reason": "Corrected/suppressed properties do not identify definite preprocessing algorithms."
+    },
+    {
+      "sampleId": "sample-22a552b5a46c25c05bc2",
+      "verdict": "confirmed",
+      "reason": "Generative denoising diffusion is explicitly for healthy-tissue inpainting."
+    },
+    {
+      "sampleId": "sample-ac573c4e05f58d37d568",
+      "verdict": "confirmed",
+      "reason": "Transfer learning and two named mechanisms explicitly support atomistic simulation."
+    },
+    {
+      "sampleId": "sample-301825760e793da87865",
+      "verdict": "confirmed",
+      "reason": "Cognitive tasks and framework unnamed; retain only clear spiking network."
+    },
+    {
+      "sampleId": "sample-cc97c6d678eda037869b",
+      "verdict": "confirmed",
+      "reason": "Transportation systems is a domain, not a concrete task verb/object."
+    },
+    {
+      "sampleId": "sample-65e4d180082fed863467",
+      "verdict": "confirmed",
+      "reason": "Bidirectional inference architecture is complete and explicitly for saliency."
+    },
+    {
+      "sampleId": "sample-ff87a5d6f1f86a1c9f98",
+      "verdict": "confirmed",
+      "reason": "Adversarial training mechanism retained with graph network."
+    },
+    {
+      "sampleId": "sample-4399715668b4d343e405",
+      "verdict": "confirmed",
+      "reason": "Multicast and RL explicitly target wireless holographic streaming."
+    },
+    {
+      "sampleId": "sample-76e70dd6fe9a143ce5b9",
+      "verdict": "confirmed",
+      "reason": "Information-principle composite is one method, without downstream task."
+    },
+    {
+      "sampleId": "sample-c2b004f2feec33a9cbfc",
+      "verdict": "confirmed",
+      "reason": "Agent/model/learning names identified, no operational task invented."
+    },
+    {
+      "sampleId": "sample-c2a07f450e738effe25e",
+      "verdict": "confirmed",
+      "reason": "Intention mechanism belongs to method; online fake-news detection target retained."
+    },
+    {
+      "sampleId": "sample-5257eb3467b60d09160f",
+      "verdict": "confirmed",
+      "reason": "Named target output is record-linkage data, not an identified DATASET."
+    },
+    {
+      "sampleId": "sample-f1b700a0cb8e582bbab0",
+      "verdict": "confirmed",
+      "reason": "Twitter context retained with medication-effect extraction."
+    },
+    {
+      "sampleId": "sample-b947e2572d79df6da1a4",
+      "verdict": "confirmed",
+      "reason": "Quantizers explicitly target low-bit LLM compression."
+    },
+    {
+      "sampleId": "sample-0d6d9330161b7445785a",
+      "verdict": "revised",
+      "reason": "Remove the dangling based/-based connector before an independent task; retain the full identified learning mechanism.",
+      "replacement": {
+        "sampleId": "sample-0d6d9330161b7445785a",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Machine Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Depression Detection",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "Machine-learning-based directly describes the depression detector."
+          }
+        ],
+        "notes": "Questionnaires and video are input modalities, not dataset names."
+      }
+    },
+    {
+      "sampleId": "sample-4fb439910dd4031e7ba7",
+      "verdict": "confirmed",
+      "reason": "Full optimization-based deep architecture is kept, no nested spans."
+    },
+    {
+      "sampleId": "sample-d3eb77f4bf149366e720",
+      "verdict": "confirmed",
+      "reason": "Reasoning and multimodal model are both explicit detection means."
+    },
+    {
+      "sampleId": "sample-3b74f9fb57801f67dde9",
+      "verdict": "confirmed",
+      "reason": "Online mechanism and HEVC context retained; fast is generic qualification."
+    },
+    {
+      "sampleId": "sample-8639ba25f722d1991729",
+      "verdict": "confirmed",
+      "reason": "Fire behavior study supplies no explicit prediction/detection operation."
+    },
+    {
+      "sampleId": "sample-f232954e7000e0373d2d",
+      "verdict": "confirmed",
+      "reason": "No-reference mechanism and pretrained audio networks target artifact detection."
+    },
+    {
+      "sampleId": "sample-ace8a9b4a3f4fba72b90",
+      "verdict": "confirmed",
+      "reason": "Full circuit initialization target retained; QAOA not duplicated as a nested method."
+    },
+    {
+      "sampleId": "sample-0321c5c06601b35a97b8",
+      "verdict": "confirmed",
+      "reason": "Piecewise physical constraints and equation class retained."
+    },
+    {
+      "sampleId": "sample-e1988ddc409d4d27234b",
+      "verdict": "confirmed",
+      "reason": "Architectural implication is study framing, not a task."
+    },
+    {
+      "sampleId": "sample-e243acc18622c11d8867",
+      "verdict": "confirmed",
+      "reason": "Autoencoder is the specified deep model for road partitioning."
+    },
+    {
+      "sampleId": "sample-0579fb9f792eb284b69b",
+      "verdict": "confirmed",
+      "reason": "KEEP explicitly names integration and embedding goals; clinical data not named."
+    },
+    {
+      "sampleId": "sample-6ce3d80463e51560fd4a",
+      "verdict": "confirmed",
+      "reason": "Quantum/interpretable model qualification retained in the architecture."
+    },
+    {
+      "sampleId": "sample-3f0532d840a90e80f8ea",
+      "verdict": "confirmed",
+      "reason": "Full attack target retained; no attacker means is named or nested."
+    },
+    {
+      "sampleId": "sample-aadd55f20da689571907",
+      "verdict": "revised",
+      "reason": "Downgrade contextual role negatives to UNRESOLVED; no relation is not justified solely by missing explicit means wording.",
+      "replacement": {
+        "sampleId": "sample-aadd55f20da689571907",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Negative Client Sampling",
+            "label": "TASK"
+          },
+          {
+            "text": "Federated Learning",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "The contextual in/for setting does not conclusively determine target versus method use.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "The title identifies a setting or analyzed system, but does not conclusively rule in or rule out method use."
+          }
+        ],
+        "notes": "Aggregated gradients are a model quantity, not an identified remedial algorithm."
+      }
+    },
+    {
+      "sampleId": "sample-741678f5aca407a39f02",
+      "verdict": "confirmed",
+      "reason": "Self-supervised diffusion mechanism and attention are explicit recognition means."
+    },
+    {
+      "sampleId": "sample-d94e9f48e0cbdea20448",
+      "verdict": "confirmed",
+      "reason": "Surrogate method explicitly optimizes the draft tube."
+    },
+    {
+      "sampleId": "sample-a65d8d73c6abb3cdf82e",
+      "verdict": "revised",
+      "reason": "Downgrade contextual role negatives to UNRESOLVED; no relation is not justified solely by missing explicit means wording.",
+      "replacement": {
+        "sampleId": "sample-a65d8d73c6abb3cdf82e",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Uncertainty quantification for noisy inputs-outputs",
+            "label": "TASK"
+          },
+          {
+            "text": "physics-informed neural networks",
+            "label": "METHOD"
+          },
+          {
+            "text": "neural operators",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "The contextual in/for setting does not conclusively determine target versus method use.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "The title identifies a setting or analyzed system, but does not conclusively rule in or rule out method use."
+          },
+          {
+            "head": "e3",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "The title identifies a setting or analyzed system, but does not conclusively rule in or rule out method use."
+          }
+        ],
+        "notes": "Do not turn every in-model analysis into a model-used-for relation."
+      }
+    },
+    {
+      "sampleId": "sample-ce89509cbed0af2a118f",
+      "verdict": "confirmed",
+      "reason": "Cloud classification uses the explicit unsupervised learning method."
+    },
+    {
+      "sampleId": "sample-118c1c2686e211665d0a",
+      "verdict": "confirmed",
+      "reason": "Prior-knowledge learning is one composite without downstream task."
+    },
+    {
+      "sampleId": "sample-df1bf374dc898570da05",
+      "verdict": "confirmed",
+      "reason": "Named HiGFA, guidance and diffusion all explicitly support augmentation."
+    },
+    {
+      "sampleId": "sample-1a5eb325f4cc59d2068f",
+      "verdict": "confirmed",
+      "reason": "Robot/human context target is explicit for both model and ontology means."
+    },
+    {
+      "sampleId": "sample-a4fb5690bb9e42990b9c",
+      "verdict": "confirmed",
+      "reason": "Rehabilitation posture target and neural method are exact."
+    },
+    {
+      "sampleId": "sample-141c9937b57c9c493965",
+      "verdict": "confirmed",
+      "reason": "Early-stage disease qualifier is important target context."
+    },
+    {
+      "sampleId": "sample-af33fa3c3df41d99812d",
+      "verdict": "confirmed",
+      "reason": "Model-development guidelines are for the explicit drug-prediction task."
+    },
+    {
+      "sampleId": "sample-d6e0a77a823c294a7687",
+      "verdict": "confirmed",
+      "reason": "URLLC multi-connectivity target is explicitly enhanced using RL."
+    },
+    {
+      "sampleId": "sample-ee5f8c76b72f98dcbf8c",
+      "verdict": "confirmed",
+      "reason": "User sequential-behavior modeling is the explicit neural target."
+    },
+    {
+      "sampleId": "sample-01f43b6804f5b8a70f44",
+      "verdict": "confirmed",
+      "reason": "RL environment states intended robot-task use, not demonstrated success."
+    },
+    {
+      "sampleId": "sample-6420c5f1a1ab6021b62c",
+      "verdict": "confirmed",
+      "reason": "Annotator metadata is an input; supervised models support prediction."
+    },
+    {
+      "sampleId": "sample-c6ebc37e06f03f184252",
+      "verdict": "revised",
+      "reason": "Remove the dangling based/-based connector before an independent task; retain the full identified learning mechanism.",
+      "replacement": {
+        "sampleId": "sample-c6ebc37e06f03f184252",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Deep Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Content Centric Data Dissemination",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "The deep-learning-based modifier supplies the dissemination scheme mechanism."
+          }
+        ],
+        "notes": "Internet of Vehicles is application context; generic scheme is excluded."
+      }
+    },
+    {
+      "sampleId": "sample-176df743a9d8f2d02d8f",
+      "verdict": "revised",
+      "reason": "Downgrade contextual role negatives to UNRESOLVED; no relation is not justified solely by missing explicit means wording.",
+      "replacement": {
+        "sampleId": "sample-176df743a9d8f2d02d8f",
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Detecting Rewards Deterioration",
+            "label": "TASK"
+          },
+          {
+            "text": "Episodic Reinforcement Learning",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "The contextual in/for setting does not conclusively determine target versus method use.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "The title identifies a setting or analyzed system, but does not conclusively rule in or rule out method use."
+          }
+        ],
+        "notes": "Retain the target-system role negative."
+      }
+    },
+    {
+      "sampleId": "sample-6bc5be8423bc4e6deb50",
+      "verdict": "confirmed",
+      "reason": "Collaboration and RL explicitly support remote intervention."
+    },
+    {
+      "sampleId": "sample-d8eae10bf54d3608cf92",
+      "verdict": "confirmed",
+      "reason": "Phi is hijacking means; multimodal models are hijacking targets."
+    },
+    {
+      "sampleId": "sample-cd59bd5e26e2326aedb6",
+      "verdict": "confirmed",
+      "reason": "Destination prediction with transformers is explicit; data setting unnamed."
+    },
+    {
+      "sampleId": "sample-9abca874d6557612c514",
+      "verdict": "confirmed",
+      "reason": "Self-play and model classes identified; no method-method edge invented."
+    },
+    {
+      "sampleId": "sample-5700fc3d375f8468a358",
+      "verdict": "confirmed",
+      "reason": "Shared model-based system head remains a group challenge."
+    },
+    {
+      "sampleId": "sample-9649a7678d4e39d6a178",
+      "verdict": "confirmed",
+      "reason": "Independent probabilistic model mechanism and small-data QA target retained."
+    },
+    {
+      "sampleId": "sample-b002483ce67f571e9e7c",
+      "verdict": "confirmed",
+      "reason": "Long motor/controller boundary and direct operation roles remain unresolved."
+    },
+    {
+      "sampleId": "sample-a6867dbe728b45f6faf9",
+      "verdict": "confirmed",
+      "reason": "Constitutive learning is the specified model-discovery means."
+    },
+    {
+      "sampleId": "sample-ba93d34e6f5b819e68cb",
+      "verdict": "confirmed",
+      "reason": "Signature investigation is generic, no missing detection verb invented."
+    },
+    {
+      "sampleId": "sample-b8f457ac67311d986cf1",
+      "verdict": "confirmed",
+      "reason": "Graph network is explicitly used for domain adaptation."
+    },
+    {
+      "sampleId": "sample-628985850cdfc10d1379",
+      "verdict": "confirmed",
+      "reason": "Indicator-selection deep time-series composite explicitly serves both tasks."
+    },
+    {
+      "sampleId": "sample-7102b3a1332f077555b1",
+      "verdict": "confirmed",
+      "reason": "Named system and neural means explicitly support joint compression/retrieval."
+    },
+    {
+      "sampleId": "sample-229dacac12a2b9b3c0c2",
+      "verdict": "confirmed",
+      "reason": "Full adversarial adaptation architecture explicitly targets NER."
+    },
+    {
+      "sampleId": "sample-010f34f7c4466186e332",
+      "verdict": "confirmed",
+      "reason": "Amino-acid modality retained with IDR classification; both means explicit."
+    },
+    {
+      "sampleId": "sample-798f0288542073f52711",
+      "verdict": "confirmed",
+      "reason": "Color guidance in diffusion is explicitly applied to low-bitrate compression."
+    },
+    {
+      "sampleId": "sample-d15e802ef9d9a3ca9723",
+      "verdict": "confirmed",
+      "reason": "Evolution study does not resolve whether the model is architecture-search means."
+    },
+    {
+      "sampleId": "sample-7c55b6a21cf0d1f9264d",
+      "verdict": "confirmed",
+      "reason": "Grammar templates are explicitly for ontology/model verbalisation."
+    },
+    {
+      "sampleId": "sample-e72d56cc6cc0bf4ff1f0",
+      "verdict": "confirmed",
+      "reason": "Translation is explicitly to inform asylum seekers; MaTIAS is a project."
+    },
+    {
+      "sampleId": "sample-5a54d8b89de8d118fbb6",
+      "verdict": "confirmed",
+      "reason": "Coordinated network-analysis/control roles remain unresolved."
+    },
+    {
+      "sampleId": "sample-d0f0bcff5f0154a3edf5",
+      "verdict": "confirmed",
+      "reason": "Clifford algebra supplies the explicit graph-embedding representation."
+    },
+    {
+      "sampleId": "sample-8d67f9529dc3dfc65c88",
+      "verdict": "confirmed",
+      "reason": "Only Image Transformer is named."
+    },
+    {
+      "sampleId": "sample-1e6d1e25f80d08421e81",
+      "verdict": "confirmed",
+      "reason": "Multirobot problems is a generic domain, not a specific target operation."
+    },
+    {
+      "sampleId": "sample-e4eb0b7cf872f6289f82",
+      "verdict": "confirmed",
+      "reason": "Soft-mask mechanism belongs to the full neural method."
+    },
+    {
+      "sampleId": "sample-d0e7ef765b1e99d875a8",
+      "verdict": "confirmed",
+      "reason": "Platform modifier coordination remains ambiguous, no forced individual roles."
+    },
+    {
+      "sampleId": "sample-c9aac5f0b93bbe43396b",
+      "verdict": "confirmed",
+      "reason": "Fused task/model/components remain ambiguous under nonoverlap constraint."
+    },
+    {
+      "sampleId": "sample-872372960271471d9e00",
+      "verdict": "confirmed",
+      "reason": "Electronics health/life targets are complete and explicitly served by pipeline."
+    },
+    {
+      "sampleId": "sample-78eb6d0ae5536cdb4fb4",
+      "verdict": "confirmed",
+      "reason": "Positional prompt tuning explicitly targets 3D representation."
+    },
+    {
+      "sampleId": "sample-a81eaeb73f0dd590a534",
+      "verdict": "confirmed",
+      "reason": "LLM-driven augmentation explicitly addresses the financial-sentiment data gap."
+    },
+    {
+      "sampleId": "sample-018f0204c0e04d2c431f",
+      "verdict": "confirmed",
+      "reason": "Model and named ontology explicitly support cyber-plan standardization."
+    },
+    {
+      "sampleId": "sample-f0e5b747c297eea6e8e4",
+      "verdict": "confirmed",
+      "reason": "QA model is comparison baseline, not stated semantic-parsing means."
+    },
+    {
+      "sampleId": "sample-6382df39e8b87d0572f8",
+      "verdict": "confirmed",
+      "reason": "Named denoiser and learning family explicitly serve density-map denoising."
+    },
+    {
+      "sampleId": "sample-39646eb74c7623314045",
+      "verdict": "confirmed",
+      "reason": "Policy gradient explicitly aligns LLMs; sequence scores are signals."
+    },
+    {
+      "sampleId": "sample-0ee59d0dc48026ecf529",
+      "verdict": "confirmed",
+      "reason": "Urdu language retained with sentiment target; deep learning method exact."
+    },
+    {
+      "sampleId": "sample-53349ef8bcda13259bb7",
+      "verdict": "confirmed",
+      "reason": "Both YOLOv8 version and prompt-optimized SAM explicitly serve infrared tasks."
+    },
+    {
+      "sampleId": "sample-3ef9cb8552427a0b0fd6",
+      "verdict": "confirmed",
+      "reason": "Named annotation collaboration and LLM participation explicitly serve training."
+    },
+    {
+      "sampleId": "sample-003560518964c3eb99da",
+      "verdict": "confirmed",
+      "reason": "Full decoding/constraint optimization target includes code-generation context."
+    },
+    {
+      "sampleId": "sample-01f9b182c4ddf27ddf13",
+      "verdict": "confirmed",
+      "reason": "TU-VDN alias and formal dataset name exact; no method means no evaluated-on edge."
+    },
+    {
+      "sampleId": "sample-9188ef47c4a94f7a782a",
+      "verdict": "confirmed",
+      "reason": "Human cognitive learning is not mislabeled as an AI model."
+    },
+    {
+      "sampleId": "sample-4a9107112223f4aebe84",
+      "verdict": "confirmed",
+      "reason": "Azerbaijani language context retained with classification."
+    },
+    {
+      "sampleId": "sample-c11da0859574135f148a",
+      "verdict": "confirmed",
+      "reason": "Pretrained prompt-tuning mechanism explicitly supports chemical-protein extraction."
+    },
+    {
+      "sampleId": "sample-f652882688be50b2fff0",
+      "verdict": "confirmed",
+      "reason": "Underwater localization-fusion context is the explicit neural target."
+    },
+    {
+      "sampleId": "sample-59e3cc4aa5a7b78efc71",
+      "verdict": "confirmed",
+      "reason": "Preference and multi-objective qualifiers form one learning method."
+    },
+    {
+      "sampleId": "sample-7d66ac07055b1ea14fa1",
+      "verdict": "confirmed",
+      "reason": "Wireless intrusion target and deep-learning means are exact."
+    },
+    {
+      "sampleId": "sample-0e58a0aa347861294d4b",
+      "verdict": "confirmed",
+      "reason": "Social trust study supplies no concrete computational prediction target."
+    },
+    {
+      "sampleId": "sample-2c3b357b8119a37ae953",
+      "verdict": "confirmed",
+      "reason": "Complete convolutional framework explicitly serves subpixel mapping."
+    },
+    {
+      "sampleId": "sample-c2c603078341f648bd9b",
+      "verdict": "confirmed",
+      "reason": "Both AI and agent explicitly support automation and the expense-processing case."
+    }
+  ]
+}

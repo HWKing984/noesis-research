@@ -1,0 +1,61 @@
+{
+  "renderer": "installed_Microsoft_Edge_headless",
+  "kind": "actual_browser_render_capture",
+  "finishedAt": "2026-10-10T00:51:53.1548710Z",
+  "originalConsoleScreenshot": false,
+  "captures": [
+    {
+      "originalConsoleScreenshot": false,
+      "bytes": 106751,
+      "image": "01_data.png",
+      "sourcePageSha256": "5084ca007000a5ca1cc3ded51052edb8a64986f271fb30e1e97d40faa64e2f61",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1100",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_round56\\01_data.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e92520135ac34be6b837a01ebfedf835",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261010_round56/01_data.html"
+      ],
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261010_round56/01_data.html",
+      "capturedAt": "2026-10-10T00:51:52.4688694Z",
+      "viewportHeight": 1100,
+      "sourcePage": "01_data.html",
+      "sha256": "0fa8f7abffb4071acc4d290722e01b628069dc9b5d86e2592c36a4f16bdc27dd"
+    },
+    {
+      "originalConsoleScreenshot": false,
+      "bytes": 106739,
+      "image": "03_predictions.png",
+      "sourcePageSha256": "83d6ecca42d9b52e645008ea432ea0fba3de52a8b08c800b69403f60bd83a2c6",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_round56\\03_predictions.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e92520135ac34be6b837a01ebfedf835",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261010_round56/03_predictions.html"
+      ],
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261010_round56/03_predictions.html",
+      "capturedAt": "2026-10-10T00:51:53.1540947Z",
+      "viewportHeight": 1300,
+      "sourcePage": "03_predictions.html",
+      "sha256": "a2005a284605a0512a4fa10e15ffe7e6c5e141fdbf91a05a8c10dd94a6b9bebc"
+    }
+  ],
+  "status": "completed",
+  "browserVersion": "154.0.4258.62",
+  "generatedFromRealArtifacts": true,
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e92520135ac34be6b837a01ebfedf835",
+  "viewportWidth": 1280
+}

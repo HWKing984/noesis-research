@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>V2身份隔离修复与不可评状态</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>V2身份隔离修复与不可评状态</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>仅修复身份与评测准入；未训练、未推理、未改标签或V1。所有新验证/测试成员为空。</p><table><thead><tr><th>历史书目身份映射</th><th>行数</th></tr></thead><tbody><tr><td>sourceRows</td><td>20000</td></tr><tr><td>canonicalArxivRows</td><td>5425</td></tr><tr><td>fromEncodedKeyRows</td><td>5253</td></tr><tr><td>fromURLOnlyRows</td><td>172</td></tr><tr><td>noArxivMappingRows</td><td>14575</td></tr><tr><td>quarantinedRows</td><td>0</td></tr></tbody></table><table><thead><tr><th>回归用例（仅合成身份元数据）</th><th>旧拒绝</th><th>新拒绝</th></tr></thead><tbody><tr><td>case_prefix_mixed_case</td><td>False</td><td>True</td></tr><tr><td>case_prefix_caps</td><td>False</td><td>True</td></tr><tr><td>case_corpus_dblp_alias</td><td>False</td><td>True</td></tr><tr><td>case_named_dblp_url_alias</td><td>False</td><td>True</td></tr><tr><td>control_lowercase_prefix</td><td>True</td><td>True</td></tr><tr><td>control_fresh_synthetic</td><td>False</td><td>False</td></tr></tbody></table><table><thead><tr><th>训练侧参考完整性检查，不是模型评分</th><th>正例</th><th>负例</th><th>未决</th><th>来源篇数</th><th>状态</th></tr></thead><tbody><tr><td>USED_FOR</td><td>68</td><td>0</td><td>495</td><td>11</td><td>not_evaluable</td></tr><tr><td>EVALUATED_ON</td><td>17</td><td>0</td><td>104</td><td>5</td><td>not_evaluable</td></tr></tbody></table><p>14,575条书目缺少已知arXiv映射，不代表它们不存在arXiv版本；本次没有证明全量跨来源去重。缺负例/参考不完整/覆盖不全不默认通过，P/R/F1均为null。</p><footer>证据页生成时间：2026-10-10T14:37:12.255605+00:00<br>来源：<div class="path">identity_coverage.json</div><div class="path">identity_regression.json</div><div class="path">evaluation_readiness.json</div><div class="path">split_lock.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

@@ -1,0 +1,77 @@
+{
+  "queue": {
+    "valid": true,
+    "documents": 2000
+  },
+  "artifacts": {
+    "reportedDate": "2026-10-06",
+    "hostCheckedAt": "2026-10-06T00:31:51.3826913+08:00",
+    "valid": true,
+    "originalInputs": 21,
+    "runDirectories": 127,
+    "hashedRunOutputs": 679,
+    "exportVersions": [
+      {
+        "version": "01",
+        "files": 8
+      },
+      {
+        "version": "02",
+        "files": 8
+      },
+      {
+        "version": "03",
+        "files": 9
+      },
+      {
+        "version": "04",
+        "files": 9
+      },
+      {
+        "version": "05",
+        "files": 9
+      },
+      {
+        "version": "06",
+        "files": 9
+      }
+    ],
+    "receiptDocuments": 608,
+    "pendingDocuments": 1392,
+    "reviewedSplits": [
+      {
+        "Name": "dev",
+        "Count": 200
+      },
+      {
+        "Name": "train",
+        "Count": 408
+      }
+    ],
+    "pendingUnique": true,
+    "pendingAnnotatedIntersection": 0,
+    "pendingAnonymous": true,
+    "annotatedCrossSplitGroups": 0,
+    "nerDocuments": {
+      "dev": 167,
+      "test": 0,
+      "train": 338
+    },
+    "relationExamples": {
+      "dev": 162,
+      "test": 0,
+      "train": 265
+    },
+    "confirmed": 582,
+    "revised": 26,
+    "entityUnresolved": 102,
+    "relationUnresolved": 141,
+    "tests": 278,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "coveragePercent": 96.73802242609582,
+    "coreCoveragePercent": 100,
+    "trainingStarted": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "phase": "evidence_prepare_loss_visualization",
+  "errorType": "ValueError",
+  "error": "Logarithmic loss plot requires finite positive actual losses",
+  "source": "scripts/export_course_evidence.py:43",
+  "modelTrainingFailed": false,
+  "rawTrainingLogsModified": false,
+  "capturesProduced": 0,
+  "notice": "Partial evidence directory preserved. Actual zero FP32 losses cannot be represented on the existing logarithmic chart; use a separate final evidence folder and a linear chart without altering raw values."
+}

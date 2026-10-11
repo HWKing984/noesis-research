@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Literature-KG · 文献发现</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f2f5fa;color:#15243b;font:16px/1.65 system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:24px}h1{margin:0;font-size:30px}p{margin:8px 0}.card{background:white;border:1px solid #cbd5e1;border-radius:12px;padding:20px;margin:18px 0}.muted{color:#475569}.notice{border-left:5px solid #ad6100;background:#fff5df;padding:14px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}label{display:block;font-weight:600}input,button{font:inherit;border:1px solid #64748b;border-radius:6px;padding:8px;width:100%}button{background:#1748a5;color:white;cursor:pointer}button:disabled{opacity:.6;cursor:wait}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ad6100;outline-offset:3px}.actions{display:flex;gap:10px;margin-top:16px}.actions button{width:auto}a{color:#1748a5;overflow-wrap:anywhere}#status{font-weight:600}article{border-top:1px solid #cbd5e1;padding:16px 0}article h3{margin:0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef2f7;padding:12px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #cbd5e1;padding:8px;overflow-wrap:anywhere}.tablewrap{overflow-x:auto}summary{cursor:pointer;font-weight:600}#detail{scroll-margin-top:16px}@media(max-width:700px){main{padding:12px}.grid{grid-template-columns:1fr}h1{font-size:24px}.card{padding:14px}.actions{flex-wrap:wrap}}
+</style>
+<main>
+<header><h1>AI-Literature-KG</h1><p class="muted">人工智能文献检索与候选参考文献发现 · 课程本地演示</p></header>
+<section class="notice" aria-label="数据与模型限制"><strong>书目信息 ≠ 模型候选事实</strong><p id="scope">当前图谱规模待真实Neo4j连接核验。</p><p>严格NER→RE测试F1为60.07%（AI参考、69%覆盖），不是全量语料准确率。分数未校准，仍有误报与漏报。无引用网络，不自动决定必引文献。</p></section>
+<section class="card"><p id="status" role="status" aria-live="polite">正在检查Neo4j…</p><p id="error" role="alert"></p>
+<form id="search"><div class="grid">
+<label>题名关键词<input name="q" maxlength="200" placeholder="知识图谱 / graph neural network"></label>
+<label>作者（姓名未消歧）<input name="author" maxlength="200"></label>
+<label>会议或期刊<input name="venue" maxlength="200"></label>
+<label>方法候选<input name="method" maxlength="200" placeholder="扩散模型 / BERT"></label>
+<label>任务候选<input name="task" maxlength="200" placeholder="机器翻译 / classification"></label>
+<label>数据集候选<input name="dataset" maxlength="200"></label>
+<label>年份<input name="year" type="number" min="2015" max="2025" placeholder="2015—2025"></label>
+</div><div class="actions"><button id="submit" type="submit">检索Neo4j</button><button type="reset">清空条件</button><button id="retry" type="button">重试连接</button></div></form>
+<p class="muted">方法/任务/数据集条件匹配模型候选断言；未命中不等于论文不存在该方法或任务。使用题名条件可检索全部书目。</p>
+<p class="muted">中文只按固定术语词表展开；不是自动翻译或整句问答。英文原题、作者姓名及证据保留；本轮不翻译论文题名、不训练中文抽取模型。</p>
+<details><summary>支持的中文术语与节点/关系说明</summary><div id="terminology">词表待Neo4j就绪后加载。</div></details></section>
+<section class="card" aria-labelledby="results-title"><h2 id="results-title">检索结果</h2><p id="summary" aria-live="polite">尚未检索；不展示离线替代结果。</p><p id="expansion" class="muted"></p><div id="results"></div><div class="actions"><button id="previous" type="button" hidden>上一页</button><button id="next" type="button" hidden>下一页</button></div></section>
+<section class="card" id="detail" hidden aria-labelledby="detail-title"><h2 id="detail-title">文献与预测证据</h2><div id="detail-body"></div></section>
+<footer class="muted">数据来源：DBLP结构化XML；神经网络：冻结SciBERT NER与实体对标记RE。仅监听本机，只读应用；候选参考文献须阅读原文并核验后再引用。</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);let offset=0,active=null,sequence=0,terminology={};
+const elem=(tag,text)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;return e;};
+const label=(group,value)=>terminology[group]?.[value]?`${terminology[group][value]}（${value}）`:value;
+function concept(text,type){const field={METHOD:'method',TASK:'task',DATASET:'dataset'}[type];const alias=terminology.aliases?.find(a=>a.fields.includes(field)&&a.terms.includes(text.toLowerCase()));return alias?`${alias.zh}（${text}）`:text;}
+function showTerminology(){const box=$('terminology');box.replaceChildren();box.append(elem('p','固定词表版本：'+terminology.version));for(const a of terminology.aliases||[])box.append(elem('p',`${a.zh} → ${a.terms.join(' / ')} · 可用字段：${a.fields.join(', ')}`));for(const group of ['nodeLabels','relationshipLabels'])for(const [key,value] of Object.entries(terminology[group]||{}))box.append(elem('p',`${key}：${value}`));box.append(elem('p','中文名称仅用于本应用展示；Neo4j Browser中的标签/关系类型和数据库标识不改。USED_FOR/EVALUATED_ON是候选断言属性，不是新增的直接关系。'));}
+async function request(path){const r=await fetch(path);const data=await r.json();if(!r.ok)throw new Error(data.error?.message||'请求失败');return data;}
+async function health(){try{const r=await request('/api/health');const s=r.data.scope;terminology=r.data.terminology||{};showTerminology();$('status').textContent='Neo4j已就绪 · '+r.data.graphId;$('scope').textContent=`当前数据库：${s.bibliographyTitles.toLocaleString()}篇书目，${s.modelTitles.toLocaleString()}篇具有模型输出，${s.rejectedNERTitles}篇抽取拒绝，${s.candidateAssertions.toLocaleString()}条候选断言。书目由题名规则筛选，不保证全部为原创AI研究论文。`;$('error').textContent='';}catch(e){$('status').textContent='Neo4j未就绪';$('scope').textContent='当前图谱规模未核验；不沿用旧计数。';$('error').textContent=e.message;}}
+function link(parent,label,url){try{const u=new URL(url);if(!['https:','http:'].includes(u.protocol))return;const a=elem('a',label);a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';parent.append(a,document.createTextNode('  '));}catch{}}
+async function search(){const current=++sequence;$('submit').disabled=true;$('error').textContent='';$('expansion').textContent='';$('results').replaceChildren();$('detail').hidden=true;$('previous').hidden=true;$('next').hidden=true;$('summary').textContent='正在查询真实Neo4j…';
+try{const params=new URLSearchParams(active);params.set('offset',offset);params.set('limit','20');const r=await request('/api/publications?'+params);if(current!==sequence)return;
+$('summary').textContent=`本页${r.data.length}篇 · 起始位置${offset} · 来源：真实Neo4j`;
+$('expansion').textContent=Object.keys(r.meta.expandedTerms||{}).length?'中文术语展开（'+r.meta.aliasVersion+'）：'+Object.entries(r.meta.expandedTerms).map(([field,terms])=>`${field}：${terms.join(' / ')}`).join('；'):'未使用中文术语展开；按原始关键词匹配。';
+for(const p of r.data){const a=elem('article');a.append(elem('h3',p.title),elem('p',`${p.year} · ${label('publicationTypes',p.type)} · ${p.publicationId}`));link(a,'DBLP原始记录',p.dblpUrl);if(p.doi)link(a,'DOI','https://doi.org/'+p.doi);const b=elem('button','查看作者、候选关系与证据');b.style.marginTop='12px';b.onclick=()=>detail(p.publicationId);a.append(b);$('results').append(a);}
+$('previous').hidden=offset===0;$('next').hidden=!r.meta.hasNext;
+}catch(e){if(current===sequence){$('summary').textContent='检索失败；没有展示替代结果。';$('error').textContent=e.message;}}finally{if(current===sequence)$('submit').disabled=false;}}
+async function detail(id){const current=++sequence;$('detail').hidden=true;$('error').textContent='';
+try{const r=await request('/api/publication?'+new URLSearchParams({id}));if(current!==sequence)return;const d=r.data;const box=$('detail-body');box.replaceChildren();box.append(elem('h3',d.publication.title),elem('p','作者：'+d.authors.map(a=>a.name).join('; ')),elem('p','场馆：'+d.venues.map(v=>v.name).join('; ')),elem('p',d.notice));
+box.append(elem('h3','候选参考文献草稿（非正式格式）'),elem('pre',d.citationDraft));
+box.append(elem('h3',`模型预测提及 ${d.mentions.length} 个`));for(const m of d.mentions)box.append(elem('p',`${label('entityLabels',m.label)} · ${concept(m.text,m.label)} · 原文Unicode字符区间[${m.start}, ${m.end}) · 候选（${m.status}）`));
+box.append(elem('h3',`候选断言 ${d.assertions.length} 条`));if(!d.mentions.length)box.append(elem('p',d.publication.modelApplied?'本版模型未预测出实体；不代表原文没有实体。':d.publication.modelApplicationStatus==='rejected'?'此论文抽取已拒绝：'+(d.publication.modelApplicationReason||'见处理记录')+'；不是无实体。':'此论文未执行本版抽取；不是无实体。'));
+for(const item of d.assertions){const a=item.assertion;const div=elem('div');div.className='notice';div.append(elem('strong',`${concept(item.head.text,item.head.label)} → ${label('relationshipLabels',a.predicate)} → ${concept(item.tail.text,item.tail.label)}`),elem('p',`候选 · 未校准分数 ${a.confidence.toFixed(4)} · 模型预测（model_prediction）`),elem('p','完整题名证据：'+a.evidence));const more=elem('details');more.append(elem('summary','查看来源与模型哈希'),elem('pre',JSON.stringify({pairId:a.pairId,head:[item.head.start,item.head.end],tail:[item.tail.start,item.tail.end],textSha256:a.textSha256,NERWeightsSha256:a.NERWeightsSha256,REWeightsSha256:a.REWeightsSha256,sourceRunManifestSha256:a.sourceRunManifestSha256},null,2)));div.append(more);box.append(div);}
+$('detail').hidden=false;$('detail').scrollIntoView({behavior:'smooth'});
+}catch(e){if(current===sequence)$('error').textContent=e.message;}}
+$('search').onsubmit=e=>{e.preventDefault();active=new URLSearchParams(new FormData(e.target));offset=0;search();};
+$('search').onreset=()=>{sequence++;active=null;offset=0;$('submit').disabled=false;$('expansion').textContent='';$('results').replaceChildren();$('detail').hidden=true;$('previous').hidden=true;$('next').hidden=true;$('summary').textContent='条件已清空；请重新检索。';};
+$('previous').onclick=()=>{offset=Math.max(0,offset-20);search();};$('next').onclick=()=>{offset+=20;search();};$('retry').onclick=health;health();
+</script></html>

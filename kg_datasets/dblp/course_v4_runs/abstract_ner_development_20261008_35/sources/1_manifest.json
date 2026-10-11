@@ -1,0 +1,28 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_v1.json": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/manifest.json": "acfe489a3c8e4d574b8fd0472008ca92bf66f2a092ad50922b7c2868b3979645",
+    "kg_datasets/dblp/course_abstract_train_reviewed_20261008_33/manifest.json": "84e6d06ad5165f4069b920cc7611e1e9ab4eecb5f04c9c741767628841ae8097",
+    "kg_datasets/dblp/course_abstract_dev_reviewed_20261008_35/manifest.json": "1a680382e959687823fa6300637149dd4d26af4d31f56de1b6a95fa2fe51bb9e",
+    "scripts/course_abstract_v1.py": "1327e537f46a260a18b215899fa72341f32fd0864fb45fed5f89c30358af85a6",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "kg_datasets/models/scibert_24f92d32/manifest.json": "378279b83aa104efa17a202cb455bc1d3598068aad0490147906ccb73d7d7eeb"
+  },
+  "filesSha256": {
+    "alignment_dev.jsonl": "08ba5223f418ea9069bc7702758e488e91cca5924851f9054b71562dfb3c8ce9",
+    "alignment_train.jsonl": "8588459b2d328a7ab594d7d3fa4f504da1c09decfbafb734ef1fcde24d1df922",
+    "contract.json": "028c184e579477c9d88c42dd4eec3bf274bea3643aafab5f65112675055b0094",
+    "excluded_ner_dev.jsonl": "e13bbf2af675c686a7b9430903ad0aa3498c3f970332032740692fd8beb60df7",
+    "excluded_ner_train.jsonl": "16dccb18de12aa4ac8ccbc83894ffa478c48cfb0bd89119ae5b36b98abe029e0",
+    "full_relation_dev.jsonl": "784ab004157e7ee7543591558e2176d10c48e8ee0acbf357e4600f24ee89fc5c",
+    "full_relation_train.jsonl": "1dacaa02bb90aa7d4aa5b85b9a3dad7f198cdbd87ac3a205a6ca5bcd337d38f1",
+    "ner_dev.jsonl": "bebe71a241aeb55420d68901de6536dec02d4a83daa449254ece89fb73e13b30",
+    "ner_train.jsonl": "f5319d92377e25792ad1a8ee2c8ac92c8a15d422d7ef0a96c6a3983359aaa710",
+    "relation_dev.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "relation_train.jsonl": "ccaab5536dc2c3d9de0d87d7c8eb64eed57264b9dcf467ccaae9b0a277722ce4",
+    "summary.json": "6288c3ff46f343c90f2e8d5839e3a6bd4ad98bbfe642bac5e2b0c8f306befed7"
+  }
+}

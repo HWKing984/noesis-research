@@ -1,0 +1,18 @@
+{
+  "documents": 200,
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "modelCallExecutedByCompiler": false,
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\pending_train_20261007_23\\jobs.jsonl": "81864a306c304ab8a7996c7643581a4a9bcda64df5b68aba7aaaadb3769bf204",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\pending_train_20261007_23\\review_expanded\\review_decisions.json": "b5cb949350c4723e9af0f504fbabcbd5c3d4d45d8ff3c1fc930516479b0aa135",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\pending_train_20261007_23\\generation\\receipts.jsonl": "e40cb0450ad95dd0afccc0d96ebdcd49984e4e4784d8e059e2587de8afcdb93b"
+  },
+  "compilerCodeSha256": "c4cb5c68c564494006b0386d62b628ff769d8207920f9cd33aa0edd8eb8f8bce",
+  "notice": "Semantic decisions were authored by the declared AI; compilation only assigns literal offsets and validates.",
+  "filesSha256": {
+    "ai_decisions.json": "b5cb949350c4723e9af0f504fbabcbd5c3d4d45d8ff3c1fc930516479b0aa135",
+    "responses.jsonl": "d7c750e6f6909d61a57d8528d4226b485e3c5d9e24e1a08b5c6218d79ec29b39"
+  }
+}

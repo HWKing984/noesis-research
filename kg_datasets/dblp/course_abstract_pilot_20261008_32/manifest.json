@@ -1,0 +1,18 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/course_abstract_sources_20261008_32/manifest.json": "10f7554bf6ff1305f07cf18a9d9077467a539ea6fdc55c21fc3b6c7aa840cd7f",
+    "annotations/course_v4/abstract_pilot_decisions_20261008_32.json": "960ed7ac6b4246cb005e37b7f4a9af8a89ed6928f7602a99b659130ee21f23b7",
+    "scripts/prepare_abstract_pilot.py": "303cc32a752f295b951ae7b9ddc7bf4233bdc1c968eef1c8727db99e4f617081",
+    "scripts/compile_course_ai.py": "c4cb5c68c564494006b0386d62b628ff769d8207920f9cd33aa0edd8eb8f8bce",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5"
+  },
+  "filesSha256": {
+    "annotation_jobs.jsonl": "4b676c5add2e47d6febb6d1f1c27315156f3ad1b9cfe054f7bc193a105bc4314",
+    "contract.json": "6e27193df92668423c40ddd996a2a6db9cd9113732c37efa7471a6086249b351",
+    "generation_receipts.jsonl": "eb2d8b87795eb815fe44f877799c5bfbe9201ef4bc426a46e7242e7a6675c055",
+    "prompt.json": "01b7f13dc334fd9a7ab9a9456fcf755a04891f2d1b6862a74b6197c919dcb547",
+    "references.jsonl": "9b539749257df2b28b1ef77bd3a7deb5bfa97cdbef9693b77e192de0b5098632",
+    "summary.json": "5446b742462411f6e54bdbc98d8fcc6dca78d3a45fff6290639136f387bb5109"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "generated_at_utc": "2026-10-05T05:56:17.031205+00:00",
+  "status": "draft",
+  "schema_sha256": "62a579f3a39f2b8fdc7fd9906378266a6d2102295aa8c3ecb98dd64a8eac8aba",
+  "lexicon_sha256": "787be86afbb511c614482a775a9213ab5d3b06074179aa93a06ca0ff32193ec9",
+  "input_sha256": {
+    "pilot_200.jsonl": "6986629242d567e301a7385fb853d31cd3de28b9ce106e3863d122b2ff41fa22",
+    "corpus_manifest.jsonl": "bc88db81e0c68156c2fcacdbf8523e77b81be9b5d811163da2ed30f3edf3ca8a"
+  },
+  "outputs_sha256": {
+    "blind_50_a.html": "14ff661114e88e3f2293b33a4d797b3c85961d8736e3c9f74f6d60dd55a6ff18",
+    "blind_50_b.html": "0f513ccb88256fa4ceb5e4305c183abfb384c5dcdb94c0e88d7c522809a17cef",
+    "blind_50_reference.jsonl": "797c199bcb310bd8779c8570790a07c8f4c10bd1cd8d4fa50c83d2d7ee7581a3",
+    "pilot_200.jsonl": "f53212fb47ea8875354aa50ad108acd9186805b1609c2908bfd3ce97bfd0972a",
+    "pilot_review.csv": "361fb8879b5c913ee5a2146cab84e902a92f8794faf971f5733655601761ba71",
+    "pilot_review.html": "38113e90dfa94c6aa03377e970fd547f92cef922ab14a46ef5d68ad667e70ae9",
+    "rare_candidates_train.jsonl": "116d39ffe1eb503d1c13a9d9b0bda4c675e29b47dd91f87576f0f9047382ff49",
+    "rare_review.html": "29ffda879d4cf311b7ae9b51ff899455fd772d28d772c9ef22fc24dd39823285",
+    "summary.json": "6247ccf972acce878c689eb451734deab3b7b375c92c5a9ff84185ae5c32313e"
+  }
+}

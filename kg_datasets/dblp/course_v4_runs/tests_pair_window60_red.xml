@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.425" timestamp="2026-10-10T15:21:35.363341+08:00" hostname="HWKing"><testcase classname="" name="tests.test_pair_window_training" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\a-open_source\neo4j\tests\test_pair_window_training.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_pair_window_training.py:10: in &lt;module&gt;
+    import train_pair_window_relation as training
+E   ModuleNotFoundError: No module named 'train_pair_window_relation'</error></testcase></testsuite></testsuites>

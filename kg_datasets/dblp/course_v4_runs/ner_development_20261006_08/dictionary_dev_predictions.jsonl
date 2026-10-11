@@ -1,0 +1,167 @@
+{"sampleId": "sample-74761d4945aa3c297d0b", "entities": [{"start": 54, "end": 70, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-bfb41af7ff41bc255f61", "entities": [{"start": 31, "end": 53, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-0376f5d78c67edff0a93", "entities": []}
+{"sampleId": "sample-2b3962c177c159006461", "entities": [{"start": 3, "end": 7, "text": "LLMs", "label": "METHOD"}]}
+{"sampleId": "sample-26870dc889458d0f079f", "entities": [{"start": 46, "end": 50, "text": "LLMs", "label": "METHOD"}]}
+{"sampleId": "sample-6925381c99cac3fcf3ff", "entities": [{"start": 69, "end": 89, "text": "Deep Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-df62f7ea0c7e0f5e0ae5", "entities": []}
+{"sampleId": "sample-ede890d9106c15d17fff", "entities": [{"start": 65, "end": 86, "text": "Large Language Models", "label": "METHOD"}]}
+{"sampleId": "sample-490ebf1807c1edd49757", "entities": [{"start": 74, "end": 107, "text": "deep convolutional neural network", "label": "METHOD"}]}
+{"sampleId": "sample-52471fa59713aecb914e", "entities": [{"start": 0, "end": 16, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-bf921f1073103a9ff784", "entities": [{"start": 58, "end": 76, "text": "Question Answering", "label": "TASK"}]}
+{"sampleId": "sample-f72fd4171fee4420f6a4", "entities": [{"start": 2, "end": 18, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-74f43a51020a1ebe3eee", "entities": [{"start": 54, "end": 67, "text": "Deep Learning", "label": "METHOD"}, {"start": 68, "end": 83, "text": "Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-96b6e0a34f9984cc9e19", "entities": [{"start": 23, "end": 37, "text": "Neural Network", "label": "METHOD"}, {"start": 42, "end": 58, "text": "Object Detection", "label": "TASK"}]}
+{"sampleId": "sample-e6ed611b5391f5d77dd5", "entities": [{"start": 23, "end": 44, "text": "Graph Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-c4ed9d279ddbd800e9bb", "entities": [{"start": 14, "end": 32, "text": "Federated Learning", "label": "METHOD"}]}
+{"sampleId": "sample-33cc253f21fe762a93c3", "entities": [{"start": 15, "end": 29, "text": "Classification", "label": "TASK"}, {"start": 90, "end": 119, "text": "Convolutional Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-7791cae37533e90342a5", "entities": [{"start": 62, "end": 80, "text": "Question Answering", "label": "TASK"}]}
+{"sampleId": "sample-8cbd105f390a02920d4e", "entities": []}
+{"sampleId": "sample-4756f501a75a55ebff3f", "entities": [{"start": 18, "end": 36, "text": "Federated Learning", "label": "METHOD"}]}
+{"sampleId": "sample-4704e18b47ae1bd748a7", "entities": []}
+{"sampleId": "sample-e8c29e4aab854445bb02", "entities": [{"start": 0, "end": 10, "text": "Clustering", "label": "METHOD"}, {"start": 44, "end": 57, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-9ccf2cd98f2dd31c2b58", "entities": [{"start": 33, "end": 36, "text": "LLM", "label": "METHOD"}]}
+{"sampleId": "sample-244064bcb4d730639671", "entities": [{"start": 26, "end": 39, "text": "Generative AI", "label": "METHOD"}]}
+{"sampleId": "sample-db6941be9d9e4b7e5d2a", "entities": [{"start": 51, "end": 64, "text": "Generative AI", "label": "METHOD"}]}
+{"sampleId": "sample-7eb638c7eed0635dcdf4", "entities": [{"start": 26, "end": 53, "text": "Deep Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-603fa5d47df2bc0edf48", "entities": []}
+{"sampleId": "sample-f8378e36d4a73cdc40c6", "entities": [{"start": 54, "end": 93, "text": "Multi-agent Deep Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-2e2d585b676f62a930b0", "entities": [{"start": 61, "end": 86, "text": "Recurrent Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-e8069651f64b0492e6c0", "entities": [{"start": 57, "end": 75, "text": "Federated Learning", "label": "METHOD"}]}
+{"sampleId": "sample-d910c556fbc2debfb662", "entities": [{"start": 30, "end": 46, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-f3567ea22dd09361cceb", "entities": []}
+{"sampleId": "sample-723a155dd8d2a0391272", "entities": [{"start": 25, "end": 40, "text": "Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-c0fd77afb68c65c839e8", "entities": [{"start": 0, "end": 14, "text": "Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-d2ed7a6245ff31076a2f", "entities": [{"start": 40, "end": 53, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-aceae84d7590a95868f7", "entities": [{"start": 0, "end": 16, "text": "Machine learning", "label": "METHOD"}]}
+{"sampleId": "sample-ae6f3e5a27d092606cb3", "entities": [{"start": 81, "end": 93, "text": "Transformers", "label": "METHOD"}]}
+{"sampleId": "sample-08c8acdd804a43f14d6a", "entities": [{"start": 51, "end": 72, "text": "Large Language Models", "label": "METHOD"}]}
+{"sampleId": "sample-6b6888733646eaa5f57d", "entities": [{"start": 43, "end": 72, "text": "Convolutional Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-0580aa5adc66e9ce0426", "entities": [{"start": 110, "end": 124, "text": "Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-b369fe9a25d21f51fd72", "entities": [{"start": 29, "end": 43, "text": "Recommendation", "label": "TASK"}, {"start": 48, "end": 52, "text": "LLMs", "label": "METHOD"}]}
+{"sampleId": "sample-341550d725a85923dfe5", "entities": [{"start": 31, "end": 47, "text": "Object Detection", "label": "TASK"}]}
+{"sampleId": "sample-ec53aceaa843c28c05da", "entities": [{"start": 17, "end": 33, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-710c48d6461a108d253d", "entities": [{"start": 25, "end": 44, "text": "Text Classification", "label": "TASK"}]}
+{"sampleId": "sample-d6cd79d3ac9e62457072", "entities": [{"start": 5, "end": 34, "text": "Convolutional Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-183551ce62bdc7e1e880", "entities": [{"start": 65, "end": 68, "text": "LLM", "label": "METHOD"}]}
+{"sampleId": "sample-77fc39080a8509fb108d", "entities": [{"start": 46, "end": 66, "text": "graph neural network", "label": "METHOD"}]}
+{"sampleId": "sample-b4736f90564b193f4e61", "entities": [{"start": 29, "end": 40, "text": "Transformer", "label": "METHOD"}, {"start": 76, "end": 95, "text": "3D Object Detection", "label": "TASK"}]}
+{"sampleId": "sample-97cd4b276c3787753070", "entities": [{"start": 0, "end": 22, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-28118d72a98e0481e1e0", "entities": [{"start": 105, "end": 122, "text": "Transfer Learning", "label": "METHOD"}]}
+{"sampleId": "sample-fab4d2fc5cd2302721ff", "entities": [{"start": 30, "end": 63, "text": "Deep Convolutional Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-3ad408140b1562f0c79d", "entities": [{"start": 45, "end": 65, "text": "Deep Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-0d7a6917f3334ab0d241", "entities": [{"start": 33, "end": 62, "text": "Convolutional Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-a5ac24d26408837483e2", "entities": [{"start": 11, "end": 26, "text": "neural networks", "label": "METHOD"}, {"start": 42, "end": 56, "text": "classification", "label": "TASK"}]}
+{"sampleId": "sample-6af8cfccce0081035b3a", "entities": [{"start": 67, "end": 89, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-c1352dee23dabb79daee", "entities": [{"start": 58, "end": 68, "text": "Regression", "label": "TASK"}, {"start": 72, "end": 85, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-d348cc5d25feaff0d839", "entities": [{"start": 80, "end": 108, "text": "convolutional neural network", "label": "METHOD"}]}
+{"sampleId": "sample-8ab76074ac8c3796dab2", "entities": [{"start": 0, "end": 3, "text": "LLM", "label": "METHOD"}, {"start": 40, "end": 54, "text": "Recommendation", "label": "TASK"}]}
+{"sampleId": "sample-f1ce401e7ffae794395d", "entities": [{"start": 33, "end": 46, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-69bb43be2162e2e259f4", "entities": [{"start": 0, "end": 17, "text": "Transfer Learning", "label": "METHOD"}, {"start": 50, "end": 84, "text": "Multi-Agent Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-7dfa12eb7e33e2e3289f", "entities": [{"start": 0, "end": 20, "text": "Deep Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-052afc249f7eda4fe685", "entities": [{"start": 8, "end": 22, "text": "neural network", "label": "METHOD"}]}
+{"sampleId": "sample-f29ea45184b067eb8b4a", "entities": [{"start": 5, "end": 19, "text": "Classification", "label": "TASK"}, {"start": 37, "end": 52, "text": "Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-41b850722d9ece7ef69f", "entities": [{"start": 17, "end": 31, "text": "Classification", "label": "TASK"}, {"start": 76, "end": 90, "text": "Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-77b07898b0a9d59158b2", "entities": [{"start": 29, "end": 51, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-bb4e4ab8a045f726acb5", "entities": [{"start": 53, "end": 69, "text": "Machine Learning", "label": "METHOD"}, {"start": 98, "end": 112, "text": "Classification", "label": "TASK"}]}
+{"sampleId": "sample-5095d4cb14ab47406839", "entities": [{"start": 0, "end": 16, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-935412ae567c9706cfe7", "entities": [{"start": 18, "end": 46, "text": "Convolutional Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-57c292bbfcd7dad17dce", "entities": [{"start": 26, "end": 43, "text": "Image Recognition", "label": "TASK"}]}
+{"sampleId": "sample-339ad7f49c3f212380c4", "entities": [{"start": 68, "end": 82, "text": "neural network", "label": "METHOD"}]}
+{"sampleId": "sample-a82580e497ab8aada973", "entities": [{"start": 15, "end": 26, "text": "transformer", "label": "METHOD"}, {"start": 91, "end": 105, "text": "classification", "label": "TASK"}]}
+{"sampleId": "sample-dc99d1e443e3eedfe6d3", "entities": [{"start": 19, "end": 30, "text": "transformer", "label": "METHOD"}]}
+{"sampleId": "sample-c9e65e9b00df3ec30cc1", "entities": [{"start": 14, "end": 37, "text": "representation learning", "label": "METHOD"}]}
+{"sampleId": "sample-89c52e8c00292ff66508", "entities": [{"start": 95, "end": 111, "text": "machine learning", "label": "METHOD"}]}
+{"sampleId": "sample-0389b2ac9ffd3ffa86be", "entities": [{"start": 106, "end": 122, "text": "diffusion models", "label": "METHOD"}]}
+{"sampleId": "sample-c98e4cf91dcd8ed85d31", "entities": [{"start": 65, "end": 75, "text": "regression", "label": "TASK"}, {"start": 80, "end": 93, "text": "deep learning", "label": "METHOD"}]}
+{"sampleId": "sample-334a3751cad108cb8124", "entities": [{"start": 62, "end": 75, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-061fc85fd7d2e77ffbb4", "entities": []}
+{"sampleId": "sample-5c647a905634b7f9a179", "entities": [{"start": 10, "end": 28, "text": "Federated Learning", "label": "METHOD"}]}
+{"sampleId": "sample-8f434867c79baec648e2", "entities": [{"start": 0, "end": 16, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-ad366be658bf5d281e54", "entities": [{"start": 14, "end": 31, "text": "Data Augmentation", "label": "METHOD"}, {"start": 47, "end": 60, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-1168bdf42474e1d2a645", "entities": [{"start": 23, "end": 45, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-933a5b898a35ea33d59a", "entities": [{"start": 71, "end": 91, "text": "Deep Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-268116be94472cb7a954", "entities": []}
+{"sampleId": "sample-372a2606b74d0326a67d", "entities": [{"start": 0, "end": 13, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-f401e81f47d09f24cf17", "entities": [{"start": 20, "end": 42, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-559675823de2ab328c6f", "entities": [{"start": 5, "end": 24, "text": "Supervised Learning", "label": "METHOD"}, {"start": 29, "end": 48, "text": "Text Classification", "label": "TASK"}]}
+{"sampleId": "sample-77fadc21817fad98695c", "entities": [{"start": 53, "end": 68, "text": "Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-497a17d08d2019bf4fb8", "entities": [{"start": 15, "end": 48, "text": "Deep Convolutional Neural Network", "label": "METHOD"}, {"start": 53, "end": 79, "text": "Medical Image Segmentation", "label": "TASK"}]}
+{"sampleId": "sample-0b1adfd827e8e55d7244", "entities": [{"start": 32, "end": 44, "text": "Transformers", "label": "METHOD"}]}
+{"sampleId": "sample-32f000eaa94bda5f5e41", "entities": [{"start": 0, "end": 21, "text": "Graph Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-62d82922cadc36d0ed2b", "entities": [{"start": 0, "end": 16, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-9719585351ca5b334b99", "entities": [{"start": 35, "end": 47, "text": "Transformers", "label": "METHOD"}]}
+{"sampleId": "sample-2999daeebfba66ff50e8", "entities": [{"start": 13, "end": 29, "text": "Image Generation", "label": "TASK"}, {"start": 44, "end": 75, "text": "Generative Adversarial Networks", "label": "METHOD"}]}
+{"sampleId": "sample-3b5ee7c3932ef71533fa", "entities": [{"start": 60, "end": 81, "text": "Graph Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-6e459ae94d7db747c3e9", "entities": [{"start": 8, "end": 19, "text": "Transformer", "label": "METHOD"}]}
+{"sampleId": "sample-baf2e442c6acd30dd617", "entities": [{"start": 18, "end": 29, "text": "Transformer", "label": "METHOD"}, {"start": 49, "end": 69, "text": "Image Classification", "label": "TASK"}]}
+{"sampleId": "sample-516f88e16ae3bf628949", "entities": [{"start": 30, "end": 45, "text": "Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-acfff02747de18e43574", "entities": [{"start": 15, "end": 29, "text": "Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-cdb76288901801a8b88d", "entities": [{"start": 36, "end": 58, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-26f0dc0cea80fd6f26ad", "entities": [{"start": 0, "end": 11, "text": "Transformer", "label": "METHOD"}, {"start": 36, "end": 49, "text": "Deep Learning", "label": "METHOD"}, {"start": 59, "end": 73, "text": "Classification", "label": "TASK"}]}
+{"sampleId": "sample-4eaf659014592e33dc90", "entities": []}
+{"sampleId": "sample-febd08a131700f66cca6", "entities": [{"start": 24, "end": 42, "text": "Question Answering", "label": "TASK"}]}
+{"sampleId": "sample-b38a9361b474377535b6", "entities": [{"start": 38, "end": 52, "text": "classification", "label": "TASK"}, {"start": 80, "end": 93, "text": "deep learning", "label": "METHOD"}]}
+{"sampleId": "sample-45e30b893156af52abf0", "entities": [{"start": 50, "end": 66, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-22a45b6790e157d9b9dc", "entities": [{"start": 29, "end": 52, "text": "Representation Learning", "label": "METHOD"}]}
+{"sampleId": "sample-f12fd85ff69ecbd3d81b", "entities": []}
+{"sampleId": "sample-3fa6e7f6f2bef1bb5451", "entities": []}
+{"sampleId": "sample-91ca25a007f698f80b2a", "entities": [{"start": 48, "end": 69, "text": "Large Language Models", "label": "METHOD"}]}
+{"sampleId": "sample-1c318dc97af55d37982c", "entities": [{"start": 18, "end": 30, "text": "Transformers", "label": "METHOD"}]}
+{"sampleId": "sample-57cf6c490bed82fb35a4", "entities": [{"start": 77, "end": 110, "text": "Skeleton-based Action Recognition", "label": "TASK"}]}
+{"sampleId": "sample-11b028da62aeb4234869", "entities": []}
+{"sampleId": "sample-0a34b678fd7000e0c8a5", "entities": [{"start": 41, "end": 54, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-4969939dde3c4d52654b", "entities": [{"start": 41, "end": 62, "text": "Large Language Models", "label": "METHOD"}]}
+{"sampleId": "sample-16a73e5d7509dd5b175e", "entities": [{"start": 38, "end": 59, "text": "Large Language Models", "label": "METHOD"}]}
+{"sampleId": "sample-ffcb14a5605ea4b8908d", "entities": [{"start": 73, "end": 91, "text": "Vision Transformer", "label": "METHOD"}]}
+{"sampleId": "sample-897b8d1c217c22946ce9", "entities": [{"start": 38, "end": 60, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-35f144f798c02779cb14", "entities": [{"start": 81, "end": 103, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-0db2fdb61489434f0f21", "entities": [{"start": 74, "end": 95, "text": "Large Language Models", "label": "METHOD"}]}
+{"sampleId": "sample-9d985df2101a06c58f34", "entities": [{"start": 87, "end": 105, "text": "Question Answering", "label": "TASK"}]}
+{"sampleId": "sample-5c46ce1c633c0d1273d7", "entities": [{"start": 56, "end": 73, "text": "Foundation Models", "label": "METHOD"}]}
+{"sampleId": "sample-cd58288bbc215640563b", "entities": [{"start": 0, "end": 16, "text": "Diffusion Models", "label": "METHOD"}]}
+{"sampleId": "sample-a1257808fadfcffb5683", "entities": [{"start": 32, "end": 45, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-1f30dd321269b4cdd1f4", "entities": [{"start": 49, "end": 83, "text": "Multi-Agent Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-52e04b4842fc31291bdc", "entities": [{"start": 79, "end": 100, "text": "Large Language Models", "label": "METHOD"}]}
+{"sampleId": "sample-4432f99cd54f20c598de", "entities": [{"start": 35, "end": 51, "text": "Foundation Model", "label": "METHOD"}]}
+{"sampleId": "sample-4e21cc67d4c13b7588bc", "entities": [{"start": 0, "end": 20, "text": "Deep Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-ebb01d1e6dbeaed60727", "entities": [{"start": 25, "end": 48, "text": "Representation Learning", "label": "METHOD"}]}
+{"sampleId": "sample-67751549d332b20c0bc4", "entities": [{"start": 16, "end": 38, "text": "Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-ff1cfbf3087ed447054f", "entities": [{"start": 56, "end": 59, "text": "LLM", "label": "METHOD"}]}
+{"sampleId": "sample-e85e508913af679456fd", "entities": [{"start": 75, "end": 79, "text": "LLMs", "label": "METHOD"}]}
+{"sampleId": "sample-335b578b88859ae5ed7d", "entities": [{"start": 49, "end": 65, "text": "object detection", "label": "TASK"}]}
+{"sampleId": "sample-54fa35073af76f91de53", "entities": [{"start": 26, "end": 40, "text": "neural network", "label": "METHOD"}]}
+{"sampleId": "sample-1213ba38976938e33434", "entities": [{"start": 55, "end": 75, "text": "deep neural networks", "label": "METHOD"}]}
+{"sampleId": "sample-57f633ce708e2058b933", "entities": [{"start": 74, "end": 89, "text": "Neural Networks", "label": "METHOD"}]}
+{"sampleId": "sample-940e05cf29f4d1434463", "entities": [{"start": 78, "end": 104, "text": "neural machine translation", "label": "TASK"}]}
+{"sampleId": "sample-3c13de4cc8b5ca7b7db3", "entities": [{"start": 38, "end": 54, "text": "machine learning", "label": "METHOD"}]}
+{"sampleId": "sample-345ba9453698c7b2726f", "entities": [{"start": 71, "end": 84, "text": "deep learning", "label": "METHOD"}]}
+{"sampleId": "sample-6a181a115d617efd944e", "entities": [{"start": 41, "end": 55, "text": "Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-05cec223b335c0b18cda", "entities": [{"start": 8, "end": 24, "text": "object detection", "label": "TASK"}]}
+{"sampleId": "sample-794d9226c81f89687a11", "entities": [{"start": 22, "end": 45, "text": "representation learning", "label": "METHOD"}]}
+{"sampleId": "sample-26d1923322bce7f98d2c", "entities": [{"start": 30, "end": 58, "text": "convolutional neural network", "label": "METHOD"}]}
+{"sampleId": "sample-d59e231a620853c7a324", "entities": [{"start": 77, "end": 96, "text": "3D object detection", "label": "TASK"}]}
+{"sampleId": "sample-88d714e7e5e9bc357112", "entities": [{"start": 0, "end": 13, "text": "Deep learning", "label": "METHOD"}]}
+{"sampleId": "sample-60b96b33a73a2252d6f5", "entities": [{"start": 33, "end": 62, "text": "convolutional neural networks", "label": "METHOD"}, {"start": 68, "end": 80, "text": "transformers", "label": "METHOD"}]}
+{"sampleId": "sample-1abcf59dfffeb7d09b99", "entities": [{"start": 30, "end": 46, "text": "Object Detection", "label": "TASK"}]}
+{"sampleId": "sample-8f0b9e5ceae022c1bbd6", "entities": [{"start": 34, "end": 45, "text": "transformer", "label": "METHOD"}]}
+{"sampleId": "sample-e1e1914df80de11e14ed", "entities": []}
+{"sampleId": "sample-1412781f2a4ef8311aeb", "entities": [{"start": 34, "end": 37, "text": "LLM", "label": "METHOD"}]}
+{"sampleId": "sample-d56b8e44f80db4abcd67", "entities": [{"start": 32, "end": 50, "text": "knowledge transfer", "label": "TASK"}, {"start": 64, "end": 80, "text": "object detection", "label": "TASK"}]}
+{"sampleId": "sample-ce411b0a84141ee3e623", "entities": [{"start": 69, "end": 85, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-c33ddfa5e6eb2c77ef10", "entities": [{"start": 86, "end": 99, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-b9a42cab5a757542ea82", "entities": [{"start": 72, "end": 85, "text": "Deep Learning", "label": "METHOD"}, {"start": 86, "end": 100, "text": "Neural Network", "label": "METHOD"}]}
+{"sampleId": "sample-8c78953271f68927e361", "entities": [{"start": 90, "end": 106, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-5d39f9f4f41129f24407", "entities": [{"start": 79, "end": 95, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-8ca76cf1a1157e0f4644", "entities": []}
+{"sampleId": "sample-89d259d3481b528471c2", "entities": [{"start": 0, "end": 13, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-7d13998c6dcadb5bdbea", "entities": [{"start": 20, "end": 34, "text": "Classification", "label": "TASK"}, {"start": 41, "end": 58, "text": "Transfer Learning", "label": "METHOD"}]}
+{"sampleId": "sample-c65376055d11e90df61f", "entities": [{"start": 24, "end": 46, "text": "Reinforcement Learning", "label": "METHOD"}, {"start": 69, "end": 88, "text": "Intrusion Detection", "label": "TASK"}]}
+{"sampleId": "sample-f788676c78736405cd25", "entities": [{"start": 49, "end": 65, "text": "Machine Learning", "label": "METHOD"}]}
+{"sampleId": "sample-304ab69a9c03b7a68148", "entities": [{"start": 43, "end": 61, "text": "Federated Learning", "label": "METHOD"}]}
+{"sampleId": "sample-4830dd1ef9b8ddb6c43a", "entities": []}
+{"sampleId": "sample-1a4b18baf05776c19897", "entities": [{"start": 53, "end": 76, "text": "Representation Learning", "label": "METHOD"}]}
+{"sampleId": "sample-c6534328505222ca0718", "entities": [{"start": 8, "end": 25, "text": "Transfer Learning", "label": "METHOD"}]}
+{"sampleId": "sample-07601e650de313249df3", "entities": [{"start": 0, "end": 13, "text": "Deep Learning", "label": "METHOD"}]}
+{"sampleId": "sample-bd378669df0f972b4721", "entities": [{"start": 72, "end": 99, "text": "Deep Reinforcement Learning", "label": "METHOD"}]}
+{"sampleId": "sample-36774ec3ef51155bc49c", "entities": [{"start": 86, "end": 102, "text": "machine learning", "label": "METHOD"}]}

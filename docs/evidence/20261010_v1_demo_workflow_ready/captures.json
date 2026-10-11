@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "downloads": [
+    {
+      "bytes": 15400,
+      "sha256": "dd5908667326fbff57b5927cfe54be688d91feb7966b1cc7885783c73535f36c",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\ai-literature-candidates.json"
+    },
+    {
+      "bytes": 568,
+      "sha256": "31c8254e84962e13346162c639f91e788f277478b3c90491a8fd73a8a6ed8598",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\ai-literature-reference-drafts.txt"
+    }
+  ],
+  "liveGraphId": "ai-literature-63686318d85cccb07afb",
+  "exceptions": [],
+  "graphViews": [
+    {
+      "mode": "paper",
+      "status": "15节点 / 18关系 · 13条路径 · 真实Neo4j",
+      "nodes": 15,
+      "fragment": "#paper=conf%2Fseeda%2FVonitsanosESKM25&view=paper"
+    },
+    {
+      "mode": "coauthors",
+      "status": "10节点 / 11关系 · 7条路径 · 真实Neo4j",
+      "nodes": 10,
+      "fragment": "#paper=conf%2Fseeda%2FVonitsanosESKM25&view=coauthors"
+    },
+    {
+      "mode": "methods",
+      "status": "65节点 / 64关系 · 30条路径 · 已达到上限，另有路径未展示 · 真实Neo4j",
+      "nodes": 65,
+      "fragment": "#paper=conf%2Fseeda%2FVonitsanosESKM25&view=methods"
+    }
+  ],
+  "baselineComparison": "INCONCLUSIVE_no_baseline",
+  "capturedAtUTC": "2026-10-10T09:55:06.3350856Z",
+  "INP": "not_measured",
+  "captures": [
+    {
+      "observed": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      },
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\search_1440.png",
+      "sha256": "2be670835139a7efcf651347f03470c13fe3a3389fa80119e231f9cf7550ce18"
+    },
+    {
+      "observed": {
+        "width": 768,
+        "scrollWidth": 753,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      },
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\search_768.png",
+      "sha256": "cb76dfbb0aecafd9506e0fd4c5ee061bfe9df00c504b9ec1c8373116aeccf872"
+    },
+    {
+      "observed": {
+        "width": 375,
+        "scrollWidth": 360,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      },
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\search_375.png",
+      "sha256": "beaa888bd7589eaa8b20f2590c1a38d6c0b85f18c244d6106aa799378d1ed0eb"
+    },
+    {
+      "sha256": "aa85971b80b9e236e4681f0599bec8c59d8c0ac50022e393c7fa14df7de595d7",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\04_detail.png"
+    },
+    {
+      "sha256": "1426a955dd1cadc18b5d3d20ea16849aff5d1caab7a300e839c79277e2e2100c",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\05_graph_paper.png"
+    },
+    {
+      "sha256": "e35eb67c72eea034e8f9e16602aa6e3538cb21a157543c2d1f6487b2b5fe94d8",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\05_graph_coauthors.png"
+    },
+    {
+      "sha256": "bdd0e97d8031a620a691310a508fee3d82d27e8d25758b923b20b2b6f321b481",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\05_graph_methods.png"
+    },
+    {
+      "sha256": "48bb3e05381a73bb91bcf6c97cb8cd3ef017ccb3ac3da3b1b0f1530d34faaf39",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow_ready\\06_selection.png"
+    }
+  ],
+  "networkErrors": [],
+  "WCAG": "not_fully_audited"
+}

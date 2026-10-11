@@ -1,0 +1,10 @@
+{
+  "status": "failed_before_evidence_directory_creation",
+  "command": ".venv-validation/Scripts/python.exe annotations/course_v4/seal_supplement_20261009_round49.py prepare",
+  "errorType": "ValueError",
+  "error": "Collection status/delay/truncation drift",
+  "cause": "The first evidence auditor required every recorded UTC request interval to be >=15.1 seconds. Three UTC intervals are 15.092014, 15.092230 and 15.099604 seconds. The sealed collector schedules with a monotonic clock; the UTC receipts do not prove its full configured margin. All recorded intervals exceed the saved robots minimum of 15 seconds.",
+  "resolution": "Change only the new unsealed auditor to validate the saved robots minimum and disclose every original UTC interval and the unproven configured margin. Do not alter collector, contract, source receipts or manifests.",
+  "recordKind": "truthful_failure_recap_not_original_terminal_output",
+  "sourceArtifactsChanged": false
+}

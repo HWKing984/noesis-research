@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>修订摘要模型真实训练 · 第42轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>修订摘要模型真实训练 · 第42轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<h2>真实固定设置训练 · 新旧模型同一修订参考</h2><table><thead><tr><th>任务</th><th>train / dev输入</th><th>实际训练 / 选择</th><th>初始化迁移基线 → 候选</th></tr></thead><tbody><tr><td>NER</td><td>50 / 16</td><td>6轮 / 150步，checkpoint_epoch_06</td><td>49.89% → 72.09%</td></tr><tr><td>RE</td><td>267 / 333</td><td>6轮 / 402步，checkpoint_epoch_06</td><td>77.89% → 82.13%</td></tr></tbody></table><p>NER微F1与条件性RE三类宏F1不是同一指标。NER从旧08、RE从旧15初始化；只使用train梯度，dev选earliest tie。两模型分类头/编码器实际变化、重载预测一致；无新超参搜索。NER词典、RE类型多数基线仅由train构造。</p><h2>实体类型明细 · 16篇dev / 19篇队列</h2><table><thead><tr><th>类别</th><th>Precision</th><th>Recall</th><th>F1</th><th>TP / 预测 / 参考</th></tr></thead><tbody><tr><td>METHOD</td><td>88.46%</td><td>79.31%</td><td>83.64%</td><td>92 / 104 / 116</td></tr><tr><td>TASK</td><td>57.78%</td><td>49.06%</td><td>53.06%</td><td>26 / 45 / 53</td></tr><tr><td>DATASET</td><td>54.55%</td><td>40.00%</td><td>46.15%</td><td>6 / 11 / 15</td></tr></tbody></table><h2>不能拿训练完成当可靠性完成</h2><p>41轮train50篇NER / 267明确关系；dev16篇NER / 333明确关系。1578 / 99未决对不进RE损失或条件性模块评分。完整pipeline只评7/19文档，包括1篇零候选，107参考对中84用途、23负例、EVALUATED_ON正例0。</p><p>D盘隔离临时目录下370项正式工程回归通过，无跳过。首次C默认临时目录的重命名拒绝访问及单项失败XML保留，具体Windows触发原因未解决；未改源码或吞失败，不是语义正确率认证。</p><p>本轮有新dev成绩，没有最终测试；AI参考与已暴露开发集不是独立gold。所有原始输入、逐步loss、epoch选择、权重哈希、真实预测、逐对漏边原因可复查。没有改旧模型、31图或服务，也没有写库/晋级，报告继续暂停。</p><footer>证据页生成时间：2026-10-08T07:13:40.383217+00:00<br>来源：<div class="path">audit_state.json</div><div class="path">sources/kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/development_result.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

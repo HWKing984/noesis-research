@@ -1,0 +1,13 @@
+{
+  "lockedQueue": 8,
+  "annotated": 8,
+  "selfReviewed": false,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "testEvaluated": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "selectionBias": "Fixed eight language-representation/model papers selected before new abstract responses, labels or model predictions. Reject normalized title/arXiv ID overlap with the entire 20000-paper registry, old train/dev references and original train/dev/test selection metadata; no replacement after failure. This is a targeted external development slice, not a random population sample or final test.",
+  "oldDevUnchanged": true
+}

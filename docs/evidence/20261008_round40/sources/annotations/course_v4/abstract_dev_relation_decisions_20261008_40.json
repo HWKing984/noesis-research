@@ -1,0 +1,146 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "documents": [
+    {
+      "arxivId": "1903.09296",
+      "textSha256": "984c0332a81060f64781b24e7f8872d7f9cb5a690d9458f46a21ffedf77a9324",
+      "groups": [],
+      "unresolvedReason": "The introductory healthcare prediction tasks are attributed to machine learning algorithms. CBFL's own experiment is described through community learning and non-IID ICU EMRs without specifying which of these two prediction targets it performed; the baseline FL role has the same gap. Do not infer eight positive edges from the motivation or eight negatives from missing task attribution."
+    },
+    {
+      "arxivId": "2411.06463",
+      "textSha256": "4d957e7f00081c69bb000d9b7cf542b425f368d512eeb5a5f366c43b086b669c",
+      "groups": [],
+      "unresolvedReason": "The three residual pairs concern a general pruning family versus learning its distribution, and reinforcement learning versus the broader compound compression/pruning tasks. The source makes RL-Pruner's operation clear but does not settle whether these family/component mentions are direct performers under the fixed scope. Neither support through a containing approach nor non-attribution alone certifies these three labels; leave them unknown."
+    },
+    {
+      "arxivId": "1907.02544",
+      "textSha256": "e80046ac6b9ee6fd1c0b37360a70cd4547dd2c8dfa241139341b6df21bf47de5",
+      "groups": [
+        {
+          "heads": ["e1", "e2", "e4"], "tails": ["e6", "e7", "e10", "e11", "e13"], "label": "USED_FOR",
+          "supportExcerpt": "Adversarially trained generative models (GANs) have recently achieved compelling image synthesis results. But despite early successes in using GANs for unsupervised representation learning, they have since been superseded by approaches based on self-supervision.",
+          "reason": "The record explicitly uses GANs for image synthesis and unsupervised representation learning. These task mentions repeat image generation/representation learning within this same discussion; link the contextual family mentions to the named task concepts, not to ImageNet measurement or an independently demonstrated unconditional-generation configuration. Span pairs are correlated repeated task mentions."
+        },
+        {
+          "heads": ["e9"], "tails": ["e3"], "label": "USED_FOR",
+          "supportExcerpt": "In this work we show that progress in image generation quality translates to substantially improved representation learning performance. Our approach, BigBiGAN, builds upon the state-of-the-art BigGAN model, extending it to representation learning by adding an encoder and modifying the discriminator.",
+          "reason": "The source connects progress in image generation to the BigGAN base model, whose extension adds representation learning. Image synthesis names the same generative task in this record. This is a local task-synonym inference grounded in the source, not evidence of the base model's evaluation. Do not propagate BigBiGAN's newly added representation-learning or ImageNet evaluation claims back to BigGAN."
+        }
+      ],
+      "unresolvedReason": "Thirteen residual pairs remain: family-level ImageNet or unconditional-generation attributions and the base BigGAN's representation-learning/evaluation/configuration attribution. Evaluation of the extended model does not certify evaluation of every family or base model."
+    },
+    {
+      "arxivId": "2403.19572",
+      "textSha256": "4095f73f64b2b7d52d572b79cfb2a2232f583b47e18ae19612d9121ec92e1552",
+      "groups": [
+        {
+          "heads": ["e1", "e2", "e4", "e6", "e8", "e9", "e10"], "tails": ["e3", "e5", "e7", "e11"], "label": "USED_FOR",
+          "supportExcerpt": "This article presents a study on using supervised neural network time series classification (NN TSC) to predict key attributes and tactics of swarming autonomous agents for military contexts. Specifically, NN TSC is applied to infer two binary attributes - communication and proportional navigation - which combine to define four mutually exclusive swarm tactics. We identify a gap in literature on using NNs for swarm classification and demonstrate the effectiveness of NN TSC in rapidly deducing intelligence about attacking swarms to inform counter-maneuvers. Through simulated swarm-vs-swarm engagements, we evaluate NN TSC performance in terms of observation window requirements, noise robustness, and scalability to swarm size. Key findings show NNs can predict swarm behaviors",
+          "reason": "Academic indexing only: the source explicitly attributes its reported classification/attribute-prediction tasks to NN TSC and the contextual NNs referring to the same study. Link repeated name/family spans to the four existing task spans; no operational method, implementation, model training, routing, targeting or tactical improvement is derived. No named benchmark is present in the frozen inventory."
+        }
+      ],
+      "unresolvedReason": "All twenty-eight existing typed pairs have explicit record-local task attribution. Completeness is with respect to the frozen AI entity inventory only; repeated spans are not independent experiments."
+    },
+    {
+      "arxivId": "1904.04163",
+      "textSha256": "4572d4db5c00adc0bac512f15f7784f5cb8a7a184fb3df869d05e963bec587b0",
+      "groups": [
+        {
+          "heads": ["e1", "e2", "e5", "e6", "e7", "e10", "e13", "e18"], "tails": ["e9"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs.",
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        }
+      ],
+      "unresolvedReason": "Forty-four residual pair attributions remain, including generic model/benchmark propagation and component-versus-compressed-model output tasks. Keep the previously resolved labels unchanged, even when they merit separate review.",
+      "legacyReviewConcern": "The inherited e14 knowledge-distillation and e15 trust-regularization EVALUATED_ON links to Penn Treebank describe using the combination, not two independently measured components. They are historical AI labels, retained under the no-retraction contract, not newly certified component measurements. A separately declared retraction/review is required before treating these links as high-confidence factual evidence."
+    },
+    {
+      "arxivId": "2411.11752",
+      "textSha256": "29447e177feb5ba0739e378e9c008853e0b31a0f0afa3670ac89587cd033b91c",
+      "groups": [
+        {
+          "heads": ["e3", "e4", "e10"], "tails": ["e17"], "label": "USED_FOR",
+          "supportExcerpt": "sMoRe allows users to use voice or typed text commands to create and place virtual objects using GenAI while specifying spatial constraints. The system leverages LLMs to interpret users' commands, analyze the current scene, and identify optimal locations. Additionally, sMoRe integrates text-to-3D generative AI to dynamically create 3D objects based on users' descriptions.",
+          "reason": "GenAI is explicitly the object-generating stage and its text-to-3D instance creates the 3D objects. These three mentions refer to that source-local generation role; no global merging of generative AI with every LLM is made."
+        },
+        {
+          "heads": ["e3", "e4", "e10", "e16"], "tails": ["e12", "e13", "e14"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "The system leverages LLMs to interpret users' commands, analyze the current scene, and identify optimal locations. Additionally, sMoRe integrates text-to-3D generative AI to dynamically create 3D objects based on users' descriptions.",
+          "reason": "The source assigns interpretation, scene analysis and location identification to the LLM stage and object production to the generative stage. These are local operator-role contrasts, not a universal claim that generative AI cannot include or perform language modeling."
+        },
+        {
+          "heads": ["e5", "e6", "e11"], "tails": ["e17"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "The system leverages LLMs to interpret users' commands, analyze the current scene, and identify optimal locations. Additionally, sMoRe integrates text-to-3D generative AI to dynamically create 3D objects based on users' descriptions.",
+          "reason": "The named LLM role interprets/analyzes/locates, while the separately named text-to-3D stage creates objects. Do not interchange those two operators or claim that every LLM independently generates the 3D objects in this application."
+        }
+      ],
+      "unresolvedReason": "Eleven residual pairs involve compounds such as creating, placing and managing together, or an overlapping family relation. A component performing only one part cannot certify the whole compound task; do not split or revise the frozen task span to improve coverage."
+    },
+    {
+      "arxivId": "2001.11639",
+      "textSha256": "bcc58d7a6ac6750a5b534cec1ccc36c3a56fa5549fd3000cb898cf2a2558a983",
+      "groups": [],
+      "unresolvedReason": "PASCAL VOC is a background comparator to the new ParkingSticker data. The abstract reports YOLOv2 pipelines on ParkingSticker but contains no explicit statement ruling out their evaluation on PASCAL VOC. A background mention plus absent measurement is not an explicit negative. The one YOLOv2-PASCAL VOC pair stays unresolved; do not admit this document to complete-pipeline scoring by manufacturing a negative."
+    },
+    {
+      "arxivId": "2403.13872",
+      "textSha256": "dba4eaa608ee8a66d36edb5791639011cf2ad708eca219fff2cbaa85d0b55832",
+      "groups": [
+        {
+          "heads": ["e3", "e4", "e5", "e9", "e8"], "tails": ["e2", "e10"], "label": "USED_FOR",
+          "supportExcerpt": "STGED hierarchically utilizes graph-based attention mechanism to spatially encode a series of communication network states, leverages a recurrent neural network to temporally encode the evolution of states, and a fully-connected feed-forward network to decode the connectivity in the future state.",
+          "reason": "Academic indexing of the supplied abstract only: the named framework and its explicitly assigned output decoder perform the existing future-connectivity prediction task. No architecture implementation, network optimization or tactical procedure is generated."
+        },
+        {
+          "heads": ["e6", "e7"], "tails": ["e2", "e10"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "STGED hierarchically utilizes graph-based attention mechanism to spatially encode a series of communication network states, leverages a recurrent neural network to temporally encode the evolution of states, and a fully-connected feed-forward network to decode the connectivity in the future state.",
+          "reason": "The two encoder stages are assigned state encoding, whereas the separately identified decoder is assigned future-connectivity output. Negatives distinguish the stated direct-output operators only; encoders may contribute to the overall predictor and are not universally incapable of prediction."
+        },
+        {
+          "heads": ["e3", "e4", "e5", "e6", "e7", "e8", "e9"], "tails": ["e1"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "Resource allocation in tactical ad-hoc networks presents unique challenges due to their dynamic and multi-hop nature. Accurate prediction of future network connectivity is essential for effective resource allocation in such environments.",
+          "reason": "The source distinguishes downstream resource allocation from its prerequisite connectivity prediction and assigns these methods to the latter output. Within the direct-performer contract these are prediction operators, not allocation operators. This is a scoped bibliographic-role label, not a claim that the framework cannot support allocation or a proposal to improve military systems."
+        }
+      ],
+      "unresolvedReason": "All twenty-one frozen typed pairs have explicit source-stage or downstream-role attribution under the direct-performer scope. This does not validate other capability claims or independently certify the AI inventory."
+    },
+    {
+      "arxivId": "2207.11187",
+      "textSha256": "5e1ec9acb4d2220bffdf68ca860fde8f400b15b21d8698fa0e6610b6afbb5382",
+      "groups": [],
+      "unresolvedReason": "The four remaining edges target issue resolution, which is described as a hoped-for time improvement. The source directly assigns/suggests tickets but does not say the methods solve the tickets. Hope or downstream benefit is insufficient for a new direct-operator positive, and missing direct attribution is insufficient for a negative."
+    },
+    {
+      "arxivId": "2307.15425",
+      "textSha256": "f29040db03ae84de8e11f14e806f37c828442384f9e17ad48625719c16e0dc0d",
+      "groups": [],
+      "unresolvedReason": "The named GPT-3.5 and specialized models are explicitly evaluated for SDG detection. The four residual generic LLM mentions discuss broad review, versatility and future research; this is insufficient to decide that each mention denotes the tested operator. Neither general-family co-occurrence nor limited relevance creates a positive/negative fact."
+    },
+    {
+      "arxivId": "1906.08977",
+      "textSha256": "ea2c1f0da7ad63c76ac98c172b10185d7ca15ab2b76cc2a2b8e06649b9294d9a",
+      "groups": [
+        {
+          "heads": ["e9"], "tails": ["e6"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "Therefore, our method adopts deep autoregressive (DAR) models to predict the F0 and spectral features of singing voice in order to better describe the dependencies among the acoustic features of consecutive frames. For F0 modeling, discretized F0 values are used and the influences of the history length in DAR are analyzed by experiments. An F0 post-processing strategy is also designed to alleviate the inconsistency between the predicted F0 contours and the F0 values determined by music notes.",
+          "reason": "The source assigns joint feature prediction to DAR and consistency correction of already predicted F0 contours to the post-processing strategy. The latter is not the joint F0-and-spectral prediction operator, though it contributes to the broader synthesis system."
+        },
+        {
+          "heads": ["e11"], "tails": ["e6"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "Furthermore, we extend the DAR model to deal with continuous spectral features, and a prenet module with self-attention layers is introduced to process historical frames.",
+          "reason": "The prenet's stated role processes historical frames; the DAR output model predicts features. This negative contrasts direct stage roles, not a universal denial that attention/prenet modules can contribute to prediction."
+        }
+      ],
+      "unresolvedReason": "Nine residual pairs concern broader synthesis/modeling versus subcomponents and the exact feature tasks of a conventional RNN baseline. Comparative aggregate performance does not establish which component independently performs every compound task; do not promote missing detail to negative labels."
+    }
+  ]
+}

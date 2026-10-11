@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "engineeringTests": {
+    "tests": 385,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "applicationChecks": 32,
+  "graphId": "ai-literature-2ba355fe96d011524e55",
+  "graphCounts": {
+    "nodes": {
+      "Publication": 20000,
+      "Venue": 3205,
+      "Concept": 29839,
+      "Mention": 44904,
+      "Assertion": 21497,
+      "Person": 75155
+    },
+    "edges": {
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 44904,
+      "DENOTES": 44904,
+      "SUPPORTED_BY": 21497,
+      "HAS_HEAD": 21497,
+      "HAS_TAIL": 21497,
+      "AUTHORED": 88762
+    }
+  },
+  "liveImportCompleted": true,
+  "originalDefaultGraphUnchanged": true,
+  "recoveredSignatures": 2,
+  "remainingUnresolvedSignatures": 9062,
+  "conceptsGrouped": 39,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "trainingExecuted": false,
+  "testContentConsumed": false,
+  "authorFullyDisambiguated": false,
+  "conceptsGloballyCanonicalized": false,
+  "modelReliabilityResolved": false,
+  "notice": "Quality iteration and preserved-evidence checks passed; none of these flags claim complete semantic quality."
+}

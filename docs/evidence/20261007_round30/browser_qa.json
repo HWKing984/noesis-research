@@ -1,0 +1,30 @@
+{
+  "recordedAtUTC":"2026-10-07T08:34:19+00:00",
+  "baseURL":"http://127.0.0.1:8765",
+  "readOnlyDatabase":true,
+  "interactions":{
+    "repeatAddDeduplicated":1,
+    "crossPaperSelectionCount":2,
+    "twoHopOpenPublication":"journals/corr/LuSFF17",
+    "resetClearsHash":true,
+    "resetPreservesSelection":2,
+    "hashChangeRestoresMethodsMode":true,
+    "fourHopExplanationCount":30,
+    "fourHopArrows":"Publication -> Mention -> Concept <- Mention <- Publication",
+    "formInputsLabelled":true,
+    "landmarkCount":7,
+    "nativeBrowserDownloads":"One real paper JSON and TXT downloaded by actual page buttons; files retained under downloads",
+    "nativeNodeRegression":"bound50, dedup, remove, reset, literal text, deep snapshot copy, stale search, permalink and path directions"
+  },
+  "freshValidJourneyNetwork":{"requests":6,"allHTTP200":true,"scope":"page, health, first detail, paper graph, coauthor graph and linked detail before subsequent hashchange"},
+  "consoleErrorsAndWarnings":0,
+  "screenshots":["04_graph_desktop_round30.png","05_graph_tablet_round30.png","06_graph_mobile_round30.png","07_selection_downloads.png"],
+  "nativeScreenshotInspection":"All four images actually viewed; functional cards, six node colors and export controls visible. Mobile fit labels small; zoom/path descriptions remain available.",
+  "viewportWidths":[1440,768,375],
+  "documentHorizontalOverflow":false,
+  "visualRegression":"INCONCLUSIVE: no committed baseline",
+  "fullWCAGAuditPerformed":false,
+  "coreWebVitalsMeasuredThisRound":false,
+  "modelQualityEvaluatedThisRound":false,
+  "limits":"Current-page-only list, 50 entries, bounded 30 graph paths, no citation network or formal reference-format claim"
+}

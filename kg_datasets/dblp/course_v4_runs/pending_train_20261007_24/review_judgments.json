@@ -1,0 +1,2311 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "generationDecisionsSha256": "e64386195ffb938a35f22a6096fda294c697a7adfbb24fedd6fcb69525d87471",
+  "judgments": [
+    {
+      "sampleId": "sample-421691a5207bb3a0d2cb",
+      "verdict": "confirmed",
+      "reason": "Agronomic graph explicitly maps rice sequences; phenology retained inside composite."
+    },
+    {
+      "sampleId": "sample-665fa4ff28d5946b0443",
+      "verdict": "confirmed",
+      "reason": "Partitioned neural network is computing target, not independent partitioner."
+    },
+    {
+      "sampleId": "sample-6cecf251ae95dfbc63f4",
+      "verdict": "confirmed",
+      "reason": "Supervised and unsupervised share learning head; preserve group and image-classification target."
+    },
+    {
+      "sampleId": "sample-95221cc9d17e719a680c",
+      "verdict": "confirmed",
+      "reason": "Decision support and ML forecasting are stated; drainage context retained."
+    },
+    {
+      "sampleId": "sample-a3da1ff2c6f47073ec45",
+      "verdict": "confirmed",
+      "reason": "C-to-Rust translation and type migration are literal operation and languages."
+    },
+    {
+      "sampleId": "sample-1fc00bb8ca6e29b0dc5d",
+      "verdict": "confirmed",
+      "reason": "Transformer forecasts rail wind speed; hybrid unnamed."
+    },
+    {
+      "sampleId": "sample-2f9fe6cbcb1bcf60068a",
+      "verdict": "confirmed",
+      "reason": "Tree algorithms assess coastal vulnerability; location not dataset."
+    },
+    {
+      "sampleId": "sample-c3d40af24c3ad78afa93",
+      "verdict": "confirmed",
+      "reason": "COIN is accelerator; full acceleration task overlaps GCN target."
+    },
+    {
+      "sampleId": "sample-45509458a891abc74934",
+      "verdict": "confirmed",
+      "reason": "Tourism information model may be schema; retain extractor candidates without certifying inventory."
+    },
+    {
+      "sampleId": "sample-fdc7676b277fa8f7bd95",
+      "verdict": "confirmed",
+      "reason": "Cooperative robot does not specify concrete operation."
+    },
+    {
+      "sampleId": "sample-cc754009a767dbcae99a",
+      "verdict": "confirmed",
+      "reason": "Augmentation trains GNN; no downstream task stated."
+    },
+    {
+      "sampleId": "sample-94b6a8b2e80e3050a8ca",
+      "verdict": "confirmed",
+      "reason": "Review concerns text summarization; generic datasets supply no release identity."
+    },
+    {
+      "sampleId": "sample-758834728d7f4920f1a8",
+      "verdict": "confirmed",
+      "reason": "Full funnel cascaded-fusion GNN predicts protein interactions."
+    },
+    {
+      "sampleId": "sample-7a448e83a67f44a15ec1",
+      "verdict": "confirmed",
+      "reason": "DeepSeeded and cascaded DNN segment dense cells; biofilm not dataset."
+    },
+    {
+      "sampleId": "sample-d55ee3770b9d28dc58bf",
+      "verdict": "confirmed",
+      "reason": "DL estimation explicit; attention features and transfer training not certified executors."
+    },
+    {
+      "sampleId": "sample-38ea7f201ec671cc17c0",
+      "verdict": "confirmed",
+      "reason": "Concept-driven representation learning explicitly completes knowledge graph."
+    },
+    {
+      "sampleId": "sample-628b529f6341c23f0be1",
+      "verdict": "confirmed",
+      "reason": "PSO-SVM and ML identify damage; improvement unverified."
+    },
+    {
+      "sampleId": "sample-ab754694ff74a0a2333e",
+      "verdict": "confirmed",
+      "reason": "Physics-informed neural network simulates multiple scattering."
+    },
+    {
+      "sampleId": "sample-875ef3f2739266f326d2",
+      "verdict": "confirmed",
+      "reason": "Industry 4.0 is domain, not concrete computation."
+    },
+    {
+      "sampleId": "sample-c5dca2d777cb4e3fa9fe",
+      "verdict": "confirmed",
+      "reason": "PM2.5 is explicit prediction quantity, not dataset identity."
+    },
+    {
+      "sampleId": "sample-f378c6dfb9bf6f422b86",
+      "verdict": "confirmed",
+      "reason": "Formal verification and RL techniques stated; independent complete task absent."
+    },
+    {
+      "sampleId": "sample-47c837844e86699ab52d",
+      "verdict": "confirmed",
+      "reason": "Bioinformatics legal discussion names no computational operation."
+    },
+    {
+      "sampleId": "sample-eafddb07540ae786a1ce",
+      "verdict": "confirmed",
+      "reason": "Multitask FL detects and classifies microservice anomalies."
+    },
+    {
+      "sampleId": "sample-aff3e75a389802aa9b63",
+      "verdict": "confirmed",
+      "reason": "3D V-Net recognizes and segments ossicles; no clinical efficacy inferred."
+    },
+    {
+      "sampleId": "sample-6b9d57c3552f2ebb30b9",
+      "verdict": "confirmed",
+      "reason": "sEMG and prosthesis are modality/hardware, not vision task."
+    },
+    {
+      "sampleId": "sample-bddaca533a04ccf08b70",
+      "verdict": "confirmed",
+      "reason": "SmartFPS and NN perform wireless-inertial positioning."
+    },
+    {
+      "sampleId": "sample-496e1f87d1fa025580b8",
+      "verdict": "confirmed",
+      "reason": "DETR detects objects; driving contextual."
+    },
+    {
+      "sampleId": "sample-ac5854a81d7ed638d52e",
+      "verdict": "confirmed",
+      "reason": "Future directions states no specific task."
+    },
+    {
+      "sampleId": "sample-d7becda1c8aab27e5c9f",
+      "verdict": "confirmed",
+      "reason": "Exploratory state representation learning is method without downstream task."
+    },
+    {
+      "sampleId": "sample-6bb1009d4ece9b27ee6d",
+      "verdict": "confirmed",
+      "reason": "Finite-time stability describes delayed fuzzy neural network property."
+    },
+    {
+      "sampleId": "sample-9b9b88460e77953334b4",
+      "verdict": "confirmed",
+      "reason": "Latent diffusion generates reservoir facies."
+    },
+    {
+      "sampleId": "sample-30d4d1a51809426ebbef",
+      "verdict": "confirmed",
+      "reason": "Crop mapping explicit; Sentinel-2 and LiDAR acquisition not benchmark releases."
+    },
+    {
+      "sampleId": "sample-695cc6321890133c6ed8",
+      "verdict": "confirmed",
+      "reason": "Concrete forecasting quantity unspecified; do not infer strength."
+    },
+    {
+      "sampleId": "sample-323ae8d394e23c1aa09c",
+      "verdict": "confirmed",
+      "reason": "RL implements handover, beacon transmission is mechanism."
+    },
+    {
+      "sampleId": "sample-6d048f567c05a7fb055a",
+      "verdict": "confirmed",
+      "reason": "Hybrid NN detects risky adult situations; no clinical validation."
+    },
+    {
+      "sampleId": "sample-181a282440ad8f60d770",
+      "verdict": "confirmed",
+      "reason": "NLP predicts comic speakers; visual relations inputs."
+    },
+    {
+      "sampleId": "sample-fda8f2584838f487c738",
+      "verdict": "confirmed",
+      "reason": "Vehicle security and bare classification do not define classification object."
+    },
+    {
+      "sampleId": "sample-96aa83961f4de19617d0",
+      "verdict": "confirmed",
+      "reason": "Filtering transformer is physical component, no neural model."
+    },
+    {
+      "sampleId": "sample-7be8553a6a459b709a4c",
+      "verdict": "confirmed",
+      "reason": "DL estimates speech intelligibility; autoencoder may only provide features."
+    },
+    {
+      "sampleId": "sample-1ce288b1def2d7a0c80c",
+      "verdict": "revised",
+      "reason": "Sparse transfer learning may train emotion recognizer rather than directly recognize speech emotion.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Speech Emotion Recognition",
+            "label": "TASK"
+          },
+          {
+            "text": "Sparse Transfer Learning",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Intermediate/training component versus complete executor role unspecified.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "Training, scoring or intermediate representation may support rather than directly execute complete target."
+          }
+        ],
+        "notes": "No speech benchmark named.",
+        "sampleId": "sample-1ce288b1def2d7a0c80c"
+      }
+    },
+    {
+      "sampleId": "sample-c38b73570f0e1a44a70f",
+      "verdict": "confirmed",
+      "reason": "Graph attention network and RL place virtual network function graphs."
+    },
+    {
+      "sampleId": "sample-d0b06c42d7649563e7e9",
+      "verdict": "confirmed",
+      "reason": "Gait privacy protection lacks concrete computation; dataset unnamed."
+    },
+    {
+      "sampleId": "sample-1821864dc5108f92ffda",
+      "verdict": "confirmed",
+      "reason": "Space-time aggregation/result reuse detects video objects."
+    },
+    {
+      "sampleId": "sample-cfabc6b4865e1598a252",
+      "verdict": "confirmed",
+      "reason": "Investment strategy lacks specific prediction/allocation; earnings index technique identity uncertain."
+    },
+    {
+      "sampleId": "sample-afa24908578405ddaf20",
+      "verdict": "confirmed",
+      "reason": "Position-weighted embedding translates text."
+    },
+    {
+      "sampleId": "sample-6fd1321dc1754adf6119",
+      "verdict": "confirmed",
+      "reason": "Differential-private FL performs sleep staging; imbalanced EEG is data setting."
+    },
+    {
+      "sampleId": "sample-77152e4f3f0381bbdf3c",
+      "verdict": "confirmed",
+      "reason": "DL predicts robot positioning errors and finds features; robot context retained."
+    },
+    {
+      "sampleId": "sample-220200cfb053c1b04437",
+      "verdict": "confirmed",
+      "reason": "ML detects malware; future directions not extra task."
+    },
+    {
+      "sampleId": "sample-e6ebed06e003fbe31738",
+      "verdict": "confirmed",
+      "reason": "Semantic service discovery aids routing; energy evaluation/optimization role uncertain."
+    },
+    {
+      "sampleId": "sample-8613c9d18bc4fbfecca6",
+      "verdict": "confirmed",
+      "reason": "Vision Transformer and perceiver detect facial action units."
+    },
+    {
+      "sampleId": "sample-fbee7ca96d1e2a8996c5",
+      "verdict": "confirmed",
+      "reason": "Region-based Randers geodesic segments images."
+    },
+    {
+      "sampleId": "sample-86df4428c880fc933e27",
+      "verdict": "confirmed",
+      "reason": "ANN classifies microarrays; Spark platform not model."
+    },
+    {
+      "sampleId": "sample-36b58c0f4e798458894c",
+      "verdict": "confirmed",
+      "reason": "Modified CNN/SA-MGO healthcare chatbot lacks specific QA task; insights broad goal."
+    },
+    {
+      "sampleId": "sample-0d8be29306e7dff9eab0",
+      "verdict": "confirmed",
+      "reason": "ML maps agricultural intensification; Landsat/Sentinel sensors not release identities."
+    },
+    {
+      "sampleId": "sample-6a6bbf294ff07925361e",
+      "verdict": "confirmed",
+      "reason": "Image-recognition-based location intertwines task and technique; isolate boundary."
+    },
+    {
+      "sampleId": "sample-d3d0c5fe4fe26d6fb7ed",
+      "verdict": "confirmed",
+      "reason": "Quantized inference characterization overlaps Transformer target; CPU hardware context."
+    },
+    {
+      "sampleId": "sample-9ac26af808f34cc00757",
+      "verdict": "confirmed",
+      "reason": "Ontology expansion literal; UWN resource-versus-algorithm identity uncertain."
+    },
+    {
+      "sampleId": "sample-f73408681106e1675933",
+      "verdict": "confirmed",
+      "reason": "Camouflaged detection/tracking are survey targets; no method named."
+    },
+    {
+      "sampleId": "sample-bd461772b1dd966e6e61",
+      "verdict": "confirmed",
+      "reason": "DL and joint-slope probabilistic filter fuse medical images."
+    },
+    {
+      "sampleId": "sample-1d621b01db5b6e2b0b06",
+      "verdict": "revised",
+      "reason": "Unexpanded UTAUT model does not establish computational-method identity; adoption is human behavior context.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Unexpanded UTAUT model identity as computational algorithm versus conceptual adoption model uncertain.",
+        "entities": [
+          {
+            "text": "Generative Artificial Intelligence",
+            "label": "METHOD"
+          },
+          {
+            "text": "UTAUT",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Cannot certify computational instrument inventory from unexpanded model name.",
+        "relations": [],
+        "notes": "Teacher willingness is adoption context, not automated computation; UTAUT remains uncertain candidate.",
+        "sampleId": "sample-1d621b01db5b6e2b0b06"
+      }
+    },
+    {
+      "sampleId": "sample-b51d7ba10ca0e15443e5",
+      "verdict": "confirmed",
+      "reason": "Financial decision making lacks specific action; no invented trading target."
+    },
+    {
+      "sampleId": "sample-cc71348a5cdcc90f2ff8",
+      "verdict": "confirmed",
+      "reason": "PPCA denoises and ANN classifies CT; crossed instrument roles uncertain."
+    },
+    {
+      "sampleId": "sample-463e15548952fbbc883d",
+      "verdict": "confirmed",
+      "reason": "ML estimates cardiometabolic risk; exposome input unnamed."
+    },
+    {
+      "sampleId": "sample-ecd7adfcc49492d79beb",
+      "verdict": "confirmed",
+      "reason": "NLP identifies problematic opioid use; no clinical efficacy asserted."
+    },
+    {
+      "sampleId": "sample-49db15a10e806419eac6",
+      "verdict": "confirmed",
+      "reason": "DL extracts breast-cancer clinical information."
+    },
+    {
+      "sampleId": "sample-d823af125d8cbfc95728",
+      "verdict": "confirmed",
+      "reason": "Intrusion-system modeling overlaps embedded adversarial NN technique."
+    },
+    {
+      "sampleId": "sample-95c3f95e33100b494c7c",
+      "verdict": "revised",
+      "reason": "Interpretable Network lacks a specified neural architecture; keep candidate uncertain and retain tree-FL detection.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Interpretable Network lacks a specified neural architecture or technique identity.",
+        "entities": [
+          {
+            "text": "Driver Drowsiness EEG Detection",
+            "label": "TASK"
+          },
+          {
+            "text": "Tree Federated Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Interpretable Network",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Unspecified network identity prevents complete instrument inventory.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "USED_FOR",
+            "reason": "Tree FL supports drowsiness detection."
+          },
+          {
+            "head": "e3",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "Generic interpretable network candidate does not identify full computational executor."
+          }
+        ],
+        "notes": "EEG is modality, not dataset.",
+        "sampleId": "sample-95c3f95e33100b494c7c"
+      }
+    },
+    {
+      "sampleId": "sample-0430e52ffabf350a7bc2",
+      "verdict": "confirmed",
+      "reason": "Sequential cipher, feedback Hopfield and chaotic sequence techniques; no separate task."
+    },
+    {
+      "sampleId": "sample-bfda3d6bacc1b88c7dd4",
+      "verdict": "confirmed",
+      "reason": "Healthcare prediction lacks output quantity/object."
+    },
+    {
+      "sampleId": "sample-8cd50776c17ee5d8b73b",
+      "verdict": "confirmed",
+      "reason": "CNN-ELM composite classifies age and gender."
+    },
+    {
+      "sampleId": "sample-ca4f1c0dbbb59fbc2f4f",
+      "verdict": "confirmed",
+      "reason": "Projection steepest-descent NN solves nonsmooth optimization."
+    },
+    {
+      "sampleId": "sample-e12a02962e16f2eb2c4d",
+      "verdict": "confirmed",
+      "reason": "Delayed generalized NN stability is theoretical property."
+    },
+    {
+      "sampleId": "sample-e60e830561d6a144f21a",
+      "verdict": "confirmed",
+      "reason": "Probabilistic NN detects islanding; phase-space may be representation."
+    },
+    {
+      "sampleId": "sample-b72b592c8c9e220cb160",
+      "verdict": "confirmed",
+      "reason": "CNN recognizes facial expressions in the wild; three models not three named identities."
+    },
+    {
+      "sampleId": "sample-0f792cc95fd9e6f2a30d",
+      "verdict": "confirmed",
+      "reason": "Full sparse directed attention GCN recognizes EEG emotion."
+    },
+    {
+      "sampleId": "sample-7554f2596c6faa8315ce",
+      "verdict": "confirmed",
+      "reason": "Stability/passivity analysis overlaps delayed NN target."
+    },
+    {
+      "sampleId": "sample-90f19b5403b15a94b50b",
+      "verdict": "confirmed",
+      "reason": "Synchronization target overlaps Clifford NN; encryption alone does not certify inventory."
+    },
+    {
+      "sampleId": "sample-80a725a20ea6736ff159",
+      "verdict": "confirmed",
+      "reason": "Backpropagation training may train rather than execute vehicle stability control."
+    },
+    {
+      "sampleId": "sample-f769ea7db5a1953f845a",
+      "verdict": "confirmed",
+      "reason": "Corrigendum retains DL/fMRI diagnosis association, not new validation."
+    },
+    {
+      "sampleId": "sample-95c893adcf1dd4fc8f14",
+      "verdict": "confirmed",
+      "reason": "Programming-work assessment explicit; named ontology resource not algorithm."
+    },
+    {
+      "sampleId": "sample-55c4222984f88f8022a6",
+      "verdict": "confirmed",
+      "reason": "Acoustic evasion opposes emotion detection; ML detector role separate."
+    },
+    {
+      "sampleId": "sample-b1351363422b22d62d93",
+      "verdict": "confirmed",
+      "reason": "Talk2Care communication assistant lacks literal QA/transcription operation."
+    },
+    {
+      "sampleId": "sample-3190650bc7ff6d0bd5df",
+      "verdict": "confirmed",
+      "reason": "Joint transaction-language/graph-representation composite detects Ethereum fraud."
+    },
+    {
+      "sampleId": "sample-28029dd554c8dedadff8",
+      "verdict": "confirmed",
+      "reason": "Intrusion detection explicit; separated industrial context not reconstructed into nonliteral span."
+    },
+    {
+      "sampleId": "sample-f2bd40d8c6726c0889f2",
+      "verdict": "confirmed",
+      "reason": "Financial health/performance diagnosis is concrete assessment, not generic business application."
+    },
+    {
+      "sampleId": "sample-2f31d7d14e103fa8f106",
+      "verdict": "confirmed",
+      "reason": "Security service-function chain lacks specific allocation/routing action."
+    },
+    {
+      "sampleId": "sample-ae896f7f6ae4907e7a25",
+      "verdict": "confirmed",
+      "reason": "Feature selection and transfer may prepare/train intrusion detector."
+    },
+    {
+      "sampleId": "sample-369558ef8bb646f0264b",
+      "verdict": "confirmed",
+      "reason": "Visual VR security lacks explicit operation."
+    },
+    {
+      "sampleId": "sample-fddff287dd56a2b209a1",
+      "verdict": "confirmed",
+      "reason": "Multiview variational DL localizes indoor positions."
+    },
+    {
+      "sampleId": "sample-7d54de445559d30dc843",
+      "verdict": "confirmed",
+      "reason": "DEN depth-enhancement network supports detection; standalone executor uncertain."
+    },
+    {
+      "sampleId": "sample-d816abc60966b766af0c",
+      "verdict": "confirmed",
+      "reason": "Internet augmentation broad goal; RL rate-adaptation task/method boundary uncertain."
+    },
+    {
+      "sampleId": "sample-45aff35a94d7e3993149",
+      "verdict": "revised",
+      "reason": "Charging scheme problem does not name scheduling operation; remove Problem/Scheme and isolate unspecified action.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Charging scheme problem does not specify allocation, scheduling or other computational operation.",
+        "entities": [
+          {
+            "text": "Dynamic Charging",
+            "label": "TASK"
+          },
+          {
+            "text": "Actor-Critic Reinforcement Learning",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Actor-critic charging association does not establish specific computation.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "Charging scheme problem leaves concrete computational action unspecified."
+          }
+        ],
+        "notes": "Do not invent scheduling from Scheme Problem.",
+        "sampleId": "sample-45aff35a94d7e3993149"
+      }
+    },
+    {
+      "sampleId": "sample-7783d5b6e12fa69790fb",
+      "verdict": "confirmed",
+      "reason": "DL builds sentiment lexicon; later financial prediction may be separate."
+    },
+    {
+      "sampleId": "sample-a92452718b1ef00faa0e",
+      "verdict": "confirmed",
+      "reason": "Temporally evolving GNN detects fake news."
+    },
+    {
+      "sampleId": "sample-037238ed5caedd4470a0",
+      "verdict": "confirmed",
+      "reason": "ML detects mobile malware; traffic imbalance setting excluded."
+    },
+    {
+      "sampleId": "sample-b9ddb3cd27d9cc856d3d",
+      "verdict": "confirmed",
+      "reason": "Kronecker convolutions and DL detect kidney stones in coronal CT."
+    },
+    {
+      "sampleId": "sample-7bf4a25e0bdb1aa79b3f",
+      "verdict": "confirmed",
+      "reason": "GNN predicts enterprise bankruptcy, no financial performance promise."
+    },
+    {
+      "sampleId": "sample-f9ae5d4fe78c7a41a8bf",
+      "verdict": "confirmed",
+      "reason": "Anti-jamming communication lacks named control action; transfer and Q-learning retained."
+    },
+    {
+      "sampleId": "sample-2107a9f3899d4457f1fc",
+      "verdict": "confirmed",
+      "reason": "Gated contextual Transformer generates multimodal retinal descriptions."
+    },
+    {
+      "sampleId": "sample-f0fd0fea7dbc32ada606",
+      "verdict": "confirmed",
+      "reason": "DL detects botnet attacks."
+    },
+    {
+      "sampleId": "sample-89a987a9429e6f2f2a4e",
+      "verdict": "confirmed",
+      "reason": "DL and word embeddings classify Arabic healthcare questions."
+    },
+    {
+      "sampleId": "sample-5b81f3f794e5d578a529",
+      "verdict": "confirmed",
+      "reason": "ML detects seizures; event-driven processing may be preprocessing."
+    },
+    {
+      "sampleId": "sample-fa7c124c5585c5e50d12",
+      "verdict": "confirmed",
+      "reason": "CBNA-RF and ML detect/defend MitM; SDN context retained."
+    },
+    {
+      "sampleId": "sample-5c448898e1ff2f9e7cf4",
+      "verdict": "confirmed",
+      "reason": "DL identifies missing is-a relations; SNOMED CT ontology not dataset."
+    },
+    {
+      "sampleId": "sample-710cc4e6f2f9bb7c8d23",
+      "verdict": "confirmed",
+      "reason": "ML selects sequence-level MRI protocols."
+    },
+    {
+      "sampleId": "sample-074a4dd38d4d8cade9f4",
+      "verdict": "confirmed",
+      "reason": "Corrigendum preserved; drug demystification operation unclear."
+    },
+    {
+      "sampleId": "sample-c697c0d2f6cfdd16aeda",
+      "verdict": "confirmed",
+      "reason": "Soccer outcome prediction literal; machine and deep share learning head, preserve group."
+    },
+    {
+      "sampleId": "sample-38598734c76d690e18b1",
+      "verdict": "revised",
+      "reason": "Semantic similarity can assist screening as score, rather than execute whole screening workflow.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "ontology-based semantic similarity",
+            "label": "METHOD"
+          },
+          {
+            "text": "article screening process for systematic reviews",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Intermediate/training component versus complete executor role unspecified.",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "UNRESOLVED",
+            "reason": "Training, scoring or intermediate representation may support rather than directly execute complete target."
+          }
+        ],
+        "notes": "Screening is concrete literature-selection task.",
+        "sampleId": "sample-38598734c76d690e18b1"
+      }
+    },
+    {
+      "sampleId": "sample-3e2ce246a8045ac68349",
+      "verdict": "confirmed",
+      "reason": "ZiMM/DL model relapses without literal prediction operation."
+    },
+    {
+      "sampleId": "sample-742ff3fb55bd1da90017",
+      "verdict": "confirmed",
+      "reason": "HeTOP terminology server and antibody organization resource not named learning methods."
+    },
+    {
+      "sampleId": "sample-0daacf98b1e67063f70d",
+      "verdict": "confirmed",
+      "reason": "Full GNN-based prediction task overlaps embedded method; LLM may provide embeddings."
+    },
+    {
+      "sampleId": "sample-70a82eee10b2137732de",
+      "verdict": "confirmed",
+      "reason": "Bootstrap ARDL and ML stated; economic nexus not computational task."
+    },
+    {
+      "sampleId": "sample-a32f764bc55b1bcbf103",
+      "verdict": "confirmed",
+      "reason": "Full salp-foraging ant optimizer segments multithreshold remote images."
+    },
+    {
+      "sampleId": "sample-861143779e7fc3c613d3",
+      "verdict": "confirmed",
+      "reason": "NER/linking tasks literal; MER shell server software not automatically model."
+    },
+    {
+      "sampleId": "sample-7af3e659fe2291bce7fc",
+      "verdict": "confirmed",
+      "reason": "ML performs virtual drug screening, not broad discovery alone."
+    },
+    {
+      "sampleId": "sample-fae3c0439ee28039fd9a",
+      "verdict": "confirmed",
+      "reason": "Innovative drug discovery lacks explicit search/generation/prediction."
+    },
+    {
+      "sampleId": "sample-a9bb1ff6fc60ec841b3b",
+      "verdict": "confirmed",
+      "reason": "Mean-field spiking NN with inhibitory synapses full architecture; no task."
+    },
+    {
+      "sampleId": "sample-73c63b6ed06635818679",
+      "verdict": "confirmed",
+      "reason": "Gradient-based DNN simulates porous multiphase flow."
+    },
+    {
+      "sampleId": "sample-fe689c8f1b5c3fa1df22",
+      "verdict": "confirmed",
+      "reason": "Institution viability understanding lacks concrete computation."
+    },
+    {
+      "sampleId": "sample-d5b7d20dc2397e60024c",
+      "verdict": "confirmed",
+      "reason": "Full encoder/CNN feature-concatenation technique identifies leaf disease."
+    },
+    {
+      "sampleId": "sample-831ad513147f7bf78dc9",
+      "verdict": "confirmed",
+      "reason": "Markovian NN synchronization target overlaps model."
+    },
+    {
+      "sampleId": "sample-a83d7ffc3e34ee2cce6e",
+      "verdict": "confirmed",
+      "reason": "NN maps roads with LiDAR evidence; sensor not benchmark."
+    },
+    {
+      "sampleId": "sample-94ea0160d0285f913ff9",
+      "verdict": "confirmed",
+      "reason": "CNN full name and acronym diagnose medical-image breast cancer."
+    },
+    {
+      "sampleId": "sample-bba939d3a9bf00a609cf",
+      "verdict": "confirmed",
+      "reason": "Federated ML predicts coronary calcification scores."
+    },
+    {
+      "sampleId": "sample-62ef09e9f97bd992a059",
+      "verdict": "confirmed",
+      "reason": "Dynamic-model/controller task boundary and generic-model identity uncertain."
+    },
+    {
+      "sampleId": "sample-261d2cbb7908d1344d75",
+      "verdict": "confirmed",
+      "reason": "Hybrid DL recognizes patient activity; PAR task acronym retained."
+    },
+    {
+      "sampleId": "sample-fd92110282c1fa79d4c3",
+      "verdict": "confirmed",
+      "reason": "ANN forecasts apparel sales."
+    },
+    {
+      "sampleId": "sample-c8240885ac21a1bc7c73",
+      "verdict": "confirmed",
+      "reason": "DL detects intrusion; blockchain/encryption may provide security rather than detect."
+    },
+    {
+      "sampleId": "sample-db4fbcd9e21182df15a0",
+      "verdict": "confirmed",
+      "reason": "Synthetical reasoning/multitask-model identities uncertain; tabular-textual QA retained."
+    },
+    {
+      "sampleId": "sample-586bd3a2a58e142b8292",
+      "verdict": "confirmed",
+      "reason": "Fourier NN inpaints large regions; structural analysis may only supply representation."
+    },
+    {
+      "sampleId": "sample-b59316aea0fd670d898b",
+      "verdict": "confirmed",
+      "reason": "Full response-enrichment task includes ChatGPT target; flat overlap prevents complete inventory."
+    },
+    {
+      "sampleId": "sample-eb78e20f19e127da8496",
+      "verdict": "confirmed",
+      "reason": "Static/contextual/character share Embeddings head, preserve group without invented members."
+    },
+    {
+      "sampleId": "sample-97c757ad2746ec60ba26",
+      "verdict": "confirmed",
+      "reason": "RL plans visual inspection acquisitions in remanufacturing."
+    },
+    {
+      "sampleId": "sample-3c7c4423349b065b324e",
+      "verdict": "confirmed",
+      "reason": "Production-controller design versus actual production control boundary unclear."
+    },
+    {
+      "sampleId": "sample-dcdf352bb8cb7fb99e97",
+      "verdict": "confirmed",
+      "reason": "Label synchronization explicit; FL may be synchronized target rather than synchronizer."
+    },
+    {
+      "sampleId": "sample-f2ff22ad9e913ecf059d",
+      "verdict": "confirmed",
+      "reason": "Falling Prediction literal; biped context separated by method cannot be reconstructed into span."
+    },
+    {
+      "sampleId": "sample-ac5142fd86c48b622a61",
+      "verdict": "confirmed",
+      "reason": "Karyon summarizes ontologies; ontology not dataset."
+    },
+    {
+      "sampleId": "sample-5944fe8a4106613ed862",
+      "verdict": "confirmed",
+      "reason": "Multimodal ML prognoses Alzheimer disease; title not clinical efficacy."
+    },
+    {
+      "sampleId": "sample-2cbe9d05dadfdc8664ee",
+      "verdict": "confirmed",
+      "reason": "ATM/adaptive Transformer reconstructs irregular multitemporal remote images."
+    },
+    {
+      "sampleId": "sample-8542fa8e367db5b4c7cb",
+      "verdict": "confirmed",
+      "reason": "BDNet/densely connected CNN recognize Bengali handwritten digits."
+    },
+    {
+      "sampleId": "sample-52f187cad0cab5311e9a",
+      "verdict": "confirmed",
+      "reason": "1D-CapsNet-LSTM and DL forecast multistep stock index."
+    },
+    {
+      "sampleId": "sample-0ae7cd8ddbb582d00261",
+      "verdict": "confirmed",
+      "reason": "Mining evidence sentences and document-level RE are task operations; method unnamed."
+    },
+    {
+      "sampleId": "sample-704774462debe9ffcbe0",
+      "verdict": "confirmed",
+      "reason": "Ultrasonic diagnostic operation boundary unclear; no clinical efficacy claim."
+    },
+    {
+      "sampleId": "sample-c1d06f2a2226578b14dd",
+      "verdict": "confirmed",
+      "reason": "Network automation lacks specific action; retain uncertainty."
+    },
+    {
+      "sampleId": "sample-f25f4514eef70f0c7e1d",
+      "verdict": "confirmed",
+      "reason": "No in-scope entity found after title inspection; empty not unannotated."
+    },
+    {
+      "sampleId": "sample-5b6ab3d53eef77119ef1",
+      "verdict": "confirmed",
+      "reason": "ML candidate retained; concrete task not certified."
+    },
+    {
+      "sampleId": "sample-34938709086e0107bce4",
+      "verdict": "confirmed",
+      "reason": "Yolo-tla and YOLOv5 detect small objects."
+    },
+    {
+      "sampleId": "sample-84a7f2aae115f62eb767",
+      "verdict": "confirmed",
+      "reason": "NN family stated with no downstream task."
+    },
+    {
+      "sampleId": "sample-e143f04e96ebb28a7515",
+      "verdict": "confirmed",
+      "reason": "Title checked, no in-scope entity."
+    },
+    {
+      "sampleId": "sample-148a2273ad9d7fd9b457",
+      "verdict": "confirmed",
+      "reason": "SVM classifies text; supervised term weights may only prepare representation."
+    },
+    {
+      "sampleId": "sample-c8a5485635e78936cc60",
+      "verdict": "revised",
+      "reason": "Restore low-dimensional qualifier to full gated hierarchical hyperbolic embedding boundary.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Knowledge graph completion",
+            "label": "TASK"
+          },
+          {
+            "text": "low-dimensional gated hierarchical hyperbolic embedding",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "USED_FOR",
+            "reason": "Hyperbolic embedding explicitly completes KG."
+          }
+        ],
+        "notes": "Low-dimensional qualifier belongs in full method span, not notes alone.",
+        "sampleId": "sample-c8a5485635e78936cc60"
+      }
+    },
+    {
+      "sampleId": "sample-626b05398110d4f5904d",
+      "verdict": "confirmed",
+      "reason": "Probabilistic ontology may be representation, MLN recognizes activity."
+    },
+    {
+      "sampleId": "sample-9db89ec254ebcc8423d0",
+      "verdict": "confirmed",
+      "reason": "DMAdam/dual averaging optimizer and DNN stated, no independent task."
+    },
+    {
+      "sampleId": "sample-8d590c9d9674f632a580",
+      "verdict": "confirmed",
+      "reason": "TEQA explicitly answers questions with temporal graph context."
+    },
+    {
+      "sampleId": "sample-9549226ad65c2c2e1332",
+      "verdict": "confirmed",
+      "reason": "Hybrid DL recognizes speech emotion; selection/metaheuristic may only train or prepare input."
+    },
+    {
+      "sampleId": "sample-b2b32aecdbc12494e1cf",
+      "verdict": "confirmed",
+      "reason": "Temporal inductive path NN detects attacks; separated cloud context not reconstructed."
+    },
+    {
+      "sampleId": "sample-e71e420147093b313322",
+      "verdict": "confirmed",
+      "reason": "Monocular-GPS fusion operation versus named technique boundary uncertain."
+    },
+    {
+      "sampleId": "sample-87715c5c521201ff2203",
+      "verdict": "confirmed",
+      "reason": "Semantic QA concrete; methodology unnamed."
+    },
+    {
+      "sampleId": "sample-b21becc29b4684c922cc",
+      "verdict": "confirmed",
+      "reason": "NN family stated without separate task."
+    },
+    {
+      "sampleId": "sample-1a1fdcde9cb6b4a3e486",
+      "verdict": "revised",
+      "reason": "Semantic guidance may be detector component, so unresolved pair must agree with stated uncertainty.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Tiny Object Detection",
+            "label": "TASK"
+          },
+          {
+            "text": "Explicit Semantic Guidance",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Intermediate/training component versus complete executor role unspecified.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "Training, scoring or intermediate representation may support rather than directly execute complete target."
+          }
+        ],
+        "notes": "Remote sensing image context; guidance may be component.",
+        "sampleId": "sample-1a1fdcde9cb6b4a3e486"
+      }
+    },
+    {
+      "sampleId": "sample-8b78079c1be673812482",
+      "verdict": "revised",
+      "reason": "Spectrum-feature model may only supply detector representation, not execute tiny-object detection.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Frequency Spectrum Features Modeling",
+            "label": "METHOD"
+          },
+          {
+            "text": "Tiny Object Detection in Remote Sensing Image",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Intermediate/training component versus complete executor role unspecified.",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "UNRESOLVED",
+            "reason": "Training, scoring or intermediate representation may support rather than directly execute complete target."
+          }
+        ],
+        "notes": "Feature model may supply detector representation.",
+        "sampleId": "sample-8b78079c1be673812482"
+      }
+    },
+    {
+      "sampleId": "sample-350ec7557b3081119a49",
+      "verdict": "confirmed",
+      "reason": "Uzbek news corpus lacks release identity; do not certify DATASET."
+    },
+    {
+      "sampleId": "sample-ef146e403511445c2843",
+      "verdict": "confirmed",
+      "reason": "Quantum evolution role and full model boundary unresolved; preserve candidates."
+    },
+    {
+      "sampleId": "sample-65de9c7da530bf9f264f",
+      "verdict": "confirmed",
+      "reason": "I2U-Net and full dual-path U-Net segment medical images."
+    },
+    {
+      "sampleId": "sample-cbd65d81a166209e7258",
+      "verdict": "confirmed",
+      "reason": "Transformer NLP predicts emergency severity; data integration role not certified."
+    },
+    {
+      "sampleId": "sample-51d0002458cd89af3d85",
+      "verdict": "confirmed",
+      "reason": "Ontology generation is task; no named method."
+    },
+    {
+      "sampleId": "sample-79e69e7a8236465ce5a1",
+      "verdict": "confirmed",
+      "reason": "Decision tree and ML family, no task inferred."
+    },
+    {
+      "sampleId": "sample-b8b3a2cb46ff2ef4eac7",
+      "verdict": "confirmed",
+      "reason": "DL family without specified downstream operation."
+    },
+    {
+      "sampleId": "sample-b3857331cccd5bf227b6",
+      "verdict": "confirmed",
+      "reason": "Gait analysis lacks explicit computation; CV broad context."
+    },
+    {
+      "sampleId": "sample-6d8c42465af21d430fc2",
+      "verdict": "confirmed",
+      "reason": "No in-scope entity after title inspection."
+    },
+    {
+      "sampleId": "sample-c57d0e587d1dca1711df",
+      "verdict": "confirmed",
+      "reason": "CNN performs process tomography of structured optical gates."
+    },
+    {
+      "sampleId": "sample-ffd74103063fcff2c2d1",
+      "verdict": "confirmed",
+      "reason": "Vision Transformer classifies SEM nanomaterial images."
+    },
+    {
+      "sampleId": "sample-9459e24ab85db0af581f",
+      "verdict": "confirmed",
+      "reason": "Correlator Transformer is architecture; theoretical property not task."
+    },
+    {
+      "sampleId": "sample-1d28035945cadc40ec74",
+      "verdict": "confirmed",
+      "reason": "Half-quadratic splitting and CNN explicitly deblur images."
+    },
+    {
+      "sampleId": "sample-9d3a32cb8caaa470d199",
+      "verdict": "confirmed",
+      "reason": "Anomaly detection lacks object; retain GNN association but isolate inventory."
+    },
+    {
+      "sampleId": "sample-711c368343ba18470627",
+      "verdict": "confirmed",
+      "reason": "CV monitors and detects warpage; no benchmark named."
+    },
+    {
+      "sampleId": "sample-0963b8f0badbce423adb",
+      "verdict": "confirmed",
+      "reason": "Retraction preserved as notice; unspecified task remains isolated."
+    },
+    {
+      "sampleId": "sample-768f5927728e4e71bb90",
+      "verdict": "confirmed",
+      "reason": "Evolutionary CNN diagnoses lung nodules, not proof of clinical accuracy."
+    },
+    {
+      "sampleId": "sample-a0870e8424023b29fd41",
+      "verdict": "confirmed",
+      "reason": "CV recognizes COVID X-rays; transfer may only train recognizer."
+    },
+    {
+      "sampleId": "sample-fefec83f817e7b81caca",
+      "verdict": "confirmed",
+      "reason": "EACT-Det and full criss-cross Transformer architecture detect similar diseases."
+    },
+    {
+      "sampleId": "sample-88b625c23a9f4646ad91",
+      "verdict": "confirmed",
+      "reason": "Full iterative-transfer NN explicitly clusters/classifies single-cell types."
+    },
+    {
+      "sampleId": "sample-1d7ea1aae68740ac7027",
+      "verdict": "confirmed",
+      "reason": "One neuron and DL predict aftershocks; title claim not efficacy proof."
+    },
+    {
+      "sampleId": "sample-846f6f92225c6174a2ea",
+      "verdict": "confirmed",
+      "reason": "Hybrid NN classifies breast-cancer data; TOPSIS may select rather than classify."
+    },
+    {
+      "sampleId": "sample-8b1ad2aa0e33c66adba1",
+      "verdict": "confirmed",
+      "reason": "LDA and ANN geographically classify mineral waters; Spain context not dataset."
+    },
+    {
+      "sampleId": "sample-60756319ff7aedb7f0de",
+      "verdict": "confirmed",
+      "reason": "CNN detects radar targets."
+    },
+    {
+      "sampleId": "sample-296950354ef0fba9cd56",
+      "verdict": "confirmed",
+      "reason": "ML tracks patient vital signs; no clinical validation inferred."
+    },
+    {
+      "sampleId": "sample-8f4c94065ad43bd24c27",
+      "verdict": "confirmed",
+      "reason": "DRL deploys multi-domain services; ecosystem context retained."
+    },
+    {
+      "sampleId": "sample-18a0484a41721d376e00",
+      "verdict": "confirmed",
+      "reason": "NN method candidate retained, operation unclear."
+    },
+    {
+      "sampleId": "sample-d328f55131e6702e241d",
+      "verdict": "confirmed",
+      "reason": "ML detects cardiac arrhythmias, title not clinical evidence."
+    },
+    {
+      "sampleId": "sample-e036779ad67c22a5d8b4",
+      "verdict": "confirmed",
+      "reason": "Levenberg-Marquardt NN estimates specified PSS parameters."
+    },
+    {
+      "sampleId": "sample-e605765d20efe26aabb8",
+      "verdict": "confirmed",
+      "reason": "FCM-guided DL damps power-network oscillation."
+    },
+    {
+      "sampleId": "sample-49e3bb91fee55a778622",
+      "verdict": "confirmed",
+      "reason": "Cubic-logistic GCM network candidate; concrete operational target unspecified."
+    },
+    {
+      "sampleId": "sample-712935af852a86e7cb62",
+      "verdict": "confirmed",
+      "reason": "Kullback-Leibler constraint integrates information; classifier execution uncertain."
+    },
+    {
+      "sampleId": "sample-7417fdf645a46767232f",
+      "verdict": "confirmed",
+      "reason": "MSL-MNN and lightweight multi-scale memristive NN remove image rain."
+    },
+    {
+      "sampleId": "sample-87f973834171748cab40",
+      "verdict": "confirmed",
+      "reason": "Generative-AI digital twin composite; concrete operation unspecified."
+    },
+    {
+      "sampleId": "sample-92322e7aa8c1480ca22b",
+      "verdict": "confirmed",
+      "reason": "Wind-farm cable routing explicit, algorithm unnamed."
+    },
+    {
+      "sampleId": "sample-279249d84fc515b5f27b",
+      "verdict": "confirmed",
+      "reason": "Shallow NN with rectified-power activation; property not task."
+    },
+    {
+      "sampleId": "sample-4a80cfaa5419c4bd5d15",
+      "verdict": "confirmed",
+      "reason": "Hierarchical NN architecture, no task supplied."
+    },
+    {
+      "sampleId": "sample-ebe6a569d1a1f53dd1fe",
+      "verdict": "confirmed",
+      "reason": "Semi-dilated CNN predicts epileptic seizures."
+    },
+    {
+      "sampleId": "sample-74a58c9decabb541fc96",
+      "verdict": "confirmed",
+      "reason": "Front-door criterion role versus detector unclear."
+    },
+    {
+      "sampleId": "sample-da1836277a14c2191513",
+      "verdict": "confirmed",
+      "reason": "LLM detects perioperative complications; LoRA trains, full inventory remains uncertain."
+    },
+    {
+      "sampleId": "sample-822a0a059958c5127a91",
+      "verdict": "confirmed",
+      "reason": "ML predicts post-emergency healthcare contacts."
+    },
+    {
+      "sampleId": "sample-9eb32ff7663a4700a7f6",
+      "verdict": "confirmed",
+      "reason": "Full delayed reaction-diffusion Cohen-Grossberg architecture, theoretical property not task."
+    },
+    {
+      "sampleId": "sample-6e886532e771a6b9e03e",
+      "verdict": "confirmed",
+      "reason": "Adaptive CNN recognizes faces."
+    },
+    {
+      "sampleId": "sample-4c73db6f5ad310ea50d0",
+      "verdict": "confirmed",
+      "reason": "LLM and CNN-LSTM optimize portfolios; no financial performance promise."
+    },
+    {
+      "sampleId": "sample-6c60054a451f9f5e1b5a",
+      "verdict": "confirmed",
+      "reason": "LLM candidate with uncertain concrete operational target."
+    },
+    {
+      "sampleId": "sample-38cbf5a3beb5fe27b63f",
+      "verdict": "confirmed",
+      "reason": "DRL selects network traffic features; not automatically intrusion detector."
+    },
+    {
+      "sampleId": "sample-4d2496cc0e09e3ef1c61",
+      "verdict": "confirmed",
+      "reason": "CNN detects intrusion."
+    },
+    {
+      "sampleId": "sample-af3affe183543973f512",
+      "verdict": "confirmed",
+      "reason": "DL/EfficientNet classify brain tumors; quantum genetic role uncertain."
+    },
+    {
+      "sampleId": "sample-5cbc60a05b553b449b81",
+      "verdict": "confirmed",
+      "reason": "Spanish emotion analysis operation insufficiently specified; transformers candidate retained."
+    },
+    {
+      "sampleId": "sample-1d626ba094798dde1b5d",
+      "verdict": "confirmed",
+      "reason": "RL maximizes backscatter communication throughput."
+    },
+    {
+      "sampleId": "sample-a42f2be22acf1be0d1fb",
+      "verdict": "confirmed",
+      "reason": "DL predicts heart disease, no clinical accuracy asserted."
+    },
+    {
+      "sampleId": "sample-30405827a55b57143be0",
+      "verdict": "confirmed",
+      "reason": "MVST and multi-view GCN identify spatial transcriptome domains."
+    },
+    {
+      "sampleId": "sample-dfe94d704d8627fbb9d6",
+      "verdict": "confirmed",
+      "reason": "Blockchain and DL stated but full operation uncertain."
+    },
+    {
+      "sampleId": "sample-8f2b1124f9ff81481ac7",
+      "verdict": "confirmed",
+      "reason": "CNN family candidate without certified task inventory."
+    },
+    {
+      "sampleId": "sample-3c2b17805230c10eb920",
+      "verdict": "confirmed",
+      "reason": "Fuzzy transfer explicitly supplies VM resource allocation strategy."
+    },
+    {
+      "sampleId": "sample-92bdcb8dccbcf25fa45e",
+      "verdict": "confirmed",
+      "reason": "Graph representation learning classifies road types."
+    },
+    {
+      "sampleId": "sample-b89576621acdeb7b7555",
+      "verdict": "confirmed",
+      "reason": "Full constrained-triplet kernel Transformer fuses features; intermediate target literal."
+    },
+    {
+      "sampleId": "sample-63a1f917f7f38908b429",
+      "verdict": "confirmed",
+      "reason": "Pattern recognition/CV broad techniques; specific task unclear."
+    },
+    {
+      "sampleId": "sample-59197429dde18603054b",
+      "verdict": "confirmed",
+      "reason": "CMIGNet and full inverse-guidance network detect RGB-depth salient objects."
+    },
+    {
+      "sampleId": "sample-838c613e4f53fbe08727",
+      "verdict": "confirmed",
+      "reason": "Sparse skeleton may be representation rather than technique; retain uncertain inventory."
+    },
+    {
+      "sampleId": "sample-3dbefe2cd46436c46c88",
+      "verdict": "confirmed",
+      "reason": "DiffSLT and diffusion model translate signs."
+    },
+    {
+      "sampleId": "sample-80cf83f615e129be5e81",
+      "verdict": "confirmed",
+      "reason": "Capsule network with k-means routing classifies text."
+    },
+    {
+      "sampleId": "sample-c1fe642d4d4537ad603d",
+      "verdict": "confirmed",
+      "reason": "KG optimization allocates workshop resources."
+    },
+    {
+      "sampleId": "sample-a026f3fb7f6c26338f6d",
+      "verdict": "confirmed",
+      "reason": "YOLOv7 detects crop weeds."
+    },
+    {
+      "sampleId": "sample-3d47b3940c388cfadf42",
+      "verdict": "confirmed",
+      "reason": "Target-aware vision Transformer recognizes polarimetric HRRP targets."
+    },
+    {
+      "sampleId": "sample-9a891b991cdb00d220ef",
+      "verdict": "confirmed",
+      "reason": "ML classifies endangered tropical-forest tree species."
+    },
+    {
+      "sampleId": "sample-1606032b8f895065dabf",
+      "verdict": "confirmed",
+      "reason": "ML method retained, no concrete task certified."
+    },
+    {
+      "sampleId": "sample-0ec74aa0281af0b05763",
+      "verdict": "confirmed",
+      "reason": "DRL resource allocation literal; application framing not extra task."
+    },
+    {
+      "sampleId": "sample-38ee2fd06f846c6c33eb",
+      "verdict": "confirmed",
+      "reason": "Progressive DL and AdaBoost predict landslide displacement rates."
+    },
+    {
+      "sampleId": "sample-1ff2f643f68516b4f2f4",
+      "verdict": "confirmed",
+      "reason": "Full multi-scale-fusion CNN classifies remote sensing images."
+    },
+    {
+      "sampleId": "sample-4ab1b7057b5401e0e4ba",
+      "verdict": "confirmed",
+      "reason": "Enhancement branch/context module may be intermediate detector components."
+    },
+    {
+      "sampleId": "sample-9f43208f3eed1d39a342",
+      "verdict": "confirmed",
+      "reason": "P2FEViT and full CNN-embedded hybrid Transformer classify remote images."
+    },
+    {
+      "sampleId": "sample-8b14526beb0b26c33eae",
+      "verdict": "confirmed",
+      "reason": "ANN reconstructs microwave satellite soil moisture over named plateau."
+    },
+    {
+      "sampleId": "sample-db18d0bc66191cc02443",
+      "verdict": "confirmed",
+      "reason": "DL segments plant point clouds at organ level."
+    },
+    {
+      "sampleId": "sample-594b229cbe00beca73df",
+      "verdict": "confirmed",
+      "reason": "Corrected literal Mapping of retained; compiler correction is separately recorded failure, not self-review revision."
+    },
+    {
+      "sampleId": "sample-b9612b3ded7c1c92743c",
+      "verdict": "confirmed",
+      "reason": "Multi-scale multi-attention Siamese Transformer detects image changes."
+    },
+    {
+      "sampleId": "sample-e14a73b9a88a421b8f81",
+      "verdict": "confirmed",
+      "reason": "DSSM and spectrum-separable DNN segment multi-spectral images."
+    },
+    {
+      "sampleId": "sample-7bd198a5c417119e8b91",
+      "verdict": "confirmed",
+      "reason": "3D direction-encoded Bayesian NN predicts urban blast loading."
+    },
+    {
+      "sampleId": "sample-5f83fad85b3a2ef95df0",
+      "verdict": "confirmed",
+      "reason": "Access management lacks specific control operation; preserve uncertainty."
+    },
+    {
+      "sampleId": "sample-316841945c56c9a9295d",
+      "verdict": "confirmed",
+      "reason": "BERT and GCN explicitly recommend citations."
+    },
+    {
+      "sampleId": "sample-fd57063003546c2312b2",
+      "verdict": "confirmed",
+      "reason": "Waste-reduction optimization lacks particular computation; do not infer controller."
+    },
+    {
+      "sampleId": "sample-c07818a8915f433d4a47",
+      "verdict": "confirmed",
+      "reason": "DL candidate retained, inventory unresolved."
+    },
+    {
+      "sampleId": "sample-d2630a3afe4ad4a696cc",
+      "verdict": "confirmed",
+      "reason": "DL recognizes pedestrians and animals."
+    },
+    {
+      "sampleId": "sample-68521c9ff6d2852aa53b",
+      "verdict": "confirmed",
+      "reason": "Imagined-speech EEG decoding literal, method boundary uncertain."
+    },
+    {
+      "sampleId": "sample-802e1af605b7ef410b89",
+      "verdict": "confirmed",
+      "reason": "Transfer may train skin-cancer recognizer rather than detect/classify."
+    },
+    {
+      "sampleId": "sample-2b3992c2e57d82e8260a",
+      "verdict": "confirmed",
+      "reason": "Detection/comparison techniques mix method and task roles; isolate inventory."
+    },
+    {
+      "sampleId": "sample-ba919413c925db3f74b1",
+      "verdict": "confirmed",
+      "reason": "CO2-based ML estimates occupancy; CO2 input not dataset."
+    },
+    {
+      "sampleId": "sample-b83f4a43b6b9a1e8c157",
+      "verdict": "confirmed",
+      "reason": "DL assesses upper-limb function; title not clinical validation."
+    },
+    {
+      "sampleId": "sample-e20260de82a14d067333",
+      "verdict": "confirmed",
+      "reason": "ML recognizes grasp postures; downstream hand control role uncertain."
+    },
+    {
+      "sampleId": "sample-b81408e64685ec1aa595",
+      "verdict": "confirmed",
+      "reason": "DL classifies underexposed blackberries; image fusion may be preprocessing."
+    },
+    {
+      "sampleId": "sample-88af2ee0fb70812552b2",
+      "verdict": "confirmed",
+      "reason": "Vision Transformer detects plant disease."
+    },
+    {
+      "sampleId": "sample-4fec35935f737a7a98aa",
+      "verdict": "confirmed",
+      "reason": "DL recognizes Arabic air writing; language/modality retained."
+    },
+    {
+      "sampleId": "sample-8e80c4cc8be1b10c782b",
+      "verdict": "confirmed",
+      "reason": "3D DL diagnoses pulmonary nodules, no clinical efficacy inferred."
+    },
+    {
+      "sampleId": "sample-c868d57881be4a90d824",
+      "verdict": "confirmed",
+      "reason": "ML classifies oil ripeness; chemical profiling may acquire inputs."
+    },
+    {
+      "sampleId": "sample-4a0963c609d6166906e6",
+      "verdict": "confirmed",
+      "reason": "GrAb and DL detect energy theft."
+    },
+    {
+      "sampleId": "sample-08704a142f529b7105f2",
+      "verdict": "confirmed",
+      "reason": "RNN predicts hand gestures from sEMG."
+    },
+    {
+      "sampleId": "sample-784d8a5e3aaa2c842628",
+      "verdict": "confirmed",
+      "reason": "DL recognizes orchard apples."
+    },
+    {
+      "sampleId": "sample-7841968460c4fccb04ef",
+      "verdict": "confirmed",
+      "reason": "Multiscale nonlinear diffusion denoises images."
+    },
+    {
+      "sampleId": "sample-343121b6ab72995e85be",
+      "verdict": "confirmed",
+      "reason": "Privacy-preserving graph ML composite, broad data/computation framing not task."
+    },
+    {
+      "sampleId": "sample-019a3b13713bb481f5f1",
+      "verdict": "confirmed",
+      "reason": "DL assesses Wikipedia article quality; named people not in-scope entities."
+    },
+    {
+      "sampleId": "sample-b09d46e82d2383352fe9",
+      "verdict": "confirmed",
+      "reason": "Quantization target overlaps neural networks; corrigendum not new validation."
+    },
+    {
+      "sampleId": "sample-d41901cdd6fec4b49556",
+      "verdict": "confirmed",
+      "reason": "Steel Ms Temperature quantity given without literal prediction operation."
+    },
+    {
+      "sampleId": "sample-eb47355ab0034555c93a",
+      "verdict": "confirmed",
+      "reason": "Word embedding and CNN/Bi-GRU fusion classify text; Fusion joins one composite not shared-head group."
+    },
+    {
+      "sampleId": "sample-f07f55455f016381f134",
+      "verdict": "confirmed",
+      "reason": "CNN super-resolves hyperspectral images; decomposition may preprocess."
+    },
+    {
+      "sampleId": "sample-7950e44e39183c2c0bd5",
+      "verdict": "confirmed",
+      "reason": "Heuristic-optimized CNN classifies brain tumors, no clinical validation."
+    },
+    {
+      "sampleId": "sample-cbceddf1b2190c162e9a",
+      "verdict": "confirmed",
+      "reason": "Gogglesdet/clustering Transformer detect goggles; a new dataset is unnamed."
+    },
+    {
+      "sampleId": "sample-2015af2ef519b4dda143",
+      "verdict": "confirmed",
+      "reason": "Self-attention Transformer assesses image quality; no-reference setting excluded."
+    },
+    {
+      "sampleId": "sample-91a6d0270d0e59f79018",
+      "verdict": "confirmed",
+      "reason": "Fusion of ML models predicts stroke risk, not clinical efficacy."
+    },
+    {
+      "sampleId": "sample-cf28145f8aa78353183e",
+      "verdict": "confirmed",
+      "reason": "Effective-data selection/correlation operation unspecified; heart-failure detection association alone incomplete."
+    },
+    {
+      "sampleId": "sample-193e8c310d8fd501c66a",
+      "verdict": "confirmed",
+      "reason": "DL segments medical lesions; multiple sclerosis context not benchmark."
+    },
+    {
+      "sampleId": "sample-9313ceebc1934f9b1c7f",
+      "verdict": "confirmed",
+      "reason": "ML survey covers COVID detection/diagnosis/prediction, not new clinical experiment."
+    },
+    {
+      "sampleId": "sample-599e0fcef858e7fa8c94",
+      "verdict": "confirmed",
+      "reason": "ANN models seed-oil extraction; central composite design may plan experiments."
+    },
+    {
+      "sampleId": "sample-8af330f1a66a1965bb92",
+      "verdict": "confirmed",
+      "reason": "ML predicts stock trends; sentiment/politics input context."
+    },
+    {
+      "sampleId": "sample-8625620870a99fc2cdd9",
+      "verdict": "confirmed",
+      "reason": "Secondary-path-decoupled noise-control algorithm composite; DL family, no separate nonoverlapping task."
+    },
+    {
+      "sampleId": "sample-14122e91c331a01e6a55",
+      "verdict": "revised",
+      "reason": "Entropy may select thresholds rather than execute whole SAR segmentation; pair must remain unresolved.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "SAR Image Segmentation",
+            "label": "TASK"
+          },
+          {
+            "text": "Rényi's Entropy",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Intermediate/training component versus complete executor role unspecified.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "Training, scoring or intermediate representation may support rather than directly execute complete target."
+          }
+        ],
+        "notes": "Entropy may select threshold versus segment; criterion role uncertainty.",
+        "sampleId": "sample-14122e91c331a01e6a55"
+      }
+    },
+    {
+      "sampleId": "sample-586f6f3557bc6d232f0c",
+      "verdict": "confirmed",
+      "reason": "DL recognizes radar human motion; radar context separated in title."
+    },
+    {
+      "sampleId": "sample-662900ea5d58424a7bcc",
+      "verdict": "confirmed",
+      "reason": "SAR-guided conditional diffusion removes clouds; style adaptation may train model."
+    },
+    {
+      "sampleId": "sample-9b7ab60e287cfdb0f631",
+      "verdict": "confirmed",
+      "reason": "Fuzzy similarity may select samples; full ML improvement task overlaps method."
+    },
+    {
+      "sampleId": "sample-b1c4a82eb86901e5581b",
+      "verdict": "confirmed",
+      "reason": "Small-ship detection explicit; satellite data generic."
+    },
+    {
+      "sampleId": "sample-7e817d011656883080e8",
+      "verdict": "confirmed",
+      "reason": "PSO-driven LLM designs prompts; later medical extraction executor uncertain."
+    },
+    {
+      "sampleId": "sample-c6a7cde34dbfde963901",
+      "verdict": "revised",
+      "reason": "Remove dangling Driven connector while retaining symmetry-informed multimodal LLM method qualifiers.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Symmetry-Informed Multimodal LLM",
+            "label": "METHOD"
+          },
+          {
+            "text": "Robotic Object Manipulation",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "Symmetry-informed multimodal LLM approach manipulates objects."
+          }
+        ],
+        "notes": "Driven is linking modifier; full symmetry-informed multimodal LLM qualifiers retained.",
+        "sampleId": "sample-c6a7cde34dbfde963901"
+      }
+    },
+    {
+      "sampleId": "sample-23eba7cf7d331cc7b041",
+      "verdict": "confirmed",
+      "reason": "Symmetric multiscale convolutional Transformer classifies plant-disease images."
+    },
+    {
+      "sampleId": "sample-2ed082c09245713bb99a",
+      "verdict": "confirmed",
+      "reason": "DL detects object-based video forgery."
+    },
+    {
+      "sampleId": "sample-8f6dcf837eb71013ec2c",
+      "verdict": "confirmed",
+      "reason": "Pruning task overlaps neural network target; FL does not establish pruner."
+    },
+    {
+      "sampleId": "sample-2862ec71a7e8eb39c21e",
+      "verdict": "confirmed",
+      "reason": "TSTNet/semantic Transformer named; computing-power-network versus driving action inventory unclear."
+    },
+    {
+      "sampleId": "sample-e1d0d4898197d1ee16e4",
+      "verdict": "confirmed",
+      "reason": "Data mining/ML engineering-education enhancement broad goal, no specific task."
+    },
+    {
+      "sampleId": "sample-216a9a465a70367371ab",
+      "verdict": "confirmed",
+      "reason": "Inverse RL planning association retained; driving execution not certain."
+    },
+    {
+      "sampleId": "sample-5f929f1ea3215ba900db",
+      "verdict": "confirmed",
+      "reason": "AgentGraph and structured DRL manage dialogue."
+    },
+    {
+      "sampleId": "sample-303558d42ceefeb41468",
+      "verdict": "confirmed",
+      "reason": "sEMG processing lacks precise operation; FPGA is hardware."
+    },
+    {
+      "sampleId": "sample-391af7a4b76cb4aad719",
+      "verdict": "confirmed",
+      "reason": "Subtraction/segmentation may preprocess for unusual-event detection."
+    },
+    {
+      "sampleId": "sample-dee494998a3d59eb9b7d",
+      "verdict": "confirmed",
+      "reason": "Training-improvement task overlaps memristive network; voltage smoothing candidate uncertain."
+    },
+    {
+      "sampleId": "sample-70ea7713171401627cb9",
+      "verdict": "confirmed",
+      "reason": "Transformer feedback in CMOS LNA is physical circuitry, no neural model."
+    },
+    {
+      "sampleId": "sample-75e93316d95bdc84228c",
+      "verdict": "confirmed",
+      "reason": "Obfuscation and ML attacks techniques; no independent concrete attack task."
+    },
+    {
+      "sampleId": "sample-e72ec0fc5773b8d9d005",
+      "verdict": "confirmed",
+      "reason": "Incentive mechanism versus learning role unclear; full incentive operation not certified."
+    },
+    {
+      "sampleId": "sample-abd468dd252107e61b6b",
+      "verdict": "confirmed",
+      "reason": "FL convergence-analysis target overlaps model, no independent analyzer named."
+    },
+    {
+      "sampleId": "sample-4c9ae114339bcd4413d8",
+      "verdict": "confirmed",
+      "reason": "Split FL technique; constrained edge network setting not task."
+    },
+    {
+      "sampleId": "sample-8642e32fa902c5489153",
+      "verdict": "confirmed",
+      "reason": "DL side-channel analysis literal security task at title level."
+    },
+    {
+      "sampleId": "sample-5178afdc8016a934a9b2",
+      "verdict": "confirmed",
+      "reason": "Model-driven DRL beamforms RIS multi-user transmission."
+    },
+    {
+      "sampleId": "sample-ecc726a7438e52fdff59",
+      "verdict": "confirmed",
+      "reason": "DL detects duplicate rulemaking comments; unsupervised setting excluded."
+    },
+    {
+      "sampleId": "sample-bf8e8b047db31b8fa63e",
+      "verdict": "confirmed",
+      "reason": "DL enhances perceptual video quality for synthesized 3D views."
+    },
+    {
+      "sampleId": "sample-3b7758992354839353b0",
+      "verdict": "confirmed",
+      "reason": "Generative and discriminative share fuzzy RBM learning head; preserve coordinated group."
+    },
+    {
+      "sampleId": "sample-fb72b546ec1c4c2c8d8b",
+      "verdict": "confirmed",
+      "reason": "Dirichlet mixture of robust task models/lifelong RL are techniques; no downstream operation."
+    },
+    {
+      "sampleId": "sample-6c55441eb5267f38e4e2",
+      "verdict": "confirmed",
+      "reason": "DL maps road-safety features from street-view imagery."
+    },
+    {
+      "sampleId": "sample-ac207344d9e19ceebf72",
+      "verdict": "confirmed",
+      "reason": "Generative-AI adoption is organizational behavior, not computational task."
+    },
+    {
+      "sampleId": "sample-5f72c62620bdf771f856",
+      "verdict": "confirmed",
+      "reason": "Embedded object detection explicit; unnamed hardware accelerator not METHOD."
+    },
+    {
+      "sampleId": "sample-ddf3d01a295cccfa6c9b",
+      "verdict": "confirmed",
+      "reason": "Second Order Newton-Type identifies optimization technique; generic Method excluded."
+    },
+    {
+      "sampleId": "sample-8eec7b38f7cc170e3bfc",
+      "verdict": "confirmed",
+      "reason": "Multiagent RL plans traffic signals; congestion resistance is goal."
+    },
+    {
+      "sampleId": "sample-9c537b48879590257e5a",
+      "verdict": "confirmed",
+      "reason": "GNN predicts socioeconomic status; mobility/relationships inputs not datasets."
+    },
+    {
+      "sampleId": "sample-b144d1529ac79bf02c67",
+      "verdict": "confirmed",
+      "reason": "EVKG is knowledge resource, not named model or evaluation dataset."
+    },
+    {
+      "sampleId": "sample-73a30cb950621e3149f8",
+      "verdict": "confirmed",
+      "reason": "Electromagnetic processing lacks specified action; expert-system identity ambiguous."
+    },
+    {
+      "sampleId": "sample-dfe11b5984f97278d8c1",
+      "verdict": "confirmed",
+      "reason": "Remote-image interpretation lacks concrete computation; full foundation-model composite retained."
+    },
+    {
+      "sampleId": "sample-75e9006a5c977b02d490",
+      "verdict": "confirmed",
+      "reason": "Multimodal representation learning and masked-image modeling techniques, no separate downstream task."
+    },
+    {
+      "sampleId": "sample-7972757b32eaf73686fe",
+      "verdict": "confirmed",
+      "reason": "CNN-Transformer estimates building heights; sample augmentation may only train estimator."
+    },
+    {
+      "sampleId": "sample-6407337095158fb0a533",
+      "verdict": "confirmed",
+      "reason": "Progressive interleaved-fusion network detects remote salient objects."
+    },
+    {
+      "sampleId": "sample-86108308113d12af9eff",
+      "verdict": "confirmed",
+      "reason": "BRSTD detects remote tiny objects."
+    },
+    {
+      "sampleId": "sample-a066a158f1c5198f618c",
+      "verdict": "confirmed",
+      "reason": "Trajectory representation may be data rather than method; isolate inventory."
+    },
+    {
+      "sampleId": "sample-e27c1a25212bfddbf1b1",
+      "verdict": "confirmed",
+      "reason": "Alignment may train representation rather than detect objects."
+    },
+    {
+      "sampleId": "sample-0163d1923a18203a3c1a",
+      "verdict": "confirmed",
+      "reason": "LSCF/full semantic-guidance ConvFormer performs referring segmentation."
+    },
+    {
+      "sampleId": "sample-25893d1c6db655e722d3",
+      "verdict": "confirmed",
+      "reason": "Distillation and foundation teacher may train detector; no direct execution inferred."
+    },
+    {
+      "sampleId": "sample-48891be8dcc80a0d9032",
+      "verdict": "confirmed",
+      "reason": "DL retrieves air-sea heat flux; AMSR2 is instrument, not dataset."
+    },
+    {
+      "sampleId": "sample-e0e2477f19b4d1451f9c",
+      "verdict": "confirmed",
+      "reason": "UnmixDiff/full unmixing diffusion synthesizes hyperspectral images."
+    },
+    {
+      "sampleId": "sample-0d24c23046f7670fc460",
+      "verdict": "confirmed",
+      "reason": "SwinSUNet and Transformer detect remote-image changes."
+    },
+    {
+      "sampleId": "sample-4e67f6724303f419d3e2",
+      "verdict": "confirmed",
+      "reason": "SCENE-YOLO is named detector; scene supervision training context."
+    },
+    {
+      "sampleId": "sample-c86ccc8796933df7367b",
+      "verdict": "confirmed",
+      "reason": "Attention balancing method/task boundary unclear; preserve object detection candidate."
+    },
+    {
+      "sampleId": "sample-32303c42c60a3a30be2b",
+      "verdict": "confirmed",
+      "reason": "HO2RL/full offline-online RL controls pantograph."
+    },
+    {
+      "sampleId": "sample-61799656ba06c752a97e",
+      "verdict": "confirmed",
+      "reason": "ML generates secret keys for IRS multi-antenna systems."
+    },
+    {
+      "sampleId": "sample-deb9d518118bb090ac2f",
+      "verdict": "confirmed",
+      "reason": "DL detects malware; sensitivity is quality constraint."
+    },
+    {
+      "sampleId": "sample-9845ab45579ff46bc0a7",
+      "verdict": "confirmed",
+      "reason": "Memrisitive typo preserved; Rulkov network dynamics not downstream task."
+    },
+    {
+      "sampleId": "sample-bb44edd1f4ee735b239e",
+      "verdict": "confirmed",
+      "reason": "Energy-efficient edge computing lacks specific allocation/offloading action."
+    },
+    {
+      "sampleId": "sample-cc68ce79076ba9a7c6bc",
+      "verdict": "confirmed",
+      "reason": "Cost-sensitive multitask ML detects IoT intrusion."
+    },
+    {
+      "sampleId": "sample-6ac9216cb2bc62f30841",
+      "verdict": "confirmed",
+      "reason": "Uncertainty-guided Transformer ensemble predicts crossing intentions."
+    },
+    {
+      "sampleId": "sample-a46a88873a85b7e11e93",
+      "verdict": "confirmed",
+      "reason": "Foundation model estimates pose; template update may prepare references."
+    },
+    {
+      "sampleId": "sample-c6c40a20e00732025ffc",
+      "verdict": "confirmed",
+      "reason": "NN identifies arc faults; sparse representation may only prepare features."
+    },
+    {
+      "sampleId": "sample-8b244ea8e4ae450b5e13",
+      "verdict": "confirmed",
+      "reason": "DL detects turbine gearbox failure; SCADA data generic."
+    },
+    {
+      "sampleId": "sample-681967935d9d7b9a40d7",
+      "verdict": "confirmed",
+      "reason": "CNN extracts sweat glands from OCT."
+    },
+    {
+      "sampleId": "sample-97fca279d8b4460d147a",
+      "verdict": "confirmed",
+      "reason": "E-TRGAN/full Transformer GAN reconstructs dense surface EMG."
+    },
+    {
+      "sampleId": "sample-ee11e84854cbcf21e376",
+      "verdict": "confirmed",
+      "reason": "Confidence alignment refines labels, not necessarily detects objects."
+    },
+    {
+      "sampleId": "sample-9597208532e2db1e600f",
+      "verdict": "confirmed",
+      "reason": "Knowledge inheritance mechanism/executor unclear; object detection retained."
+    },
+    {
+      "sampleId": "sample-aaf174d9a951a9812403",
+      "verdict": "confirmed",
+      "reason": "Multitask CNN recognizes faces across poses."
+    },
+    {
+      "sampleId": "sample-d8945d4cacb5474a7359",
+      "verdict": "confirmed",
+      "reason": "Coordinated RL optimizes road network."
+    },
+    {
+      "sampleId": "sample-af8cca2b4500e9d43b39",
+      "verdict": "confirmed",
+      "reason": "WSI analysis and detached segmentation targets lack certified full inventory."
+    },
+    {
+      "sampleId": "sample-392657763dc6e6ba345e",
+      "verdict": "confirmed",
+      "reason": "WavFace/multimodal Transformer screen depression; no clinical validity claim."
+    },
+    {
+      "sampleId": "sample-4fa1bb813f4e86ef5b0d",
+      "verdict": "confirmed",
+      "reason": "HepNet/DNN classify hepatic steatosis; microwave inputs not benchmark."
+    },
+    {
+      "sampleId": "sample-69406437e2ecdf7db229",
+      "verdict": "confirmed",
+      "reason": "Knowledge-aided CNN segments small organs."
+    },
+    {
+      "sampleId": "sample-cc0d1b601fc59e7a1af5",
+      "verdict": "confirmed",
+      "reason": "Full attention spatiotemporal hybrid NN predicts traffic flow."
+    },
+    {
+      "sampleId": "sample-51fc8fc31f7189f6c9e3",
+      "verdict": "revised",
+      "reason": "Deep qualifies method not target; retain multimodal detection/segmentation driving task boundary.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Multi-Modal Object Detection and Semantic Segmentation for Autonomous Driving",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [],
+        "notes": "Datasets/methods generic, no named algorithm or benchmark.",
+        "sampleId": "sample-51fc8fc31f7189f6c9e3"
+      }
+    },
+    {
+      "sampleId": "sample-77d526f3c667e3b1a63b",
+      "verdict": "confirmed",
+      "reason": "DRL charging planning literal; effective is claim."
+    },
+    {
+      "sampleId": "sample-3d3ef3061eb61f05269e",
+      "verdict": "confirmed",
+      "reason": "Segmentation-enhanced asynchronous FL technique; transportation not specific task."
+    },
+    {
+      "sampleId": "sample-83bd4fa8e8ae97a1cbf7",
+      "verdict": "confirmed",
+      "reason": "SUSTechGAN generates images; augmentation does not automatically execute detection."
+    },
+    {
+      "sampleId": "sample-0209b089eb0084481573",
+      "verdict": "confirmed",
+      "reason": "Privacy-preserving data operation unspecified; candidate inventory unresolved."
+    },
+    {
+      "sampleId": "sample-165a77a2eab76dcd763c",
+      "verdict": "revised",
+      "reason": "Delete dangling intelligent agent-based adjective; keep named IAFCO method and optimization task, remap edge IDs.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "IAFCO",
+            "label": "METHOD"
+          },
+          {
+            "text": "combinatorial optimization",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "USED_FOR",
+            "reason": "Named IAFCO framework explicitly concerns combinatorial optimization in quoted correction title."
+          }
+        ],
+        "notes": "Correction notice not new validation; dangling generic agent-based adjective removed, named method retained.",
+        "sampleId": "sample-165a77a2eab76dcd763c"
+      }
+    },
+    {
+      "sampleId": "sample-c3aba0fa4065cce14a43",
+      "verdict": "confirmed",
+      "reason": "chatHPC software and empowering users do not specify QA/programming operation."
+    },
+    {
+      "sampleId": "sample-89629edd7600889ac81d",
+      "verdict": "confirmed",
+      "reason": "Full sequential hierarchical FL retained; non-IID datasets generic."
+    },
+    {
+      "sampleId": "sample-4702f138e9dc91e9d615",
+      "verdict": "confirmed",
+      "reason": "DeepMesh and DL track cardiac motion."
+    },
+    {
+      "sampleId": "sample-73d543ce1c4cfecdfbc1",
+      "verdict": "confirmed",
+      "reason": "Active learning selects labels; uncertainty target and segmenter role unresolved."
+    },
+    {
+      "sampleId": "sample-9b4d34fe8fec3d923e7f",
+      "verdict": "confirmed",
+      "reason": "FPL+ association retained; cross-modality adaptation may only train segmenter."
+    },
+    {
+      "sampleId": "sample-752e3642dc46c3f3ec7b",
+      "verdict": "confirmed",
+      "reason": "Hallucination similarity is behavior/property, no specific correction task."
+    },
+    {
+      "sampleId": "sample-1884dcac565ab781e516",
+      "verdict": "confirmed",
+      "reason": "Over-generalization mitigation overlaps RL target; independent mitigation method unnamed."
+    },
+    {
+      "sampleId": "sample-f25177d6f43f1c027f93",
+      "verdict": "confirmed",
+      "reason": "DL emulates numerical models; generic models are target not METHOD."
+    },
+    {
+      "sampleId": "sample-35c34ad7bc397dee7eb5",
+      "verdict": "confirmed",
+      "reason": "Editorial inspection/maintenance lacks explicit computation."
+    },
+    {
+      "sampleId": "sample-b4a2ef2cedcb8179454e",
+      "verdict": "confirmed",
+      "reason": "Memristor NN stability is theoretical property."
+    },
+    {
+      "sampleId": "sample-e02ea05f6d275b87f940",
+      "verdict": "confirmed",
+      "reason": "CACNN/full capsule-attention CNN recognizes 3D objects."
+    },
+    {
+      "sampleId": "sample-d63236c93c9b720f17fc",
+      "verdict": "confirmed",
+      "reason": "Foundation models segment medical images, retrieval/few-shot contextual."
+    },
+    {
+      "sampleId": "sample-73ae1a13a05f75794e48",
+      "verdict": "confirmed",
+      "reason": "NN classifies nodules; information bottleneck may only regularize."
+    },
+    {
+      "sampleId": "sample-683eba6c5782efb474ea",
+      "verdict": "confirmed",
+      "reason": "AutoSilicon/LLM generate RTL; full capability scaling overlaps model target."
+    },
+    {
+      "sampleId": "sample-3355ab0789bf4cc7ae83",
+      "verdict": "confirmed",
+      "reason": "RNN and residual learning enhance compressed vibrotactile signals."
+    },
+    {
+      "sampleId": "sample-3730cd6a413d4d585eb9",
+      "verdict": "confirmed",
+      "reason": "Ontology-aware prescription recommendation is literal task; algorithm unnamed, no treatment advice."
+    },
+    {
+      "sampleId": "sample-8a4da42182e6d75b03d9",
+      "verdict": "confirmed",
+      "reason": "Recurrent weights may be parameters; full pruning target overlaps network."
+    },
+    {
+      "sampleId": "sample-ca79fadb24cd3aa4f36b",
+      "verdict": "confirmed",
+      "reason": "CM-GAN/full cross-modal GAN learn common representation as explicit target."
+    },
+    {
+      "sampleId": "sample-639cc98aa66d2f69ec37",
+      "verdict": "revised",
+      "reason": "Contrastive representation learning may train re-identification features rather than execute full re-ID.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Triplet Contrastive Representation Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Vehicle Re-Identification",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Intermediate/training component versus complete executor role unspecified.",
+        "relations": [
+          {
+            "head": "e1",
+            "tail": "e2",
+            "label": "UNRESOLVED",
+            "reason": "Training, scoring or intermediate representation may support rather than directly execute complete target."
+          }
+        ],
+        "notes": "Unsupervised setting excluded.",
+        "sampleId": "sample-639cc98aa66d2f69ec37"
+      }
+    },
+    {
+      "sampleId": "sample-e0e957e31118b45eab80",
+      "verdict": "confirmed",
+      "reason": "Adversarial attack opposes modulation recognition; CNN performs it, retain explicit negative role."
+    },
+    {
+      "sampleId": "sample-6d088013620ca9d13707",
+      "verdict": "confirmed",
+      "reason": "OpaqueAttack attacks DL target; full attack task overlaps target."
+    },
+    {
+      "sampleId": "sample-cd0d1b4a98e59538f4ac",
+      "verdict": "confirmed",
+      "reason": "AAD pooling accelerator is hardware; CNN target not hardware designer."
+    },
+    {
+      "sampleId": "sample-8e67e77adddc740fac66",
+      "verdict": "confirmed",
+      "reason": "SIMD-like utilization enhancement targets sparse CNN hardware, not independent learning task."
+    },
+    {
+      "sampleId": "sample-9f116cb6e8817821339a",
+      "verdict": "confirmed",
+      "reason": "RL jointly controls network traffic signals."
+    },
+    {
+      "sampleId": "sample-9a5a8edddb45cf85baf3",
+      "verdict": "confirmed",
+      "reason": "GNN beamforms holographic millimeter-wave MIMO."
+    },
+    {
+      "sampleId": "sample-3a7470688a4fd001aae8",
+      "verdict": "confirmed",
+      "reason": "RL tracks driving paths."
+    },
+    {
+      "sampleId": "sample-54b3c059425e5a6434ae",
+      "verdict": "confirmed",
+      "reason": "FL may be offloaded workload; full FL design task overlaps target model."
+    },
+    {
+      "sampleId": "sample-95fdae93bc0101f0b1df",
+      "verdict": "confirmed",
+      "reason": "FL resource allocation explicit; delay sensitivity contextual."
+    },
+    {
+      "sampleId": "sample-4287a5460d1e9d358429",
+      "verdict": "confirmed",
+      "reason": "Kinecting cognition slogan lacks concrete behavior operation."
+    },
+    {
+      "sampleId": "sample-da768b34da2b0b47ecae",
+      "verdict": "confirmed",
+      "reason": "DRL plans UAV paths retaining dynamics and acceleration control."
+    },
+    {
+      "sampleId": "sample-2cd96c5b8707c647f32b",
+      "verdict": "confirmed",
+      "reason": "Mamba-Transformer multi-agent RL coordination lacks application action/object."
+    },
+    {
+      "sampleId": "sample-20ba990de951ea49e95f",
+      "verdict": "confirmed",
+      "reason": "Residual GCN recognizes gait."
+    },
+    {
+      "sampleId": "sample-ae9c3ba3a72ba09abc65",
+      "verdict": "confirmed",
+      "reason": "StairNetV3 and DL model stairs; no depth benchmark named."
+    },
+    {
+      "sampleId": "sample-4783a28e061d5d4cad63",
+      "verdict": "confirmed",
+      "reason": "FANN/frame-attention NN recognize facial-video student engagement."
+    },
+    {
+      "sampleId": "sample-ec9e3d408b630d2f4c96",
+      "verdict": "confirmed",
+      "reason": "Unet segmentation/binarization may preprocess for water-level detector; mixed inventory isolated."
+    },
+    {
+      "sampleId": "sample-72eab1f6ac4f0c209038",
+      "verdict": "confirmed",
+      "reason": "DriveMLM driving association retained; aligned LLM full execution uncertain."
+    },
+    {
+      "sampleId": "sample-2ad1962271eaecd9fd44",
+      "verdict": "confirmed",
+      "reason": "Full beta-filter CNN recognizes Arabic letters."
+    },
+    {
+      "sampleId": "sample-07fadabd9641cfd19ec5",
+      "verdict": "confirmed",
+      "reason": "Service-wise wireless optimization lacks specific variable/action."
+    },
+    {
+      "sampleId": "sample-23f92ffee9548fd9feb3",
+      "verdict": "confirmed",
+      "reason": "NLP research names no specific task."
+    },
+    {
+      "sampleId": "sample-e9e6a66e40cfb80f39a6",
+      "verdict": "confirmed",
+      "reason": "Neighboring-relation target qualifier and meta-training role unresolved."
+    }
+  ]
+}

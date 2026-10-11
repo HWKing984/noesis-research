@@ -1,0 +1,50 @@
+PASS  榛樿杩涘叆绉戠爺鍔╂墜  鈥斺€?view=agent
+PASS  绌烘€佸缓璁崱鍙竴閿彂闂? 鈥斺€?4 涓?
+PASS  璇佹嵁閾鹃粯璁ゆ敹璧? 鈥斺€?rail=closed
+PASS  璇佹嵁閾惧紑鍏冲甫璁℃暟  鈥斺€?0
+PASS  椤甸潰鏃犳í鍚戞孩鍑? 鈥斺€?婧㈠嚭 0px
+PASS  涓诲垪鍗犳弧渚ф爮浠ュ瀹藉害  鈥斺€?sb=260 main=1158 viewport=1418
+PASS  鎻愰棶鍓嶆湁杈撳叆鍖?
+PASS  杈撳叆瀹瑰櫒鍦ㄤ富鍒楀唴灞呬腑  鈥斺€?瀹瑰櫒涓績鍋忕Щ 0px
+PASS  绌烘€佸惈铻烘棆鏍囦笌寤鸿鍗? 鈥斺€?prompts=4
+PASS  鍏ㄩ儴鍥炬爣 <= 24px  鈥斺€?鏈€澶?22px
+PASS  璇佹嵁閾惧彲鎵撳紑  鈥斺€?rail=open
+PASS  鈸?寮瑰眰鏄剧ず瀹屾暣 graphId  鈥斺€?ai-literature-ed16399925fac2a599ed
+PASS  鈸?寮瑰眰鏄剧ず鐗堟湰閿佸畾鐘舵€? 鈥斺€?宸查攣瀹?路 妫€绱笌鍥捐氨閮借杩欎竴涓増鏈?
+PASS  鈸?寮瑰眰鏄剧ず涔︾洰瑙勬ā  鈥斺€?鍥捐氨鐗堟湰涓庤竟鐣宎i-literature-ed16399925fac2a599ed鐗堟湰閿佸畾宸查攣瀹?路 妫€绱笌鍥捐氨閮借杩欎竴
+PASS  鈸?寮瑰眰鍚竟鐣岃鏄?
+PASS  椤甸潰鏃犻敊璇í骞?
+PASS  妫€绱㈣繑鍥炵湡瀹炶鏂? 鈥斺€?10 鏉?
+PASS  缁撴灉鎽樿鍚湡瀹炴潵婧? 鈥斺€?source=live_neo4j鍒悕琛?zh_alias_v1
+PASS  姣忔潯缁撴灉閮藉甫鍙偣鍑昏瘉鎹? 鈥斺€?chips=10 citable=10 papers=10
+PASS  璇︽儏鏍忔墦寮€锛堝父椹?480px 鍙屾爮锛? 鈥斺€?aside=480
+PASS  璇︽儏闈㈡澘鎵撳紑涓旀槸鍚屼竴绡? 鈥斺€?detail=conf/IEEEwisa/LinGHW25 list=conf/IEEEwisa/LinGHW25
+PASS  鏂█鍦?UI 涓婃亽涓哄€欓€? 鈥斺€?statuses=candidate,candidate
+PASS  灞€閮ㄥ浘璋辩敾鍑鸿妭鐐? 鈥斺€?nodes=14 edges=17
+PASS  鍥捐氨鐢诲竷涓哄彲浜や簰 canvas
+PASS  鍒囨崲閫変腑琛屽悗 active 琛屾亽鍞竴  鈥斺€?active=1
+PASS  璇佹嵁鎶藉眽鍙互鎵撳紑
+PASS  鎶藉眽閲屾湁鏉ユ簮 id 涓庢繁搴? 鈥斺€?conf/IEEEwisa/LinGHW25
+PASS  鎶藉眽鎶娿€屼笉鑳借瘉鏄庝粈涔堛€嶅啓娓呮
+PASS  鎶藉眽鑳借烦鍒板搴旇鏂囪鎯? 鈥斺€?detail=conf/IEEEwisa/LinGHW25
+PASS  reader 瑙嗗浘杩涘叆涓旈〉绛?渚ф爮鑱斿姩  鈥斺€?view=reader
+PASS  reader 绌烘€佺粰鍑鸿繘鍏ユ柟寮忓紩瀵? 鈥斺€?浠庝竴绡囪鏂囪繘鍏ラ槄璇婚槄璇诲櫒涓€娆″彧璇讳竴绡囷細鍦ㄣ€岀鐮斿姪鎵嬨€嶇殑鍥炵瓟閲岀偣寮曠敤涓婃爣锛屾垨鍦ㄣ€岃鏂囧簱涓庡浘璋便€嶆墦寮€璇︽儏鍚庣偣 銆岄槄璇诲叏鏂囥€嶏紝
+PASS  璇︽儏鏍忓瀹炴樉绀哄叏鏂囧彲寰楁€э紙鏈皟鏌モ墵鍙锛? 鈥斺€?btn=false state=鍏ㄦ枃鏈皟鏌?
+  锛堝皾璇?1锛歴teps=6 icons=[tool,tool,tool,tool,tool,tool] answer=3903瀛?"缁撹鍥捐氨灏辩华锛坓raphId `ai-literature-ed16399925fac2a599ed`锛宻tatus r" passes=true cited=48 error=鏃狅級
+PASS  Agent 鐪熷疄杩愯骞堕€氳繃寮曠敤闂搁棬  鈥斺€?1 娆″皾璇?
+PASS  Agent 鎶ュ嚭浜嗗伐鍏疯皟鐢ㄦ楠? 鈥斺€?6 姝ワ細tool,tool,tool,tool,tool,tool
+PASS  姝ラ閲屽寘鍚湡瀹炵殑宸ュ叿璋冪敤涓庤繑鍥? 鈥斺€?tool,tool,tool,tool,tool,tool
+PASS  缁欏嚭浜嗗洖绛? 鈥斺€?3903 瀛楋綔寮€澶达細缁撹鍥捐氨灏辩华锛坓raphId `ai-literature-ed16399925fac2a599
+PASS  寮曠敤鏍告煡缁撹宸插憟鐜? 鈥斺€?passes=true锝滃紩鐢ㄦ牳鏌ラ€氳繃鍥炵瓟閲屽疄闄呭紩鐢?48 / 鍙敤 53 鏉?路 鎸夊彞鍙函鐜?50/72 = 69% 路 璇佹嵁绛夌骇锛歵itleconf/IEEEwisa/LinGHW25conf/aaai
+PASS  Agent 鏈姤閿?
+PASS  棰樺悕绾ц绀轰笌缁撹涓€鑷? 鈥斺€?passes=true warning=true
+PASS  寮曠敤缁撹涓庡紩鐢?id 鑷唇  鈥斺€?passes=true cited=48
+PASS  杩炵画杩介棶涓嶆崲浼氳瘽  鈥斺€?浼氳瘽鏁?1
+PASS  鍚屼細璇濅袱杞棶绛斿悓灞? 鈥斺€?user=2 assistant=2
+PASS  杩介棶鍚庢湁鍥炵瓟  鈥斺€?974 瀛?
+PASS  璇佹嵁閾炬敀涓嬩簡璁烘枃鍗? 鈥斺€?40 寮?
+PASS  寮曠敤 id 鍏ㄩ儴鏈夋晥  鈥斺€?寮曠敤 49 鏉?
+PASS  璇佹嵁閾惧崱鐗囧彲鎵撳紑鎶藉眽
+PASS  娴忚鍣ㄦ帶鍒跺彴鏃犻敊璇?
+
+==== 47 PASS / 0 FAIL ====

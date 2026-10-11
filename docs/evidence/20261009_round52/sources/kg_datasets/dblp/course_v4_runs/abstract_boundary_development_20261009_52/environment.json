@@ -1,0 +1,6 @@
+{
+  "torch": "2.8.0+cu126",
+  "transformers": "4.57.1",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "cuda": "12.6"
+}

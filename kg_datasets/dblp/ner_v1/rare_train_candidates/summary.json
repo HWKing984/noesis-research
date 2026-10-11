@@ -1,0 +1,25 @@
+{
+  "valid": true,
+  "documents": 100,
+  "review_status": {
+    "draft": 100
+  },
+  "entity_counts": {
+    "METHOD": 69,
+    "DATASET": 5,
+    "TASK": 27,
+    "DOMAIN": 96
+  },
+  "zero_entity_documents": 0,
+  "errors": [],
+  "candidate_pool": 331,
+  "seed": 42,
+  "documents_with_label": {
+    "METHOD": 68,
+    "DATASET": 5,
+    "TASK": 25,
+    "DOMAIN": 95
+  },
+  "purpose": "Separate training-only enrichment; excludes pilot duplicate groups. Human review required.",
+  "must_not_use_for": "test set; estimates of natural entity prevalence or actual NER performance"
+}

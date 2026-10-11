@@ -1,0 +1,60 @@
+{
+  "referenceDocuments": 2000,
+  "generationReceiptDocuments": 90,
+  "pendingGenerationDocuments": 1910,
+  "aiReviewedDocuments": 90,
+  "humanReviewedDocuments": 0,
+  "humanGoldAvailable": false,
+  "challengeDocuments": 1,
+  "nerEligibleDocuments": 76,
+  "relationEligibleDocuments": 66,
+  "nerEligibleSplits": {
+    "train": 52,
+    "dev": 24,
+    "test": 0
+  },
+  "relationEligibleSplits": {
+    "train": 44,
+    "dev": 22,
+    "test": 0
+  },
+  "entitySupport": {
+    "train": {
+      "METHOD": 64,
+      "TASK": 41,
+      "DATASET": 12
+    },
+    "dev": {
+      "METHOD": 30,
+      "TASK": 24,
+      "DATASET": 2
+    },
+    "test": {
+      "METHOD": 0,
+      "TASK": 0,
+      "DATASET": 0
+    }
+  },
+  "relationSupport": {
+    "train": {
+      "USED_FOR": 39,
+      "EVALUATED_ON": 3,
+      "NO_RELATION": 5
+    },
+    "dev": {
+      "USED_FOR": 22,
+      "EVALUATED_ON": 1,
+      "NO_RELATION": 0
+    },
+    "test": {
+      "USED_FOR": 0,
+      "EVALUATED_ON": 0,
+      "NO_RELATION": 0
+    }
+  },
+  "nerTrainingReady": false,
+  "relationTrainingReady": false,
+  "trainingStarted": false,
+  "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+  "notice": "Readiness requires nonzero per-class support, not a quality guarantee. Hashes detect drift, not authentic AI execution or semantic truth."
+}

@@ -1,0 +1,8 @@
+{
+  "acceptedForFinalEvidence": true,
+  "review": "Both actual browser PNGs visually inspected after capture. Training parameters, raw linear loss curve, epoch table, notices and full source footer are visible. Relation comparison, training/dev distinction, failed guards and endpoint inventory are visible without clipping.",
+  "images": ["02_training.png", "07_relation_development.png"],
+  "originalConsoleScreenshot": false,
+  "semanticModelReliabilityPassed": false,
+  "rawExperimentModified": false
+}

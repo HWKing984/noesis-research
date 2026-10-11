@@ -1,0 +1,42 @@
+{
+  "kind": "audit_current_source_snapshot_not_training_run",
+  "createdAtUTC": "2026-10-06T15:03:42.410835+00:00",
+  "sourceSha256": {
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/export_course_evidence.py": "01ac6cc4d728e04127d0bcc62941982d8892c92487cabe2e8dae9a8d7a9de0f5",
+    "scripts/process_dblp_ai.py": "1c75ac47e608a4eae75d792d30279a44a7fa9e26178cee6ce059a6749f865ec1",
+    "tests/test_course_relation_training.py": "b3d688982fdd0c86a9774b21fba6c778fee3787f92eba6fa59bd75aff571d868",
+    "tests/test_course_ner_training.py": "675efb551e6df47060ea83a24a759e043e5f74cd9f0e518556b1eae38521557d",
+    "tests/test_course_evidence.py": "bcc491a691ee62be3243deef836b660a46c851f86d720f2d13791df82290ccd1",
+    "tests/test_process_dblp_ai.py": "544777ebbe163673c337e969eda2050aa009135dfb32fc2ded54af6a84a51495",
+    "tests/check_course_relation_entity_model.py": "e7bfec0441aeef276e3d4f08e2c3ff8ee4b43103bed095481a0e97fca0c2581a",
+    "README.md": "a408ce1a63bf2c067b76a566196a8b3150c181ee9652e4337a4f11851525cebc",
+    "docs/course_v4_audit.md": "ad70c1d8b91e53d2b5894b1c821f9b529c88f24c72c044e08f74e22b9f72b85d",
+    "docs/course_v4_progress.md": "f5f7d00d0c98e4596707925447949151764c79b360bdb44955f43c2508618839",
+    "docs/course_v4_plan.md": "6de530c3b84e2c2d4e470ff95fca3557838ac5fd0e2e08d27ba443784686c32a",
+    "docs/course_v4_runbook.md": "8fa0645315a0e08f79d4f0e9dae3c9128bd3c81eac6fa5fa4185a2bf03918987",
+    "docs/course_v4_report_evidence.md": "9bafd01975def9b64e2d290067cfba7e4b743f2aca26beff2a75192ca6461e23",
+    "docs/course_v4_relation_entity.md": "a23d7efa69015b9d5eed79eab839867d5784c1e3773b4f27344a5a5cd1e3eb57",
+    "docs/course_v4_ner_test.md": "1f0a7e23362666884201613b7922ddf09a238e346630f16553cf816d5b308b28"
+  },
+  "filesSha256": {
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/export_course_evidence.py": "01ac6cc4d728e04127d0bcc62941982d8892c92487cabe2e8dae9a8d7a9de0f5",
+    "scripts/process_dblp_ai.py": "1c75ac47e608a4eae75d792d30279a44a7fa9e26178cee6ce059a6749f865ec1",
+    "tests/test_course_relation_training.py": "b3d688982fdd0c86a9774b21fba6c778fee3787f92eba6fa59bd75aff571d868",
+    "tests/test_course_ner_training.py": "675efb551e6df47060ea83a24a759e043e5f74cd9f0e518556b1eae38521557d",
+    "tests/test_course_evidence.py": "bcc491a691ee62be3243deef836b660a46c851f86d720f2d13791df82290ccd1",
+    "tests/test_process_dblp_ai.py": "544777ebbe163673c337e969eda2050aa009135dfb32fc2ded54af6a84a51495",
+    "tests/check_course_relation_entity_model.py": "e7bfec0441aeef276e3d4f08e2c3ff8ee4b43103bed095481a0e97fca0c2581a",
+    "README.md": "a408ce1a63bf2c067b76a566196a8b3150c181ee9652e4337a4f11851525cebc",
+    "docs/course_v4_audit.md": "ad70c1d8b91e53d2b5894b1c821f9b529c88f24c72c044e08f74e22b9f72b85d",
+    "docs/course_v4_progress.md": "f5f7d00d0c98e4596707925447949151764c79b360bdb44955f43c2508618839",
+    "docs/course_v4_plan.md": "6de530c3b84e2c2d4e470ff95fca3557838ac5fd0e2e08d27ba443784686c32a",
+    "docs/course_v4_runbook.md": "8fa0645315a0e08f79d4f0e9dae3c9128bd3c81eac6fa5fa4185a2bf03918987",
+    "docs/course_v4_report_evidence.md": "9bafd01975def9b64e2d290067cfba7e4b743f2aca26beff2a75192ca6461e23",
+    "docs/course_v4_relation_entity.md": "a23d7efa69015b9d5eed79eab839867d5784c1e3773b4f27344a5a5cd1e3eb57",
+    "docs/course_v4_ner_test.md": "1f0a7e23362666884201613b7922ddf09a238e346630f16553cf816d5b308b28"
+  }
+}

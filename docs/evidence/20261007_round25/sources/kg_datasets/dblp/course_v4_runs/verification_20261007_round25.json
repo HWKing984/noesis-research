@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-07T03:42:09.626901+00:00",
+  "productionSummary": {
+    "documentsRequested": 20000,
+    "NERStatuses": {
+      "inferred": 19855,
+      "cached": 144,
+      "rejected": 1
+    },
+    "entitySupport": {
+      "METHOD": 26694,
+      "TASK": 17904,
+      "DATASET": 306
+    },
+    "invalidBIOTransitions": 13145,
+    "relationCandidatePairs": 22574,
+    "relationPredictions": 22574,
+    "relationSources": {
+      "cached": 148,
+      "inferred": 22426
+    },
+    "relationSupport": {
+      "USED_FOR": 21318,
+      "NO_RELATION": 1077,
+      "EVALUATED_ON": 179
+    },
+    "rejectedPairs": 0,
+    "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+    "elapsedSeconds": 97.85999999999876,
+    "documentsPerSecond": 204.37359493153744,
+    "qualityPromotionPassed": false,
+    "notice": "Counts are model candidates, not precision/recall or verified facts; no new evaluation, tuning or training. Token-limit rejects remain explicit."
+  },
+  "graphCounts": {
+    "nodes": {
+      "Publication": 20000,
+      "Person": 72694,
+      "Venue": 3205,
+      "Concept": 29885,
+      "Mention": 44904,
+      "Assertion": 21497
+    },
+    "edges": {
+      "AUTHORED": 88762,
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 44904,
+      "DENOTES": 44904,
+      "SUPPORTED_BY": 21497,
+      "HAS_HEAD": 21497,
+      "HAS_TAIL": 21497
+    }
+  },
+  "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+  "productionManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+  "graphManifestSha256": "246e695ec3aa0ae32af5287955f9acf1a6e8502ca1c56078b8538a34eb30126b",
+  "allInputsTitleOnly": true,
+  "allCanonicalIDsCovered": true,
+  "allPairsCovered": true,
+  "chunkArtifactsMatchFinal": true,
+  "pilotLabelsMatchFullRun": true,
+  "cachedNEREntitiesByteLogicalIdentical": 144,
+  "cachedREPredictionsLogicalIdentical": 148,
+  "invalidBIOAffectedNewDocuments": 4014,
+  "invalidBIOCachedUnknownDocuments": 144,
+  "zeroEntitySuccessfulDocuments": 259,
+  "rejectedDocuments": [
+    {
+      "sampleId": "corpus-5a6f3dc062fd5ff7e83f",
+      "publicationId": "journals/idt/Tsihrintzis25a",
+      "text": "Two outstanding works to harness artificial intelligence in the energy sector 1. Machine Learning Applications for Intelligent Energy Management -Invited Chapters from Experts on the Energy Field. Editors: Haris Doukas; Vangelis Marinakis; Elissaios Sarmas: Springer 2024, pp. 226, ISBN 978-3-031-47908-3. Vol. 35 in Springer Book Series entitled. Learning and Analytics in Intelligent Systems . (https://www.springer.com/series/16172)2. Artificial Intelligence for Energy Systems - Driving Intelligent, Flexible and Optimal Energy Management. Authors: Elissaios Sarmas; Vangelis Marinakis; Haris Doukas. Springer 2025, pp. 266, ISBN 978-3-031-85208-4. Vol. 46 in Springer Book Series entitled. Learning and Analytics in Intelligent Systems . (https://www.springer.com/series/16172).",
+      "textSha256": "091470986e601c26ed5ca0980c135a82caceeea8e66280bb7cb071cdd5fcbd04",
+      "split": "train",
+      "groupId": "paper-group-f9296f0a1ee30b256642",
+      "status": "rejected",
+      "predictedEntities": [],
+      "reason": "Title exceeds frozen token limit; no truncation",
+      "tokens": 199,
+      "invalidTransitions": null
+    }
+  ],
+  "frozenModels": {
+    "ner": {
+      "selectionSha256": "cf30fe489da3eb4aa22c309687e86fc711b9db564586d371e4792be8902ba96d",
+      "weightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996"
+    },
+    "re": {
+      "selectionSha256": "e4010d162f525221de7da30cf4c412892564a1da894d1271a72f1ddfa1893978",
+      "weightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+    }
+  },
+  "tests": {
+    "tests": 350,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "labelSnapshotUnchanged": true,
+  "oldGraphPreserved": true,
+  "trainingExecuted": false,
+  "newEvaluationExecuted": false,
+  "liveDatabaseImported": false,
+  "qualityPromotionPassed": false,
+  "qualitativeCaseReviewSha256": "d0e43ef698b57c88941d452dd26d290369122bc514dc999e9ee5f4c6d0ce64f8",
+  "humanGold": false,
+  "independentReviewer": false
+}

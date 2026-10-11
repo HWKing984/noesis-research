@@ -1,0 +1,8 @@
+{
+  "filesSha256": {
+    "dev_candidates.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "summary.json": "2f0b65d7d42b00fffdf0d116db0d25dccef121dad379e84025333a477af47a7e",
+    "test_candidates.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "train_candidates.jsonl": "b3991fe4a402c2d98a647e94b32940e0eb36817e69f2f5f55ac162bf887cd14b"
+  }
+}

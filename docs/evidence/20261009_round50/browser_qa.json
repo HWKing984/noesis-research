@@ -1,0 +1,29 @@
+{
+  "kind": "summary_of_actual_browser_tool_observations_not_simulated_browser",
+  "url": "http://127.0.0.1:8765/",
+  "verdict": "SHIP_WITH_LIMITATIONS_FOR_LOCAL_CANDIDATE_LITERATURE_DEMO",
+  "modelQualityPromoted": false,
+  "smoke": {
+    "consoleErrorsOrWarningsObserved": 0,
+    "observedNetworkRequests": 15,
+    "observedStatuses": [200, 204],
+    "observedFailedRequests": 0,
+    "scope": {"bibliographyTitles": 20000, "modelTitles": 19999, "rejectedNERTitles": 1, "candidateAssertions": 21497}
+  },
+  "interactions": {
+    "nativeKeyboardSearch": {"q": "Denoising Monte Carlo Renders", "method": "扩散模型", "returnedTitle": "Denoising Monte Carlo Renders with Diffusion Models.", "resultCount": 1, "source": "真实Neo4j"},
+    "tabFromMethodToTask": {"focusedName": "task", "visibleFocus": true},
+    "invalidYear": {"input": 2010, "valid": false, "rangeUnderflow": true, "validationMessage": "值必须大于或等于 2015。"},
+    "coauthorsButton": {"nodes": 4, "relationships": 3, "paths": 2, "source": "真实Neo4j"},
+    "methodsButton": {"nodes": 63, "relationships": 62, "paths": 30, "hasMorePaths": true, "source": "真实Neo4j", "wholeGraph": false},
+    "nativeAddSelectionButton": {"items": 1, "jsonEnabled": true, "textEnabled": true},
+    "actualNativeDownloads": "capture_receipt.json and downloads/ contain the separate installed-Edge workflow outputs",
+    "graphNodeEnterActivation": {"visible": true, "kind": "Publication", "publicationId": "conf/3dim/VavilalaVF25", "propertyTextLength": 938, "focusStroke": "rgb(173, 97, 0)"}
+  },
+  "visualRegression": {"baselineRound": 31, "currentRound": 50, "viewportWidths": [1440, 768, 375], "viewportHeight": 1100, "graphScreenshotsByteIdentical": true, "observedDocumentOverflow": false},
+  "performanceDiagnostic": {"bufferedLCPMilliseconds": 168, "bufferedLayoutShiftSum": 0.03127141106966804, "INP": null, "fieldCoreWebVitalsEvaluated": false, "note": "Single local page buffered observations; layout-shift sum is not a full session-window CLS implementation; INP not measured."},
+  "accessibilityChecks": {"labelledInputs": 8, "allInputsLabelled": true, "mainLandmarks": 1, "graphNodesNamedAndFocusable": true, "keyboardSearchAndNodeActivationChecked": true, "axeCoreAvailableInPage": false, "fullWCAGAuditPerformed": false, "screenReaderTestPerformed": false},
+  "runtime": {"neo4jProcess": 43884, "observedJavaExecutable": "D:/DevData/neo4j-desktop-data/Application/Cache/runtime/zulu21.50.19-ca-jre21.0.11-win_x64/bin/java.exe", "startupPerformedByUserInDesktop": true, "globalJAVA_HOMEChangedByAgent": false, "licenseTermsAcceptedByAgent": false},
+  "limitations": ["Only local read-only candidate retrieval, not verified scientific facts or a reference-selection authority.", "External DOI/DBLP links were checked for rendered targets, not fetched or audited for availability/full-text support.", "Screenshot equality covers the three matched graph views, not every page state.", "No auth journey applies to this loopback-only demo; no mutation of Neo4j or model evaluation occurred."],
+  "diagnosticFailuresRetained": ["Initial application checker compared the normalized alias token with unlowercased AAAI会议; original source and failed JSON retained before correction.", "Browser-tool direct file save was denied by its workspace-root access check; observations were inspected inline. This file is a summary, not the denied raw DOM export.", "First graph keyboard probe inspected only the first 500 characters of a 938-character property JSON and missed publicationId. Full JSON parsing confirmed successful activation; UI source unchanged."]
+}

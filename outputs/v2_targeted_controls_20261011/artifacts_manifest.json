@@ -1,0 +1,33 @@
+{
+  "filesSha256": {
+    "argmax_NER_original_RE_predictions.jsonl": "2e4aae4814b87a754f9eba721c0b3d9bb352a09687eebec5a8d1a61f185b742d",
+    "argmax_NER_weighted_RE_predictions.jsonl": "20683286bcc763193c97b57bad972f5673ffe0b279a331294db2ce7a710ecf63",
+    "dev_ner_argmax_predictions.jsonl": "8958fd03e288bd98b1d2a4f7cb9d98b3c1345f1361e87ccfd90abd01f2528921",
+    "dev_ner_legal_predictions.jsonl": "ba22ea3992853b27d622c3a2f63c01867df6ea93d3fc673fba4f69b2feb4246e",
+    "experiment_plan.json": "eb94f91831ae37c579a52338817bb616940f59d65fa0472afc8359be42db5065",
+    "legal_NER_original_RE_predictions.jsonl": "5c0027f5fb98c0da53f6a4f15535864d53b08a1ebd954f152e612a368fb0d314",
+    "legal_NER_weighted_RE_predictions.jsonl": "811692ac4a742c96ce26193eb730f89e4e595667182a5ffa20b13c5f6595421f",
+    "ner_decoder_result.json": "b6969bb4c871cf59cfbb08d99ea8b83ab1f86c81ac37cae15aa3d76129ad7495",
+    "ner_logits.jsonl": "07ab2f026316ca6bf05146e4fac8895256f463a4523bda14edb88e0320f72b65",
+    "pipeline_comparison.json": "30419e42993fd8d8bead3cfd7b2b74925c7fd174c9274eea3f509d2fb27c0fc0",
+    "results.json": "5acca6cc33f50823f88baec6ed42b4b917e8a926c0616394d9cc53e0317f46db",
+    "sampling_plan.json": "989445e12edd46705bb6c8d3af65b15e490beb67fb1b209e720b113a63bafc18",
+    "status.json": "532c38da4b19de0c78a0368d3b9fcd2da26514dd7faf471f9881a77df48d77f1",
+    "train_ner_argmax_predictions.jsonl": "f132f8df2d9c304610a863dc6207fe99564993908e72620dd12186c933c0068a",
+    "train_ner_error_review.jsonl": "aa88bc0309409d951a84a4cf30e8ea85e7c52b9fb39090864b12d07497c69b19",
+    "train_ner_legal_predictions.jsonl": "136de2a35e661bb078f6d7b89e22145862b2a1e1491547d6f2f4aa18ba5cd621",
+    "weighted_re/best_model/config.json": "520c68ec0d40c593a32ef96ac928986200c8ff9e2a2fd5730ad7187271557ccc",
+    "weighted_re/best_model/model.safetensors": "222a1c29282912d8e284413f8622ad0f4906c76308fabbf9b30e5524461429df",
+    "weighted_re/best_model/special_tokens_map.json": "0cb1aed77aa77f9f8435976f9d55c51b049dc006a3f18ffea76c8b8ff9fcef65",
+    "weighted_re/best_model/tokenizer.json": "88bd44354db2e2816f08b40fc45666310c986881649b90046e546f514d711d6a",
+    "weighted_re/best_model/tokenizer_config.json": "cf888e0eeb08754257b99e4c57b881db25ff7fd7584222235f1da469a9194e99",
+    "weighted_re/best_model/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "weighted_re/dev_predictions.jsonl": "aab17bc62592e62a297b6ef4f6daef39b38ce5100dec009c81ea9c3f24d42f32",
+    "weighted_re/epochs.json": "8ac7b21143d2611bec71037e7814b32579392262a01c791559dbb61e124c651c",
+    "weighted_re/initial_dev.json": "adb35b786f0597c141a9326eaa78b672965c6795555176095fc1d5846e753bbf",
+    "weighted_re/result.json": "12828871b3c47a05e6c87410d677537aa6eb72de8bff53dc9b1673840f9c7d76",
+    "weighted_re/steps.jsonl": "f9d94f634d9ccb59be0f19d6316cdcac118c1a1ffffa85d960db672988703b22",
+    "weighted_reference_all_pairs_metrics.json": "d2c1f0f8689b74abdf6540a9fd23c4af8153ef78859f01d9882d72dc375b2571",
+    "weighted_reference_all_pairs_predictions.jsonl": "88a167b9e0878277cbf0ef2fae1d6cb22d93bae4bdd2dbb0a81d51845edcce08"
+  }
+}

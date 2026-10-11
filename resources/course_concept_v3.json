@@ -1,0 +1,26 @@
+{
+  "version": "typed_controlled_aliases_v3",
+  "baseVocabulary": "resources/course_concept_v2.json",
+  "candidateEvidence": "kg_datasets/dblp/course_v4_runs/concept_alias_candidates_20261010_57",
+  "reviewSource": "Three supported typed aliases from saved-title AI review; GRU/CRF remain proposals. Exact corpus-scoped equivalence, not independent gold or DBLP facts.",
+  "sourceBindings": {
+    "resources/course_concept_v2.json": "d4e0eff6056a47ec881b768d1ce64b91efa8ee32589d15f22205155043541fce",
+    "scripts/normalize_course_concepts.py": "9f191645062501cf4df9d4aea742718839a3a530d9f5fec6f54f59614d44836a",
+    "kg_datasets/dblp/course_v4_runs/concept_alias_candidates_20261010_57/manifest.json": "f401a4419ffe1c1747b076b341e3526a19ab81416405214041a15e016146fa0a",
+    "kg_datasets/dblp/course_v4_graph_quality_20261009_51/manifest.json": "6af9120403cf2f5e3f20f942f6c9f4a06c63105159ca3a193d7b63e5d5b5a2c5",
+    "kg_datasets/dblp/course_v4_identity_crosswalk_20261009_51/manifest.json": "a7eec07d788abcbcfb9871c46b1a82b41a6ca5dc198892dafe1befdf53659a53",
+    "scripts/normalize_course_concepts_v3.py": "c040be9c273a8ed16aa0aeeb230890913f4d3c787b8493e3f48758c48dfd1f4c",
+    "tests/test_normalize_course_concepts_v3.py": "84f82abb44e8c4cf3928ebe9137fefcad4780c23c7024af2afac250e05b8b261"
+  },
+  "groups": [
+    {"type": "METHOD", "canonical": "low-rank adaptation", "aliases": ["LoRA"], "evidence": "saved_title_explicit_definition_candidate57_lora", "zh": "低秩适配"},
+    {"type": "METHOD", "canonical": "retrieval-augmented generation", "aliases": ["RAG"], "evidence": "saved_title_explicit_definition_candidate57_rag", "zh": "检索增强生成"},
+    {"type": "METHOD", "canonical": "random forest", "aliases": ["random forests"], "evidence": "saved_title_typed_singular_plural_candidate57_random_forest", "zh": "随机森林"}
+  ],
+  "noMergeExamples": [["LoRA", "QLoRA"], ["LoRA", "AdaLoRA"], ["LoRA", "DoRA"], ["RAG", "RankRAG"], ["RAG", "RAG-Token"], ["RAG", "RAG-Sequence"], ["random forest", "random forest classifier"], ["GRU", "gated recurrent units"], ["CRF", "conditional random field"]],
+  "expectedAdditionalMerges": 3,
+  "offlineOnly": true,
+  "runtimeSwitchAllowed": false,
+  "trainingAllowed": false,
+  "notice": "Extension vocabulary requires the independent v3 entrypoint; the sealed v2 loader and existing app remain unchanged. Legacy concept_v2 graph-ID recipe is reused with the v3 file hash, which also binds this entrypoint and its tests."
+}

@@ -1,0 +1,59 @@
+{
+  "error": "Empty graph",
+  "WCAG": "not_fully_audited",
+  "INP": "not_measured",
+  "baselineComparison": "INCONCLUSIVE_no_baseline",
+  "status": "failed",
+  "capturedAtUTC": "2026-10-10T09:54:03.5589715Z",
+  "liveGraphId": "ai-literature-63686318d85cccb07afb",
+  "networkErrors": [],
+  "captures": [
+    {
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow\\search_1440.png",
+      "sha256": "2be670835139a7efcf651347f03470c13fe3a3389fa80119e231f9cf7550ce18",
+      "observed": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      }
+    },
+    {
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow\\search_768.png",
+      "sha256": "cb76dfbb0aecafd9506e0fd4c5ee061bfe9df00c504b9ec1c8373116aeccf872",
+      "observed": {
+        "width": 768,
+        "scrollWidth": 753,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      }
+    },
+    {
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow\\search_375.png",
+      "sha256": "beaa888bd7589eaa8b20f2590c1a38d6c0b85f18c244d6106aa799378d1ed0eb",
+      "observed": {
+        "width": 375,
+        "scrollWidth": 360,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      }
+    },
+    {
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_workflow\\04_detail.png",
+      "sha256": "aa85971b80b9e236e4681f0599bec8c59d8c0ac50022e393c7fa14df7de595d7"
+    }
+  ],
+  "exceptions": []
+}

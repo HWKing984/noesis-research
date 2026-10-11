@@ -1,0 +1,73 @@
+{
+  "version": "whole_abstract_expressed_relation_v2_review_20261011",
+  "labelSource": "AI source-read weak reference pending user acceptance",
+  "trainingExecuted": false,
+  "modelWeightsLoaded": false,
+  "newF1": null,
+  "testBodyRead": false,
+  "productionModified": false,
+  "trainingAuthorized": false,
+  "relationAdjudicationComplete": true,
+  "historicalFiveAmbiguousPairsStillMasked": true,
+  "splits": {
+    "train": {
+      "documents": 65,
+      "entities": 941,
+      "entityLabels": {
+        "TASK": 348,
+        "METHOD": 520,
+        "DATASET": 73
+      },
+      "pairLabels": {
+        "USED_FOR": 569,
+        "UNRESOLVED": 2693,
+        "EVALUATED_ON": 57,
+        "NO_RELATION": 48
+      },
+      "legalPairs": 3367,
+      "scoredPairs": 674,
+      "scoredPairCoverage": 0.20017820017820018,
+      "fullyScorableRelationDocuments": 10,
+      "sourcesByLabel": {
+        "USED_FOR": 53,
+        "EVALUATED_ON": 15,
+        "NO_RELATION": 16
+      },
+      "distinctEvidenceScopes": 207,
+      "relationReferenceComplete": false
+    },
+    "dev": {
+      "documents": 20,
+      "entities": 299,
+      "entityLabels": {
+        "METHOD": 173,
+        "TASK": 103,
+        "DATASET": 23
+      },
+      "pairLabels": {
+        "UNRESOLVED": 613,
+        "USED_FOR": 261,
+        "NO_RELATION": 48,
+        "EVALUATED_ON": 52
+      },
+      "legalPairs": 974,
+      "scoredPairs": 361,
+      "scoredPairCoverage": 0.37063655030800824,
+      "fullyScorableRelationDocuments": 1,
+      "sourcesByLabel": {
+        "USED_FOR": 20,
+        "EVALUATED_ON": 6,
+        "NO_RELATION": 14
+      },
+      "distinctEvidenceScopes": 76,
+      "relationReferenceComplete": false
+    }
+  },
+  "encoding": {
+    "documentsPassed": 85,
+    "scoredPairsPassed": 1035,
+    "maxNERtokens": 350,
+    "maxREtokens": 354,
+    "truncation": false
+  }
+}

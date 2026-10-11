@@ -1,0 +1,17 @@
+{
+  "documents": 24,
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "generation",
+  "modelCallExecutedByCompiler": false,
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\annotations\\course_v4\\batch067_pending_jobs.jsonl": "24df61fd1009bcfafab398d6211cf719061d283933e2aa51b46ad717d06399b4",
+    "D:\\a-open_source\\neo4j\\annotations\\course_v4\\batch067_generation_decisions.json": "e6f241dd1dee295d14f64affe102e907406ddb7a7f114b0021ee7aa4a809be6c"
+  },
+  "compilerCodeSha256": "c4cb5c68c564494006b0386d62b628ff769d8207920f9cd33aa0edd8eb8f8bce",
+  "notice": "Semantic decisions were authored by the declared AI; compilation only assigns literal offsets and validates.",
+  "filesSha256": {
+    "ai_decisions.json": "e6f241dd1dee295d14f64affe102e907406ddb7a7f114b0021ee7aa4a809be6c",
+    "responses.jsonl": "3b30a02910f5de1bd0d80957301d2337c1b6ae7c3a6d9290f3aa936dfd0e7b56"
+  }
+}

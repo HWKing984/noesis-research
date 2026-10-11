@@ -1,0 +1,15 @@
+{
+  "publications": 20000,
+  "signatures": 88762,
+  "relevantProfiles": 73179,
+  "identityCounts": {
+    "unresolved_profile": 9064,
+    "dblp_homepage_resolved": 79698
+  },
+  "legacyCaseCollapsedSignatures": 22,
+  "exactCaseSensitiveAliases": true,
+  "suffixNumbersPreserved": true,
+  "fuzzyMatching": false,
+  "unknownSignaturesNeverJoined": true,
+  "notice": "Identity is DBLP profile authority, not independently verified real-world identity; ORCIDs retained only as source evidence, not merge keys."
+}

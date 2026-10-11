@@ -1,0 +1,86 @@
+{
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\manifest.json": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_training_inputs_06\\manifest.json": "d598e2295f99d553d7cf8e97bea824020d9214950fba33ad62e9379aa6c6de84",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\models\\scibert_24f92d32\\manifest.json": "378279b83aa104efa17a202cb455bc1d3598068aad0490147906ccb73d7d7eeb",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_ner.py": "a01e5ab3cea5485627dacbcbe2b8558c4ea606f807c0f7e7d3722d809027334e",
+    "D:\\a-open_source\\neo4j\\resources\\course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "D:\\a-open_source\\neo4j\\schemas\\annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "D:\\a-open_source\\neo4j\\scripts\\course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "D:\\a-open_source\\neo4j\\scripts\\import_course_ai.py": "682ea6e9fea02a512e07495699d4b304305f8c6963e648a4a523aff416755e0f",
+    "D:\\a-open_source\\neo4j\\scripts\\prepare_course_weak.py": "17bbc32c8682e66d4ed7990a496f53414e4dab3805223ffa55dbb70169638953"
+  },
+  "archivedInputs": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\manifest.json": "inputs/00_manifest.json",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_training_inputs_06\\manifest.json": "inputs/01_manifest.json",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\models\\scibert_24f92d32\\manifest.json": "inputs/02_manifest.json",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_ner.py": "inputs/03_train_course_ner.py",
+    "D:\\a-open_source\\neo4j\\resources\\course_v4_config.json": "inputs/04_course_v4_config.json",
+    "D:\\a-open_source\\neo4j\\schemas\\annotation_course_v4.schema.json": "inputs/05_annotation_course_v4.schema.json",
+    "D:\\a-open_source\\neo4j\\scripts\\course_weak.py": "inputs/06_course_weak.py",
+    "D:\\a-open_source\\neo4j\\scripts\\import_course_ai.py": "inputs/07_import_course_ai.py",
+    "D:\\a-open_source\\neo4j\\scripts\\prepare_course_weak.py": "inputs/08_prepare_course_weak.py"
+  },
+  "modelProvenance": {
+    "modelId": "allenai/scibert_scivocab_uncased",
+    "revision": "24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1",
+    "upstreamURL": "https://huggingface.co/allenai/scibert_scivocab_uncased/tree/24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1",
+    "downloadedAt": "2026-10-06",
+    "weightUpstreamSha256": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a",
+    "weightUpstreamBytes": 442221694,
+    "weightsFormat": "pytorch_state_dict",
+    "trustRemoteCode": false,
+    "filesSha256": {
+      "config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0",
+      "vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+      "pytorch_model.bin": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a",
+      "README.md": "dbf7cf7e4365de6032a9677a4e305113c46f4597ea7f2f25b9ca4e4e6dafcfe5"
+    }
+  },
+  "packages": {
+    "torch": "2.8.0+cu126",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "huggingface-hub": "0.36.0",
+    "safetensors": "0.6.2",
+    "numpy": "2.2.6",
+    "jsonschema": "4.26.0"
+  },
+  "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "config": {
+    "seed": 20261006,
+    "samples": 24,
+    "steps": 120,
+    "batch_size": 8,
+    "learning_rate": 5e-05,
+    "max_length": 128
+  },
+  "decoderPolicy": "drop_orphan_I_no_B_repair",
+  "reproducibility": "Fixed seeds and deterministic eager FP32; hardware/library changes may still alter results.",
+  "resumeSupported": false,
+  "filesSha256": {
+    "dictionary_dev_metrics.json": "12392bcbfdb34d4d54dd18a76700d859e0b132750173d680b6e3b8ac97518c00",
+    "dictionary_dev_predictions.jsonl": "0a72b9e7d524b261691d189656848c1b28cec708fb74f190b663f04e8a98f5d6",
+    "inputs/00_manifest.json": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+    "inputs/01_manifest.json": "d598e2295f99d553d7cf8e97bea824020d9214950fba33ad62e9379aa6c6de84",
+    "inputs/02_manifest.json": "378279b83aa104efa17a202cb455bc1d3598068aad0490147906ccb73d7d7eeb",
+    "inputs/03_train_course_ner.py": "a01e5ab3cea5485627dacbcbe2b8558c4ea606f807c0f7e7d3722d809027334e",
+    "inputs/04_course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "inputs/05_annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "inputs/06_course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "inputs/07_import_course_ai.py": "682ea6e9fea02a512e07495699d4b304305f8c6963e648a4a523aff416755e0f",
+    "inputs/08_prepare_course_weak.py": "17bbc32c8682e66d4ed7990a496f53414e4dab3805223ffa55dbb70169638953",
+    "model/config.json": "f0896e00dad2ab14b09291c8806c55eccc1458406fe8af01064de764ec068d3d",
+    "model/model.safetensors": "853458ecc122bf2256efd71406153ad0e056e7043e9544a85c00cc45013e8196",
+    "model/special_tokens_map.json": "3c3507f36dff57bce437223db3b3081d1e2b52ec3e56ee55438193ecb2c94dd6",
+    "model/tokenizer.json": "fcd3fffca5d8fcc0d5863406f5f491293c1e4658ed503f424a30324b70533c0d",
+    "model/tokenizer_config.json": "a21c86d0b83d0355ae5ea46afc3c1419d856a3651d01037089f7c5d45ec0ca90",
+    "model/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "preflight.json": "9008d96c88c4ee647ec4f67c37ea19a055e6db42bcc2b5773ebfa43229ef2cf2",
+    "smoke_predictions.jsonl": "19748b4e08d164848da8ae567fe3e4d4b2189869e98cc09cb9d6ccc4e175a2d3",
+    "smoke_result.json": "5ee3b7cc36b07c788d53dc4409f90ca19fae1f33e911dd0d8ef833258c03914d",
+    "smoke_train_inputs.jsonl": "e99bbe4c76f53f812aa377be456976dc752dc49865fc28ffc724f6255230e0d3",
+    "status.json": "e1bd1021565350961b3c8a58d8e3b097e0067baf0f8c4fb7bd55a3bb71665e04",
+    "steps.jsonl": "94cc74ba6303318246449bf202ba5697dea8bd8d742f8b5de8e0a95f5d66be87"
+  }
+}

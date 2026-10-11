@@ -1,0 +1,16 @@
+{
+  "status": "passed_for_selected_report_images",
+  "recordedAtUTC": "2026-10-10T01:43:13Z",
+  "reviewer": "Codex_AI_direct_view_image_inspection_not_independent_human_review",
+  "captureRecords": ["captures.json", "captures_full_data.json"],
+  "selectedReportImages": ["01_data_full.png", "02_training.png", "03_predictions.png", "04_traceability.png"],
+  "selectedImagesActuallyViewed": true,
+  "tablesLimitationsAndSourceFootersVisible": true,
+  "imageAndSourcePageHashesChecked": true,
+  "notSelected": {"01_data.png": "1100px capture clipped source footer; preserved, replaced for report by1600px full capture"},
+  "initialPowerShell5FailedCapturePreserved": true,
+  "generatedFromRealArtifacts": true,
+  "originalConsoleScreenshot": false,
+  "liveNeo4jScreenshot": false,
+  "limitations": "Visual review concerns rendering only, not model semantic correctness, independent gold labels or live service acceptance. Exact zero losses remain in source logs; no fabricated logarithmic curve."
+}

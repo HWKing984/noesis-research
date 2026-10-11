@@ -1,0 +1,482 @@
+{
+  "NER": {
+    "train": {
+      "metrics": {
+        "argmax": {
+          "micro": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 930,
+            "predicted": 947,
+            "reference": 941,
+            "precision": 0.9820485744456178,
+            "recall": 0.9883103081827843,
+            "f1": 0.9851694915254238
+          },
+          "perClass": {
+            "METHOD": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 513,
+              "predicted": 522,
+              "reference": 520,
+              "precision": 0.9827586206896551,
+              "recall": 0.9865384615384616,
+              "f1": 0.9846449136276392
+            },
+            "TASK": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 344,
+              "predicted": 352,
+              "reference": 348,
+              "precision": 0.9772727272727273,
+              "recall": 0.9885057471264368,
+              "f1": 0.9828571428571429
+            },
+            "DATASET": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 73,
+              "predicted": 73,
+              "reference": 73,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "legal": {
+          "micro": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 932,
+            "predicted": 949,
+            "reference": 941,
+            "precision": 0.982086406743941,
+            "recall": 0.9904357066950054,
+            "f1": 0.9862433862433863
+          },
+          "perClass": {
+            "METHOD": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 514,
+              "predicted": 524,
+              "reference": 520,
+              "precision": 0.9809160305343512,
+              "recall": 0.9884615384615385,
+              "f1": 0.9846743295019157
+            },
+            "TASK": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 345,
+              "predicted": 352,
+              "reference": 348,
+              "precision": 0.9801136363636364,
+              "recall": 0.9913793103448276,
+              "f1": 0.9857142857142858
+            },
+            "DATASET": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 73,
+              "predicted": 73,
+              "reference": 73,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        }
+      },
+      "invalidTransitions": {
+        "argmax": 9,
+        "legal": 0
+      },
+      "evaluationScope": "in_sample_training_label_diagnostic",
+      "referenceEncodingRoundtripPassed": 65
+    },
+    "dev": {
+      "metrics": {
+        "argmax": {
+          "micro": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 198,
+            "predicted": 339,
+            "reference": 299,
+            "precision": 0.584070796460177,
+            "recall": 0.6622073578595318,
+            "f1": 0.6206896551724138
+          },
+          "perClass": {
+            "METHOD": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 134,
+              "predicted": 190,
+              "reference": 173,
+              "precision": 0.7052631578947368,
+              "recall": 0.7745664739884393,
+              "f1": 0.7382920110192838
+            },
+            "TASK": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 50,
+              "predicted": 127,
+              "reference": 103,
+              "precision": 0.3937007874015748,
+              "recall": 0.4854368932038835,
+              "f1": 0.43478260869565216
+            },
+            "DATASET": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 14,
+              "predicted": 22,
+              "reference": 23,
+              "precision": 0.6363636363636364,
+              "recall": 0.6086956521739131,
+              "f1": 0.6222222222222222
+            }
+          }
+        },
+        "legal": {
+          "micro": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 210,
+            "predicted": 369,
+            "reference": 299,
+            "precision": 0.5691056910569106,
+            "recall": 0.7023411371237458,
+            "f1": 0.6287425149700598
+          },
+          "perClass": {
+            "METHOD": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 138,
+              "predicted": 196,
+              "reference": 173,
+              "precision": 0.7040816326530612,
+              "recall": 0.7976878612716763,
+              "f1": 0.7479674796747967
+            },
+            "TASK": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 56,
+              "predicted": 147,
+              "reference": 103,
+              "precision": 0.38095238095238093,
+              "recall": 0.5436893203883495,
+              "f1": 0.448
+            },
+            "DATASET": {
+              "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+              "truePositive": 16,
+              "predicted": 26,
+              "reference": 23,
+              "precision": 0.6153846153846154,
+              "recall": 0.6956521739130435,
+              "f1": 0.6530612244897959
+            }
+          }
+        }
+      },
+      "invalidTransitions": {
+        "argmax": 177,
+        "legal": 0
+      },
+      "evaluationScope": "exposed_dev_decoder_comparison",
+      "referenceEncodingRoundtripPassed": 20
+    }
+  },
+  "weightedRE": {
+    "bestEpoch": 5,
+    "steps": 378,
+    "bestDev": {
+      "loss": 0.6565359348882581,
+      "metrics": {
+        "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8614958448753463,
+        "positiveMicro": {
+          "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+          "truePositive": 309,
+          "predicted": 355,
+          "reference": 313,
+          "precision": 0.8704225352112676,
+          "recall": 0.987220447284345,
+          "f1": 0.9251497005988024
+        },
+        "positiveMacroF1": 0.9050986514824508,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 257,
+            "predicted": 288,
+            "reference": 261,
+            "precision": 0.8923611111111112,
+            "recall": 0.9846743295019157,
+            "f1": 0.936247723132969
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 52,
+            "predicted": 67,
+            "reference": 52,
+            "precision": 0.7761194029850746,
+            "recall": 1.0,
+            "f1": 0.8739495798319328
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 2,
+            "predicted": 6,
+            "reference": 48,
+            "precision": 0.3333333333333333,
+            "recall": 0.041666666666666664,
+            "f1": 0.07407407407407407
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            257,
+            0,
+            4
+          ],
+          [
+            0,
+            52,
+            0
+          ],
+          [
+            31,
+            15,
+            2
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "weights": {
+      "USED_FOR": 0.4268707482993197,
+      "EVALUATED_ON": 2.8850574712643677,
+      "NO_RELATION": 3.217948717948718
+    },
+    "reloadPredictionsIdentical": true,
+    "encoderChanged": true
+  },
+  "pipeline": {
+    "argmax_NER_original_RE": {
+      "scope": "adjudicated_reference_scope_only",
+      "referenceComplete": false,
+      "fullPipelineF1": null,
+      "conditionalPositiveMetrics": {
+        "TP": 132,
+        "FP": 927,
+        "FN": 181,
+        "precision": 0.12464589235127478,
+        "recall": 0.4217252396166134,
+        "f1": 0.1924198250728863
+      },
+      "perClassConditionalMetrics": {
+        "EVALUATED_ON": {
+          "TP": 32,
+          "FP": 88,
+          "FN": 20,
+          "precision": 0.26666666666666666,
+          "recall": 0.6153846153846154,
+          "f1": 0.37209302325581395
+        },
+        "USED_FOR": {
+          "TP": 100,
+          "FP": 839,
+          "FN": 161,
+          "precision": 0.10649627263045794,
+          "recall": 0.3831417624521073,
+          "f1": 0.16666666666666666
+        }
+      },
+      "positiveReferenceTriples": 313,
+      "referencePairs": 974,
+      "maskedReferencePairs": 613,
+      "referencePairCoverage": 0.37063655030800824,
+      "maskedPredictionCount": 180,
+      "allPositivePredictionCount": 1239,
+      "duplicatePredictionCount": 0,
+      "maskedReferencePairsByPossibleClass": {
+        "USED_FOR": 550,
+        "EVALUATED_ON": 63
+      },
+      "fullUniverseBounds": {
+        "precisionLower": 0.10653753026634383,
+        "precisionUpper": 0.25181598062953997,
+        "recallConservativeLower": 0.14254859611231102,
+        "recallUpper": 0.6328600405679513,
+        "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+      },
+      "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+      "candidatePairs": 1320,
+      "rejectedPairs": 81
+    },
+    "legal_NER_original_RE": {
+      "scope": "adjudicated_reference_scope_only",
+      "referenceComplete": false,
+      "fullPipelineF1": null,
+      "conditionalPositiveMetrics": {
+        "TP": 143,
+        "FP": 1089,
+        "FN": 170,
+        "precision": 0.11607142857142858,
+        "recall": 0.45686900958466453,
+        "f1": 0.18511326860841423
+      },
+      "perClassConditionalMetrics": {
+        "EVALUATED_ON": {
+          "TP": 38,
+          "FP": 80,
+          "FN": 14,
+          "precision": 0.3220338983050847,
+          "recall": 0.7307692307692307,
+          "f1": 0.4470588235294118
+        },
+        "USED_FOR": {
+          "TP": 105,
+          "FP": 1009,
+          "FN": 156,
+          "precision": 0.09425493716337523,
+          "recall": 0.40229885057471265,
+          "f1": 0.15272727272727274
+        }
+      },
+      "positiveReferenceTriples": 313,
+      "referencePairs": 974,
+      "maskedReferencePairs": 613,
+      "referencePairCoverage": 0.37063655030800824,
+      "maskedPredictionCount": 211,
+      "allPositivePredictionCount": 1443,
+      "duplicatePredictionCount": 0,
+      "maskedReferencePairsByPossibleClass": {
+        "USED_FOR": 550,
+        "EVALUATED_ON": 63
+      },
+      "fullUniverseBounds": {
+        "precisionLower": 0.0990990990990991,
+        "precisionUpper": 0.24532224532224534,
+        "recallConservativeLower": 0.15442764578833693,
+        "recallUpper": 0.6755725190839694,
+        "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+      },
+      "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+      "candidatePairs": 1539,
+      "rejectedPairs": 96
+    },
+    "argmax_NER_weighted_RE": {
+      "scope": "adjudicated_reference_scope_only",
+      "referenceComplete": false,
+      "fullPipelineF1": null,
+      "conditionalPositiveMetrics": {
+        "TP": 130,
+        "FP": 879,
+        "FN": 183,
+        "precision": 0.1288404360753221,
+        "recall": 0.41533546325878595,
+        "f1": 0.19667170953101362
+      },
+      "perClassConditionalMetrics": {
+        "EVALUATED_ON": {
+          "TP": 32,
+          "FP": 89,
+          "FN": 20,
+          "precision": 0.2644628099173554,
+          "recall": 0.6153846153846154,
+          "f1": 0.3699421965317919
+        },
+        "USED_FOR": {
+          "TP": 98,
+          "FP": 790,
+          "FN": 163,
+          "precision": 0.11036036036036036,
+          "recall": 0.37547892720306514,
+          "f1": 0.17058311575282856
+        }
+      },
+      "positiveReferenceTriples": 313,
+      "referencePairs": 974,
+      "maskedReferencePairs": 613,
+      "referencePairCoverage": 0.37063655030800824,
+      "maskedPredictionCount": 175,
+      "allPositivePredictionCount": 1184,
+      "duplicatePredictionCount": 0,
+      "maskedReferencePairsByPossibleClass": {
+        "USED_FOR": 550,
+        "EVALUATED_ON": 63
+      },
+      "fullUniverseBounds": {
+        "precisionLower": 0.1097972972972973,
+        "precisionUpper": 0.25760135135135137,
+        "recallConservativeLower": 0.14038876889848811,
+        "recallUpper": 0.625,
+        "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+      },
+      "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+      "candidatePairs": 1320,
+      "rejectedPairs": 136
+    },
+    "legal_NER_weighted_RE": {
+      "scope": "adjudicated_reference_scope_only",
+      "referenceComplete": false,
+      "fullPipelineF1": null,
+      "conditionalPositiveMetrics": {
+        "TP": 141,
+        "FP": 1037,
+        "FN": 172,
+        "precision": 0.11969439728353141,
+        "recall": 0.4504792332268371,
+        "f1": 0.1891348088531187
+      },
+      "perClassConditionalMetrics": {
+        "EVALUATED_ON": {
+          "TP": 38,
+          "FP": 81,
+          "FN": 14,
+          "precision": 0.31932773109243695,
+          "recall": 0.7307692307692307,
+          "f1": 0.4444444444444444
+        },
+        "USED_FOR": {
+          "TP": 103,
+          "FP": 956,
+          "FN": 158,
+          "precision": 0.09726156751652502,
+          "recall": 0.3946360153256705,
+          "f1": 0.15606060606060607
+        }
+      },
+      "positiveReferenceTriples": 313,
+      "referencePairs": 974,
+      "maskedReferencePairs": 613,
+      "referencePairCoverage": 0.37063655030800824,
+      "maskedPredictionCount": 203,
+      "allPositivePredictionCount": 1381,
+      "duplicatePredictionCount": 0,
+      "maskedReferencePairsByPossibleClass": {
+        "USED_FOR": 550,
+        "EVALUATED_ON": 63
+      },
+      "fullUniverseBounds": {
+        "precisionLower": 0.10209992758870384,
+        "precisionUpper": 0.2490948587979725,
+        "recallConservativeLower": 0.15226781857451405,
+        "recallUpper": 0.6666666666666666,
+        "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+      },
+      "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain.",
+      "candidatePairs": 1539,
+      "rejectedPairs": 158
+    }
+  },
+  "testContentRead": false,
+  "productionModified": false,
+  "labelsChanged": false
+}

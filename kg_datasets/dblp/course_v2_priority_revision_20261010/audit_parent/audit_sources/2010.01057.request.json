@@ -1,0 +1,10 @@
+{
+  "arxivId": "2010.01057",
+  "title": "LUKE: Deep Contextualized Entity Representations with Entity-aware Self-attention",
+  "url": "https://arxiv.org/abs/2010.01057",
+  "startedAtUTC": "2026-10-09T03:16:41.233136+00:00",
+  "status": "completed",
+  "tokens": 250,
+  "rawResponseFile": "page_006.html",
+  "rawResponseSha256": "143825623ec0d7381bb6c2f933c57815b630ce482ca7e455d657f6f4653d383e"
+}

@@ -1,0 +1,21 @@
+{
+  "version": "abstract_train_expansion_v1",
+  "parentContract": "resources/course_abstract_v1.json",
+  "parentContractSha256": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+  "sourceSelection": "kg_datasets/dblp/course_abstract_sources_20261008_32",
+  "sourceSelectionManifestSha256": "10f7554bf6ff1305f07cf18a9d9077467a539ea6fdc55c21fc3b6c7aa840cd7f",
+  "previousPages": "kg_datasets/dblp/course_abstract_pages_20261008_32",
+  "previousPagesManifestSha256": "a8f5a3fc6bba56511498119a856d9fc9a9168bbffc0ef6a2b6b60cc7a387423e",
+  "oldTraining": "kg_datasets/dblp/course_abstract_train_reviewed_20261008_33",
+  "oldTrainingManifestSha256": "84e6d06ad5165f4069b920cc7611e1e9ab4eecb5f04c9c741767628841ae8097",
+  "dev": "kg_datasets/dblp/course_abstract_dev_reviewed_20261008_35",
+  "devManifestSha256": "1a680382e959687823fa6300637149dd4d26af4d31f56de1b6a95fa2fe51bb9e",
+  "additionalRequests": 24,
+  "selection": "Next 24 train members of round32 pre-response uniform paper-group lock, excluding every previously requested page and exposed cached ID. No dev-error, model-score or keyword targeting; failed/mismatched/overlength sources are excluded and disclosed, never replaced.",
+  "crawlDelaySeconds": 15.1,
+  "annotationPolicy": "Fresh per-document AI decisions plus same-session self-review before new model predictions. Same METHOD/TASK/DATASET scope and flat BIO as parent; no automatic dictionaries, repaired source or fabricated negative relationships.",
+  "experiment": "Data-only NER experiment: same parent initialization, seed, six epochs, batch size, optimizer, decoder and dev checkpoint selection. Old train receipts and old dev cohort/entities remain immutable; no RE retraining and no final test access.",
+  "pipelineComparison": "Same five fully reviewed round36 dev abstracts, including zero-pair ITO; fixed old entity-marker RE. Compare title NER, round35 NER and expanded NER without adjusting gates or labels.",
+  "automaticPromotionAllowed": false,
+  "qualityPromotionPassed": false
+}

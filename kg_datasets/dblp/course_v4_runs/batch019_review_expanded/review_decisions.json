@@ -1,0 +1,662 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-fe559956fe62e40fcfb3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "vehicle trajectory prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "graph representation learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The trajectory prediction explicitly uses graph representation learning."
+        }
+      ],
+      "notes": "Spatio-temporal interaction modeling is description of the instrument; no named data collection.\nAI self-review: Vehicle trajectory prediction target and graph representation-learning instrument are explicit; interaction modeling describes internal representation rather than an additional named method."
+    },
+    {
+      "sampleId": "sample-7678afc16bb2010a1487",
+      "entityStatus": "unresolved",
+      "entityReason": "Graph and Recurrent Neural Network shares a network head; Graph could instead name a graph instrument, so the complete method inventory is uncertain.",
+      "entities": [
+        {
+          "text": "Vehicle Trajectory Prediction For Highway Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [
+        {
+          "text": "Graph and Recurrent Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "relationStatus": "unresolved",
+      "relationReason": "Shared-head method inventory is quarantined, not reconstructed into synthetic spans.",
+      "relations": [],
+      "notes": "Highway operational context retained; no invented Graph Neural Network substring.\nAI self-review: Shared network head cannot safely be expanded into Graph Neural Network; retain quarantine and complete highway prediction span."
+    },
+    {
+      "sampleId": "sample-50de0dbbb4e04f91ec09",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "BEVDetNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Real-time 3D Object Detection for Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "BEVDetNet is explicitly introduced as the autonomous-driving object detection method."
+        }
+      ],
+      "notes": "Bird's Eye View LiDAR Point Cloud is input representation, not a named dataset.\nAI self-review: Named detector, real-time 3D driving task explicit; LiDAR point clouds describe input modality rather than a named data collection."
+    },
+    {
+      "sampleId": "sample-1454eda8fda105f82bf8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Class Prototypical Loss",
+          "label": "METHOD"
+        },
+        {
+          "text": "Feature Separation",
+          "label": "TASK"
+        },
+        {
+          "text": "3D Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Direct feature separation is explicit; a training loss is not itself an inference-time detector.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The class prototypical loss is explicitly for enhanced feature separation."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Detection is downstream context; direct detector versus training support is not established."
+        }
+      ],
+      "notes": "Keep training objective distinct from detector implementation.\nAI self-review: Loss directly separates features; downstream detection role remains unresolved instead of treating a training objective as the detector."
+    },
+    {
+      "sampleId": "sample-1f9db9afc1e0591ab699",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformer based Multi-modal Memory-augmented Masked Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Air Crisis Event Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The composed Transformer network is explicitly for air crisis event detection."
+        }
+      ],
+      "notes": "One contiguous composite, no overlapping Transformer subentity.\nAI self-review: Keep the entire contiguous Transformer memory/masking network as one composite with its explicit air-crisis detection target."
+    },
+    {
+      "sampleId": "sample-265999c4e9551d08a9a6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Frustum FusionNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Amodal 3D Object Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Multi-Modal Feature Fusion",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The named FusionNet is presented for amodal 3D object detection."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The detection explicitly uses multimodal feature fusion."
+        }
+      ],
+      "notes": "Amodal target qualifier retained.\nAI self-review: Named FusionNet and multimodal fusion are both stated detection instruments; preserve Amodal qualifier."
+    },
+    {
+      "sampleId": "sample-993caf81c0d75b6f0ebb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Vehicle Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Alex Net",
+          "label": "METHOD"
+        },
+        {
+          "text": "Faster R-CNN",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Vehicle detection uses Alex Net in the comparison."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Vehicle detection uses Faster R-CNN in the comparison."
+        }
+      ],
+      "notes": "Original Alex Net spelling retained; generic Deep Learning Models describes the two models, not a third model.\nAI self-review: Two explicitly named models compared for vehicle detection; generic Deep Learning Models is not a third mention."
+    },
+    {
+      "sampleId": "sample-e3d19caca9eee11eeace",
+      "entityStatus": "unresolved",
+      "entityReason": "Ontology-based scene modeling versus modeling TASK and the scope of coordinated awareness/decision-making are unclear under a flat nonoverlap schema.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Incomplete method/task inventory cannot support complete pairs.",
+      "relations": [],
+      "notes": "Automated vehicles are application context, traffic regulations are not a named dataset.\nAI self-review: Ontology-modeling instrument/task boundary and coordination scopes remain ambiguous; not an empty negative training row."
+    },
+    {
+      "sampleId": "sample-2fcb1001a03e1d8fdb53",
+      "entityStatus": "unresolved",
+      "entityReason": "Feature analysis and selection shares the feature object, and the explicit controller is a software artifact versus model ambiguity; full task coverage is uncertain.",
+      "entities": [
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Deep learning may train the controller rather than perform the feature-selection step.",
+      "relations": [],
+      "notes": "No invented Feature selection span and no conversion of a controller artifact into a named method.\nAI self-review: Shared feature target and controller artifact ambiguity prevent complete flat spans; retain known deep-learning family only."
+    },
+    {
+      "sampleId": "sample-bdd02ef5083ce36c065d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Agent Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Traffic Management in Complex Communication Networks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Multi-agent deep RL approach is explicitly for traffic management in communication networks."
+        }
+      ],
+      "notes": "Communication traffic is not road traffic; retain target context.\nAI self-review: Communication-network traffic target is retained and differs from vehicle traffic despite adjacent batch titles."
+    },
+    {
+      "sampleId": "sample-73df74e38e7e4bbf2b7b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ML",
+          "label": "METHOD"
+        },
+        {
+          "text": "Detect DDoS Attack",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The explicit Machine Learning detection role is clear but the leading ML abbreviation's link across the subtitle is not fixed.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Leading ML for network standard could name a broader framework rather than the detector."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Detect DDoS Attack explicitly uses Machine Learning."
+        }
+      ],
+      "notes": "IEEE 802.15. 4e/TSCH is a networking standard, not a dataset; preserve the title's punctuation.\nAI self-review: DDoS detection explicitly uses ML family but leading abbreviation attachment remains uncertain; network standard not dataset."
+    },
+    {
+      "sampleId": "sample-2c6ce49b70f937a6a425",
+      "entityStatus": "unresolved",
+      "entityReason": "Healthcare Data Analytics remains a broad operation category; a specific detection/prediction task is not stated.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The analytics target is insufficiently specific for complete TASK pairing.",
+      "relations": [],
+      "notes": "Network Edge is execution location, Healthcare Data is unnamed input material.\nAI self-review: Healthcare analytics is insufficiently scoped, network edge infrastructure not dataset; unresolved stays excluded."
+    },
+    {
+      "sampleId": "sample-f8032039b897b40c62b2",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Video Inpainting Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Constrained Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The inpainting detection explicitly uses constrained CNNs."
+        }
+      ],
+      "notes": "Deep refers to the video inpainting target; Generalizable is a performance property.\nAI self-review: Full deep-video-inpainting detection object and constrained CNN instrument preserved; generalizability not asserted by label."
+    },
+    {
+      "sampleId": "sample-390298cc861dfd05f9c4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Variable Type Recovery",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep learning is explicitly investigated for variable type recovery."
+        }
+      ],
+      "notes": "Revisiting is rhetorical, not a named algorithm.\nAI self-review: Concrete variable-type recovery explicitly paired with deep learning, no invented named system."
+    },
+    {
+      "sampleId": "sample-3ff45644989b7a0438b9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Question Answering",
+          "label": "TASK"
+        },
+        {
+          "text": "Re-ranking Answer Candidates",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "ML is explicitly the reranking instrument; the full QA pipeline could include separate components.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Reranking improves a QA system but does not establish ML as the complete QA implementation."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Answer candidate reranking explicitly uses machine learning."
+        }
+      ],
+      "notes": "System is an artifact; preserve both concrete operations without equating component and end-to-end performance.\nAI self-review: Direct ML reranking versus larger QA system distinction maintained; no automatic end-to-end relation."
+    },
+    {
+      "sampleId": "sample-9e5df4f3f894ba1d6dbf",
+      "entityStatus": "unresolved",
+      "entityReason": "QCRI's systems could be named methods or software artifacts; IWSLT'16 could be evaluation event or data release and cannot be safely typed as DATASET from this title.",
+      "entities": [
+        {
+          "text": "Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No complete method/data inventory established.",
+      "relations": [],
+      "notes": "Do not use an event label as evidence of a named benchmark dataset.\nAI self-review: IWSLT'16 may be event and cannot be certified DATASET merely to increase scarce class support."
+    },
+    {
+      "sampleId": "sample-b6856b58227c89989dba",
+      "entityStatus": "unresolved",
+      "entityReason": "Ontology-based Model could be conceptual ontology versus computational method; physiotherapy is broad domain rather than a scoped extraction task.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The conceptual model's operational role is not stated.",
+      "relations": [],
+      "notes": "Unresolved is not an all-O negative example.\nAI self-review: Conceptual ontology versus method ambiguity remains unresolved; physiotherapy alone does not identify computational task."
+    },
+    {
+      "sampleId": "sample-06419185f7219ffb88d5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reducing the search space in ontology alignment",
+          "label": "TASK"
+        },
+        {
+          "text": "clustering",
+          "label": "METHOD"
+        },
+        {
+          "text": "topic identification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Ontology alignment search-space reduction explicitly uses clustering."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "NO_RELATION",
+          "reason": "Clustering and topic identification are parallel instruments; the title does not describe clustering as the topic-identification implementation."
+        }
+      ],
+      "notes": "Topic identification is itself an operation, not a named model. Negative is explicit parallel role, not absent evidence alone.\nAI self-review: Clustering and topic identification are parallel search-reduction tools; no title assertion that clustering implements the companion identification operation."
+    },
+    {
+      "sampleId": "sample-032a381d1e159f001d2b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Sponsored Search Real-time Bidding",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep RL is explicitly for sponsored search real-time bidding."
+        }
+      ],
+      "notes": "Real-time and sponsored search define the operational bidding target.\nAI self-review: Sponsored search/real-time bidding context retained with explicit deep RL instrument."
+    },
+    {
+      "sampleId": "sample-e7f1a4f3d15e2bcbb29a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Selective Cross-City Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Traffic Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Source City Region Re-Weighting",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Selective cross-city transfer learning is explicitly for traffic prediction."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Traffic prediction is implemented via source city region re-weighting."
+        }
+      ],
+      "notes": "Source City is not a named data collection.\nAI self-review: Two explicit prediction approaches retained; source city regions are unnamed data input, not benchmark names."
+    },
+    {
+      "sampleId": "sample-276676d94c3c6ba129e3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Task Relation-aware Continual User Representation Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Explicitly composed representation-learning strategy is one METHOD, no overlapping synthetic User Representation Learning task.\nAI self-review: Contiguous task-relation-aware continual representation-learning method not split into nested overlapping entities."
+    },
+    {
+      "sampleId": "sample-b0674d95789ed01a2307",
+      "entityStatus": "unresolved",
+      "entityReason": "Learning Joint Relational Co-evolution could name the proposed modeling method rather than generic learning; full method span remains uncertain.",
+      "entities": [
+        {
+          "text": "SMEs Supply Chain Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Unresolved proposed-method identity prevents complete candidate pairs.",
+      "relations": [],
+      "notes": "Spatial-temporal knowledge graph is unnamed input, not a DATASET; quarantine instead of claiming missing method is a complete negative inventory.\nAI self-review: Joint relational co-evolution learning may itself be the proposed method; treating it as definitely outside METHOD would claim complete coverage without enough evidence."
+    },
+    {
+      "sampleId": "sample-a4f3b1b32ec0f7479887",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "BoKA",
+          "label": "METHOD"
+        },
+        {
+          "text": "Bayesian Optimization based Knowledge Amalgamation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-unknown-domain Text Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "BoKA is introduced as the text classification method."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The explicit composed knowledge amalgamation approach is for multi-unknown-domain classification."
+        }
+      ],
+      "notes": "Name and contiguous expansion are separate literal mentions, not duplicate overlapping entities.\nAI self-review: BoKA name plus contiguous composed expansion are nonoverlapping literal mentions with same explicitly scoped multi-unknown-domain classification role."
+    },
+    {
+      "sampleId": "sample-b8b035d0167f886d602b",
+      "entityStatus": "unresolved",
+      "entityReason": "Learning Weight of Elman Neural Network overlaps the full network method mention; bare Learning Weight lacks the target, so complete nonoverlapping task inventory is uncertain.",
+      "entities": [
+        {
+          "text": "Elman Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Chicken Swarm Optimization Algorithm",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Method-to-method parameter optimization is outside this relation schema and the scoped task remains unresolved.",
+      "relations": [],
+      "notes": "Elman network is the optimization target, not an optimizer; no invented USED_FOR between two methods.\nAI self-review: Optimized network is not optimizer; full weight-learning target overlaps its method mention so do not invent truncated TASK or method-to-method relation."
+    },
+    {
+      "sampleId": "sample-b985d069bb6107240e36",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Contactless temperature measuring",
+          "label": "TASK"
+        },
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Contactless temperature measuring explicitly uses deep learning."
+        }
+      ],
+      "notes": "Embedded device is hardware, not an ML model or dataset.\nAI self-review: Contactless measurement task and deep-learning instrument explicit; embedded hardware not typed as model/dataset."
+    }
+  ]
+}

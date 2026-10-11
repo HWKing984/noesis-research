@@ -1,0 +1,15 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/course_abstract_boundary_sources_20261009_52_retry/manifest.json": "465475e835d9b51243436c90820f31bd8f9e735eead7811ef17617aa17779d55",
+    "annotations/course_v4/abstract_boundary_decisions_20261009_52.json": "363a7a43fda286270f935c79ed542143787d68e6af78548eb637d6e531f71dae",
+    "scripts/compile_abstract_annotations.py": "16c33870897bdcfb18cbca9219c6929f48bceb6e8a5ec32e983355e4ed8f7016",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5"
+  },
+  "filesSha256": {
+    "annotation_policy.json": "6cef47184831966dfc2c8e8c492a81192894c5a71ac89cca5781fcab1dc3f798",
+    "generation_receipts.jsonl": "d5f11a13ae70085d8a340820c58728e3108247f8bb29f1a94f3aa65f18bb5489",
+    "references.jsonl": "919c75b869a980a54c2961d38cc6de5807fb75e5a832589856167dc6f1db8f10",
+    "summary.json": "669749b49568f9e47618f15be0f37a413e4c3c9fbdad3219a5a61d1581a5f35b"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sourceDatasetManifestSha256": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+  "inputReceiptsSha256": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch001_review\\receipts.jsonl": "cc10d71d977f1a28b15ae6fe70627c56c120554b91599e6c71c1ebec83c88996",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch002_review\\receipts.jsonl": "565c592574575a69297706332338a80e5feabfe83b3e5f1073a159b2f4b1feb8",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch065_review\\receipts.jsonl": "141022f5d45dd47266b90306020ea5fd1af3d38b24a025d64e04b25a9c5973cd",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\dataset_priority001_review\\receipts.jsonl": "83b80553c0702bb34ff009ce5443e162b33ad9281504e3efc85269989c159213",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch003_review\\receipts.jsonl": "1c2ab10305d6370d4b1e26fe577f1e456ff6024006c92e84966fdf3c5ad60f25",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch004_review\\receipts.jsonl": "157029c45f29708bff1d232a34226ed504e1c2209d82767afea8337f1e249556",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch066_review\\receipts.jsonl": "9c6cf31a24267df42db222c544944e77ef174f27a2d6a66c05c1745b2c5850fd",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch067_review\\receipts.jsonl": "a2e79b7d61e8c0cc95f5369f7792955f9fb99cfae2c0aae36ad04274fc897ab3"
+  },
+  "filesSha256": {
+    "ner_inputs_dev.jsonl": "a37a7cebcc8b72757a4601a7fc2d044e4ef7e4a97da15296f3a54d53bc462bca",
+    "ner_inputs_test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ner_inputs_train.jsonl": "a3dfec0de698191e451d397cb72b6647b41d995d6803b7b613187aef6cd8577e",
+    "pending_generation.jsonl": "5e8601794b57bf23bda76f77f71d9c12bcdf1e00bb387958590a1ae4dd07e954",
+    "receipts.jsonl": "6b416d24c0aadbf8a940ff3cb00f2be9030cadef1f032c068f863c63b09c1acf",
+    "relation_inputs_dev.jsonl": "50334550a7dfce79f2ee8b9c7287af8780cfb965628ca1b18205894b05133876",
+    "relation_inputs_test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "relation_inputs_train.jsonl": "9e02e7e59a4f10d8cd38ed7274002cecf7ce474762817cd1900e72b8e1047aa8",
+    "summary.json": "02bfb5ee4d4b871ae507426d38a648ffd7dff75bd1fa22d11f2dada3f8ffeec9"
+  },
+  "schemaVersion": "course-v4-weak-1",
+  "importerCodeSha256": "682ea6e9fea02a512e07495699d4b304305f8c6963e648a4a523aff416755e0f"
+}

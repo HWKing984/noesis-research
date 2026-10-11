@@ -1,0 +1,41 @@
+{
+  "version": "whole_abstract_expressed_relation_v2_review_20261011",
+  "inputs": {
+    "D:\\Users\\Y7000P\\Downloads\\v2_train65_direct_semantic_fixed_20261011.zip": "d4cfd083ffba6947a46fdb497ac6aca3b1845e0ee3dd8b3926d9e09104e1557b",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_sampling_20261011_roster_locked_v2\\selected_members.json": "69fabcefd99ca086a625a45849dfeb23f1ffcf9fa36bee9ae583992a226da14d",
+    "D:\\a-open_source\\neo4j\\scripts\\build_v2_textscope_review.py": "df32554e66fbb5d8906510aeb13e5f44c1873285b097a08731511e38047ce90d",
+    "D:\\a-open_source\\neo4j\\scripts\\course_v2_textscope_metrics.py": "6c7e120878eb3b5a6229ccd133450f7cb89bdac24ba4d7762d2f92e67ecb8b32",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_train65_workset_20261011\\dev_intake\\dev20_ner_ai_draft.jsonl": "e71e051fdf96fbb0d1fe84755518d7c9df5fe634c7a53a3b0daa7881fb6b8a24",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_train65_workset_20261011\\dev_intake\\dev20_re_positive_ai_draft.jsonl": "1c597a6f611928553cd31fd80ba1621f1f1a2fbda6dd606ec6638ab34050d4ee",
+    "D:\\a-open_source\\neo4j\\annotations\\course_v2\\train65_textscope_review_20261011.json": "a239437dafa8d8f8c37415420a223c1fc05bb5a5838cdac5922ba893ccff9f2c",
+    "D:\\a-open_source\\neo4j\\annotations\\course_v2\\dev20_textscope_review_20261011.json": "e90e4d7e8832610da2f727899cbcafd9c99b9e13a099e7c8418e10537a2a7747"
+  },
+  "files": {
+    "train_ner.jsonl": "53a704108f28945727986afc3bfcb788f1f2d253d91cf31ce6ae415fdd04739d",
+    "train_re_scored.jsonl": "fa906ce8dd0509ded23696b6a89df7899bb94cd92a315aa10924cdf798d69da1",
+    "train_all_pairs.jsonl": "f8e32116d8557b37188cf5de7bb54018e7f8d74a3758aa3cff96706ade20b2fe",
+    "train_members.json": "a73964507e0bd1557ec529317bb015fb345a16bd5d8bf509fbe45fde47d7b063",
+    "dev_ner.jsonl": "765bdf08e8d788685768b030ed492805f6fda6a68bbe730ec84b16ec9bdd3e95",
+    "dev_re_scored.jsonl": "75c464034270b77f4af18fa252924e26381f21559094860f9ab235799ac10b4c",
+    "dev_all_pairs.jsonl": "42ab7f8f87f6831dad289c8d48e645a2e4422199bc6e6f52218581764cfbf7f3",
+    "dev_members.json": "acc027ea7f8436f42096941b1abb3799c7ac80352b3dd84169c9db6cdb35f24a",
+    "protocol.json": "101162cd89f0c7d1352d7993627c3e078adfaaa89768b4c3c48e78bb23578a84",
+    "entity_revision_ledger.jsonl": "4104f09d364b4dfa7c3b61100dca431ab0a4732dee06335809c152e98705370f",
+    "relation_revision_ledger.jsonl": "1024b0b2243ae80e5ede93b440a3c1038d06ad3ace482a2f468aed6354e46aa0",
+    "summary.json": "ade8c92013e0a6856a9431f83baf8850a92938c6d8c9878a631925e3245a2a3e",
+    "training_plan.json": "2f7d7e0d581fab27e5a723af7134c4451af005e69d18e027ded2c3c643bc8bad",
+    "relation_review.csv": "a2e0c95969c29e7fdaeb531d0536feb36c7d2a692b29d929f22dbcec24aaa61c",
+    "negative_review.csv": "1226ec9494e770f735889c3e790964451dc57c6380f58185b27b28db428a5b25",
+    "review85.html": "c8fabd65c4deccb708c5f3744ac7702118591f7eb327cc7c8c2d5cb8b7243f4b",
+    "build_v2_textscope_review.py": "df32554e66fbb5d8906510aeb13e5f44c1873285b097a08731511e38047ce90d",
+    "course_v2_textscope_metrics.py": "6c7e120878eb3b5a6229ccd133450f7cb89bdac24ba4d7762d2f92e67ecb8b32",
+    "train65_source_read_decisions.json": "a239437dafa8d8f8c37415420a223c1fc05bb5a5838cdac5922ba893ccff9f2c",
+    "dev20_source_read_decisions.json": "e90e4d7e8832610da2f727899cbcafd9c99b9e13a099e7c8418e10537a2a7747",
+    "README.md": "c4bece0810aff90ceea875ccdfde42a8355709c0ff4684044af6988676899efa"
+  },
+  "trainCohortSha256": "a73964507e0bd1557ec529317bb015fb345a16bd5d8bf509fbe45fde47d7b063",
+  "devCohortSha256": "acc027ea7f8436f42096941b1abb3799c7ac80352b3dd84169c9db6cdb35f24a",
+  "trainingAuthorized": false,
+  "testBodyRead": false,
+  "productionModified": false
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.242" timestamp="2026-10-10T10:02:14.370477+08:00" hostname="HWKing"><testcase classname="" name="tests.test_normalize_course_concepts_v3" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\a-open_source\neo4j\tests\test_normalize_course_concepts_v3.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_normalize_course_concepts_v3.py:8: in &lt;module&gt;
+    import normalize_course_concepts_v3 as migration
+E   ModuleNotFoundError: No module named 'normalize_course_concepts_v3'</error></testcase></testsuite></testsuites>

@@ -1,0 +1,37 @@
+{
+  "version": "v2_negative_screening_20261011",
+  "labelSource": "ai_source_review_same_session",
+  "independentHumanGold": false,
+  "scope": "Whole original abstract, same broad USED_FOR and source-attributed EVALUATED_ON contract. Do not infer a negative from absent predicates, low scores, component division or training-only dataset use.",
+  "reviews": [
+    {"arxivId": "2008.10400", "decision": "one_scope_review_candidate", "reason": "pooling is not used 明确否定其在本文CNN结构中的使用；可复核其是否足以排除本摘要中pooling在MNIST上的评测归属。不能推广为pooling不适合分类或MNIST。"},
+    {"arxivId": "2501.02474", "decision": "no_clear_negative", "reason": "数据不足、泛化受限和模块分工均未排除宽口径用途；DIOR/NWPU上的整体评测不能给组件造负例。"},
+    {"arxivId": "2107.03374", "decision": "no_clear_negative", "reason": "GPT-3得到0%仍被明确评测，不是EVALUATED_ON负例；困难和局限不是用途否定。"},
+    {"arxivId": "1606.05250", "decision": "no_clear_negative", "reason": "baseline与人类表现差异不是用途或评测否定；未命名模型不补实体。"},
+    {"arxivId": "2501.06756", "decision": "no_clear_negative", "reason": "NP-hard描述优化问题，不否定某实体的用途；跨层分工或指标差异不足以造负例。"},
+    {"arxivId": "1903.10404", "decision": "no_clear_negative", "reason": "编码器压缩为RL提供表示，直接执行者不同不能排除间接用途；保留撤回的三个反例为未决。"},
+    {"arxivId": "2503.03790", "decision": "no_clear_negative", "reason": "两个模块分别预测中间表示和网格，不排除隐式模块间接支持网格；不恢复两个交叉角色反例。"},
+    {"arxivId": "1910.12770", "decision": "no_clear_negative", "reason": "ImageNet是比较模型初始化来源，不足以认定任何方法未在ImageNet评测；代理训练与下游应用均可能是用途。"},
+    {"arxivId": "1905.00537", "decision": "no_clear_negative", "reason": "GLUE研究空间有限不是方法不适用于语言理解；不把未命名模型或无评测谓词变成负例。"},
+    {"arxivId": "2312.03556", "decision": "no_clear_negative", "reason": "CelebAHQ-IDI用于训练不排除也被评测；旧方法不足是性能/能力局限，不自动否定其既有用途。"},
+    {"arxivId": "2503.01309", "decision": "no_clear_negative", "reason": "现有方法很少实时不是明确不适用；VFM与hashing的分工不排除间接支持。"},
+    {"arxivId": "2010.01057", "decision": "no_clear_negative", "reason": "新模型整体任务与评测不传给每个组件，但这不是组件负例；独立tokens不否定任务归属。"}
+  ],
+  "candidate": {
+    "arxivId": "2008.10400",
+    "headId": "e10",
+    "tailId": "e1",
+    "priorLabel": "UNRESOLVED",
+    "proposedLabel": "NO_RELATION",
+    "correspondingPositiveLabel": "EVALUATED_ON",
+    "negativeQuote": "pooling is not used",
+    "architectureQuote": "Every convolution layer uses batch normalization and ReLU activation, and pooling is not used.",
+    "evaluationQuote": "We report that a very high accuracy on the MNIST test set can be achieved by using simple convolutional neural network (CNN) models.",
+    "reviewStatus": "pending_scope_adjudication",
+    "relationEvidenceLevel": "discourse_inferred",
+    "negativeBasis": "Explicit architecture exclusion; whether it excludes source-local evaluation attribution to pooling still requires scope adjudication.",
+    "counterargument": "Negation grammatically describes the reported convolution architecture, not an independently stated pooling-MNIST evaluation. Do not claim an explicit pair-level negation or a universal fact.",
+    "trainingAuthorized": false,
+    "candidateEligible": false
+  }
+}

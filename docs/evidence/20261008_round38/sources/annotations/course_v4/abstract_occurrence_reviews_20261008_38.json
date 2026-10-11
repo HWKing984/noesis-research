@@ -1,0 +1,9 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "reviews": [
+    {"arxivId": "2110.02932", "reason": "Re-read the entire original abstract and generated three spans against all seven standalone ML occurrences. The first machine learning/ML pair is explicitly followed by methods; deploying ML is technical system use. ML Practitioners/community/development and field-level limitations are not propagated as METHOD. The qualitative interview design and 17 interviews are not a scientific AI method or a named dataset under this version. No computational TASK is locally named; the zero scoped relation-pair result is valid, not an invented NO_RELATION example. The source hash and original train paper group are unchanged. This contextual clarification is AI judgment, not independent truth."},
+    {"arxivId": "2409.13884", "reason": "Re-read the whole source and every generated entity plus all six resolved evidence pairs. The full multi-LLM debiasing framework span contains the first debiasing as a lexical modifier; the second debiasing at characters 771–780 is explicitly a task. It does not overlap the adjoining LLMs mention. All five standalone LLMs mentions, the central LLM and full method-family phrases are retained. Generic structural descriptors and the reduces-bias performance verb are outside the retained name/objective scope, consistent with the recorded versioned clarification. Bias mitigation using the three listed strategies, approaches improving reasoning, and the proposed framework aimed at reducing bias/for debiasing have direct local evidence. LLMs being debiased are objects, not automatically the operators; the remaining 46 pairs remain UNRESOLVED rather than negatives. Verify the regenerated e13 endpoint instead of copying the old e13 that denoted LLMs. No dataset is named. Independent human gold and complete RE coverage are not claimed."}
+  ]
+}

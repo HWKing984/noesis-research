@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>04 版本、校验与 AI 自复核证据</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>04 版本、校验与 AI 自复核证据</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<table><thead><tr><th>检查项</th><th>来源与结果</th></tr></thead><tbody><tr><td>pytest (本轮真实回归)</td><td>302 项；失败 0 / 错误 0 / 跳过 0</td></tr><tr><td>新数据输入版本</td><td>course_v4_training_inputs_07</td></tr><tr><td>训练权重实际输入版本</td><td>course_v4_training_inputs_06</td></tr><tr><td>原始模型固定 revision</td><td>24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1</td></tr><tr><td>模型本地权重 SHA-256</td><td>e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a</td></tr><tr><td>训练后 safetensors SHA-256</td><td>853458ecc122bf2256efd71406153ad0e056e7043e9544a85c00cc45013e8196</td></tr><tr><td>标签来源</td><td>codex_session / unknown_session_model；candidate-aware AI自复核，不是人工gold或独立盲审</td></tr></tbody></table><h2>本轮保留的修订与未决案例</h2><table><thead><tr><th>原题名</th><th>为何隔离而不伪造答案</th></tr></thead><tbody><tr><td>Prompting Large Language Models with Mispronunciation Detection and Diagnosis Abilities.</td><td>Shared mispronunciation object for Detection and Diagnosis cannot be represented as two full continuous task spans without inventing text or an unsupported combined task boundary.</td></tr><tr><td>Adversarial Attacks on Deep Neural Network-based Power System Event Classification Models.</td><td>The classification-model composite occupies the attack-object text; a complete attack-task span would overlap it, while bare attacks omit the target. Nonoverlapping task boundary remains unresolved.</td></tr></tbody></table><footer>证据页生成时间：2026-10-06T00:53:27.020256+00:00<br>来源：<div class="path">kg_datasets\dblp\course_v4_runs\tests_20261006_round07_final.xml</div><div class="path">kg_datasets\dblp\course_v4_training_inputs_07\receipts.jsonl</div><div class="path">kg_datasets\dblp\course_v4_runs\ner_smoke_20261006_02\manifest.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

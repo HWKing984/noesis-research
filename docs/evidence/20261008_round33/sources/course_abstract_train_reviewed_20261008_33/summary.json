@@ -1,0 +1,25 @@
+{
+  "documents": 37,
+  "selfReviewed": 37,
+  "nerCandidates": 29,
+  "excludedNER": 8,
+  "eligibleNEREntityCounts": {
+    "TASK": 109,
+    "METHOD": 211,
+    "DATASET": 35
+  },
+  "relationCounts": {
+    "UNRESOLVED": 1119,
+    "EVALUATED_ON": 11,
+    "USED_FOR": 6
+  },
+  "completeRelationDocuments": 1,
+  "positiveRelationCandidates": 17,
+  "maxNERtokens": 350,
+  "independentHumanGold": false,
+  "devAccessed": false,
+  "testAccessed": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "notice": "AI pseudo labels only. NER candidates are not automatically admitted to the title-only model contract. Unresolved pairs are not negative examples; positive candidates are not a complete RE training dataset."
+}

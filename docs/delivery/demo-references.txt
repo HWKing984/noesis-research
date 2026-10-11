@@ -1,0 +1,6 @@
+候选文献快照，不是人工核验事实、必引清单或正式参考文献格式；引用前阅读原文。
+
+[1] Gerasimos Vonitsanos; Emmanouela-Electra Economopoulou; Spyros Sioutas; Andreas Kanavos; Phivos Mylonas. Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification. SEEDA-CECNSM, 2025. DOI: 10.1109/seeda-cecnsm68644.2025.11329671
+文献状态: 未检出撤稿/更正题名前缀信号；出版状态未经独立核验。
+DBLP: https://dblp.org/rec/conf/seeda/VonitsanosESKM25
+保存时间: 2026-10-11T05:07:17.565Z

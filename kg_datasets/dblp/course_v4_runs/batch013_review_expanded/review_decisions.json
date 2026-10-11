@@ -1,0 +1,659 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-7b073ca711e4854c9ba1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Order-ViT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Order Learning Vision Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Cancer Classification in Pathology Images",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Order-ViT explicitly names the pathology cancer classifier."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The order-learning vision transformer is explicitly for cancer classification."
+        }
+      ],
+      "notes": "Retain order-learning mechanism and pathology modality.\nAI self-review: Order-ViT/order-learning architecture explicit for pathology cancer."
+    },
+    {
+      "sampleId": "sample-679bb8baef7e7c98d5a0",
+      "entityStatus": "unresolved",
+      "entityReason": "The Knowledge Graph may be a new resource name or a generic semantic representation; its method/resource boundary is unclear.",
+      "entities": [
+        {
+          "text": "nuScenes",
+          "label": "DATASET"
+        },
+        {
+          "text": "trajectory prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Resource identity and use direction of the proposed graph are unresolved.",
+      "relations": [],
+      "notes": "nuScenes is explicitly the source name, not evidence of evaluation on nuScenes.\nAI self-review: nuScenes source role not evaluation claim, proposed graph identity uncertain."
+    },
+    {
+      "sampleId": "sample-614432cda861fda11745",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Semantic Text Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Visual Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Two task descriptions; no specific VQA model is named and task-to-task pairs are outside scope.\nAI self-review: VQA and recognition are tasks, no algorithm invented."
+    },
+    {
+      "sampleId": "sample-6777e5922a6a622bd2a2",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Burst Sequence Based Graph Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Video Traffic Identification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The burst-sequence GNN is explicitly for video-traffic identification."
+        }
+      ],
+      "notes": "One sequence-conditioned architecture.\nAI self-review: Burst-sequence GNN explicitly identifies video traffic."
+    },
+    {
+      "sampleId": "sample-30d4fe0f28bbe99685df",
+      "entityStatus": "unresolved",
+      "entityReason": "ATT&CK and CVE identify security knowledge resources, not clearly evaluation datasets; the unnamed graph may be an artifact.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The security-resource categories are unresolved.",
+      "relations": [],
+      "notes": "Threat intelligence is broad domain context; no invented graph algorithm.\nAI self-review: ATT&CK/CVE security resources not automatically evaluation datasets."
+    },
+    {
+      "sampleId": "sample-34dc37d8b919b597caf9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "GNN-based Knowledge Graphs Algorithms",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full literal GNN-based graph-algorithm family retained; topology bias is property.\nAI self-review: Retain entire GNN-based graph-algorithm family rather than only GNN modifier."
+    },
+    {
+      "sampleId": "sample-7bdd6d699399ac8c924a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Streaming Dynamic Graph Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Continuous-Time Temporal Graph Modeling",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The streaming dynamic GNNs are explicitly for continuous-time temporal graph modeling."
+        }
+      ],
+      "notes": "Retain streaming/dynamic mechanisms and temporal task object.\nAI self-review: Streaming/dynamic architecture explicitly models temporal graphs."
+    },
+    {
+      "sampleId": "sample-ba15aaacb31893b85337",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "AS-GCN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Adaptive Semantic Architecture of Graph Convolutional Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Text-rich networks are generic graph input, not a named dataset or operation.\nAI self-review: AS-GCN and semantic architecture explicit, text-rich input unnamed."
+    },
+    {
+      "sampleId": "sample-31eedfecc3bead0aa06c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "hypercomplex neural networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "modeling Venus planetary orbit",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Hypercomplex networks explicitly model Venus's planetary orbit."
+        }
+      ],
+      "notes": "Fast is a speed claim; Venus is the task object, not a dataset.\nAI self-review: Hypercomplex learner explicit for Venus orbit; speed claim excluded."
+    },
+    {
+      "sampleId": "sample-f19d19bab86b42210788",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Occupational Accidents Prediction in Brazilian States",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Machine learning explicitly predicts occupational accidents in Brazilian states."
+        }
+      ],
+      "notes": "Retain geography and target.\nAI self-review: Brazilian accident prediction explicit learning use."
+    },
+    {
+      "sampleId": "sample-1e462922f9137c52751e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Real Time Traffic Flow Monitoring",
+          "label": "TASK"
+        },
+        {
+          "text": "Congestion Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Both traffic-flow monitoring and congestion prediction are explicitly driven by deep learning."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Congestion prediction is explicitly driven by deep learning."
+        }
+      ],
+      "notes": "Real time is operational task context, not a training setting.\nAI self-review: Monitoring/congestion prediction have fully written heads and learning roles."
+    },
+    {
+      "sampleId": "sample-1d716e73e260d5c41d04",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Vehicle Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The vehicle-detection models are explicitly based on deep learning."
+        }
+      ],
+      "notes": "Weather conditions describe the analyzed setting outside the contiguous task, no invented compound span.\nAI self-review: Detection explicitly deep-learning based; weather cannot form invented span."
+    },
+    {
+      "sampleId": "sample-b48a8af4abdf44a2aad8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "AMbit",
+          "label": "METHOD"
+        },
+        {
+          "text": "Pruning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Explicit named pruning method and learning family; edge computing is deployment context.\nAI self-review: AMbit explicitly pruning, federation method, edge deployment not task."
+    },
+    {
+      "sampleId": "sample-66ed990dd5dff58bf13f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Handwritten Chinese Characters Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Two-Stage Hierarchical Convolutional Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The hierarchical two-stage CNN explicitly recognizes handwritten Chinese characters."
+        }
+      ],
+      "notes": "Retain language/script and architecture.\nAI self-review: Two-stage hierarchical CNN explicit for Chinese handwriting recognition."
+    },
+    {
+      "sampleId": "sample-5be56673f0a0a91945d9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Network Modeling",
+          "label": "METHOD"
+        },
+        {
+          "text": "Real-time Pandemic Forecasting",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "GNN modeling of web-search activity is explicitly for real-time pandemic forecasting."
+        }
+      ],
+      "notes": "Web-search activity is unnamed input material, not a dataset.\nAI self-review: GNN modeling explicitly forecasts pandemics; web-search input unnamed."
+    },
+    {
+      "sampleId": "sample-03bc486b1ea9d3f7fea9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "3D Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Dense MLS city maps are generic measured input, not a named dataset or algorithm.\nAI self-review: MLS maps generic input, 3D detection definite task."
+    },
+    {
+      "sampleId": "sample-e33188367b19be875b24",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hierarchical Reinforcement Learning with Curriculum Learning and Subpolicy Transfer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "One compound learning mechanism; navigation environments do not explicitly name a navigation operation.\nAI self-review: Hierarchical/curriculum/subpolicy learning composite, environments no task verb."
+    },
+    {
+      "sampleId": "sample-f1c3f38de370ffe57454",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "FocusDet",
+          "label": "METHOD"
+        },
+        {
+          "text": "FocusConv",
+          "label": "METHOD"
+        },
+        {
+          "text": "CLIP Guide Head",
+          "label": "METHOD"
+        },
+        {
+          "text": "Remote Sensing Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "FocusDet explicitly names the remote-sensing detector."
+        },
+        {
+          "head": "e2",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "FocusConv is explicitly proposed for remote-sensing detection."
+        },
+        {
+          "head": "e3",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "The CLIP guide head is explicitly for that detection."
+        }
+      ],
+      "notes": "Retain the complete guide-head mechanism, no nested CLIP duplicate.\nAI self-review: FocusConv and CLIP guide head explicit for remote-sensing detection."
+    },
+    {
+      "sampleId": "sample-581653452f51c2fbf7a9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "moving object detection",
+          "label": "TASK"
+        },
+        {
+          "text": "multifeature fusion",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Moving-object detection is explicitly based on multifeature fusion."
+        }
+      ],
+      "notes": "Algorithm is generic; preserve moving target.\nAI self-review: Multifeature fusion explicitly detects moving objects."
+    },
+    {
+      "sampleId": "sample-ce21196b98116d372781",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Mutual Relative Position Learning Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Cross-View Geo-Localization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The relative-position-learning transformer is explicitly for cross-view localization."
+        }
+      ],
+      "notes": "One mechanism-qualified transformer.\nAI self-review: Position-learning transformer explicit for cross-view localization."
+    },
+    {
+      "sampleId": "sample-e16b533850522dbadceb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Spmpg",
+          "label": "METHOD"
+        },
+        {
+          "text": "Person Image Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Spmpg explicitly names the person-image generator."
+        }
+      ],
+      "notes": "Semantic parsing map is an input artifact, not a named dataset or method; Robust is evaluative.\nAI self-review: Spmpg generator explicit; parsing map artifact not dataset/method."
+    },
+    {
+      "sampleId": "sample-8de72a06885feeb8557a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Adversarial Representation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Dynamic Scene Deblurring",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Adversarial representation learning is explicitly for dynamic-scene deblurring."
+        }
+      ],
+      "notes": "Simple/Fast/Robust are claims, no entities.\nAI self-review: Adversarial representation learning explicit for scene deblurring."
+    },
+    {
+      "sampleId": "sample-8e2a48726e8dfac2d167",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MomentsNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "binary image recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "MomentsNet explicitly names the binary-image recognition method."
+        }
+      ],
+      "notes": "Learning-free describes regime but no additional algorithm name.\nAI self-review: MomentsNet explicitly learning-free recognition method."
+    },
+    {
+      "sampleId": "sample-f14b347c8fcffd084d56",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Adaptive regularization level set evolution",
+          "label": "METHOD"
+        },
+        {
+          "text": "medical image segmentation",
+          "label": "TASK"
+        },
+        {
+          "text": "bias field correction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Adaptive level-set evolution is explicitly for medical-image segmentation."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The same level-set method is explicitly for bias-field correction."
+        }
+      ],
+      "notes": "Both task heads written fully, no shared-head METHOD group.\nAI self-review: Adaptive level-set evolution explicitly supports segmentation and bias correction."
+    },
+    {
+      "sampleId": "sample-12dc2f4e0c9a3563b1ce",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Recommendation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The surveyed recommendation approaches explicitly use deep learning."
+        }
+      ],
+      "notes": "No recommendation domain or named benchmark is supplied.\nAI self-review: Deep-learning recommendation explicit, survey not benchmark."
+    }
+  ]
+}

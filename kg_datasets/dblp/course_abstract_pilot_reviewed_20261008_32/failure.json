@@ -1,0 +1,1 @@
+{"status":"failed_no_synthetic_fallback","errorType":"FileNotFoundError","error":"Sealing referenced tokenizer.json, but the pinned local tokenizer uses vocab.txt; no completed manifest produced.","trainingExecuted":false,"modelPromoted":false}

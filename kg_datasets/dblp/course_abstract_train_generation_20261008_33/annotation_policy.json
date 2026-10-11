@@ -1,0 +1,14 @@
+{
+  "policy": "Explicit per-document AI mention decisions. Match all standalone occurrences of declared case-sensitive literals; longest declared same-type name wins. Do not label URLs. Every unlisted candidate relation is deliberately UNRESOLVED, never NO_RELATION.",
+  "testAccessed": false,
+  "devAccessed": false,
+  "nerStatus": "AI completeness claim, not independent semantic validation",
+  "relationStatus": "Unresolved candidates retained and excluded from negative training",
+  "iterationCompact": {
+    "goal": "Whole-abstract DATASET support with source-bound labels",
+    "baseline": "8 excerpts do not annotate whole abstracts",
+    "mistakeBudget": "No source rewriting, title label copying, implied evaluated-on labels or negative filling",
+    "nextExperiment": "Same-session AI review and strict token/offset round-trip preflight",
+    "promotionAllowed": false
+  }
+}

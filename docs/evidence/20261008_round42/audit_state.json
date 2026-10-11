@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "engineeringTests": 370,
+  "trainingActuallyExecuted": true,
+  "selections": {
+    "NER": {
+      "epochs": 6,
+      "steps": 150,
+      "selectedEpoch": 6
+    },
+    "RE": {
+      "epochs": 6,
+      "steps": 402,
+      "selectedEpoch": 6
+    }
+  },
+  "selectedWeightsSha256": {
+    "NER": "6baacb7c6c7f72cbbb2799c61224771fcad9e876e28c3213a0cc6b250bc1f21e",
+    "RE": "a05e40a819b1656864770646be7db6927e8cfc468f11cab667ba29ea937d4a0d"
+  },
+  "trainOnlyGradientInputInventoryVerified": true,
+  "selectedNERModuleAndFourPipelineScoresRecomputedFromSavedPredictions": true,
+  "freshSameScopeFourWayPipelineComparison": true,
+  "labelFreeInferenceParityCheckedDuringRun": true,
+  "pipelineUsesEveryPredictedCandidate": true,
+  "revisedSnapshotManifestSha256": "df4521554df1fd4997dc0aad0fc9d7e1e85ab4031edbc12f4632374efd434083",
+  "runManifestSha256": "c56769c8d51bd51b32e0c7058605dfd956e0812de91c21350403086f4b229320",
+  "gates": {
+    "checks": {
+      "pipelinePrecisionNonRegression": true,
+      "pipelineF1NonRegression": true,
+      "pipelineRecallRegressionWithinGuard": true,
+      "referenceDATASETSupport": true,
+      "completeReferenceEVALUATED_ONSupport": false,
+      "completeDocumentCoverage": false
+    },
+    "developmentGatesPassed": false,
+    "blockedBy": [
+      "completeReferenceEVALUATED_ONSupport",
+      "completeDocumentCoverage"
+    ],
+    "parentGates": {
+      "sameDevPipelinePrecisionNonRegression": true,
+      "sameDevPipelineF1NonRegression": true,
+      "maxAbsoluteRecallRegression": 0.02,
+      "minimumReferenceDATASETDev": 10,
+      "minimumReferenceEVALUATED_ONDev": 10,
+      "minimumReferenceRareSupportFinalTest": 10,
+      "minimumDocumentCoverage": 0.8,
+      "independentHumanGoldRequired": false,
+      "automaticPromotionAllowed": false,
+      "notice": "Support minima are operational guards, not statistical proof; insufficient support permits exploratory dev training only, not reliability claims or final promotion."
+    },
+    "finalTestExecuted": false,
+    "finalRareSupportKnown": false,
+    "qualityPromotionPassed": false,
+    "modelPromoted": false,
+    "notice": "Development guards are not final promotion. No final test, independent gold or automatic deployment."
+  },
+  "reservedTestContentConsumed": false,
+  "oldTestReinferred": false,
+  "developmentPreviouslyExposed": true,
+  "independentHumanGold": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "databaseWritten": false,
+  "serviceRestarted": false,
+  "liveApplicationReaccepted": false,
+  "reportExpansionPaused": true,
+  "regressionInitialFailurePreserved": true,
+  "regressionTemporaryDirectory": "isolated_workspace_D_drive",
+  "CDefaultTempRenameFailureRootCauseResolved": false,
+  "regressionTestsSkipped": 0,
+  "notice": "Real fixed-setting training and exposed AI-dev diagnostics. Historical 5-document scores are not this 7-document baseline. Zero full EVAL support blocks reliability promotion."
+}

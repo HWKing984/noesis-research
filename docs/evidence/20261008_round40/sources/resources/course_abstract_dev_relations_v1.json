@@ -1,0 +1,18 @@
+{
+  "version": "abstract_dev_relation_enrichment_v1",
+  "source": "kg_datasets/dblp/course_abstract_relation_inputs_20261008_36",
+  "sourceManifestSha256": "8464b73aa19faf4f39d7b2f3d11251ad2b9a30ca6ecb25d95d5b66e826ae0b35",
+  "parentRelationContract": "resources/course_abstract_relation_v1.json",
+  "parentRelationContractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "revisionCohort": ["1903.09296", "2411.06463", "1907.02544", "2403.19572", "1904.04163", "2411.11752", "2001.11639", "2403.13872", "2207.11187", "2307.15425", "1906.08977"],
+  "selection": "All eleven incomplete-relation, complete-NER documents in the existing locked nineteen-document development queue, in original order. No model-score/error selection, replacement or new collection.",
+  "goal": "Expand source-grounded development relation coverage without silently completing unknown pairs or changing entity definitions. Report denominators and rare-relation support, not inferred real-world reliability.",
+  "entityPolicy": "Preserve all nineteen source references and all NER fields, three quarantines, five already complete relation documents and every previously resolved pair. No retractions in this revision.",
+  "positivePolicy": "Use the unchanged parent's explicit operator/task or method/benchmark attribution. Named repeated mentions may be correlated. Whole-approach evaluation does not certify component evaluation.",
+  "negativePolicy": "Only parent's explicit_argument_role_contrast or explicit_dataset_use_contrast with literal evidence. Absence, training-only mention, poor performance, different entity types and UNRESOLVED are not negatives.",
+  "reviewPolicy": "Read whole source and fixed entity inventory, decide explicit groups, then perform actual same-session AI self-review. Inherited receipt binding is separate from a fresh generation/review chain. Empty groups mean inspection without new labels, not completed annotation.",
+  "independence": "AI reference labels, not human gold or blind independent evaluation. This development queue has already been used for model selection; do not claim new holdout quality.",
+  "experiment": "Development-label revision and strict encoding preflight only. Do not train, infer, inspect model errors to set labels, read reserved-test content, replace production graph/models or overwrite historical scores. New comparison needs a separately locked experiment.",
+  "automaticPromotionAllowed": false,
+  "qualityPromotionPassed": false
+}

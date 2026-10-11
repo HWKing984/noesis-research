@@ -1,0 +1,22 @@
+{
+  "documents": 8,
+  "paperGroups": 7,
+  "entityCounts": {
+    "DATASET": 9,
+    "METHOD": 5,
+    "TASK": 5
+  },
+  "relationCounts": {
+    "USED_FOR": 5,
+    "EVALUATED_ON": 2
+  },
+  "selfReviewed": 8,
+  "revisedBoundaries": 2,
+  "strictTokenAlignmentPassed": true,
+  "maxTokens": 56,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "testEvaluated": false,
+  "modelPromoted": false,
+  "notice": "Targeted train-only AI pilot. No independent dev/test abstracts acquired. Not automatically compatible with title-only training contracts."
+}

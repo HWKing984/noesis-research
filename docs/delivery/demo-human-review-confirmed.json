@@ -1,0 +1,20 @@
+{
+  "scope": "human_reviewed_demonstration_subset_of_frozen_Train65",
+  "confirmationSource": "explicit_user_chat",
+  "confirmationDate": "2026-10-11",
+  "exportedAt": "2026-10-11T05:31:22.425Z",
+  "papers": [
+    {
+      "arxivId": "2107.03374",
+      "humanConfirmed": true
+    },
+    {
+      "arxivId": "1606.05250",
+      "humanConfirmed": true
+    },
+    {
+      "arxivId": "1905.00537",
+      "humanConfirmed": true
+    }
+  ]
+}

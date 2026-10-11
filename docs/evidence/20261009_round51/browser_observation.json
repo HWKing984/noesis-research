@@ -1,0 +1,15 @@
+{
+  "source": "actual_chrome_devtools_inline_observation",
+  "liveURL": "http://127.0.0.1:8766/",
+  "observedLLMResults": 20,
+  "aliasVersion": "typed_controlled_aliases_v2",
+  "inputs": 8,
+  "consoleErrorsOrWarningsObserved": 0,
+  "networkRequestsObserved": 9,
+  "statusesObserved": [
+    200,
+    204
+  ],
+  "completeAccessibilityAudit": false,
+  "notice": "Chrome page observation plus separately captured actual Edge screenshots/downloads; not synthesized UI or a full browser regression suite."
+}

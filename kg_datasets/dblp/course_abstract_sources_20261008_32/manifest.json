@@ -1,0 +1,24 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/processed_ai/publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "kg_datasets/dblp/course_v4_weak/references.jsonl": "e67e1e50565e562abbd979db3730cb7d7a77058dd801a23fbcb6d9a3b8d61439",
+    "kg_datasets/dblp/course_v4_holdout_20261007_29/references.jsonl": "0423e07419411a20643ca08af8fe574f9772ea4ee7f9e776c0be21114d61c690",
+    "scripts/collect_course_abstracts.py": "125dc0bcc9940594b357e2234e91656db05d4d4d52a23c82bab0bfd489b0c896",
+    "scripts/fetch_abstract_pilot.py": "eadc8583ce16ff7ffe72636b484b576d6494bcd810b88ec292e3038c266db620",
+    "kg_datasets/dblp/ner_v3_1/abstract_sources/abstracts.jsonl": "0ef23f054b6ae02ae744255f2d8bf68b366aab17c23b41eb9ef7b211b56585a1",
+    "kg_datasets/dblp/ner_v3_1/abstract_sources/response.atom": "3150cb85bbca8173d12a4976611d2684d98a7383fb324a874a765f2a6b174e16",
+    "kg_datasets/dblp/ner_v3_1/abstract_sources/request.json": "cb39aa14fbb52654bdf36c1140ee4145a726f7808a2ca5a767b944f9d38fbecc",
+    "kg_datasets/dblp/ner_v3_1/benchmark_abstract_sources/abstracts.jsonl": "1da13c82d223d7ddae987482117512fb28ddff4fe35e78e2972f8f6e31120980",
+    "kg_datasets/dblp/ner_v3_1/benchmark_abstract_sources/response.atom": "65761800d90cc767b68d069c5d9f3b9ff2b6f75e318a3987787d31c67ddd08a8",
+    "kg_datasets/dblp/ner_v3_1/benchmark_abstract_sources/request.json": "2202e05fa10dbe1a3c20b1e00f5c263409c8f960282f891638ef543eed7bbdea"
+  },
+  "filesSha256": {
+    "abstracts.jsonl": "fe42f6940f7bcc36de574a82610b2e5418b7fa44bdc4c32da490debde733cd5a",
+    "contract.json": "e3c52ba0e6f243813beda23c6c01bed5a32f8b0dbe3bfaeb8681a5899f3721cd",
+    "quarantine.jsonl": "62b9bcffebc15db1d838904dd91725bb1080ba82df514b4d326f5a8f990e2a67",
+    "requests.json": "3175f92a74b8740c76fe6abb5507716738650444445e1f802d35541ac86ed574",
+    "selection_lock.json": "19fa4f5add5d2882f0e3f7d7bbe3b9484933584e35fe455e1724b531d4d7402b",
+    "summary.json": "f585dedb7dbc617625573c6885855fb9e77d244e234fd03f53990febeefc5eed"
+  }
+}

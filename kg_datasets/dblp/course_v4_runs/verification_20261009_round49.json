@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-09T01:46:57.288688+00:00",
+  "audit": {
+    "collectionManifestSha256": "34f30e0b8f0fd569c0f9348b4ed8155e9cfb733dbf5cffb7e07d9ef4296afe33",
+    "reviewedManifestSha256": "2fc9aeaefa200100de611e5940ee5fa3cf6bbcfcea520f3700542be11f8c82f7",
+    "engineeringTests": 378,
+    "regressionSeconds": 161.589,
+    "collectionTiming": {
+      "configuredMonotonicSeconds": 15.1,
+      "robotsRequiredSeconds": 15,
+      "recordedUTCGapsSeconds": [
+        15.107022,
+        15.105179,
+        15.107482,
+        15.107071,
+        15.092014,
+        15.09223,
+        15.099604
+      ],
+      "minimumRecordedUTCSeconds": 15.092014,
+      "allRecordedUTCAtLeastConfigured": false,
+      "robotsMinimumSatisfied": true
+    },
+    "NER": 7,
+    "quarantinedNER": 1,
+    "knownPairs": 88,
+    "unknownPairs": 390,
+    "eligiblePairs": 478,
+    "EVALUATED_ON": 14,
+    "EVALSourcePapers": 3,
+    "completeDocuments": 0,
+    "completeEVALSupport": 0,
+    "trainingExecuted": false,
+    "inferenceExecuted": false,
+    "testEvaluated": false,
+    "modelPromoted": false
+  },
+  "evidenceManifestSha256": "f39a3fd5945de76a47195f310fba543d348522eae1f816258aac9e7836fcac9d",
+  "capturesSha256": "34b393420c90b8c6ba9c04b27319c258e44e2d107d38280f75588c950f648b13",
+  "qualityPromotionPassed": false,
+  "modelPromoted": false
+}

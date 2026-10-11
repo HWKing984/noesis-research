@@ -1,0 +1,3206 @@
+venueId:ID(Venue),name,venueType,:LABEL
+venue-0007145b3cb29536,BCB Companion,conference,Venue
+venue-0017659e022466e6,ICCE-Berlin,conference,Venue
+venue-0019243c0a6e4ddb,BrainLes@MICCAI (1),conference,Venue
+venue-0035455ebedc2807,ICCV Workshops,conference,Venue
+venue-005a12cb9cf43861,Comput. Ind. Eng.,journal,Venue
+venue-006dfa40cb817024,A-SSCC,conference,Venue
+venue-007554caa1af4822,IEICE Electron. Express,journal,Venue
+venue-008f60ed3c30a8cd,CIBCB,conference,Venue
+venue-00ba6c0269aabf34,PRCV (12),conference,Venue
+venue-00c7b9d33c1f0dec,NeurIPS,conference,Venue
+venue-00d0304392372d65,AABI,conference,Venue
+venue-013e7b6fa9093f5f,LSSC,conference,Venue
+venue-0164c691fc9264c6,FM (1),conference,Venue
+venue-01881bd373247b1b,DeepLo@ACL,conference,Venue
+venue-01ac79802f29b120,ECOC,conference,Venue
+venue-01afab9b6154dfe7,IEEE Intell. Transp. Syst. Mag.,journal,Venue
+venue-01afea91c4080ed6,ICIIP,conference,Venue
+venue-01b1a461d3dea0ee,Int. J. Comput.,journal,Venue
+venue-01c2251ace2bfd77,J. Artif. Intell. Res.,journal,Venue
+venue-01c9f94b404941d7,DAC,conference,Venue
+venue-01d386ff09c3b0b5,HPSR,conference,Venue
+venue-01de899f053e0a18,CHIRA (2),conference,Venue
+venue-01e7883bacd11227,HPDC,conference,Venue
+venue-01f4eff115ccba2d,LWDA,conference,Venue
+venue-0201727ca6574411,SeMatS@ISWC,conference,Venue
+venue-021a8b55cc160c6e,AIIDE,conference,Venue
+venue-021fcbc15287141d,IOLTS,conference,Venue
+venue-022da741328733d0,Digit. Gov. Res. Pract.,journal,Venue
+venue-024ff9d874490380,RRPR,conference,Venue
+venue-0253805280b20706,DCIS,conference,Venue
+venue-028b59f44bdf5f80,ICIMTH,conference,Venue
+venue-028d8a6a57edc877,ICDE Workshops,conference,Venue
+venue-02909ed6f5b53989,OTM Conferences (2),conference,Venue
+venue-0292fb28dc21e6eb,Inf. Softw. Technol.,journal,Venue
+venue-029ab2735663c914,HCI (36),conference,Venue
+venue-029d92c414e4e317,PACIS,conference,Venue
+venue-02ab4cc0d12d19f7,ECCV (54),conference,Venue
+venue-02b411aa70ffa5b9,WML@ICDAR,conference,Venue
+venue-02b615fb6c84b3a4,WAHC@CCS,conference,Venue
+venue-02c4b724aed5a212,CIKM Workshops,conference,Venue
+venue-02de6eba03a644f9,MIWAI,conference,Venue
+venue-02ef580b1a0060af,ASONAM (3),conference,Venue
+venue-02fc5d23ab2a41c7,IEEE Computer Graphics and Applications,journal,Venue
+venue-030cc6264cdd5f25,IHCI (1),conference,Venue
+venue-0313fa863593ee2b,WWDD@IS-EUD,conference,Venue
+venue-0316f66e212d94e6,SII,conference,Venue
+venue-0353296abd947270,RAGE-KG@ISWC,conference,Venue
+venue-037f11c4d5968036,MindTrek,conference,Venue
+venue-037fd5de193b13e1,ASSETS,conference,Venue
+venue-039750e2d3d35cfb,J. Biomed. Informatics,journal,Venue
+venue-03ae0f051748098b,WIFS,conference,Venue
+venue-03b7de0afc759ef1,ACL (Findings),conference,Venue
+venue-03c468d9f9ec9cd7,NEUROTECHNIX,conference,Venue
+venue-03c49bb2b81334bd,Knowl. Eng. Rev.,journal,Venue
+venue-03e12ef86ab4d573,BMC Bioinform.,journal,Venue
+venue-03f42ecbdd84faa3,WONS,conference,Venue
+venue-04008b1c4f665246,FiCloud,conference,Venue
+venue-0408b926e5eef6f0,BTAS,conference,Venue
+venue-046939a1f73683dc,ICIAP Workshops,conference,Venue
+venue-04759818a3913e52,SyRoCo,conference,Venue
+venue-04aba5d041c0ec3c,Genom. Proteom. Bioinform.,journal,Venue
+venue-04b1d3434a448150,CSS,conference,Venue
+venue-04c0cec72ab60316,NLPCC (2),conference,Venue
+venue-04c42f9b4b66e09d,ICCSE,conference,Venue
+venue-04cbfe5da3474c98,PRIME,conference,Venue
+venue-04d20140f39b4aca,J. Sensors,journal,Venue
+venue-04d26651dadc57ad,PEOPLES@NAACL-HTL,conference,Venue
+venue-04e73e3b1a752d9a,Robotics,journal,Venue
+venue-04fe4a5d5d3531fe,ICSPCS,conference,Venue
+venue-053af990c80f3cc0,SummerSOC,conference,Venue
+venue-0556cea402793df6,IEEE Trans. Computational Imaging,journal,Venue
+venue-0557acfb78954ee6,ECCV (29),conference,Venue
+venue-0568d3656cc30dc0,SysTol,conference,Venue
+venue-056ebae8d9385d68,CIIS,conference,Venue
+venue-05aeee7ed84d6177,Axioms,journal,Venue
+venue-05b42d22bb9608ba,AIES,conference,Venue
+venue-05b65f4fae83d4a5,EC,conference,Venue
+venue-05bf842868f33ee8,LARS/SBR,conference,Venue
+venue-05c56bac9345d530,SUMAC @ ACM Multimedia,conference,Venue
+venue-060d14ba64b3aea0,Computer,journal,Venue
+venue-061d6d65ab3c5e73,WIREs Data Mining Knowl. Discov.,journal,Venue
+venue-0628013021a015c4,J. Bioinform. Comput. Biol.,journal,Venue
+venue-0628d5bfd880c8fc,MSN,conference,Venue
+venue-063579e7db68233d,Proc. ACM Meas. Anal. Comput. Syst.,journal,Venue
+venue-063eb34a5d6de925,COMPSAC Workshops,conference,Venue
+venue-06600988c5930fe8,ENASE,conference,Venue
+venue-0677843568b2604c,IEEE Trans. Signal Inf. Process. over Networks,journal,Venue
+venue-0687f5d08479887e,IEEE Trans. Dependable Secur. Comput.,journal,Venue
+venue-068a1f8d31d6e084,PAKDD (7),conference,Venue
+venue-0699eacdb6513170,J. Comput. Neurosci.,journal,Venue
+venue-06a9fd6a1caa3014,J. Comput. Appl. Math.,journal,Venue
+venue-06d5189de98b976f,ICIIS,conference,Venue
+venue-06e50cd8b67e39fe,ISMICT,conference,Venue
+venue-06ed631065c84e1a,3D Imaging and Applications,conference,Venue
+venue-06f8800baf2f2939,Data Intell.,journal,Venue
+venue-07005a241ec9d736,EMA4MICCAI,conference,Venue
+venue-0701da3aad63f26f,J. Ambient Intell. Smart Environ.,journal,Venue
+venue-070926f4d5e9c0d5,AQTR,conference,Venue
+venue-070a7167cf1d03e2,SCAM,conference,Venue
+venue-072fa0d308c195ab,J. Comput. Sci.,journal,Venue
+venue-073be8e9c4c1b14b,SIGGRAPH Courses,conference,Venue
+venue-073fb11684cfa5f5,BMC Medical Imaging,journal,Venue
+venue-074d0e723c4244fc,FMEC,conference,Venue
+venue-07640a709de10aa1,WILF,conference,Venue
+venue-07688d3db59884de,IEEE Consumer Electron. Mag.,journal,Venue
+venue-07719a00bd7a4144,IEEE Softw.,journal,Venue
+venue-077382c2957db75f,SPECOM (2),conference,Venue
+venue-07842a956b75d200,ICBDE,conference,Venue
+venue-07bfe48a9836bf46,MICCAI (3),conference,Venue
+venue-07c0d58a55077b69,Int. J. Comput. Integr. Manuf.,journal,Venue
+venue-07e66af1e6ce2040,ACM Trans. Embed. Comput. Syst.,journal,Venue
+venue-07f2d66e324c6736,IEEE Trans. Instrum. Meas.,journal,Venue
+venue-080c7c8ee474c70c,BDA,conference,Venue
+venue-080ed2a604925dd1,MMM (2),conference,Venue
+venue-08156ecb2cde947d,Trans. Data Sci.,journal,Venue
+venue-08209767e0cfbefd,AAMAS,conference,Venue
+venue-0829a5a6f9d660a9,BNCAI,conference,Venue
+venue-0860d68d3cc1032d,SODA,conference,Venue
+venue-0864c015dc83e9a3,ACSSC,conference,Venue
+venue-0883a0d24db3f85e,ICB,conference,Venue
+venue-088de57055fbe6b9,AIMC,conference,Venue
+venue-088e2b35a5ba1591,SSRR,conference,Venue
+venue-089ba7bd2ce010e8,RTA-CSIT,conference,Venue
+venue-08b334314def5edd,MIC (2),conference,Venue
+venue-08b86141fc8a5934,KDD (2),conference,Venue
+venue-08dbe0b751bc667c,Kaleidoscope,conference,Venue
+venue-08e2b68675f25675,NAIC,conference,Venue
+venue-08f42961821b205c,SecureComm (5),conference,Venue
+venue-092183e2edc5c323,DTRAP,journal,Venue
+venue-094fc7666194297a,ICOST,conference,Venue
+venue-09626d20e5f2cc13,CCF Trans. Pervasive Comput. Interact.,journal,Venue
+venue-097461e2ccf2adb0,3DIC,conference,Venue
+venue-0975f74665aa72d4,MICCAI (13),conference,Venue
+venue-097e5f99885bd199,IEEE Trans. Evol. Comput.,journal,Venue
+venue-09941886c9f66ccc,CoRL,conference,Venue
+venue-09949a9dce895733,SWH@ISWC,conference,Venue
+venue-099b2d3197692874,FC (2),conference,Venue
+venue-09a322943bb3172c,ICCBDC,conference,Venue
+venue-09b9dc09e7907d1d,ICCBN,conference,Venue
+venue-09bac8f994d4854d,ICSI (1),conference,Venue
+venue-09dc0c8d6ecc0e67,ICIDS (1),conference,Venue
+venue-0a059c0c6ae254c2,J. Integr. Bioinform.,journal,Venue
+venue-0a16b6fa3d0359e6,MICML,conference,Venue
+venue-0a1d0cf205434f87,ECCV (36),conference,Venue
+venue-0a233efe419a197c,COMPSAC (1),conference,Venue
+venue-0a2cdf855a572bbe,IEEE Geosci. Remote. Sens. Lett.,journal,Venue
+venue-0a2dba01035c3537,Program. Comput. Softw.,journal,Venue
+venue-0a33b621a6f5360b,NCA,conference,Venue
+venue-0a42dda30127f2cc,ECCV (28),conference,Venue
+venue-0a4d6ab005279d78,DTPI,conference,Venue
+venue-0a6a781603eb3aa6,CoNLL,conference,Venue
+venue-0a9f3da31106564b,Microprocess. Microsystems,journal,Venue
+venue-0ac6c2253e512a23,IWQoS,conference,Venue
+venue-0acb9a6cb2dbc5d8,GEOINFO,conference,Venue
+venue-0ae4da3a58f5a1c3,PAKDD (6),conference,Venue
+venue-0ae8ea14e95a26fc,ICAIE,conference,Venue
+venue-0b059cb3382835a3,Canadian AI,conference,Venue
+venue-0b084900d1f1dcb3,ECCV (69),conference,Venue
+venue-0b18da541013be84,RAID,conference,Venue
+venue-0b1b96811727f6cc,UCAmI (1),conference,Venue
+venue-0b293658128dc331,AICS,conference,Venue
+venue-0b445c721debc8ae,ICVISP,conference,Venue
+venue-0b8c16f32f661151,ARRAY@PLDI,conference,Venue
+venue-0ba9d0c1b840c588,FUZZ,conference,Venue
+venue-0bded64d5d6be77c,Multiscale Model. Simul.,journal,Venue
+venue-0be4d0cbf917c740,PoIDS,conference,Venue
+venue-0c082bd6b03fcfd1,Mob. Inf. Syst.,journal,Venue
+venue-0c0cb8c1ea6c7827,Australasian Conference on Artificial Intelligence,conference,Venue
+venue-0c3198d76c19446d,SemTech4STLD@ESWC,conference,Venue
+venue-0c32a2dbe395e14a,ECCV Workshops (5),conference,Venue
+venue-0c435fe086b5769b,Decis. Support Syst.,journal,Venue
+venue-0c6672b0f50afc25,IEEE Comput. Intell. Mag.,journal,Venue
+venue-0c70684f10822e17,AFRICOMM,conference,Venue
+venue-0c73423614b93858,DEXA (1),conference,Venue
+venue-0c79bf5abab26422,WebSci,conference,Venue
+venue-0c970ff76dae2510,PADG@ESORICS,conference,Venue
+venue-0cb1107ecbe1be86,ISDFS,conference,Venue
+venue-0d14c45137543da8,SC2,conference,Venue
+venue-0d14e770b9313ebf,ACM Trans. Design Autom. Electr. Syst.,journal,Venue
+venue-0d2a5d210ddd0b28,Semantic Web,journal,Venue
+venue-0d5e3e075df4703e,DeCaF/FAIR@MICCAI,conference,Venue
+venue-0d61e299e7f139b8,MICAD,conference,Venue
+venue-0d77eea782553ea5,MBMV,conference,Venue
+venue-0db361e48eec2266,MAD@ICMR,conference,Venue
+venue-0db3db47751b3e87,Electron. Colloquium Comput. Complex.,journal,Venue
+venue-0de84839412eeca1,J. Intell. Manuf.,journal,Venue
+venue-0dfdb3d4bba28534,Comput. Informatics,journal,Venue
+venue-0e17e078b997fd09,AISafety@IJCAI,conference,Venue
+venue-0e3acf506ccc349b,Datenschutz und Datensicherheit (dud),journal,Venue
+venue-0e3acf82a3864ac1,MIDI,conference,Venue
+venue-0e4a91d07718e13f,ICMMI,conference,Venue
+venue-0e4d010de0b7e8ab,INNS Conference on Big Data,conference,Venue
+venue-0e89d28d2871b6b6,NAACL (Long Papers),conference,Venue
+venue-0ec6d6e8a58577e5,Simul. Model. Pract. Theory,journal,Venue
+venue-0ed779538892b350,J. Glob. Inf. Manag.,journal,Venue
+venue-0ee294f0ce90f1ea,WETICE,conference,Venue
+venue-0f00be325ea82849,Int. J. Reason. based Intell. Syst.,journal,Venue
+venue-0f12464db16ffc32,J. Intell. Syst.,journal,Venue
+venue-0f2720041d808db3,ASONAM (2),conference,Venue
+venue-0f6d91a0ce9de907,ICIAR (1),conference,Venue
+venue-0f79cba370b87222,MUD@ICML,conference,Venue
+venue-0f7f51c38d6e6fe7,NeSy (1),conference,Venue
+venue-0f9cbed889c25954,COMSNETS,conference,Venue
+venue-0f9f95ab00859874,CCIA,conference,Venue
+venue-0fb0103e1ec7eb8a,ICSE,conference,Venue
+venue-0fbbd3fafb1ea246,CAAD Futures,conference,Venue
+venue-0fc289eba563c67a,ECIR (5),conference,Venue
+venue-0fcfbca097bb7a6c,RTIP2R (2),conference,Venue
+venue-0ff71fdb146792bf,MIDL,conference,Venue
+venue-10001d7de069be14,SmartNets,conference,Venue
+venue-101fdba1fd23921f,ICPP,conference,Venue
+venue-10742f79475ffac8,ACM Southeast Conference,conference,Venue
+venue-1086c091b1c158f1,Secur. Priv.,journal,Venue
+venue-10927211452a7fb9,CVPR,conference,Venue
+venue-10adec256b5e5179,PerCom Workshops,conference,Venue
+venue-10b143fc61a77740,CASCON,conference,Venue
+venue-10e4c2b123b4c75d,RML@ICLR,conference,Venue
+venue-10fc794b99a7d9e3,Ind. Robot,journal,Venue
+venue-10fda62999126edb,VTC2025-Fall,conference,Venue
+venue-11000e920ec4bfb4,LPAR,conference,Venue
+venue-110285864900c674,IEEE ACM Trans. Audio Speech Lang. Process.,journal,Venue
+venue-11153b3a956b00d2,Comput. Sci.,journal,Venue
+venue-115d797e6eaf3663,OTM Conferences (1),conference,Venue
+venue-11691b07ead5660f,ASPLOS,conference,Venue
+venue-116a14ee71221031,CCNC,conference,Venue
+venue-11796e54be393964,CSPS (3),conference,Venue
+venue-1179a2b26a8cdb6a,Digit. Libr. Perspect.,journal,Venue
+venue-117bf932f4856fe0,ISBI Workshops,conference,Venue
+venue-1184e2843c060743,IEEE Trans. Medical Imaging,journal,Venue
+venue-1189c001eb4804b6,KSEM (1),conference,Venue
+venue-1196163943332ae4,ICAT-EGVE,conference,Venue
+venue-11bfc96aa1f514e4,ROBIO,conference,Venue
+venue-11d7e15d0571a8dc,HCI (37),conference,Venue
+venue-11f75ec25e5d92c0,IEEE Trans. Control. Syst. Technol.,journal,Venue
+venue-11fa770f29a54221,IJCNLP(2),conference,Venue
+venue-11fc23f71a347956,EBIMCS,conference,Venue
+venue-120e1d2b9ff51fe9,IEEE Trans. Emerg. Top. Comput.,journal,Venue
+venue-1218422c012f2414,SemWebEval@ESWC,conference,Venue
+venue-121cf138c8ba59da,6GN (1),conference,Venue
+venue-1224820de9f908a9,AMCIS,conference,Venue
+venue-123d9004b7316396,HIPCW,conference,Venue
+venue-123f24e8bb71a9da,WACV,conference,Venue
+venue-1250b0e6af2a3ec9,Comput. Electron. Agric.,journal,Venue
+venue-126487d74ef4b778,Patterns,journal,Venue
+venue-126a31deaf8025e6,ACTEA,conference,Venue
+venue-127e2d9018d2c135,KDD,conference,Venue
+venue-12826dd242064475,IEEE Open J. Commun. Soc.,journal,Venue
+venue-12b316a6232cd595,MobiCom,conference,Venue
+venue-12c5337a8812d8cb,ICONIP (5),conference,Venue
+venue-12c90a6952ab086a,PKDD/ECML Workshops (4),conference,Venue
+venue-12f9db91a9525393,ICT Express,journal,Venue
+venue-133c76a9e51f0109,O-COCOSDA,conference,Venue
+venue-135c3701dcd9fd26,Pattern Recognit. Lett.,journal,Venue
+venue-13654b2bf2a331a9,Neurocomputing,journal,Venue
+venue-1371e1eab49fe38e,ICIRA (10),conference,Venue
+venue-139731e3c74011d2,ICSIM,conference,Venue
+venue-139b3b9fb5aff52e,FDG,conference,Venue
+venue-13a9101b883cdadc,MICCAI (9),conference,Venue
+venue-13d3e69f10d11c9c,NeurReps,conference,Venue
+venue-13e7a6ed5219e48d,ICDIS,conference,Venue
+venue-13ebe81db3788644,LT-EDI@EACL,conference,Venue
+venue-13f48fe55fd786dd,Int. J. Data Min. Bioinform.,journal,Venue
+venue-144044f7aa9b9fd9,INFORMS J. Appl. Anal.,journal,Venue
+venue-145cd0eab96f8e77,VLDB J.,journal,Venue
+venue-14664e750d635292,IWBBIO (2),conference,Venue
+venue-1470bec574edb859,SedMT@NAACL-HLT,conference,Venue
+venue-14745f0510d5b733,NAACL (Student Research Workshop),conference,Venue
+venue-1486922fc618a668,NAACL (Findings),conference,Venue
+venue-14a6fa935406f38e,IWSLT (Evaluation Campaign),conference,Venue
+venue-14bbcd0dca778776,MCPR,conference,Venue
+venue-14d7a63492c2e1d7,DEBS,conference,Venue
+venue-14e396a267c84af2,AFRICATEK,conference,Venue
+venue-150eef78e8531a5a,AKBC,conference,Venue
+venue-1511c52313cfb599,Mach. Learn.,journal,Venue
+venue-1531def7d86e58ff,ISSRE Workshops,conference,Venue
+venue-155e99ad8ede3685,MICCAI (1),conference,Venue
+venue-157262ee90451735,ICAART (2),conference,Venue
+venue-1579c0a5e3544786,IEEE J. Sel. Top. Appl. Earth Obs. Remote. Sens.,journal,Venue
+venue-157c80c4dac54e7e,FAccT,conference,Venue
+venue-1582bebcf248f9a4,EMNLP (Industry Track),conference,Venue
+venue-15ad63548b63ca1f,Ad Hoc Networks,journal,Venue
+venue-15b0b468709759ab,ECCV (15),conference,Venue
+venue-15cf6b57d3f4e575,AISSLE,conference,Venue
+venue-15f3d9e646cacfae,SN Comput. Sci.,journal,Venue
+venue-160fa173c314f7a3,Complex.,journal,Venue
+venue-1619837eef9eddc8,I-ESA,conference,Venue
+venue-163897ad6c8c39f1,CGO,conference,Venue
+venue-164720ba1b37ba80,ROSE,conference,Venue
+venue-16548b9c62aa5670,INFORMATIK,conference,Venue
+venue-165ae3a9b001cfbb,ICCSE (1),conference,Venue
+venue-1666ffdeaaa27130,SegTHOR@ISBI,conference,Venue
+venue-166b04b187fc04cf,Memetic Comput.,journal,Venue
+venue-1674ff388b78152d,SIGSIM-PADS,conference,Venue
+venue-16d5597e2110b75a,J. Organ. End User Comput.,journal,Venue
+venue-16ef377a4019ae31,CONIELECOMP,conference,Venue
+venue-170b406db7080088,CCECE,conference,Venue
+venue-172fbfa9e0dfb843,Commun. ACM,journal,Venue
+venue-175f0c87bf7bb939,J. Comput. Soc. Sci.,journal,Venue
+venue-177bdfdbfe7ab956,ProfIT AI,conference,Venue
+venue-1793aa6bf704232b,ISVC (2),conference,Venue
+venue-17a522f27fbda08d,Data Min. Knowl. Discov.,journal,Venue
+venue-17b8462fef40c3ca,Cybersecur.,journal,Venue
+venue-17e9f0f2ba804549,SoCC,conference,Venue
+venue-17ef699e48d447ac,Euro-Par (1),conference,Venue
+venue-1801f981f0d845da,HLT-NAACL,conference,Venue
+venue-180eb062d11ffdb2,HCI (53),conference,Venue
+venue-183a9edf9d402121,Cloudtech,conference,Venue
+venue-184b2f9afe0ed565,J. Stat. Softw.,journal,Venue
+venue-186c4a600037ab44,ISQED,conference,Venue
+venue-1880914e1dc38970,Software Engineering Companion,conference,Venue
+venue-189b9461b30dcfd8,ICEIS (1),conference,Venue
+venue-18d93ffdc2129762,FG,conference,Venue
+venue-190d7fcf21e151cb,ISCA,conference,Venue
+venue-190ee75e7965c55e,SIGKDD Explor.,journal,Venue
+venue-191a03c436759977,AI-Cybersec@SGAI,conference,Venue
+venue-192eb35d32698ffb,ISCID (1),conference,Venue
+venue-19655fd29ff91489,DASFAA (4),conference,Venue
+venue-1965914bb978dd51,ICIC (18),conference,Venue
+venue-1966d86cbe009c72,IRICT,conference,Venue
+venue-196b5a6b154b6473,IEEE Trans. Pattern Anal. Mach. Intell.,journal,Venue
+venue-19985a8888573b7d,Int. J. Wirel. Mob. Comput.,journal,Venue
+venue-19a3af7345eafce0,WMT,conference,Venue
+venue-19a5a4799e5db314,MLIC,conference,Venue
+venue-19ac88b733fdc8c6,EUSPN/ICTH,conference,Venue
+venue-19d09912a150dbc6,ICIS,conference,Venue
+venue-19d37a743ae642a4,MMAsia Workshops,conference,Venue
+venue-19e4b720790997d2,ICACDS,conference,Venue
+venue-19fd4b54f4ce195a,WSDM,conference,Venue
+venue-1a1e6f4691c83582,COLT,conference,Venue
+venue-1a1e82b641177488,Ann. des Télécommunications,journal,Venue
+venue-1a2f09731fe04e60,TDS,conference,Venue
+venue-1a31bfe1b5f35cb6,ESWC (Satellite Events),conference,Venue
+venue-1a4c77893b1659bd,CSA/CUTE,conference,Venue
+venue-1a546a06cdbc4697,BTW Workshops,conference,Venue
+venue-1a7172f2ea382993,ICALT,conference,Venue
+venue-1ad5e9e513f9a85c,IICAIET,conference,Venue
+venue-1ae46d2a0dd961a4,CISP-BMEI,conference,Venue
+venue-1afd9f2efab29e8d,PRICAI (1),conference,Venue
+venue-1b2aee7b54d13885,AISI (2),conference,Venue
+venue-1b45fd3534503c9f,IIKI,conference,Venue
+venue-1b4b7229cf10971f,IJCNLP (Shared Tasks),conference,Venue
+venue-1b72c856707693ee,CHI PLAY,conference,Venue
+venue-1b72ebf10c12c9ad,GRAIL/OCELOT@MICCAI,conference,Venue
+venue-1b981b79f11d9525,Oper. Res. Decis.,journal,Venue
+venue-1b9d366695e0605f,FTC (2),conference,Venue
+venue-1ba9112c689b8862,LA-CCI,conference,Venue
+venue-1bb2c354095172ae,IJCNLP (Findings),conference,Venue
+venue-1bc34f7a3218b7ab,BCI,conference,Venue
+venue-1bd26c04eabe37f4,ICCBD,conference,Venue
+venue-1bf0e4e0bb203148,ICONIP (1),conference,Venue
+venue-1c066af1fe406e21,MediaEval,conference,Venue
+venue-1c082f27bd01738b,BEHAIV@ECAI,conference,Venue
+venue-1c25ef6a3ef958e0,ICAIS (1),conference,Venue
+venue-1c2db74db16b8ccb,HotNets,conference,Venue
+venue-1c4ef327980cd869,ICME,conference,Venue
+venue-1c5dfdd9c38f8e2c,Comput. Intell. Neurosci.,journal,Venue
+venue-1c693763005ce9aa,ISVC (1),conference,Venue
+venue-1c75f83005a1d76f,SAS,conference,Venue
+venue-1c89bcb8ac568490,WWW (Companion Volume),conference,Venue
+venue-1cb77fc86176cdc0,ESWC (2),conference,Venue
+venue-1cd63cafdd35ad9f,UIST,conference,Venue
+venue-1d27b5d4d702a8f5,PKAW,conference,Venue
+venue-1d55471b4963a1cb,ICCST,conference,Venue
+venue-1d7480e4b9503901,ACI@ICAIDS,conference,Venue
+venue-1da5e659bb1bd875,SmartGridComm,conference,Venue
+venue-1de7d9feda483e43,HiPC,conference,Venue
+venue-1dfa96748f04c720,HPEC,conference,Venue
+venue-1e173ea07078548d,AI,conference,Venue
+venue-1e2160df5c3b179c,DL4KG@ISWC,conference,Venue
+venue-1e6d999c20c457c9,Int. J. Grid Util. Comput.,journal,Venue
+venue-1e7a54067f3fe86d,Symmetry,journal,Venue
+venue-1e96edd4ad7a60fa,TrackRAD@MICCAI,conference,Venue
+venue-1ea2956fa301629b,PRCV (6),conference,Venue
+venue-1ea5a3237248cd7d,ML4CPS,conference,Venue
+venue-1ea969dba1cd3330,BMVC,conference,Venue
+venue-1ec52266b1d4117a,D2R2,conference,Venue
+venue-1ec56e38d4c4424a,EITCE,conference,Venue
+venue-1efcee7fa7815b54,FedCSIS,conference,Venue
+venue-1f083301464402c1,Auton. Intell. Syst.,journal,Venue
+venue-1f170f6d05049c24,LADC,conference,Venue
+venue-1f1a5a36bf259b16,DPTA,conference,Venue
+venue-1f2138e3a135de00,SmartWorld/UIC/ScalCom/DigitalTwin/PriComp/Meta,conference,Venue
+venue-1f43e60a21208a00,JURIX,conference,Venue
+venue-1f5111a4fa76b135,SecTL@AsiaCCS,conference,Venue
+venue-1f7c22e83e3c1925,Quantum Mach. Intell.,journal,Venue
+venue-1f9a17bea96639e7,IIAI-AAI,conference,Venue
+venue-1faa838738d8be2b,ICDAR (6),conference,Venue
+venue-1fac2fad633ff50c,WEA,conference,Venue
+venue-1fc08867388556e7,ICPR (12),conference,Venue
+venue-1fc68a65784ae6d9,BioNLP-OST@EMNLP-IJNCLP,conference,Venue
+venue-1fde32b84d4a3654,Appl. Math. Comput.,journal,Venue
+venue-201f695ee23c0c95,MuC,conference,Venue
+venue-2025dd8defcfa680,ISACom@MobiCom,conference,Venue
+venue-2037509a4de16bc4,ICDAR (4),conference,Venue
+venue-2045c1a9f54b2eb2,ICPE (Companion),conference,Venue
+venue-205b134d656e6c86,SFPVV,conference,Venue
+venue-206db3e7413dd4fb,SEED,conference,Venue
+venue-20739fa87de80504,Pac. Asia J. Assoc. Inf. Syst.,journal,Venue
+venue-20902e4b0978139a,GECCO (Companion),conference,Venue
+venue-2093a1ae6db6947d,J. Inf. Technol. Educ. Res.,journal,Venue
+venue-209b16bc01f0baa9,ICWE,conference,Venue
+venue-20bd1734444b4a2d,Computer-Aided Diagnosis,conference,Venue
+venue-20d3863a62929dcd,Int. J. Artif. Intell. Mach. Learn.,journal,Venue
+venue-20dc43ae0341cee2,Appl. Artif. Intell.,journal,Venue
+venue-20e44dd2b1c37208,SafeAI@AAAI,conference,Venue
+venue-20fd32d3e7d91849,OZCHI,conference,Venue
+venue-212b754f404f9b81,EURASIP J. Wirel. Commun. Netw.,journal,Venue
+venue-2157c0006a9d694f,EAI Endorsed Trans. Pervasive Health Technol.,journal,Venue
+venue-215d18b5088e164f,Comput. Stat.,journal,Venue
+venue-216f5483b6420eb2,"ICPR (Workshops and Challenges, 6)",conference,Venue
+venue-21756338193ee165,LSC@ICMR,conference,Venue
+venue-2191602c8b5c8dc0,Mach. Transl.,journal,Venue
+venue-21965701f21c78f5,Synth.,journal,Venue
+venue-21c6cef9e4c64ce3,MedInfo,conference,Venue
+venue-21ca7d45ee7661c2,Wirtschaftsinformatik,conference,Venue
+venue-21d71bcdf4bd8e00,SmartCloud,conference,Venue
+venue-21d89f98009be63c,ICNC,conference,Venue
+venue-21dba0d7239f9812,Biomed. Signal Process. Control.,journal,Venue
+venue-225a73d1941bf73b,MSR,conference,Venue
+venue-2269440dbf88d85c,AMIR@ECIR,conference,Venue
+venue-2285188a6bac8cce,DSMP,conference,Venue
+venue-2285a133a3b1ed4b,ICRA,conference,Venue
+venue-229bce7031b19522,MULTITTRUST@HAI,conference,Venue
+venue-22a8d83bc6cd73a9,IRI,conference,Venue
+venue-22d546c4c7ff3349,ICMAI,conference,Venue
+venue-23200b6ae7b5b4a8,ICEBE,conference,Venue
+venue-2357710154941fe6,BCCA,conference,Venue
+venue-236c1472f44c596d,EEKE/AII@iConference,conference,Venue
+venue-2385514704225ba2,AIKE,conference,Venue
+venue-23fb0c622bd4b968,NLPCC (1),conference,Venue
+venue-2440a16d7b2022d2,ICACCI,conference,Venue
+venue-24688eb6c100a81a,SITA,conference,Venue
+venue-24842c68347af452,Comput. Softw. Big Sci.,journal,Venue
+venue-24aaa52b59e7d564,AINA,conference,Venue
+venue-24c13922c10f83b4,IJCCI,conference,Venue
+venue-24c9cc0764e7b7e4,J. Inf. Knowl. Manag.,journal,Venue
+venue-24d2c7a96b051ca8,Fuzzy Sets Syst.,journal,Venue
+venue-24e761d13059210c,ARQNL@IJCAR,conference,Venue
+venue-24f849271514458a,DSD,conference,Venue
+venue-2508e28c99601c5e,CVPR Workshops,conference,Venue
+venue-2521dff4c69500da,J. Artif. Intell. Conscious.,journal,Venue
+venue-252299b4dc13378f,ICARCV,conference,Venue
+venue-252883232b2ed5f9,NarSUM@MM,conference,Venue
+venue-252bd07de69f348b,SBD@SIGMOD,conference,Venue
+venue-252fec6475ada974,ECSCW,conference,Venue
+venue-25338cb3809be230,IEEE J. Sel. Top. Signal Process.,journal,Venue
+venue-25445b899737ab64,HSI,conference,Venue
+venue-255ba847e3487357,HPCS,conference,Venue
+venue-255f2443b3b3c258,ISGT Asia,conference,Venue
+venue-2565962d25a9de02,SEMANTiCS (Posters & Demos),conference,Venue
+venue-256beb64ac58f707,Medication and Adverse Drug Event Detection,conference,Venue
+venue-25be661d3908751f,IWSDS,conference,Venue
+venue-25d36689010d0060,ESORICS Workshops (2),conference,Venue
+venue-2605e0eba95ba987,ISOEN,conference,Venue
+venue-2610f77195933c38,Distributed Parallel Databases,journal,Venue
+venue-261c8c633242ff45,ACM Trans. Archit. Code Optim.,journal,Venue
+venue-261ed1266531c9c0,Int. J. Netw. Secur.,journal,Venue
+venue-266056f775ec4b76,WANLP@EMNLP,conference,Venue
+venue-266f91a273e4ded9,ISD,conference,Venue
+venue-2687e6b74d657f5f,HAI,conference,Venue
+venue-268d658cec4f8539,Proc. Natl. Acad. Sci. USA,journal,Venue
+venue-26a2ea02f7337be1,APWeb-WAIM (1),conference,Venue
+venue-26a2faf966e42a4a,LOPAL,conference,Venue
+venue-26a3a492dced9c90,IEEE Trans. Comput. Biol. Bioinform.,journal,Venue
+venue-26a64f28b1d973ab,CBD,conference,Venue
+venue-26b54b5da57632e8,Int. J. Wavelets Multiresolution Inf. Process.,journal,Venue
+venue-26b699e7487b1fa8,CECC,conference,Venue
+venue-271e1371920751e4,CaPTion@MICCAI,conference,Venue
+venue-2732c1f8f2097cd8,IEEE Trans. Comput. Soc. Syst.,journal,Venue
+venue-27691d01e0859e5f,MobiSec,conference,Venue
+venue-27778b4148d8d364,Comput. Sci. Rev.,journal,Venue
+venue-278066bb45b14c3d,ICDF2C (2),conference,Venue
+venue-27875738fe619d61,IUKM (1),conference,Venue
+venue-2797ccde1273c1e7,GoodIT,conference,Venue
+venue-27a146358bf5b059,Wirel. Commun. Mob. Comput.,journal,Venue
+venue-27c79556dbf55326,Robotics Auton. Syst.,journal,Venue
+venue-27dc1ac510b5f6d7,ICFNDS,conference,Venue
+venue-27e997358ed939cd,PRCV (13),conference,Venue
+venue-27ec64b2b2c2151e,ITAT,conference,Venue
+venue-27eec2f9dfa66449,FDSE (CCIS Volume),conference,Venue
+venue-28413aacb69e2b9c,Complex Intell. Syst.,journal,Venue
+venue-284674bbd9d20104,AINA Workshops,conference,Venue
+venue-2848f56cd7be678a,Comput. Hum. Behav.,journal,Venue
+venue-2858378f7e42c419,ICIC (7),conference,Venue
+venue-286cfd7ec49132cb,SBSI,conference,Venue
+venue-2872f2baf2b6c82f,AIPR,conference,Venue
+venue-28a4784275da5dca,DART/MIL3ID@MICCAI,conference,Venue
+venue-28b4ec987e1ab4b0,IntelliSys (2),conference,Venue
+venue-29198c4fa0a8f571,Expert Syst. J. Knowl. Eng.,journal,Venue
+venue-2930a2d7e5cf89e6,PRIMA,conference,Venue
+venue-293273e8e4922d53,CyberC,conference,Venue
+venue-2932f18ff68c4c02,GHTC,conference,Venue
+venue-293bdd29a5dc2adf,ISIVC,conference,Venue
+venue-2965ac56c4589685,ACC,conference,Venue
+venue-29684f69dc8f7917,ICMI,conference,Venue
+venue-296ab01f35fb70cb,IEEM,conference,Venue
+venue-29856cb1bc4d630b,MODELS-C,conference,Venue
+venue-29aec776ef8b927b,CCS,conference,Venue
+venue-29b05ff837c8fbf4,IEEE J. Solid State Circuits,journal,Venue
+venue-29b2e5caf87f7c8e,Int. J. Distributed Sens. Networks,journal,Venue
+venue-29cb67585a3cabba,IST,conference,Venue
+venue-29cc216abd84f13d,J. Inf. Technol. Res.,journal,Venue
+venue-29db1206fee917b8,EPIA,conference,Venue
+venue-29e4884aac4121aa,ECML/PKDD (2),conference,Venue
+venue-29f0d3dd6047206d,RO-MAN,conference,Venue
+venue-2a0dc39289036789,Math. Struct. Comput. Sci.,journal,Venue
+venue-2a56155c677dd14b,Clust. Comput.,journal,Venue
+venue-2a85edf68542f09a,CAEPIA,conference,Venue
+venue-2a8fa74f86e131bc,MIWAI (2),conference,Venue
+venue-2a9617213a84e547,IEEE Trans. Netw.,journal,Venue
+venue-2aa5cf684115ab61,TREC,conference,Venue
+venue-2aa8605f2e562a9a,MEDES,conference,Venue
+venue-2ae26aa2ced33de8,AIR,conference,Venue
+venue-2b0b304c11afa197,BTW,conference,Venue
+venue-2b16985c95079495,ECCV (24),conference,Venue
+venue-2b21a28bcf03563d,AHFE (2),conference,Venue
+venue-2b4ed5d7114f343f,ESORICS (4),conference,Venue
+venue-2b5267bca6f40af6,ICBASE,conference,Venue
+venue-2b555a9346252f63,ICCC Workshops,conference,Venue
+venue-2b7b37d9a0b47ec6,HPCC/CSS/ICESS,conference,Venue
+venue-2b7f8eab46ccfc8e,WADT,conference,Venue
+venue-2ba8904241e1093e,IoTBD,conference,Venue
+venue-2bb1ca9922709b93,ICITL,conference,Venue
+venue-2bc59bcff901afef,FICTA (1),conference,Venue
+venue-2bc86c9d73932db8,SBP-BRiMS,conference,Venue
+venue-2bd05f688f10f73c,Int. J. Manuf. Res.,journal,Venue
+venue-2be9a8bc6f9234f1,Connect. Sci.,journal,Venue
+venue-2c05c6424a754edd,SBES,conference,Venue
+venue-2c0e473dcf55c8c5,J. Informetrics,journal,Venue
+venue-2c123db0998346de,ICCDA,conference,Venue
+venue-2c177c9ab4f51905,Comput. Oper. Res.,journal,Venue
+venue-2c2390518e3b4760,ACM Trans. Evol. Learn. Optim.,journal,Venue
+venue-2c3e7f6d31e3d1e7,ANT/EDI40,conference,Venue
+venue-2c4796258b3bade4,Humanoids,conference,Venue
+venue-2c5347bc3769f603,Inf. Fusion,journal,Venue
+venue-2c90f7204aab0066,SPCOM,conference,Venue
+venue-2c9fb59c3ad509fd,DeLFI,conference,Venue
+venue-2cc3359bfde34de5,ICDM (Workshops),conference,Venue
+venue-2cd84a427a5d3341,ECIS,conference,Venue
+venue-2cd92416f85b1c92,LLM4Code@ICSE,conference,Venue
+venue-2cfdae4cc4adc2f2,NIPS,conference,Venue
+venue-2d14c483ca4ba45a,HCI (19),conference,Venue
+venue-2d225ebbc4160d74,J. Inf. Sci. Eng.,journal,Venue
+venue-2d3106cfe4c050f1,WebMedia,conference,Venue
+venue-2d56e7ee193edcc8,HPCC,conference,Venue
+venue-2d605df458a8ff47,ACM J. Data Inf. Qual.,journal,Venue
+venue-2d625117f7112558,ICSS,conference,Venue
+venue-2d6ea98fdd7542df,J. Medical Syst.,journal,Venue
+venue-2d8f0194a3b827c1,ER Workshops,conference,Venue
+venue-2d95780b6e83deb9,MICAI (1),conference,Venue
+venue-2d9a0323ff5c8a66,PLDI,conference,Venue
+venue-2da1256df97870cf,PRIS,conference,Venue
+venue-2db772168f24b54b,ISWC (Demos/Industry),conference,Venue
+venue-2dd5a8789651aa1e,Inf. Syst.,journal,Venue
+venue-2df440850ec7a8b5,ACCV Workshops (2),conference,Venue
+venue-2e3137d44a2d7e65,IEEE Trans. Ind. Informatics,journal,Venue
+venue-2e6e7d8c1fcf952b,MetroXRAINE,conference,Venue
+venue-2e82f578978606ac,ITIB,conference,Venue
+venue-2e84a3d41bf0850c,ICACDS (1),conference,Venue
+venue-2eccc801070a30b9,eScience,conference,Venue
+venue-2f0b5962baafc513,SYNASC,conference,Venue
+venue-2f0d1a0a2b87c2b2,MMAC@MICCAI,conference,Venue
+venue-2f0e04683537b893,MobiSys,conference,Venue
+venue-2f22b328ec2bc9dc,LoG,conference,Venue
+venue-2f3a579c84769042,SpatialDI,conference,Venue
+venue-2f417ce523428e41,ISWC,conference,Venue
+venue-2f4f40d919c3b24a,KICSS,conference,Venue
+venue-2f52d71c4604e32f,ICIC (24),conference,Venue
+venue-2f60f28e0e983bf2,VISIGRAPP (3): VISAPP,conference,Venue
+venue-2f687de789edacf9,COLING,conference,Venue
+venue-2fb25c15eb89e1dc,Frontiers Artif. Intell.,journal,Venue
+venue-2fb2ea0e5f36c1d0,Comput. Math. Methods Medicine,journal,Venue
+venue-2fb3e35e9e8d79f2,EILM,conference,Venue
+venue-2fbabe2e5c50c399,ECAI,conference,Venue
+venue-2fc332cd8b02bbc0,Int. J. Syst. Sci.,journal,Venue
+venue-2fe2836d3b69a2fe,CSE/EUC (1),conference,Venue
+venue-3000ce43945d1161,CoRR,journal,Venue
+venue-3020e9c504de755a,AIED (2),conference,Venue
+venue-303627ab014cd182,AVSS,conference,Venue
+venue-304a9bfb48a24264,DaEng,conference,Venue
+venue-304c9a14e07379c9,J. Nat. Lang. Process.,journal,Venue
+venue-30553a59b2aa6cbb,WISA,conference,Venue
+venue-30633af6e5252803,Univers. Access Inf. Soc.,journal,Venue
+venue-307d33defc7aa8b8,UEMCON,conference,Venue
+venue-3088ebbd4410dca4,J. Intell. Robotic Syst.,journal,Venue
+venue-30a53a5361656a62,CISS,conference,Venue
+venue-30c473e72a9b9fb9,Proc. ACM Comput. Graph. Interact. Tech.,journal,Venue
+venue-30e33e4967cf5967,ACPR,conference,Venue
+venue-3121fb49b7b1cd96,IEEE Big Data,conference,Venue
+venue-31580fd4bdf0652a,6GNet,conference,Venue
+venue-315ad8d9c3fac3a0,BDCA,conference,Venue
+venue-316c8b36680f24e6,Int. J. Enterp. Inf. Syst.,journal,Venue
+venue-316cc9941af344f4,MLCN@MICCAI,conference,Venue
+venue-31776cb3cf6cf2d0,Trans. Large Scale Data Knowl. Centered Syst.,journal,Venue
+venue-318cfdd46ff74583,Int. J. E Serv. Mob. Appl.,journal,Venue
+venue-31a6c9388df5f6e1,ICSET,conference,Venue
+venue-31e18754c941fa52,J. Ambient Intell. Humaniz. Comput.,journal,Venue
+venue-3203dcbd1ccd25dd,IEEE Trans. Mob. Comput.,journal,Venue
+venue-3217fb54677e14a4,ITiCSE (1),conference,Venue
+venue-323dadb917bb6fdc,APNOMS,conference,Venue
+venue-3246079e2ed686e5,MLCAD,conference,Venue
+venue-32530102f926c6e5,UbiComp/ISWC Adjunct,conference,Venue
+venue-326c1aab2dc2f465,ACM Trans. Graph.,journal,Venue
+venue-3272d2154b4cb396,AICV,conference,Venue
+venue-3277735cb8ac9765,SpaCCS Workshops,conference,Venue
+venue-327c2a75ab9e51c0,ICCVW,conference,Venue
+venue-32869c8815f90577,FedCSIS (Communication Papers),conference,Venue
+venue-32b7c73e4a2fa16b,NANOARCH,conference,Venue
+venue-32c9c7c56cfb794e,AMTA (1),conference,Venue
+venue-32e3b09ec3ede7f4,ICCIDS (2),conference,Venue
+venue-32f1a151f7895af5,COINS,conference,Venue
+venue-32f834dd2581d4d3,Softw. Pract. Exp.,journal,Venue
+venue-32fc447ed81efe80,ACM Comput. Surv.,journal,Venue
+venue-3307b38b81c813c8,PKDD/ECML Workshops (3),conference,Venue
+venue-3333e644d9d1ffd4,WOA,conference,Venue
+venue-333a235b79a5d93b,ICSCA,conference,Venue
+venue-335d9cae189e3d94,EKAW (Companion),conference,Venue
+venue-3367337bc7f694f0,ICLR,conference,Venue
+venue-337437aee37a406b,IDSTA,conference,Venue
+venue-33c0c84686368309,Int. J. Electron. Secur. Digit. Forensics,journal,Venue
+venue-33da126baf16f57e,ISGT-Europe,conference,Venue
+venue-33e82eab2bec0e97,JSAI-isAI Workshops,conference,Venue
+venue-33e98a17d5658aac,SACI,conference,Venue
+venue-33f6e5a319ddcab8,OECC/PSC,conference,Venue
+venue-340f6bce1a6bdd46,ISMIR,conference,Venue
+venue-3421a0cea4a49420,MWSCAS,conference,Venue
+venue-344e60e08ede9cda,CLiC-it,conference,Venue
+venue-34632ce2fa105c10,Artif. Intell. Medicine,journal,Venue
+venue-349e39d591b1bd3b,Mach. Learn. Knowl. Extr.,journal,Venue
+venue-34a8519fa1a9b104,ICAIDS,conference,Venue
+venue-34d923f794e73131,J. Open Source Softw.,journal,Venue
+venue-34ebf6e2c20e452c,Found. Trends Priv. Secur.,journal,Venue
+venue-34f4a6795a59a446,DSP,conference,Venue
+venue-34f5189a661533e2,CHDDH,conference,Venue
+venue-350312a1a90b44e4,EMBC,conference,Venue
+venue-35255bda5e20b9df,CAN@CoNEXT,conference,Venue
+venue-3533af84ebd9b26d,EMNLP/IJCNLP (1),conference,Venue
+venue-354bf74a732007c5,SIGCSE,conference,Venue
+venue-3583736a2a3abc55,AINA (1),conference,Venue
+venue-359626fabe092b39,SERA,conference,Venue
+venue-35a722a22761bcc3,Internet Things,journal,Venue
+venue-35a8161c2202fb22,ICCCS,conference,Venue
+venue-35a942d9dd3f5c44,ICFSP,conference,Venue
+venue-35af01401a2cf1bf,DARE@PKDD/ECML,conference,Venue
+venue-35b30748ce68eae9,Int. J. Pervasive Comput. Commun.,journal,Venue
+venue-35e21e7fe7126509,Int. J. Inf. Sec.,journal,Venue
+venue-35f29d5b4fb6aa3b,ICMTEL (2),conference,Venue
+venue-36098db41365899b,"ISWC (Posters, Demos & Industry Tracks)",conference,Venue
+venue-3614ee0c9c9c8b25,J. Medical Robotics Res.,journal,Venue
+venue-3663fef4db71cd4d,ISEC,conference,Venue
+venue-3664d781052d2655,ESEM,conference,Venue
+venue-36778f540f86bfa8,CLUSTER,conference,Venue
+venue-3682fc9330fdb7d4,ICISA,conference,Venue
+venue-36876c1ba0c38158,VSIP,conference,Venue
+venue-36a9412069bd7f10,ICSTW,conference,Venue
+venue-36d5d37ba2aeb243,Mark. Sci.,journal,Venue
+venue-372157a80b77ba50,CLEF,conference,Venue
+venue-373dc1a2cf61fae9,DMBD (1),conference,Venue
+venue-3752512fdfb44296,CEC,conference,Venue
+venue-3761cbe2515c34de,IEEE Trans. Robotics,journal,Venue
+venue-37693d5cad49ddf9,CCF Trans. High Perform. Comput.,journal,Venue
+venue-376b35e2074b08af,IIAI-AAI-Winter,conference,Venue
+venue-376f122f3cee34e9,eCom@SIGIR,conference,Venue
+venue-37bbbce3077da270,NSysS,conference,Venue
+venue-37c3640b8a409128,KKA,conference,Venue
+venue-37cff86e2b21d723,CBMS,conference,Venue
+venue-37ef5f991c227d6a,BICA*AI,conference,Venue
+venue-37efdbd32e549b6d,ARC,conference,Venue
+venue-37f1a0a7dea4330f,WMT@EMNLP,conference,Venue
+venue-37fa49a6187450fb,AMIA,conference,Venue
+venue-381cef9265c28ef6,VISIGRAPP (5: VISAPP),conference,Venue
+venue-3821860b5d2b4dd1,NBiS,conference,Venue
+venue-384e9cb7708a0af7,DESRIST,conference,Venue
+venue-3854b8a04a8187b2,HCI (17),conference,Venue
+venue-385575e4f82db2e6,AIS Trans. Hum. Comput. Interact.,journal,Venue
+venue-3870e911163ede41,Res. Comput. Sci.,journal,Venue
+venue-3879bfcc0d0fbffa,IJCNLP-AACL (Findings),conference,Venue
+venue-389c90387bbb8676,SOSP,conference,Venue
+venue-38a1e102ca193d39,IEICE Trans. Inf. Syst.,journal,Venue
+venue-38a5621590796b91,LABELS/DLMIA@MICCAI,conference,Venue
+venue-38c1a8133f137c54,Int. J. Web Based Learn. Teach. Technol.,journal,Venue
+venue-38c2d1940ae9a0f8,EMNLP,conference,Venue
+venue-38c99a9c1fc2f130,ICKII,conference,Venue
+venue-38d8e17c6b0fffc5,Trans. GIS,journal,Venue
+venue-3913c02039a6df0b,ICIPW,conference,Venue
+venue-3920a671d266b043,CSIT (1),conference,Venue
+venue-394374a8db0e1602,ISSTA,conference,Venue
+venue-3950646009a03c6f,COMPSAC (2),conference,Venue
+venue-395ea829a8022b1f,ACAI,conference,Venue
+venue-397574072536a97b,ICONIP (3),conference,Venue
+venue-398a03670d3ca668,Virtual Real.,journal,Venue
+venue-398ff90d6764c620,IOT4SAFE@ESWC,conference,Venue
+venue-39a8a629a0f15ebd,IAIL@HHAI,conference,Venue
+venue-39b42b2bf38b76d7,J. Softw. Evol. Process.,journal,Venue
+venue-39b6adff361bd56e,PKDD/ECML Workshops,conference,Venue
+venue-39bf600fe8baed51,ESANN,conference,Venue
+venue-39c442d825c4d345,SEAA,conference,Venue
+venue-39cd70a2a0a8387a,AIiH (1),conference,Venue
+venue-39d1ab8164475493,Wirel. Pers. Commun.,journal,Venue
+venue-39df48ff971bf4d8,FRUCT,conference,Venue
+venue-39f1d79b50ff2368,计算机科学,journal,Venue
+venue-3a077c0a70c25fcd,Int. J. Comput. Vis.,journal,Venue
+venue-3a0ba9292149f21b,Telecommun. Syst.,journal,Venue
+venue-3a0ee5332d90a181,IEEE Trans. Geosci. Remote. Sens.,journal,Venue
+venue-3a11fc03b6db9c88,IWDW,conference,Venue
+venue-3a1b488f89b2b821,ICIC (3),conference,Venue
+venue-3a40dc06b58a36ad,ECCV (53),conference,Venue
+venue-3a5ee5febce71a6a,Int. J. Model. Identif. Control.,journal,Venue
+venue-3a754a1c7c1a316e,Int. J. Fuzzy Log. Intell. Syst.,journal,Venue
+venue-3a785f966cef8edf,BrainLes@MICCAI (2),conference,Venue
+venue-3a7b2ba1a9fe46b3,IWSDA,conference,Venue
+venue-3a841a08e60af989,AIED (1),conference,Venue
+venue-3a9beb2d7c90bcc3,IEEE Syst. J.,journal,Venue
+venue-3ab630f0af236931,ICCAIS,conference,Venue
+venue-3aba378f2719ceec,ICON,conference,Venue
+venue-3ac37910cb35f064,MICCAI (5),conference,Venue
+venue-3afa33b3151bfaa9,Behav. Inf. Technol.,journal,Venue
+venue-3b21608aa6210ffe,SenSys,conference,Venue
+venue-3b391b3d68d734ee,HCI (27),conference,Venue
+venue-3b3ab2c589a21fd4,Appl. Comput. Syst.,journal,Venue
+venue-3b5a07662ea9f257,IW-FCV,conference,Venue
+venue-3b5c49e4b9f2778a,VarDial@EACL,conference,Venue
+venue-3b90039268f3e621,ICCSA (1),conference,Venue
+venue-3bab561daf53dfb6,WNLP@ACL,conference,Venue
+venue-3be71c257c1e96c8,VEHITS,conference,Venue
+venue-3c110ae5ad8b208f,Digit.,journal,Venue
+venue-3c135e8e2b2ea8a8,ICCAE,conference,Venue
+venue-3c1a98dac4f94872,IVMSP,conference,Venue
+venue-3c292891d674f332,QRS,conference,Venue
+venue-3c71b91617bcee7a,Int. J. Intell. Networks,journal,Venue
+venue-3c9187f3d8775610,Int. J. Comput. Sci. Eng.,journal,Venue
+venue-3c9483143629ce61,RLJ,journal,Venue
+venue-3c9752dd11b9516d,CinC,conference,Venue
+venue-3c9c51dcce4e0473,ISBRA,conference,Venue
+venue-3c9dfd78bbae99b4,Culture Computing,conference,Venue
+venue-3cd5fe00c270ac07,ERCIM News,journal,Venue
+venue-3cd9d52fab66783d,Proc. ACM Softw. Eng.,journal,Venue
+venue-3ce0f1342290ffa5,Trans. Recomm. Syst.,journal,Venue
+venue-3ce6c1b2053de1fb,IEEE Trans. Computers,journal,Venue
+venue-3cea74bb906e090f,VTC Spring,conference,Venue
+venue-3d0ab85455c3d419,J. Web Eng.,journal,Venue
+venue-3d0c2ec904c5f281,VL/HCC,conference,Venue
+venue-3d1adb58b0704411,RepL4NLP@ACL-IJCNLP,conference,Venue
+venue-3d3a36149d4d8a5b,STACOM@MICCAI,conference,Venue
+venue-3d65fadc40dfa36f,FIE,conference,Venue
+venue-3d6d2430bebd0367,Scand. J. Inf. Syst.,journal,Venue
+venue-3d786a9691113a54,Int. J. High Perform. Comput. Appl.,journal,Venue
+venue-3d79de8b1357b324,AINA (4),conference,Venue
+venue-3d851b3e9594ed85,ICNP,conference,Venue
+venue-3d8a54e03cd83889,RACS,conference,Venue
+venue-3d93abc1fc349b90,Computación y Sistemas (CyS),journal,Venue
+venue-3db1e8112c3fa9b9,CHI,conference,Venue
+venue-3dc9e304467adbb7,ECCV Workshops (7),conference,Venue
+venue-3dda371c243432af,Queueing Syst. Theory Appl.,journal,Venue
+venue-3df31f4f738225c3,AIAI (Workshops),conference,Venue
+venue-3e171828050f99f5,ACOMPA,conference,Venue
+venue-3e1d8abe57fa67cb,Int. J. Networked Distributed Comput.,journal,Venue
+venue-3e29f7617b544854,CIBB,conference,Venue
+venue-3e672667208f13a6,Evol. Comput.,journal,Venue
+venue-3e79433a66176b8a,REPAI,conference,Venue
+venue-3e83fdf41425fcd8,PeerJ Comput. Sci.,journal,Venue
+venue-3e8e10e004a97313,ICINCO (2),conference,Venue
+venue-3e8ed6e69be1660d,ICONIP (8),conference,Venue
+venue-3e931966e36de721,Autom. Remote. Control.,journal,Venue
+venue-3ea28f1427a328fb,IEEE Trans. Software Eng.,journal,Venue
+venue-3ebda9cab505a126,AACL/IJCNLP,conference,Venue
+venue-3ec79898b1e1510c,Frontiers Digit. Health,journal,Venue
+venue-3ec8d35a3a3ccfa1,Int. J. Signs Semiot. Syst.,journal,Venue
+venue-3eee9e2997df2869,Neural Networks,journal,Venue
+venue-3f0ce9eacf89abd8,RoboticCC,conference,Venue
+venue-3f3391b1ab93a7e5,ICDCIT,conference,Venue
+venue-3f44321c3332b84e,J. Comput. Methods Sci. Eng.,journal,Venue
+venue-3f5f2398ba909273,Int. J. Inf. Decis. Sci.,journal,Venue
+venue-3f7c282b61f8de2b,ICCHP (1),conference,Venue
+venue-3f800d9057dad85f,IEEE Trans. Comput. Aided Des. Integr. Circuits Syst.,journal,Venue
+venue-3f887659e6c9119e,ACM Trans. Comput. Hum. Interact.,journal,Venue
+venue-3fa31f630d8e0220,WANLP,conference,Venue
+venue-3fa9921dec292384,ICPRAM (Revised Selected Papers),conference,Venue
+venue-3fb30ba8d0abb412,AISTATS,conference,Venue
+venue-3fbd88d166f2e0d5,WASA (3),conference,Venue
+venue-3fe3cb231172ada4,CIARP,conference,Venue
+venue-3feaeef3bdd575f1,Int. J. Virtual Communities Soc. Netw.,journal,Venue
+venue-3ffcda2e2d374533,MICCAI (10),conference,Venue
+venue-4007a89be994be3a,iThings/GreenCom/CPSCom/SmartData/Cybermatics,conference,Venue
+venue-400bc5c6e1c00583,IEEE Trans Autom. Sci. Eng.,journal,Venue
+venue-4013e7f268baa156,ISESS,conference,Venue
+venue-401f85210ae7eeee,ICICT,conference,Venue
+venue-405e3cebc1a4342a,IEEE Trans. Circuits Syst. I Fundam. Theory Appl.,journal,Venue
+venue-407439a0e0e79941,Image Processing: Algorithms and Systems,conference,Venue
+venue-4081814efd55aca3,Remote. Sens.,journal,Venue
+venue-40a8bbf2ad98f323,ICPS,conference,Venue
+venue-40aa1209fb763ebf,ICONIP (4),conference,Venue
+venue-40b2ea37bdbd328a,NTCIR,conference,Venue
+venue-40cce0aa9fe1ad92,FIRE,conference,Venue
+venue-40d9426d84c82dc8,EUSIPCO,conference,Venue
+venue-40fafafa07a47f32,ICONIP (9),conference,Venue
+venue-411dfbeac4b97a1a,IDC,conference,Venue
+venue-413f0d3753d5666e,FIMH (2),conference,Venue
+venue-41446300a8685dff,ISWC (Industry/Doctoral Consortium/Posters/Demos),conference,Venue
+venue-414b9810635aa8a6,HT,conference,Venue
+venue-41550ed9faa8c9aa,SIGSOFT FSE Companion,conference,Venue
+venue-4180e6b99315c8ee,TrustCom/BigDataSE/ISPA (2),conference,Venue
+venue-41819e510afa3e31,HEALTHINF,conference,Venue
+venue-41833f654d083d4a,J. Digit. Imaging,journal,Venue
+venue-419a20aee93bd7c0,CAIP (2),conference,Venue
+venue-41a7dc1844870a9f,Nat. Comput. Sci.,journal,Venue
+venue-41adde7ab6b29ae1,LT-EDI,conference,Venue
+venue-41bcefd3e3a65a62,WSC,conference,Venue
+venue-41c8194ad56b85ac,STIL,conference,Venue
+venue-41e3919cb199f1a6,MICCAI (6),conference,Venue
+venue-41e51b2eb9474cdb,Ind. Manag. Data Syst.,journal,Venue
+venue-41eca30828a676b0,ICCSPA,conference,Venue
+venue-4207b75ac40393a5,Comput. Ind.,journal,Venue
+venue-422ae82fc852128c,MIUA (2),conference,Venue
+venue-4236c204b1868c21,CVIP (1),conference,Venue
+venue-426c7e289fa3c86a,Baltic HLT,conference,Venue
+venue-42762f4f0fff16d9,IEEE Trans. Commun.,journal,Venue
+venue-428465ee4c0eafc7,ECCV (26),conference,Venue
+venue-429e6e8fa77a4866,ICDM (Posters),conference,Venue
+venue-42bb581ed6bc712f,KONVENS,conference,Venue
+venue-42c14ede73dde1ff,MEMOCODE,conference,Venue
+venue-42d55f584607c7ae,MEDI,conference,Venue
+venue-42f3a0cc8fb4406b,GCPR,conference,Venue
+venue-431642f64b86f3c0,CF,conference,Venue
+venue-43189bae4c3fa7a9,SOSE,conference,Venue
+venue-432814425a20a870,ESORICS Workshops (3),conference,Venue
+venue-4337c493ddc1bb1f,RIIFORUM,conference,Venue
+venue-4338153fe2056759,SAMOS,conference,Venue
+venue-434f1c4881ccdb6e,AINA (6),conference,Venue
+venue-435673b3295c9026,ACSW,conference,Venue
+venue-43787e446e0d5f1f,IWAENC,conference,Venue
+venue-43a0c2afa2b3dfe8,J. Adv. Comput. Intell. Intell. Informatics,journal,Venue
+venue-43a858292e4fa8ab,AsiaSim (1),conference,Venue
+venue-43be7125daffac0a,BCD,conference,Venue
+venue-43cbc7c1bd9c0bae,ICMLCA,conference,Venue
+venue-4408dd74d534c59f,IBICA (1),conference,Venue
+venue-4434ec6b4c879181,DRC,conference,Venue
+venue-4437e5117ba993cb,J. Wirel. Mob. Networks Ubiquitous Comput. Dependable Appl.,journal,Venue
+venue-443d73c7b4a6b853,LOUHI@EMNLP,conference,Venue
+venue-4441aa79e30689c4,AICCC,conference,Venue
+venue-445f961f5acd11e4,J. Assoc. Inf. Sci. Technol.,journal,Venue
+venue-448cf64f0f5ecd72,ISTT,conference,Venue
+venue-4498cc975b7cb624,AI*IA,conference,Venue
+venue-44a647fab296449e,OcRI,conference,Venue
+venue-44e772be73c5248d,AIAI,conference,Venue
+venue-44ef6ea823a4fc39,LIDTA,conference,Venue
+venue-44f9a8aec3a30401,ICYRIME,conference,Venue
+venue-4529255d4de4145c,ASMUS@MICCAI,conference,Venue
+venue-4529e7b560df99b0,ICAISC (1),conference,Venue
+venue-4532525bf7773d4f,DART/DCL@MICCAI,conference,Venue
+venue-454606c614c0df8d,ISSRE,conference,Venue
+venue-456850f24d0f558b,Balt. J. Mod. Comput.,journal,Venue
+venue-45966148264a8e8c,J. Mobile Multimedia,journal,Venue
+venue-4597bb4a71694852,IEEE Trans. Cybern.,journal,Venue
+venue-45b0d8ff27562b86,AISNS,conference,Venue
+venue-45b261eadf470392,EDOC,conference,Venue
+venue-45d344e2d0830884,MTSummit (1),conference,Venue
+venue-45d60e853497023b,PAP@PKDD/ECML,conference,Venue
+venue-45f50a4f850492cd,ISAMSR,conference,Venue
+venue-460061cd25059a94,IEEE/ACM Trans. Netw.,journal,Venue
+venue-46403308a0fc61c0,ICIC (5),conference,Venue
+venue-46572311251d628b,M2VIP,conference,Venue
+venue-4662bb750c0d8649,MABS,conference,Venue
+venue-4676aaac20f27b97,UR,conference,Venue
+venue-4680b2950ee04ea2,Bridging@IJCAI/ECAI,conference,Venue
+venue-46ad3088e506cc94,ICIA,conference,Venue
+venue-46b05aa8f93056bd,NPC (2),conference,Venue
+venue-46b6dd619dbbda6d,Int. J. Robotics Res.,journal,Venue
+venue-46e6635c4af25e5e,MuSe @ ACM Multimedia,conference,Venue
+venue-46f10e8bf60c0891,SBBD,conference,Venue
+venue-46f6309635932710,GECCO,conference,Venue
+venue-475ba1a65bffe244,Soc. Netw. Anal. Min.,journal,Venue
+venue-475e55d20c5b5835,MWE@ACL,conference,Venue
+venue-476c0b8f7826b9c7,J. Comput. Chem.,journal,Venue
+venue-47b62eb6984b53b9,ACISP (3),conference,Venue
+venue-47dcc4ddb79ddbcf,Cyberpsychology Behav. Soc. Netw.,journal,Venue
+venue-47dd9f34c3bd21a7,MCSoC,conference,Venue
+venue-47f5c31362533d44,ECCV (38),conference,Venue
+venue-47fce45fccfc92b4,LTA@MM,conference,Venue
+venue-47fd4df2a3893bf2,AAAI Spring Symposia,conference,Venue
+venue-48048445a8a66017,ACM Trans. Asian Low Resour. Lang. Inf. Process.,journal,Venue
+venue-481848930d90f4a7,SMACD,conference,Venue
+venue-482db803f2cf3c75,CANDAR (Workshops),conference,Venue
+venue-4832b4065308eaa1,ICCCS (2),conference,Venue
+venue-4834449eaf07d202,ICIG (2),conference,Venue
+venue-4834c1d0afaa7ff9,SMM4H@NAACL-HLT,conference,Venue
+venue-484c16f57c469749,UbiSec,conference,Venue
+venue-485795f63f539b87,SoftCOM,conference,Venue
+venue-4869e6c3e6a5ccb2,ICBK,conference,Venue
+venue-4883df1d6bc3e0bd,SoftwareX,journal,Venue
+venue-48a23986b98698ac,ICFPT,conference,Venue
+venue-48abd6a57cfa810f,Proc. VLDB Endow.,journal,Venue
+venue-48ac6776fc7dc693,BioNLP,conference,Venue
+venue-48ae8d70ac3d400f,ALIFE,conference,Venue
+venue-48b56cc0b518b44e,EWAF,conference,Venue
+venue-48ba8f131366acd3,ICM,conference,Venue
+venue-48d57fd7a178148b,SIAM J. Optim.,journal,Venue
+venue-490158ff2041f442,ICBBS,conference,Venue
+venue-492b8921b51368af,Int. J. Online Biomed. Eng.,journal,Venue
+venue-495a77222c7be36a,SWAT4HCLS,conference,Venue
+venue-496fb0c119d30925,ISCC,conference,Venue
+venue-4978a3da5b73d533,Int. J. Digit. Earth,journal,Venue
+venue-4991f2493bdfc27b,IRPS,conference,Venue
+venue-4997b651d39ec2d3,ECCV Workshops (1),conference,Venue
+venue-49999144f493ed62,ICMIP,conference,Venue
+venue-49a36f21cc74a733,AIED (Posters/Late Breaking Results/...),conference,Venue
+venue-49c56f826aafe887,ATVA,conference,Venue
+venue-49c7e92dbde5f6d4,MISSI,conference,Venue
+venue-49d9756bcfe83fdf,IoTSMS,conference,Venue
+venue-4a00182a58a0a655,ICC Workshops,conference,Venue
+venue-4a0348d240ecc692,CSOC (2),conference,Venue
+venue-4a0a2f226db6c9a7,ICDAR Workshops (1),conference,Venue
+venue-4a1470c3441e106b,MLMI,conference,Venue
+venue-4a16deb3c4cac367,IEEE Trans. Intell. Veh.,journal,Venue
+venue-4a29a2362ec97c03,ICBDT,conference,Venue
+venue-4a5bbcbc71a5d8c3,DCAI (1),conference,Venue
+venue-4a72fa45375bd4e1,IEEE Veh. Technol. Mag.,journal,Venue
+venue-4a7786a4469e1d57,CCE,conference,Venue
+venue-4a7ac4c837aa6a2e,ICACIS,conference,Venue
+venue-4a7e9fd698b26499,SIGMOD Conference,conference,Venue
+venue-4aa2a2bfa5e2da6a,BICA,conference,Venue
+venue-4abb05e9d1fb1205,ICNC-FSKD,conference,Venue
+venue-4ad1ff38d599334c,JURSE,conference,Venue
+venue-4ae13d45d6394759,ICIAP (2),conference,Venue
+venue-4ae72afe779a0527,CLPsych@HLT-NAACL,conference,Venue
+venue-4ae965c2c0ec7248,DEXA Workshops,conference,Venue
+venue-4b0e0092c8cbbaa9,Central Eur. J. Oper. Res.,journal,Venue
+venue-4b1795acda164444,DASFAA (3),conference,Venue
+venue-4b1f073049016c11,ICO,conference,Venue
+venue-4b4890f83c0614e4,MLHC,conference,Venue
+venue-4b638c0630caff67,CollaborateCom,conference,Venue
+venue-4b67450f6b3718af,ICAART (Revised Selected Papers),conference,Venue
+venue-4b8f1566b6364da8,NETYS,conference,Venue
+venue-4baa00e7a9564600,WACV (Workshops),conference,Venue
+venue-4bb5294103eb19ee,J. Syst. Sci. Complex.,journal,Venue
+venue-4bb69e1f4062f374,EuroVis (Posters),conference,Venue
+venue-4bb80b6b9163607a,PAKDD (2),conference,Venue
+venue-4bc59c7b52049e6d,Intell. Decis. Technol.,journal,Venue
+venue-4bcdd206906dea2f,SSI,conference,Venue
+venue-4bd14a03467e3493,UAI,conference,Venue
+venue-4be8be13547c4ff1,GameSec (1),conference,Venue
+venue-4beb0c67b5580db3,NAACL-HLT (Findings),conference,Venue
+venue-4c0cc292f73a712f,FPT,conference,Venue
+venue-4c0dba0129d2f513,J. Comput. Graph. Stat.,journal,Venue
+venue-4c389bbe6ad6f8c6,ISPA/IUCC/BDCloud/SocialCom/SustainCom,conference,Venue
+venue-4c44c25aa2c4d04f,ICDT,conference,Venue
+venue-4c4fb7335eb03684,SAFECOMP Workshops,conference,Venue
+venue-4c6150e2bbf40283,ICIRA (4),conference,Venue
+venue-4c78bf68a1b6a0b1,IISSC/CN4IoT,conference,Venue
+venue-4cab5376223b9095,SMAP,conference,Venue
+venue-4cbe24214e2e12e4,DSAI,conference,Venue
+venue-4ccb72c5be85c62c,ICCCN,conference,Venue
+venue-4cdce14b39675128,MetroAutomotive,conference,Venue
+venue-4cf39369fafb848b,AI4KM@IJCAI,conference,Venue
+venue-4cf87b827760953c,ISNCC,conference,Venue
+venue-4cfe54895d0defa5,WiSNet,conference,Venue
+venue-4d0ff790801a5da2,Artif. Intell. Res.,journal,Venue
+venue-4d1d2b634d5273dc,Nat. Mac. Intell.,journal,Venue
+venue-4d27b9bf6802ec72,Qurator,conference,Venue
+venue-4d2ffefb2b5b3f23,ICAT,conference,Venue
+venue-4d45a0cbd99958a8,iiWAS,conference,Venue
+venue-4d52e308ccc81f4c,SECON,conference,Venue
+venue-4d5a1eb879db62fa,ICSAI,conference,Venue
+venue-4d5f4d9e887a2248,ARES,conference,Venue
+venue-4d6ef880bf5eaf88,SEAMS@ICSE,conference,Venue
+venue-4d8e1628ea2f8f20,UYMS,conference,Venue
+venue-4da53472a670331a,ACM Great Lakes Symposium on VLSI,conference,Venue
+venue-4da68e3573ed96d4,ICMLA,conference,Venue
+venue-4dbbebb63adc8994,ICIAP Workshops (1),conference,Venue
+venue-4dcac74f0a53abb0,DigiPro,conference,Venue
+venue-4dd4d1b9038161a6,CIbSE,conference,Venue
+venue-4de7d011495b13b1,AI (2),conference,Venue
+venue-4ded53f54aeb85dc,HIS (2),conference,Venue
+venue-4dfe5910f9377cd8,APSIPA,conference,Venue
+venue-4e10a251fac2ae57,NEW2AN/ruSMART,conference,Venue
+venue-4e1591091def4814,ICCCS (4),conference,Venue
+venue-4e1db2bd7083770c,Trans. Inst. Meas. Control,journal,Venue
+venue-4e310a1fe7696909,Qual. Reliab. Eng. Int.,journal,Venue
+venue-4e577e59962b559b,CoMSO,conference,Venue
+venue-4e6049d705437f29,QCE,conference,Venue
+venue-4ea62a9f94eaf67a,Digit. Soc.,journal,Venue
+venue-4ea6f1d1fcf0f067,MIPR,conference,Venue
+venue-4f07fd9b76b489fe,Softw. Qual. J.,journal,Venue
+venue-4f109422f8083612,KST,conference,Venue
+venue-4f2f1b82abec254d,IEEE Robotics Autom. Mag.,journal,Venue
+venue-4f33b531389c8485,IEEE Trans. Circuits Syst. Video Technol.,journal,Venue
+venue-4f49906cea12fc50,SOCO (2),conference,Venue
+venue-4f803873e693aac0,ACIIDS (Companion 2),conference,Venue
+venue-4fd09678fb3380d6,MMM (3),conference,Venue
+venue-4ff25cce28ecef42,NLP4KGC@SEMANTiCS,conference,Venue
+venue-4fff4ad87638e969,NAACL-HLT (Student Research Workshop),conference,Venue
+venue-5007568f70cef34d,FUSION,conference,Venue
+venue-5008c1ffd6f49f03,J. Imaging,journal,Venue
+venue-500c1081df5809be,Scalable Comput. Pract. Exp.,journal,Venue
+venue-5011afbb430505ff,ITTAP,conference,Venue
+venue-5018a3f2053a6edc,HHAI Workshops,conference,Venue
+venue-5018a4239b0b29b9,IDEAS,conference,Venue
+venue-502271bffb88b71d,IPDPS Workshops,conference,Venue
+venue-503221591fe2da8d,FNC/MobiSPC,conference,Venue
+venue-503f594e717a69f0,MLNLP,conference,Venue
+venue-5051997f5144d924,ICCCNT,conference,Venue
+venue-506bdc1d364d0f71,Int. J. Uncertain. Fuzziness Knowl. Based Syst.,journal,Venue
+venue-50a63bd4be2d3254,DaSET,conference,Venue
+venue-50aa74a45ccd541c,RecSys Posters,conference,Venue
+venue-50cce8f4e45feba9,ICIRA (9),conference,Venue
+venue-50f9c1845d756892,ICSE Companion,conference,Venue
+venue-510770ac01a89760,Entertain. Comput.,journal,Venue
+venue-5111cd4096aa4731,IET Signal Process.,journal,Venue
+venue-512800f75a9c4ee6,ECCV Workshops (8),conference,Venue
+venue-51426eae7c10dfe5,Int. J. Commun. Networks Inf. Secur.,journal,Venue
+venue-5163b8920b30e409,ACM TUR-C,conference,Venue
+venue-516ba07c3e283f42,Agro-Geoinformatics,conference,Venue
+venue-5177ecf812d06c37,SSD,conference,Venue
+venue-5188002a4ec12062,J. Artif. Soc. Soc. Simul.,journal,Venue
+venue-519928f652898812,S+SSPR,conference,Venue
+venue-519f774c0816943f,ECCV (13),conference,Venue
+venue-51b6aba5f71f4b9e,TrustCom,conference,Venue
+venue-51d812b3a98d6381,Int. J. Space Based Situated Comput.,journal,Venue
+venue-51dc46ecd7767556,DESIRES,conference,Venue
+venue-51eb49e70ed6471f,DPS,conference,Venue
+venue-51ef1d04ef8b55d8,ACM Trans. Intell. Syst. Technol.,journal,Venue
+venue-52010042f1dcf343,PAKDD (3),conference,Venue
+venue-521d6f2de5e1aae7,VINCI,conference,Venue
+venue-52289cb9a7cdf5e2,AMTA (2),conference,Venue
+venue-52307e5e4e2dab1e,SCIA (2),conference,Venue
+venue-523a094c5238df61,SPECOM,conference,Venue
+venue-527d360a188f8b48,J. Biomed. Semant.,journal,Venue
+venue-52883a3608ab07dd,Traitement du Signal,journal,Venue
+venue-52a164060e6cd335,Vis. Informatics,journal,Venue
+venue-52ad12e2997e20ef,IEEE Trans. Netw. Sci. Eng.,journal,Venue
+venue-52b6bf83ef7668e7,AITDS@IT&I,conference,Venue
+venue-52c3134a1cf179f6,VLSID,conference,Venue
+venue-52c949d24025a2ae,NLDL,conference,Venue
+venue-52d407f09e0a1184,ECCV (52),conference,Venue
+venue-52d89dbdaa1db538,NFM,conference,Venue
+venue-52fe3f3133a6ed15,IEEE Intell. Syst.,journal,Venue
+venue-530dfdff5c89ef83,Comput. Aided Des.,journal,Venue
+venue-5329fac2c772773f,APSEC,conference,Venue
+venue-5331a4f988709afd,ASONAM,conference,Venue
+venue-533746bfd8ad13a3,Robotica,journal,Venue
+venue-53513fd19e04da1e,ICPhS,conference,Venue
+venue-536d1f4f471b1bf6,SemEval@ACL,conference,Venue
+venue-537ad66443ec7180,MoDELS (Workshops),conference,Venue
+venue-53a80414c8bbca3b,ICSR+AI (1),conference,Venue
+venue-53ba874a84bd773a,EXAG/INT@AIIDE,conference,Venue
+venue-53bdf6484fa69fdd,Trans. Assoc. Comput. Linguistics,journal,Venue
+venue-53c8dc3839b278fc,NLPCC/ICCPOL,conference,Venue
+venue-53ef3443656caf31,Prog. Artif. Intell.,journal,Venue
+venue-53f3ec9104c7c0d4,JCRAI,conference,Venue
+venue-541c48d5febce1b8,Open J. Databases,journal,Venue
+venue-54320e83d30ec4a0,IJCNLP(1),conference,Venue
+venue-543e79ad484f34df,J. Internet Serv. Inf. Secur.,journal,Venue
+venue-545163b5d21ef420,Int. J. Account. Inf. Syst.,journal,Venue
+venue-546bd2a18caa20fd,CISIS-ICEUTE,conference,Venue
+venue-54b3b20d940435cf,IoT Streams/ITEM@PKDD/ECML,conference,Venue
+venue-54b98ef175532c3d,AsiaCCS,conference,Venue
+venue-54bca2b0ed066410,ComComAP,conference,Venue
+venue-54da66fa513fba66,ECCV (19),conference,Venue
+venue-54dacb9d07fa2f11,AISec@CCS,conference,Venue
+venue-54e6315b77cc0dd2,NiDS (1),conference,Venue
+venue-54f59834e3b9f311,EDM,conference,Venue
+venue-54f63a804f26a518,CSAE,conference,Venue
+venue-550c3f7b5c2cdb62,LaTeCH@NAACL-HLT,conference,Venue
+venue-55138a69c1f0786a,Commun. Nonlinear Sci. Numer. Simul.,journal,Venue
+venue-55279074a7c87b15,WITCOM,conference,Venue
+venue-552b080efb3606f0,ACCV (8),conference,Venue
+venue-55464589c779b45f,ACE,conference,Venue
+venue-554ccdfe58034a36,ESWC,conference,Venue
+venue-555721c826a706de,TKTP,conference,Venue
+venue-5566a21a3b070183,ICANN (7),conference,Venue
+venue-55c4926ed7e16b16,CAV (3),conference,Venue
+venue-55d0aa97ae2e7e89,CCIS,conference,Venue
+venue-55d4dc7f27df8658,ICCSCE,conference,Venue
+venue-55db9f4f30159529,ICMV,conference,Venue
+venue-55e7979db48ceb9c,MHV,conference,Venue
+venue-560e6a2905c60928,IC2E,conference,Venue
+venue-56131aef4dfb2216,IM,conference,Venue
+venue-561a5885f38e26c4,ICIAR,conference,Venue
+venue-561b2032973a6a0a,ETRA,conference,Venue
+venue-562ac1547b8f582c,IEEE Trans. Serv. Comput.,journal,Venue
+venue-5634a89a3cc3bec3,RoboCup,conference,Venue
+venue-564a50365e43081e,ICCCM,conference,Venue
+venue-565e10e10bfa9baf,Frontiers Appl. Math. Stat.,journal,Venue
+venue-566f37ffc624ed30,JOCN,journal,Venue
+venue-567f03734b750952,WAC,conference,Venue
+venue-5689bc9ec3baf94f,ICC 2016,conference,Venue
+venue-56d21af5c3d0422d,exp.at,conference,Venue
+venue-5702da1996299833,NoDaLiDa,conference,Venue
+venue-571c0a5adebf76ff,iSES,conference,Venue
+venue-5737dd79114132c9,ISWC (2),conference,Venue
+venue-573b881b57640355,J. Sens. Actuator Networks,journal,Venue
+venue-5745df763f085d13,Int. J. Document Anal. Recognit.,journal,Venue
+venue-57495136d29c5e44,CSCWD,conference,Venue
+venue-577f4fd57461b685,BEA,conference,Venue
+venue-578806f214e83ecc,IEEE Open J. Comput. Soc.,journal,Venue
+venue-57a8b74ce66267dd,MTSR,conference,Venue
+venue-57d492f3012c6357,ICMSSP,conference,Venue
+venue-580adbd6c1dc368c,FICTA (2),conference,Venue
+venue-58281e68d97f0dc2,IHTC,conference,Venue
+venue-582c082bd1705bd2,SKIMA,conference,Venue
+venue-583105e3030df1e4,Int. J. Web Grid Serv.,journal,Venue
+venue-583ca0a3e2ffd27a,BIOSIGNALS,conference,Venue
+venue-58474ec1bf5dd979,PEMDT@AMTA,conference,Venue
+venue-5847c5dd9638d646,APWCS,conference,Venue
+venue-584cbd90f9cbe89b,EMNLP (Findings),conference,Venue
+venue-584e21eb60eccf48,Found. Trends Inf. Retr.,journal,Venue
+venue-586f2dcdb13760e5,UNSURE@MICCAI,conference,Venue
+venue-58705c03a7663d42,SLaTE,conference,Venue
+venue-5886f97b0701266b,EUVIP,conference,Venue
+venue-5917613c7650c4a2,ECCV Workshops (4),conference,Venue
+venue-592fc15375877262,CAiSE Workshops,conference,Venue
+venue-59300398807b20aa,WorldCIST (1),conference,Venue
+venue-59351ff9af96adcd,ICOIN,conference,Venue
+venue-594cbcc8d912ac31,ICIC (1),conference,Venue
+venue-5982df5607a510ae,ICCMB,conference,Venue
+venue-59a837cfcf7d412b,COMPLEX NETWORKS (1),conference,Venue
+venue-59b847a20668e258,ICPADS,conference,Venue
+venue-59eb8774784df3b4,ISAIR (2),conference,Venue
+venue-59fba9568ed2ade2,Data Technol. Appl.,journal,Venue
+venue-5a02d25ace01f4cb,ICT4DA,conference,Venue
+venue-5a0937156ad57f3c,WI/IAT,conference,Venue
+venue-5a0f493e673db9ec,ICCCI (2),conference,Venue
+venue-5a11ffc21257d37b,M3E2-MLPEED,conference,Venue
+venue-5a4649c698374dc1,ISBI,conference,Venue
+venue-5a58123f377a5170,LOD (2),conference,Venue
+venue-5a59b3c1dd364843,BrainComp,conference,Venue
+venue-5a682897c6c17fa6,ROCLING,conference,Venue
+venue-5a75f525c0adf8a0,EASE,conference,Venue
+venue-5a882ec7438a596b,ICONIP (14),conference,Venue
+venue-5a8b1bfd76705a22,BDIOT,conference,Venue
+venue-5a8bb59024995169,PKDD/ECML Workshops (1),conference,Venue
+venue-5a9b0567ad0d27a7,Int. J. Data Anal. Tech. Strateg.,journal,Venue
+venue-5ab4b03adb5f3863,Int. J. Mob. Commun.,journal,Venue
+venue-5aba55428ae3ff67,ACM Trans. Multim. Comput. Commun. Appl.,journal,Venue
+venue-5abd1639a87a3768,EMCIS,conference,Venue
+venue-5ac1bb0fd3067d16,ICACS,conference,Venue
+venue-5ac2ffdf38afe99e,AIME (2),conference,Venue
+venue-5ad162fb662e226e,DroneCom@MobiCom,conference,Venue
+venue-5aecc55508f9ea61,Text2Story@ECIR,conference,Venue
+venue-5afaa2c4a164aad1,ACNS Workshops,conference,Venue
+venue-5afb5a496d4cfb67,EJC,conference,Venue
+venue-5afc5608d26112db,Bioinform.,journal,Venue
+venue-5b1162ed621c3875,ICANN (2),conference,Venue
+venue-5b5a9984fa220d37,NLPCC (5),conference,Venue
+venue-5b5ba9b15eacbc1d,Multiagent Grid Syst.,journal,Venue
+venue-5b62812a709cc9d4,NEW2AN,conference,Venue
+venue-5b75299be98e3f3e,ICEITSA,conference,Venue
+venue-5b91ca35ee246b2c,DCAI,conference,Venue
+venue-5ba6fe1268a3c19b,HRI,conference,Venue
+venue-5bbac9ad4eaa4ac9,Inf. Syst. Frontiers,journal,Venue
+venue-5bc220ad76bd13af,Math. Methods Oper. Res.,journal,Venue
+venue-5be337230673f190,ICTIR,conference,Venue
+venue-5be56ba563be4a37,ICT4AWE,conference,Venue
+venue-5bef6710ec55b41b,MLMI@MICCAI,conference,Venue
+venue-5bf1b9624f0b3ef7,Trans. Mach. Learn. Res.,journal,Venue
+venue-5c39cfa96772ff99,Patch-MI@MICCAI,conference,Venue
+venue-5c8ac4693238da56,Sustain. Comput. Informatics Syst.,journal,Venue
+venue-5c99f554050bc712,VCIP,conference,Venue
+venue-5ca7511cb1a9dd6f,ISPACS,conference,Venue
+venue-5caf407e6d20cbbf,IIP,conference,Venue
+venue-5cbcc3a2ed804fe4,ISSTA Companion,conference,Venue
+venue-5cdacba5ab3fcf77,Frontiers Comput. Sci.,journal,Venue
+venue-5cf0a2bc4d815824,SIGCOMM,conference,Venue
+venue-5cfe21276180a68b,Cybern. Syst.,journal,Venue
+venue-5d0c81fc6965e57e,BIC,conference,Venue
+venue-5d0e1bef1fae80cc,EuroS&P Workshops,conference,Venue
+venue-5d0f240611f161c1,IV,conference,Venue
+venue-5d1dbdbdbd02dac4,ICBO,conference,Venue
+venue-5d5f5f1e20d1b0dd,EPIA (2),conference,Venue
+venue-5d69edccf86bd834,AST,conference,Venue
+venue-5d7187a77ebea6db,CoSinE,conference,Venue
+venue-5d83cf32df312dd5,BIOSTEC (1),conference,Venue
+venue-5db728c6e0cf10a8,WOP,conference,Venue
+venue-5dd3964f2ee0d577,CCCV (3),conference,Venue
+venue-5dd3f0af5835863e,DTESI,conference,Venue
+venue-5ddb478d9c16c5ff,ICMHI,conference,Venue
+venue-5df642b0ec422110,UMAP,conference,Venue
+venue-5e1f85327b74f060,RANLP,conference,Venue
+venue-5e5e1d8e7406e4e3,PAKDD (Workshops),conference,Venue
+venue-5e6c7999fb1be831,OR Spectr.,journal,Venue
+venue-5e7a071ffedd22ef,SIGMETRICS Perform. Evaluation Rev.,journal,Venue
+venue-5e7b60eb3d220c30,MilCIS,conference,Venue
+venue-5e8085a1abf45893,EIT,conference,Venue
+venue-5e94ce9231b955e6,DASFAA (2),conference,Venue
+venue-5e9b770fab97815f,SIGCSE (1),conference,Venue
+venue-5eada1087e99fb94,SETN,conference,Venue
+venue-5f00eea543ce7093,KI,conference,Venue
+venue-5f14c51654e76cd9,CVIP (2),conference,Venue
+venue-5f20a6b0e25df801,SMARTCOMP,conference,Venue
+venue-5f24904f2d010900,ICDH,conference,Venue
+venue-5f274d12c312767e,J. Syst. Control. Eng.,journal,Venue
+venue-5f2ff23080f3283e,Elektrotech. Informationstechnik,journal,Venue
+venue-5f3277589ab26c24,PRCV (8),conference,Venue
+venue-5f35f7086aa5b9cb,ICSR+AI (3),conference,Venue
+venue-5f3cc41cd380bc81,ACM Trans. Model. Comput. Simul.,journal,Venue
+venue-5f59d11c0671a58b,J. High Speed Networks,journal,Venue
+venue-5f5adf93018a94b3,ICL-GNSS,conference,Venue
+venue-5f5d5ca07e1ec2a6,ARES (Workshops 4),conference,Venue
+venue-5f5dccfaccc84e86,Int. J. Swarm Intell. Res.,journal,Venue
+venue-5f7d3e26e1f045fb,ADIoT,conference,Venue
+venue-5f96b5ddcb5c65c4,IET Image Process.,journal,Venue
+venue-5fa900925efbf54f,EDGE,conference,Venue
+venue-5fae60fea23ce1a7,NAIS,conference,Venue
+venue-5fd0fcb6c0d0c664,J. Comput. Aided Mol. Des.,journal,Venue
+venue-5ff3269ca2330cce,ICCS,conference,Venue
+venue-602c333699787ea6,AITest,conference,Venue
+venue-603ba6e755adafae,REV,conference,Venue
+venue-603d2b4d66e31d5c,INTELLECT,conference,Venue
+venue-603f528180b74db5,UMAP (Adjunct Publication),conference,Venue
+venue-603f825e0132f38e,CPITS,conference,Venue
+venue-604dcade047ea744,ICPR,conference,Venue
+venue-607583c5c9408120,CICLing (1),conference,Venue
+venue-608925cfc88207dd,ACCV Workshops,conference,Venue
+venue-6099d25e6dfa0721,Trans. Int. Soc. Music. Inf. Retr.,journal,Venue
+venue-60ac2e279bc28de4,SIN,conference,Venue
+venue-60bbba3315f2c5b5,J. King Saud Univ. Comput. Inf. Sci.,journal,Venue
+venue-60d7d6e9abf671ee,ASP-DAC,conference,Venue
+venue-611c9855fcf6dadf,APWeb/WAIM (2),conference,Venue
+venue-612a121ed86d003e,ICUFN,conference,Venue
+venue-6169ef19ec95caaf,ICBET,conference,Venue
+venue-616f8a2c26ddd2de,Comput. Medical Imaging Graph.,journal,Venue
+venue-617ac8c65c180719,Interactions,journal,Venue
+venue-6193749019dd18f5,MICRO,conference,Venue
+venue-61c2509bc537426b,CARLA,conference,Venue
+venue-620b431fceccf922,J. Glob. Optim.,journal,Venue
+venue-6232996cb3395bfd,Comput. Syst. Sci. Eng.,journal,Venue
+venue-6253e9caeb2ab462,Peer Peer Netw. Appl.,journal,Venue
+venue-6259b480f120d69f,SEKE,conference,Venue
+venue-625ff8414881650f,IRIACV,conference,Venue
+venue-6266990af54b9ceb,AIIPCC,conference,Venue
+venue-6273c2d494593d67,ICVIP,conference,Venue
+venue-62b3f11c3f4371db,SNAPL,conference,Venue
+venue-62c231157e4313e2,AIES (1),conference,Venue
+venue-62c2f990bda0404f,IEEE Trans. Biom. Behav. Identity Sci.,journal,Venue
+venue-62c786e96b668761,DSN Workshops,conference,Venue
+venue-62c8aeedce728fed,RoEduNet,conference,Venue
+venue-62dd5dc1d57d020e,AINA (2),conference,Venue
+venue-62e1dfff2d57bccf,L@S,conference,Venue
+venue-62f71a5c13760bc2,IoTDI,conference,Venue
+venue-62ff4629aaa495d1,AINA (5),conference,Venue
+venue-62ffbeba0e1c29fc,IEEE Access,journal,Venue
+venue-632bd63b11221d46,FCV,conference,Venue
+venue-633ba06720f4314e,KSEM (2),conference,Venue
+venue-634f301850ddeaf1,IPTA,conference,Venue
+venue-6356d950a803cfbb,IEEE Trans. Cogn. Dev. Syst.,journal,Venue
+venue-63605aa71b740928,ICCI*CC,conference,Venue
+venue-63628bfd747d40e5,INTETAIN,conference,Venue
+venue-636c9fcea8002f37,IUI,conference,Venue
+venue-637f1e909e7a6d0d,GermEval@KONVENS,conference,Venue
+venue-638a3aaaa3920db9,Veh. Commun.,journal,Venue
+venue-63ba572131f6194f,High Confid. Comput.,journal,Venue
+venue-63d2d52edba456e8,SSTD,conference,Venue
+venue-63e516ada555d975,Informatica (Slovenia),journal,Venue
+venue-63e641c64a2bcaa1,J. Theor. Appl. Electron. Commer. Res.,journal,Venue
+venue-63ef90a454ff6bba,EGOV-CeDEM-ePart-*,conference,Venue
+venue-640350a9602e3aaf,ITW,conference,Venue
+venue-641b80dbd9210eb2,IEEE Comput. Archit. Lett.,journal,Venue
+venue-64405d13f12e9862,IEEE Trans. Control. Netw. Syst.,journal,Venue
+venue-6458f8ee519a4ab0,Concurr. Comput. Pract. Exp.,journal,Venue
+venue-646be804d9469d8f,ICPR (28),conference,Venue
+venue-6474422f3a90c333,APIT,conference,Venue
+venue-64a219fc6f7092ad,ICLR (Poster),conference,Venue
+venue-64c690632512c879,IWSPA@CODASPY,conference,Venue
+venue-64f958c3044e7756,CVIPPR,conference,Venue
+venue-6507f2076f189027,KES-AMSTA,conference,Venue
+venue-6523cdfe95dca1e2,Neural Comput.,journal,Venue
+venue-652916ac6788e2bc,ACISP,conference,Venue
+venue-653067f5d5528a9e,Formal Aspects Comput.,journal,Venue
+venue-654e80aeedb6e6a6,Int. J. Ad Hoc Ubiquitous Comput.,journal,Venue
+venue-65505408710d1118,BioData Min.,journal,Venue
+venue-6568d952371da30d,Comput. Methods Programs Biomed.,journal,Venue
+venue-6586b79ea2c71033,IEEE Trans. Neural Networks Learn. Syst.,journal,Venue
+venue-659cb812e2644d7f,HCI (6),conference,Venue
+venue-65a5b579a14284ca,Lang. Resour. Evaluation,journal,Venue
+venue-65a753d22e4ff3d8,QRS Companion,conference,Venue
+venue-65c90e136327da7f,SEC,conference,Venue
+venue-65d49c54a8f45710,ASICON,conference,Venue
+venue-65e658cec29a63d7,CollabTech,conference,Venue
+venue-65ec7f70c0ac8d44,Int. J. Imaging Syst. Technol.,journal,Venue
+venue-66044576b512110e,ICISCAE (ACM),conference,Venue
+venue-6619ca95d2d9676b,Iran J. Comput. Sci.,journal,Venue
+venue-6637bbed488f4407,Rep4NLP@ACL,conference,Venue
+venue-664aec6ebc154667,FICC (2),conference,Venue
+venue-6670ff1e99a8c01a,EANN,conference,Venue
+venue-66839e0ba0d55cd3,World Wide Web,journal,Venue
+venue-66853f4291963160,ICIDS (2),conference,Venue
+venue-668b54c62e418985,ICCCV,conference,Venue
+venue-66ad80ecd790b585,ISIT,conference,Venue
+venue-66d08e01d4dad9a0,MFI,conference,Venue
+venue-66e6b40e7a0582c6,IEA/AIE,conference,Venue
+venue-670040d2da5a56f7,Bull. Comput. Data Sci.,journal,Venue
+venue-670ed9bdb7b049f3,J. Inf. Process.,journal,Venue
+venue-6739a1e742f411e6,dHealth,conference,Venue
+venue-673f88f5b15476a7,ECTEL (Doctoral Consortium),conference,Venue
+venue-6740814d0464244e,VTC Fall,conference,Venue
+venue-675fceecdb5e0f76,ICCAI,conference,Venue
+venue-67693aa6449b1086,Sci. Comput. Program.,journal,Venue
+venue-67829ebdc1b41a0d,CloudCom,conference,Venue
+venue-678f1ff4414a5911,ICIMMI,conference,Venue
+venue-679f05625f1be5f2,Datenbank-Spektrum,journal,Venue
+venue-67cd7301097e6903,PCI,conference,Venue
+venue-67d2986e488f45c8,SC Workshops,conference,Venue
+venue-6807b41babf27c13,CCL (Chinese Papers),conference,Venue
+venue-682a1280e7de90d7,GOODTECHS,conference,Venue
+venue-68628492cb954964,RODBH,conference,Venue
+venue-6866b3901c3ea29b,SysCon,conference,Venue
+venue-686fe6a249881ecc,Int. J. Inf. Technol. Web Eng.,journal,Venue
+venue-688160643a845639,ICISCAE,conference,Venue
+venue-688d976e1c7bf41e,IWINAC (2),conference,Venue
+venue-68a1332afe350159,RADIOELEKTRONIKA,conference,Venue
+venue-68b3ddd17370d1d3,SITIS,conference,Venue
+venue-68b9fa820d7173ad,ICMTEL (1),conference,Venue
+venue-68c247e79a0fbac0,World Wide Web (WWW),journal,Venue
+venue-68e068b1bd769dd4,MSWiM,conference,Venue
+venue-68ee8a825e7c5ab2,EGC,conference,Venue
+venue-690bbfeb37d0915a,Int. J. Comput. Aided Eng. Technol.,journal,Venue
+venue-6917ae70f36faf69,AMTA,conference,Venue
+venue-6953e78207143b0e,ICSH,conference,Venue
+venue-6958e8919f06bded,EAI Endorsed Trans. e Learn.,journal,Venue
+venue-6981059d7cf12723,Internet Things Cyber Phys. Syst.,journal,Venue
+venue-699a6dcb893c73f8,MALWARE,conference,Venue
+venue-69a31a0a1897de2b,Digit. Scholarsh. Humanit.,journal,Venue
+venue-69a92f98f4f17fe6,npj Digit. Medicine,journal,Venue
+venue-69b6507fdb7654f3,MWE@NAACL-HLT,conference,Venue
+venue-69bd455b901a4b69,IACR Trans. Cryptogr. Hardw. Embed. Syst.,journal,Venue
+venue-6a10e6643d46d123,ACCV (4),conference,Venue
+venue-6a11155298b1352d,Int. J. Neural Syst.,journal,Venue
+venue-6a13ddedd3da2270,CoLLAs,conference,Venue
+venue-6a2fb6e40ac9ba6e,Int. J. Ambient Comput. Intell.,journal,Venue
+venue-6a33236574ce0615,ECCV (23),conference,Venue
+venue-6a375a065a38a06f,LWMOOCS,conference,Venue
+venue-6a3cc322ea0076d4,AIIoT,conference,Venue
+venue-6a42f8437eb3c735,Environ. Model. Softw.,journal,Venue
+venue-6a45f04fd67174c0,AsiaJCIS,conference,Venue
+venue-6a5d6ad0e838ca34,TIA@MICCAI,conference,Venue
+venue-6a5e952b2aa94c9c,HICSS,conference,Venue
+venue-6a8fa3d619a324fb,VarDial@COLING,conference,Venue
+venue-6aa1e2d68f602e5d,"ICPR (Workshops and Challenges, 4)",conference,Venue
+venue-6aa9bd7377dd93ac,Interact. Learn. Environ.,journal,Venue
+venue-6ac54b885c6340d1,IEEE Trans. Cloud Comput.,journal,Venue
+venue-6accd3fd02e22e0d,ACNS Workshops (1),conference,Venue
+venue-6b118aa502c5222c,LDL@LREC,conference,Venue
+venue-6b2a6ed2e88c9e83,Oper. Res.,journal,Venue
+venue-6b31593f74e82584,ICGHPC,conference,Venue
+venue-6b46b85758557ec6,J. Parallel Distributed Comput.,journal,Venue
+venue-6b61ff853e54d9f0,SPIoT (1),conference,Venue
+venue-6b7abba77b2789e5,WEBIST,conference,Venue
+venue-6b94b2b11fd5c079,ENCP@CoNEXT,conference,Venue
+venue-6ba144842349c3c7,SGAMES,conference,Venue
+venue-6bcdb2b58a502e0f,J. Inf. Sci.,journal,Venue
+venue-6bd2c52117b1a75f,SCIS&ISIS,conference,Venue
+venue-6bea2b41d12e9599,ANTS,conference,Venue
+venue-6beb335aa6f69609,HCI (42),conference,Venue
+venue-6c19d9c805372160,Ann. Math. Artif. Intell.,journal,Venue
+venue-6c2db7f9dd0b1488,HVEI,conference,Venue
+venue-6c32a822e2b3365b,HCI (56),conference,Venue
+venue-6c525457c92298b2,GCCE,conference,Venue
+venue-6c5cbd2cd6be40a9,Description Logics,conference,Venue
+venue-6c79952f07287475,Adv. Artif. Intell. Mach. Learn.,journal,Venue
+venue-6c84f6cc4e396bdd,SmaLLEXT@CIKM,conference,Venue
+venue-6c93a26bff09b72b,NISS (Springer),conference,Venue
+venue-6cd568c55ebc6f00,Math. Found. Comput.,journal,Venue
+venue-6ce6d76d1a049fe0,DSC,conference,Venue
+venue-6ced1bc3b14f9bc1,ICTAC,conference,Venue
+venue-6d1ed5a9bedce253,DSAA,conference,Venue
+venue-6d2b315ec4f388fc,AIBThings,conference,Venue
+venue-6d441eec303030ee,TrustCom/BigDataSE,conference,Venue
+venue-6d4429f54be43a22,CVMI,conference,Venue
+venue-6d9970c77095e4b0,SETTA,conference,Venue
+venue-6db194dac4f5fac1,KES,conference,Venue
+venue-6dea11cb114a24f2,Int. J. Hum. Comput. Stud.,journal,Venue
+venue-6e0db55331193eb3,EAIS,conference,Venue
+venue-6e40e1ec469cb6d1,J. Aerosp. Inf. Syst.,journal,Venue
+venue-6e452676f9e09c9b,PEAI,conference,Venue
+venue-6e4e5d2f846a9d52,AMPS,conference,Venue
+venue-6e5a9dcb115fdea1,MoDELS (Companion),conference,Venue
+venue-6e732442f691d36f,ICCBR Workshops,conference,Venue
+venue-6e73eceb88ef7e3c,ECSA,conference,Venue
+venue-6e8e4076aeb42b88,ACL (4),conference,Venue
+venue-6eb64debe78250ad,IEEE Commun. Mag.,journal,Venue
+venue-6ec7fe069390b673,J. Interconnect. Networks,journal,Venue
+venue-6ecd51e454dda447,INTAP,conference,Venue
+venue-6ee4b2c2875035dd,Int. J. Softw. Sci. Comput. Intell.,journal,Venue
+venue-6f00e3bbca294937,PKDD/ECML Workshops (2),conference,Venue
+venue-6f0d7b8d290957cf,Soft Comput.,journal,Venue
+venue-6f12346f23976012,Cryptogr.,journal,Venue
+venue-6f1a5c47cd2b4246,IPIN-WiP,conference,Venue
+venue-6f23af77c63b80d6,ICSTCC,conference,Venue
+venue-6f24a7dc343e400b,LLMs4OL@ISWC,conference,Venue
+venue-6f459d0a8f31f818,Int. J. Decis. Support Syst. Technol.,journal,Venue
+venue-6f6b0b050603d5c5,RoMoCo,conference,Venue
+venue-6f9d8a78d2448687,JIST,conference,Venue
+venue-6fa0adec98d03bec,IEEE Trans. Vis. Comput. Graph.,journal,Venue
+venue-6fa7f1f0a5202b1e,NAACL (Short Papers),conference,Venue
+venue-6fb42b3aa3401c0e,ICESS,conference,Venue
+venue-6fc773349fa062bb,Int. J. Math. Math. Sci.,journal,Venue
+venue-6fc859dfa4214f89,Int. J. Comput. Math.,journal,Venue
+venue-6fdca68cc826d9e5,INFOCOM (Workshops),conference,Venue
+venue-6fdf280f7cf76534,ICSME,conference,Venue
+venue-6fe99db655490bff,DAMDID/RCDL (Selected Papers),conference,Venue
+venue-6fee214bafe29a55,CACRE,conference,Venue
+venue-6ff4e83f5aef0a41,COMAD/CODS,conference,Venue
+venue-7021ac38e27404c2,NFV-SDN,conference,Venue
+venue-7023e57ec90a1959,ICPR Workshops (8),conference,Venue
+venue-70418959f9962ae1,ICCSA (4),conference,Venue
+venue-706800f5568d2c2b,Vis. Intell.,journal,Venue
+venue-706b49c2cbbeaadb,ICIC (28),conference,Venue
+venue-706c4dc9c4e8b296,ICCWCS,conference,Venue
+venue-70c32c7974ebbf8c,ICCE-TW,conference,Venue
+venue-710339e23abf2d21,J. Manag. Inf. Syst.,journal,Venue
+venue-711785f830ffb11c,Comput. Math. Organ. Theory,journal,Venue
+venue-7128319a7cbd4fa1,CVDL,conference,Venue
+venue-713eb7a17cb590b7,SIGGRAPH Asia,conference,Venue
+venue-714be63d1b1cca23,CIVEMSA,conference,Venue
+venue-714d3b4a8dc4eb41,CAI,conference,Venue
+venue-7156c25beb67e8e8,CIS-RAM,conference,Venue
+venue-7188e2e6f1171acc,CAIBDA,conference,Venue
+venue-71934084a97039ff,ICIG (3),conference,Venue
+venue-7196ca714ac5fe6e,FTC (1),conference,Venue
+venue-71aea30ac4571d29,GeoLD@ESWC,conference,Venue
+venue-71b21ad5217d695e,ICPRAI (2),conference,Venue
+venue-71b75d1a268334e2,ASRU,conference,Venue
+venue-71ba69bc415af106,Data Sci. Eng.,journal,Venue
+venue-71cfeafb772e24aa,IEEE Signal Process. Mag.,journal,Venue
+venue-71d3d2f32e5645fb,DCOSS,conference,Venue
+venue-71d815f3901660b4,Trans. Emerg. Telecommun. Technol.,journal,Venue
+venue-71e5c0067fc234ef,SECRYPT,conference,Venue
+venue-71eaba110c216e80,HotCloud,conference,Venue
+venue-71fac946577fbc54,Int. Arab J. Inf. Technol.,journal,Venue
+venue-7212a3af0a377666,PADL,conference,Venue
+venue-72228d69e1a46058,SIGCSE (2),conference,Venue
+venue-72257e49423f1a1d,Computing,journal,Venue
+venue-722687fdfa191c2a,Empir. Softw. Eng.,journal,Venue
+venue-724a82a1aee36fbe,WSSE,conference,Venue
+venue-725a731270ee1e44,CRC,conference,Venue
+venue-7267ec54c6273563,Integr. Comput. Aided Eng.,journal,Venue
+venue-72711f7b9f3bcb69,ICADL,conference,Venue
+venue-72955cf92589ddf8,TEXT2KG/MK@ESWC,conference,Venue
+venue-729979ad0c0fd0aa,Netw. Model. Anal. Health Informatics Bioinform.,journal,Venue
+venue-72a1ee489c250797,ICPR (20),conference,Venue
+venue-72d5d610b8c6aaf2,AI Ethics,journal,Venue
+venue-72db629a27ffa01d,Middleware Demos/Posters/Doctoral Symposium,conference,Venue
+venue-72f3e0ea0a5f7ccd,EuCNC/6G Summit,conference,Venue
+venue-72f90913245df598,ISC Int. J. Inf. Secur.,journal,Venue
+venue-73139f0ad2b2bd57,DAS,conference,Venue
+venue-7347c97aa33b1888,IEEE Conf. on Intelligent Systems,conference,Venue
+venue-735fc49201c6ba95,ISSE,conference,Venue
+venue-736152077eb8dc40,FAT*,conference,Venue
+venue-736be5937b3353cd,MSML,conference,Venue
+venue-73894e754804eb6c,Enterp. Inf. Syst.,journal,Venue
+venue-73b80d2fc538cae7,USENIX ATC,conference,Venue
+venue-73f8cdecbe1b8ef7,IEEE Wirel. Commun. Lett.,journal,Venue
+venue-7428f0889fd792fe,OTM Conferences,conference,Venue
+venue-743ae930a696ca7e,IJCRS,conference,Venue
+venue-74497d93381cf350,CMMCA@MICCAI,conference,Venue
+venue-747419929009ac34,Comput. methods Biomech. Biomed. Eng. Imaging Vis.,journal,Venue
+venue-747c13bed0fe0285,ICPR Workshops (3),conference,Venue
+venue-74864c0d41d26ac8,LARS/SBR/WRE,conference,Venue
+venue-748ffdd444631815,ISM,conference,Venue
+venue-74a0319d12240e6e,CODES+ISSS,conference,Venue
+venue-74bef93f597b66db,MICCAI (12),conference,Venue
+venue-74cec9e6ef15c0f4,CAMLIS,conference,Venue
+venue-74db697fef896561,ICISCAE (IEEE),conference,Venue
+venue-74ffef3f3a3033bf,Image Vis. Comput.,journal,Venue
+venue-7519de164817b24e,Knowl. Based Syst.,journal,Venue
+venue-755d56d741b4905d,ASPDAC,conference,Venue
+venue-755f3b074fde98de,Mach. Learn. Sci. Technol.,journal,Venue
+venue-756beeb510401690,Electron. Commer. Res.,journal,Venue
+venue-758a633751aed14d,ACCV (1),conference,Venue
+venue-758f13ba6b71701b,ICVES,conference,Venue
+venue-7595677c10c98f59,MASCOTS,conference,Venue
+venue-75c113fa68b1226f,Appl. Intell.,journal,Venue
+venue-75ca3beaed886b4f,IberLEF@SEPLN,conference,Venue
+venue-75f3089396a889ed,ICADL (1),conference,Venue
+venue-760e05710847e04a,ICCC,conference,Venue
+venue-76253a0cdd0eae27,CCRIS,conference,Venue
+venue-7650414bc5dd07f2,Int. J. Synth. Emot.,journal,Venue
+venue-7668b940a885993b,IJCB,conference,Venue
+venue-767b75ecbc7913ba,Eng. Appl. Artif. Intell.,journal,Venue
+venue-76806611611ca58d,ICITS,conference,Venue
+venue-769366f5b6ff30b5,Int. J. Approx. Reason.,journal,Venue
+venue-76ab6f5a21cf38cf,ICCE,conference,Venue
+venue-76b92824cf0ac84c,PLoS Comput. Biol.,journal,Venue
+venue-76e0122e76edc0c9,DATE,conference,Venue
+venue-770ea94431842ed0,HECKTOR@MICCAI,conference,Venue
+venue-774259019dcd8e8f,ICSOC (1),conference,Venue
+venue-775bfbab052d0e2d,UV,conference,Venue
+venue-776586578ed3c6c4,VSS,conference,Venue
+venue-776bd085a470403a,JCDL,conference,Venue
+venue-7785af4898565387,ASIST,conference,Venue
+venue-77b74310ca4dce0b,ACISP (2),conference,Venue
+venue-77bea741bd18e44b,SecITC,conference,Venue
+venue-77beb4f37243cf4e,ISPA/BDCloud/SocialCom/SustainCom,conference,Venue
+venue-77c1bf04293ae756,DaWaK,conference,Venue
+venue-77cb15899769dff1,Int. J. Biomed. Imaging,journal,Venue
+venue-77cb722c6204cd53,ICCT,conference,Venue
+venue-77e258f3cea957a1,Frontiers Big Data,journal,Venue
+venue-77e2ed02a9e37bb3,CICBA (1),conference,Venue
+venue-77e9d123af24cd4a,IoTML,conference,Venue
+venue-77f607bc3a500bf1,ITSC,conference,Venue
+venue-77fc4ad8503511b5,TSD,conference,Venue
+venue-7810548cf76eebbd,DASC/PiCom/CBDCom/CyberSciTech,conference,Venue
+venue-78193c63a4e859cc,ICMLSC,conference,Venue
+venue-7819a0cbec4ef3af,TALN (1),conference,Venue
+venue-7847eb70200fcc05,IMIS,conference,Venue
+venue-78484f37e14bd510,EICS,conference,Venue
+venue-7851a3bacdd23cd7,CS&SE@SW,conference,Venue
+venue-7854cd302c0f3118,BRACIS (1),conference,Venue
+venue-786b838649ae36ff,Comput. Stand. Interfaces,journal,Venue
+venue-787f7375161aecd1,IIMSS,conference,Venue
+venue-78934bf8a0c66236,J. Syst. Softw.,journal,Venue
+venue-78956a289daa7079,IEEE Trans. Consumer Electron.,journal,Venue
+venue-7897cbd5029605ec,CRI,conference,Venue
+venue-78a8e9cf7324473f,Int. J. Embed. Real Time Commun. Syst.,journal,Venue
+venue-78b4342163b8336c,Int. J. Bifurc. Chaos,journal,Venue
+venue-78bdf390eda9577c,ICSOFT,conference,Venue
+venue-78c08c6709300cf7,UKCI,conference,Venue
+venue-78cacc2e1eacbc37,IFIP Networking,conference,Venue
+venue-78df7e346132e016,ICCE-Taiwan,conference,Venue
+venue-78f0c8cfdfee11fa,ECCV (9),conference,Venue
+venue-7918f705a2d76443,AIBDF,conference,Venue
+venue-79216dd3d2d33cae,pHealth,conference,Venue
+venue-79327b5622aeeafa,VLSI Technology and Circuits,conference,Venue
+venue-79553c97398f0312,SPA,conference,Venue
+venue-7977d40c224fbcb7,BDEIM,conference,Venue
+venue-79a13bf36b929044,Entropy,journal,Venue
+venue-79bfadd4c99a02b8,IIH-MSP (2),conference,Venue
+venue-7a1243317d308916,IWBI,conference,Venue
+venue-7a1b96c83898bdd2,Astron. Comput.,journal,Venue
+venue-7a1ca494e18acad3,MENACOMM,conference,Venue
+venue-7a20febe12237388,AISafety/SafeRL@IJCAI,conference,Venue
+venue-7a23ddd156df139e,IEEE Trans. Emerg. Top. Comput. Intell.,journal,Venue
+venue-7a2fe4bc7fa64471,Nano Commun. Networks,journal,Venue
+venue-7a41f8ec9c71e7b0,ICSSE,conference,Venue
+venue-7a6000f1727f12aa,CSIT,conference,Venue
+venue-7a60216d1102eaca,Comput. Chem. Eng.,journal,Venue
+venue-7a7227a2fc0837b7,WINCOM,conference,Venue
+venue-7a7822dcb8551f6c,CCCV (2),conference,Venue
+venue-7a87655ef22989f3,J. Robotics Mechatronics,journal,Venue
+venue-7a9e33135f77ec43,COLINS,conference,Venue
+venue-7aaad2cecfa60d87,Signal Process.,journal,Venue
+venue-7aac158b49e9dd96,APPT,conference,Venue
+venue-7ac4ee21a41670c3,Euro-Par Workshops (1),conference,Venue
+venue-7aea2b1f260f5225,DLMIA/ML-CDS@MICCAI,conference,Venue
+venue-7b16f47c943de5f1,ACML,conference,Venue
+venue-7b19919fd9e874ea,LCN,conference,Venue
+venue-7b19dc4e4ed07382,Int. J. Speech Technol.,journal,Venue
+venue-7b2896c06681102a,ANT/SEIT,conference,Venue
+venue-7b2de4f178670530,ARCS,conference,Venue
+venue-7b3e67716db694b1,CLOUD,conference,Venue
+venue-7b57b89ca67fd5e4,J. Sci. Comput.,journal,Venue
+venue-7bcbbea9a8c271f8,SOFA,conference,Venue
+venue-7c584460995541c3,ISORC,conference,Venue
+venue-7c93d0a233835846,ICCS (3),conference,Venue
+venue-7ca27f1c15c762e9,ISC High Performance,conference,Venue
+venue-7ca41e701108eb48,IEEE Trans. Netw. Serv. Manag.,journal,Venue
+venue-7ca91441d1d33048,Quantum Inf. Process.,journal,Venue
+venue-7d1f44004f1e82d9,ACL (1),conference,Venue
+venue-7d2276e3e7d3c819,Ecol. Informatics,journal,Venue
+venue-7d27d2ea464417a5,IAIT,conference,Venue
+venue-7d2a61b5fdc30fd4,ICPCSEE (2),conference,Venue
+venue-7d2b0b26079ed948,Evol. Intell.,journal,Venue
+venue-7d3ed6ee147962d7,MLMI@MICCAI (1),conference,Venue
+venue-7d483c74441270c7,Künstliche Intell.,journal,Venue
+venue-7d55d92a430d95ef,MeditCom,conference,Venue
+venue-7d580d78fdc4231c,CloudNet,conference,Venue
+venue-7d8aff7e76b9e64d,ICWE Workshops,conference,Venue
+venue-7da8f6f59bca2ea7,CoCoLe,conference,Venue
+venue-7dbce9e74b73062e,IEEE Trans. Circuits Syst. II Express Briefs,journal,Venue
+venue-7dc3bac09dea441c,LifeTech,conference,Venue
+venue-7dde62b84961d048,SAM,conference,Venue
+venue-7ddf82222ee03517,GI@ICSE,conference,Venue
+venue-7e181f8dc9624d81,CLEI Electron. J.,journal,Venue
+venue-7e2ffefb6827c760,SAI (1),conference,Venue
+venue-7e7ae8213680f0f9,ICIC (13),conference,Venue
+venue-7e95d49f1c863d09,BIS,conference,Venue
+venue-7efd51eceb6d3c7a,IJCNLP-AACL (long papers),conference,Venue
+venue-7f0a3f44e2eab0a4,ITHET,conference,Venue
+venue-7f3590866ae2d5ff,J. Commun. Networks,journal,Venue
+venue-7f44bbbc17fdd14c,NeuS,conference,Venue
+venue-7f4905df4ab63f94,ArabicNLP (Shared Tasks),conference,Venue
+venue-7f4c551eac5b228b,ACM Trans. Interact. Intell. Syst.,journal,Venue
+venue-7f6e7e05a16ad187,BNAIC/BENELEARN,conference,Venue
+venue-7f716b898c5c6bae,Int. J. Softw. Informatics,journal,Venue
+venue-7f86b3bcd5153def,WAT,conference,Venue
+venue-7fa034466586de9c,Int. J. Appl. Decis. Sci.,journal,Venue
+venue-7fa2519a554d3f7c,IJCKG,conference,Venue
+venue-7fcb0d1244c276a0,ML4CS (1),conference,Venue
+venue-7fd3b8f7d587ac3c,FedCSIS (Position Papers),conference,Venue
+venue-7feb498b0e728ab5,Scientometrics,journal,Venue
+venue-8002ccc161572897,EUROCAST,conference,Venue
+venue-8023a947b12d57d8,FIMH,conference,Venue
+venue-80588fdba598a250,ITU K,conference,Venue
+venue-805c11faccbff69a,Adv. Eng. Informatics,journal,Venue
+venue-806fa559b0e19cc6,DCASE,conference,Venue
+venue-80afca119cc033eb,HEXED/L3MNGET@EDM,conference,Venue
+venue-80b64f45e223812b,Int. J. Soc. Robotics,journal,Venue
+venue-80f9062f526f4262,Expert Syst. Appl.,journal,Venue
+venue-810d309c73673ceb,FNC/MobiSPC/SEIT,conference,Venue
+venue-81253fbc125c8366,CHIRA (1),conference,Venue
+venue-812b2802ae3d15c0,VISIGRAPP (4: VISAPP),conference,Venue
+venue-814ca259c6fa9579,"xAI (Late-breaking Work, Demos, Doctoral Consortium)",conference,Venue
+venue-815bc39d2333486f,KDIR,conference,Venue
+venue-8165bc478d0e0270,ICAST (1),conference,Venue
+venue-817ae232767cf903,ICCA,conference,Venue
+venue-81820fda9e80c4b3,EDBT,conference,Venue
+venue-818a9dcd78a2f66b,MMM (1),conference,Venue
+venue-8192e2f283bf837a,SIGMETRICS (Abstracts),conference,Venue
+venue-8194320d030d9f59,Softwaretechnik-Trends,journal,Venue
+venue-819751c2e2fcd269,ISPR (2),conference,Venue
+venue-81ef5ba8e4211f4a,CSAI,conference,Venue
+venue-81fa344e12db86cf,SeGAH,conference,Venue
+venue-8212825da3b01985,WCSP,conference,Venue
+venue-823eb7f4b832fe98,SBESC,conference,Venue
+venue-8247282d1fd9f043,EEET,conference,Venue
+venue-825db04c1d0ccca5,SIGGRAPH Posters,conference,Venue
+venue-8278bcaf49151392,AICCSA,conference,Venue
+venue-8296488ee44b0511,ICAR,conference,Venue
+venue-82a7cfdc8ee529a4,Ethics Inf. Technol.,journal,Venue
+venue-82e1681b8010ce22,Biol. Cybern.,journal,Venue
+venue-82ebb37b3ac1053f,Bildverarbeitung für die Medizin,conference,Venue
+venue-83234f25de6b3365,CSEDU (1),conference,Venue
+venue-832456e2ccf8f640,HealthCom,conference,Venue
+venue-833ea164863d8dbd,CSCI,conference,Venue
+venue-8348be3db4ca84c4,CLOSER,conference,Venue
+venue-836ee4c56e8ebca9,DSA,conference,Venue
+venue-8370253b26766df2,BDCAT,conference,Venue
+venue-838125bef087c66c,IEEE Robotics Autom. Lett.,journal,Venue
+venue-83cd5b3125e2429c,ARSO,conference,Venue
+venue-83eed90df00ed857,Commun. Inf. Syst.,journal,Venue
+venue-841e9f466baa6f9a,EC-TEL,conference,Venue
+venue-8426ae2ca97b854f,MARBLE,conference,Venue
+venue-8429c5fbeb7ef0bd,IEEE Wirel. Commun.,journal,Venue
+venue-844a2468706a4a77,AAIA,conference,Venue
+venue-844a7baaa41409ca,SPML,conference,Venue
+venue-84688aed7515508e,INTERSPEECH,conference,Venue
+venue-8498255511df5f27,CCTA,conference,Venue
+venue-84a0832665ad182e,ICEEI,conference,Venue
+venue-84b0beaa9799fbab,ILP,conference,Venue
+venue-84ccad63c62184e8,KSEM,conference,Venue
+venue-84d6be8e05e0a75a,ICAPS,conference,Venue
+venue-8537085045d046f6,J. Data Semant.,journal,Venue
+venue-856ba83cbb51c9bd,IWCIA,conference,Venue
+venue-85b5d2af9def0cf6,Int. J. Adv. Pervasive Ubiquitous Comput.,journal,Venue
+venue-85d0f5ece32b46dd,PRCV (16),conference,Venue
+venue-85d99a2f6de1dd3a,VTC2023-Spring,conference,Venue
+venue-85f57b00dbc837e0,GNNet@CoNEXT,conference,Venue
+venue-8603498fa5d349c8,J. Cogn. Neurosci.,journal,Venue
+venue-8604cd94ba7f9c98,VNC,conference,Venue
+venue-865ef75ae7fb0a51,Inf. Res.,journal,Venue
+venue-8680d7eb1aef38ad,AUTOMATION,conference,Venue
+venue-86fb1135c64dcd4f,RTIP2R (1),conference,Venue
+venue-870945ea99f2257f,PATMOS,conference,Venue
+venue-8715f274d0b43dbb,EdgeFM@MobiSys,conference,Venue
+venue-873db6fd80cab427,Health Informatics J.,journal,Venue
+venue-87412c41d7114d6a,e-Science,conference,Venue
+venue-8773af9551d70484,IDEAL,conference,Venue
+venue-87845e59440057a6,Digit. Signal Process.,journal,Venue
+venue-8795b298dd9e8605,ICDF2C (1),conference,Venue
+venue-8797629cee87ee4c,Int. J. Metadata Semant. Ontologies,journal,Venue
+venue-87a7cb5e02e321fe,Discov. Comput.,journal,Venue
+venue-87b61e07f8430315,Webology,journal,Venue
+venue-87eb787a6f4cf216,CBMI,conference,Venue
+venue-87f17ae86ebb9d88,IBM J. Res. Dev.,journal,Venue
+venue-87f4ffa2efd043e0,SINC,conference,Venue
+venue-87ff3f5bee932a29,Serv. Oriented Comput. Appl.,journal,Venue
+venue-887b9e7018f3b550,Comput. Phys. Commun.,journal,Venue
+venue-88813db1ce208b8b,Algorithms,journal,Venue
+venue-88a1153d07e00247,PDCAT,conference,Venue
+venue-88adfa08719e6d10,IEEE Trans. Haptics,journal,Venue
+venue-88eff315909aada4,Proc. Priv. Enhancing Technol.,journal,Venue
+venue-88f990629834ef7c,BlackSeaCom,conference,Venue
+venue-8936acac5e12ab59,EKAW,conference,Venue
+venue-8960ee462e912757,ICASSP Workshops,conference,Venue
+venue-8962bc48664e2adb,GeoSim@SIGSPATIAL,conference,Venue
+venue-896e45fe5b672e3b,AIED (5),conference,Venue
+venue-89721bca40ed93fc,DICTA,conference,Venue
+venue-89824c4523dc5fb1,VLSI Circuits,conference,Venue
+venue-8982b7f5d1414542,ICSIPA,conference,Venue
+venue-8996e0aa1de38cac,CRIS,conference,Venue
+venue-89a0bdb9a6fcc441,ICCCI (CCIS Volume),conference,Venue
+venue-89d329e497394a2c,BPM (Industry Forum),conference,Venue
+venue-89dfad123ba31972,ESWC Satellite Events (1),conference,Venue
+venue-89f0075484eb8fc0,EEKE/AII@JCDL,conference,Venue
+venue-89f12aaa611396c6,ICAART (3),conference,Venue
+venue-89ff483f7c3c47b9,ICCSIT,conference,Venue
+venue-8a0eb1214fcd8b9e,ICIST,conference,Venue
+venue-8a0f4c579e262f47,KES-IDT (2),conference,Venue
+venue-8a1ffbc3e4d43dbc,SDF,conference,Venue
+venue-8a283d2eb0559124,Image Processing,conference,Venue
+venue-8a3f3788df72fb60,IWOBI,conference,Venue
+venue-8a66062c2ca5063e,ICAC,conference,Venue
+venue-8a68d43d77b0c48c,QPL,conference,Venue
+venue-8a6d82a4329dd45f,Informatica,journal,Venue
+venue-8a72a7b70e5e0e2a,GC Workshops,conference,Venue
+venue-8a95a14ec4ecbd09,DepCoS-RELCOMEX,conference,Venue
+venue-8a96aa29a8afd72c,PervasiveHealth (1),conference,Venue
+venue-8ac1fd10fb5c398f,ISWC (Posters/Demos/Industry),conference,Venue
+venue-8b01a419091b3398,RiTA,conference,Venue
+venue-8b537df7b718f46b,IBICA,conference,Venue
+venue-8b74f7d639056c5b,LREC/COLING,conference,Venue
+venue-8b7869a69efa296f,CogInfoCom,conference,Venue
+venue-8b8c162ba3a6c38e,BMC Medical Informatics Decis. Mak.,journal,Venue
+venue-8b8edf844da809e5,ICCEIC,conference,Venue
+venue-8ba4f1646f4f4cea,iThings/GreenCom/CPSCom/SmartData,conference,Venue
+venue-8bcb1ee0c4968f5d,Int. J. Softw. Innov.,journal,Venue
+venue-8bdfb03ce8c39f30,ICIP,conference,Venue
+venue-8becffbf5815de3f,ClinicalNLP@ACL,conference,Venue
+venue-8bfc1034eb3c47a7,COLING (Demos),conference,Venue
+venue-8c0d6d152910b1c9,CMIS,conference,Venue
+venue-8c107f26a8b0ce6e,SAC,conference,Venue
+venue-8c263c22f81f26ed,IWSSIP,conference,Venue
+venue-8c2df371459b2c93,ICTAI,conference,Venue
+venue-8c4c28467bdb7662,ICDAR,conference,Venue
+venue-8c699ef1b35c9a38,RICAI,conference,Venue
+venue-8c85c256c3f9d45a,J. Cybersecur. Priv.,journal,Venue
+venue-8cb1a94b83801309,J. Comput. Inf. Technol.,journal,Venue
+venue-8cf93f033d0e56ab,ARTIIS (1),conference,Venue
+venue-8d18d22dc50ba218,EmC-ICDSST,conference,Venue
+venue-8d2b41499aa8d337,IDA,conference,Venue
+venue-8d5a7a156b1392b9,Signal Process. Image Commun.,journal,Venue
+venue-8d69192e99c5acf5,KES-HCIS,conference,Venue
+venue-8d9f1999f9245897,IEEE Des. Test,journal,Venue
+venue-8dab9f57b8bb8b04,BIOSTEC (Selected Papers),conference,Venue
+venue-8dcfce3ec53f4986,Quantum,journal,Venue
+venue-8dec84482b40438b,CCGRID,conference,Venue
+venue-8e21f401b02bd2bd,Sensors,journal,Venue
+venue-8e527a42c9254c4a,COSIT,conference,Venue
+venue-8e535c376ae9f64a,CRYPTO (2),conference,Venue
+venue-8e5a3cf6dcf52789,ISPEC,conference,Venue
+venue-8e5cf6fc7d983e89,LAMPS@CCS,conference,Venue
+venue-8e71b53a4aa70afb,NUT@IJCNLP,conference,Venue
+venue-8e72f56f456e82e2,MIXDES,conference,Venue
+venue-8e80681a22c7595b,SPDE,conference,Venue
+venue-8e8d9f1d507085fd,ADMA (1),conference,Venue
+venue-8e923a24eabb9257,AMW,conference,Venue
+venue-8ea3e99bba234923,IVA,conference,Venue
+venue-8ebc82870111c17d,ECML/PKDD (6),conference,Venue
+venue-8ec40e3111f6a148,ISACE,conference,Venue
+venue-8ec5612a61ebcbf0,ICCIP,conference,Venue
+venue-8ede364d850380d5,IEEE Trans. Engineering Management,journal,Venue
+venue-8eefa168e162271c,BigDataService,conference,Venue
+venue-8ef5e87952e58e0c,Artif. Intell. Rev.,journal,Venue
+venue-8efa9a7f9d919b29,AHs,conference,Venue
+venue-8f0955ee06e08547,RE Workshops,conference,Venue
+venue-8f10b006889c82b0,ICT-DM,conference,Venue
+venue-8f149f9c3df2720d,AAAI Fall Symposia,conference,Venue
+venue-8f14dc0036679d18,ECCV Workshops (22),conference,Venue
+venue-8f1becb8393dad49,Digital Pathology,conference,Venue
+venue-8f1fa432ac86b651,Database J. Biol. Databases Curation,journal,Venue
+venue-8f204058dcc24a9b,Medical Biol. Eng. Comput.,journal,Venue
+venue-8f20834ad5d2e4f2,Trans. Data Priv.,journal,Venue
+venue-8f2a4a6ec1cbfe98,KEIR,conference,Venue
+venue-8f33acc01d622fa8,ICARSC,conference,Venue
+venue-8f397c39b6397b5c,DoCEIS,conference,Venue
+venue-8f39d4389cca8ced,DASC/PiCom/DataCom/CyberSciTech,conference,Venue
+venue-8f4a486b50d5cb5e,ACIIDS (2),conference,Venue
+venue-8f69ff6a13632b3f,Int. J. Prod. Res.,journal,Venue
+venue-8f6cdc09ee9d2ecc,Mob. Networks Appl.,journal,Venue
+venue-8f75e6a2fd59611a,J. Comb. Optim.,journal,Venue
+venue-8f981707242ed8bd,ASPLOS (1),conference,Venue
+venue-8fc1be81d424a281,INCoS,conference,Venue
+venue-8fc4ac492c0ec943,Dagstuhl Reports,journal,Venue
+venue-8fd0ee8a42c69f42,IEEE Trans. Big Data,journal,Venue
+venue-8fdabf3e0748327d,WiSEE,conference,Venue
+venue-8ff03831c73e178d,ICTCS,conference,Venue
+venue-903f63b8c422e68c,ACSAC Workshops,conference,Venue
+venue-90410541380e4fef,ACL (2),conference,Venue
+venue-9042f31c96aafc89,WICON,conference,Venue
+venue-905b438dfadea56c,ICCPS,conference,Venue
+venue-905d143b5f636de6,Mach. Vis. Appl.,journal,Venue
+venue-906df7957347193c,Comput. Biol. Chem.,journal,Venue
+venue-908106b3ffc6a494,DeepTest,conference,Venue
+venue-90894e87800502df,SIGIR-AP,conference,Venue
+venue-9090a3a759dfdf71,Prague Bull. Math. Linguistics,journal,Venue
+venue-909304ec370f0c01,ICBAR,conference,Venue
+venue-90b080ae7c8aee45,QoEVMA @ ACM Multimedia,conference,Venue
+venue-90c60ddcd2ab53c9,SIGWEB Newsl.,journal,Venue
+venue-90d32903ce3ad9da,Open Comput. Sci.,journal,Venue
+venue-90e40e249b785b7a,MDAI,conference,Venue
+venue-90e45c9f4aa85370,J. Grid Comput.,journal,Venue
+venue-90e524b595d00927,IEEE Trans. Green Commun. Netw.,journal,Venue
+venue-90e57cb498daffc4,Microelectron. J.,journal,Venue
+venue-90ec7d17b5279245,Int. J. Commun. Syst.,journal,Venue
+venue-90f0285dbb78f073,KSEM (3),conference,Venue
+venue-9105dbc739ba15b4,ISNN,conference,Venue
+venue-91115bc73bcdbd1d,PAAMS (Workshops),conference,Venue
+venue-9111a70e9ce2bb62,IoTBDS,conference,Venue
+venue-91265bd8dca359f1,WiseML@WiSec,conference,Venue
+venue-9134964849840470,VLSI-DAT,conference,Venue
+venue-91817566044fefcd,J. Commun. Inf. Networks,journal,Venue
+venue-9181dce1343fb92a,J. Electron. Test.,journal,Venue
+venue-91887aca6518a6f7,SOCO,conference,Venue
+venue-91b25962ba5e592f,RW,conference,Venue
+venue-91be6bf83f60a3d3,ICPR Workshops (6),conference,Venue
+venue-91c93bfbc64b7277,WF-IoT,conference,Venue
+venue-91e567f03896ebaf,IDAACS,conference,Venue
+venue-920503ff3963005a,ECML/PKDD (5),conference,Venue
+venue-9232f8fbc02f5458,TrustBus,conference,Venue
+venue-923a12e0bce81cff,KEOD,conference,Venue
+venue-924d63241806aea7,J. Oper. Res. Soc.,journal,Venue
+venue-9258443041d9b18b,ESWC (1),conference,Venue
+venue-92697c38f600923e,IWANN (1),conference,Venue
+venue-926d6636bdaad2b6,WHISPERS,conference,Venue
+venue-9281488c1d34e9b6,Speech Commun.,journal,Venue
+venue-92933cbdfaef7b59,J. Netw. Syst. Manag.,journal,Venue
+venue-929acbef13fecd42,NLPIR,conference,Venue
+venue-929e005fc52ebda2,Eng. Comput.,journal,Venue
+venue-92acc9de3f9a0251,IET Cyper-Phys. Syst.: Theory & Appl.,journal,Venue
+venue-92b435047b7b2445,Internetware,conference,Venue
+venue-92bc5f16078490d3,ER Demos/Posters,conference,Venue
+venue-92c7a0c576c15d22,DATA,conference,Venue
+venue-92d0439bf35959f7,AECIA,conference,Venue
+venue-931dc9b00f4f1480,NiDS (3),conference,Venue
+venue-933e961d7b8027ee,CONCUR,conference,Venue
+venue-9365ad34de6bd1b7,MLMIR@MICCAI,conference,Venue
+venue-9374d76889e1be9a,ICFEC,conference,Venue
+venue-937e1da20b21fe41,ICPR (10),conference,Venue
+venue-9384fe1429d24281,ER,conference,Venue
+venue-938c3aa10329721f,Interact. Technol. Smart Educ.,journal,Venue
+venue-938e518512f5f8ae,Future Internet,journal,Venue
+venue-93931225dbffa8aa,ICECCS,conference,Venue
+venue-93a33d596910c2ee,ICANN (Workshop),conference,Venue
+venue-93c3bf7f6938b436,Secur. Saf.,journal,Venue
+venue-93c4e30ed27eab77,PHOTONICS@SC,conference,Venue
+venue-93e53d2b07ebe851,AIAI (4),conference,Venue
+venue-93fadba37425bda1,FSDM,conference,Venue
+venue-941e9049fc3f2353,MIND (1),conference,Venue
+venue-9427f46a4b2a7b36,SPAWC,conference,Venue
+venue-94563f84f468e03a,MWPD@ISWC,conference,Venue
+venue-9457a466ed5c6208,SC,conference,Venue
+venue-9480874704099eac,APCC,conference,Venue
+venue-94aea43259bb980a,ACL (demo),conference,Venue
+venue-94aee27e3f2da056,WISE,conference,Venue
+venue-94b5b8f8513ecae1,Int. J. Distributed Syst. Technol.,journal,Venue
+venue-94b873e17abfabc5,SEEDA-CECNSM,conference,Venue
+venue-94bb8fef367427b7,SmartWorld/SCALCOM/UIC/ATC/CBDCom/IOP/SCI,conference,Venue
+venue-94d6a2fa247842ca,Int. J. Comb. Optim. Probl. Informatics,journal,Venue
+venue-94d6b700b74214cc,OL2A (2),conference,Venue
+venue-94e5bca6672a3863,NILES,conference,Venue
+venue-94e8e8db41ae1fb9,Knowl. Inf. Syst.,journal,Venue
+venue-94ecf9f77b943430,DeSE,conference,Venue
+venue-95060a3cde36b646,COLING (Tutorials),conference,Venue
+venue-950fbf54a97fa103,3DV,conference,Venue
+venue-953deff58249a48e,ICIoT,conference,Venue
+venue-95644aded78abaed,Adv. Robotics,journal,Venue
+venue-958fdc23f89f056a,WMT (2),conference,Venue
+venue-95b274977823305c,RIVF,conference,Venue
+venue-95c149adfc9090ab,Int. J. Multim. Inf. Retr.,journal,Venue
+venue-95c3f83c2a7ca535,IFSA-SCIS,conference,Venue
+venue-95f4074a30c9bc78,BIC-TA (2),conference,Venue
+venue-96058ed68425fc2c,Comput. Math. Appl.,journal,Venue
+venue-960a2718e51561f9,Pattern Anal. Appl.,journal,Venue
+venue-9615c613de151e62,ACI@ISIC,conference,Venue
+venue-962379f267fca51c,SMT,conference,Venue
+venue-963688a3e303d1e8,NLP-DS@SEPLN,conference,Venue
+venue-964c53c4d5071a05,CHIL,conference,Venue
+venue-966c10e8852a9e23,INTERACT (3),conference,Venue
+venue-9677a2b65d0f4204,Comput. Geosci.,journal,Venue
+venue-9685c57996b28bf8,ICCR,conference,Venue
+venue-96872ed2198c3e61,ADBIS (Short Papers and Workshops),conference,Venue
+venue-96d1e0cd2d5424af,BIS (Workshops),conference,Venue
+venue-96db1e91750676de,DS,conference,Venue
+venue-96e966b2729da82c,ACM J. Emerg. Technol. Comput. Syst.,journal,Venue
+venue-9700da389f365633,WAT@COLING,conference,Venue
+venue-9706dfbbcde662d8,IROS,conference,Venue
+venue-975013cb064dd86a,ICCMS,conference,Venue
+venue-9755570231ff6c34,ICIC (22),conference,Venue
+venue-977713839fee96ff,Int. J. Artif. Intell. Educ.,journal,Venue
+venue-97890664921721ac,MoMM,conference,Venue
+venue-978d91b7a81bd45e,CIS,conference,Venue
+venue-978f5548ebcb73d9,MVA,conference,Venue
+venue-979e6ce469c80e6f,SE4RAI@ICSE,conference,Venue
+venue-979fc3060ac5784f,ICNSC,conference,Venue
+venue-97a233989668a3e7,ICACT,conference,Venue
+venue-97a8b70f3cb817a9,ECCV (79),conference,Venue
+venue-97bae8d0c385f9e5,IEEE Commun. Surv. Tutorials,journal,Venue
+venue-97dfa97905507b3c,SANER,conference,Venue
+venue-97e79f4a8eb23ce9,IEEE Trans. Knowl. Data Eng.,journal,Venue
+venue-981cd01f3f10037c,ICCSE (2),conference,Venue
+venue-9831fb03c28576e7,IFAC J. Syst. Control.,journal,Venue
+venue-98334560e5f81d68,Comput. Sci. J. Moldova,journal,Venue
+venue-9847feafb89b914a,JOWO,conference,Venue
+venue-9865b84bdfb3e583,WASPAA,conference,Venue
+venue-986dc524f0358d73,Int. J. Game Theory,journal,Venue
+venue-9871b6aebbab899f,BigDataSecurity,conference,Venue
+venue-988f29423d050082,EG-ICE,conference,Venue
+venue-98a6117eba2b5bf3,DGMM,conference,Venue
+venue-98c9b318c565c924,SIGIR Forum,journal,Venue
+venue-98d01947fcf9c4b2,SWAT4LS,conference,Venue
+venue-98d580428eea9cf0,Nat. Mach. Intell.,journal,Venue
+venue-98df814aea39bba0,IEEE Micro,journal,Venue
+venue-98e06f6270468b47,CoG,conference,Venue
+venue-98e8d235087f87f3,UkrPROG,conference,Venue
+venue-98e9d4bcc8517d64,i-CREATe,conference,Venue
+venue-98f70c67c1d7f595,J. Syst. Archit.,journal,Venue
+venue-991e391a438ff47e,EuCNC,conference,Venue
+venue-993ec1c94a87b60e,Int. J. Serv. Sci. Manag. Eng. Technol.,journal,Venue
+venue-994253917c3daa70,Int. J. Inf. Technol. Syst. Approach,journal,Venue
+venue-99594beaedecac37,ICCS (Workshops 3),conference,Venue
+venue-9967b7293927b442,L4DC,conference,Venue
+venue-9972184f73295976,Int. J. Comput. Intell. Appl.,journal,Venue
+venue-9978880893896c2c,CDC,conference,Venue
+venue-997ebe135fde1854,IJCNN,conference,Venue
+venue-9992f3b4e8994723,Int. J. Netw. Virtual Organisations,journal,Venue
+venue-99a01ab2a1a6fc66,CoopIS,conference,Venue
+venue-99b913c462c5f0d1,IEEE Trans. Inf. Forensics Secur.,journal,Venue
+venue-99e3433646a03a01,ROBOT (2),conference,Venue
+venue-99e3eb7a927c99ad,ACM Trans. Manag. Inf. Syst.,journal,Venue
+venue-9a0386c2a201b6ff,Perspectives@RecSys,conference,Venue
+venue-9a0d36480f9c4f4f,GlobalSIP,conference,Venue
+venue-9a166b69ed5ed7d8,Evol. Syst.,journal,Venue
+venue-9a4cf6e9609e22bf,TSP,conference,Venue
+venue-9a53782696c4ffcf,Int. J. Nat. Comput. Res.,journal,Venue
+venue-9a59662e26c664d0,Appl. Soft Comput.,journal,Venue
+venue-9a80b37d54346503,J. Educ. Technol. Soc.,journal,Venue
+venue-9aa3e3528e3cebba,IEEE Trans. Sustain. Comput.,journal,Venue
+venue-9ab13f2d540a0914,Int. J. Web Inf. Syst.,journal,Venue
+venue-9abb20b93414e87c,Int. J. Emerg. Technol. Learn.,journal,Venue
+venue-9acc04214640d7e8,ICCCI (CCIS Volume 1),conference,Venue
+venue-9ada463c39874c93,AIS&P (2),conference,Venue
+venue-9addc15ec1cfb472,"Image Perception, Observer Performance, and Technology Assessment",conference,Venue
+venue-9ae071b4f752cdb2,IET Softw.,journal,Venue
+venue-9ae6dd018b710b68,ISCAS,conference,Venue
+venue-9b110deb092ff3a4,Q2SWinet,conference,Venue
+venue-9b16d857ff4348ce,IMCOM,conference,Venue
+venue-9b31bd5de0c99cbc,IEEE Trans. Hum. Mach. Syst.,journal,Venue
+venue-9b4d43ffdb573dee,INFOCOM WKSHPS,conference,Venue
+venue-9b5076207f50316c,J. Comput. Inf. Syst.,journal,Venue
+venue-9b70c790e320280d,SAIV,conference,Venue
+venue-9b80bbc73aa9dd62,CAIN,conference,Venue
+venue-9b8483a59f134f7a,UbiComp Companion,conference,Venue
+venue-9b9685d90f5b889c,J. Data-centric Mach. Learn. Res.,journal,Venue
+venue-9ba24eeec91e43a2,BIOSIG,conference,Venue
+venue-9bd4f9cc8f93ed87,SmartCom,conference,Venue
+venue-9bd5b96a0721db54,SAI (2),conference,Venue
+venue-9bdcf44fec3d14fe,HOST,conference,Venue
+venue-9bf92e0c9e00bedd,CACIC,conference,Venue
+venue-9bfd499af850689e,ICPC,conference,Venue
+venue-9c094e5f87b9d97f,DISC,conference,Venue
+venue-9c0e6118a259d168,FPGA,conference,Venue
+venue-9c237a1d190f84dd,SysML,conference,Venue
+venue-9c243942070c3a7a,NLP-TEA@COLING,conference,Venue
+venue-9c4049d0f534abcb,Int. J. Interact. Multim. Artif. Intell.,journal,Venue
+venue-9c49f77b9a4bfcce,ISPA,conference,Venue
+venue-9c55b790acd37d08,BRACIS (2),conference,Venue
+venue-9c654f0fd467c1bd,Int. J. Artif. Intell. Tools,journal,Venue
+venue-9c680e4c9126c385,3PGCIC,conference,Venue
+venue-9c6c890de832e9bb,EDBT/ICDT Workshops,conference,Venue
+venue-9c91b7e312c49545,EURASIP J. Adv. Signal Process.,journal,Venue
+venue-9c986377cb1f4de4,SIGIR,conference,Venue
+venue-9c9a6a491f333ff1,Data Knowl. Eng.,journal,Venue
+venue-9cbd5962f4333c09,ICISSP,conference,Venue
+venue-9cca2069d9fb5034,ACIIDS (Companion),conference,Venue
+venue-9cddc9d77a3fd9d2,ESWC Workshops,conference,Venue
+venue-9cee1f0deb550cd6,KES-IDT (1),conference,Venue
+venue-9d0e56ff98d877e1,WI,conference,Venue
+venue-9d257e3c64f69434,SCIS/ISIS,conference,Venue
+venue-9d51e56f8653da9c,BioCAS,conference,Venue
+venue-9d5dc5e483d86cc7,ADT,conference,Venue
+venue-9d785cf181f328be,Int. J. Model. Simul. Sci. Comput.,journal,Venue
+venue-9db972047395fb86,WFLP,conference,Venue
+venue-9dbfa640ca9c4d6c,IH&MMSec,conference,Venue
+venue-9dc63c55edee8a94,AI Mag.,journal,Venue
+venue-9dccbe4635455be0,J. Control. Decis.,journal,Venue
+venue-9dd5b864bac55d93,ICAIC,conference,Venue
+venue-9de15e13cffcd0c6,AFRICON,conference,Venue
+venue-9dfef59f62731509,Intell. Comput.,journal,Venue
+venue-9e2eefdba982393e,ITS (2),conference,Venue
+venue-9e5de474e95cba21,Peer-to-Peer Netw. Appl.,journal,Venue
+venue-9e7a7d1c900105c5,Neural Comput. Appl.,journal,Venue
+venue-9e97a8bf41822d1d,ANNPR,conference,Venue
+venue-9eb7ae3df5b0f77b,ICAIIC,conference,Venue
+venue-9ec981e9119b6a9a,CCL,conference,Venue
+venue-9ed51438f8bb9737,CANDARW,conference,Venue
+venue-9ed78bd2ac09d257,Frontiers Inf. Technol. Electron. Eng.,journal,Venue
+venue-9eebcc9b94b62837,J. Circuits Syst. Comput.,journal,Venue
+venue-9ef6bb93926913f9,ICAIP,conference,Venue
+venue-9f2c1abea81dac11,TAAI,conference,Venue
+venue-9f478eaac680ebe6,ISoLA (2),conference,Venue
+venue-9f67e1a521a61883,SCIA (1),conference,Venue
+venue-9f6ca1b949266e23,Frontiers Comput. Neurosci.,journal,Venue
+venue-9f82d9baf8ffd396,TAP@STAF,conference,Venue
+venue-9fad33ec1f175652,DMBD,conference,Venue
+venue-9fb1635559128f2a,RE,conference,Venue
+venue-9fda190286d640c3,SuMob@SIGSPATIAL,conference,Venue
+venue-9fdf19ea46a9e29d,EPJ Data Sci.,journal,Venue
+venue-9fece453e32a234e,EuroS&P,conference,Venue
+venue-9ff2a769851f88b9,NLDB (1),conference,Venue
+venue-9ff82881f3a8e490,CSEE&T,conference,Venue
+venue-a000953b79f49374,IMIS@ECAI (1),conference,Venue
+venue-a004f6a0f615c79c,Int. J. Intell. Robotics Appl.,journal,Venue
+venue-a006a208e797e8a8,Int. J. Web Eng. Technol.,journal,Venue
+venue-a007d1c021ebcf37,MKWI,conference,Venue
+venue-a011517d6e20d57a,BigDataSecurity/HPSC/IDS,conference,Venue
+venue-a0140810cc09bbdc,ICANN (5),conference,Venue
+venue-a018ce929fae2869,IntelliSys (3),conference,Venue
+venue-a01dfaf6688f3d16,PRCV (1),conference,Venue
+venue-a0471ae328d18bbe,Wirel. Networks,journal,Venue
+venue-a0603b4a20ba16ee,CoDIT,conference,Venue
+venue-a0715ea78b58b57f,ICIMTech,conference,Venue
+venue-a0763d0bbc9ee511,ICA3PP (6),conference,Venue
+venue-a07c1e01ec6cf8ef,DH,conference,Venue
+venue-a0bd77ae0fd8fc2c,ECCV Workshops (12),conference,Venue
+venue-a0bfca33efd42255,Int. J. Fuzzy Syst.,journal,Venue
+venue-a0c8a4ee172f2bd3,SMC,conference,Venue
+venue-a0e15d641a7ee283,ICDM,conference,Venue
+venue-a0e97e6e42ba97a3,LKM@IJCAI,conference,Venue
+venue-a0faa84dbcf37c2a,ICTON,conference,Venue
+venue-a103e655582f2c7f,ICIAP (Workshops 2),conference,Venue
+venue-a1112ff1b8d11f0b,J. Signal Process. Syst.,journal,Venue
+venue-a1295f62071d4634,PDP,conference,Venue
+venue-a13139ad231f2b61,BigMM,conference,Venue
+venue-a16e3ce2f27a35a1,PLN-DS@SEPLN,conference,Venue
+venue-a1745da121079953,J. Big Data,journal,Venue
+venue-a17f9a641094e9c2,CSoNet,conference,Venue
+venue-a180fb1cdc699773,IECON,conference,Venue
+venue-a1a2adbf28815f88,ICSIE,conference,Venue
+venue-a1a801dad8423dc3,ICCAD,conference,Venue
+venue-a1b26b8559c1e1b5,IPIN,conference,Venue
+venue-a1b4007bba49268b,CHIWORK,conference,Venue
+venue-a1cb8759146f0aa8,Int. J. Intell. Inf. Database Syst.,journal,Venue
+venue-a1e59e99429af337,ICIC (LNBI 1),conference,Venue
+venue-a1f01952e1874434,ISGT EUROPE,conference,Venue
+venue-a21ba0e557eb10ec,PEARC,conference,Venue
+venue-a2284394bba1373c,SLT,conference,Venue
+venue-a22abedbb130abbd,IISA,conference,Venue
+venue-a230cbcd3535daae,SMM4H@COLING,conference,Venue
+venue-a2452c376132182b,ICMVA,conference,Venue
+venue-a266ccaa9528f7c3,BSN,conference,Venue
+venue-a268ea9ad59a2717,CVIP (3),conference,Venue
+venue-a26f441dab168cdb,BDAI,conference,Venue
+venue-a27954f8b28cf859,NER,conference,Venue
+venue-a29355ecb508a7c1,EWDTS,conference,Venue
+venue-a29704caf18ea72f,ICISS,conference,Venue
+venue-a2a30cd872f45819,Cogn. Syst. Res.,journal,Venue
+venue-a2a52f8cfafb4aed,SEBD,conference,Venue
+venue-a2d4aaded046df8b,Sci. Robotics,journal,Venue
+venue-a2e4c2d6d06f521d,WHICEB,conference,Venue
+venue-a2e7f34199068747,DB&IS,conference,Venue
+venue-a2fed3ecd3bcf079,PRICAI (3),conference,Venue
+venue-a309789eea1568ff,SPAC,conference,Venue
+venue-a314ad605c90c4fd,Int. J. Circuit Theory Appl.,journal,Venue
+venue-a33020500d0623f4,ACCV (3),conference,Venue
+venue-a338d8d37e192dce,ACM Trans. Reconfigurable Technol. Syst.,journal,Venue
+venue-a355038e2cdf3b5d,IEEE Trans. Very Large Scale Integr. Syst.,journal,Venue
+venue-a37ee80c47b3b8ec,Intelligent Vehicles Symposium,conference,Venue
+venue-a386d9521bb89969,ECCV (21),conference,Venue
+venue-a3b6a35f0ca9cf3c,CiST,conference,Venue
+venue-a3bdd450b99294b7,ICDCS,conference,Venue
+venue-a3de0b56de9d4393,VTS,conference,Venue
+venue-a3ea10c83ab43156,AII,conference,Venue
+venue-a416b84f924d8bac,FUZZ-IEEE,conference,Venue
+venue-a41f05f7945361b8,DLfM,conference,Venue
+venue-a442e9c52fd855c7,AICCONF,conference,Venue
+venue-a46d01abb42ebdad,IEEE Trans. Ind. Electron.,journal,Venue
+venue-a4aaa3b6b2106b0f,ELAMI@MICCAI,conference,Venue
+venue-a5115abfeaf66afc,IEEE Data Eng. Bull.,journal,Venue
+venue-a516dd66b75f35da,CIDR,conference,Venue
+venue-a5330ae52eb6dcbe,CCCV (1),conference,Venue
+venue-a53907f0ee8b9166,Multim. Syst.,journal,Venue
+venue-a567a634362fca77,CECNet,conference,Venue
+venue-a57299e6481b9dec,SoMeT,conference,Venue
+venue-a58e94ff5d17ebd2,CIARP (2),conference,Venue
+venue-a5a82b931f14f7b2,Pervasive Mob. Comput.,journal,Venue
+venue-a5ac1f8f4356d2d1,ACM Trans. Internet Techn.,journal,Venue
+venue-a5d66b8d4a0cd04f,SSPS,conference,Venue
+venue-a5d87bca2063dd52,NEWCAS,conference,Venue
+venue-a5ddf83a86b21c2b,ECCV (51),conference,Venue
+venue-a5f2ea2f1e78d3b7,Comput. Speech Lang.,journal,Venue
+venue-a5fd1019a262ef9c,ICA3PP (5),conference,Venue
+venue-a623522cf759b029,MICAI (2),conference,Venue
+venue-a6482b518900762c,ATSIP,conference,Venue
+venue-a65cf41f91840b32,MOVI@MICCAI,conference,Venue
+venue-a65f076a16d35f04,SSIAI,conference,Venue
+venue-a65fe227bc82b33e,CSCloud/EdgeCom,conference,Venue
+venue-a6680d8ef25fae78,PRO-VE,conference,Venue
+venue-a686ff93ad4b0f65,TPS-ISA,conference,Venue
+venue-a6a7a5403784570a,CACML,conference,Venue
+venue-a6bd97b51f039bf9,GCAIoT,conference,Venue
+venue-a6d0511859c13f87,NSDI,conference,Venue
+venue-a6e71384735dc273,Proc. ACM Manag. Data,journal,Venue
+venue-a6e83a3836017b80,ICDAR (2),conference,Venue
+venue-a7051a66826c4d2d,ICSPCC,conference,Venue
+venue-a719092cff87a175,WISE (2),conference,Venue
+venue-a73d697f3e1b1faf,INTERACT (Workshops),conference,Venue
+venue-a756532023316b00,AfricaNLP,conference,Venue
+venue-a7628466e3fcc2f8,ISLPED,conference,Venue
+venue-a7a0f23bbf709f95,ISPDC,conference,Venue
+venue-a7a8e87ccc525404,DEEM@SIGMOD,conference,Venue
+venue-a7ab5e0c5d7e6ac0,DCC,conference,Venue
+venue-a7ba5616488c2716,WorldCIST (3),conference,Venue
+venue-a7be974c26e229c1,AIS&P (1),conference,Venue
+venue-a7ccad58a96e786a,DMTW,conference,Venue
+venue-a7cfa0db9e0addf3,IET Inf. Secur.,journal,Venue
+venue-a7dec20d9d084399,Cogn. Sci.,journal,Venue
+venue-a7e04e177cef7009,ISOCC,conference,Venue
+venue-a7f3dddc5d4e380c,Wikidata@ISWC,conference,Venue
+venue-a7f618e31c3f9b0c,Comput. Educ. Artif. Intell.,journal,Venue
+venue-a83379fa42778c22,Inf. Resour. Manag. J.,journal,Venue
+venue-a85a0d315eeaccc0,SIMULTECH,conference,Venue
+venue-a8696f4365d9e438,GIoTS,conference,Venue
+venue-a86a7f2053f1bd93,Adv. Comput.,journal,Venue
+venue-a87e988fc2065d3f,HHAI,conference,Venue
+venue-a880a5da09340d6d,ECIR (4),conference,Venue
+venue-a886a366827a110a,Int. J. High Perform. Syst. Archit.,journal,Venue
+venue-a88e6de78e534892,DDECS,conference,Venue
+venue-a8c1f4b5da12fb12,LDK,conference,Venue
+venue-a8d85005a5e1c2f4,SCCC,conference,Venue
+venue-a8f039aaafc76611,ECCV (12),conference,Venue
+venue-a90d6f2bec55ac59,GCAI,conference,Venue
+venue-a927c5bc0622acd5,KES-IDT,conference,Venue
+venue-a92d476605890cc2,GMDS,conference,Venue
+venue-a9300bcc096cf13e,MLSP,conference,Venue
+venue-a94c22f8aa301c93,IEEE Trans. Syst. Man Cybern. Syst.,journal,Venue
+venue-a96d57e2355ef21a,Robotics: Science and Systems,conference,Venue
+venue-a97345b10c358d1b,IEEE Trans. Biomed. Circuits Syst.,journal,Venue
+venue-a97b6c414f546cdb,AIED (6),conference,Venue
+venue-a98bd811f1ef8cf9,ECCV Workshops (2),conference,Venue
+venue-a98cec7205e17368,IEEE Netw. Lett.,journal,Venue
+venue-a99d6328536ea6c1,ACII,conference,Venue
+venue-a9cc9f5cacbcd7d1,CSPS,conference,Venue
+venue-a9ce49faaf26474e,Image-Guided Procedures,conference,Venue
+venue-a9ee87af0e3f8730,ICLR (Workshop),conference,Venue
+venue-a9fde3f6c62ba046,IPMI,conference,Venue
+venue-aa106110a983aeba,PKDD/ECML Workshops (5),conference,Venue
+venue-aa178762b5fe5535,GIScience,conference,Venue
+venue-aa26a8c45f58443c,ACL/IJCNLP (1),conference,Venue
+venue-aa2bfda36c6d3fbe,ACG,conference,Venue
+venue-aa4e72776bed69f1,IEEE Trans. Veh. Technol.,journal,Venue
+venue-aa69b94e752fb252,ICWSM,conference,Venue
+venue-aa6bebff8031dda4,Frontiers Neurorobotics,journal,Venue
+venue-aa781e4e0b88e9f8,ACL/IJCNLP (Findings),conference,Venue
+venue-aa8155721f8cb787,WMT (shared task),conference,Venue
+venue-aa82392a74cd76ea,Int. J. Hum. Comput. Interact.,journal,Venue
+venue-aa8b43ca2692495a,CITI,conference,Venue
+venue-aac557e1e3090f0b,EURO J. Transp. Logist.,journal,Venue
+venue-aac888630f8589b4,BMVC Workshop,conference,Venue
+venue-aac9539446a33961,QoMEX,conference,Venue
+venue-aae2952f17b5b4a2,MIND,conference,Venue
+venue-aae4a30c83a38756,AIware,conference,Venue
+venue-aaede1d12827ec68,CNIOT,conference,Venue
+venue-aafca63b054b10d3,SDM,conference,Venue
+venue-ab29229febe82b13,J. Electronic Imaging,journal,Venue
+venue-ab36ee95d3ae3dba,SYSTEM,conference,Venue
+venue-ab5652a65b961672,IPDPS,conference,Venue
+venue-ab9a7a6993ae5651,Unmanned Syst.,journal,Venue
+venue-ab9b97110726cb4c,Appl. Netw. Sci.,journal,Venue
+venue-aba1b08150904993,Comput. Appl. Math.,journal,Venue
+venue-abae1a4d406121ed,Internet Technol. Lett.,journal,Venue
+venue-abc231adc1754ab7,CSE/EUC,conference,Venue
+venue-abdc4d4070d91370,MA3HMI@ICMI,conference,Venue
+venue-abed58bc480c319d,PRCV (17),conference,Venue
+venue-abf35523ea5c4167,IBERAMIA,conference,Venue
+venue-ac0072a5e6eeb18e,ADMIT,conference,Venue
+venue-ac12b500518b27fd,ICR,conference,Venue
+venue-ac4a011f3e6e8442,QALD/SemREC@ISWC,conference,Venue
+venue-ac4ec7d984b7f267,FOIS,conference,Venue
+venue-ac6f60c756aef46a,J. Inf. Hiding Multim. Signal Process.,journal,Venue
+venue-ac85c4360ed26aa5,ACIRS,conference,Venue
+venue-ac8bd58a2477d11b,ISKE,conference,Venue
+venue-ac8fd547c3b88117,ICSE-SEIP,conference,Venue
+venue-ac931b85a265d553,SOHOMA,conference,Venue
+venue-ac938efd792c6b78,ACSCC,conference,Venue
+venue-acb87e8d713ef3dd,CNCL,conference,Venue
+venue-acb986b3abf889ca,GECCO Companion,conference,Venue
+venue-acc69a96bc5c3367,Pattern Recognit.,journal,Venue
+venue-acc7b12a98cbdffa,ICONIP (7),conference,Venue
+venue-acc7f2f02e9b974b,SIAM J. Math. Data Sci.,journal,Venue
+venue-acd37ebf51dcd475,DSW,conference,Venue
+venue-ace424b598731d4f,EAMT (1),conference,Venue
+venue-acfdb9c3c6e2c4dc,AIAM (ACM),conference,Venue
+venue-ad22d31d8c6462cc,NeuroImage,journal,Venue
+venue-ad4668f62a66e6d9,EDUCON,conference,Venue
+venue-adc0344394ece115,PACLIC,conference,Venue
+venue-adecfb35e8a93ca4,ICCCS (1),conference,Venue
+venue-adf3bc1f98104d06,Nat.,journal,Venue
+venue-ae040d762f79ce42,CAIP (1),conference,Venue
+venue-ae0fdacdee114fc5,TAROS,conference,Venue
+venue-ae1d064f63adaa28,SGAI Conf. (1),conference,Venue
+venue-ae2d596244f48853,CNS,conference,Venue
+venue-ae373cfce09f113b,J. Comput. Biol.,journal,Venue
+venue-ae4ee954b889cc7b,Comput. Educ.,journal,Venue
+venue-ae9889ee3aee2940,ICCBR,conference,Venue
+venue-aea242d005190f03,EGOVIS,conference,Venue
+venue-aeacd03dc5d76861,CSE,conference,Venue
+venue-aeae7f5248558117,J. Reliab. Intell. Environ.,journal,Venue
+venue-aeb38b01b5a07aab,MAI-XAI@ECAI,conference,Venue
+venue-aeda5fa5c2c273ed,EMCIS (1),conference,Venue
+venue-aee4b44f876d293e,Syst.,journal,Venue
+venue-aef429828a728286,ISMAR-Adjunct,conference,Venue
+venue-af057d40ed6c8ab7,IMX,conference,Venue
+venue-af1dc067e3e0830b,ICGEC,conference,Venue
+venue-af2702f77f29abde,ICACI,conference,Venue
+venue-af3eb14b286d0b92,SiPS,conference,Venue
+venue-af602332ef072e7c,HILDA@SIGMOD,conference,Venue
+venue-afb2f955f60faf3c,RuleML+RR (Supplement),conference,Venue
+venue-afcf6ea3ef727a90,MESAS,conference,Venue
+venue-afdecb79c8e94d87,GLOBECOM Workshops,conference,Venue
+venue-afe2e762b2b6a518,CICLing (2),conference,Venue
+venue-afe7e9599b9428bf,ECCV (3),conference,Venue
+venue-afef16cd9679c859,EURASIP J. Inf. Secur.,journal,Venue
+venue-b0076094c0b3953c,NeSy,conference,Venue
+venue-b00e6179d9e5f777,ACM Multimedia,conference,Venue
+venue-b0116ff5041cbdd3,J. Real Time Image Process.,journal,Venue
+venue-b0428d1abca6506a,IWAIPR,conference,Venue
+venue-b04ebae7297b278b,BTW (Workshops),conference,Venue
+venue-b05f9de8fc047c28,PRIME@MICCAI,conference,Venue
+venue-b07920233d95e1b5,IEEE Netw.,journal,Venue
+venue-b085dfc7a78a2a17,J. Mach. Learn. Res.,journal,Venue
+venue-b08fd6cae8d30d08,SEMANTiCS,conference,Venue
+venue-b0935385c14859b5,CCKS Tasks,conference,Venue
+venue-b09a2abbf3e78a92,ACPR (2),conference,Venue
+venue-b0a22e5b66e801cb,HSCMA,conference,Venue
+venue-b0a3c371bfdfb5df,J. Supercomput.,journal,Venue
+venue-b0bccee7f2f9f9c1,J. Exp. Theor. Artif. Intell.,journal,Venue
+venue-b0e9fb73662dc2a1,CANS (2),conference,Venue
+venue-b113e359a110909f,IC3INA,conference,Venue
+venue-b11956ec9f46f899,IEEE Trans. Learn. Technol.,journal,Venue
+venue-b124df9ece778c54,EURASIP J. Image Video Process.,journal,Venue
+venue-b13ac26aef1cb036,IWAI,conference,Venue
+venue-b14bb1b728f0975b,Pers. Ubiquitous Comput.,journal,Venue
+venue-b14be88f159e145b,FOIS (Satellite Events),conference,Venue
+venue-b17a0646c1c4bf69,Comput. Appl. Eng. Educ.,journal,Venue
+venue-b1a9c26344aa79c5,ICPR (4),conference,Venue
+venue-b1ac72d54ba39733,INLG,conference,Venue
+venue-b1baaf212c5bce66,Annu. Rev. Control.,journal,Venue
+venue-b1ca71ff54320068,ICKG,conference,Venue
+venue-b1ce6175759cfd89,ICMLC,conference,Venue
+venue-b1fbf072744913af,IRC,conference,Venue
+venue-b2009a41b15c216a,ICIG (1),conference,Venue
+venue-b2070e406998a65c,Discov. Internet Things,journal,Venue
+venue-b21c7d38932ae4a0,Proc. ACM Hum. Comput. Interact.,journal,Venue
+venue-b22177913ca5a50c,IEEE Symposium on Security and Privacy,conference,Venue
+venue-b22d68c9fd106a28,CSICC,conference,Venue
+venue-b2387187ab2942db,ICCV (Workshops),conference,Venue
+venue-b23a93492d01e68a,ICDE,conference,Venue
+venue-b2473faf81f586a7,GCPR (1),conference,Venue
+venue-b25445bc18976082,Swarm Evol. Comput.,journal,Venue
+venue-b2b709247c18018e,ISMCO,conference,Venue
+venue-b2dda638f30404ea,ADMA (4),conference,Venue
+venue-b2e79c4498536adb,IET Biom.,journal,Venue
+venue-b30147cc16953e0f,J. Comput. Sci. Eng.,journal,Venue
+venue-b3033f6b3056358b,CAiSE Forum,conference,Venue
+venue-b314d400b0fa7468,Adv. Eng. Softw.,journal,Venue
+venue-b340c2e22b448527,VR Workshops,conference,Venue
+venue-b36a140335c7fa98,ICDS,conference,Venue
+venue-b36b5ae51e9f42dc,Secur. Commun. Networks,journal,Venue
+venue-b38cb63ed3852304,AHFE (3),conference,Venue
+venue-b39d631627ad0a72,CSCloud,conference,Venue
+venue-b3d8542105ee3e46,ICA3PP (1),conference,Venue
+venue-b3d875797febb397,ACM Trans. Inf. Syst.,journal,Venue
+venue-b3e69ee1b38d905e,IntelITSIS,conference,Venue
+venue-b3e8dd183f1390a6,ISVLSI,conference,Venue
+venue-b3fc0aef0c93688f,ICMLDE,conference,Venue
+venue-b423fe04ddd638f2,ETS,conference,Venue
+venue-b4267bd3ad7585e5,ICTAS,conference,Venue
+venue-b429e0d710b87e14,IEEE Trans. Artif. Intell.,journal,Venue
+venue-b42ead3ff333f74b,Medical Image Anal.,journal,Venue
+venue-b45eeae3fd317d71,SSCI,conference,Venue
+venue-b461b467b506b2af,ISGT,conference,Venue
+venue-b46a2ab93e337c2d,ICPCSEE (1),conference,Venue
+venue-b47ad2394af98c38,ACL,conference,Venue
+venue-b49c282f3e9095f0,WANLP@ACL 2019,conference,Venue
+venue-b4c7c879e9ef7dfc,MMSP,conference,Venue
+venue-b50079cc84450d48,ICDSP,conference,Venue
+venue-b51074b0388c785f,Int. J. Artif. Intell. Soft Comput.,journal,Venue
+venue-b520faf71d3299ab,FLAIRS,conference,Venue
+venue-b534832054a366ad,Comput. Biol. Medicine,journal,Venue
+venue-b535adc9fce6a7c1,Comput. Environ. Urban Syst.,journal,Venue
+venue-b5451f5a53b77f2f,MSPN,conference,Venue
+venue-b54e6793abec7783,WiMob,conference,Venue
+venue-b54fcc8af3fd2686,DESSERT,conference,Venue
+venue-b555fbe5e028bccc,ICCCI,conference,Venue
+venue-b5570243b4205ca9,Int. J. Appl. Earth Obs. Geoinformation,journal,Venue
+venue-b55b056fa97b79da,Digit. Commun. Networks,journal,Venue
+venue-b55e3d4d94b91c96,Int. J. Crit. Infrastructures,journal,Venue
+venue-b5835165d0228237,YAISD Workshops,conference,Venue
+venue-b58630b178fc3801,IC-NIDC,conference,Venue
+venue-b58c20c66f0abc42,Adv. Model. Simul. Eng. Sci.,journal,Venue
+venue-b5974913dc426e12,IEEE Trans. Parallel Distributed Syst.,journal,Venue
+venue-b59bfe03947d1786,MDTT,conference,Venue
+venue-b59cabcd1cbc6d9e,APWeb-WAIM (2),conference,Venue
+venue-b5a09b897af8afea,IDT,conference,Venue
+venue-b5ad1558dbbb850e,ISNN (1),conference,Venue
+venue-b5c5717fdc054c78,ICDIM,conference,Venue
+venue-b6052e570351bfe4,IJCLR,conference,Venue
+venue-b63581938773da1e,PervasiveHealth,conference,Venue
+venue-b6461dc2bf85fbee,J. Web Semant.,journal,Venue
+venue-b67057e315b5308a,PRCV (9),conference,Venue
+venue-b6803c88f442269b,AACL/IJCNLP (Findings),conference,Venue
+venue-b6a449e65da8d6a6,Libr. Hi Tech,journal,Venue
+venue-b6c5f69ff558abec,ITTCS,conference,Venue
+venue-b6c8a7d681f6adcc,ICAAI,conference,Venue
+venue-b6f48e6d49f569bb,KSE,conference,Venue
+venue-b6f838d5c963c533,MIWAI (3),conference,Venue
+venue-b716755a2543e677,RecSys,conference,Venue
+venue-b7209239e87e8ea3,"ICPR (Workshops and Challenges, 3)",conference,Venue
+venue-b72ba7fa0a7fd662,IEEE CAA J. Autom. Sinica,journal,Venue
+venue-b72d063b9cf43794,IWIS,conference,Venue
+venue-b73a552bf1b92616,SIGGRAPH (Conference Paper Track),conference,Venue
+venue-b73bb9607ee610ac,INFOCOM Workshops,conference,Venue
+venue-b73f48a9085dbf24,IWINAC (1),conference,Venue
+venue-b752177e67f68041,Int. J. Rough Sets Data Anal.,journal,Venue
+venue-b75b13d2d9fbc77a,ICAI Workshops,conference,Venue
+venue-b79aa1d2f474ca7c,ICDIP,conference,Venue
+venue-b79cc763372aa5d2,FIRE (Working Notes),conference,Venue
+venue-b7a40cb7f6214030,SDS,conference,Venue
+venue-b7a79a6672a29cde,J. Comput. Phys.,journal,Venue
+venue-b7d398354f22ceef,CISIM,conference,Venue
+venue-b7dbadc1f5d9784f,PIMRC,conference,Venue
+venue-b7e825a588379eec,ICCTA,conference,Venue
+venue-b80465da136d608c,J. Multiple Valued Log. Soft Comput.,journal,Venue
+venue-b814403e4f0cf13b,EAI Endorsed Trans. Cloud Syst.,journal,Venue
+venue-b818dbdb4ee28be6,NLDB (2),conference,Venue
+venue-b8263d9cc50a3a30,Int. J. Netw. Manag.,journal,Venue
+venue-b83ca41beb4c313b,ICACIE (2),conference,Venue
+venue-b84dcb327655d707,SecureComm,conference,Venue
+venue-b8503b06cb4e77cc,IJCAI,conference,Venue
+venue-b8504ca9e11ffd90,ISIC/Care-AI/MedAGI/DeCaF@MICCAI,conference,Venue
+venue-b85fa1624a79ca93,Minds Mach.,journal,Venue
+venue-b864e3222422168d,UIC/ATC/ScalCom,conference,Venue
+venue-b8bf96814a205e24,IEA/AIE (1),conference,Venue
+venue-b8c83cf8d9a330b5,IEA/AIE (2),conference,Venue
+venue-b8d25ef552e43e4b,ISWCS,conference,Venue
+venue-b907ce6d72afa967,EUROCAST (2),conference,Venue
+venue-b9120425bdd01b78,BI,conference,Venue
+venue-b93ea6b6280c3e03,ICHI,conference,Venue
+venue-b975ceb649b12c85,IEEE ACM Trans. Comput. Biol. Bioinform.,journal,Venue
+venue-b98312eae97418bb,AIiH (2),conference,Venue
+venue-b99e99c6730ce97d,ICBO/BioCreative,conference,Venue
+venue-b9abade6c847ed3a,ICCCI (1),conference,Venue
+venue-b9fc139dd7c067df,CAMSAP,conference,Venue
+venue-ba8b68fe3ed5dc41,BioNLP@ACL,conference,Venue
+venue-ba975e1d7777206e,ICINCO,conference,Venue
+venue-badf571d9f1d1892,IEEE Trans. Biomed. Eng.,journal,Venue
+venue-bae683c0ec411997,CENTERIS/ProjMAN/HCist,conference,Venue
+venue-baf9f0d3c79a695c,IoTaIS,conference,Venue
+venue-bb1bd82d4a626f55,UKSim,conference,Venue
+venue-bb2e14e8e06c985c,GeoAI@SIGSPATIAL,conference,Venue
+venue-bb33b166fe4bbe11,HIS,conference,Venue
+venue-bb5523d4d549c3ef,ICECS,conference,Venue
+venue-bb616a521be1b1b6,IGTA,conference,Venue
+venue-bb6a371d039877ba,BRACIS (3),conference,Venue
+venue-bb73e143327c3af9,ICGSP,conference,Venue
+venue-bbaedfb97a2d666c,Computación y Sistemas,journal,Venue
+venue-bbaee02d6fe43b24,CAAI Trans. Intell. Technol.,journal,Venue
+venue-bbdbaf4823af5c75,ICECC,conference,Venue
+venue-bbe3bd5345e8bb51,J. Cheminformatics,journal,Venue
+venue-bbe8d8254afe2042,Comput. Intell.,journal,Venue
+venue-bbfd74a3360d785e,OM@ISWC,conference,Venue
+venue-bc239f8ac51bd2b0,CW,conference,Venue
+venue-bc53fb55783853c1,ICAISC (2),conference,Venue
+venue-bc62c41ace283634,Comput. Electr. Eng.,journal,Venue
+venue-bc72930ece12fce9,DSMSI (2),conference,Venue
+venue-bc9b41c7fe3ec26a,ICME Workshops,conference,Venue
+venue-bc9fc3ca3f37b55c,PReMI,conference,Venue
+venue-bcb1a81649b65e6a,ArgMining,conference,Venue
+venue-bcdbd4d0f7f9d472,ToothFairy/3DTeethLand/STS@MICCAI,conference,Venue
+venue-bce7de212b39ddbe,RoCHI,conference,Venue
+venue-bd1fe5343edb0fca,IET Networks,journal,Venue
+venue-bd2f3e7347725026,MuC (Workshopband),conference,Venue
+venue-bd2f4a55656ff4fc,CogMI,conference,Venue
+venue-bd3977c5bf806abf,COMPSAC,conference,Venue
+venue-bd45f2bfc3e39205,PST,conference,Venue
+venue-bd63ab6045473abd,SIU,conference,Venue
+venue-bd70da1112c696f1,ICIN,conference,Venue
+venue-bd816d9816095baa,ISMIS,conference,Venue
+venue-bd90c9d790b8c48a,INRA@RecSys,conference,Venue
+venue-bdab584a2eb7eed8,J. Artif. Intell. Soft Comput. Res.,journal,Venue
+venue-bddf282e627bfeec,FDL,conference,Venue
+venue-bde7201f5fcd1133,CCIOT,conference,Venue
+venue-bdebade601b2f241,ICA3PP (3),conference,Venue
+venue-bdfcfccdb537464b,AIST (Supplement),conference,Venue
+venue-be398e73ff0ca671,Comput. Animat. Virtual Worlds,journal,Venue
+venue-be4416bb9e658e04,ECCV (42),conference,Venue
+venue-be50edc3e73dcddb,MICCAI (11),conference,Venue
+venue-be6209a7f48d0317,Energy Inform.,journal,Venue
+venue-be9b9365df495f4b,Electron. Mark.,journal,Venue
+venue-becab5df7424aa94,BHI,conference,Venue
+venue-bed6788aaaa7941a,COMAD/CODS (December),conference,Venue
+venue-bf019b5b8accd240,H-WORKLOAD,conference,Venue
+venue-bf3b2f580eaf207c,WiOpt,conference,Venue
+venue-bf4fdecb025edf10,IEEE Instrum. Meas. Mag.,journal,Venue
+venue-bf648371d995a9bf,ICSC,conference,Venue
+venue-bfb52bb41339534c,Networking,conference,Venue
+venue-bfb81c317b23c6ce,ICISDM,conference,Venue
+venue-bfc79e87dc9b1ea9,SIGDIAL,conference,Venue
+venue-bfca20888f844c24,CHI Extended Abstracts,conference,Venue
+venue-bfd8274d3d1c4b5e,ICCPR,conference,Venue
+venue-bfdff8aba475974f,BigComp,conference,Venue
+venue-bfe1c116175ae12a,Model. Assist. Stat. Appl.,journal,Venue
+venue-c030d0180a670d30,Int. J. Comput. Assist. Radiol. Surg.,journal,Venue
+venue-c047fdf07f6655ab,CCKS,conference,Venue
+venue-c05314718799c343,ISSCC,conference,Venue
+venue-c07dbfef229b3b46,IntelliSys (1),conference,Venue
+venue-c081a74bc9aebddd,MILCOM,conference,Venue
+venue-c0845bcca9138fd4,AI Open,journal,Venue
+venue-c0963a18c1672aa4,ICCSA (9),conference,Venue
+venue-c0a817a310a0ddb7,CHR,conference,Venue
+venue-c0a82fac1ce843a3,FABULOUS,conference,Venue
+venue-c0a923ac8d09f2a8,MIE,conference,Venue
+venue-c0e8d0da48654566,Ann. Oper. Res.,journal,Venue
+venue-c0f23444bfe8203d,ISER,conference,Venue
+venue-c134f67ca1d49964,ICAIS (3),conference,Venue
+venue-c15ebef1a877bd11,AIAI (2),conference,Venue
+venue-c1676490aaa8567c,J. Softw.,journal,Venue
+venue-c17f5c51e679bc2a,Briefings Bioinform.,journal,Venue
+venue-c1b40ec7a0e16734,ISSRE (Workshops),conference,Venue
+venue-c1d9e5d6fed6a34e,IACR Cryptol. ePrint Arch.,journal,Venue
+venue-c1f069083a864eb4,C3AI,conference,Venue
+venue-c205f4a2671db188,APSIPA ASC,conference,Venue
+venue-c20b50bef5adec8d,IET Comput. Vis.,journal,Venue
+venue-c229140e8107efb6,CSCML,conference,Venue
+venue-c28d419970403a2b,Appl. Ontology,journal,Venue
+venue-c2966b80d618ece7,CHES,conference,Venue
+venue-c29d5e2fd262977d,Array,journal,Venue
+venue-c2d3e14e60b48bcf,ECCV Workshops (3),conference,Venue
+venue-c2e99f0787459378,IEEE Trans. Affect. Comput.,journal,Venue
+venue-c2f96ac897d34010,eLEOT (1),conference,Venue
+venue-c3282346bab8276d,ECCV (71),conference,Venue
+venue-c33332a20ae7707c,Int. J. Inf. Commun. Technol.,journal,Venue
+venue-c3618f2825c9bcda,Sci. Program.,journal,Venue
+venue-c385a77ab9c94fa8,Int. J. Appl. Metaheuristic Comput.,journal,Venue
+venue-c38f2448dfdec63a,CHIIR,conference,Venue
+venue-c39081e95ba75a14,ICSE (Companion Volume),conference,Venue
+venue-c399daca81fc2541,ECBS,conference,Venue
+venue-c39bca5a30874411,PACT,conference,Venue
+venue-c39cf948f5681044,J. Cloud Comput.,journal,Venue
+venue-c3c5fd72dca1e639,CTS,conference,Venue
+venue-c3cd905daa0accc8,WebNLG,conference,Venue
+venue-c421249afb92439d,ICC,conference,Venue
+venue-c438678fd3f759f9,IEEE Trans. Intell. Transp. Syst.,journal,Venue
+venue-c4413b6f593ce92a,WPMC,conference,Venue
+venue-c4480e403d6472b6,ICIC (12),conference,Venue
+venue-c4548729237a7a5c,Appl. Comput. Intell. Soft Comput.,journal,Venue
+venue-c466586cf7126064,Wireless Days,conference,Venue
+venue-c47727a5797128d3,AIST,conference,Venue
+venue-c4832159e209b14b,ICIRA (2),conference,Venue
+venue-c48cf7a7f2fed1ac,IC3,conference,Venue
+venue-c48d2ca1318695c9,EVALITA,conference,Venue
+venue-c49f195788595468,QUASAR@HPDC,conference,Venue
+venue-c4b48216a9559d4c,ECCV (4),conference,Venue
+venue-c4d2198ec0f8a0b4,PRCV (2),conference,Venue
+venue-c4d28109c7e87714,SIGCOMM Posters and Demos,conference,Venue
+venue-c4d94c7d2a521c81,ICANN (4),conference,Venue
+venue-c4d974f8c5987a36,IC3K (KEOD/KMIS),conference,Venue
+venue-c4e4d614b5a9028a,GIR,conference,Venue
+venue-c502b5567463e5b6,AICAS,conference,Venue
+venue-c5186cc7081f4f03,IEEECONF,conference,Venue
+venue-c51fc4dacc19df17,EXPLAINS,conference,Venue
+venue-c5263c2bd63f8b95,Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.,journal,Venue
+venue-c535a029131e0406,Appl. Clin. Inform.,journal,Venue
+venue-c53a45534a2e8151,ACSAC,conference,Venue
+venue-c53c6f9f4ceeeda1,ESAIR@CIKM,conference,Venue
+venue-c58171bfd6a0398c,FLLM,conference,Venue
+venue-c5940328750985a5,LOD,conference,Venue
+venue-c5ad898ff087917b,J. Inf. Data Manag.,journal,Venue
+venue-c5b0441a6b6d4ca4,ICCS (5),conference,Venue
+venue-c5d573bcf4fac38a,VISIGRAPP (3: VISAPP),conference,Venue
+venue-c5d57ba0e55ebe1b,ACM Journal on Computing and Cultural Heritage,journal,Venue
+venue-c5d7866c0f17d95a,PReMI (2),conference,Venue
+venue-c5e1585922c7a56b,Comput. Graph. Forum,journal,Venue
+venue-c5f89de095f4fcc3,EACL (1),conference,Venue
+venue-c60e2886338b89f9,XP Workshops,conference,Venue
+venue-c6190b90d67a0e53,eLEOT (2),conference,Venue
+venue-c630cfc530fe3e4d,Discov. Artif. Intell.,journal,Venue
+venue-c6362e0cbf51e036,EURASIP J. Audio Speech Music. Process.,journal,Venue
+venue-c68b76134565ed11,ASAP,conference,Venue
+venue-c6c3640b0b4fd0eb,Inf. Technol. Control.,journal,Venue
+venue-c6c63748f4a94265,ACM Trans. Softw. Eng. Methodol.,journal,Venue
+venue-c6cc522466cc9175,Vietnam. J. Comput. Sci.,journal,Venue
+venue-c6d841143aa6a7bf,HAVE,conference,Venue
+venue-c70d1259d59c1158,Neuromorph. Comput. Eng.,journal,Venue
+venue-c71ea83202c6df2c,ICHMS,conference,Venue
+venue-c734f34a7a15ce5d,Int. J. Interact. Mob. Technol.,journal,Venue
+venue-c73a16ef9890fb2b,Deep-Breath@MICCAI,conference,Venue
+venue-c754a5753115e274,ICSBT,conference,Venue
+venue-c76e46be567581ff,EMNLP (1),conference,Venue
+venue-c773f6f371271566,Comput. Vis. Media,journal,Venue
+venue-c77ea916445355da,ML4CS,conference,Venue
+venue-c7871f2d4b6e13e2,CommNet,conference,Venue
+venue-c78a9220b5102d73,ICCS (Workshops 5),conference,Venue
+venue-c78d5f1302db70c6,ASCC,conference,Venue
+venue-c794ceb73b1c667a,W-NUT,conference,Venue
+venue-c797ba27cbe9340a,ADC,conference,Venue
+venue-c79a7350e82de2ba,Autom.,journal,Venue
+venue-c7a75a81e448c077,ICSRS,conference,Venue
+venue-c7bc9dad24b9abd9,Comput. Vis. Image Underst.,journal,Venue
+venue-c7cc755bd66b0170,ECC,conference,Venue
+venue-c7d1d406c0e997df,Eur. J. Oper. Res.,journal,Venue
+venue-c7d4761cfc4724c8,MIS4TEL,conference,Venue
+venue-c7e2e357265584f0,CLeaR,conference,Venue
+venue-c7e5b0e7893180a4,IAS,conference,Venue
+venue-c7e60da94bc032e4,SAI (3),conference,Venue
+venue-c7f5183c50c01e36,PRCV (3),conference,Venue
+venue-c7f8ff3d3fcaa0f9,EvoApplications@EvoStar,conference,Venue
+venue-c7ff6e6046a67a81,SocialCom,conference,Venue
+venue-c8070c0e4c3ec5dc,ICPE,conference,Venue
+venue-c80cc726a6e54058,Data Inf. Manag.,journal,Venue
+venue-c820bd781d2ba198,ICMSS,conference,Venue
+venue-c82175676d5147b0,BRACIS,conference,Venue
+venue-c825c7b24d49cd7c,ISC High Performance (Workshops),conference,Venue
+venue-c830db5b42ce2dac,Inf. Process. Manag.,journal,Venue
+venue-c850b481b3dd432f,PEMWN,conference,Venue
+venue-c867e792b50157f1,ICA3PP (2),conference,Venue
+venue-c8777b017a4980af,UCAmI,conference,Venue
+venue-c87b62cdfc8994b6,IMPROVE,conference,Venue
+venue-c885a6bf2d3f49e9,BCB,conference,Venue
+venue-c893b2f80f5a0eb7,J. Inf. Secur. Appl.,journal,Venue
+venue-c897321bd9fd497d,DTIS,conference,Venue
+venue-c8a7412d761d7933,ASE,conference,Venue
+venue-c8d96d6cb4b4f6b0,CCBR,conference,Venue
+venue-c8df1ccb31d6771c,Mid4CC@Middleware,conference,Venue
+venue-c8e1b742eb74e34d,Geo spatial Inf. Sci.,journal,Venue
+venue-c8f352fbf0e6570f,CIPAE,conference,Venue
+venue-c9020f79b69aacc9,NaNA,conference,Venue
+venue-c91d78b752001ad5,IEEE Trans. Cogn. Commun. Netw.,journal,Venue
+venue-c9226f2f8aa5bb52,Simul.,journal,Venue
+venue-c92e2db70159a184,NooJ,conference,Venue
+venue-c93db7787a168be1,SMARTINDUSTRY,conference,Venue
+venue-c93efbd4910c08f3,Big Data (CCF),conference,Venue
+venue-c9454b3ed3f74e40,WOP@ISWC,conference,Venue
+venue-c94aa4476a1ff8e9,Neuroinformatics,journal,Venue
+venue-c94af03d3d8292b2,Digital and Computational Pathology,conference,Venue
+venue-c94f659192968732,TSD (2),conference,Venue
+venue-c954b41673bb57ff,NOSSDAV,conference,Venue
+venue-c97c7ac67a2d17d1,ISAmI,conference,Venue
+venue-c98f39d14ba26c84,ENUMATH,conference,Venue
+venue-c9a42be4901f62b4,NoDaLiDa/Baltic-HLT,conference,Venue
+venue-c9acf4998a4964af,MiSE@ICSE,conference,Venue
+venue-ca0dae618cc10565,J. Intell. Inf. Syst.,journal,Venue
+venue-ca1b16a96edadb85,Comput. Networks,journal,Venue
+venue-ca321fcf821bd2cd,Int. J. Autom. Control.,journal,Venue
+venue-ca3cf93af4af3e20,ICA3PP (7),conference,Venue
+venue-ca550d9c754a9754,ICDAR (Workshops 1),conference,Venue
+venue-ca5f87343a0c2e14,ICAI,conference,Venue
+venue-ca6b45f35e692868,ICONIP (6),conference,Venue
+venue-ca6ddc59de0561b8,SGAI Conf.,conference,Venue
+venue-ca746bbc988bd0f5,J. Electr. Comput. Eng.,journal,Venue
+venue-ca8eb609bb49de3b,Int. J. Bus. Intell. Data Min.,journal,Venue
+venue-ca8f95e935512652,Online Inf. Rev.,journal,Venue
+venue-cac5a826e9ad452d,LPKM,conference,Venue
+venue-caca14e84f89e9de,ICAIF,conference,Venue
+venue-cad29302e03a45b6,CICC,conference,Venue
+venue-cb004cebc5bcbb83,Conference on Designing Interactive Systems,conference,Venue
+venue-cb1dff30efff7965,IEEE Multim.,journal,Venue
+venue-cb203d46ea131a79,J. Medical Imaging Health Informatics,journal,Venue
+venue-cb22b8b9e6b36f78,ICEIC,conference,Venue
+venue-cb2db6bba12e46df,TGDK,journal,Venue
+venue-cb3b7ca29c4b10e8,ICDM Workshops,conference,Venue
+venue-cb41525aba35b8d2,EC-TEL (2),conference,Venue
+venue-cb4da45fa6253a0e,ECCV (8),conference,Venue
+venue-cb61b335781757ed,Comput. Aided Civ. Infrastructure Eng.,journal,Venue
+venue-cb7a4d5776bf8114,ChinaSIP,conference,Venue
+venue-cb7b1cd055effe41,ACM Trans. Comput. Syst.,journal,Venue
+venue-cb84c457ae036083,OCTA,conference,Venue
+venue-cb94b87563e1a4ba,Rev. Int. Géomatique,journal,Venue
+venue-cba249026ef145fe,ICCASA/ICTCC,conference,Venue
+venue-cbabffe1b8adfe71,Int. J. Geogr. Inf. Sci.,journal,Venue
+venue-cbc98bb047527a43,ECIR,conference,Venue
+venue-cbd2919208ec9f86,EGSR (ST),conference,Venue
+venue-cbd6f3709d04d0a8,Proc. ACM Program. Lang.,journal,Venue
+venue-cbe66468c1d43e4b,GRAIL@MICCAI,conference,Venue
+venue-cbec2825f8693922,Found. Trends Mach. Learn.,journal,Venue
+venue-cbf1493e853072bb,Oper. Res. Forum,journal,Venue
+venue-cc0609e8aeffe622,GvDB,conference,Venue
+venue-cc2d2da6416dfe14,Inf.,journal,Venue
+venue-cc346a41929d7cf3,ICANN (9),conference,Venue
+venue-cc3578e3916a5880,WWW,conference,Venue
+venue-cc47fe421b8a5508,ECCV (20),conference,Venue
+venue-cc794d93863f38b2,IEEE Trans. Circuits Syst. I Regul. Pap.,journal,Venue
+venue-cc9b6b9f28dd9fa0,DALI@MICCAI,conference,Venue
+venue-ccac806ac15048bd,ACM Southeast Regional Conference,conference,Venue
+venue-ccbf15aca24c3bbb,Big Data Cogn. Comput.,journal,Venue
+venue-ccbfae028849f729,"CPS Summer School, PhD Workshop",conference,Venue
+venue-ccd858c0cc126e72,Supercomput. Front. Innov.,journal,Venue
+venue-ccf1856815d17c23,TE,conference,Venue
+venue-ccfdc9b80308384d,ITC,conference,Venue
+venue-cd0d920969c23b66,J. Control. Sci. Eng.,journal,Venue
+venue-cd1264c87265470b,CAV (2),conference,Venue
+venue-cd14c06bbd154fc2,IPCO,conference,Venue
+venue-cd2b9377bc835b5a,Intell. Data Anal.,journal,Venue
+venue-cd3659ec3ca1383d,ICTC,conference,Venue
+venue-cd3dcb7f7bf2eb38,NAACL-HLT (1),conference,Venue
+venue-cd6382cd08a795bc,CORIA,conference,Venue
+venue-cd794e9df8e3e95f,J. Comput. Inf. Sci. Eng.,journal,Venue
+venue-cd82acfb87268a21,BuildSys,conference,Venue
+venue-cd97504cb41f452c,"Biomedical Applications in Molecular, Structural, and Functional Imaging",conference,Venue
+venue-cda38c2bed90a6ec,Comput. J.,journal,Venue
+venue-ce1a277cc84bba28,Informatics,journal,Venue
+venue-ce3614fb3baa0a17,ECML/PKDD (4),conference,Venue
+venue-ce4c94a4b3b9a32b,AIMLSystems,conference,Venue
+venue-ce4d9b2fb626f350,Data Sci.,journal,Venue
+venue-ce4fa920ad4b6828,Int. J. Bioinform. Res. Appl.,journal,Venue
+venue-ce6fd981ec00fe96,PRCV (18),conference,Venue
+venue-ce709945c54d54f3,ICIC (9),conference,Venue
+venue-ce7a32a3db41edf0,ACPR (1),conference,Venue
+venue-ce812c86a9d98c11,CrownCom,conference,Venue
+venue-cea03759d0465086,ICCS (4),conference,Venue
+venue-cea2709605dad4ee,SIAM J. Imaging Sci.,journal,Venue
+venue-ceab61fd743327af,COMPASS,conference,Venue
+venue-ceae39ac2af5c3e7,IDEAL (1),conference,Venue
+venue-ceb24bbfeccb4945,ICRAI,conference,Venue
+venue-cebc5c6546737175,MIUA,conference,Venue
+venue-ceceb65f1c5fe83c,ICPM Workshops,conference,Venue
+venue-ced8336b156f9e1a,IS,conference,Venue
+venue-cef5e71c3319cb37,J. Comput. Des. Eng.,journal,Venue
+venue-cefeb3b5fd4bdfa4,MISC,conference,Venue
+venue-cf13081be5421e7c,CNSM,conference,Venue
+venue-cf1c29d2e69eefe2,LAK,conference,Venue
+venue-cf419d2bc700fd64,OFC,conference,Venue
+venue-cf8ed5956aeba045,IEICE Trans. Fundam. Electron. Commun. Comput. Sci.,journal,Venue
+venue-cfd64ae4bfacd41c,Int. J. Medical Eng. Informatics,journal,Venue
+venue-cfefcd3851a01d2f,IEEE Signal Process. Lett.,journal,Venue
+venue-cff16552551c27ca,ISC2,conference,Venue
+venue-d006660eec4bcec3,NISS,conference,Venue
+venue-d00959d33fcbeeb8,IET Commun.,journal,Venue
+venue-d00e98e839d617a4,ICSCIB,conference,Venue
+venue-d015408af4541203,Inf. Sci.,journal,Venue
+venue-d04b538844c1e333,RoViSP,conference,Venue
+venue-d066b4e411d53c85,SOSR,conference,Venue
+venue-d0868a3edcf0357d,IEEE Trans. Reliab.,journal,Venue
+venue-d0876cc2ec6d0334,LASCAS,conference,Venue
+venue-d094b06c524a89db,AAAI Summer Symposia,conference,Venue
+venue-d0ca41a0ef9e12ae,IC3I,conference,Venue
+venue-d0cbb3293cfd7a21,CCPR (2),conference,Venue
+venue-d0e540e9fa11504d,J. Intell. Fuzzy Syst.,journal,Venue
+venue-d11aa0106d9b48b6,ICIAR (2),conference,Venue
+venue-d14eaa5a844774da,WISE (1),conference,Venue
+venue-d16e14b732ef40b4,STIDS,conference,Venue
+venue-d195720faaac745f,AISS,conference,Venue
+venue-d1970b579a2aa55f,CIKM,conference,Venue
+venue-d19d1a939c987a7e,DBSec,conference,Venue
+venue-d1a9a7329075beb3,Int. J. Big Data Intell.,journal,Venue
+venue-d1aa9e5fbe5320be,ICRC,conference,Venue
+venue-d1b3360efd455da9,ACR,conference,Venue
+venue-d1f76629de35f410,MLSys,conference,Venue
+venue-d1facfe3179a782a,Signal Image Video Process.,journal,Venue
+venue-d1fbf2f4b4a72673,BioNLP (Shared Task),conference,Venue
+venue-d2072f0ecb57440c,Data,journal,Venue
+venue-d20c03957a6e7f2d,APCCAS,conference,Venue
+venue-d21002e72f7fb56c,SASO,conference,Venue
+venue-d22169fbf6b5937c,MTSummit (2),conference,Venue
+venue-d245d9c5781edb76,IVUS,conference,Venue
+venue-d252d3b9ebdba019,IEEE Trans. Signal Process.,journal,Venue
+venue-d279a87f3c713beb,ESEC/SIGSOFT FSE,conference,Venue
+venue-d28c9d00ae3e15dc,IEEE Trans. Image Process.,journal,Venue
+venue-d2c5c213bc964b5f,Multim. Tools Appl.,journal,Venue
+venue-d2cfa26893f93634,IEEE Trans. Wirel. Commun.,journal,Venue
+venue-d2d005066d4eed8c,IVCNZ,conference,Venue
+venue-d3011785c5c34ebd,K-CAP,conference,Venue
+venue-d3395a6db3c53c14,DASFAA (6),conference,Venue
+venue-d371512bee24d97e,BESC,conference,Venue
+venue-d37fafc58f974908,Int. J. Autom. Technol.,journal,Venue
+venue-d37fb4b759f7cff5,EACL (Findings),conference,Venue
+venue-d3801a8194d0562a,ICANN (10),conference,Venue
+venue-d389a463ed5d1c37,EAI Endorsed Trans. Scalable Inf. Syst.,journal,Venue
+venue-d3ae5c0f1ddc0a44,ISDA,conference,Venue
+venue-d3af3dff3367a777,SNAMS,conference,Venue
+venue-d3b82c0942d53492,Vis. Comput. Ind. Biomed. Art,journal,Venue
+venue-d3d73af1f4fbf434,IJCRS (1),conference,Venue
+venue-d4284ee1ad67e1cc,EKAW (Satellite Events),conference,Venue
+venue-d4302afc9f91c4d7,CASE,conference,Venue
+venue-d432f149bc6558de,SIBGRAPI,conference,Venue
+venue-d433305d3bc206a5,ESWC-JP,conference,Venue
+venue-d437cc8293e84e16,RuleML+RR,conference,Venue
+venue-d45196cb955f705c,TEXT2SPARQL@ESWC,conference,Venue
+venue-d4793e2ef18cfb2f,Intell. Syst. Appl.,journal,Venue
+venue-d47f7842c279163c,Int. J. Intell. Syst.,journal,Venue
+venue-d4850f481379762f,RCIS,conference,Venue
+venue-d48f33717dac7f38,IEEE J. Biomed. Health Informatics,journal,Venue
+venue-d49db8dd9c2dc0e5,Int. J. Comput. Vis. Image Process.,journal,Venue
+venue-d4a1ba60dad8381b,ICWS,conference,Venue
+venue-d4a64958c03a2359,Adv. Artif. Neural Syst.,journal,Venue
+venue-d4b808a12c9528b4,D Lib Mag.,journal,Venue
+venue-d4c54f2d4cd37475,SIGMIS-CPR,conference,Venue
+venue-d4cd5ee695631b3b,Inform. Spektrum,journal,Venue
+venue-d4d33e4710307c95,XRDS,journal,Venue
+venue-d4d75bad26ea5e58,BIOINFORMATICS,conference,Venue
+venue-d4f55b0109e29694,Sci. China Inf. Sci.,journal,Venue
+venue-d4fd54a0a68a1545,MIUA (1),conference,Venue
+venue-d4fe93449531eefa,TCCE,conference,Venue
+venue-d5058063cc760503,ISIE,conference,Venue
+venue-d530303838eb624d,MMM (4),conference,Venue
+venue-d539b3878e94cb24,SCA,conference,Venue
+venue-d55046257afc50b6,Digit. Threat. Res. Pract.,journal,Venue
+venue-d56bc8fa4eafb4c4,DSN-S,conference,Venue
+venue-d58533e1086284e6,WOP (Book),conference,Venue
+venue-d588f9536c266184,Comput. Support. Cooperative Work.,journal,Venue
+venue-d5bfcaaf489d3a9f,J. Cybersecur.,journal,Venue
+venue-d5d307d0330824cf,ITC-Asia,conference,Venue
+venue-d5dbc196da3f0060,Earth Sci. Informatics,journal,Venue
+venue-d5dfb0e19bc939bc,5GWF,conference,Venue
+venue-d5e94e1561ae3bbc,FDSE,conference,Venue
+venue-d5f5a6c99e5465a8,Int. J. Inf. Manag. Data Insights,journal,Venue
+venue-d5f8aa99b86eace7,AVR (2),conference,Venue
+venue-d6184fb38b2630d9,SaTML,conference,Venue
+venue-d66301ed7b93ec53,KG-STAR@ESWC,conference,Venue
+venue-d66958d65cf37297,DDDAS/Infosymbiotics,conference,Venue
+venue-d66c0f2faf52e11c,ICSPIS,conference,Venue
+venue-d66f8fe4714e6e2b,ICAASE,conference,Venue
+venue-d677cc4a42b7756b,MeMeA,conference,Venue
+venue-d67cb0c85f105088,ICAART (1),conference,Venue
+venue-d698bd31ae9f61c3,PROPOR,conference,Venue
+venue-d69aaf84abdc851a,PARCO,conference,Venue
+venue-d6b003ef973c9263,J. Comput. Sci. Coll.,journal,Venue
+venue-d6c830b6a1e58c33,ICDSM,conference,Venue
+venue-d71cb622ab25fcee,NAACL (Industry Track),conference,Venue
+venue-d7217d447f684e94,ICML,conference,Venue
+venue-d73af9d7a468895f,MECO,conference,Venue
+venue-d73b33e4227f5bc7,DASFAA (Workshops),conference,Venue
+venue-d761cfa19be5fc71,DMI,conference,Venue
+venue-d77595e830060c99,Artif. Intell. Eng. Des. Anal. Manuf.,journal,Venue
+venue-d775ccca48448c54,SIGMOD Rec.,journal,Venue
+venue-d77678d95b836725,ICIC (10),conference,Venue
+venue-d789de6f4a388cf0,ICT,conference,Venue
+venue-d78fb963c5e22271,ACL (student),conference,Venue
+venue-d7922407547e4898,ISICA,conference,Venue
+venue-d7937f21d0d362fd,ESORICS (2),conference,Venue
+venue-d7b9873eb48061f9,ICDL-EPIROB,conference,Venue
+venue-d7bf7268c10c253c,GI-Jahrestagung,conference,Venue
+venue-d7c88d38cb5ec762,Int. J. Inf. Commun. Technol. Educ.,journal,Venue
+venue-d7dcd6e47382ffe8,NICE,conference,Venue
+venue-d7df0f6c7b9fffff,ICPRAM,conference,Venue
+venue-d8355de91677655f,OCIT,conference,Venue
+venue-d85404cf82b8ba43,VISIGRAPP (1: GRAPP),conference,Venue
+venue-d87c112404bb9cea,DeLTA,conference,Venue
+venue-d884870b4fee47d9,LREC,conference,Venue
+venue-d8a8d54eaf6ad3f9,ICE/ITMC,conference,Venue
+venue-d8bab2c731b12a51,WHiSe@ISWC,conference,Venue
+venue-d90ff4135cd084e6,OM,conference,Venue
+venue-d910c0e5bfc7f78c,J. Commun.,journal,Venue
+venue-d97704d47466d172,FCCM,conference,Venue
+venue-d98c28e48fa66f08,DiscoMT@EMNLP,conference,Venue
+venue-d9bcf06705fe55ca,AI-SIPM,conference,Venue
+venue-d9d6fe27db95e356,IJCAR (2),conference,Venue
+venue-d9e30e898f853b99,STAG,conference,Venue
+venue-d9e3d68076643a41,ICEC,conference,Venue
+venue-d9e9b5333829436f,VLDB Workshops,conference,Venue
+venue-da0624c7fbb4616e,ICSOC (2),conference,Venue
+venue-da09dd3fba978ee8,MICCAI (7),conference,Venue
+venue-da3227a7647dd071,AAAI,conference,Venue
+venue-da47871704bb5337,ISWC (1),conference,Venue
+venue-da54d7902f6c675b,ASPLOS (2),conference,Venue
+venue-da584a3a4a026648,Knowl. Eng. Data Sci.,journal,Venue
+venue-da8b6663059b737d,Math. Comput. Simul.,journal,Venue
+venue-da98735caf5b5aa7,ITITS,conference,Venue
+venue-daac41c8a005e69e,VCBM,conference,Venue
+venue-dab8742413c01fda,SIGSPATIAL/GIS,conference,Venue
+venue-dad82e2a4d830e73,MLICOM (1),conference,Venue
+venue-dae554ad26ae12ec,RCIS (1),conference,Venue
+venue-db1c13407df03be5,DeepTest@ICSE,conference,Venue
+venue-db28f2e677482ea1,"ICAART (Revised Selected Paper, 2)",conference,Venue
+venue-db3c96e9d09203d9,Log. J. IGPL,journal,Venue
+venue-db7015c283dff4ec,Big Data Min. Anal.,journal,Venue
+venue-db79bc80b0b1d7c0,RTIP2R (3),conference,Venue
+venue-db82c2027739e2ea,IALP,conference,Venue
+venue-dbb84e49a2d60511,ICARM,conference,Venue
+venue-dbc23e6f7b376632,ICSOC,conference,Venue
+venue-dbc2587b50bfe380,Kybernetes,journal,Venue
+venue-dbea98868f523fea,IC2IT,conference,Venue
+venue-dbf1b6564704ebb3,DOLAP,conference,Venue
+venue-dbf402fc22a8ed46,ICVARS,conference,Venue
+venue-dbfcfd6a8b3cc019,ICTA,conference,Venue
+venue-dc1929eb2e5d5766,xAI (2),conference,Venue
+venue-dc1e67d4503b7286,ICDL,conference,Venue
+venue-dc2200e4eb9360de,MIS Q.,journal,Venue
+venue-dc2201b0f59561d9,MMAsia,conference,Venue
+venue-dc2606c03b45d11f,CISIS,conference,Venue
+venue-dc2b0539722571f5,Int. J. Parallel Emergent Distributed Syst.,journal,Venue
+venue-dc31ba0824361d5b,AREdu,conference,Venue
+venue-dc35bd8c72701d81,ICTSS,conference,Venue
+venue-dc43f1d9d4856956,ECCV (16),conference,Venue
+venue-dc45315cc9ea77dc,SUSI/PIPPI@MICCAI,conference,Venue
+venue-dc8b8cbb4e94aa21,PPoPP,conference,Venue
+venue-dc92264252e853b4,MICCAI (8),conference,Venue
+venue-dcb7aeaf1df6822a,J. Intell. Transp. Syst.,journal,Venue
+venue-dcba4820945f9766,TENCON,conference,Venue
+venue-dccc03ef51b5fb3a,HCI (14),conference,Venue
+venue-dcd0bc9ff9abd0d4,Educ. Inf. Technol.,journal,Venue
+venue-dcd2e59abfcef328,Frontiers ICT,journal,Venue
+venue-dcd47b53c9e8999c,RCAR,conference,Venue
+venue-dce28ce7d2d8a7d7,Int. J. Autom. Comput.,journal,Venue
+venue-dce3909b20e21c46,IACR Commun. Cryptol.,journal,Venue
+venue-dd05ec64e92b5dd0,ENC,conference,Venue
+venue-dd0a0404a0eb1bc8,Frontiers Robotics AI,journal,Venue
+venue-dd0e1ff1f74948e4,NEWS@ACL,conference,Venue
+venue-dd3a98af44fc8aee,IWSLT,conference,Venue
+venue-dd643dd15ed74a48,IoTAAI,conference,Venue
+venue-dd91fdc5566bc922,Future Gener. Comput. Syst.,journal,Venue
+venue-ddb571a6d501bbcd,ICCSA (Workshops 6),conference,Venue
+venue-ddcd6723c0dbe4e5,IEEE J. Emerg. Sel. Topics Circuits Syst.,journal,Venue
+venue-ddcf08527029a064,CITS,conference,Venue
+venue-ddddf44ac711182d,ICSR + AI (3),conference,Venue
+venue-de015d12ed40deff,IEEE Trans. Smart Grid,journal,Venue
+venue-de2a810b1c12280b,ICCSCI,conference,Venue
+venue-de3c59dbddf08f19,IEEE J. Sel. Areas Commun.,journal,Venue
+venue-de4c7fca63cb67ac,IEEE SENSORS,conference,Venue
+venue-de81dc47a7d83cc2,MMSports@MM,conference,Venue
+venue-de91cd08d30d0653,TMM_CH (2),conference,Venue
+venue-de995e704b73dfbc,MASS,conference,Venue
+venue-dee4eb364e929012,ECCV (68),conference,Venue
+venue-df1253ae16e3e6db,SRDS,conference,Venue
+venue-df2327ef487417de,SIAM/ASA J. Uncertain. Quantification,journal,Venue
+venue-df3bb1df5ea55157,AHFE (13),conference,Venue
+venue-df4dd05e610a636a,DASIP,conference,Venue
+venue-df845bccb914cd69,CogSci,conference,Venue
+venue-df85bd2462c7bbb3,PAKDD Workshops,conference,Venue
+venue-df8fcfb39c79f9b2,J. Comput. Networks Commun.,journal,Venue
+venue-df9a5deddadc6b16,Phys. Commun.,journal,Venue
+venue-dfbdf5826e56bbf8,IbPRIA,conference,Venue
+venue-dfc70369db1f82da,ECCV (32),conference,Venue
+venue-dfc94f3fc44c603c,IEEE Trans. Fuzzy Syst.,journal,Venue
+venue-dfd0d3ca36734018,ONTOBRAS,conference,Venue
+venue-e0045c707b76c092,Euro-Par (2),conference,Venue
+venue-e00699418693540d,Spatial Cogn. Comput.,journal,Venue
+venue-e01df6a3ef36e515,CSR,conference,Venue
+venue-e020b5e22c23f83e,Cogn. Comput. Syst.,journal,Venue
+venue-e0237b6ce5854825,I2MTC,conference,Venue
+venue-e0345b0a20119511,BlackboxNLP@EMNLP,conference,Venue
+venue-e057063fb92071f1,Comput.,journal,Venue
+venue-e06c8f14c416b975,ICIAI,conference,Venue
+venue-e06fa0ece525260f,ADBIS (Short Papers),conference,Venue
+venue-e071b6f7ec1441e6,SIPAIM,conference,Venue
+venue-e0a96a738b14b60d,ICONIP (2),conference,Venue
+venue-e0b56be9167227e9,Frontiers Res. Metrics Anal.,journal,Venue
+venue-e0cd0295abcbb79d,HCI (41),conference,Venue
+venue-e0f2336dcfca464a,FICC (1),conference,Venue
+venue-e0fec555264803c1,ISPD,conference,Venue
+venue-e1165b8280c3d48e,ICRCA,conference,Venue
+venue-e1de9e77ec9f5d35,ICONS,conference,Venue
+venue-e1e4ceb6d4bc1bbb,BIOIMAGING,conference,Venue
+venue-e210a7ba80989df0,xxAI@ICML,conference,Venue
+venue-e25453228efa8496,VR,conference,Venue
+venue-e263f793b5c9ed08,CIC,conference,Venue
+venue-e2682fab37804a2c,ICASSP,conference,Venue
+venue-e26fd1237bf3bb27,FMAS,conference,Venue
+venue-e27742204c2d7637,BIBE,conference,Venue
+venue-e27e54445172cf89,Int. J. Auton. Comput.,journal,Venue
+venue-e2b3b59079a04311,ISWC (Posters & Demos),conference,Venue
+venue-e2c5f27e1a279206,PP,conference,Venue
+venue-e2d56296d61a76b1,F1000Research,journal,Venue
+venue-e2e8d22470637eca,IScIDE (1),conference,Venue
+venue-e2f4bca9a356ce34,RESPECT,conference,Venue
+venue-e2fc4c95df9169a7,HCI (48),conference,Venue
+venue-e2ff5b6cd92ff821,GLOBECOM,conference,Venue
+venue-e326f66a625d2e3c,ICIIT,conference,Venue
+venue-e34b496ca998f78b,ChineseCSCW (1),conference,Venue
+venue-e38035258ca17940,AIME (1),conference,Venue
+venue-e3920687df5c49e6,Electron. Commer. Res. Appl.,journal,Venue
+venue-e397a5a9ed885dc6,ComNet,conference,Venue
+venue-e3ac0252af4cfe98,CSCS,conference,Venue
+venue-e3c6e510c08d4c70,SemEval@ACL/IJCNLP,conference,Venue
+venue-e3dae13c7e7cf2ce,FNWF,conference,Venue
+venue-e407001a1c5ebb89,PETRA,conference,Venue
+venue-e43ff93ae498728c,USENIX Security Symposium,conference,Venue
+venue-e44ddd3901748687,AGILE Conference,conference,Venue
+venue-e44e159723127715,J. Learn. Anal.,journal,Venue
+venue-e4844b0232757f49,VAST Challenge@VIS,conference,Venue
+venue-e4a45c46fc40bb4b,DSN,conference,Venue
+venue-e4afe73b606fc8a7,HAIS,conference,Venue
+venue-e4b8d03fae42f282,ACIT,conference,Venue
+venue-e4b9658a8f040b24,"SEMANTiCS (Posters, Demos, Workshops & Tutorials)",conference,Venue
+venue-e4cf48c1708cf57c,BigCom,conference,Venue
+venue-e4d063345ca7d5fb,IEEE Trans. Circuits Syst.,journal,Venue
+venue-e4dea3ff4971e72f,MIPRO,conference,Venue
+venue-e4f5afc2275c2245,HPCCT/BDAI,conference,Venue
+venue-e509cffd08a6aefe,Middleware,conference,Venue
+venue-e511a52af4c5d9c4,WCI,conference,Venue
+venue-e525c962234eb3b3,ECIR (1),conference,Venue
+venue-e537656df7904491,Arch. Formal Proofs,journal,Venue
+venue-e5499fe634261e3a,IWSCI@IntSol,conference,Venue
+venue-e5665b9407a22667,J. Vis. Commun. Image Represent.,journal,Venue
+venue-e5670539945de323,Networks,journal,Venue
+venue-e57cef8dc491c775,J. Comput.,journal,Venue
+venue-e581d9b9dd0bd4ac,MOCAST,conference,Venue
+venue-e582d931e3189408,UCC,conference,Venue
+venue-e5920bff1b259976,Int. J. Digit. Libr.,journal,Venue
+venue-e5ae6663063dfdd4,FIT,conference,Venue
+venue-e5cc65f69a4027d5,J. Comput. Sci. Technol.,journal,Venue
+venue-e5d323e6caca1b76,MLICOM (2),conference,Venue
+venue-e5daa97c9e0dacb0,BPM (Forum),conference,Venue
+venue-e5e4bfbd0cf589a4,Big-DAMA@CoNEXT,conference,Venue
+venue-e608b5aded9891df,ICCCI (CCIS Volume 2),conference,Venue
+venue-e60a45f174de12ba,GOL,conference,Venue
+venue-e60c64976b1b9b6d,COCOA (2),conference,Venue
+venue-e60fafbb4a6b966d,ICBDR,conference,Venue
+venue-e621aa0b1a3adf94,Int. J. Comput. Vis. Robotics,journal,Venue
+venue-e622f296c15c46a9,PSB,conference,Venue
+venue-e631dca4d4204436,CyberSciTech,conference,Venue
+venue-e646dd1638fc36ff,AI Commun.,journal,Venue
+venue-e65906e74ff9eb4d,DCAI (4),conference,Venue
+venue-e6843a4ea01bfa68,Int. J. Embed. Syst.,journal,Venue
+venue-e68c48a9bcc415e5,BRACIS (4),conference,Venue
+venue-e695d1fad160abd6,CVM (2),conference,Venue
+venue-e6a28c72fc13866b,SIAM J. Sci. Comput.,journal,Venue
+venue-e6b537d627b205d8,Turkish J. Electr. Eng. Comput. Sci.,journal,Venue
+venue-e6c3b533f001c269,J. Frankl. Inst.,journal,Venue
+venue-e6c80241a364be24,J. Netw. Comput. Appl.,journal,Venue
+venue-e6d2f8d265d57ebc,ISPRS Int. J. Geo Inf.,journal,Venue
+venue-e6d9a5ffe1386536,POCUS/BIVPCS/CuRIOUS/CPM@MICCAI,conference,Venue
+venue-e6dc31ae7857b2dc,CAA SAFEPROCESS,conference,Venue
+venue-e6eb966b290c0cc8,NeurIPS (Competition and Demos),conference,Venue
+venue-e7037e401c63a522,Inteligencia Artif.,journal,Venue
+venue-e71273860bc081a3,J. Uncertain Syst.,journal,Venue
+venue-e72285e752e1cffc,IMS,conference,Venue
+venue-e729b2e30e4ae48d,IHSI,conference,Venue
+venue-e72bbc60894535c8,IEEE Intell. Informatics Bull.,journal,Venue
+venue-e75a922102c20f90,ICORR,conference,Venue
+venue-e76e56efda411049,AIED (4),conference,Venue
+venue-e77d3db3a081d305,COLING Workshops,conference,Venue
+venue-e789bc48bddb8b7d,IFTC,conference,Venue
+venue-e7961115db4cbba7,ICST,conference,Venue
+venue-e7c1f05336ccc592,HCI (15),conference,Venue
+venue-e7ca338e619ec515,HPCC/DSS/SmartCity/DependSys,conference,Venue
+venue-e7d8ba6f29c09294,VCC,conference,Venue
+venue-e7fdf117d4e74dfc,SM,conference,Venue
+venue-e88ad489c875b17c,CHASE,conference,Venue
+venue-e890e8f23283e35c,IntSol,conference,Venue
+venue-e891af22945d6f92,ICANN (3),conference,Venue
+venue-e8ab07449cd71c8d,CLEI,conference,Venue
+venue-e8c49800a78ece62,CCWC,conference,Venue
+venue-e8d8571d834fc87d,SKG,conference,Venue
+venue-e8d8d98d93aa63db,INISTA,conference,Venue
+venue-e8e9096bbe2e7934,MOBILESoft@ICSE,conference,Venue
+venue-e8ea3257a54c7782,EuroSys,conference,Venue
+venue-e8f4078bde291daa,ICLP Technical Communications,conference,Venue
+venue-e90a5048d121413d,AVI,conference,Venue
+venue-e917de77424fcebc,Visualization and Data Analysis,conference,Venue
+venue-e942f37ab4a464b8,ICMLT,conference,Venue
+venue-e95a3e68ed1b089a,FSKD,conference,Venue
+venue-e95a94ca92a6b4e5,AsianHOST,conference,Venue
+venue-e96302b5169693f2,ICPR (19),conference,Venue
+venue-e969acdec560f498,J. Heal. Informatics Res.,journal,Venue
+venue-e97abe9c946d6641,IT Prof.,journal,Venue
+venue-e98a6aca0815f2ca,IPEC,conference,Venue
+venue-e995094c4e4aec8d,iCAST,conference,Venue
+venue-e9b4642eb0b53e18,SNPD,conference,Venue
+venue-e9d00ec9ac97c7c3,STAF Workshops,conference,Venue
+venue-e9d088fa5b9b403d,MuSe@ACM Multimedia,conference,Venue
+venue-e9d27c728cf21f6a,PoEM,conference,Venue
+venue-e9d412282ae47934,BMVC Workshops,conference,Venue
+venue-e9de69b7a7eabe24,EPEW,conference,Venue
+venue-ea09f0f423194d10,RobCE,conference,Venue
+venue-ea1204d5fa06458a,Neural Process. Lett.,journal,Venue
+venue-ea17e02f8e575223,MICCAI (2),conference,Venue
+venue-ea39d2a10861ecb9,WASA (2),conference,Venue
+venue-ea66449e7d5102f9,ICECET,conference,Venue
+venue-ea7b6a89edf27d82,EDOC Workshops,conference,Venue
+venue-ea8006660a33ac25,AIAI (1),conference,Venue
+venue-ea93b576bca31b5a,Int. J. Data Sci. Anal.,journal,Venue
+venue-eaa428a1d6801bd2,ICFHR,conference,Venue
+venue-eabf6913b95fb951,INTESA@ESWEEK,conference,Venue
+venue-eac2d637df6ce028,Artif. Intell. Law,journal,Venue
+venue-eaf0cb9ceaf49b87,IScIDE (2),conference,Venue
+venue-eb14bca5fe1bdf28,IEEE BigData,conference,Venue
+venue-eb24a49ee6724b8d,BDICN,conference,Venue
+venue-eb3a1005c32b4c47,ICAIT,conference,Venue
+venue-eb410f8d40e55347,HPCA,conference,Venue
+venue-eb56c98f986f9758,Autom. Control. Comput. Sci.,journal,Venue
+venue-eb5fe8afe8f1fd29,KDH@IJCAI,conference,Venue
+venue-eb7c738ea71f8ff2,Int. J. Pattern Recognit. Artif. Intell.,journal,Venue
+venue-eb8bf57d567d8433,CSNDSP,conference,Venue
+venue-eba8db897060be5d,Robotics Comput. Integr. Manuf.,journal,Venue
+venue-ebb6fac0b32bf44e,CIT/IUCC/DASC/PICom,conference,Venue
+venue-ebc7e699bce1bca2,ICAI (1),conference,Venue
+venue-ebd19da38fc01326,ICCV,conference,Venue
+venue-ebf79fc90b62b928,WCNC,conference,Venue
+venue-ec0722273701a818,Euro-Par Workshops (2),conference,Venue
+venue-ec0b370283577d75,Int. J. Intell. Inf. Technol.,journal,Venue
+venue-ec0d3f1a2ac3686f,AI Soc.,journal,Venue
+venue-ec162cd8a69bb8bc,J. Univers. Comput. Sci.,journal,Venue
+venue-ec164db5219ccce3,ISCMI,conference,Venue
+venue-ec1f263abd5400ca,ICSECS,conference,Venue
+venue-ec2841de9e78aabe,IEEE Control. Syst. Lett.,journal,Venue
+venue-ec453c66de058346,SBCCI,conference,Venue
+venue-ec69f0ec94622ce2,Int. J. Medical Informatics,journal,Venue
+venue-ec81ca3a1cf12f37,Softw. Impacts,journal,Venue
+venue-ec89c2efdcac9be7,Intell. Serv. Robotics,journal,Venue
+venue-ecad37b27ec5971b,Eval4NLP,conference,Venue
+venue-ecbb874ac60e3d9e,Nat. Lang. Process. J.,journal,Venue
+venue-ed0522ca64c5c8b7,DASFAA (1),conference,Venue
+venue-ed17ee707de77f42,ChineseCSCW,conference,Venue
+venue-ed430cb34ead6a9c,IWCMC,conference,Venue
+venue-ed4bc70f2cfc29f5,ADMA,conference,Venue
+venue-ed64be839b9e6745,ICBRA,conference,Venue
+venue-ed6c59231bce96fd,RTSS,conference,Venue
+venue-ed70a4cc51ddbfdf,ANRW,conference,Venue
+venue-ed7ec1147e117dd0,PERSIST-IoT@MobiHoc,conference,Venue
+venue-ed8314022e3f91a2,FAIMI@MICCAI,conference,Venue
+venue-ed9b81d01b6bbcda,J. Lang. Model.,journal,Venue
+venue-eddce5d71d8777ce,COORDINATION,conference,Venue
+venue-ee050766be1e0dc1,Int. J. Semantic Web Inf. Syst.,journal,Venue
+venue-ee0597be5dd8dce6,ECIR (2),conference,Venue
+venue-ee1485192dfe48e4,SEFM,conference,Venue
+venue-ee1ad411850ea81b,ETFA,conference,Venue
+venue-ee1c2128b3e6b9f3,aiDM@SIGMOD,conference,Venue
+venue-ee2b617f747ccef2,IPCCC,conference,Venue
+venue-ee2e1faab60fc211,DHN,conference,Venue
+venue-ee6de6bce516fc8d,DySPAN,conference,Venue
+venue-ee754509e290980e,Comput. Commun.,journal,Venue
+venue-eeac21457f92980d,KSII Trans. Internet Inf. Syst.,journal,Venue
+venue-eeb26e2899456369,ACM Trans. Model. Perform. Evaluation Comput. Syst.,journal,Venue
+venue-eebebbb521e41138,MLICOM,conference,Venue
+venue-eed5c7b766a0a6db,EMNLP (System Demonstrations),conference,Venue
+venue-eeea7582ef11fe8b,Manag. Sci.,journal,Venue
+venue-eef931d8b37ed426,ECML/PKDD (3),conference,Venue
+venue-ef31ace0c6d07ba9,JCSSE,conference,Venue
+venue-ef42cb7af56a1c96,IEICE Trans. Commun.,journal,Venue
+venue-ef4faecc0f882f8b,WAT@EMNLP-IJCNLP,conference,Venue
+venue-ef7b253bdd2bb0eb,INFOCOM,conference,Venue
+venue-ef80752a0386fcbf,Stud Logica,journal,Venue
+venue-ef99216657db65e2,SemEval@NAACL,conference,Venue
+venue-efa857acec7f9370,AusDM,conference,Venue
+venue-efb66b8f2e344f60,SIGGRAPH Asia Posters,conference,Venue
+venue-efc40d92f6d3c354,ACIS,conference,Venue
+venue-efc639e3592ac09d,IEEE Trans. Multim.,journal,Venue
+venue-f006c833423c9aba,Comput. Mater. Continua,journal,Venue
+venue-f02414681a21dc0a,Int. J. Comput. Appl. Technol.,journal,Venue
+venue-f026a0d071ef0a7e,Int. J. Simul. Process. Model.,journal,Venue
+venue-f028265dbbfbc49b,AAAI Spring Symposium: MAKE,conference,Venue
+venue-f0347ccd8f7d203b,Auton. Robots,journal,Venue
+venue-f0534674f173c886,Artif. Intell.,journal,Venue
+venue-f08d633253ab1a62,EANN Workshops,conference,Venue
+venue-f0b9f78bf4e3b870,Datalog,conference,Venue
+venue-f0cadfc0e094c8f6,NLPerspectives,conference,Venue
+venue-f0d64cf3f7813c39,KBC-LM/LM-KBC@ISWC,conference,Venue
+venue-f0df7d9bae40837f,Intell. Autom. Soft Comput.,journal,Venue
+venue-f0e7b7481fe1dfe8,Int. J. Softw. Eng. Knowl. Eng.,journal,Venue
+venue-f0eb1bb07c7b2fbf,MESA,conference,Venue
+venue-f1036a74d83a503b,LLM@AIED,conference,Venue
+venue-f1122a889e4f6877,Cogn. Process.,journal,Venue
+venue-f113235ce3090429,ISIC,conference,Venue
+venue-f11dce91865a2c2f,XoveTIC,conference,Venue
+venue-f16a54bd0ea10e52,EUMAS/AT,conference,Venue
+venue-f184bba902b64c5a,ISCT,conference,Venue
+venue-f1bcf5a5f469da17,Cogn. Comput.,journal,Venue
+venue-f1c0d1e2ee84aece,Comput. Inf. Sci.,journal,Venue
+venue-f1dada3bfb6e4c1f,MMSys,conference,Venue
+venue-f1efd623be26556d,GLOBECOM (Workshops),conference,Venue
+venue-f1f5b1f1d9556df2,DEMI@MICCAI,conference,Venue
+venue-f1f901a5ff177ad7,Middleware Doctoral Symposium,conference,Venue
+venue-f2030882b1185715,CBS,conference,Venue
+venue-f22400fc7d994746,ICUMT,conference,Venue
+venue-f22d993b4a32a1bf,MUE/FutureTech,conference,Venue
+venue-f232e51b2a4d4064,Rev. Socionetwork Strateg.,journal,Venue
+venue-f243d870be2556fe,IDEAL (2),conference,Venue
+venue-f28998da5eeb33f1,Digit. Humanit. Q.,journal,Venue
+venue-f28caab0f2e8c270,AI (1),conference,Venue
+venue-f28d579bc71332bf,J. Imaging Inform. Medicine,journal,Venue
+venue-f2d2069f187fea37,IEEE Secur. Priv.,journal,Venue
+venue-f2e92e02b0c426df,Frontiers Neuroinformatics,journal,Venue
+venue-f2e9bd727df3ddeb,ATAIT,conference,Venue
+venue-f2fc4d70c6fd7e6a,IHCI,conference,Venue
+venue-f305d964d967c79c,ACM Trans. Knowl. Discov. Data,journal,Venue
+venue-f30db5f0fd15ca35,SIGITE,conference,Venue
+venue-f343636d9118bfc0,ICICS,conference,Venue
+venue-f34dd42cabce3341,ICETT,conference,Venue
+venue-f35857fead292b7a,Proc. IEEE,journal,Venue
+venue-f36b1527cd32b8b8,NSS,conference,Venue
+venue-f36cc4b2ecfb3c5e,SoICT,conference,Venue
+venue-f3775663af86a32f,DEXA (2),conference,Venue
+venue-f37f884d3b919b02,MMAR,conference,Venue
+venue-f390d05351b46457,ESORICS (1),conference,Venue
+venue-f398cef846845a42,DeLTA (2),conference,Venue
+venue-f3a49b659a0bba12,EuroS&P (Workshops),conference,Venue
+venue-f3bb3971d60fdfb7,J. Inf. Process. Syst.,journal,Venue
+venue-f3e3558e4f3a7c61,Int. J. Heal. Inf. Syst. Informatics,journal,Venue
+venue-f3e3e2a6497d5e0d,J. Field Robotics,journal,Venue
+venue-f3f74e1cb2422d9f,Int. J. Image Graph.,journal,Venue
+venue-f40c34c2fe42ebeb,EACL,conference,Venue
+venue-f41de4c453f3d09e,J. Comput. Civ. Eng.,journal,Venue
+venue-f425e54613c6a181,Int. J. Inf. Retr. Res.,journal,Venue
+venue-f42619484a920e2d,Circuits Syst. Signal Process.,journal,Venue
+venue-f4322feb55e93e3d,ICMTEL (4),conference,Venue
+venue-f4385a1e64a807fe,ECCV (5),conference,Venue
+venue-f47d13d2398dcea4,ACL/IJCNLP (2),conference,Venue
+venue-f47e3b5d9e41969f,IGARSS,conference,Venue
+venue-f4d40dd6e7884535,IEEE Internet Comput.,journal,Venue
+venue-f50380a686512b94,EAMT,conference,Venue
+venue-f51231882df348ee,EACL (Demonstrations),conference,Venue
+venue-f51b5628266615c5,ICIC (8),conference,Venue
+venue-f55d78372a09b5f5,CIT,conference,Venue
+venue-f5642287ffe790d5,ICARA,conference,Venue
+venue-f565b6144239a19f,APWeb/WAIM (1),conference,Venue
+venue-f56ae211d5cfdecd,AffCon@AAAI,conference,Venue
+venue-f56c3410b406508e,Nucleic Acids Res.,journal,Venue
+venue-f59995795a9641c2,Document Recognition and Retrieval,conference,Venue
+venue-f59aa22bb9f0d00b,EuroMLSys,conference,Venue
+venue-f5a34787126a8986,BLOCKCHAIN,conference,Venue
+venue-f5a6e2d0d6736458,J. Am. Medical Informatics Assoc.,journal,Venue
+venue-f5ab0c2ae65b27e2,J. Inf. Technol. Constr.,journal,Venue
+venue-f60491fe9eb39f20,NAACL-HLT,conference,Venue
+venue-f61f0a1069da9a8d,TALN-RECITAL,conference,Venue
+venue-f6b567ffccd81d07,Integr.,journal,Venue
+venue-f7139796c8fde6b4,PRICAI (2),conference,Venue
+venue-f73ad09003533ddb,Int. J. Adv. Intell. Paradigms,journal,Venue
+venue-f758802adda8bb1d,Int. J. Mach. Learn. Cybern.,journal,Venue
+venue-f77d949aa45805d7,ICSI (2),conference,Venue
+venue-f78ffb67b5f8f8e8,IEEE Internet Things Mag.,journal,Venue
+venue-f7bdb3a5d824b4b3,Nat. Lang. Eng.,journal,Venue
+venue-f7cbdb4ec098baa2,Int. J. Perform. Eng.,journal,Venue
+venue-f7d5ec0fa0473c74,VarDial@COLING 2018,conference,Venue
+venue-f7dae6142aade995,J. Complex Networks,journal,Venue
+venue-f7dc707b9990932b,Int. J. Auton. Adapt. Commun. Syst.,journal,Venue
+venue-f7fae66413f724f1,SpeD,conference,Venue
+venue-f81a31e0303dbe3b,INDIN,conference,Venue
+venue-f81bfde3f2fe2357,AIME,conference,Venue
+venue-f825cc7412c1bb79,Int. J. Syst. Assur. Eng. Manag.,journal,Venue
+venue-f840366af07371ac,ICVGIP,conference,Venue
+venue-f88459bdff182f63,CLEF (Working Notes),conference,Venue
+venue-f88cc53713e862ed,NorCAS,conference,Venue
+venue-f8b25a16de5fe072,IVIC,conference,Venue
+venue-f8ca24a39da04a7e,HCI (70),conference,Venue
+venue-f8d86acddcac7a53,ICoMS,conference,Venue
+venue-f8dc4b75bfc4c5d6,Artif. Life Robotics,journal,Venue
+venue-f8e87e78ad436c6d,AICOL,conference,Venue
+venue-f8ef54aa66036c6d,ICPHM,conference,Venue
+venue-f8f3ad7671e74007,ITNAC,conference,Venue
+venue-f902fcbd03133d16,DESRIST (1),conference,Venue
+venue-f940230c69356a0f,ICCD,conference,Venue
+venue-f951aeb9787e59a7,IPSN,conference,Venue
+venue-f95f67b528945f82,IEEE Trans. Inf. Theory,journal,Venue
+venue-f9bcb52b1138ccd9,Int. J. Intell. Transp. Syst. Res.,journal,Venue
+venue-f9c03d069b763b3f,SemEval@NAACL-HLT,conference,Venue
+venue-f9d15162bc6c7a95,e-Energy,conference,Venue
+venue-f9d4206baa593a41,ICCBB,conference,Venue
+venue-f9d7a5319c0ff4cc,APWeb/WAIM (4),conference,Venue
+venue-f9ed4ece1a4b4193,ICAICE,conference,Venue
+venue-f9fbc184c886fe48,KGSWC,conference,Venue
+venue-fa3319007f39640d,J. Ind. Inf. Integr.,journal,Venue
+venue-fa50448d644fb8c9,ISC (2),conference,Venue
+venue-fa525a2996e700df,ALP@RANLP,conference,Venue
+venue-fac70fa65f403f6f,J. Appl. Math. Comput.,journal,Venue
+venue-facd52c8a02c99a3,LSMS/ICSEE (1),conference,Venue
+venue-faea83b5eda60310,J. Nonlinear Sci.,journal,Venue
+venue-fafa675d425a50b5,AIM,conference,Venue
+venue-fb09a8b1d737bdaa,ISWC (P&D/Industry/BlueSky),conference,Venue
+venue-fb12de0b2671307b,AIMSCM,conference,Venue
+venue-fb345bbd1e6a4bf0,IEEE Commun. Lett.,journal,Venue
+venue-fb41336c64a13ac1,WOCC,conference,Venue
+venue-fb43955382e98892,CCEAI,conference,Venue
+venue-fb702bb6fc4ceec6,ICANN (1),conference,Venue
+venue-fb72ad7f251b496c,TAAI (1),conference,Venue
+venue-fb7f680158698fe4,ACLING,conference,Venue
+venue-fb8bb80307731064,NCVPRIPG,conference,Venue
+venue-fba874a775a6b83b,Int. J. Data Warehous. Min.,journal,Venue
+venue-fbd39d9590697453,iFUZZY,conference,Venue
+venue-fbefec8cc76c670b,MICCAI (4),conference,Venue
+venue-fbff525ff2b0a309,Comput. Sci. Inf. Syst.,journal,Venue
+venue-fc1ecc4be95a5d1d,IREHI,conference,Venue
+venue-fc2707c719a916ac,KR4HC/ProHealth@HEC,conference,Venue
+venue-fc421dcec7dd530f,NOMS,conference,Venue
+venue-fc4354b60c0e30ef,AINA (3),conference,Venue
+venue-fc603c8812283f3b,DSIT,conference,Venue
+venue-fc64cca3f0a8e626,J. Chem. Inf. Model.,journal,Venue
+venue-fc65b2fa600729da,ICCP,conference,Venue
+venue-fc88130ada465c46,MIDOG/DRAC@MICCAI,conference,Venue
+venue-fc8956f59f05dc77,ECMR,conference,Venue
+venue-fc945f83feda4775,AISI,conference,Venue
+venue-fc9789ada716207e,PRCV (5),conference,Venue
+venue-fcc2f156491c1531,Int. J. Control,journal,Venue
+venue-fcf09e08ed0f404b,ATS,conference,Venue
+venue-fcf0d243c2883ce9,Ital-IA,conference,Venue
+venue-fd0797ef08b30a3f,Int. J. Comput. Intell. Syst.,journal,Venue
+venue-fd4b8aa1ce89b036,ESSCIRC,conference,Venue
+venue-fd52ac46fe89eebc,IEEE Trans. Aerosp. Electron. Syst.,journal,Venue
+venue-fd54914342703482,Big Data Res.,journal,Venue
+venue-fd6c6e12bb0f11c1,LOD (1),conference,Venue
+venue-fd6f5d816491cf26,Manuf. Serv. Oper. Manag.,journal,Venue
+venue-fd838dbabe660333,PRCV (4),conference,Venue
+venue-fd947c0e59b8d23d,IHIET (Lausanne),conference,Venue
+venue-fda427e5e5a1489b,DC@ISWC,conference,Venue
+venue-fdb5474bc4385909,PRCV (14),conference,Venue
+venue-fdcf55fef1fc38b4,SENSORS,conference,Venue
+venue-fdd036e01b9a34f1,Image Process. Line,journal,Venue
+venue-fde68442037379bc,Softw.,journal,Venue
+venue-fe23b23797c40b2e,CORIA-TALN-RJC (DeFT),conference,Venue
+venue-fe3f726c2f774ad6,ICCSA (2),conference,Venue
+venue-fe61815ed7d433b4,ISAIMS,conference,Venue
+venue-fe899edeb6af0ddf,Comput. Secur.,journal,Venue
+venue-fe8eeeed2d3d26be,Auton. Agents Multi Agent Syst.,journal,Venue
+venue-fe91cf99564bbee5,ICMR,conference,Venue
+venue-fe96afb3bc284ccc,Int. J. Sens. Networks,journal,Venue
+venue-fe97fdefb0b56870,Int. J. Comput. Commun. Control,journal,Venue
+venue-fe9c4e091e968fe6,Reliab. Eng. Syst. Saf.,journal,Venue
+venue-fea3a7f7b0287e9e,BMSB,conference,Venue
+venue-fed0e78cdd34aa0c,ESOCC,conference,Venue
+venue-fee07e2f42afd8b2,ApplePies,conference,Venue
+venue-fee260a7029ca6fe,IEEE Internet Things J.,journal,Venue
+venue-fefcd1f0a797df11,BIBM,conference,Venue
+venue-ff005ee6b888de10,CCCI,conference,Venue
+venue-ff139289bd95c6d5,NiDS,conference,Venue
+venue-ff44bcb679adc9a2,SP,conference,Venue
+venue-ff5049e29f194375,J. Braz. Comput. Soc.,journal,Venue
+venue-ff5c077463996aa5,Vis. Comput.,journal,Venue
+venue-ff8758ae04653914,VRCAI,conference,Venue
+venue-ff9c5aa4d44f41c0,WASA (1),conference,Venue
+venue-ff9d4f4430bf31d2,ICIC (2),conference,Venue
+venue-ffaae83b7fac7161,Adv. Intell. Syst.,journal,Venue
+venue-ffb383ac2f9e2af1,CollaborateCom (2),conference,Venue
+venue-ffc7b334fa5007d0,Res. Pract. Technol. Enhanc. Learn.,journal,Venue
+venue-ffcb47644fec1c9b,SIAM Rev.,journal,Venue
+venue-ffd83363faa50cf2,ICIT,conference,Venue

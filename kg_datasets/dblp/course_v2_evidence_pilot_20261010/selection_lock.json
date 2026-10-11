@@ -1,0 +1,102 @@
+{
+  "selectedAtUTC": "2026-10-10T10:59:09.775009+00:00",
+  "selected": [
+    {
+      "arxivId": "2008.10400",
+      "sampleId": "sample-9f4949f360d7abac8189",
+      "groupId": "paper-group-a17041bb7a8be88ad1f7",
+      "textSha256": "5f1d561b2d161b2c930488c1f61d3c86ca07ff2415e0e261bc8098d46e548cda",
+      "stratum": "evaluation_positive",
+      "upstreamReceiptSha256": "354991f179b562f4e09265321f22b4385237fe70cd4566bf5233b2fb04add150"
+    },
+    {
+      "arxivId": "2501.02474",
+      "sampleId": "sample-f50e3264cb44031bf342",
+      "groupId": "paper-group-f85984df86df6d02775d",
+      "textSha256": "ff56a01af2224720cc8d795cfaf3cc9502de2a5396fbc37e6c1b31f5615a38b4",
+      "stratum": "evaluation_positive",
+      "upstreamReceiptSha256": "f6ce8354147078674fcacf313e34069af892659a35a1b6a647f23e5758980573"
+    },
+    {
+      "arxivId": "2107.03374",
+      "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+      "groupId": "abstract-paper-2107.03374",
+      "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+      "stratum": "evaluation_positive",
+      "upstreamReceiptSha256": "d34d3e17b935230341083fdc14165dd450ad330a4b5dfb5bec76e013f01d8510"
+    },
+    {
+      "arxivId": "1606.05250",
+      "sampleId": "sample-897a80e58031f4e2f42c",
+      "groupId": "abstract-paper-1606.05250",
+      "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
+      "stratum": "evaluation_positive",
+      "upstreamReceiptSha256": "53f31600e5dd99d61bcd643995bc74a31cc55966b21c44ce95456eb47136d4a8"
+    },
+    {
+      "arxivId": "2501.06756",
+      "sampleId": "sample-f5ba3a152aa16ff91eb2",
+      "groupId": "paper-group-2d319591ec2773d6f424",
+      "textSha256": "d82bb4791d31a9035b37c9ed2601f856aceffd271242d8ef9f797b15e79ff4be",
+      "stratum": "explicit_negative",
+      "upstreamReceiptSha256": "3fe7a1967ab814a85deabe9ed9e0ac1d897d24f452b9c72590196e4a9f801d96"
+    },
+    {
+      "arxivId": "1903.10404",
+      "sampleId": "sample-dcff316c4c6d8869bea1",
+      "groupId": "paper-group-302083f2f56f59d2ebd0",
+      "textSha256": "e7422351d8f78ae95bdaf4e5b4de65ae043f14b9db7e15c683e9a2fee1a79e9c",
+      "stratum": "explicit_negative",
+      "upstreamReceiptSha256": "836bd8c0f754f073fe5a21f55d89f413e7fac08613ea32c765b5e2fbbd41e466"
+    },
+    {
+      "arxivId": "2503.03790",
+      "sampleId": "sample-e925357bdf97042d8ae4",
+      "groupId": "paper-group-82290619b204c50337f2",
+      "textSha256": "4775a8fdf6cb11330ded046d7b32cfd90b25038734f5711d20999f66dc385566",
+      "stratum": "explicit_negative",
+      "upstreamReceiptSha256": "d3aa2b02a729a659c0a97b7160c35f68f3ca87e66e7f585a2a1b1545734a7e5e"
+    },
+    {
+      "arxivId": "1910.12770",
+      "sampleId": "sample-29f8fa9c4b626dc314f0",
+      "groupId": "paper-group-73378b382f6105fba6cf",
+      "textSha256": "36abcb3bf4b9c426d8cce00356b9037a965e26e97fcbb1ac8214c57260a3c1be",
+      "stratum": "explicit_negative",
+      "upstreamReceiptSha256": "08b695f03f4f60759064cb3624f06262508aebaa8a9ed845f03f426dde111be7"
+    },
+    {
+      "arxivId": "1905.00537",
+      "sampleId": "sample-d25f6ae1049046b1cbe9",
+      "groupId": "abstract-paper-1905.00537",
+      "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
+      "stratum": "dataset_unresolved",
+      "upstreamReceiptSha256": "6368aa37555e499e88ddac0419fd5ea343fa178390751e7a0e139ec65c3a9753"
+    },
+    {
+      "arxivId": "2312.03556",
+      "sampleId": "sample-14a4ffaa009ba89fce53",
+      "groupId": "paper-group-7a6b7d8b0e60b0e93cc8",
+      "textSha256": "30c195e7c374af71ae3957b0e1b4e7c166172ff95ea396b99eae331cebcdb309",
+      "stratum": "dataset_unresolved",
+      "upstreamReceiptSha256": "42a215abddf229fde16de776d54a28cbacb53ed7fbf75d4fbc207bfefee7030f"
+    },
+    {
+      "arxivId": "2503.01309",
+      "sampleId": "sample-3325f313035dac8c614c",
+      "groupId": "paper-group-42e394d51832d4e8ed25",
+      "textSha256": "725f9524e310f1862d797fe24987db4b17df84fed8166a20cf77285272cb0f75",
+      "stratum": "dataset_unresolved",
+      "upstreamReceiptSha256": "53214096a3a70ff691ab9edc794a50dfd6fb9eda27f5dfd245bf1df4e9206390"
+    },
+    {
+      "arxivId": "2010.01057",
+      "sampleId": "sample-a37378b050d671ff5f07",
+      "groupId": "abstract-paper-2010.01057",
+      "textSha256": "a2e9327617a59c7fbd5b7cfa75b5a60d2d571e834173705bfa6701e8d50f81a2",
+      "stratum": "dataset_unresolved",
+      "upstreamReceiptSha256": "b57f259c88e2deec5b2c7fdddd772bd7bae5313aeb77905638a3176f9850d9f6"
+    }
+  ],
+  "annotationStatus": "inherited_for_review_not_v2_certified"
+}

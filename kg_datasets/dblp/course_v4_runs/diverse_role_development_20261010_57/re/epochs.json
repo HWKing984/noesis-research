@@ -1,0 +1,482 @@
+[
+  {
+    "epoch": 1,
+    "steps": 102,
+    "dev": {
+      "loss": 0.9183347951169716,
+      "metrics": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8408408408408409,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 259,
+          "predicted": 304,
+          "reference": 267,
+          "precision": 0.8519736842105263,
+          "recall": 0.9700374531835206,
+          "f1": 0.9071803852889667
+        },
+        "positiveMacroF1": 0.9522522522522523,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 251,
+            "predicted": 296,
+            "reference": 259,
+            "precision": 0.847972972972973,
+            "recall": 0.9691119691119691,
+            "f1": 0.9045045045045045
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 21,
+            "predicted": 29,
+            "reference": 66,
+            "precision": 0.7241379310344828,
+            "recall": 0.3181818181818182,
+            "f1": 0.4421052631578947
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            251,
+            0,
+            8
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            45,
+            0,
+            21
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "checkpointImproved": true,
+    "checkpointWritten": false
+  },
+  {
+    "epoch": 2,
+    "steps": 204,
+    "dev": {
+      "loss": 1.1944507365970665,
+      "metrics": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8738738738738738,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 267,
+          "predicted": 309,
+          "reference": 267,
+          "precision": 0.8640776699029126,
+          "recall": 1.0,
+          "f1": 0.9270833333333334
+        },
+        "positiveMacroF1": 0.9625,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 259,
+            "predicted": 301,
+            "reference": 259,
+            "precision": 0.8604651162790697,
+            "recall": 1.0,
+            "f1": 0.925
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 24,
+            "predicted": 24,
+            "reference": 66,
+            "precision": 1.0,
+            "recall": 0.36363636363636365,
+            "f1": 0.5333333333333333
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            259,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            42,
+            0,
+            24
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "checkpointImproved": true,
+    "checkpointWritten": false
+  },
+  {
+    "epoch": 3,
+    "steps": 306,
+    "dev": {
+      "loss": 1.016718501904221,
+      "metrics": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8858858858858859,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 267,
+          "predicted": 305,
+          "reference": 267,
+          "precision": 0.8754098360655738,
+          "recall": 1.0,
+          "f1": 0.9335664335664335
+        },
+        "positiveMacroF1": 0.9658273381294964,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 259,
+            "predicted": 297,
+            "reference": 259,
+            "precision": 0.8720538720538721,
+            "recall": 1.0,
+            "f1": 0.9316546762589928
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 28,
+            "predicted": 28,
+            "reference": 66,
+            "precision": 1.0,
+            "recall": 0.42424242424242425,
+            "f1": 0.5957446808510638
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            259,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            38,
+            0,
+            28
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "checkpointImproved": true,
+    "checkpointWritten": false
+  },
+  {
+    "epoch": 4,
+    "steps": 408,
+    "dev": {
+      "loss": 0.8458929564272781,
+      "metrics": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8918918918918919,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 263,
+          "predicted": 295,
+          "reference": 267,
+          "precision": 0.8915254237288136,
+          "recall": 0.9850187265917603,
+          "f1": 0.9359430604982206
+        },
+        "positiveMacroF1": 0.967032967032967,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 255,
+            "predicted": 287,
+            "reference": 259,
+            "precision": 0.8885017421602788,
+            "recall": 0.9845559845559846,
+            "f1": 0.9340659340659341
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 34,
+            "predicted": 38,
+            "reference": 66,
+            "precision": 0.8947368421052632,
+            "recall": 0.5151515151515151,
+            "f1": 0.6538461538461539
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            255,
+            0,
+            4
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            32,
+            0,
+            34
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "checkpointImproved": true,
+    "checkpointWritten": false
+  },
+  {
+    "epoch": 5,
+    "steps": 510,
+    "dev": {
+      "loss": 1.1337928088797218,
+      "metrics": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8948948948948949,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 267,
+          "predicted": 302,
+          "reference": 267,
+          "precision": 0.8841059602649006,
+          "recall": 1.0,
+          "f1": 0.9384885764499121
+        },
+        "positiveMacroF1": 0.9683544303797469,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 259,
+            "predicted": 294,
+            "reference": 259,
+            "precision": 0.8809523809523809,
+            "recall": 1.0,
+            "f1": 0.9367088607594937
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 31,
+            "predicted": 31,
+            "reference": 66,
+            "precision": 1.0,
+            "recall": 0.4696969696969697,
+            "f1": 0.6391752577319587
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            259,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            35,
+            0,
+            31
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "checkpointImproved": false,
+    "checkpointWritten": false
+  },
+  {
+    "epoch": 6,
+    "steps": 612,
+    "dev": {
+      "loss": 1.0577104789406804,
+      "metrics": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.9009009009009009,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 267,
+          "predicted": 300,
+          "reference": 267,
+          "precision": 0.89,
+          "recall": 1.0,
+          "f1": 0.9417989417989417
+        },
+        "positiveMacroF1": 0.97005444646098,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 259,
+            "predicted": 292,
+            "reference": 259,
+            "precision": 0.886986301369863,
+            "recall": 1.0,
+            "f1": 0.9401088929219601
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 33,
+            "predicted": 33,
+            "reference": 66,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            259,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            33,
+            0,
+            33
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "checkpointImproved": true,
+    "checkpointWritten": false
+  }
+]

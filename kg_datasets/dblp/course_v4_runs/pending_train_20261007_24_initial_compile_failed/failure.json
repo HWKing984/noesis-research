@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "step": "literal_span_compilation",
+  "index": 235,
+  "cause": "Missing literal of in task span",
+  "trainingExecuted": false,
+  "importExecuted": false,
+  "filesSha256": {
+    "authored_generation.py": "3f983d1e715b1a173be4b1f8f9e0f0bfc71bb00475c2dd586944e10b192e46a6",
+    "generation_decisions.json": "bbc49897f9fba1116ac68eaa38ecb1f7d02a11e639c06461048f87ca9d219306",
+    "jobs.jsonl": "38171d601f56ab5d49ce9b6dac224cb4969918d5efe46771be977c85cd6960a3"
+  }
+}

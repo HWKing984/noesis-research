@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="11.490" timestamp="2026-10-07T09:31:31.886320+08:00" hostname="HWKing"><testcase classname="tests.test_course_graph" name="test_candidates_use_predictions_and_preserve_literal_evidence" time="0.003" /><testcase classname="tests.test_course_graph" name="test_parameters_are_bounded_and_never_interpolated" time="0.001" /><testcase classname="tests.test_course_graph" name="test_neo4j_errors_never_masquerade_as_success" time="0.002" /><testcase classname="tests.test_course_graph" name="test_real_export_and_tamper_detection" time="10.827"><failure message="ValueError: Invalid or duplicate graph edge">tmp_path = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-923/test_real_export_and_tamper_de0')
+
+    def test_real_export_and_tamper_detection(tmp_path):
+        bundle = tmp_path / 'graph'
+&gt;       manifest = g.export_graph(bundle)
+                   ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_course_graph.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\course_graph.py:169: in export_graph
+    verify_bundle(output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+bundle = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-923/test_real_export_and_tamper_de0/graph')
+
+    def verify_bundle(bundle):
+        manifest = verified_files(bundle); nodes = c.read_jsonl(bundle / 'nodes.jsonl'); edges = c.read_jsonl(bundle / 'edges.jsonl')
+        ids = {n['id'] for n in nodes}; seen = set(); graph = manifest['graphId']
+        if len(ids) != len(nodes): raise ValueError('Duplicate graph node')
+        for n in nodes:
+            if n['kind'] not in KINDS or n['props'].get('id') != n['id'] or n['props'].get('graphId') != graph:
+                raise ValueError('Invalid scoped graph node')
+        for e in edges:
+            key = e['kind'], e['head'], e['tail']
+            if e['kind'] not in EDGE_KINDS or e['head'] not in ids or e['tail'] not in ids or key in seen or e['props'].get('graphId') != graph:
+&gt;               raise ValueError('Invalid or duplicate graph edge')
+E               ValueError: Invalid or duplicate graph edge
+
+scripts\course_graph.py:183: ValueError</failure></testcase></testsuite></testsuites>

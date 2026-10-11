@@ -1,0 +1,96 @@
+{
+  "course_abstract_sources_20261008_32": {
+    "status": "partial",
+    "selected": 100,
+    "usableAbstracts": 18,
+    "bySplit": {
+      "train": 18
+    },
+    "quarantinedTitleMismatches": 1,
+    "failedRequests": 5,
+    "annotated": false,
+    "trainingExecuted": false,
+    "modelPromoted": false,
+    "policy": {
+      "license": "CC0-1.0",
+      "source_policy": "https://info.arxiv.org/help/api/tou.html",
+      "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+      "policy_checked_on": "2026-10-08",
+      "redistribute_metadata": true
+    }
+  },
+  "course_abstract_pages_20261008_32": {
+    "status": "completed",
+    "requestedNew": 60,
+    "freshMatched": 57,
+    "usableAbstracts": 75,
+    "bySplit": {
+      "train": 37,
+      "dev": 19,
+      "test": 19
+    },
+    "quarantinedTitleMismatches": 4,
+    "failedRequests": 0,
+    "annotated": false,
+    "trainingExecuted": false,
+    "testEvaluated": false,
+    "modelPromoted": false
+  },
+  "course_abstract_pilot_20261008_32": {
+    "documents": 8,
+    "paperGroups": 7,
+    "entityCounts": {
+      "DATASET": 9,
+      "METHOD": 5,
+      "TASK": 5
+    },
+    "relationCounts": {
+      "USED_FOR": 5,
+      "EVALUATED_ON": 2
+    },
+    "labelSource": "ai_pseudo",
+    "selfReviewCompleted": false,
+    "independentHumanGold": false,
+    "trainingExecuted": false,
+    "modelPromoted": false,
+    "testSourcesUsed": false,
+    "titleLabelsReused": false
+  },
+  "course_abstract_pilot_reviewed_ready_20261008_32": {
+    "documents": 8,
+    "paperGroups": 7,
+    "entityCounts": {
+      "DATASET": 9,
+      "METHOD": 5,
+      "TASK": 5
+    },
+    "relationCounts": {
+      "USED_FOR": 5,
+      "EVALUATED_ON": 2
+    },
+    "selfReviewed": 8,
+    "revisedBoundaries": 2,
+    "strictTokenAlignmentPassed": true,
+    "maxTokens": 56,
+    "independentHumanGold": false,
+    "trainingExecuted": false,
+    "testEvaluated": false,
+    "modelPromoted": false,
+    "notice": "Targeted train-only AI pilot. No independent dev/test abstracts acquired. Not automatically compatible with title-only training contracts."
+  },
+  "course_abstract_queue_20261008_32": {
+    "usableAbstracts": 75,
+    "bySplit": {
+      "train": 37,
+      "dev": 19,
+      "test": 19
+    },
+    "excluded": 0,
+    "exclusionReasons": {},
+    "annotated": false,
+    "trainingExecuted": false,
+    "testEvaluated": false,
+    "maxTokens": 386,
+    "modelPromoted": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "lockedAtUTC": "2026-10-08T09:25:35.682602+00:00",
+  "selected": [
+    {
+      "arxivId": "1704.04683",
+      "title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations"
+    },
+    {
+      "arxivId": "1705.03551",
+      "title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension"
+    },
+    {
+      "arxivId": "1809.09600",
+      "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering"
+    },
+    {
+      "arxivId": "1903.00161",
+      "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs"
+    }
+  ],
+  "policy": "Four named reading-comprehension benchmark source papers chosen before new page responses/labels to supplement independent train DATASET documents, not by dev/test errors, labels, scores or rare-name targeting of held-out sets. Targeted training selection is biased, not a representative evaluation sample.",
+  "identityOverlap": false
+}

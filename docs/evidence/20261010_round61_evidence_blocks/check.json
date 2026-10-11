@@ -1,0 +1,200 @@
+{
+  "passed": true,
+  "originalWholeAbstractMetricsUnchanged": true,
+  "summary": {
+    "target": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+    "lockedQueue": 31,
+    "sourcePapers": 8,
+    "NERBlocks": 30,
+    "entities": {
+      "TASK": 46,
+      "METHOD": 64,
+      "DATASET": 15
+    },
+    "completeBlocks": 27,
+    "blockCoverage": 0.8709677419354839,
+    "eligibleReferencePairs": 125,
+    "pairStates": {
+      "USED_FOR": 47,
+      "NOT_EXPRESSED": 55,
+      "UNRESOLVED": 10,
+      "EVALUATED_ON": 13
+    },
+    "completePositiveSupport": {
+      "USED_FOR": 39,
+      "EVALUATED_ON": 13
+    },
+    "zeroPositiveCompleteBlocks": 12,
+    "trainableNegativePairs": 0,
+    "independentHumanGold": false,
+    "trainingExecuted": false,
+    "testEvaluated": false,
+    "notice": "Exposed targeted AI dev, correlated mentions/blocks. Local non-expression is not a factual negative. Original whole-abstract evaluation unchanged."
+  },
+  "support": {
+    "USED_FOR": {
+      "mentionPairs": 39,
+      "blocks": 13,
+      "independentSourcePapers": 7
+    },
+    "EVALUATED_ON": {
+      "mentionPairs": 13,
+      "blocks": 4,
+      "independentSourcePapers": 3
+    }
+  },
+  "typedPositiveBaselines": {
+    "reference_entity_module": {
+      "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 27,
+      "positiveMicro": {
+        "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+        "truePositive": 52,
+        "predicted": 100,
+        "reference": 52,
+        "precision": 0.52,
+        "recall": 1.0,
+        "f1": 0.6842105263157895
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 39,
+          "predicted": 80,
+          "reference": 39,
+          "precision": 0.4875,
+          "recall": 1.0,
+          "f1": 0.6554621848739496
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 13,
+          "predicted": 20,
+          "reference": 13,
+          "precision": 0.65,
+          "recall": 1.0,
+          "f1": 0.7878787878787878
+        }
+      },
+      "positiveMacroF1": 0.7216704863763688,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "negativeDecisions": 0,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    },
+    "predicted_entity_pipeline": {
+      "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 27,
+      "positiveMicro": {
+        "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+        "truePositive": 22,
+        "predicted": 90,
+        "reference": 52,
+        "precision": 0.24444444444444444,
+        "recall": 0.4230769230769231,
+        "f1": 0.30985915492957744
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 20,
+          "predicted": 80,
+          "reference": 39,
+          "precision": 0.25,
+          "recall": 0.5128205128205128,
+          "f1": 0.33613445378151263
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+          "truePositive": 2,
+          "predicted": 10,
+          "reference": 13,
+          "precision": 0.2,
+          "recall": 0.15384615384615385,
+          "f1": 0.17391304347826086
+        }
+      },
+      "positiveMacroF1": 0.25502374862988675,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "negativeDecisions": 0,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    }
+  },
+  "errorAttribution": {
+    "RE57": {
+      "missedPrimaryCauses": {
+        "missing": 11,
+        "type": 11,
+        "boundary": 8
+      },
+      "missedFlags": {
+        "head_boundary": 10,
+        "tail_missing": 10,
+        "tail_type": 11,
+        "head_missing": 2,
+        "tail_boundary": 6
+      },
+      "falsePrimaryCauses": {
+        "local_predicate_overreach": 22,
+        "NER_endpoint_mismatch": 44
+      },
+      "EVALUATED_ON_missedFlags": {
+        "tail_type": 7,
+        "head_boundary": 5,
+        "tail_missing": 1
+      }
+    },
+    "RE60": {
+      "missedPrimaryCauses": {
+        "missing": 11,
+        "type": 11,
+        "boundary": 8
+      },
+      "missedFlags": {
+        "head_boundary": 10,
+        "tail_missing": 10,
+        "tail_type": 11,
+        "head_missing": 2,
+        "tail_boundary": 6
+      },
+      "falsePrimaryCauses": {
+        "NER_endpoint_mismatch": 45,
+        "local_predicate_overreach": 22
+      },
+      "EVALUATED_ON_missedFlags": {
+        "tail_type": 7,
+        "head_boundary": 5,
+        "tail_missing": 1
+      }
+    }
+  },
+  "reachablePositivePairsWithFrozenNER": 22,
+  "totalPositiveReference": 52,
+  "reachableRecallCeiling": 0.4230769230769231,
+  "relatedTests": 46,
+  "testsSeconds": 70.617,
+  "coverage": {
+    "covered_lines": 176,
+    "num_statements": 193,
+    "percent_covered": 91.19170984455958,
+    "percent_covered_display": "91",
+    "missing_lines": 17,
+    "excluded_lines": 0,
+    "percent_statements_covered": 91.19170984455958,
+    "percent_statements_covered_display": "91"
+  },
+  "coverageKind": "combined_unit_tests_and_real_compile_GPU_inference_not_unit_only",
+  "inferenceSeconds": 36.63833019999947,
+  "testEvaluated": false,
+  "qualityPromotionPassed": false,
+  "notice": "Source-paper count means distinct arxiv IDs, not statistically independent samples. All scores concern this exposed local mention-expression target and AI references, not global relation truth or production accuracy."
+}

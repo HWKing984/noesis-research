@@ -1,0 +1,308 @@
+[
+  {
+    "epoch": 1,
+    "step": 153,
+    "trainDocuments": 1219,
+    "devDocuments": 167,
+    "dev": {
+      "loss": 0.43030435961261215,
+      "invalidTransitions": 119,
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 262,
+          "predicted": 373,
+          "reference": 359,
+          "precision": 0.7024128686327078,
+          "recall": 0.7298050139275766,
+          "f1": 0.7158469945355191
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 166,
+            "predicted": 215,
+            "reference": 208,
+            "precision": 0.772093023255814,
+            "recall": 0.7980769230769231,
+            "f1": 0.7848699763593381
+          },
+          "TASK": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 96,
+            "predicted": 158,
+            "reference": 148,
+            "precision": 0.6075949367088608,
+            "recall": 0.6486486486486487,
+            "f1": 0.6274509803921569
+          },
+          "DATASET": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 0,
+            "predicted": 0,
+            "reference": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "checkpointImproved": true
+  },
+  {
+    "epoch": 2,
+    "step": 306,
+    "trainDocuments": 1219,
+    "devDocuments": 167,
+    "dev": {
+      "loss": 0.6396330251322769,
+      "invalidTransitions": 124,
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 242,
+          "predicted": 322,
+          "reference": 359,
+          "precision": 0.7515527950310559,
+          "recall": 0.6740947075208914,
+          "f1": 0.71071953010279
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 155,
+            "predicted": 199,
+            "reference": 208,
+            "precision": 0.7788944723618091,
+            "recall": 0.7451923076923077,
+            "f1": 0.7616707616707616
+          },
+          "TASK": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 87,
+            "predicted": 123,
+            "reference": 148,
+            "precision": 0.7073170731707317,
+            "recall": 0.5878378378378378,
+            "f1": 0.6420664206642066
+          },
+          "DATASET": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 0,
+            "predicted": 0,
+            "reference": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "checkpointImproved": false
+  },
+  {
+    "epoch": 3,
+    "step": 459,
+    "trainDocuments": 1219,
+    "devDocuments": 167,
+    "dev": {
+      "loss": 0.4432306739110631,
+      "invalidTransitions": 119,
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 272,
+          "predicted": 352,
+          "reference": 359,
+          "precision": 0.7727272727272727,
+          "recall": 0.7576601671309192,
+          "f1": 0.7651195499296765
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 163,
+            "predicted": 198,
+            "reference": 208,
+            "precision": 0.8232323232323232,
+            "recall": 0.7836538461538461,
+            "f1": 0.8029556650246306
+          },
+          "TASK": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 109,
+            "predicted": 153,
+            "reference": 148,
+            "precision": 0.7124183006535948,
+            "recall": 0.7364864864864865,
+            "f1": 0.7242524916943521
+          },
+          "DATASET": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 0,
+            "predicted": 1,
+            "reference": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "checkpointImproved": true
+  },
+  {
+    "epoch": 4,
+    "step": 612,
+    "trainDocuments": 1219,
+    "devDocuments": 167,
+    "dev": {
+      "loss": 0.6674020739506706,
+      "invalidTransitions": 57,
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 273,
+          "predicted": 368,
+          "reference": 359,
+          "precision": 0.7418478260869565,
+          "recall": 0.7604456824512534,
+          "f1": 0.7510316368638239
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 166,
+            "predicted": 217,
+            "reference": 208,
+            "precision": 0.7649769585253456,
+            "recall": 0.7980769230769231,
+            "f1": 0.7811764705882352
+          },
+          "TASK": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 107,
+            "predicted": 150,
+            "reference": 148,
+            "precision": 0.7133333333333334,
+            "recall": 0.722972972972973,
+            "f1": 0.7181208053691275
+          },
+          "DATASET": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 0,
+            "predicted": 1,
+            "reference": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "checkpointImproved": false
+  },
+  {
+    "epoch": 5,
+    "step": 765,
+    "trainDocuments": 1219,
+    "devDocuments": 167,
+    "dev": {
+      "loss": 0.6484200343124836,
+      "invalidTransitions": 111,
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 277,
+          "predicted": 348,
+          "reference": 359,
+          "precision": 0.7959770114942529,
+          "recall": 0.7715877437325905,
+          "f1": 0.7835926449787836
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 172,
+            "predicted": 206,
+            "reference": 208,
+            "precision": 0.8349514563106796,
+            "recall": 0.8269230769230769,
+            "f1": 0.8309178743961353
+          },
+          "TASK": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 104,
+            "predicted": 139,
+            "reference": 148,
+            "precision": 0.7482014388489209,
+            "recall": 0.7027027027027027,
+            "f1": 0.7247386759581882
+          },
+          "DATASET": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 1,
+            "predicted": 3,
+            "reference": 3,
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          }
+        }
+      }
+    },
+    "checkpointImproved": true
+  },
+  {
+    "epoch": 6,
+    "step": 918,
+    "trainDocuments": 1219,
+    "devDocuments": 167,
+    "dev": {
+      "loss": 0.790591358564695,
+      "invalidTransitions": 60,
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 286,
+          "predicted": 379,
+          "reference": 359,
+          "precision": 0.7546174142480211,
+          "recall": 0.7966573816155988,
+          "f1": 0.7750677506775068
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 172,
+            "predicted": 220,
+            "reference": 208,
+            "precision": 0.7818181818181819,
+            "recall": 0.8269230769230769,
+            "f1": 0.8037383177570093
+          },
+          "TASK": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 112,
+            "predicted": 157,
+            "reference": 148,
+            "precision": 0.7133757961783439,
+            "recall": 0.7567567567567568,
+            "f1": 0.7344262295081967
+          },
+          "DATASET": {
+            "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+            "truePositive": 2,
+            "predicted": 2,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          }
+        }
+      }
+    },
+    "checkpointImproved": false
+  }
+]

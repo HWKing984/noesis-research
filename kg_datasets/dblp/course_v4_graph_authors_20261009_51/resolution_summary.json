@@ -1,0 +1,14 @@
+{
+  "oldPersonNodes": 72694,
+  "newPersonNodes": 75155,
+  "resolvedPersonNodes": 66093,
+  "unresolvedSignatureNodes": 9062,
+  "oldConceptNodes": 29885,
+  "newConceptNodes": 29878,
+  "controlledConceptNodes": 20,
+  "sourceConceptsGrouped": 7,
+  "authorSignatures": 88762,
+  "literalMentionsUnchanged": true,
+  "candidateAssertionCountUnchanged": true,
+  "modelReliabilityPromoted": false
+}

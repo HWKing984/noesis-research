@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "documentationLinksChecked": 242,
+  "missingLinks": [],
+  "documentationSha256": {
+    "README.md": "0d3789af847c7ebe19736ab40116c45366c9037af590f715809d9719a48792ed",
+    "docs/course_v4_progress.md": "eab85c93ef0392e02e8d7efd0c22f4701462261c042f58a5c523e5e9e72a6d48",
+    "docs/course_v4_plan.md": "bf67167b55f18f40aaf3c1f1690efae2b60282e13b6fef976141209df45dc3ec",
+    "docs/course_v4_runbook.md": "ea05e5b27351e82a5b0001618f034218fc6839e7d0e18dc17375c2f03a4374f1",
+    "docs/course_v4_report_evidence.md": "cffe0e092432b483b89effa99e7676cca8dee3309595f8e0ddc94eb0f55b4d9e",
+    "docs/course_v4_data_expansion_round22.md": "710233309f93d7bad03f2b8f3f82b749479c44d3ee1ffad975a1f42e648997ee"
+  },
+  "evidenceManifestSha256": "1b0c80f40bc172109c1790a5fb27bf884299a92b7885faf710b1ccc0bbd1483f",
+  "capturesSha256": "8a1ad2bb4e3f0f62fe46f95e6dda019804fa09f4bfe5b9080ee36668b7437e4a",
+  "pngSha256": "6261db37c5af087ca82f62d42e67511c4ba871c85cc16fe9d8f00ca076984ae5",
+  "pngDimensions": [
+    1280,
+    2300
+  ],
+  "copiedSourcesMatchCurrent": true,
+  "visualReview": "full content and footer readable; no clipping; actual saved-artifact rendering, not console/training/Neo4j success"
+}

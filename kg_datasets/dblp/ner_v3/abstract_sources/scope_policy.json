@@ -1,0 +1,11 @@
+{
+  "declared_on": "2026-10-05",
+  "status": "source_candidates_not_annotation_data",
+  "intended_split": "train_candidates_only",
+  "reference_provider": "DBLP",
+  "reason": "Explicit scope declaration for the earlier DBLP-title availability pilot; preserves original request and source records unchanged. Does not claim the request originally contained these fields or that sources are human annotated.",
+  "bound_files_sha256": {
+    "request.json": "cb39aa14fbb52654bdf36c1140ee4145a726f7808a2ca5a767b944f9d38fbecc",
+    "abstracts.jsonl": "0ef23f054b6ae02ae744255f2d8bf68b366aab17c23b41eb9ef7b211b56585a1"
+  }
+}

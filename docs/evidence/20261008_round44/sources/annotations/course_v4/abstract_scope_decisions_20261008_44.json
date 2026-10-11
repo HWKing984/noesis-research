@@ -1,0 +1,62 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "documents": [
+    {"arxivId": "2404.01036", "textSha256": "4f16d69d0aa646de6362a0b0d4560c182fa1ea26923e0e5c1dd005bc2c596ac1", "action": "keep", "quote": "GenAI tools exhibit subject knowledge, problem-solving, analytical, critical thinking, and presentation skills", "reason": "Retain quarantine: human educational capabilities are not computational task names. The unnamed GenAI umbrella does not settle a complete identifiable method-family inventory; no all-O admission or fabricated named tools."},
+    {"arxivId": "1804.07461", "textSha256": "3045e4afbeeff5bce8cdf55cab7475920ce2ed586ff56e6defaf9ab5c99699c0", "action": "keep", "quote": "methods for multi-task and transfer learning", "reason": "Retain the original shared-head group and quarantine. The full GLUE benchmark name is supported, but multi-task learning is not a contiguous literal here; do not clear the group to obtain extra DATASET training mentions."},
+    {"arxivId": "2009.03300", "textSha256": "c7e3ed209190abd3fc748e6e1e8a9b82bb419cef97f1e78ff428c51720b29161", "action": "admit", "quote": "57 tasks including elementary mathematics, US history, computer science, law, and more", "reason": "These phrases name academic subject domains, not literal computational operations. The benchmark and test are unnamed in this abstract; do not import MMLU from the title. GPT-3 is the sole identifiable METHOD. Generic problem solving ability and academic understanding are not named TASKs. This is a real scoped zero-pair document, not an all-O sample or negative relation.", "entities": [
+      {"entityId": "e1", "start": 374, "end": 379, "text": "GPT-3", "label": "METHOD"}
+    ]},
+    {"arxivId": "2105.15057", "textSha256": "6de4f289e0855455d635c007fa3fd0ffe5bd979bbbf2579888e3670fba8df93c", "action": "admit", "quote": "DNN-specific dominant patterns reveal some essential properties of a DNN", "reason": "Preserve the source spelling Deep NeuralNetworks and outputof. Recognize the literal DNN family name at 922:925 inside DNN-specific as a contextual family modifier; do not invent a METHOD named DNN-specific. Dominant patterns are explicitly features/objects, not a named algorithm. All model-family and UAP mentions are retained; feature analysis and robustness enhancement are explicit object-qualified technical objectives. No named dataset or anaphoric unnamed downstream task is invented.", "entities": [
+      {"entityId": "e1", "start": 68, "end": 87, "text": "Deep NeuralNetworks", "label": "METHOD"},
+      {"entityId": "e2", "start": 89, "end": 93, "text": "DNNs", "label": "METHOD"},
+      {"entityId": "e3", "start": 159, "end": 163, "text": "DNNs", "label": "METHOD"},
+      {"entityId": "e4", "start": 286, "end": 289, "text": "DNN", "label": "METHOD"},
+      {"entityId": "e5", "start": 316, "end": 319, "text": "DNN", "label": "METHOD"},
+      {"entityId": "e6", "start": 395, "end": 398, "text": "DNN", "label": "METHOD"},
+      {"entityId": "e7", "start": 603, "end": 638, "text": "Universal Adversarial Perturbations", "label": "METHOD"},
+      {"entityId": "e8", "start": 639, "end": 643, "text": "UAPs", "label": "METHOD"},
+      {"entityId": "e9", "start": 730, "end": 733, "text": "UAP", "label": "METHOD"},
+      {"entityId": "e10", "start": 878, "end": 882, "text": "DNNs", "label": "METHOD"},
+      {"entityId": "e11", "start": 922, "end": 925, "text": "DNN", "label": "METHOD"},
+      {"entityId": "e12", "start": 991, "end": 994, "text": "DNN", "label": "METHOD"},
+      {"entityId": "e13", "start": 1031, "end": 1047, "text": "feature analysis", "label": "TASK"},
+      {"entityId": "e14", "start": 1052, "end": 1074, "text": "robustness enhancement", "label": "TASK"}
+    ]},
+    {"arxivId": "2507.22101", "textSha256": "2945bc6036dc0c119c29f7e6d146941d884742cb7b6cafeb9ebb4ef3277a806d", "action": "admit", "quote": "multimodal data integration, efficient edge-device deployment, and domain-adaptable AI models", "reason": "ML/deep learning are explicitly technical approaches here; vision transformers, vision-language foundation models and CLIP are identifiable technical families/examples. Domain-adaptable AI models is an explicitly scoped adaptation family mentioned as a future direction, not evidence of current use. Preserve modality/domain qualifiers and omit conventional/advanced/recent/efficient evaluations. Three application tasks and two future technical operations are named. AI alone is an umbrella; performance evaluation metrics names generic metric objects, not a separate computational task; datasets is unnamed. Keep all relation candidates unknown rather than credit every listed method with every surveyed task.", "entities": [
+      {"entityId": "e1", "start": 538, "end": 554, "text": "machine learning", "label": "METHOD"},
+      {"entityId": "e2", "start": 576, "end": 589, "text": "deep learning", "label": "METHOD"},
+      {"entityId": "e3", "start": 608, "end": 627, "text": "vision transformers", "label": "METHOD"},
+      {"entityId": "e4", "start": 641, "end": 674, "text": "vision-language foundation models", "label": "METHOD"},
+      {"entityId": "e5", "start": 682, "end": 686, "text": "CLIP", "label": "METHOD"},
+      {"entityId": "e6", "start": 749, "end": 771, "text": "crop disease detection", "label": "TASK"},
+      {"entityId": "e7", "start": 773, "end": 800, "text": "livestock health management", "label": "TASK"},
+      {"entityId": "e8", "start": 806, "end": 832, "text": "aquatic species monitoring", "label": "TASK"},
+      {"entityId": "e9", "start": 1095, "end": 1122, "text": "multimodal data integration", "label": "TASK"},
+      {"entityId": "e10", "start": 1134, "end": 1156, "text": "edge-device deployment", "label": "TASK"},
+      {"entityId": "e11", "start": 1162, "end": 1188, "text": "domain-adaptable AI models", "label": "METHOD"}
+    ]},
+    {"arxivId": "2510.02719", "textSha256": "532549b1b911f98548b29529cec23beb01cf21ca5e780091e5a2f7589c3b1d4e", "action": "keep", "quote": "reasoning provides a more significant boost for smaller LLMs", "reason": "Retain quarantine: fourteen datasets and seven tasks remain unnamed; reasoning switches from a capability to an unspecified procedure. A family-only annotation would not resolve the whole source, and no benchmark or method name is invented."},
+    {"arxivId": "2208.08611", "textSha256": "6b3c7741489130a634e9ec565a95ca7bf0924d7a39ca5b61c830e6eba01d5780", "action": "keep", "quote": "will expand our business in the Greater Bay Area", "reason": "Retain quarantine/source-quality exclusion: this is a business-platform description with no identifiable method or named dataset. Do not convert low-information promotional material into a clean all-O training sample."},
+    {"arxivId": "2312.14977", "textSha256": "1e699fd3a0c137f9e42030fe47558fd5031b2e2cbe338648e03babc143ad872c", "action": "admit", "quote": "partial differential equation (PDE) diffusion models", "reason": "Three occurrences denote generative diffusion model families; text-to-image generators and large language models are identifiable technical families. The final PDE diffusion models occurrence is explicitly a physical mathematical analogy, not the generative METHOD. Course subjects such as machine learning and inference are field/course references; general produce new outputs is not a named task. No dataset is named. Five source-backed METHOD mentions and zero scoped relation pairs.", "entities": [
+      {"entityId": "e1", "start": 105, "end": 121, "text": "Diffusion models", "label": "METHOD"},
+      {"entityId": "e2", "start": 260, "end": 284, "text": "text-to-image generators", "label": "METHOD"},
+      {"entityId": "e3", "start": 289, "end": 310, "text": "large language models", "label": "METHOD"},
+      {"entityId": "e4", "start": 312, "end": 328, "text": "Diffusion models", "label": "METHOD"},
+      {"entityId": "e5", "start": 556, "end": 572, "text": "diffusion models", "label": "METHOD"}
+    ]},
+    {"arxivId": "1708.07747", "textSha256": "ed839786306a490fbdd2cb9ddb08ca67697d39c9e9f53c5db0d4367c6b3640ef", "action": "keep", "quote": "for benchmarking machine learning algorithms", "reason": "Keep the existing literal TASK: the current broad technical-operation policy includes benchmarking with an explicit computational object. Do not silently redefine TASK as only downstream benchmark names. Machine learning algorithms here is an unnamed evaluated object, not a new METHOD endpoint; keep original receipts and zero-pair status."},
+    {"arxivId": "2406.01574", "textSha256": "bbe7a23fa314b12eab53fcb30fa8994e0db7f7d919913cd51010090bebda3b1e", "action": "keep", "quote": "language comprehension and reasoning across diverse domains", "reason": "Keep the existing contiguous coordinated goal phrase under the current flat abstract labels. It is not the shared missing-head METHOD case in GLUE. Do not invent disconnected spans or claim that this resolves atomic concept decomposition; all fourteen repeated DATASET mentions remain correlated and not independent studies."},
+    {"arxivId": "2510.26830", "textSha256": "88ea9b3378f207fa0714185589e5e177491befc2a049e72cf5ebbdce0b1df49b", "action": "edit", "quote": "jointly reasoning over textual and visual inputs", "reason": "Retain the explicit computational reasoning operation, but expand its TASK to include the source-stated modality objects. The standalone nine-character reasoning span loses those objects. No model name, source text or other entity changes; all eight touching pairs are explicitly rejudged.", "before": {"entityId": "e3", "start": 110, "end": 119, "text": "reasoning", "label": "TASK"}, "after": {"entityId": "e3", "start": 110, "end": 150, "text": "reasoning over textual and visual inputs", "label": "TASK"}, "touchingPairs": [
+      {"head": "e1", "tail": "e3", "previousLabel": "USED_FOR", "label": "USED_FOR", "evidence": {"start": 0, "end": 151}, "reason": "The first sentence explicitly says the multimodal model family performs reasoning over the two named input modalities; this is a computational operation, not a human educational capability."},
+      {"head": "e2", "tail": "e3", "previousLabel": "USED_FOR", "label": "USED_FOR", "evidence": {"start": 0, "end": 151}, "reason": "MLLMs is the introduced abbreviation of the same family in the same sentence, supported for the full object-qualified reasoning task; not a separate experiment."},
+      {"head": "e5", "tail": "e3", "previousLabel": "UNRESOLVED", "label": "UNRESOLVED", "evidence": null, "reason": "SmoothGuard is a defense framework; the abstract does not certify a direct full reasoning-task relation for this occurrence. Do not infer a negative from absence."},
+      {"head": "e6", "tail": "e3", "previousLabel": "USED_FOR", "label": "USED_FOR", "evidence": {"start": 0, "end": 543}, "reason": "The later MLLMs denotes the same generic model family defined in the first sentence; that explicit family-level operation remains supported, not independent evaluation or a claim about SmoothGuard."},
+      {"head": "e7", "tail": "e3", "previousLabel": "UNRESOLVED", "label": "UNRESOLVED", "evidence": null, "reason": "Noise injection is a defense component; no direct object-qualified reasoning assertion for this component is certified."},
+      {"head": "e8", "tail": "e3", "previousLabel": "UNRESOLVED", "label": "UNRESOLVED", "evidence": null, "reason": "Prediction aggregation does not automatically inherit the base model's full reasoning-task relationship."},
+      {"head": "e9", "tail": "e3", "previousLabel": "UNRESOLVED", "label": "UNRESOLVED", "evidence": null, "reason": "Embedding-based clustering is locally for filtering predictions, not sufficient evidence for the reasoning task."},
+      {"head": "e14", "tail": "e3", "previousLabel": "UNRESOLVED", "label": "UNRESOLVED", "evidence": null, "reason": "The later SmoothGuard performance statement is about defense resilience; no unsupported positive or negative reasoning label is added."}
+    ]}
+  ]
+}

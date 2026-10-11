@@ -1,0 +1,17 @@
+{
+  "version": "v2_negative_adjudication_20261011_v1",
+  "arxivId": "2008.10400",
+  "headId": "e10",
+  "tailId": "e1",
+  "priorLabel": "UNRESOLVED",
+  "proposedLabel": "NO_RELATION",
+  "finalLabel": "UNRESOLVED",
+  "reviewStatus": "adjudicated_not_admitted",
+  "candidateEligible": false,
+  "trainingAuthorized": false,
+  "independentHumanGold": false,
+  "auditFile": "v2_sampling_independent_deep_audit_20261011.md",
+  "auditSha256": "95d882131a6eaebeec7c32204ef57610d93de6c16720eb505600155615622718",
+  "reason": "Architecture-local exclusion of pooling does not establish pair-level negation of EVALUATED_ON(pooling, MNIST). Keep the original UNRESOLVED label; do not export this candidate as a negative training example.",
+  "labelSource": "user_supplied_independent_audit_adjudication_not_human_gold"
+}

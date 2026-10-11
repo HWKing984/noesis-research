@@ -1,0 +1,43 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_eval_attribution_v1.json": "7fe79c3e544b2df732ae56102a21b7ef3c5965124553c66ad76e6a4d74a0e6bf",
+    "resources/course_abstract_relation_v1.json": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+    "kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/manifest.json": "92b23b40237d8e20b0848cf63db8acaf98431d3388b65c5dd2dcdef463a61954",
+    "kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/manifest.json": "c792d4895ffe9d17f474c56f8d1da072aa27ae89bbba4ea5cbb7ba58e23a1199",
+    "annotations/course_v4/abstract_eval_attribution_decisions_20261008_41.json": "3f13182e8b0f1dddfd48779560ff9330da4f56a0027bf18bad46dc4da2fdafc4",
+    "annotations/course_v4/abstract_eval_attribution_reviews_20261008_41.json": "3dcfe5877bd88c7fc19e9db28d0a05ab4810fa577527c19416360ead7e20ffcd",
+    "scripts/review_eval_attribution.py": "3b0520d7cf4f3d7d48ac11d76210b807e9a596d3c505ca22c11364fd521c8b3e",
+    "scripts/course_abstract_relation.py": "96aa877e8d95c34e9768460818625b9c358a14d6ca46eb7d32a4fea203a96bdf",
+    "scripts/course_abstract_v1.py": "1327e537f46a260a18b215899fa72341f32fd0864fb45fed5f89c30358af85a6",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0"
+  },
+  "filesSha256": {
+    "attribution_inspections.jsonl": "a71dd6a0910e2f0dccb8cbec92446665ce01b5a2243215822cc89045158fa480",
+    "contract.json": "34484b6cd36550220e441c86b34a3cc442b50fd952b66a8860c1d518a7682eec",
+    "dev_generation_receipts.jsonl": "30dd005bb003c177ec86e5d3d456fb9251b2c5ecc5d6486ec590374dacd930f0",
+    "dev_origins.jsonl": "9396c60fa115bb455ee12c8c7cb2b51b19999a7ffb364d32f5d211b35828dd55",
+    "dev_references.jsonl": "5d5b990c462c7b4673f106efc77d5e78fa73d8cf5abf7535d0676827c9cd48f2",
+    "dev_reviewed_receipts.jsonl": "1c09780ba7f29acf259ce847ac88c9541d794b6eba7660fcbf47f70d45d82c8a",
+    "excluded_ner_dev.jsonl": "e13bbf2af675c686a7b9430903ad0aa3498c3f970332032740692fd8beb60df7",
+    "excluded_ner_train.jsonl": "7c55b57ea5d318fa237ba4d882eb0bf1aaed60bc4b1f139629be868a4c27f2eb",
+    "full_relation_dev.jsonl": "2d4294be6eed97f16fe7ff4ea37a9daf923a1fa189823a892f82e48756e39785",
+    "full_relation_train.jsonl": "c0b031fb3f388be151dc2b007442a38825eaa203afaae43491db0787a107112e",
+    "ner_dev.jsonl": "be782d45305b87ecd24dfafd731a2c1b12aa30ee2211a539565df502b6a19d59",
+    "ner_train.jsonl": "cfa8e15db386dd03199e2a74e79cb9dff4fa46325a955291960f0e655e4a1290",
+    "quality_actions.jsonl": "8e55cd5f6f80b0e1f062b69d5bff9034b95c7b2fca4295d4ebf8aef7a0fddafd",
+    "relation_dev.jsonl": "4759d9ed2832ec586731555e68abab3bbc2ccbc9bad81d0e9a17835bb59b89e9",
+    "relation_train.jsonl": "684b4b8a3517c262c008f645584f4405827c00b0e525512e5c0083b8f3f3d52a",
+    "summary.json": "61337594a3ea5722beb43d2b04435758751edbbbdfc67b37ee3fb75d6652da88",
+    "token_alignment_dev.jsonl": "08ba5223f418ea9069bc7702758e488e91cca5924851f9054b71562dfb3c8ce9",
+    "token_alignment_train.jsonl": "7e07fda8f176514475c8141e9c3d74eadc1e84759ef08c7176c82e4c19dacf37",
+    "train_generation_receipts.jsonl": "034e7669008aa29a5ffe24f90f4eac2093807577be22c2f68d2d847d58e9f3fc",
+    "train_origins.jsonl": "b1111c52cf88e89a6e0724efa21d6195b33e1827ada1fe1c27167650cd20fc33",
+    "train_references.jsonl": "67e37e5f20a0ac6b1fd9ba24fddd274e5ea1263dbdfb15f59ef0d648d894b0c5",
+    "train_reviewed_receipts.jsonl": "9b6c3c7183a210de769248b4e518487bc707f59bdff88db2196f91922731fef8"
+  }
+}

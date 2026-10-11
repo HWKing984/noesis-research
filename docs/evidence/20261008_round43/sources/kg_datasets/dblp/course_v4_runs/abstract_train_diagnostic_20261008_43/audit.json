@@ -1,0 +1,317 @@
+{
+  "version": "abstract_train_audit_v1",
+  "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+  "trainDocuments": 50,
+  "queueDocuments": 58,
+  "excludedDocuments": 8,
+  "inventory": {
+    "entitySupport": {
+      "TASK": 189,
+      "METHOD": 378,
+      "DATASET": 44
+    },
+    "documentsPerClass": {
+      "TASK": 48,
+      "METHOD": 49,
+      "DATASET": 16
+    },
+    "datasetDocuments": [
+      {
+        "sampleId": "sample-574f9bccbd030a1ef5b5",
+        "mentions": 14,
+        "literalNames": [
+          "Massive Multitask Language Understanding",
+          "MMLU",
+          "MMLU-Pro"
+        ]
+      },
+      {
+        "sampleId": "sample-d25f6ae1049046b1cbe9",
+        "mentions": 4,
+        "literalNames": [
+          "GLUE",
+          "SuperGLUE"
+        ]
+      },
+      {
+        "sampleId": "sample-2388f16dc51ed879a1ac",
+        "mentions": 3,
+        "literalNames": [
+          "QPLIB",
+          "Netlib LP",
+          "Maros-Meszaros"
+        ]
+      },
+      {
+        "sampleId": "sample-32a35c253060a8c489ae",
+        "mentions": 3,
+        "literalNames": [
+          "Fashion-MNIST",
+          "MNIST"
+        ]
+      },
+      {
+        "sampleId": "sample-d9c3f3d4360d7bb038c0",
+        "mentions": 3,
+        "literalNames": [
+          "POPE",
+          "LLaVA-Bench (In-the-Wild)",
+          "MM-SafetyBench"
+        ]
+      },
+      {
+        "sampleId": "sample-29f8fa9c4b626dc314f0",
+        "mentions": 2,
+        "literalNames": [
+          "UCF101",
+          "ImageNet"
+        ]
+      },
+      {
+        "sampleId": "sample-3325f313035dac8c614c",
+        "mentions": 2,
+        "literalNames": [
+          "ScanNet",
+          "SceneNN"
+        ]
+      },
+      {
+        "sampleId": "sample-897a80e58031f4e2f42c",
+        "mentions": 2,
+        "literalNames": [
+          "Stanford Question Answering Dataset",
+          "SQuAD"
+        ]
+      },
+      {
+        "sampleId": "sample-9671072a1b13964a7fe6",
+        "mentions": 2,
+        "literalNames": [
+          "GSM8K"
+        ]
+      },
+      {
+        "sampleId": "sample-f118e9f4532dc0013d1a",
+        "mentions": 2,
+        "literalNames": [
+          "MNIST",
+          "CIFAR10"
+        ]
+      },
+      {
+        "sampleId": "sample-f50e3264cb44031bf342",
+        "mentions": 2,
+        "literalNames": [
+          "DIOR",
+          "NWPU VHR-10"
+        ]
+      },
+      {
+        "sampleId": "sample-0dc1f742c4b7e8b4af6f",
+        "mentions": 1,
+        "literalNames": [
+          "CS-TDS"
+        ]
+      },
+      {
+        "sampleId": "sample-14a4ffaa009ba89fce53",
+        "mentions": 1,
+        "literalNames": [
+          "CelebAHQ-IDI"
+        ]
+      },
+      {
+        "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+        "mentions": 1,
+        "literalNames": [
+          "HumanEval"
+        ]
+      },
+      {
+        "sampleId": "sample-9f4949f360d7abac8189",
+        "mentions": 1,
+        "literalNames": [
+          "MNIST"
+        ]
+      },
+      {
+        "sampleId": "sample-fe420cc7706e689e258d",
+        "mentions": 1,
+        "literalNames": [
+          "Meta-World"
+        ]
+      }
+    ],
+    "datasetLiteralNames": [
+      "CIFAR10",
+      "CS-TDS",
+      "CelebAHQ-IDI",
+      "DIOR",
+      "Fashion-MNIST",
+      "GLUE",
+      "GSM8K",
+      "HumanEval",
+      "ImageNet",
+      "LLaVA-Bench (In-the-Wild)",
+      "MM-SafetyBench",
+      "MMLU",
+      "MMLU-Pro",
+      "MNIST",
+      "Maros-Meszaros",
+      "Massive Multitask Language Understanding",
+      "Meta-World",
+      "NWPU VHR-10",
+      "Netlib LP",
+      "POPE",
+      "QPLIB",
+      "SQuAD",
+      "ScanNet",
+      "SceneNN",
+      "Stanford Question Answering Dataset",
+      "SuperGLUE",
+      "UCF101"
+    ],
+    "surfaceTypeConflicts": [],
+    "notice": "Literal-name counts are not normalized dataset identities. Contextual type conflicts are review candidates, not automatic errors."
+  },
+  "BIOtokenCounts": {
+    "B-TASK": 189,
+    "I-TASK": 476,
+    "O": 9258,
+    "B-METHOD": 378,
+    "I-METHOD": 777,
+    "B-DATASET": 44,
+    "I-DATASET": 98
+  },
+  "models": {
+    "old35": {
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+          "truePositive": 510,
+          "predicted": 593,
+          "reference": 611,
+          "precision": 0.8600337268128162,
+          "recall": 0.8346972176759411,
+          "f1": 0.8471760797342193
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+            "truePositive": 320,
+            "predicted": 357,
+            "reference": 378,
+            "precision": 0.896358543417367,
+            "recall": 0.8465608465608465,
+            "f1": 0.8707482993197279
+          },
+          "TASK": {
+            "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+            "truePositive": 149,
+            "predicted": 182,
+            "reference": 189,
+            "precision": 0.8186813186813187,
+            "recall": 0.7883597883597884,
+            "f1": 0.8032345013477089
+          },
+          "DATASET": {
+            "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+            "truePositive": 41,
+            "predicted": 54,
+            "reference": 44,
+            "precision": 0.7592592592592593,
+            "recall": 0.9318181818181818,
+            "f1": 0.8367346938775511
+          }
+        }
+      },
+      "invalidTransitions": 70,
+      "inferenceFeaturesContainLabels": false,
+      "errorCounts": {
+        "FN": 101,
+        "FP": 83
+      },
+      "errorClusters": {
+        "FN/TASK/type": 3,
+        "FP/TASK/extra": 11,
+        "FP/METHOD/type": 2,
+        "FN/METHOD/boundary": 25,
+        "FN/TASK/boundary": 15,
+        "FP/METHOD/boundary": 25,
+        "FP/TASK/boundary": 17,
+        "FN/METHOD/missing": 22,
+        "FN/METHOD/type": 4,
+        "FN/METHOD/type_and_boundary": 7,
+        "FP/DATASET/type": 5,
+        "FP/METHOD/extra": 10,
+        "FP/DATASET/type_and_boundary": 3,
+        "FN/TASK/missing": 22,
+        "FP/TASK/type_and_boundary": 5,
+        "FP/DATASET/extra": 3,
+        "FN/DATASET/boundary": 2,
+        "FP/DATASET/boundary": 2,
+        "FN/DATASET/missing": 1
+      }
+    },
+    "new42": {
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+          "truePositive": 609,
+          "predicted": 610,
+          "reference": 611,
+          "precision": 0.9983606557377049,
+          "recall": 0.9967266775777414,
+          "f1": 0.9975429975429976
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+            "truePositive": 378,
+            "predicted": 378,
+            "reference": 378,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "TASK": {
+            "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+            "truePositive": 187,
+            "predicted": 188,
+            "reference": 189,
+            "precision": 0.9946808510638298,
+            "recall": 0.9894179894179894,
+            "f1": 0.9920424403183024
+          },
+          "DATASET": {
+            "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+            "truePositive": 44,
+            "predicted": 44,
+            "reference": 44,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "invalidTransitions": 0,
+      "inferenceFeaturesContainLabels": false,
+      "errorCounts": {
+        "FN": 2,
+        "FP": 1
+      },
+      "errorClusters": {
+        "FN/TASK/boundary": 1,
+        "FN/TASK/missing": 1,
+        "FP/TASK/boundary": 1
+      }
+    }
+  },
+  "trainingStarted": false,
+  "labelsChanged": false,
+  "devSemanticallyRead": false,
+  "testSemanticallyRead": false,
+  "qualityPromotionPassed": false,
+  "modelPromoted": false,
+  "notice": "In-sample diagnostic: new42 trained on these 50 documents, old35 on only 29. Neither score is a new dev/test/generalization result. AI source review is not independent gold."
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="33" time="32.943" timestamp="2026-10-10T21:30:15.121766+08:00" hostname="HWKing"><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[0]" time="0.205" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[1]" time="0.051" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[2]" time="0.026" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[3]" time="0.014" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[4]" time="0.036" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[5]" time="0.017" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[6]" time="0.035" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[7]" time="0.018" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[8]" time="0.018" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[9]" time="0.063" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[10]" time="0.030" /><testcase classname="tests.test_v2_supervision_protocol" name="test_review_preserves_all_but_five_negatives_and_three_evidence_pairs[11]" time="0.032" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[hash]" time="0.015" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[receipt]" time="0.015" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[positive_withdrawal]" time="0.014" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[duplicate_withdrawal]" time="0.015" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[invented_trigger]" time="0.017" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[unknown_referent]" time="0.019" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[wrong_referent]" time="0.023" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[oracle_direct]" time="0.020" /><testcase classname="tests.test_v2_supervision_protocol" name="test_decisions_fail_closed[alias_outside_context]" time="0.018" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[group]" time="0.001" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[publication]" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[version]" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[text_hash]" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[exposed]" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[test_body]" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[missing]" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_metadata_partition_guard[unknown_split]" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_fresh_metadata_only_partitions_and_train_exposure_are_allowed" time="0.000" /><testcase classname="tests.test_v2_supervision_protocol" name="test_real_build_and_isolated_portable_replay" time="9.779"><failure message="AssertionError: Regex pattern did not match.&#10;  Expected regex: 'protocol_summary_counts'&#10;  Actual message: 'summary_counts'">def test_real_build_and_isolated_portable_replay():
+        with tempfile.TemporaryDirectory(prefix='pytest-v2-protocol-', dir=v.ROOT/'kg_datasets/dblp') as sandbox:
+            output = Path(sandbox)/'bundle'; summary = v.build(output)
+            assert summary['relationSupport'] == {'USED_FOR': 68, 'EVALUATED_ON': 17, 'NO_RELATION': 0, 'UNRESOLVED': 599}
+            assert summary['RECandidatePairs'] == 85 and summary['fineCoreferencePairs'] == 3 and summary['fineCoreferenceFactChains'] == 2
+            assert not summary['evaluationInventoryLocked'] and not summary['trainingExecuted']
+            result = v.verify(output); assert result['status'] == 'passed'
+            process = subprocess.run([sys.executable, '-I', str(output/'source_snapshot/scripts/finalize_v2_supervision.py'), '--verify', str(output)],
+                cwd=sandbox, text=True, capture_output=True, check=True)
+            assert json.loads(process.stdout) == result
+            with pytest.raises(FileExistsError): v.build(output)
+            data = v.read(output/'summary.json'); data['acceptedNegativePairs'] = 5
+            import revise_v2_priority as parent
+            parent.c.write_json(output/'summary.json', data)
+            manifest = v.read(output/'manifest.json'); manifest['filesSha256']['summary.json'] = v.sha(output/'summary.json')
+            parent.c.write_json(output/'manifest.json', manifest)
+&gt;           with pytest.raises(ValueError, match='protocol_summary_counts'): v.verify(output)
+                                                                             ^^^^^^^^^^^^^^^^
+
+tests\test_v2_supervision_protocol.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\finalize_v2_supervision.py:301: in verify
+    check(summary['documents'] == 12 and summary['entityMentions'] == 177 and summary['candidatePairs'] == 684 and summary['RECandidatePairs'] == 85
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+condition = False, name = 'summary_counts'
+
+    def check(condition, name):
+&gt;       if not condition: raise ValueError(name)
+                          ^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: summary_counts
+
+scripts\finalize_v2_supervision.py:238: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_real_build_and_isolated_portable_replay():
+        with tempfile.TemporaryDirectory(prefix='pytest-v2-protocol-', dir=v.ROOT/'kg_datasets/dblp') as sandbox:
+            output = Path(sandbox)/'bundle'; summary = v.build(output)
+            assert summary['relationSupport'] == {'USED_FOR': 68, 'EVALUATED_ON': 17, 'NO_RELATION': 0, 'UNRESOLVED': 599}
+            assert summary['RECandidatePairs'] == 85 and summary['fineCoreferencePairs'] == 3 and summary['fineCoreferenceFactChains'] == 2
+            assert not summary['evaluationInventoryLocked'] and not summary['trainingExecuted']
+            result = v.verify(output); assert result['status'] == 'passed'
+            process = subprocess.run([sys.executable, '-I', str(output/'source_snapshot/scripts/finalize_v2_supervision.py'), '--verify', str(output)],
+                cwd=sandbox, text=True, capture_output=True, check=True)
+            assert json.loads(process.stdout) == result
+            with pytest.raises(FileExistsError): v.build(output)
+            data = v.read(output/'summary.json'); data['acceptedNegativePairs'] = 5
+            import revise_v2_priority as parent
+            parent.c.write_json(output/'summary.json', data)
+            manifest = v.read(output/'manifest.json'); manifest['filesSha256']['summary.json'] = v.sha(output/'summary.json')
+            parent.c.write_json(output/'manifest.json', manifest)
+&gt;           with pytest.raises(ValueError, match='protocol_summary_counts'): v.verify(output)
+E           AssertionError: Regex pattern did not match.
+E             Expected regex: 'protocol_summary_counts'
+E             Actual message: 'summary_counts'
+
+tests\test_v2_supervision_protocol.py:94: AssertionError</failure></testcase><testcase classname="tests.test_v2_supervision_protocol" name="test_missing_junit_does_not_create_partial_output" time="0.021" /><testcase classname="tests.test_v2_supervision_protocol" name="test_fine_audit_metadata_never_enters_scibert_features" time="21.836" /></testsuite></testsuites>

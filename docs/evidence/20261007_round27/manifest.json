@@ -1,0 +1,20 @@
+{
+  "kind": "actual_chinese_search_application_evidence",
+  "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+  "sealedAtUTC": "2026-10-07T07:08:13.187914+00:00",
+  "filesSha256": {
+    "01_chinese_search_detail.jpeg": "4b019910c73c5998df358c5d008903b86aea7f9fce279cbd501a26438d5d0582",
+    "sources/scripts/course_graph.py": "eb527196c4e205f0b7cc03b62df2bcd731baf16b0101770536480afdf386c497",
+    "sources/resources/course_literature.html": "10491e61f546629ebad0098cfde33a21154fbcac6532b421d68eb2b523794f5f",
+    "sources/tests/test_course_graph.py": "e279eb40a97923bcc2e18ff7755f33ade24f3c5f30e26510490a9856488be362",
+    "sources/annotations/course_v4/check_chinese_20261007_round27.py": "a8b8c69d35b78c6f46b8efc0185ce836e956c178da2d17711b9bac87742c7e00",
+    "sources/annotations/course_v4/seal_chinese_20261007_round27.py": "6d6d57f0bb8c64f84d7a539011c0cbcf7e44053d2f3b30a4e33e8b5cc58289bf",
+    "sources/kg_datasets/dblp/course_v4_runs/chinese_acceptance_20261007_27.json": "e0b997ce5cd65060a8d73cd7360a0fb081291b57c1638d802500925ee1f8cbda",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_graph_20261007_round27.xml": "1324e96f9bbc209c4d69753151942eb7ad3397744d07fe6fc6b44b61eb7e9489",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261007_round27_tests_only.xml": "c414d3534eddd7298bc48aeda5b51fa0091f1fce4a8eb4c5ebf9eca25ed19d6b",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261007_round27_all.xml": "0d15deb74d8daa17c8a9af8908c7f67956004825724354f2339c2cc914720b2f"
+  },
+  "credentialSaved": false,
+  "screenshotNotice": "Unmodified native browser JPEG, 1440x1100 viewport, full-page capture; visually reviewed.",
+  "knownFailure": "Root pytest collected archived duplicate test modules: 7 collection errors; preserved XML."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "arxivId": "1704.04683",
+    "startedAtUTC": "2026-10-08T09:26:03.024782+00:00",
+    "url": "https://arxiv.org/abs/1704.04683",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 218,
+    "rawResponseFile": "page_001.html"
+  },
+  {
+    "arxivId": "1705.03551",
+    "startedAtUTC": "2026-10-08T09:26:18.125054+00:00",
+    "url": "https://arxiv.org/abs/1705.03551",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 215,
+    "rawResponseFile": "page_002.html"
+  },
+  {
+    "arxivId": "1809.09600",
+    "startedAtUTC": "2026-10-08T09:26:33.224026+00:00",
+    "url": "https://arxiv.org/abs/1809.09600",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 169,
+    "rawResponseFile": "page_003.html"
+  },
+  {
+    "arxivId": "1903.00161",
+    "startedAtUTC": "2026-10-08T09:26:48.333760+00:00",
+    "url": "https://arxiv.org/abs/1903.00161",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 219,
+    "rawResponseFile": "page_004.html"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "canonicalArxivRows": 5425,
+  "fromEncodedKeyRows": 5253,
+  "fromURLOnlyRows": 172,
+  "keyAndURLAgreeRows": 1540,
+  "noArxivMappingRows": 14575,
+  "quarantinedRows": 0,
+  "sourceRows": 20000,
+  "uniqueCanonicalArxivIds": 5425,
+  "historicalMetadataRows": 20138,
+  "historicalRowsWithCanonicalArxiv": 5563,
+  "historicalUniqueCanonicalArxivIds": 5454,
+  "historicalRowsWithoutArxivMapping": 14575,
+  "historicalOrigins": {
+    "historical_corpus": 20000,
+    "historical_train_abstract": 70,
+    "historical_abstract_selection": 60,
+    "exposed_supplement_development": 8
+  },
+  "exhaustiveCrossSourceIsolationProven": false
+}

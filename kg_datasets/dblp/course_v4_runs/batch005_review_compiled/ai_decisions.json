@@ -1,0 +1,703 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-e5696a657a04fb4ba02c",
+      "entityStatus": "unresolved",
+      "entityReason": "Unity Simulation may name software rather than an in-scope method; augmentation versus detector/quantifier roles are uncertain.",
+      "entities": [
+        {
+          "text": "Diffusion-Based Augmentation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Quantifying Dataset Balance",
+          "label": "TASK"
+        },
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The augmentation procedure is not clearly the quantification or detection instrument.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Quantifying balance studies augmented data, without specifying the quantification instrument."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Augmentation may supply detection data rather than itself perform detection."
+        }
+      ],
+      "notes": "Dataset is generic, Unity is a simulation platform context, and Robust is evaluative.\nAI self-review: Augmentation supplies data; neither quantification nor detection instrument is established, and Unity software scope remains unresolved."
+    },
+    {
+      "sampleId": "sample-4aea2dd47b3eac90c6bf",
+      "entityStatus": "unresolved",
+      "entityReason": "Safeguarding applications may be a broad security goal rather than a specified computational task.",
+      "entities": [
+        {
+          "text": "Safeguarding Generative AI Applications in Preclinical Imaging",
+          "label": "TASK"
+        },
+        {
+          "text": "Hybrid Anomaly Detection",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The proposed safeguarding task remains unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Through explicitly supplies hybrid anomaly detection as the safeguarding procedure, conditional on task scope."
+        }
+      ],
+      "notes": "Preserve the candidate maximal protection goal without a nested generative-AI object mention.\nAI self-review: The safeguard goal is underspecified despite an explicit anomaly-detection procedure; retain the task uncertainty and no nested generative-model object."
+    },
+    {
+      "sampleId": "sample-34fc45fa0ae0a8a34ce7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Automatic Large Language Model Evaluation",
+          "label": "TASK"
+        },
+        {
+          "text": "Peer Review",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The model-evaluation operation explicitly uses peer review."
+        }
+      ],
+      "notes": "Peer review is the stated evaluation procedure; the inspected language model stays in the maximal task.\nAI self-review: Via explicitly names peer review as the automatic model-evaluation procedure; no evaluated language model should overlap the maximal task."
+    },
+    {
+      "sampleId": "sample-9fdee2276378767f1e1a",
+      "entityStatus": "unresolved",
+      "entityReason": "LinkRadar may be a software assistant rather than a named algorithm.",
+      "entities": [
+        {
+          "text": "LinkRadar",
+          "label": "METHOD"
+        },
+        {
+          "text": "Analysis of Inter-app Page Links",
+          "label": "TASK"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The named assistant's method eligibility is unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "LinkRadar is described as assisting page-link analysis, conditional on method scope."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Page-link analysis explicitly employs transfer learning via the title's via construction."
+        }
+      ],
+      "notes": "No inter-app dataset or unseen linking algorithm is invented.\nAI self-review: Page-link analysis uses transfer learning, but the LinkRadar assistant may be software rather than an algorithm, preventing completed coverage."
+    },
+    {
+      "sampleId": "sample-af7b64491cf5fbf354c3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Block Access Pattern Discovery",
+          "label": "TASK"
+        },
+        {
+          "text": "Compressed Full Tensor Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Block-access pattern discovery explicitly uses the tensor transformer."
+        }
+      ],
+      "notes": "Compression and full-tensor structure distinguish the method.\nAI self-review: Retain compressed full-tensor structure; via directly links the transformer to access-pattern discovery."
+    },
+    {
+      "sampleId": "sample-4069d4c9901484b4f6a2",
+      "entityStatus": "unresolved",
+      "entityReason": "ELF-Gym may be an evaluation environment/framework rather than a named dataset or benchmark suite.",
+      "entities": [
+        {
+          "text": "ELF-Gym",
+          "label": "DATASET"
+        },
+        {
+          "text": "Evaluating Large Language Models Generated Features",
+          "label": "TASK"
+        },
+        {
+          "text": "Tabular Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The named resource role is unresolved; no separate evaluation method is specified.",
+      "relations": [],
+      "notes": "LLM-generated features are the evaluated object inside the task, not a fabricated evaluated model/dataset pair.\nAI self-review: Gym/evaluating does not identify a dataset; generated features are inspected objects, and no evaluation model/resource pair is stated."
+    },
+    {
+      "sampleId": "sample-d94cbe4ccc6e7b04e7aa",
+      "entityStatus": "unresolved",
+      "entityReason": "Video spatio-temporal difference/coherence may be features rather than a standalone method.",
+      "entities": [
+        {
+          "text": "Salient Object Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Video Spatio-Temporal Difference and Coherence",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The proposed difference/coherence method role remains uncertain.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Via explicitly connects the difference/coherence cues to detection, conditional on method scope."
+        }
+      ],
+      "notes": "Video is a modality, not a named dataset; no absent algorithm is inferred.\nAI self-review: Difference/coherence may be feature cues rather than an algorithm; the conditional detection association stays outside training."
+    },
+    {
+      "sampleId": "sample-313783e131286fb1bbb3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Ternary Compound Matching of Biomedical Ontologies",
+          "label": "TASK"
+        },
+        {
+          "text": "Compact Multi-Objective Evolutionary Algorithm Based on Adaptive Objective Space Decomposition",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The specified biomedical matching operation explicitly uses the decomposition-based evolutionary algorithm."
+        }
+      ],
+      "notes": "Compact identifies the evolutionary family; retain its decomposition mechanism and do not name the generic ontologies as datasets.\nAI self-review: Preserve the evolutionary compact/decomposition mechanism and biomedical ontology matching object; with explicitly supports the use relation."
+    },
+    {
+      "sampleId": "sample-9732c959c3eb61730152",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Human Activity Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Ensemble Learning of Multiple Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Activity recognition explicitly uses the convolutional-network ensemble."
+        }
+      ],
+      "notes": "Multiple networks of one fully written family form an ensemble, not a shared-head list of omitted model members.\nAI self-review: One CNN ensemble is the stated recognition method, not omitted distinct model names requiring a shared-head group."
+    },
+    {
+      "sampleId": "sample-3269d9b4221216bb769b",
+      "entityStatus": "unresolved",
+      "entityReason": "The ontology-based decision-support system may be software rather than a computational method; garden management is broad application context.",
+      "entities": [
+        {
+          "text": "Ontology-Based Decision Support System",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "System-versus-method scope remains unresolved.",
+      "relations": [],
+      "notes": "Do not invent a gardening prediction/classification task or an ontology algorithm.\nAI self-review: A generic ontology decision-support system is not clearly an algorithm; garden management names no specific computational operation."
+    },
+    {
+      "sampleId": "sample-36060fd3729a16af5f05",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Integrating Annotator Information",
+          "label": "TASK"
+        },
+        {
+          "text": "Transformer Fine-tuning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Sexism Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Fine-tuning may receive integrated information rather than itself perform its integration.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Integration in fine-tuning does not specify the integration instrument."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Transformer fine-tuning is explicitly for sexism detection."
+        }
+      ],
+      "notes": "Keep the explicit information-integration subproblem and detection goal, without treating annotator information as a named dataset.\nAI self-review: Fine-tuning is explicitly for sexism detection; its information-integration instrument role remains uncertain rather than inferred from in."
+    },
+    {
+      "sampleId": "sample-b7d1707c10455bc22cd0",
+      "entityStatus": "unresolved",
+      "entityReason": "Mixed Learning Objective is an underspecified loss/objective rather than a clearly identifiable method.",
+      "entities": [
+        {
+          "text": "Mixed Learning Objective",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The candidate learning-objective method eligibility is unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The objective is explicitly for machine translation, conditional on method scope."
+        }
+      ],
+      "notes": "Neural specifies the translation paradigm; no particular loss or network is supplied.\nAI self-review: A mixed objective supplies no identifiable loss type; retain its unresolved METHOD proposal and the explicit translation task."
+    },
+    {
+      "sampleId": "sample-f011adfaa060f104c1d3",
+      "entityStatus": "unresolved",
+      "entityReason": "Zero and data reuse-aware convolution admits ellipted versus jointly qualified method readings.",
+      "entities": [
+        {
+          "text": "deep neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [
+        {
+          "text": "Zero and data reuse-aware fast convolution",
+          "label": "METHOD"
+        }
+      ],
+      "relationStatus": "unresolved",
+      "relationReason": "The ambiguous shared-head convolution group has no legal individual method endpoints.",
+      "relations": [],
+      "notes": "Preserve the entire challenge phrase without inventing Zero-aware convolution; GPU is hardware, not a dataset.\nAI self-review: Zero/data-reuse awareness permits shared-head readings; preserve the challenge group without inserting aware or duplicating inner convolution methods."
+    },
+    {
+      "sampleId": "sample-c78578fc07fa038c067b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Embedded System Design",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The session title explicitly describes machine learning for embedded-system design."
+        }
+      ],
+      "notes": "A session topic asserts a method-purpose association, not an executed training experiment or accuracy.\nAI self-review: The session title explicitly associates machine learning with system design; this is purpose labeling, not a claim of experimental execution."
+    },
+    {
+      "sampleId": "sample-afa4dd26f6ae4f6fb3df",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Solving Time Alignment Issue of Multimodal Data",
+          "label": "TASK"
+        },
+        {
+          "text": "Prognostics",
+          "label": "TASK"
+        },
+        {
+          "text": "CNN-Transformer-LSTM Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The network's alignment versus prediction role is not fully determined.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "The network may receive aligned inputs rather than perform alignment itself."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The multimodal prognostics application explicitly employs the stated network."
+        }
+      ],
+      "notes": "Accurate is excluded; the three-part network is one hybrid architecture, not a shared-head member list.\nAI self-review: The hybrid network supports prognostics, but may receive aligned inputs rather than perform alignment; retain the latter unresolved pair."
+    },
+    {
+      "sampleId": "sample-4bbdd6303980fb2c95d6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Modeling the regular/irregular dissociation in non-fluent aphasia",
+          "label": "TASK"
+        },
+        {
+          "text": "recurrent neural network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The specified aphasia dissociation is explicitly modeled in a recurrent network."
+        }
+      ],
+      "notes": "Keep the modeling object and aphasia context; no clinical dataset or health guidance is added.\nAI self-review: The recurrent network explicitly models the specified aphasia dissociation; slash-separated regularity categories are task objects, not omitted models."
+    },
+    {
+      "sampleId": "sample-c7a5ef6844f794ba70d0",
+      "entityStatus": "unresolved",
+      "entityReason": "Analyzing distributional learning may be a research objective rather than a defined computational task, with an embedded learning-method alternative.",
+      "entities": [
+        {
+          "text": "Analyzing distributional learning of phonemic categories",
+          "label": "TASK"
+        },
+        {
+          "text": "unsupervised deep neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The networks may be inspected systems rather than the analysis instrument.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Analysis of learning inside networks does not explicitly assign them the analysis role."
+        }
+      ],
+      "notes": "Preserve unsupervised training mechanism, but do not resolve the task/method boundary using unseen text.\nAI self-review: The network learning process is studied; an unspecified analysis goal may not be a computational task and the instrument role remains unresolved."
+    },
+    {
+      "sampleId": "sample-6719a5ece27e64ac0a92",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Industrial defect detection on the edge",
+          "label": "TASK"
+        },
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Edge industrial-defect detection explicitly uses deep learning."
+        }
+      ],
+      "notes": "Scarce labels and imbalance describe training conditions, not a named dataset or separate task.\nAI self-review: With supplies deep learning for edge defect detection; scarce-label and imbalance descriptions are not named datasets or base-task qualifiers."
+    },
+    {
+      "sampleId": "sample-19236fe187bf2e3f2cf9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Smart Contract Vulnerability Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Dual Attention Graph Convolutional Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Vulnerability detection is explicitly based on the dual-attention graph network."
+        }
+      ],
+      "notes": "Retain both attention mechanism and graph architecture.\nAI self-review: Based on directly assigns the dual-attention graph architecture to smart-contract vulnerability detection."
+    },
+    {
+      "sampleId": "sample-ab3a370df427387629aa",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Prompt-based Zero-shot Relation Extraction with Semantic Knowledge Augmentation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "One explicit prompt-based extraction procedure includes zero-shot and semantic augmentation mechanisms; do not duplicate its nested extraction task.\nAI self-review: The prompt-based extraction and augmentation form one composite procedure; zero-shot is part of the method, not a duplicated task span."
+    },
+    {
+      "sampleId": "sample-16c9e1b6335235f4048b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ConTextING",
+          "label": "METHOD"
+        },
+        {
+          "text": "Granting Document-Wise Contextual Embeddings to Graph Neural Networks",
+          "label": "TASK"
+        },
+        {
+          "text": "Text Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "ConTextING explicitly grants contextual document embeddings to graph networks."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "ConTextING is explicitly for text classification."
+        }
+      ],
+      "notes": "Inductive is a generalization setting outside the base task. The receiving graph networks remain task objects, without a nested instrument mention.\nAI self-review: Inductive specifies the generalization regime; remove it from the base task, keeping both explicit named-method purposes."
+    },
+    {
+      "sampleId": "sample-aa5ca342c347aee6d20c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Evaluating Limitations of Transformer-based Methods",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The transformer methods are inspected objects inside the evaluation task; Granular Tasks is generic, and no evaluation algorithm or dataset is named.\nAI self-review: The model-limit evaluation has a literal object, while generic Granular Tasks supplies neither a named operation nor a benchmark."
+    },
+    {
+      "sampleId": "sample-a1c673bd7377161026d4",
+      "entityStatus": "unresolved",
+      "entityReason": "LLM-enhanced graphs may be input representations rather than a standalone computational method.",
+      "entities": [
+        {
+          "text": "Modeling Interactions Between Stocks",
+          "label": "TASK"
+        },
+        {
+          "text": "LLM-Enhanced Graphs",
+          "label": "METHOD"
+        },
+        {
+          "text": "Volume Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The proposed graph method's instrument role is unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Using enhanced graph inputs does not establish the graphs as the modeling algorithm."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "The named graph representation is not necessarily the volume predictor."
+        }
+      ],
+      "notes": "Do not invent a graph neural network or a named stock dataset.\nAI self-review: LLM-enhanced graphs can be data representations, not the modeling or prediction algorithm; no GNN or dataset is invented."
+    },
+    {
+      "sampleId": "sample-9f59641ecae64d83ae52",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Field-Based Coordination",
+          "label": "METHOD"
+        },
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The field-based coordination procedure and federated learning are methods; no separate downstream task or dataset is named.\nAI self-review: Field-based coordination names a procedure and federated learning a family; no separate downstream task is stated."
+    },
+    {
+      "sampleId": "sample-0f6ee20a51442940816e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DIRL",
+          "label": "METHOD"
+        },
+        {
+          "text": "Domain-Invariant Representation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Sim-to-Real Transfer",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "DIRL names the approach explicitly for simulation-to-real transfer."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The invariant representation-learning mechanism is explicitly for the transfer objective."
+        }
+      ],
+      "notes": "The transfer problem is written as the purpose, without expanding absent words in the literal task.\nAI self-review: DIRL and the full invariant representation-learning mechanism are explicitly for sim-to-real transfer; both mentions are literal and disjoint."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "train": 5
+  },
+  "annotated": false,
+  "trainingExecuted": false,
+  "policy": "Existing group split fixed before labels. Exclude all prior annotation and closed holdout groups. Keyword matches are mining hints, not DATASET or EVALUATED_ON labels.",
+  "decoderDecision": "rejected: dev micro F1 regressed; DATASET dev F1 unchanged at 1/3",
+  "corpusDocuments": 20000,
+  "inputSha256": {
+    "kg_datasets/dblp/processed_ai/publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "kg_datasets/dblp/course_v4_weak/references.jsonl": "e67e1e50565e562abbd979db3730cb7d7a77058dd801a23fbcb6d9a3b8d61439",
+    "kg_datasets/dblp/course_v4_holdout_20261007_29/references.jsonl": "0423e07419411a20643ca08af8fe574f9772ea4ee7f9e776c0be21114d61c690",
+    "annotations/course_v4/prepare_rare_queue_20261007_round31.py": "303964013a0fed341fe163fccbb5feab94cba75ff1f653999ce7611b471894ce"
+  }
+}

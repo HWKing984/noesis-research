@@ -1,0 +1,44 @@
+{
+  "metrics": {
+    "micro": {
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+      "truePositive": 135,
+      "predicted": 195,
+      "reference": 184,
+      "precision": 0.6923076923076923,
+      "recall": 0.7336956521739131,
+      "f1": 0.712401055408971
+    },
+    "perClass": {
+      "METHOD": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 91,
+        "predicted": 106,
+        "reference": 116,
+        "precision": 0.8584905660377359,
+        "recall": 0.7844827586206896,
+        "f1": 0.8198198198198198
+      },
+      "TASK": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 31,
+        "predicted": 65,
+        "reference": 53,
+        "precision": 0.47692307692307695,
+        "recall": 0.5849056603773585,
+        "f1": 0.5254237288135594
+      },
+      "DATASET": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 13,
+        "predicted": 24,
+        "reference": 15,
+        "precision": 0.5416666666666666,
+        "recall": 0.8666666666666667,
+        "f1": 0.6666666666666666
+      }
+    }
+  },
+  "invalidTransitions": 55,
+  "inferenceFeaturesContainLabels": false
+}

@@ -1,0 +1,24 @@
+{
+  "dataset": "V2 20 fixed dev abstracts",
+  "documents": 20,
+  "entity_mention_count": 275,
+  "entities_by_type": {
+    "METHOD": 165,
+    "TASK": 87,
+    "DATASET": 23
+  },
+  "proposed_positive_relations": 54,
+  "relations_by_type": {
+    "USED_FOR": 45,
+    "EVALUATED_ON": 9
+  },
+  "explicit_unresolved_example_count": 1,
+  "accepted_negative_relations": 0,
+  "referenceComplete": false,
+  "humanGold": false,
+  "evaluationAuthorized": false,
+  "trainingAuthorized": false,
+  "source": "fixed source text from provided v2_roster_and_dev_audit_20261011_v2.zip",
+  "review_required": "independent semantic assessment and complete relation coverage before a scored dev set",
+  "sourceSHA256": "b24e53dc3442d44973313125f8c9c9c5a6a39e82135681b91377c08302610d33"
+}

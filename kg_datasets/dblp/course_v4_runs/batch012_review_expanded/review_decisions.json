@@ -1,0 +1,654 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-e631b4f62dcf73a8d6a0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Transcriptomic data is generic modality/input; quality trade-offs do not name a task or dataset.\nAI self-review: Federation explicit, transcriptomic data generic and tradeoffs properties."
+    },
+    {
+      "sampleId": "sample-76b80c4b0ce266f57b4e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Solar Irradiance Nowcasting",
+          "label": "TASK"
+        },
+        {
+          "text": "Recurrent Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep learning is explicitly for solar-irradiance nowcasting."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The compared recurrent network is explicitly an approach for the stated nowcasting."
+        }
+      ],
+      "notes": "Two traditional methods are unnamed; no fabricated entities or solar benchmark.\nAI self-review: Deep learner/recurrent comparison concern solar nowcasting, traditional methods unnamed."
+    },
+    {
+      "sampleId": "sample-1376e0e92bb44abc0bb0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Detect the Wrong-way Movement of Vehicles",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Convolutional Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The deep CNN explicitly detects wrong-way vehicle movement."
+        }
+      ],
+      "notes": "Appearance-based describes an otherwise unnamed approach; do not duplicate the CNN.\nAI self-review: Wrong-way detection uses deep CNN, appearance algorithm unnamed."
+    },
+    {
+      "sampleId": "sample-c9e00644fc8e1a6fb089",
+      "entityStatus": "unresolved",
+      "entityReason": "Quantum Wavefunctions are target objects, but the title does not identify solving, prediction or representation as an explicit operation.",
+      "entities": [
+        {
+          "text": "Physics-Informed Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The missing quantum-wavefunction operation is unresolved.",
+      "relations": [],
+      "notes": "Do not invent Schrödinger solving or a quantum benchmark.\nAI self-review: Wavefunction noun lacks exact operation, unresolved preserved."
+    },
+    {
+      "sampleId": "sample-8f19947535a5435e35c2",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Distributed Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "2.5D silicon-photonic accelerators are hardware; co-design is a hardware-engineering procedure, not a named ML algorithm.\nAI self-review: 2.5D photonic accelerators hardware, transformer method family."
+    },
+    {
+      "sampleId": "sample-35f3f431479be32f28db",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Trajectory Prediction in Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The survey explicitly concerns deep-learning trajectory prediction in autonomous driving."
+        }
+      ],
+      "notes": "Tasks is a generic carrier; keep driving context.\nAI self-review: Trajectory prediction keeps driving and explicit deep-learning use."
+    },
+    {
+      "sampleId": "sample-6e8174e1062489c3986e",
+      "entityStatus": "unresolved",
+      "entityReason": "Growth Model of Tongue Sole may describe a target mathematical model or a predictive method; the operation and model boundary are unclear.",
+      "entities": [
+        {
+          "text": "Parallel BP Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The growth-model computational role is unresolved.",
+      "relations": [],
+      "notes": "Study is research framing, not a task; no growth-prediction verb is invented.\nAI self-review: Growth model may be artifact or predictor; operation uncertain."
+    },
+    {
+      "sampleId": "sample-685c67c181d08c0e6875",
+      "entityStatus": "unresolved",
+      "entityReason": "Dynamic Clone Transformer may denote a compiler transformation rather than a neural architecture; title alone does not fix its category.",
+      "entities": [
+        {
+          "text": "Dynamic Clone Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Convolutional Neural Netwoks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The possible transformation-method category remains uncertain.",
+      "relations": [],
+      "notes": "Preserve the original Netwoks typo; no corrected text inserted.\nAI self-review: Clone Transformer category uncertain, literal Netwoks typo preserved."
+    },
+    {
+      "sampleId": "sample-c7aae45a5904f5a649e5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Management and Inference of Information",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Information management/inference in the stated platform is explicitly based on machine learning."
+        }
+      ],
+      "notes": "Web platform is software, biorefinery an application domain; shared output object retained literally.\nAI self-review: Information management/inference is explicit operation; web platform software."
+    },
+    {
+      "sampleId": "sample-bec176def6c8c16cd191",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection in Connected Autonomous Driving",
+          "label": "TASK"
+        },
+        {
+          "text": "YOLO",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Federated learning is explicitly enabled for connected-driving object detection."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The detection explicitly uses YOLO."
+        }
+      ],
+      "notes": "Flower is explicitly a software framework, not a learned algorithm or named dataset.\nAI self-review: Federation/YOLO explicitly support detection; Flower software framework."
+    },
+    {
+      "sampleId": "sample-899335b4a4770959c7aa",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Arrhythmia Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Arrhythmia detection is explicitly with federated learning."
+        }
+      ],
+      "notes": "Secure/privacy-preserving are constraints; IoT is deployment/input context.\nAI self-review: Federation explicitly supports arrhythmia detection, no named patient data."
+    },
+    {
+      "sampleId": "sample-88fa38186f0603d50d41",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Forest Cover Type Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Automatic Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Automatic machine learning explicitly predicts forest-cover type."
+        }
+      ],
+      "notes": "Automatic identifies AutoML mechanism here, not generic prediction quality.\nAI self-review: Automatic learning identifies AutoML mechanism, forest prediction explicit."
+    },
+    {
+      "sampleId": "sample-3b1b7f1d98597b092aad",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Indian RTI Act-2005 Analysis",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Analysis of the specific RTI Act is explicitly by machine learning."
+        }
+      ],
+      "notes": "The named law is an analysis object, not a DATASET; Bastar is geographical context.\nAI self-review: RTI Act law analysis object not DATASET; learning use explicit."
+    },
+    {
+      "sampleId": "sample-cfca8f0606f86b39baa1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Cross-layer QoE prediction for mobile video",
+          "label": "TASK"
+        },
+        {
+          "text": "random neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The specified QoE prediction is explicitly based on random neural networks."
+        }
+      ],
+      "notes": "Retain layer and mobile-video task context.\nAI self-review: Random network explicitly predicts cross-layer video QoE."
+    },
+    {
+      "sampleId": "sample-2204326d5e2e76b70aed",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "End-to-end deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "autonomous navigation of mobile robot",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "End-to-end deep learning is explicitly for mobile-robot navigation."
+        }
+      ],
+      "notes": "End-to-end is a learning mechanism, not a generic performance adjective.\nAI self-review: End-to-end mechanism explicitly performs robot navigation."
+    },
+    {
+      "sampleId": "sample-fa5482f573a15f22d400",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Optimization of Cluster Formations in 6G Networks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Cluster-formation optimization in 6G explicitly uses machine learning."
+        }
+      ],
+      "notes": "Retain network context; no named network trace.\nAI self-review: 6G cluster-formation optimization explicitly machine-learning based."
+    },
+    {
+      "sampleId": "sample-d95628cfe77c3d3d139b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Obstacles Avoidance of Self-driving Vehicle",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Deep reinforcement learning explicitly performs obstacle avoidance for the vehicle."
+        }
+      ],
+      "notes": "Original plural Obstacles is retained without correction.\nAI self-review: Obstacle avoidance uses deep RL and original plural spelling retained."
+    },
+    {
+      "sampleId": "sample-cdf0e9fcaadbaa94076f",
+      "entityStatus": "unresolved",
+      "entityReason": "Service Discovery & Composition shares Service across a coordinated task head; the full task boundaries are not settled.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Coordinated task coverage and unspecified ontology method are unresolved.",
+      "relations": [],
+      "notes": "Ontology-based is a generic resource description, not a named discovery algorithm.\nAI self-review: Shared service-discovery/composition boundaries unresolved; no TASK group invented."
+    },
+    {
+      "sampleId": "sample-064a084475cf7066a186",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "3D Object Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Dynamic Token Halting",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "3D detection is explicitly transformer-based."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Dynamic token halting is explicitly used with the detector."
+        }
+      ],
+      "notes": "Efficient is excluded; preserve token-halting mechanism.\nAI self-review: Transformer and token-halting mechanism explicitly support 3D detection."
+    },
+    {
+      "sampleId": "sample-c55cb8ded68e5c6c6949",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Gradient-Reweighted Adversarial Camouflage",
+          "label": "METHOD"
+        },
+        {
+          "text": "Physical Object Detection Evasion",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The gradient-reweighted camouflage is explicitly for physically evading detection."
+        }
+      ],
+      "notes": "Detection is part of the evasion object, not a separate overlapping task.\nAI self-review: Camouflage explicitly evades detector; detection is part of task object."
+    },
+    {
+      "sampleId": "sample-9f45d16a92c8c27e7961",
+      "entityStatus": "unresolved",
+      "entityReason": "Risk Assessment and Safety Enhancement share autonomous-driving context with uncertain continuous task boundaries.",
+      "entities": [
+        {
+          "text": "OD-RASE",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Full coordinated task coverage is unresolved.",
+      "relations": [],
+      "notes": "Do not invent missing shared context or a METHOD-only group for TASK coordination.\nAI self-review: OD-RASE named method, shared driving task context unresolved."
+    },
+    {
+      "sampleId": "sample-dbb739963b63dbb1e127",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "StyleDiffusion",
+          "label": "METHOD"
+        },
+        {
+          "text": "Style Transfer",
+          "label": "TASK"
+        },
+        {
+          "text": "Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "StyleDiffusion explicitly names the style-transfer approach."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Style transfer is explicitly via diffusion models."
+        }
+      ],
+      "notes": "Controllable/disentangled are output control/quality descriptors outside the base task.\nAI self-review: Diffusion style transfer explicit; quality/control adjectives excluded."
+    },
+    {
+      "sampleId": "sample-29c37b6f60c65dcf2ee9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "BoxDiff",
+          "label": "METHOD"
+        },
+        {
+          "text": "Text-to-Image Synthesis",
+          "label": "TASK"
+        },
+        {
+          "text": "Training-Free Box-Constrained Diffusion",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "BoxDiff names the text-to-image synthesis method."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Synthesis explicitly uses the box-constrained diffusion mechanism."
+        }
+      ],
+      "notes": "Preserve training-free mechanism and box constraint.\nAI self-review: Box-constrained training-free diffusion explicitly synthesizes images."
+    },
+    {
+      "sampleId": "sample-5c75880d03555b02cfff",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "3D Human Texture Estimation from a Single Image",
+          "label": "TASK"
+        },
+        {
+          "text": "Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Transformers explicitly estimate 3D human texture from one image."
+        }
+      ],
+      "notes": "Retain dimensionality, human object and input count.\nAI self-review: Human 3D texture task keeps one-image input and transformer role."
+    },
+    {
+      "sampleId": "sample-48313c01b48b7855bca1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Masked Retraining Teacher-Student Framework",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The teacher-student masked-retraining framework is explicitly for object detection."
+        }
+      ],
+      "notes": "Domain adaptive is a training/transfer setting; preserve teacher-student learning mechanism.\nAI self-review: Teacher-student masked retraining mechanism explicit for detection."
+    }
+  ]
+}

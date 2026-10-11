@@ -1,0 +1,5032 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "generation",
+  "decisions": [
+    {
+      "sampleId": "sample-96d9d32280b4835a70ca",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Feature Augmentation Strategies",
+          "label": "METHOD"
+        },
+        {
+          "text": "Classify Social Networks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Two explicit computational instruments and social-network classification target."
+    },
+    {
+      "sampleId": "sample-c45ca98ab4a25adc72fd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Predicting Irrigation Requirements in Multi-farm Irrigation Scheduling Systems",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Retain complete irrigation prediction context; systems are not datasets."
+    },
+    {
+      "sampleId": "sample-363ba6bd744fcec78931",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Modal Retrieval",
+          "label": "TASK"
+        },
+        {
+          "text": "Large Language Model Based Speech Recognition",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Retrieval operation for explicitly composed LLM speech-recognition mechanism; no nested overlapping task."
+    },
+    {
+      "sampleId": "sample-13b087ed4a6fc2c7971a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "NexusSum",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hierarchical LLM Agents",
+          "label": "METHOD"
+        },
+        {
+          "text": "Long-Form Narrative Summarization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named approach and agent family with complete narrative summarization scope."
+    },
+    {
+      "sampleId": "sample-2fd563d8cc31dc37c1a9",
+      "entityStatus": "unresolved",
+      "entityReason": "EducationQ may be evaluation system or benchmark collection; teaching-capability evaluation task boundary unresolved.",
+      "entities": [
+        {
+          "text": "LLMs",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-Agent Dialogue Framework",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "EducationQ may be evaluation system or benchmark collection; teaching-capability evaluation task boundary unresolved."
+    },
+    {
+      "sampleId": "sample-a2ca7258954b3e13ffbd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Knowledge Graph Large Language Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "KG-LLM",
+          "label": "METHOD"
+        },
+        {
+          "text": "Link Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full composed model name and abbreviation are distinct literal mentions."
+    },
+    {
+      "sampleId": "sample-badd85ac943d57ac8704",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Technology Retrieval",
+          "label": "TASK"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Retrieval operation and recognizable LLM family; innovation landscape is broad context."
+    },
+    {
+      "sampleId": "sample-818a7df6c45b7e2865d9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Monitoring of Solar Photovoltaic Plant Power Transformers",
+          "label": "TASK"
+        },
+        {
+          "text": "Sweep Frequency Response Analysis",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Electrical power transformers are monitored equipment, not neural Transformer methods."
+    },
+    {
+      "sampleId": "sample-f5e99b0ece9468e05b42",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Data-driven Model Free Adaptive Control",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Adaptive control is explicitly composed mechanism; manipulator is hardware, no overlapping control task fabricated."
+    },
+    {
+      "sampleId": "sample-c2787266eba1c10133a1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Offline Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Offline training mechanism retained; robust quality and reward distribution not independent tasks."
+    },
+    {
+      "sampleId": "sample-1478b6ca30de337b4b21",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hybrid Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Predicting Student Performance",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Educational datasets unnamed; no DATASET entity."
+    },
+    {
+      "sampleId": "sample-c70f43e0a3143ef460c6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Full-Duplex Communication UAV Base Station Trajectory Optimization in Disaster Environments",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "RL instrument and full UAV trajectory-optimization object/context preserved."
+    },
+    {
+      "sampleId": "sample-244e177719775ec7a287",
+      "entityStatus": "unresolved",
+      "entityReason": "Developmental learning perspective could be technical family or conceptual view; design/programming share an agent object and task boundaries remain unclear.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Developmental learning perspective could be technical family or conceptual view; design/programming share an agent object and task boundaries remain unclear."
+    },
+    {
+      "sampleId": "sample-6cd8b64f22c318771f19",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "hybrid deep neural network",
+          "label": "METHOD"
+        },
+        {
+          "text": "single-cell genome-wide DNA methylation detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Hybrid neural architecture and specific biological detection target."
+    },
+    {
+      "sampleId": "sample-28beec40f30a5221ee50",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "FSAM",
+          "label": "METHOD"
+        },
+        {
+          "text": "SAM",
+          "label": "METHOD",
+          "occurrence": 2
+        },
+        {
+          "text": "Medical Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Model name and underlying SAM family explicit; SAM means the standalone second occurrence, not the suffix in FSAM."
+    },
+    {
+      "sampleId": "sample-0e0d837b8e406a9e8a78",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Brain-CDM",
+          "label": "METHOD"
+        },
+        {
+          "text": "Cascaded Diffusion Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Super-Resolution of Thick-Slice T2-FLAIR Brain MRI",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named cascaded diffusion mechanism and complete MRI super-resolution target; MRI is modality not data collection name."
+    },
+    {
+      "sampleId": "sample-cbcf3b91f7b510e71c5d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Closed Loop Control of a Compliant Quadruped",
+          "label": "TASK"
+        },
+        {
+          "text": "Spiking Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Control operation retains robot object; explicit SNN mechanism."
+    },
+    {
+      "sampleId": "sample-fea8bdb357ced0953abd",
+      "entityStatus": "unresolved",
+      "entityReason": "Distributed training architecture may be deployment software versus algorithm; cannot claim complete method inventory.",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Distributed training architecture may be deployment software versus algorithm; cannot claim complete method inventory."
+    },
+    {
+      "sampleId": "sample-731b94d69d11ca22b86e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Feature-based Distant Domain Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Full contiguous feature-based transfer-learning strategy; no separate application task stated."
+    },
+    {
+      "sampleId": "sample-64a8b6b4f8d4598fb221",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Convolutional Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "DGA Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit deep CNN family and DGA detection, abbreviation not externally expanded."
+    },
+    {
+      "sampleId": "sample-616c84f67f24a1d2c663",
+      "entityStatus": "unresolved",
+      "entityReason": "Star Based Reachability Analysis could be one composite method or task-plus-star mechanism; flat boundary uncertain.",
+      "entities": [
+        {
+          "text": "Interval Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Star Based Reachability Analysis could be one composite method or task-plus-star mechanism; flat boundary uncertain."
+    },
+    {
+      "sampleId": "sample-039c250adb640b18c4bf",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Prostate Cancer Segmentation",
+          "label": "TASK"
+        },
+        {
+          "text": "Depthwise Separable Convolutions",
+          "label": "METHOD"
+        },
+        {
+          "text": "Ordinal Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit depthwise method and classification operation; generic optimizing architectures is mechanism description."
+    },
+    {
+      "sampleId": "sample-cd39b93304a9ee13f23b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Detecting Hierarchical Inconsistencies from an Image Segmentation Series",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "One full detection operation and input target; no named model or dataset stated."
+    },
+    {
+      "sampleId": "sample-8f764ac90b2ef9945053",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Machine translation is downstream operation; continual training setting not separately a named algorithm."
+    },
+    {
+      "sampleId": "sample-e1f805d7438f7078dd6e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Chinese Poetry Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Planning based Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full composed planning mechanism, Chinese poetry target retained."
+    },
+    {
+      "sampleId": "sample-e8505360a42be7cd1ed4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "EmoGen",
+          "label": "METHOD"
+        },
+        {
+          "text": "Emotional Image Content Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Text-to-Image Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit named generator, full emotional-image task, conditioned diffusion family."
+    },
+    {
+      "sampleId": "sample-b15073fcb657ddefe7a4",
+      "entityStatus": "unresolved",
+      "entityReason": "Unsupervised Domain Adaptation in No-Reference IQA could be adaptation task or learning setting plus IQA; complete task inventory uncertain.",
+      "entities": [
+        {
+          "text": "STAPLE",
+          "label": "METHOD"
+        },
+        {
+          "text": "Siamese Transformer Assisted Pseudo Label Ensembling",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Unsupervised Domain Adaptation in No-Reference IQA could be adaptation task or learning setting plus IQA; complete task inventory uncertain."
+    },
+    {
+      "sampleId": "sample-ac79ddd25b3e44151b2f",
+      "entityStatus": "unresolved",
+      "entityReason": "Spatio-Temporal Knowledge Graphs may be data structure versus modeling method; not a named data collection.",
+      "entities": [
+        {
+          "text": "Wildfire Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Spatio-Temporal Knowledge Graphs may be data structure versus modeling method; not a named data collection."
+    },
+    {
+      "sampleId": "sample-614babc72939608cf999",
+      "entityStatus": "unresolved",
+      "entityReason": "Predict and Optimize share Hadoop-service object; cannot invent two complete continuous target-scoped spans.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Predict and Optimize share Hadoop-service object; cannot invent two complete continuous target-scoped spans."
+    },
+    {
+      "sampleId": "sample-07d61b132d4b7ffd1a62",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-Key Homomorphic Encryption Scheme",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "FL mechanism and identifiable encryption scheme; security/efficiency adjectives excluded, framework not separately algorithm."
+    },
+    {
+      "sampleId": "sample-3beaeca2f9cc8596dd69",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Routing Congestion Prediction in FPGA High-Level Synthesis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "FPGA synthesis context belongs to congestion target, not dataset identity."
+    },
+    {
+      "sampleId": "sample-c5bdad4515a06719f10b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "SLA-Aware Cloud Query Processing",
+          "label": "TASK"
+        },
+        {
+          "text": "Reinforcement Learning-Based Multi-objective Re-optimization",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full composed RL reoptimization method and SLA-aware cloud-query operation."
+    },
+    {
+      "sampleId": "sample-f5588a970df07e71b61f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Language diversity is experimental factor; fine-tuning setting not new task, language unspecified."
+    },
+    {
+      "sampleId": "sample-c5f1e65faf46aa98761f",
+      "entityStatus": "unresolved",
+      "entityReason": "Make Reasonable Scientific Analogies might include evaluative adjective within task boundary; complete operation inventory uncertain.",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Structure Abduction",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Make Reasonable Scientific Analogies might include evaluative adjective within task boundary; complete operation inventory uncertain."
+    },
+    {
+      "sampleId": "sample-d60d261d248e66a999e6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "musical key estimation",
+          "label": "TASK"
+        },
+        {
+          "text": "convolutional neural network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "End-to-end learning setting excluded, full musical-key estimation retained."
+    },
+    {
+      "sampleId": "sample-7675da2bc444cff1f985",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Agricultural Fields Segmentation on Satellite Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Satellite modality retained as task input, not named benchmark."
+    },
+    {
+      "sampleId": "sample-2c1a6540fdc1ef4642c2",
+      "entityStatus": "unresolved",
+      "entityReason": "ChEBI ontology could be named data resource but target sits inside task span; dataset role and nonoverlap inventory unresolved.",
+      "entities": [
+        {
+          "text": "Automatic Ontology Extension for the ChEBI Ontology",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "ChEBI ontology could be named data resource but target sits inside task span; dataset role and nonoverlap inventory unresolved."
+    },
+    {
+      "sampleId": "sample-610222ae1ef9e25af36b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LLM Agents",
+          "label": "METHOD"
+        },
+        {
+          "text": "Georelating",
+          "label": "TASK"
+        },
+        {
+          "text": "Locating Events",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicitly introduced task name and literal operational explanation; no outside expansion."
+    },
+    {
+      "sampleId": "sample-b0b512bbab093378bc27",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Spiking Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Temporal Pattern Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Small/robust are evaluation qualities, evolved training not separately named method."
+    },
+    {
+      "sampleId": "sample-04edb83e9ad26ccb5fb3",
+      "entityStatus": "unresolved",
+      "entityReason": "Clinical and Low-Dose share CBCT Reconstruction head; complete nonoverlap task scopes cannot be reconstructed.",
+      "entities": [
+        {
+          "text": "Dual-Domain Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Clinical and Low-Dose share CBCT Reconstruction head; complete nonoverlap task scopes cannot be reconstructed."
+    },
+    {
+      "sampleId": "sample-ce774f70935a0a38cd98",
+      "entityStatus": "unresolved",
+      "entityReason": "Fault-protection task overlaps explicit protected network object; bare Protecting loses target, full flat task inventory unresolved.",
+      "entities": [
+        {
+          "text": "RRAMedy",
+          "label": "METHOD"
+        },
+        {
+          "text": "ReRAM-Based Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Fault-protection task overlaps explicit protected network object; bare Protecting loses target, full flat task inventory unresolved."
+    },
+    {
+      "sampleId": "sample-fd932c02cf5c833d4b04",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Mask R-CNN-Based Deep Learning Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Retinex Image Enhancement Algorithm",
+          "label": "METHOD"
+        },
+        {
+          "text": "Detecting Rockfall and Potholes on Hill Roads",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Two fully stated methods and one continuous coordinated-object detection task with road context."
+    },
+    {
+      "sampleId": "sample-d98fe49bfefbc23ee1d1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hybrid Index Structure based on MBB Approximation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Explicit contiguous index/approximation mechanism; linked data unnamed input."
+    },
+    {
+      "sampleId": "sample-90534400ed5118698e67",
+      "entityStatus": "unresolved",
+      "entityReason": "Coordinating Filters could be method description or technical operation; Faster is performance quality, complete boundary unknown.",
+      "entities": [
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Coordinating Filters could be method description or technical operation; Faster is performance quality, complete boundary unknown."
+    },
+    {
+      "sampleId": "sample-d640ec6d0ca818b9f19b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pixel Difference Patterns",
+          "label": "METHOD"
+        },
+        {
+          "text": "ViT",
+          "label": "METHOD",
+          "occurrence": 1
+        },
+        {
+          "text": "PiDiViT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "ViT explicitly the standalone first occurrence, not inside PiDiViT; few-shot regime excluded."
+    },
+    {
+      "sampleId": "sample-2726dccffdf8812028d6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Playing Story Creation Games",
+          "label": "TASK"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "GPT-3.5",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit game-playing operation with story creation context; model version preserved."
+    },
+    {
+      "sampleId": "sample-a0acc55ea21e1ee35907",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Learnable Pixel Clustering",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit clustering mechanism; dual constraints unnamed design description, unsupervised setting excluded from base task."
+    },
+    {
+      "sampleId": "sample-64ab2ff2f27f738ef704",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Music Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Generating Music with Long-Term Structure",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named Transformer and full structural music-generation target."
+    },
+    {
+      "sampleId": "sample-35ea56fa3bfc722fd44b",
+      "entityStatus": "unresolved",
+      "entityReason": "Decoupling Dynamics and Reward could be algorithm description or technical task; full inventory uncertain.",
+      "entities": [
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Decoupling Dynamics and Reward could be algorithm description or technical task; full inventory uncertain."
+    },
+    {
+      "sampleId": "sample-5ae907f083b47215e2f4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Recurrent Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Long sequences is broad input description, not a concrete downstream operation."
+    },
+    {
+      "sampleId": "sample-0f6c103ace827bbba98b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Certifying L-infinity Robustness",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Networks with L-inf-dist Neurons",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full neuron-qualified network method and norm-specific certification target."
+    },
+    {
+      "sampleId": "sample-fd62d19e37e62e5a6d04",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Noise Prediction and Time-Domain Subtraction",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Neural Network Based Speech Enhancement",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Noise-prediction/subtraction explicitly one combined approach, enhancement explicitly composed neural mechanism."
+    },
+    {
+      "sampleId": "sample-e68a32d0321121aa3d4d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "breast cancer detection",
+          "label": "TASK"
+        },
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Wisconsin diagnostic dataset",
+          "label": "DATASET"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Dataset expressly named and diagnostic qualifier retained; not inferred from generic medical data."
+    },
+    {
+      "sampleId": "sample-01f2c580d80f42c5a215",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "OSP",
+          "label": "METHOD"
+        },
+        {
+          "text": "Overlapping Computation and Communication in Parameter Server",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Named computation/communication scheduling approach and continuous expansion; Fast quality excluded."
+    },
+    {
+      "sampleId": "sample-23da2651e5ca12116440",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Estimating Electric Vehicle Driving Range",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full vehicle range estimation operation."
+    },
+    {
+      "sampleId": "sample-5c3671eb051d9c5c613e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-agent Simulation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Partial floor field cutout is input representation, not named dataset or named algorithm."
+    },
+    {
+      "sampleId": "sample-e178dcc83c5a6579f554",
+      "entityStatus": "unresolved",
+      "entityReason": "MedDataset could be generated resource or generator method; Image and Segmentation Data share head, complete task/data inventory uncertain.",
+      "entities": [
+        {
+          "text": "Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "MedDataset could be generated resource or generator method; Image and Segmentation Data share head, complete task/data inventory uncertain."
+    },
+    {
+      "sampleId": "sample-6a0baf0ba6d3e4d20431",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Spiking Recurrent Neural Network with Phase Change Memory Synapses",
+          "label": "METHOD"
+        },
+        {
+          "text": "Decision Making",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Keep hardware-implemented composite network as explicit method, synapses not a separate dataset."
+    },
+    {
+      "sampleId": "sample-4abf5fba133090f9c08b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Feature Extraction of Neuronal Activity",
+          "label": "TASK"
+        },
+        {
+          "text": "Attractor Reconstruction",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Networks with Delayed Couplings",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Extraction operation and identifiable reconstruction/network mechanisms; neuronal activity unnamed data."
+    },
+    {
+      "sampleId": "sample-e49d2a80c6c819b74f77",
+      "entityStatus": "unresolved",
+      "entityReason": "Back Deduction Based Testing may be technique or testing task; full role/type inventory unclear.",
+      "entities": [
+        {
+          "text": "Word Sense Disambiguation",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Back Deduction Based Testing may be technique or testing task; full role/type inventory unclear."
+    },
+    {
+      "sampleId": "sample-f47dfac341d8e4a3be1e",
+      "entityStatus": "unresolved",
+      "entityReason": "Traditional preprocessing underspecified and FMCW radar application lacks concrete task; cannot certify complete inventory.",
+      "entities": [
+        {
+          "text": "Artificial Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Traditional preprocessing underspecified and FMCW radar application lacks concrete task; cannot certify complete inventory."
+    },
+    {
+      "sampleId": "sample-9ff7bca170e7429b6043",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LEOnto",
+          "label": "METHOD"
+        },
+        {
+          "text": "Ontology Enrichment",
+          "label": "TASK"
+        },
+        {
+          "text": "LDA",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit new approach name, enrichment task and LDA family; no acronym expansion invented."
+    },
+    {
+      "sampleId": "sample-c723db82b10aef27067a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "GaitForeMer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Human Motion Forecasting",
+          "label": "TASK"
+        },
+        {
+          "text": "Gait Impairment Severity Estimation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Pretraining uses forecasting but downstream severity task separate; few-shot setting excluded."
+    },
+    {
+      "sampleId": "sample-22b72c91c8483164a660",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Text Classification",
+          "label": "TASK"
+        },
+        {
+          "text": "LSTM Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Structural hyperparameter evaluation is study description, specific classifier family and operation explicit."
+    },
+    {
+      "sampleId": "sample-6d1745ac1f199115f284",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Voltage-based Machine Learning Algorithm",
+          "label": "METHOD"
+        },
+        {
+          "text": "Distribution of End-users Consumption Among the Phases",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Voltage-qualified mechanism and electrical-phase allocation target retained."
+    },
+    {
+      "sampleId": "sample-1f1ba668429695693f50",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Similarity-aware Contract Design",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-task Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Contract design describes explicit similarity-aware incentive mechanism, not a nested task."
+    },
+    {
+      "sampleId": "sample-1d11bbfc20a1f0bef1cb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Random Target Embeddings",
+          "label": "METHOD"
+        },
+        {
+          "text": "Continuous-Output Neural Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Identifiable embedding technique and output-specific translation task."
+    },
+    {
+      "sampleId": "sample-573dad75f4e1ba9f0f41",
+      "entityStatus": "unresolved",
+      "entityReason": "Machine Learning Multiverse may conceptual object rather than method family; Modeling is generic, not complete negative inventory.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Machine Learning Multiverse may conceptual object rather than method family; Modeling is generic, not complete negative inventory."
+    },
+    {
+      "sampleId": "sample-995ebc00fc9ff1274789",
+      "entityStatus": "unresolved",
+      "entityReason": "Align Agents task needs target text overlapping explicit RL-agent entity; nonoverlap task boundary uncertain.",
+      "entities": [
+        {
+          "text": "Concept Bottlenecks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reinforcement Learning Agents",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Align Agents task needs target text overlapping explicit RL-agent entity; nonoverlap task boundary uncertain."
+    },
+    {
+      "sampleId": "sample-823ed164d16f26cc3b40",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Diffusion Spectral Representation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Spectral diffusion mechanism not automatically image-generative diffusion; no named downstream task."
+    },
+    {
+      "sampleId": "sample-cee02e459871645b3382",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LiveClip",
+          "label": "METHOD"
+        },
+        {
+          "text": "mobile short-form video streaming",
+          "label": "TASK"
+        },
+        {
+          "text": "deep reinforcement learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named streaming approach, mobile/short-form context retained; intelligent quality excluded."
+    },
+    {
+      "sampleId": "sample-8ec3d159cee0a79a5ad8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Asthma Attack Predictions",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Network Architectures",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit neural architectural family and asthma prediction; EHR generic material not named collection."
+    },
+    {
+      "sampleId": "sample-a4e920d481f4aa2af8d0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hybrid Quantum-Classical Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "One full hybrid neural family; no concrete application task."
+    },
+    {
+      "sampleId": "sample-200a8e63a50d4b3a94b6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "HLNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hierarchical Deep Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Time Series Forecasting",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named model and hierarchical expansion; Novel evaluation adjective excluded."
+    },
+    {
+      "sampleId": "sample-f764a8f3c69cd1096f29",
+      "entityStatus": "unresolved",
+      "entityReason": "Full learning-acceleration task contains target network mention; bare acceleration loses scope, flat inventory uncertain.",
+      "entities": [
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Full learning-acceleration task contains target network mention; bare acceleration loses scope, flat inventory uncertain."
+    },
+    {
+      "sampleId": "sample-ce6b7879497cad19cee8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Network Architectures",
+          "label": "METHOD"
+        },
+        {
+          "text": "Arabic Dialect Identification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Architecture family and language-specific dialect operation."
+    },
+    {
+      "sampleId": "sample-9e729429c10353410bdd",
+      "entityStatus": "unresolved",
+      "entityReason": "Multilingual and Monolingual share Transformer-Based Models head; no synthetic expansion.",
+      "entities": [
+        {
+          "text": "Dialect Identification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [
+        {
+          "text": "Multilingual and Monolingual Transformer-Based Models",
+          "label": "METHOD"
+        }
+      ],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Multilingual and Monolingual share Transformer-Based Models head; no synthetic expansion."
+    },
+    {
+      "sampleId": "sample-a887cda22794da0591d0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning-Aided Delay-Tolerant Zero-Forcing Precoding",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "One explicitly composed zero-forcing mechanism; cell-free MIMO context not named data."
+    },
+    {
+      "sampleId": "sample-494dafd896b7fe0d12e3",
+      "entityStatus": "unresolved",
+      "entityReason": "Trajectory Design and Bandwidth Assignment share UAV network context; full contiguous task coverage ambiguous.",
+      "entities": [
+        {
+          "text": "Multi - Agent Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Trajectory Design and Bandwidth Assignment share UAV network context; full contiguous task coverage ambiguous."
+    },
+    {
+      "sampleId": "sample-5680bca5a891044c8c4d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Warehouse Selection in Supply Chain Simulation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Optimal quality excluded, full warehouse-selection simulation context retained."
+    },
+    {
+      "sampleId": "sample-12414d00ad300689cd5e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multivariate Time Series Classification",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explainable is model quality; attention clause describes unnamed mechanism, not separately named family."
+    },
+    {
+      "sampleId": "sample-89a4112dcdc11e8e1348",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Mining Knowledge Graphs From Text",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Concrete KG mining operation with textual input; not a named dataset."
+    },
+    {
+      "sampleId": "sample-9d95d776da3bd6d7e5d5",
+      "entityStatus": "unresolved",
+      "entityReason": "Supervise Machine Learning Performances target embeds ambiguous family boundary; Contextual-Based approaches underspecified.",
+      "entities": [
+        {
+          "text": "Sentiment Analysis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Supervise Machine Learning Performances target embeds ambiguous family boundary; Contextual-Based approaches underspecified."
+    },
+    {
+      "sampleId": "sample-8dc58aa664d36abed474",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Thermal Image Reconstruction",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Image modality preserved in reconstruction target."
+    },
+    {
+      "sampleId": "sample-129ebe0abfde5afa7659",
+      "entityStatus": "unresolved",
+      "entityReason": "Fused metaheuristics/security/optimization composite role and load-balancing model boundary unresolved.",
+      "entities": [
+        {
+          "text": "VMMISD",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Fused metaheuristics/security/optimization composite role and load-balancing model boundary unresolved."
+    },
+    {
+      "sampleId": "sample-429592ae7f0fab07b39d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Detecting Offensive and Hate Speech in South African Tweets",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "One continuous detection target keeps South-African tweet context; no named tweet dataset."
+    },
+    {
+      "sampleId": "sample-eebd26822e65a609beec",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Sketch-Guided Latent Diffusion Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Face Image Synthesis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full sketch-conditioned model; High-Fidelity is evaluation quality."
+    },
+    {
+      "sampleId": "sample-fa12adc0f0ade8fc2782",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pulses Classification",
+          "label": "TASK"
+        },
+        {
+          "text": "Sparse Auto-Encoders Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full sparse-autoencoder neural family with pulse classification target."
+    },
+    {
+      "sampleId": "sample-db50cd0f77b36d6c5987",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Generative AI Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image-Text Modification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Recognizable generative model family and multimodal editing operation."
+    },
+    {
+      "sampleId": "sample-62a2abae48102031dcc4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Tongue-LiteSAM",
+          "label": "METHOD"
+        },
+        {
+          "text": "Tongue Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named model/version and tongue-image segmentation; zero-shot regime excluded."
+    },
+    {
+      "sampleId": "sample-8f8f69720ecb72d4fa4b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "JFSP-ViT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Joint Frequency-Spatial Perception Vision Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Diabetic Retinopathy Grading",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full frequency-spatial transformer composition and disease grading."
+    },
+    {
+      "sampleId": "sample-1c8fbe26fc6b6b1b1ba9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Soil Nutrient Properties Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "ML model family and specific soil-property target; systematic review not separate operation."
+    },
+    {
+      "sampleId": "sample-6fa7f684fd611c94cb05",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Radiomics-based machine learning model",
+          "label": "METHOD"
+        },
+        {
+          "text": "classifying transcriptome subtypes in glioblastoma patients from MRI",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Composed radiomics ML model and full patient/modality classification target."
+    },
+    {
+      "sampleId": "sample-d486a12a167f1029ad79",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Spatial convolutional self-attention-based transformer module",
+          "label": "METHOD"
+        },
+        {
+          "text": "strawberry disease identification under complex background",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full spatial/self-attention mechanism, complex-background disease task retained."
+    },
+    {
+      "sampleId": "sample-5631bd62bf1675c3505d",
+      "entityStatus": "unresolved",
+      "entityReason": "Positioning system might computational positioning task or hardware artifact; full task inventory uncertain.",
+      "entities": [
+        {
+          "text": "UAV-based computer vision",
+          "label": "METHOD"
+        },
+        {
+          "text": "airboat navigation in paddy field",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Positioning system might computational positioning task or hardware artifact; full task inventory uncertain."
+    },
+    {
+      "sampleId": "sample-2af92bc9e0052a31398d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Entity Linking",
+          "label": "TASK"
+        },
+        {
+          "text": "Sentence Representation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit representation technique used for entity-linking operation."
+    },
+    {
+      "sampleId": "sample-329253c57e20179bec0d",
+      "entityStatus": "unresolved",
+      "entityReason": "Cooperative inference target includes explicit method name; bare inference loses target, overlap inventory uncertain.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Cooperative inference target includes explicit method name; bare inference loses target, overlap inventory uncertain."
+    },
+    {
+      "sampleId": "sample-46e15459d66c7f94deb3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LightNN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Binarized Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Named method and two compared families; Conventional evaluation modifier excluded."
+    },
+    {
+      "sampleId": "sample-6c41f833bf98a358db97",
+      "entityStatus": "unresolved",
+      "entityReason": "Ring Learning With Errors is cryptographic problem rather than ML training technique; problem-as-TASK boundary uncertain.",
+      "entities": [
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Ring Learning With Errors is cryptographic problem rather than ML training technique; problem-as-TASK boundary uncertain."
+    },
+    {
+      "sampleId": "sample-da4ebc329efd8f66ccd2",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Capsule-unified Framework of Deep Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graphical Programming",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit capsule/unified neural computation framework as one composite and graphical programming target."
+    },
+    {
+      "sampleId": "sample-8ab48662b4974d868b10",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Densely Connected Graph Convolutional Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph-to-Sequence Learning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Dense connectivity defines architecture; graph-to-sequence is stated mapping task."
+    },
+    {
+      "sampleId": "sample-d748fcebf25da649a582",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Decaying momentum",
+          "label": "METHOD"
+        },
+        {
+          "text": "neural network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Decay momentum is identifiable optimizer mechanism; training unspecified object not separately overlapping task."
+    },
+    {
+      "sampleId": "sample-543ab6d0c4ebeaf9189c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hyperbolic Neural Networks++",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Keep full named family/version including plus suffix."
+    },
+    {
+      "sampleId": "sample-da6e7439abdb1318ce5b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Control of Robotic Knee with Human in the Loop",
+          "label": "TASK"
+        },
+        {
+          "text": "Flexible Policy Iteration",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Two method families and full human-loop robotic-knee control task."
+    },
+    {
+      "sampleId": "sample-fc224f914bf0bb2175dc",
+      "entityStatus": "unresolved",
+      "entityReason": "Generating and Visualizing share model-summary object; embedded Machine Learning family overlap and application artifact status unclear.",
+      "entities": [
+        {
+          "text": "Melody",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Generating and Visualizing share model-summary object; embedded Machine Learning family overlap and application artifact status unclear."
+    },
+    {
+      "sampleId": "sample-5e1263c1f2126b54735a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Referring Image Segmentation",
+          "label": "TASK"
+        },
+        {
+          "text": "Cross-Modal Progressive Comprehension",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Cross-modal progressive mechanism explicitly introduced via; full referring segmentation target."
+    },
+    {
+      "sampleId": "sample-d935b5057b78660ea6b5",
+      "entityStatus": "unresolved",
+      "entityReason": "Full network repair task overlaps method mention; no synthetic bare repair target.",
+      "entities": [
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Full network repair task overlaps method mention; no synthetic bare repair target."
+    },
+    {
+      "sampleId": "sample-592a205a46d6c5cc72d8",
+      "entityStatus": "unresolved",
+      "entityReason": "Meta and metric integrated mechanism may use shared learning head; missing complete method boundary retained unresolved.",
+      "entities": [
+        {
+          "text": "MM-FSOD",
+          "label": "METHOD"
+        },
+        {
+          "text": "object detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Meta and metric integrated mechanism may use shared learning head; missing complete method boundary retained unresolved."
+    },
+    {
+      "sampleId": "sample-63febb59344118109d52",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "3D Fully Convolutional Neural Networks with Intersection Over Union Loss",
+          "label": "METHOD"
+        },
+        {
+          "text": "Crop Mapping from Multi-Temporal Satellite Images",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Whole network/loss composite, satellite temporal input scope retained."
+    },
+    {
+      "sampleId": "sample-328c28c5e5d2668c2989",
+      "entityStatus": "unresolved",
+      "entityReason": "Powers-of-two neural network quantization could be TASK or composed method; full flat method/task coverage uncertain.",
+      "entities": [
+        {
+          "text": "n-hot",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Powers-of-two neural network quantization could be TASK or composed method; full flat method/task coverage uncertain."
+    },
+    {
+      "sampleId": "sample-93140efc506791b764d0",
+      "entityStatus": "unresolved",
+      "entityReason": "Injection attack target is embedded method mention; full target-scoped task would overlap.",
+      "entities": [
+        {
+          "text": "TDGIA",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Injection attack target is embedded method mention; full target-scoped task would overlap."
+    },
+    {
+      "sampleId": "sample-e583e12a0aadd041f6ff",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Fine-Tuned Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Fine-tuning defines model training mechanism; representation clusters observation not a named operation."
+    },
+    {
+      "sampleId": "sample-aa16984062bbacb0ff01",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Deep Learning Framework",
+          "label": "METHOD"
+        },
+        {
+          "text": "High-Level Synthesis Design Space Exploration",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit graph/neural computation framework, full high-level synthesis search target."
+    },
+    {
+      "sampleId": "sample-66e8bc60272d82aab667",
+      "entityStatus": "unresolved",
+      "entityReason": "Canonical foliations may mathematical property or extraction method; robustness alone not scoped task.",
+      "entities": [
+        {
+          "text": "neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Canonical foliations may mathematical property or extraction method; robustness alone not scoped task."
+    },
+    {
+      "sampleId": "sample-b16c229f9311e5eafd97",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transfer learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Ensemble application and performance/diversity goals do not define additional concrete task."
+    },
+    {
+      "sampleId": "sample-e0e6c25c22303a028273",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Cross-Modal Causal Relational Reasoning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Event-Level Visual Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full causal relational reasoning mechanism and event-level VQA target."
+    },
+    {
+      "sampleId": "sample-f90b479e360326d91b9c",
+      "entityStatus": "unresolved",
+      "entityReason": "Poisoning-attacks scope includes learning target separated by modifier; attack target task boundaries incomplete.",
+      "entities": [
+        {
+          "text": "Episodic Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Poisoning-attacks scope includes learning target separated by modifier; attack target task boundaries incomplete."
+    },
+    {
+      "sampleId": "sample-9c5e27fc5978f968330c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Local_INN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Implicit Map Representation",
+          "label": "TASK"
+        },
+        {
+          "text": "Localization",
+          "label": "TASK"
+        },
+        {
+          "text": "Invertible Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e4",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Separate full map-representation and localization operations; named invertible architecture."
+    },
+    {
+      "sampleId": "sample-013d49d0ccb56840f5c9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Sim-to-Real Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Obstacle Avoidance for UAVs under Measurement Uncertainty",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Retain transfer training mechanism and UAV uncertainty task context."
+    },
+    {
+      "sampleId": "sample-df9673199a48149e1c51",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "AutoTransfer",
+          "label": "METHOD"
+        },
+        {
+          "text": "AutoML with Knowledge Transfer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Named AutoML knowledge-transfer composition and target model family; no concrete task beyond model application."
+    },
+    {
+      "sampleId": "sample-fe356a4ea26de12ca76e",
+      "entityStatus": "unresolved",
+      "entityReason": "Deep Learning- and Dictionary-based shares method head; pipeline software status also ambiguous.",
+      "entities": [
+        {
+          "text": "EasyNER",
+          "label": "METHOD"
+        },
+        {
+          "text": "Named Entity Recognition from Medical Text",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [
+        {
+          "text": "Deep Learning- and Dictionary-based",
+          "label": "METHOD"
+        }
+      ],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Deep Learning- and Dictionary-based shares method head; pipeline software status also ambiguous."
+    },
+    {
+      "sampleId": "sample-8dfeab21ee542af33ffc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DAM-Net",
+          "label": "METHOD"
+        },
+        {
+          "text": "Global Flood Detection from SAR Imagery",
+          "label": "TASK"
+        },
+        {
+          "text": "Differential Attention Metric-Based Vision Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full SAR flood target and differential-attention vision architecture."
+    },
+    {
+      "sampleId": "sample-f829606f8ad927cdd24c",
+      "entityStatus": "unresolved",
+      "entityReason": "FaST-GShare may GPU scheduling software or method; inference target overlaps family mention, complete inventory unresolved.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "FaST-GShare may GPU scheduling software or method; inference target overlaps family mention, complete inventory unresolved."
+    },
+    {
+      "sampleId": "sample-856f75701d79f4757f0a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "KoBigBird-large",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Korean Language Understanding",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named large version, Transformer family and Korean-specific understanding operation."
+    },
+    {
+      "sampleId": "sample-95e383c32bf95542601d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "VCoder",
+          "label": "METHOD"
+        },
+        {
+          "text": "Vision Encoders",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multimodal Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Encoder and target LLM family, versatile quality excluded; no concrete downstream task."
+    },
+    {
+      "sampleId": "sample-f06037fc8c94809097f3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Solving Subjective Tasks",
+          "label": "TASK"
+        },
+        {
+          "text": "Dialogue Simulation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit solving operation and simulation/LLM mechanisms; subjective tasks are stated target despite unspecified subtypes."
+    },
+    {
+      "sampleId": "sample-950fd539c8b7e9a3cf60",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Vision Transformers with Natural Language Semantics",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Full language-semantics augmented vision architecture as one composite."
+    },
+    {
+      "sampleId": "sample-c5372f9fd06ff2032da6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Semantic-Enhanced Representation Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Explicit semantic-enhanced learning mechanism; road networks temporal data context unnamed."
+    },
+    {
+      "sampleId": "sample-f543c09009561180f8d5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Audio-Visual Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Concrete modality-specific question-answering operation, rhetorical look/listen/answer and bias goal not named methods."
+    },
+    {
+      "sampleId": "sample-a7eea9a82f65848e4402",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Calibrated Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Binary Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Calibration defines model procedure; binary-answer task qualifier retained."
+    },
+    {
+      "sampleId": "sample-9c8bfe02666ca3004bfb",
+      "entityStatus": "unresolved",
+      "entityReason": "Clustering may property of model dynamics or separate algorithm/task; complete inventory uncertain.",
+      "entities": [
+        {
+          "text": "pure-attention hardmax transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "sentiment analysis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Clustering may property of model dynamics or separate algorithm/task; complete inventory uncertain."
+    },
+    {
+      "sampleId": "sample-d8c7e0ee6187b23f1bfe",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LaMoD",
+          "label": "METHOD"
+        },
+        {
+          "text": "Latent Motion Diffusion Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Myocardial Strain Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named latent-motion diffusion composition and myocardial strain generation target."
+    },
+    {
+      "sampleId": "sample-2cb99a62b214c8f43505",
+      "entityStatus": "unresolved",
+      "entityReason": "Arabic Music Classification and Generation share music object; cannot invent Arabic Music Generation continuous span.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Arabic Music Classification and Generation share music object; cannot invent Arabic Music Generation continuous span."
+    },
+    {
+      "sampleId": "sample-8f0a05fdc4a25b334677",
+      "entityStatus": "unresolved",
+      "entityReason": "SpiDR and compute-in-memory SNN Accelerator are hardware; embedded neural family versus hardware composite boundary unresolved.",
+      "entities": [
+        {
+          "text": "Event-based Perception",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "SpiDR and compute-in-memory SNN Accelerator are hardware; embedded neural family versus hardware composite boundary unresolved."
+    },
+    {
+      "sampleId": "sample-0512df30087c2572c5c2",
+      "entityStatus": "unresolved",
+      "entityReason": "Diffusion Model Personalization embeds a model-family mention in operation; overlapping full coverage unclear.",
+      "entities": [
+        {
+          "text": "LoRA Diffusion",
+          "label": "METHOD"
+        },
+        {
+          "text": "LoRA Synthesis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Diffusion Model Personalization embeds a model-family mention in operation; overlapping full coverage unclear."
+    },
+    {
+      "sampleId": "sample-6ade3468b82137285caa",
+      "entityStatus": "unresolved",
+      "entityReason": "Named game artifact and broad awareness objective lack clear computational task/method inventory; do not invent named algorithm.",
+      "entities": [
+        {
+          "text": "LLM",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Named game artifact and broad awareness objective lack clear computational task/method inventory; do not invent named algorithm."
+    },
+    {
+      "sampleId": "sample-f3eb3edb382c6d979ae5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LLM",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "NeurIPS competition is event, not dataset; fine-tuning efficiency setting not named application task."
+    },
+    {
+      "sampleId": "sample-e33526751a3b742f37cb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "InsectSet459",
+          "label": "DATASET"
+        },
+        {
+          "text": "bioacoustic machine learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit open insect-sound dataset name and modality-qualified ML family."
+    },
+    {
+      "sampleId": "sample-484a4aef857e7a6acb9a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Attractor learning for spatiotemporally chaotic dynamical systems",
+          "label": "TASK"
+        },
+        {
+          "text": "echo state networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "transfer learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Attractor estimation/learning target retains dynamical system object; two explicit network/transfer instruments."
+    },
+    {
+      "sampleId": "sample-264af90c8ec980992310",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Classification of Oils",
+          "label": "TASK"
+        },
+        {
+          "text": "Microwave Resonant Sensing",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Oils classification target; dielectric properties are features, sensing a stated technique."
+    },
+    {
+      "sampleId": "sample-7ea20abe1dd15cafbe77",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Test code generation at Ericsson",
+          "label": "TASK"
+        },
+        {
+          "text": "Program Analysis Augmented Fine Tuned LLMs",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full program-analysis/fine-tuning model composition, organization application context retained."
+    },
+    {
+      "sampleId": "sample-c4e71d96d1d385a1c778",
+      "entityStatus": "unresolved",
+      "entityReason": "Uncovering Intention may implicit code-intent task with separated target; complete inventory remains uncertain.",
+      "entities": [
+        {
+          "text": "LLM-Driven Code Snippet Description Generation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Uncovering Intention may implicit code-intent task with separated target; complete inventory remains uncertain."
+    },
+    {
+      "sampleId": "sample-f8dab84857239c1f9b9f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "SemCSE",
+          "label": "METHOD"
+        },
+        {
+          "text": "Semantic Contrastive Sentence Embeddings",
+          "label": "METHOD"
+        },
+        {
+          "text": "LLM",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Named contrastive embedding method; generated summaries and scientific abstracts are unnamed input material."
+    },
+    {
+      "sampleId": "sample-224bfb9b3810fd4cbbd1",
+      "entityStatus": "unresolved",
+      "entityReason": "Steering may identifiable technique or unspecified intervention/task; Safe is quality, full target span uncertain.",
+      "entities": [
+        {
+          "text": "Multimodal Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Steering may identifiable technique or unspecified intervention/task; Safe is quality, full target span uncertain."
+    },
+    {
+      "sampleId": "sample-554c99563d1f8055cea0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Agent Negotiation for Medical Supply Chains",
+          "label": "TASK"
+        },
+        {
+          "text": "LLMs",
+          "label": "METHOD"
+        },
+        {
+          "text": "Blockchain",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full medical-supply negotiation target with explicit language-model/blockchain instruments; resilience/transparent quality excluded."
+    },
+    {
+      "sampleId": "sample-f19198925817d7136338",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "KASportsFormer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Kinematic Anatomy Enhanced Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "3D Human Pose Estimation on Short Sports Scene Video",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full anatomy-enhanced Transformer and sports-video pose estimation target."
+    },
+    {
+      "sampleId": "sample-58756615eb806e27716d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ALLabel",
+          "label": "METHOD"
+        },
+        {
+          "text": "Three-stage Active Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "LLM-based Entity Recognition",
+          "label": "METHOD"
+        },
+        {
+          "text": "Demonstration Retrieval",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Three-stage training mechanism, explicitly composed LLM recognizer and separate demonstration retrieval task."
+    },
+    {
+      "sampleId": "sample-08cedd002181c527dda6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "A2FM",
+          "label": "METHOD"
+        },
+        {
+          "text": "Adaptive Agent Foundation Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Tool-Aware Hybrid Reasoning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named agent model and tool-aware reasoning operation."
+    },
+    {
+      "sampleId": "sample-fdf2f88f5360faf2002a",
+      "entityStatus": "unresolved",
+      "entityReason": "Honesty Alignment target scope includes language-model object separated by context; complete task/method overlap inventory unresolved.",
+      "entities": [
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deductive Reasoning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Honesty Alignment target scope includes language-model object separated by context; complete task/method overlap inventory unresolved."
+    },
+    {
+      "sampleId": "sample-fe9d57bbc75ef7178a5f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Plasticine",
+          "label": "METHOD"
+        },
+        {
+          "text": "Diffusion Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Medical Image Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named diffusion method and full medical-image translation; Traceable is provenance quality."
+    },
+    {
+      "sampleId": "sample-7479caa3ad6b8bb486d6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Signal Processing",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Broad editorial still names ML family and a concrete processing operation; advanced quality excluded."
+    },
+    {
+      "sampleId": "sample-347405f048dbac19c947",
+      "entityStatus": "unresolved",
+      "entityReason": "Open-set recognition method for ship noise has intervening generic method word; full TASK continuous boundary versus composite ambiguity unresolved.",
+      "entities": [
+        {
+          "text": "graph convolutional neural network prototype learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Open-set recognition method for ship noise has intervening generic method word; full TASK continuous boundary versus composite ambiguity unresolved."
+    },
+    {
+      "sampleId": "sample-ed20a43edb826119a7a3",
+      "entityStatus": "unresolved",
+      "entityReason": "Tracking method for motion spatter separates operation and welding object with generic method text; task-versus-composite full span uncertain.",
+      "entities": [
+        {
+          "text": "deep learning model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Tracking method for motion spatter separates operation and welding object with generic method text; task-versus-composite full span uncertain."
+    },
+    {
+      "sampleId": "sample-c56cd363f80aaede5d02",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Nuclear quadrupole resonance response detection",
+          "label": "TASK"
+        },
+        {
+          "text": "deep neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Complete resonance-response detection target, identifiable neural family."
+    },
+    {
+      "sampleId": "sample-7d893f9c1903ab292875",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Analyzing syntactic constructs of Java programs",
+          "label": "TASK"
+        },
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Specific syntactic analysis object makes this operation more than generic Analysis alone."
+    },
+    {
+      "sampleId": "sample-9dc390291a7e19c6a464",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Detecting hidden errors in an ontology",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Full ontology error-detection operation; contextual knowledge unnamed information, not method/dataset."
+    },
+    {
+      "sampleId": "sample-c772f90b076680de1094",
+      "entityStatus": "unresolved",
+      "entityReason": "Routing scheme may complete unnamed algorithm versus task; generic scheme interrupts fully scoped routing operation.",
+      "entities": [
+        {
+          "text": "blockchain",
+          "label": "METHOD"
+        },
+        {
+          "text": "meta-heuristics-based deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Routing scheme may complete unnamed algorithm versus task; generic scheme interrupts fully scoped routing operation."
+    },
+    {
+      "sampleId": "sample-76579cd1a6a7538b2539",
+      "entityStatus": "unresolved",
+      "entityReason": "Deep Learning and Handcrafted Based shares method head and unspecified handcrafted technique, not one supported method.",
+      "entities": [
+        {
+          "text": "COVID-19 Detection from X-ray/CT-scan Imaging",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [
+        {
+          "text": "Deep Learning and Handcrafted Based",
+          "label": "METHOD"
+        }
+      ],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Deep Learning and Handcrafted Based shares method head and unspecified handcrafted technique, not one supported method."
+    },
+    {
+      "sampleId": "sample-99f9273e503f8f69aa44",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Control Diabetes",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Calorie Measurement",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Concrete diabetes control and calorie-measurement operations; generic Technique does not convert measurement into named method."
+    },
+    {
+      "sampleId": "sample-0835c3106b2ddc0ab234",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Resource-Aware Personalized Federated Learning Based on Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "One contiguous explicitly composed RL-driven personalized FL mechanism, no nested duplicate entities."
+    },
+    {
+      "sampleId": "sample-71a1255a80ddfdb8ed5a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Medical image segmentation",
+          "label": "TASK"
+        },
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full medical-image target, survey label not an additional task."
+    },
+    {
+      "sampleId": "sample-c7a590064d025e161978",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MAM",
+          "label": "METHOD"
+        },
+        {
+          "text": "multipath attention mechanism",
+          "label": "METHOD"
+        },
+        {
+          "text": "image recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named approach and multipath attention expansion; explicit recognition target."
+    },
+    {
+      "sampleId": "sample-c09d6196d5b489c1510d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Time-continuous energy-conservation neural network",
+          "label": "METHOD"
+        },
+        {
+          "text": "structural dynamics analysis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full physical-constraint neural architecture and specific dynamics operation."
+    },
+    {
+      "sampleId": "sample-6c56d986a19cb8ae6082",
+      "entityStatus": "unresolved",
+      "entityReason": "Computer-vision-based wearable devices are hardware artifact; embedded method versus composed device boundary uncertain.",
+      "entities": [
+        {
+          "text": "Head-gestures mirroring detection in dyadic social interactions",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Computer-vision-based wearable devices are hardware artifact; embedded method versus composed device boundary uncertain."
+    },
+    {
+      "sampleId": "sample-b9a96d9cd3adc6f2a41f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Image Segmentation",
+          "label": "TASK"
+        },
+        {
+          "text": "Two-Dimensional Entropy",
+          "label": "METHOD"
+        },
+        {
+          "text": "Chaotic Lightning Attachment Procedure Optimization Algorithm",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Two named computational techniques are fully explicit; no shared-head member invented."
+    },
+    {
+      "sampleId": "sample-43cca1f306123b4bf1ed",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Model-based recurrent neural network",
+          "label": "METHOD"
+        },
+        {
+          "text": "redundancy resolution of manipulator with remote centre of motion constraints",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Composite recurrent network and complete constrained-manipulator redundancy task."
+    },
+    {
+      "sampleId": "sample-2868970291121eea3714",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Binarized neural network with depth imaging techniques",
+          "label": "METHOD"
+        },
+        {
+          "text": "stock return direction prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit depth-imaging augmented binarized mechanism as one continuous composite."
+    },
+    {
+      "sampleId": "sample-a5a7716ceebb35afad06",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Knowledge Graph Construction",
+          "label": "TASK"
+        },
+        {
+          "text": "Recommendations for English Course Learning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "KG construction and English-course recommendations are operations; no relation inferred from conjunction."
+    },
+    {
+      "sampleId": "sample-b8de1e6395313695350c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Coronary Heart Disease Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Ensemble Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Disease-specific prediction; reliable quality excluded, multisource data unnamed."
+    },
+    {
+      "sampleId": "sample-dcf98146ce9fe70a4a8a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "CTNRL",
+          "label": "METHOD"
+        },
+        {
+          "text": "Network Representation Learning With Three Feature Integrations",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Named full feature-integration representation-learning mechanism; Novel quality excluded."
+    },
+    {
+      "sampleId": "sample-e33fe629ada448612a11",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hard task-based dual-aligned meta-transfer learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "fault diagnosis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Keep hard-task/dual-alignment training composition; cross-domain/few-shot regime excluded from base diagnosis task."
+    },
+    {
+      "sampleId": "sample-14d11b5136e0647739a4",
+      "entityStatus": "unresolved",
+      "entityReason": "Monitoring and diagnosing share mean-shift object; noncontiguous complete monitoring task cannot be reconstructed.",
+      "entities": [
+        {
+          "text": "two-level selective ensemble of learning vector quantization neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Monitoring and diagnosing share mean-shift object; noncontiguous complete monitoring task cannot be reconstructed."
+    },
+    {
+      "sampleId": "sample-ed9847407f089af42df7",
+      "entityStatus": "unresolved",
+      "entityReason": "Landscape Garden Plan Analysis and Rendering share plan object; full separate task boundaries uncertain.",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Landscape Garden Plan Analysis and Rendering share plan object; full separate task boundaries uncertain."
+    },
+    {
+      "sampleId": "sample-126ba2a650f7bece5dd1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "GPL-GNN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph prompt learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "graph neural network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Named graph prompt-learning approach and target neural family; no separate concrete downstream operation."
+    },
+    {
+      "sampleId": "sample-21237ec0a6700f7c3cad",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DiffLense",
+          "label": "METHOD"
+        },
+        {
+          "text": "conditional diffusion model",
+          "label": "METHOD"
+        },
+        {
+          "text": "super-resolution of gravitational lensing data",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Named conditioned diffusion and complete gravitational-data restoration task, unnamed data not DATASET."
+    },
+    {
+      "sampleId": "sample-2eb9d9bb138cf292067c",
+      "entityStatus": "unresolved",
+      "entityReason": "Age and gender classification shares classification head; retain unresolved. Retraction Note is source warning, not evidence of valid scientific claims.",
+      "entities": [
+        {
+          "text": "Seg-Net based architecture",
+          "label": "METHOD"
+        },
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Age and gender classification shares classification head; retain unresolved. Retraction Note is source warning, not evidence of valid scientific claims."
+    },
+    {
+      "sampleId": "sample-f7728adb92716ec89eff",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated learning with deep convolutional neural networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "detection of multiple chest diseases using chest x-rays",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full federated/CNN composite and chest-x-ray disease target."
+    },
+    {
+      "sampleId": "sample-785581611c011aa2610d",
+      "entityStatus": "unresolved",
+      "entityReason": "Sequential data analysis and outlier prediction share data object; complete contextual task coverage ambiguous.",
+      "entities": [
+        {
+          "text": "hybrid seagull optimized neural network",
+          "label": "METHOD"
+        },
+        {
+          "text": "extreme value analysis",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Sequential data analysis and outlier prediction share data object; complete contextual task coverage ambiguous."
+    },
+    {
+      "sampleId": "sample-541fdbda997591b5240c",
+      "entityStatus": "unresolved",
+      "entityReason": "Disease Ontology 2015 is explicitly database resource but ontology-versus-dataset category under current named collection contract remains uncertain; do not force rare-class coverage.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Disease Ontology 2015 is explicitly database resource but ontology-versus-dataset category under current named collection contract remains uncertain; do not force rare-class coverage."
+    },
+    {
+      "sampleId": "sample-0892023dc814c337d559",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "plant identification using herbarium specimens",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Specific specimen-based plant identification retained; cross-domain training regime excluded."
+    },
+    {
+      "sampleId": "sample-911ba3e70374acc310a4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Dynamic Spatiotemporal Pattern Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Recurrent Spiking Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Dynamics is target temporal qualifier, recurrent/spiking mechanism fully retained."
+    },
+    {
+      "sampleId": "sample-e4ed51bced9c3f8ba1e8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "predicts diabetic retinopathy progression in individual patients",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Literal prediction verb and patient-specific progression target kept."
+    },
+    {
+      "sampleId": "sample-36672a515e6dab783c9b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Electrical Load Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Prediction is computational task; System design is artifact wording, no new model named."
+    },
+    {
+      "sampleId": "sample-0949f6b83a77709894b5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep-Learning Model with Task-Specific Bounding Box Regressors and Conditional Back-Propagation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Moving Object Detection in ADAS Applications",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full regressor/backprop composite and moving-object ADAS task."
+    },
+    {
+      "sampleId": "sample-f063594678c3254f7367",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Family explicitly present; generic Systems and Intelligent Applications not concrete tasks or named datasets."
+    },
+    {
+      "sampleId": "sample-58f34d3b4f7f9f47fffb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Computer architecture broad application field, not scoped prediction operation; guide not algorithm."
+    },
+    {
+      "sampleId": "sample-5855919e63aa7ff11c41",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Machine Translation With Explicit Phrase Alignment",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Explicit phrase-aligned translation mechanism is one composite, no overlapping embedded translation TASK."
+    },
+    {
+      "sampleId": "sample-33a80c06e11ba5a2fb4e",
+      "entityStatus": "unresolved",
+      "entityReason": "Full attack operation includes overlapping attacked GNN target; partial task would omit object.",
+      "entities": [
+        {
+          "text": "Nesterov Accelerated Gradient",
+          "label": "METHOD"
+        },
+        {
+          "text": "Rewiring",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Full attack operation includes overlapping attacked GNN target; partial task would omit object."
+    },
+    {
+      "sampleId": "sample-6c0516cc4988adc77fa1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Wireless resource constraints are deployment context, not named method or concrete task."
+    },
+    {
+      "sampleId": "sample-d7d46c1d899d87b68c31",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Video-Language Foundation Models With Domain-Specific Fine-Grained Heuristics",
+          "label": "METHOD"
+        },
+        {
+          "text": "Video Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full heuristic-augmented foundation-model composition; prompting not separately target-overlapping task."
+    },
+    {
+      "sampleId": "sample-fe16799aad07c9fd8660",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "First-Break Picking",
+          "label": "TASK"
+        },
+        {
+          "text": "Hybrid Convolutional Neural Network and Recurrent Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Explicit Hybrid phrase describes one CNN/RNN combination with both full names, no shared-head synthetic group."
+    },
+    {
+      "sampleId": "sample-8eeab425ef201f6d6ae9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multispectral-Hyperspectral Image Fusion",
+          "label": "TASK"
+        },
+        {
+          "text": "Similarity-Guided Graph Attention",
+          "label": "METHOD"
+        },
+        {
+          "text": "VAE-Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Two full instrument names, complete multi/hyperspectral fusion operation."
+    },
+    {
+      "sampleId": "sample-9105f7e21237ef7ae427",
+      "entityStatus": "unresolved",
+      "entityReason": "Lightweightability measurement and unspecified design framework target overlap neural-method mention; complete task inventory unclear.",
+      "entities": [
+        {
+          "text": "On-Orbit Image Interpretation Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Lightweightability measurement and unspecified design framework target overlap neural-method mention; complete task inventory unclear."
+    },
+    {
+      "sampleId": "sample-9ea078cf8c188e8bded6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reconstructing Regularly Missing Seismic Traces",
+          "label": "TASK"
+        },
+        {
+          "text": "Classifier-Guided Diffusion Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Retain missingness/seismic object and full classifier guidance mechanism."
+    },
+    {
+      "sampleId": "sample-e555241019c7a6cbe9a3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Localization of Partial Discharge in Electrical Transformer",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Electrical Transformer equipment not AI model; refraction/diffraction describe physical phenomena rather than named computation."
+    },
+    {
+      "sampleId": "sample-ca56fc517e2fb2db13c0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Both computational families explicit in survey; no named downstream task or dataset."
+    },
+    {
+      "sampleId": "sample-dcf90731e24d5a6733fb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Supertwisting Zeroing Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [],
+      "notes": "Full supertwisting architecture; mobile manipulators application objects not operation names."
+    },
+    {
+      "sampleId": "sample-c4e35dad9cc185a4f31b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Semantic Representation Learning Based on Causal Disentanglement",
+          "label": "METHOD"
+        },
+        {
+          "text": "Domain Generalization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Full causal-disentanglement learning mechanism and explicit generalization technical task; unbiased quality excluded."
+    },
+    {
+      "sampleId": "sample-29c7516fd199d4415c4d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Region-assisted line drawing colorization",
+          "label": "TASK"
+        },
+        {
+          "text": "diffusion model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Region-assisted colorization is target-specific operation, diffusion method explicit."
+    },
+    {
+      "sampleId": "sample-05c814356c248f4482ec",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Bio-Cyber Interface Parameter Estimation",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Relation extraction not performed in this explicitly NER-only pass; no complete relation labels or negatives inferred."
+        }
+      ],
+      "notes": "Complete interface parameter target; Internet of Bio-Nano Things is application domain, not dataset."
+    }
+  ]
+}

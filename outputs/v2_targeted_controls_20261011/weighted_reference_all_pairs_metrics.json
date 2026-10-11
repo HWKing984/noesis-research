@@ -1,0 +1,50 @@
+{
+  "scope": "adjudicated_reference_scope_only",
+  "referenceComplete": false,
+  "fullPipelineF1": null,
+  "conditionalPositiveMetrics": {
+    "TP": 309,
+    "FP": 46,
+    "FN": 4,
+    "precision": 0.8704225352112676,
+    "recall": 0.987220447284345,
+    "f1": 0.9251497005988024
+  },
+  "perClassConditionalMetrics": {
+    "EVALUATED_ON": {
+      "TP": 52,
+      "FP": 15,
+      "FN": 0,
+      "precision": 0.7761194029850746,
+      "recall": 1.0,
+      "f1": 0.8739495798319328
+    },
+    "USED_FOR": {
+      "TP": 257,
+      "FP": 31,
+      "FN": 4,
+      "precision": 0.8923611111111112,
+      "recall": 0.9846743295019157,
+      "f1": 0.936247723132969
+    }
+  },
+  "positiveReferenceTriples": 313,
+  "referencePairs": 974,
+  "maskedReferencePairs": 613,
+  "referencePairCoverage": 0.37063655030800824,
+  "maskedPredictionCount": 488,
+  "allPositivePredictionCount": 843,
+  "duplicatePredictionCount": 0,
+  "maskedReferencePairsByPossibleClass": {
+    "USED_FOR": 550,
+    "EVALUATED_ON": 63
+  },
+  "fullUniverseBounds": {
+    "precisionLower": 0.3665480427046263,
+    "precisionUpper": 0.9454329774614472,
+    "recallConservativeLower": 0.33369330453563717,
+    "recallUpper": 0.9950062421972534,
+    "note": "Conservative bounds within the fixed annotated entity-pair universe, relative to AI entity references; not independent semantic accuracy."
+  },
+  "warning": "Do not call conditional F1 complete end-to-end F1 while masked references remain."
+}

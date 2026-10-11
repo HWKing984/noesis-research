@@ -1,0 +1,432 @@
+{
+  "scope": "fixed_title_dev_ai_reference_not_final_test",
+  "ner": {
+    "old": {
+      "micro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 275,
+        "predicted": 373,
+        "reference": 359,
+        "precision": 0.7372654155495979,
+        "recall": 0.766016713091922,
+        "f1": 0.7513661202185792
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 169,
+          "predicted": 220,
+          "reference": 208,
+          "precision": 0.7681818181818182,
+          "recall": 0.8125,
+          "f1": 0.7897196261682243
+        },
+        "TASK": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 104,
+          "predicted": 150,
+          "reference": 148,
+          "precision": 0.6933333333333334,
+          "recall": 0.7027027027027027,
+          "f1": 0.697986577181208
+        },
+        "DATASET": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 2,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666
+        }
+      }
+    },
+    "new": {
+      "micro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 277,
+        "predicted": 348,
+        "reference": 359,
+        "precision": 0.7959770114942529,
+        "recall": 0.7715877437325905,
+        "f1": 0.7835926449787836
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 172,
+          "predicted": 206,
+          "reference": 208,
+          "precision": 0.8349514563106796,
+          "recall": 0.8269230769230769,
+          "f1": 0.8309178743961353
+        },
+        "TASK": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 104,
+          "predicted": 139,
+          "reference": 148,
+          "precision": 0.7482014388489209,
+          "recall": 0.7027027027027027,
+          "f1": 0.7247386759581882
+        },
+        "DATASET": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 1,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f1": 0.3333333333333333
+        }
+      }
+    }
+  },
+  "module": {
+    "old": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "entityScope": "reviewed_reference_entities",
+      "accuracy": 0.9814814814814815,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 156,
+        "predicted": 158,
+        "reference": 157,
+        "precision": 0.9873417721518988,
+        "recall": 0.9936305732484076,
+        "f1": 0.9904761904761905
+      },
+      "positiveMacroF1": 0.8301282051282051,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 155,
+          "predicted": 157,
+          "reference": 155,
+          "precision": 0.9872611464968153,
+          "recall": 1.0,
+          "f1": 0.9935897435897436
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 1,
+          "predicted": 1,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "NO_RELATION": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 3,
+          "predicted": 4,
+          "reference": 5,
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.6666666666666666
+        }
+      },
+      "confusionLabels": [
+        "USED_FOR",
+        "EVALUATED_ON",
+        "NO_RELATION"
+      ],
+      "confusionMatrix": [
+        [
+          155,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "confusionAxes": "rows_reference_columns_prediction"
+    },
+    "new": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "entityScope": "reviewed_reference_entities",
+      "accuracy": 0.9876543209876543,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 157,
+        "predicted": 159,
+        "reference": 157,
+        "precision": 0.9874213836477987,
+        "recall": 1.0,
+        "f1": 0.9936708860759493
+      },
+      "positiveMacroF1": 0.9967948717948718,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 155,
+          "predicted": 157,
+          "reference": 155,
+          "precision": 0.9872611464968153,
+          "recall": 1.0,
+          "f1": 0.9935897435897436
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 2,
+          "predicted": 2,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NO_RELATION": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 3,
+          "predicted": 3,
+          "reference": 5,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75
+        }
+      },
+      "confusionLabels": [
+        "USED_FOR",
+        "EVALUATED_ON",
+        "NO_RELATION"
+      ],
+      "confusionMatrix": [
+        [
+          155,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "confusionAxes": "rows_reference_columns_prediction"
+    }
+  },
+  "pipeline": {
+    "old_ner_old_re": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 158,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 112,
+        "predicted": 180,
+        "reference": 157,
+        "precision": 0.6222222222222222,
+        "recall": 0.7133757961783439,
+        "f1": 0.6646884272997032
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 111,
+          "predicted": 179,
+          "reference": 155,
+          "precision": 0.6201117318435754,
+          "recall": 0.7161290322580646,
+          "f1": 0.6646706586826348
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 1,
+          "predicted": 1,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      },
+      "positiveMacroF1": 0.6656686626746506,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "negativeDecisions": 6,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    },
+    "new_ner_old_re": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 158,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 109,
+        "predicted": 151,
+        "reference": 157,
+        "precision": 0.7218543046357616,
+        "recall": 0.6942675159235668,
+        "f1": 0.7077922077922078
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 109,
+          "predicted": 150,
+          "reference": 155,
+          "precision": 0.7266666666666667,
+          "recall": 0.7032258064516129,
+          "f1": 0.7147540983606557
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 1,
+          "reference": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "positiveMacroF1": 0.35737704918032787,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "negativeDecisions": 8,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    },
+    "old_ner_new_re": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 158,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 112,
+        "predicted": 183,
+        "reference": 157,
+        "precision": 0.6120218579234973,
+        "recall": 0.7133757961783439,
+        "f1": 0.6588235294117647
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 111,
+          "predicted": 180,
+          "reference": 155,
+          "precision": 0.6166666666666667,
+          "recall": 0.7161290322580646,
+          "f1": 0.6626865671641791
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 1,
+          "predicted": 3,
+          "reference": 2,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4
+        }
+      },
+      "positiveMacroF1": 0.5313432835820895,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "negativeDecisions": 3,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    },
+    "new_ner_new_re": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "entityScope": "cached_frozen_NER_predicted_entities",
+      "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+      "documents": 158,
+      "positiveMicro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 109,
+        "predicted": 154,
+        "reference": 157,
+        "precision": 0.7077922077922078,
+        "recall": 0.6942675159235668,
+        "f1": 0.7009646302250804
+      },
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 109,
+          "predicted": 153,
+          "reference": 155,
+          "precision": 0.7124183006535948,
+          "recall": 0.7032258064516129,
+          "f1": 0.7077922077922078
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 0,
+          "predicted": 1,
+          "reference": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "positiveMacroF1": 0.3538961038961039,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "negativeDecisions": 5,
+      "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+    }
+  },
+  "coverage": {
+    "queue": 200,
+    "NER": 167,
+    "completeRelationDocuments": 158,
+    "referencePairs": 162,
+    "zeroReferencePairDocuments": 45
+  },
+  "hybridCombinationsDiagnosticOnly": true,
+  "testEvaluated": false,
+  "humanGold": false,
+  "decision": {
+    "checks": {
+      "NEROverallImproved": true,
+      "METHODAndTASKNotWorse": true,
+      "PipelineF1GainAtLeastTwoPoints": true,
+      "PipelineFalsePositivesNotIncreased": true,
+      "PipelineUSED_FORNotWorse": true,
+      "ModuleNegativeRecallNotWorse": true,
+      "NERDATASETTruePositivesNotLost": false,
+      "ModuleEVALUATED_ONTruePositivesNotLost": true,
+      "PipelineEVALUATED_ONTruePositivesNotLost": false
+    },
+    "failed": [
+      "NERDATASETTruePositivesNotLost",
+      "PipelineEVALUATED_ONTruePositivesNotLost"
+    ],
+    "candidateAccepted": false,
+    "productionReplacementAllowed": false,
+    "optimizationStopped": true,
+    "statisticalSignificanceEstablished": false,
+    "notice": "Single seeded dev experiment against AI references; no new final test or stable rare-class claim."
+  },
+  "protectedFilesUnchanged": true
+}

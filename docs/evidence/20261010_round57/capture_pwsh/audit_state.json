@@ -1,0 +1,1208 @@
+{
+  "training": {
+    "pairs": 408,
+    "epochs": 6,
+    "steps": 612,
+    "bestCheckpoint": "checkpoint_epoch_06",
+    "checkpointSha256": "1cdcdf5580a8ab8d03b2c6173ff853e6a1962fc947851518673530f3e166f687"
+  },
+  "comparison": {
+    "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+    "fixedNER": "frozen52_not_production",
+    "baselineRE": "frozen46_not_production",
+    "candidateRE": "new57",
+    "NER": {
+      "metrics": {
+        "micro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 138,
+          "predicted": 196,
+          "reference": 184,
+          "precision": 0.7040816326530612,
+          "recall": 0.75,
+          "f1": 0.7263157894736842
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 98,
+            "predicted": 120,
+            "reference": 116,
+            "precision": 0.8166666666666667,
+            "recall": 0.8448275862068966,
+            "f1": 0.8305084745762712
+          },
+          "TASK": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 28,
+            "predicted": 60,
+            "reference": 53,
+            "precision": 0.4666666666666667,
+            "recall": 0.5283018867924528,
+            "f1": 0.49557522123893805
+          },
+          "DATASET": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 12,
+            "predicted": 16,
+            "reference": 15,
+            "precision": 0.75,
+            "recall": 0.8,
+            "f1": 0.7741935483870968
+          }
+        }
+      },
+      "invalidTransitions": 56,
+      "inferenceFeaturesContainLabels": false
+    },
+    "module": {
+      "old": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.9009009009009009,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 267,
+          "predicted": 300,
+          "reference": 267,
+          "precision": 0.89,
+          "recall": 1.0,
+          "f1": 0.9417989417989417
+        },
+        "positiveMacroF1": 0.97005444646098,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 259,
+            "predicted": 292,
+            "reference": 259,
+            "precision": 0.886986301369863,
+            "recall": 1.0,
+            "f1": 0.9401088929219601
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 33,
+            "predicted": 33,
+            "reference": 66,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            259,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            33,
+            0,
+            33
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      },
+      "new": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.9009009009009009,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 267,
+          "predicted": 300,
+          "reference": 267,
+          "precision": 0.89,
+          "recall": 1.0,
+          "f1": 0.9417989417989417
+        },
+        "positiveMacroF1": 0.97005444646098,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 259,
+            "predicted": 292,
+            "reference": 259,
+            "precision": 0.886986301369863,
+            "recall": 1.0,
+            "f1": 0.9401088929219601
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 33,
+            "predicted": 33,
+            "reference": 66,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            259,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            33,
+            0,
+            33
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "pipeline": {
+      "old": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "entityScope": "fixed52_predicted_NER_entities",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 7,
+        "positiveMicro": {
+          "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+          "truePositive": 59,
+          "predicted": 178,
+          "reference": 84,
+          "precision": 0.33146067415730335,
+          "recall": 0.7023809523809523,
+          "f1": 0.45038167938931295
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+            "truePositive": 59,
+            "predicted": 170,
+            "reference": 84,
+            "precision": 0.34705882352941175,
+            "recall": 0.7023809523809523,
+            "f1": 0.4645669291338583
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+            "truePositive": 0,
+            "predicted": 8,
+            "reference": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0
+          }
+        },
+        "positiveMacroF1": 0.4645669291338583,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "negativeDecisions": 5,
+        "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed.",
+        "endpointMismatch": {
+          "tail": 89,
+          "head": 12,
+          "head+tail": 7,
+          "relation_only": 11
+        },
+        "missedReferencePrimaryCauses": {
+          "missing": 10,
+          "boundary": 15
+        }
+      },
+      "new": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "entityScope": "fixed52_predicted_NER_entities",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 7,
+        "positiveMicro": {
+          "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+          "truePositive": 59,
+          "predicted": 176,
+          "reference": 84,
+          "precision": 0.3352272727272727,
+          "recall": 0.7023809523809523,
+          "f1": 0.45384615384615384
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+            "truePositive": 59,
+            "predicted": 168,
+            "reference": 84,
+            "precision": 0.35119047619047616,
+            "recall": 0.7023809523809523,
+            "f1": 0.46825396825396826
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+            "truePositive": 0,
+            "predicted": 8,
+            "reference": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0
+          }
+        },
+        "positiveMacroF1": 0.46825396825396826,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "negativeDecisions": 7,
+        "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed.",
+        "endpointMismatch": {
+          "tail": 89,
+          "head": 11,
+          "head+tail": 6,
+          "relation_only": 11
+        },
+        "missedReferencePrimaryCauses": {
+          "missing": 10,
+          "boundary": 15
+        }
+      }
+    },
+    "moduleKnownPairs": 333,
+    "modulePairCoverage": 0.7708333333333334,
+    "completeDocuments": 7,
+    "lockedQueue": 19,
+    "documentCoverage": 0.3684210526315789,
+    "positiveReference": 84,
+    "completeReferenceEVALUATED_ON": 0,
+    "zeroReferencePairDocuments": 1,
+    "NERTrained": false,
+    "testEvaluated": false,
+    "independentHumanGold": false,
+    "qualityPromotionPassed": false,
+    "modelPromoted": false,
+    "notice": "Previously exposed AI dev, not final test. New TRAIN role agreement is fit diagnostic only; correlated mentions are not independent evidence. No supplemental pipeline or automatic deployment.",
+    "gates": {
+      "checks": {
+        "pipelinePrecisionNonRegression": true,
+        "pipelineF1NonRegression": true,
+        "pipelineRecallRegressionWithinGuard": true,
+        "referenceDATASETSupport": true,
+        "completeReferenceEVALUATED_ONSupport": false,
+        "completeDocumentCoverage": false,
+        "completeDevFalsePositiveNonRegression": true,
+        "knownDevNegativeRecallNonRegression": true
+      },
+      "developmentGatesPassed": false,
+      "blockedBy": [
+        "completeReferenceEVALUATED_ONSupport",
+        "completeDocumentCoverage"
+      ],
+      "parentGates": {
+        "sameDevPipelinePrecisionNonRegression": true,
+        "sameDevPipelineF1NonRegression": true,
+        "maxAbsoluteRecallRegression": 0.02,
+        "minimumReferenceDATASETDev": 10,
+        "minimumReferenceEVALUATED_ONDev": 10,
+        "minimumReferenceRareSupportFinalTest": 10,
+        "minimumDocumentCoverage": 0.8,
+        "independentHumanGoldRequired": false,
+        "automaticPromotionAllowed": false,
+        "notice": "Support minima are operational guards, not statistical proof; insufficient support permits exploratory dev training only, not reliability claims or final promotion."
+      },
+      "finalTestExecuted": false,
+      "finalRareSupportKnown": false,
+      "qualityPromotionPassed": false,
+      "modelPromoted": false,
+      "notice": "Development guards are not final promotion. No final test, independent gold or automatic deployment."
+    },
+    "cached54": {
+      "kind": "sealed54_prediction_cache_recount_not_new_inference",
+      "sourceManifestSha256": "25d872cdae05973ce3ff39de8ad072eb8ff78bda0ff2b2540a092b4c500ab919",
+      "module": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8798798798798799,
+        "positiveMicro": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 267,
+          "predicted": 307,
+          "reference": 267,
+          "precision": 0.8697068403908795,
+          "recall": 1.0,
+          "f1": 0.9303135888501742
+        },
+        "positiveMacroF1": 0.96415770609319,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 259,
+            "predicted": 299,
+            "reference": 259,
+            "precision": 0.8662207357859532,
+            "recall": 1.0,
+            "f1": 0.9283154121863799
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+            "truePositive": 26,
+            "predicted": 26,
+            "reference": 66,
+            "precision": 1.0,
+            "recall": 0.3939393939393939,
+            "f1": 0.5652173913043478
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            259,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            40,
+            0,
+            26
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      },
+      "pipeline": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "entityScope": "fixed52_predicted_NER_entities",
+        "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+        "documents": 7,
+        "positiveMicro": {
+          "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+          "truePositive": 59,
+          "predicted": 182,
+          "reference": 84,
+          "precision": 0.3241758241758242,
+          "recall": 0.7023809523809523,
+          "f1": 0.44360902255639095
+        },
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+            "truePositive": 59,
+            "predicted": 174,
+            "reference": 84,
+            "precision": 0.3390804597701149,
+            "recall": 0.7023809523809523,
+            "f1": 0.4573643410852713
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+            "truePositive": 0,
+            "predicted": 8,
+            "reference": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0
+          }
+        },
+        "positiveMacroF1": 0.4573643410852713,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "negativeDecisions": 1,
+        "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed.",
+        "endpointMismatch": {
+          "tail": 89,
+          "head": 13,
+          "head+tail": 7,
+          "relation_only": 14
+        },
+        "missedReferencePrimaryCauses": {
+          "missing": 10,
+          "boundary": 15
+        }
+      },
+      "falsePositives": 123,
+      "falseNegatives": 25
+    },
+    "trainingKnownPairs": 408,
+    "stepsComparison": "same6epochs_not_equal_steps",
+    "legacy115TrainDiagnostic": {
+      "old": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8956521739130435,
+        "positiveMicro": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 103,
+          "predicted": 111,
+          "reference": 107,
+          "precision": 0.9279279279279279,
+          "recall": 0.9626168224299065,
+          "f1": 0.944954128440367
+        },
+        "positiveMacroF1": 0.9716981132075472,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 100,
+            "predicted": 108,
+            "reference": 104,
+            "precision": 0.9259259259259259,
+            "recall": 0.9615384615384616,
+            "f1": 0.9433962264150944
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 3,
+            "predicted": 3,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 0,
+            "predicted": 4,
+            "reference": 8,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            100,
+            0,
+            4
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            8,
+            0,
+            0
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      },
+      "new": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 1.0,
+        "positiveMicro": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 107,
+          "predicted": 107,
+          "reference": 107,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positiveMacroF1": 1.0,
+        "supportedPositiveClasses": [
+          "USED_FOR",
+          "EVALUATED_ON"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 104,
+            "predicted": 104,
+            "reference": 104,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 3,
+            "predicted": 3,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 8,
+            "predicted": 8,
+            "reference": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            104,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            8
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      }
+    },
+    "new22TrainDiagnostic": {
+      "scope": "TRAIN_fit_agreement_not_generalization",
+      "frozen46_54Cache": {
+        "frozen46": {
+          "metrics": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "entityScope": "reviewed_reference_entities",
+            "accuracy": 0.9545454545454546,
+            "positiveMicro": {
+              "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+              "truePositive": 19,
+              "predicted": 20,
+              "reference": 19,
+              "precision": 0.95,
+              "recall": 1.0,
+              "f1": 0.9743589743589743
+            },
+            "positiveMacroF1": 0.9743589743589743,
+            "supportedPositiveClasses": [
+              "USED_FOR"
+            ],
+            "perClass": {
+              "USED_FOR": {
+                "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+                "truePositive": 19,
+                "predicted": 20,
+                "reference": 19,
+                "precision": 0.95,
+                "recall": 1.0,
+                "f1": 0.9743589743589743
+              },
+              "EVALUATED_ON": {
+                "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+                "truePositive": 0,
+                "predicted": 0,
+                "reference": 0,
+                "precision": null,
+                "recall": null,
+                "f1": null
+              },
+              "NO_RELATION": {
+                "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+                "truePositive": 2,
+                "predicted": 2,
+                "reference": 3,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              }
+            },
+            "confusionLabels": [
+              "USED_FOR",
+              "EVALUATED_ON",
+              "NO_RELATION"
+            ],
+            "confusionMatrix": [
+              [
+                19,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                2
+              ]
+            ],
+            "confusionAxes": "rows_reference_columns_prediction"
+          },
+          "errors": 1,
+          "negativeContrastCorrect": 2,
+          "positiveTaskCorrect": 19
+        },
+        "frozen54": {
+          "metrics": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "entityScope": "reviewed_reference_entities",
+            "accuracy": 0.8636363636363636,
+            "positiveMicro": {
+              "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+              "truePositive": 19,
+              "predicted": 22,
+              "reference": 19,
+              "precision": 0.8636363636363636,
+              "recall": 1.0,
+              "f1": 0.926829268292683
+            },
+            "positiveMacroF1": 0.926829268292683,
+            "supportedPositiveClasses": [
+              "USED_FOR"
+            ],
+            "perClass": {
+              "USED_FOR": {
+                "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+                "truePositive": 19,
+                "predicted": 22,
+                "reference": 19,
+                "precision": 0.8636363636363636,
+                "recall": 1.0,
+                "f1": 0.926829268292683
+              },
+              "EVALUATED_ON": {
+                "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+                "truePositive": 0,
+                "predicted": 0,
+                "reference": 0,
+                "precision": null,
+                "recall": null,
+                "f1": null
+              },
+              "NO_RELATION": {
+                "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+                "truePositive": 0,
+                "predicted": 0,
+                "reference": 3,
+                "precision": null,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            },
+            "confusionLabels": [
+              "USED_FOR",
+              "EVALUATED_ON",
+              "NO_RELATION"
+            ],
+            "confusionMatrix": [
+              [
+                19,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                0
+              ]
+            ],
+            "confusionAxes": "rows_reference_columns_prediction"
+          },
+          "errors": 3,
+          "negativeContrastCorrect": 0,
+          "positiveTaskCorrect": 19
+        }
+      },
+      "new57": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 1.0,
+        "positiveMicro": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 19,
+          "predicted": 19,
+          "reference": 19,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positiveMacroF1": 1.0,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 19,
+            "predicted": 19,
+            "reference": 19,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 0,
+            "predicted": 0,
+            "reference": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 3,
+            "predicted": 3,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            19,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      },
+      "errors": 0
+    }
+  },
+  "author": {
+    "signaturesExamined": 88762,
+    "priorRejectionEntries": 9064,
+    "changedRejectionReasons": 4,
+    "beforeDecisionCounts": {
+      "no_valid_orcid": 7396,
+      "no_disambiguated_crosswalk": 1657,
+      "exact_base_name_mismatch": 1,
+      "single_publication_support_only": 6,
+      "recovered_source_crosswalk": 2,
+      "contradictory_orcid_authority": 2
+    },
+    "afterDecisionCounts": {
+      "no_valid_orcid": 7396,
+      "no_disambiguated_crosswalk": 1654,
+      "exact_base_name_mismatch": 3,
+      "single_publication_support_only": 8,
+      "recovered_source_crosswalk": 2,
+      "contradictory_orcid_authority": 1
+    },
+    "beforeORCIDConflicts": 2,
+    "afterORCIDConflicts": 1,
+    "identityLinksChanged": 0,
+    "remainingUnresolved": 9062,
+    "databaseWritten": false,
+    "xmlScanned": false,
+    "networkAccess": false,
+    "scope": "Replay existing sealed inventory only; author aliases, labels, graph and resolved identities remain unchanged.",
+    "limitations": "No new authority evidence or independent real-world verification; refusal reason corrections cannot justify new links."
+  },
+  "concept": {
+    "concepts": 11,
+    "mentions": 30,
+    "potentialNodeReductions": 6,
+    "kind": "candidate_not_graph_migration",
+    "actualNodeReductions": 0,
+    "localDefinitionGroups": 2,
+    "spellingOnlyGroups": 1,
+    "proposalGroups": 2,
+    "abstractSourcesUsed": false,
+    "modelPromoted": false,
+    "graphMigrated": false,
+    "trainingAllowed": false,
+    "independentHumanGold": false,
+    "primaryUrlsAreExtractionFacts": false,
+    "confidenceProvided": false,
+    "modelSourceManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+    "historicalWeightsSha256FromSourceManifest": {
+      "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04/model.safetensors": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+      "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03/model.safetensors": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+    },
+    "weightsReverifiedLive": false,
+    "inferenceExecuted": false,
+    "abstractSourceSha256": null,
+    "notice": "Primary URLs are audit pointers, not corpus-extraction facts or downloaded source receipts. No live graph, retrieval or model-quality improvement is claimed. No calibrated confidence. Existing corpus titles include prior publicly processed samples; this candidate package is never training data."
+  },
+  "tests": {
+    "tests": 59,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "coveragePercent": 96.58119658119658,
+  "predictionChanges46To57": [
+    {
+      "sampleId": "sample-3c01b60042cb47c20cb3",
+      "publicationId": "journals/corr/abs-2411-06463",
+      "groupId": "paper-group-880eaac1a7b7b3f195d9",
+      "split": "dev",
+      "textKind": "abstract",
+      "text": "Convolutional Neural Networks (CNNs) have demonstrated exceptional performance in recent years. Compressing these models not only reduces storage requirements, making deployment to edge devices feasible, but also accelerates inference, thereby reducing latency and computational costs. Structured pruning, which removes filters at the layer level, directly modifies the model architecture. This approach achieves a more compact architecture while maintaining target accuracy, ensuring that the compressed model retains good compatibility and hardware efficiency. Our method is based on a key observation: filters in different layers of a neural network have varying importance to the model's performance. When the number of filters to prune is fixed, the optimal pruning distribution across different layers is uneven to minimize performance loss. Layers that are more sensitive to pruning should account for a smaller proportion of the pruning distribution. To leverage this insight, we propose RL-Pruner, which uses reinforcement learning to learn the optimal pruning distribution. RL-Pruner can automatically extract dependencies between filters in the input model and perform pruning, without requiring model-specific pruning implementations. We conducted experiments on models such as GoogleNet, ResNet, and MobileNet, comparing our approach to other structured pruning methods to validate its effectiveness. Our code is available at https://github.com/Beryex/RLPruner-CNN.",
+      "textSha256": "4d957e7f00081c69bb000d9b7cf542b425f368d512eeb5a5f366c43b086b669c",
+      "referenceSha256": "620954a86ffbfac6fc923641f772d1d884a1d0507cb166e2b9b3af309cf1eccb",
+      "receiptSha256": "46cd74e1f0ed954115357791f0645299d9dcc34b8e1813bb9e2aac738a487868",
+      "labelSource": "ai_pseudo",
+      "contractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+      "head": {
+        "entityId": "e2",
+        "start": 31,
+        "end": 35,
+        "text": "CNNs",
+        "label": "METHOD"
+      },
+      "tail": {
+        "entityId": "e3",
+        "start": 96,
+        "end": 120,
+        "text": "Compressing these models",
+        "label": "TASK"
+      },
+      "label": "USED_FOR",
+      "probabilities": {
+        "USED_FOR": 0.6404837369918823,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.3595162332057953
+      },
+      "pairId": "pair-7ba39a0fcaa4cb43b0402233",
+      "scope": "module_dev",
+      "sourcePublicationId": "journals/corr/abs-2411-06463",
+      "beforeLabel": "NO_RELATION",
+      "afterLabel": "USED_FOR"
+    },
+    {
+      "sampleId": "sample-3c01b60042cb47c20cb3",
+      "publicationId": "journals/corr/abs-2411-06463",
+      "groupId": "paper-group-880eaac1a7b7b3f195d9",
+      "split": "dev",
+      "textKind": "abstract",
+      "text": "Convolutional Neural Networks (CNNs) have demonstrated exceptional performance in recent years. Compressing these models not only reduces storage requirements, making deployment to edge devices feasible, but also accelerates inference, thereby reducing latency and computational costs. Structured pruning, which removes filters at the layer level, directly modifies the model architecture. This approach achieves a more compact architecture while maintaining target accuracy, ensuring that the compressed model retains good compatibility and hardware efficiency. Our method is based on a key observation: filters in different layers of a neural network have varying importance to the model's performance. When the number of filters to prune is fixed, the optimal pruning distribution across different layers is uneven to minimize performance loss. Layers that are more sensitive to pruning should account for a smaller proportion of the pruning distribution. To leverage this insight, we propose RL-Pruner, which uses reinforcement learning to learn the optimal pruning distribution. RL-Pruner can automatically extract dependencies between filters in the input model and perform pruning, without requiring model-specific pruning implementations. We conducted experiments on models such as GoogleNet, ResNet, and MobileNet, comparing our approach to other structured pruning methods to validate its effectiveness. Our code is available at https://github.com/Beryex/RLPruner-CNN.",
+      "textSha256": "4d957e7f00081c69bb000d9b7cf542b425f368d512eeb5a5f366c43b086b669c",
+      "referenceSha256": "620954a86ffbfac6fc923641f772d1d884a1d0507cb166e2b9b3af309cf1eccb",
+      "receiptSha256": "46cd74e1f0ed954115357791f0645299d9dcc34b8e1813bb9e2aac738a487868",
+      "labelSource": "ai_pseudo",
+      "contractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+      "head": {
+        "entityId": "e5",
+        "start": 638,
+        "end": 652,
+        "text": "neural network",
+        "label": "METHOD"
+      },
+      "tail": {
+        "entityId": "e3",
+        "start": 96,
+        "end": 120,
+        "text": "Compressing these models",
+        "label": "TASK"
+      },
+      "label": "USED_FOR",
+      "probabilities": {
+        "USED_FOR": 0.7644639611244202,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.23553602397441864
+      },
+      "pairId": "pair-d035b27c6e4c165a8cad2ac9",
+      "scope": "module_dev",
+      "sourcePublicationId": "journals/corr/abs-2411-06463",
+      "beforeLabel": "NO_RELATION",
+      "afterLabel": "USED_FOR"
+    },
+    {
+      "sampleId": "sample-3c01b60042cb47c20cb3",
+      "publicationId": "journals/corr/abs-2411-06463",
+      "groupId": "paper-group-880eaac1a7b7b3f195d9",
+      "split": "dev",
+      "textKind": "abstract",
+      "text": "Convolutional Neural Networks (CNNs) have demonstrated exceptional performance in recent years. Compressing these models not only reduces storage requirements, making deployment to edge devices feasible, but also accelerates inference, thereby reducing latency and computational costs. Structured pruning, which removes filters at the layer level, directly modifies the model architecture. This approach achieves a more compact architecture while maintaining target accuracy, ensuring that the compressed model retains good compatibility and hardware efficiency. Our method is based on a key observation: filters in different layers of a neural network have varying importance to the model's performance. When the number of filters to prune is fixed, the optimal pruning distribution across different layers is uneven to minimize performance loss. Layers that are more sensitive to pruning should account for a smaller proportion of the pruning distribution. To leverage this insight, we propose RL-Pruner, which uses reinforcement learning to learn the optimal pruning distribution. RL-Pruner can automatically extract dependencies between filters in the input model and perform pruning, without requiring model-specific pruning implementations. We conducted experiments on models such as GoogleNet, ResNet, and MobileNet, comparing our approach to other structured pruning methods to validate its effectiveness. Our code is available at https://github.com/Beryex/RLPruner-CNN.",
+      "textSha256": "4d957e7f00081c69bb000d9b7cf542b425f368d512eeb5a5f366c43b086b669c",
+      "referenceSha256": "620954a86ffbfac6fc923641f772d1d884a1d0507cb166e2b9b3af309cf1eccb",
+      "receiptSha256": "46cd74e1f0ed954115357791f0645299d9dcc34b8e1813bb9e2aac738a487868",
+      "labelSource": "ai_pseudo",
+      "contractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+      "head": {
+        "entityId": "e11",
+        "start": 1290,
+        "end": 1299,
+        "text": "GoogleNet",
+        "label": "METHOD"
+      },
+      "tail": {
+        "entityId": "e3",
+        "start": 96,
+        "end": 120,
+        "text": "Compressing these models",
+        "label": "TASK"
+      },
+      "label": "USED_FOR",
+      "probabilities": {
+        "USED_FOR": 0.9921432733535767,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.007856766693294048
+      },
+      "pairId": "pair-b3da9ef5556725f48c779331",
+      "scope": "module_dev",
+      "sourcePublicationId": "journals/corr/abs-2411-06463",
+      "beforeLabel": "NO_RELATION",
+      "afterLabel": "USED_FOR"
+    },
+    {
+      "sampleId": "sample-e6a06d7413acbec18afb",
+      "publicationId": "journals/corr/abs-1904-04163",
+      "groupId": "paper-group-f147312e46397aa795f9",
+      "split": "dev",
+      "textKind": "abstract",
+      "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data. In a speech recognition N-bestrescoring task, we reduce the RNNLM model size to 18.5% of the baseline system, with no degradation in word error rate(WER) performance on Wall Street Journal data set.",
+      "textSha256": "4572d4db5c00adc0bac512f15f7784f5cb8a7a184fb3df869d05e963bec587b0",
+      "referenceSha256": "afe22f42e210af01fbaa802a648286457925aee1c545280f38ebd127c1c1231e",
+      "receiptSha256": "bbf44745420e613558e89956ebff5997ed8a45ed478e8030a3d05c5066e9b5c2",
+      "labelSource": "ai_pseudo",
+      "contractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+      "head": {
+        "entityId": "e5",
+        "start": 172,
+        "end": 211,
+        "text": "Recurrent Neural Network language model",
+        "label": "METHOD"
+      },
+      "tail": {
+        "entityId": "e9",
+        "start": 410,
+        "end": 433,
+        "text": "reducing the model size",
+        "label": "TASK"
+      },
+      "label": "NO_RELATION",
+      "probabilities": {
+        "USED_FOR": 0.0007340529700741172,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.9992659687995911
+      },
+      "pairId": "pair-f430cca57103ebdd58c5e8c7",
+      "scope": "module_dev",
+      "sourcePublicationId": "journals/corr/abs-1904-04163",
+      "beforeLabel": "USED_FOR",
+      "afterLabel": "NO_RELATION"
+    },
+    {
+      "sampleId": "sample-e6a06d7413acbec18afb",
+      "publicationId": "journals/corr/abs-1904-04163",
+      "groupId": "paper-group-f147312e46397aa795f9",
+      "split": "dev",
+      "textKind": "abstract",
+      "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data. In a speech recognition N-bestrescoring task, we reduce the RNNLM model size to 18.5% of the baseline system, with no degradation in word error rate(WER) performance on Wall Street Journal data set.",
+      "textSha256": "4572d4db5c00adc0bac512f15f7784f5cb8a7a184fb3df869d05e963bec587b0",
+      "referenceSha256": "afe22f42e210af01fbaa802a648286457925aee1c545280f38ebd127c1c1231e",
+      "receiptSha256": "bbf44745420e613558e89956ebff5997ed8a45ed478e8030a3d05c5066e9b5c2",
+      "labelSource": "ai_pseudo",
+      "contractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+      "head": {
+        "entityId": "e18",
+        "start": 842,
+        "end": 847,
+        "text": "RNNLM",
+        "label": "METHOD"
+      },
+      "tail": {
+        "entityId": "e9",
+        "start": 410,
+        "end": 433,
+        "text": "reducing the model size",
+        "label": "TASK"
+      },
+      "label": "NO_RELATION",
+      "probabilities": {
+        "USED_FOR": 0.008989973925054073,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.9910100698471069
+      },
+      "pairId": "pair-168f3ea7de21955951e80a44",
+      "scope": "module_dev",
+      "sourcePublicationId": "journals/corr/abs-1904-04163",
+      "beforeLabel": "USED_FOR",
+      "afterLabel": "NO_RELATION"
+    },
+    {
+      "sampleId": "sample-16bd37185d1d8bbd53cb",
+      "publicationId": "journals/corr/abs-2503-13503",
+      "groupId": "paper-group-bed26b371fad06e907ed",
+      "split": "dev",
+      "textKind": "abstract",
+      "text": "In recent years, the rapid advancement of Artificial Intelligence (AI) technologies, particularly Large Language Models (LLMs), has revolutionized the paradigm of scientific discovery, establishing AI-for-Science (AI4Science) as a dynamic and evolving field. However, there is still a lack of an effective framework for the overall assessment of AI4Science, particularly from a holistic perspective on data quality and model capability. Therefore, in this study, we propose SciHorizon, a comprehensive assessment framework designed to benchmark the readiness of AI4Science from both scientific data and LLM perspectives. First, we introduce a generalizable framework for assessing AI-ready scientific data, encompassing four key dimensions: Quality, FAIRness, Explainability, and Compliance-which are subdivided into 15 sub-dimensions. Drawing on data resource papers published between 2018 and 2023 in peer-reviewed journals, we present recommendation lists of AI-ready datasets for Earth, Life, and Materials Sciences, making a novel and original contribution to the field. Concurrently, to assess the capabilities of LLMs across multiple scientific disciplines, we establish 16 assessment dimensions based on five core indicators Knowledge, Understanding, Reasoning, Multimodality, and Values spanning Mathematics, Physics, Chemistry, Life Sciences, and Earth and Space Sciences. Using the developed benchmark datasets, we have conducted a comprehensive evaluation of over 50 representative open-source and closed source LLMs. All the results are publicly available and can be accessed online at www.scihorizon.cn/en.",
+      "textSha256": "adcdd12568cb672c5789d1984f432e0018a5df5b8a5963bf66d7e48f464e471e",
+      "referenceSha256": "c2da68535eb767d7b68abf425ad1b759c58896e85822df376a9cf3cd1e6df4a2",
+      "receiptSha256": "9ef68039dfb289a639dc6a98283ff94e5f40c5f857ef65f71c399cf8f8731543",
+      "labelSource": "ai_pseudo",
+      "contractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+      "head": {
+        "entityId": "e8",
+        "start": 1524,
+        "end": 1528,
+        "text": "LLMs",
+        "label": "METHOD"
+      },
+      "tail": {
+        "entityId": "e3",
+        "start": 324,
+        "end": 356,
+        "text": "overall assessment of AI4Science",
+        "label": "TASK"
+      },
+      "label": "NO_RELATION",
+      "probabilities": {
+        "USED_FOR": 0.3509819209575653,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.6490181088447571
+      },
+      "pairId": "pair-75a54baf3338bc131c98913f",
+      "scope": "module_dev",
+      "sourcePublicationId": "journals/corr/abs-2503-13503",
+      "beforeLabel": "USED_FOR",
+      "afterLabel": "NO_RELATION"
+    },
+    {
+      "sampleId": "sample-c24ab7542b82fab6cdc7",
+      "text": "Cache side channel attacks are a sophisticated and persistent threat that exploit vulnerabilities in modern processors to extract sensitive information. These attacks leverage weaknesses in shared computational resources, particularly the last level cache, to infer patterns in data access and execution flows, often bypassing traditional security defenses. Such attacks are especially dangerous as they can be executed remotely without requiring physical access to the victim's device. This study focuses on a specific class of these threats: fingerprinting attacks, where an adversary monitors and analyzes the behavior of co-located processes via cache side channels. This can potentially reveal confidential information, such as encryption keys or user activity patterns. A comprehensive threat model illustrates how attackers sharing computational resources with target systems exploit these side channels to compromise sensitive data. To mitigate such risks, a hybrid deep learning model is proposed for detecting cache side channel attacks. Its performance is compared with five widely used deep learning models: Multi-Layer Perceptron, Convolutional Neural Network, Simple Recurrent Neural Network, Long Short-Term Memory, and Gated Recurrent Unit. The experimental results demonstrate that the hybrid model achieves a detection rate of up to 99.96%. These findings highlight the limitations of existing models, the need for enhanced defensive mechanisms, and directions for future research to secure sensitive data against evolving side channel threats.",
+      "textSha256": "d72f52c24e2bd6c94ce876a06744d59484c6dd692b2de315686a45a9f4c00280",
+      "head": {
+        "start": 0,
+        "end": 26,
+        "text": "Cache side channel attacks",
+        "label": "METHOD"
+      },
+      "tail": {
+        "start": 260,
+        "end": 282,
+        "text": "infer patterns in data",
+        "label": "TASK"
+      },
+      "label": "NO_RELATION",
+      "probabilities": {
+        "USED_FOR": 0.03392892703413963,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.9660711288452148
+      },
+      "pairId": "pair-faa62b725da16f1c0d7855ae",
+      "scope": "pipeline",
+      "sourcePublicationId": "journals/corr/abs-2501-17123",
+      "beforeLabel": "USED_FOR",
+      "afterLabel": "NO_RELATION"
+    },
+    {
+      "sampleId": "sample-c24ab7542b82fab6cdc7",
+      "text": "Cache side channel attacks are a sophisticated and persistent threat that exploit vulnerabilities in modern processors to extract sensitive information. These attacks leverage weaknesses in shared computational resources, particularly the last level cache, to infer patterns in data access and execution flows, often bypassing traditional security defenses. Such attacks are especially dangerous as they can be executed remotely without requiring physical access to the victim's device. This study focuses on a specific class of these threats: fingerprinting attacks, where an adversary monitors and analyzes the behavior of co-located processes via cache side channels. This can potentially reveal confidential information, such as encryption keys or user activity patterns. A comprehensive threat model illustrates how attackers sharing computational resources with target systems exploit these side channels to compromise sensitive data. To mitigate such risks, a hybrid deep learning model is proposed for detecting cache side channel attacks. Its performance is compared with five widely used deep learning models: Multi-Layer Perceptron, Convolutional Neural Network, Simple Recurrent Neural Network, Long Short-Term Memory, and Gated Recurrent Unit. The experimental results demonstrate that the hybrid model achieves a detection rate of up to 99.96%. These findings highlight the limitations of existing models, the need for enhanced defensive mechanisms, and directions for future research to secure sensitive data against evolving side channel threats.",
+      "textSha256": "d72f52c24e2bd6c94ce876a06744d59484c6dd692b2de315686a45a9f4c00280",
+      "head": {
+        "start": 0,
+        "end": 26,
+        "text": "Cache side channel attacks",
+        "label": "METHOD"
+      },
+      "tail": {
+        "start": 1010,
+        "end": 1046,
+        "text": "detecting cache side channel attacks",
+        "label": "TASK"
+      },
+      "label": "NO_RELATION",
+      "probabilities": {
+        "USED_FOR": 0.030012765899300575,
+        "EVALUATED_ON": 0.0,
+        "NO_RELATION": 0.9699872732162476
+      },
+      "pairId": "pair-0d96170b12ca9b040501dab9",
+      "scope": "pipeline",
+      "sourcePublicationId": "journals/corr/abs-2501-17123",
+      "beforeLabel": "USED_FOR",
+      "afterLabel": "NO_RELATION"
+    }
+  ],
+  "changedPipelineSourceDocuments": 1,
+  "testContentConsumed": false,
+  "modelPromoted": false,
+  "liveApplicationChecked": false
+}

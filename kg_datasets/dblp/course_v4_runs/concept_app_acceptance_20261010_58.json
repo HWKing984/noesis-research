@@ -1,0 +1,17 @@
+{
+  "startedAtUTC": "2026-10-10T02:19:43.684047+00:00",
+  "status": "failed",
+  "readOnly": true,
+  "checks": [],
+  "oracleCases": [],
+  "aliasGroups": [],
+  "modelPromoted": false,
+  "graphId": "ai-literature-63686318d85cccb07afb",
+  "manifestSha256": "393069faa8091c9def9d57e935ba433a95db407386697d3ecd17fb05afd45574",
+  "vocabularySha256": "8046177aa77160b0ce78b8d10c7f2ede43e18d8ce59b9e86220292cf38756a91",
+  "appCodeSha256": "9ead0d4075daebb09dd46ec85e9253455e38e2b786a465446f92714e2d91165a",
+  "checkerSha256": "351c1da902cfb6196946abf07b4350a6485e106549cfe324fcb0c616a78f9e16",
+  "errorType": "URLError",
+  "error": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>",
+  "finishedAtUTC": "2026-10-10T02:19:52.110151+00:00"
+}

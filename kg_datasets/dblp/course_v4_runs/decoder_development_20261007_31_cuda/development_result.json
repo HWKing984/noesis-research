@@ -1,0 +1,96 @@
+{
+  "documents": 167,
+  "metrics": {
+    "argmax": {
+      "micro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 277,
+        "predicted": 348,
+        "reference": 359,
+        "precision": 0.7959770114942529,
+        "recall": 0.7715877437325905,
+        "f1": 0.7835926449787836
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 172,
+          "predicted": 206,
+          "reference": 208,
+          "precision": 0.8349514563106796,
+          "recall": 0.8269230769230769,
+          "f1": 0.8309178743961353
+        },
+        "TASK": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 104,
+          "predicted": 139,
+          "reference": 148,
+          "precision": 0.7482014388489209,
+          "recall": 0.7027027027027027,
+          "f1": 0.7247386759581882
+        },
+        "DATASET": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 1,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f1": 0.3333333333333333
+        }
+      }
+    },
+    "constrained": {
+      "micro": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 281,
+        "predicted": 375,
+        "reference": 359,
+        "precision": 0.7493333333333333,
+        "recall": 0.7827298050139275,
+        "f1": 0.7656675749318801
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 173,
+          "predicted": 218,
+          "reference": 208,
+          "precision": 0.7935779816513762,
+          "recall": 0.8317307692307693,
+          "f1": 0.812206572769953
+        },
+        "TASK": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 107,
+          "predicted": 154,
+          "reference": 148,
+          "precision": 0.6948051948051948,
+          "recall": 0.722972972972973,
+          "f1": 0.7086092715231788
+        },
+        "DATASET": {
+          "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+          "truePositive": 1,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f1": 0.3333333333333333
+        }
+      }
+    }
+  },
+  "invalidTransitions": {
+    "argmax": 111,
+    "constrained": 0
+  },
+  "weightsUnchanged": true,
+  "servingParity": true,
+  "humanGold": false,
+  "testEvaluated": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "notice": "Dev experiment only. BIO validity does not prove correct boundaries or semantics; no closed test was reused."
+}

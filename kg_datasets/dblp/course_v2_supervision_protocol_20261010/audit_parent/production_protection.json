@@ -1,0 +1,8 @@
+{
+  "resources/course_graph_quality_v3_runtime.json": "8b772f5e84a53d8a71044e1909e76d06c00a0a16b6cd5d363da56745e19f5353",
+  "scripts/course_quality_app.py": "6db2411dc2aa41e4792871d89ed753c36f64de409c7e91cc002ea603c7a27ebd",
+  "resources/course_literature.html": "e1e4096e4545658e6149c13cdf2ff46ea00fd6b860c32b934ec791566bec663d",
+  "kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json": "393069faa8091c9def9d57e935ba433a95db407386697d3ecd17fb05afd45574",
+  "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04/model.safetensors": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+  "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03/model.safetensors": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+}

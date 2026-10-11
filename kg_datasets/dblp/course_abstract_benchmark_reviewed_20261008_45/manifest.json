@@ -1,0 +1,23 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/course_abstract_benchmark_generation_20261008_45/manifest.json": "6a6a2708544a1c949f87a1ff65da25acd5fb512746462a1ad1f90623b30f885e",
+    "annotations/course_v4/abstract_benchmark_decisions_20261008_45.json": "a6b31d807b398ed49686facbd8c36374ba51907b26dbe87306e7c51702d9f228",
+    "annotations/course_v4/abstract_benchmark_reviews_20261008_45.json": "98ef0103bb7ed47fdb59760e1375ba9eda5bab1eb549a290375daf34936c6f19",
+    "scripts/review_abstract_annotations.py": "9cec0eaac451a5bf103674d0a35ae6457190584730960490b06789bf2fcd5757",
+    "scripts/compile_abstract_annotations.py": "16c33870897bdcfb18cbca9219c6929f48bceb6e8a5ec32e983355e4ed8f7016",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0"
+  },
+  "filesSha256": {
+    "ner_train_candidates.jsonl": "8b6157602aaed486e067fcf63e3d9a781a446a65256337270827db694cbc1f62",
+    "positive_relation_candidates.jsonl": "1b29832fc79ea6120dd57467d3e8dd4ba3eae553e21a21a6dd8d4577338e8552",
+    "references.jsonl": "71500dfc71fbf86fc75d7396e4d4c994a989fb6cf5f5fc25c3b07aa14a030a2f",
+    "reviewed_receipts.jsonl": "e844a156ad239b0c6cc379447d6d03f4bb58408362918f1bf346cf29a22b53dc",
+    "review_prompt.json": "8c8bbddffd161051b7feb9d79050c1ba3e2866c52dd3164abf16bceaafe3ff8a",
+    "summary.json": "16ed8d883bcf1719f83c40713549ad441f74981de4c429ca2c625ef041e68a96",
+    "token_alignment.jsonl": "8d32798a48834ad45c92f3eff9ec115955e0029bda9933d88d32630e1822ac74"
+  }
+}

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.670" timestamp="2026-10-10T09:31:28.585640+08:00" hostname="HWKing"><testcase classname="tests.test_diverse_role_training" name="test_existing_and_outside_run_paths_rejected_before_reads" time="0.009" /></testsuite></testsuites>

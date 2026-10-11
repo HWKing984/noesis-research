@@ -1,0 +1,672 @@
+{
+  "status": "independent_rule_stress_test_not_human_gold",
+  "source": "AI-Literature-KG-v2-review-package.zip / blind_50_reference.jsonl",
+  "selection": "20 deliberately boundary-stressing titles from blind_50",
+  "items": [
+    {
+      "blind_index": 1,
+      "publicationId": "journals/jbi/XiaoZZLYZ24",
+      "title": "FuseLinker: Leveraging LLM's pre-trained text embeddings and domain knowledge to enhance GNN-based link prediction on biomedical knowledge graphs.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 10,
+          "text": "FuseLinker",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 23,
+          "end": 26,
+          "text": "LLM",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 89,
+          "end": 92,
+          "text": "GNN",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 99,
+          "end": 114,
+          "text": "link prediction",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 23,
+          "end": 26,
+          "text": "LLM",
+          "label": "METHOD"
+        },
+        {
+          "start": 99,
+          "end": 114,
+          "text": "link prediction",
+          "label": "TASK"
+        }
+      ],
+      "boundary_review": "命名模型+缩写方法+任务均可从标题确定。未标 text embeddings：当前规则尚未明确“表示/特征”是否一律算 METHOD。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 2,
+      "publicationId": "journals/pr/KanZHCCZ20",
+      "title": "Metric learning-based kernel transformer with triplets and label constraints for feature fusion.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 40,
+          "text": "Metric learning-based kernel transformer",
+          "label": "METHOD",
+          "confidence": "medium"
+        },
+        {
+          "start": 81,
+          "end": 95,
+          "text": "feature fusion",
+          "label": "TASK",
+          "confidence": "medium"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 29,
+          "end": 40,
+          "text": "transformer",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "复合方法应在平面BIO下取最大技术短语；feature fusion 是否属于 TASK 需在规范中明确“技术操作型任务”范围。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 3,
+      "publicationId": "journals/corr/ChenZG15",
+      "title": "Multi-lingual Geoparsing based on Machine Translation.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 24,
+          "text": "Multi-lingual Geoparsing",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 34,
+          "end": 53,
+          "text": "Machine Translation",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 0,
+          "end": 24,
+          "text": "Multi-lingual Geoparsing",
+          "label": "TASK"
+        },
+        {
+          "start": 34,
+          "end": 53,
+          "text": "Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "boundary_review": "Machine Translation 虽在句中充当 enabling technique，但概念类型仍是 TASK；应明确“实体类型≠句法角色”。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 4,
+      "publicationId": "conf/miccai/LiuYWJ24",
+      "title": "ACLNet: A Deep Learning Model for ACL Rupture Classification Combined with Bone Morphology.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "ACLNet",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 10,
+          "end": 23,
+          "text": "Deep Learning",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 34,
+          "end": 60,
+          "text": "ACL Rupture Classification",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 10,
+          "end": 23,
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "ACLNet 由冒号后的 A Deep Learning Model 直接确认是命名模型；Deep Learning 保留为独立出现的方法族。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 5,
+      "publicationId": "conf/nips/ChangHLBPSAYWAN25",
+      "title": "WearVQA: A Visual Question Answering Benchmark for Wearables in Egocentric Authentic Real-world scenarios.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "WearVQA",
+          "label": "DATASET",
+          "confidence": "high"
+        },
+        {
+          "start": 11,
+          "end": 36,
+          "text": "Visual Question Answering",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 11,
+          "end": 36,
+          "text": "Visual Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "boundary_review": "WearVQA 后接 Benchmark，足以在标题级判为 DATASET/benchmark；Visual Question Answering 为 TASK。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 6,
+      "publicationId": "journals/swevo/ZhangMCLLW25",
+      "title": "Automatic prompt design via particle swarm optimization driven LLM for efficient medical information extraction.",
+      "proposed_entities": [
+        {
+          "start": 10,
+          "end": 23,
+          "text": "prompt design",
+          "label": "TASK",
+          "confidence": "medium"
+        },
+        {
+          "start": 28,
+          "end": 55,
+          "text": "particle swarm optimization",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 63,
+          "end": 66,
+          "text": "LLM",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 81,
+          "end": 111,
+          "text": "medical information extraction",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 63,
+          "end": 66,
+          "text": "LLM",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "particle swarm optimization 和 LLM 明确；medical information extraction 明确。prompt design 是否纳入 TASK 是当前任务本体边界问题。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 7,
+      "publicationId": "conf/iccv/WangZX23",
+      "title": "StyleDiffusion: Controllable Disentangled Style Transfer via Diffusion Models.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 14,
+          "text": "StyleDiffusion",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 42,
+          "end": 56,
+          "text": "Style Transfer",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 61,
+          "end": 77,
+          "text": "Diffusion Models",
+          "label": "METHOD",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 61,
+          "end": 77,
+          "text": "Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "StyleDiffusion 是命名方法，Diffusion Models 是独立方法族，Style Transfer 是基础任务；Controllable/Disentangled 作为目标/性质修饰暂不并入 TASK。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 9,
+      "publicationId": "conf/emnlp/TanB19",
+      "title": "LXMERT: Learning Cross-Modality Encoder Representations from Transformers.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "LXMERT",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 61,
+          "end": 73,
+          "text": "Transformers",
+          "label": "METHOD",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 61,
+          "end": 73,
+          "text": "Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "LXMERT 是命名模型；Transformers 为独立出现的方法族。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 13,
+      "publicationId": "journals/jikm/BensalahAAF24",
+      "title": "Assessing the Impact of Static, Contextual and Character Embeddings for Arabic Machine Translation.",
+      "proposed_entities": [
+        {
+          "start": 24,
+          "end": 67,
+          "text": "Static, Contextual and Character Embeddings",
+          "label": "METHOD",
+          "confidence": "medium"
+        },
+        {
+          "start": 72,
+          "end": 98,
+          "text": "Arabic Machine Translation",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 79,
+          "end": 98,
+          "text": "Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "boundary_review": "共享中心词并列结构无法用平面BIO拆成 Static / Contextual / Character 三个独立 Embeddings；本次暂以整个协调短语作为一个 METHOD group mention。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 15,
+      "publicationId": "conf/ofc/JinnoM16",
+      "title": "Unified architecture and design methodology for integrated SDM-WSS employing PLC-based spatial beam transformer array for various types of SDM fibers.",
+      "proposed_entities": [],
+      "current_draft_entities": [
+        {
+          "start": 100,
+          "end": 111,
+          "text": "transformer",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "这里的 transformer 是光通信/空间光束变换器件，不是算法或AI模型；应明确排除物理器件同形词。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 16,
+      "publicationId": "conf/isica/Huang0LZL19",
+      "title": "A Robust Green Grape Image Segmentation Algorithm Against Varying Illumination Conditions.",
+      "proposed_entities": [
+        {
+          "start": 9,
+          "end": 39,
+          "text": "Green Grape Image Segmentation",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 21,
+          "end": 39,
+          "text": "Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "boundary_review": "Green Grape 是分割对象，改变任务语义，应纳入 TASK；Robust 是评价性修饰，Algorithm 是泛化载体词，均不纳入。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 18,
+      "publicationId": "conf/ijcnn/DialloS20",
+      "title": "Multi-Agent Pattern Formation: a Distributed Model-Free Deep Reinforcement Learning Approach.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 29,
+          "text": "Multi-Agent Pattern Formation",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 33,
+          "end": 83,
+          "text": "Distributed Model-Free Deep Reinforcement Learning",
+          "label": "METHOD",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 56,
+          "end": 83,
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "Distributed、Model-Free、Deep 都是区分方法的技术限定词，平面BIO应整体标；Approach 为泛化载体词不标。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 20,
+      "publicationId": "conf/kcap/ChiattiDCL15",
+      "title": "Reducing the search space in ontology alignment using clustering techniques and topic identification.",
+      "proposed_entities": [
+        {
+          "start": 29,
+          "end": 47,
+          "text": "ontology alignment",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 54,
+          "end": 64,
+          "text": "clustering",
+          "label": "METHOD",
+          "confidence": "medium"
+        },
+        {
+          "start": 80,
+          "end": 100,
+          "text": "topic identification",
+          "label": "TASK",
+          "confidence": "medium"
+        }
+      ],
+      "current_draft_entities": [],
+      "boundary_review": "ontology alignment 是具体任务，不能因为含 ontology 一概排除；clustering 是方法；topic identification 是否作为 TASK 应明确技术子任务范围。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 21,
+      "publicationId": "journals/siamis/FengQXC17",
+      "title": "Image Denoising via Multiscale Nonlinear Diffusion Models.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 15,
+          "text": "Image Denoising",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 20,
+          "end": 57,
+          "text": "Multiscale Nonlinear Diffusion Models",
+          "label": "METHOD",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 41,
+          "end": 57,
+          "text": "Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "Multiscale/Nonlinear 都区分具体 diffusion 方法，应整体保留；但后续实体链接必须区分 PDE diffusion 与生成式 diffusion。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 22,
+      "publicationId": "conf/nips/LiuLZFWZ022",
+      "title": "Multivariate Time-Series Forecasting with Temporal Polynomial Graph Neural Networks.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 36,
+          "text": "Multivariate Time-Series Forecasting",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 42,
+          "end": 83,
+          "text": "Temporal Polynomial Graph Neural Networks",
+          "label": "METHOD",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 62,
+          "end": 83,
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "Temporal Polynomial 是架构/模型限定词，应随 Graph Neural Networks 一起标；任务应保留 Multivariate Time-Series。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 24,
+      "publicationId": "journals/tase/NanZYZZD25",
+      "title": "Safe and Interpretable Human-Like Planning With Transformer-Based Deep Inverse Reinforcement Learning for Autonomous Driving.",
+      "proposed_entities": [
+        {
+          "start": 34,
+          "end": 42,
+          "text": "Planning",
+          "label": "TASK",
+          "confidence": "medium"
+        },
+        {
+          "start": 48,
+          "end": 101,
+          "text": "Transformer-Based Deep Inverse Reinforcement Learning",
+          "label": "METHOD",
+          "confidence": "medium"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 48,
+          "end": 59,
+          "text": "Transformer",
+          "label": "METHOD"
+        },
+        {
+          "start": 79,
+          "end": 101,
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "复合方法存在嵌套：Transformer-Based + Deep Inverse Reinforcement Learning。为适配平面BIO，本次整体标一个 METHOD；Planning 的 Human-Like 修饰是否保留仍需规则裁决。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 25,
+      "publicationId": "journals/corr/abs-2103-09435",
+      "title": "Pose-GNN : Camera Pose Estimation System Using Graph Neural Networks.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "Pose-GNN",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 11,
+          "end": 33,
+          "text": "Camera Pose Estimation",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 47,
+          "end": 68,
+          "text": "Graph Neural Networks",
+          "label": "METHOD",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 47,
+          "end": 68,
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "boundary_review": "Pose-GNN 是命名系统/模型，Graph Neural Networks 是独立出现的方法族；Camera Pose Estimation 为任务。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 29,
+      "publicationId": "conf/hai/AbdulrahmanO15",
+      "title": "Food Image Recognition by Using Bag of SURF: Color Features.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 22,
+          "text": "Food Image Recognition",
+          "label": "TASK",
+          "confidence": "high"
+        },
+        {
+          "start": 32,
+          "end": 43,
+          "text": "Bag of SURF",
+          "label": "METHOD",
+          "confidence": "medium"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 5,
+          "end": 22,
+          "text": "Image Recognition",
+          "label": "TASK"
+        }
+      ],
+      "boundary_review": "Food 是任务对象，应纳入 TASK；Bag of SURF 是明确方法。Color Features 是否为 METHOD/representation 当前规则不清，暂不标。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 31,
+      "publicationId": "conf/mm/GongWP17",
+      "title": "Multimodal Learning for Web Information Extraction.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 19,
+          "text": "Multimodal Learning",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 24,
+          "end": 50,
+          "text": "Web Information Extraction",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [],
+      "boundary_review": "Multimodal Learning 是方法范式；Web Information Extraction 是具体任务。词典零命中不能判无实体。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    },
+    {
+      "blind_index": 41,
+      "publicationId": "journals/corr/abs-2109-07877",
+      "title": "MFE-NER: Multi-feature Fusion Embedding for Chinese Named Entity Recognition.",
+      "proposed_entities": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "MFE-NER",
+          "label": "METHOD",
+          "confidence": "high"
+        },
+        {
+          "start": 9,
+          "end": 39,
+          "text": "Multi-feature Fusion Embedding",
+          "label": "METHOD",
+          "confidence": "medium"
+        },
+        {
+          "start": 44,
+          "end": 76,
+          "text": "Chinese Named Entity Recognition",
+          "label": "TASK",
+          "confidence": "high"
+        }
+      ],
+      "current_draft_entities": [
+        {
+          "start": 52,
+          "end": 76,
+          "text": "Named Entity Recognition",
+          "label": "TASK"
+        }
+      ],
+      "boundary_review": "MFE-NER 是命名方法；Multi-feature Fusion Embedding 是方法描述；Chinese 是任务语言范围，应纳入 TASK。",
+      "reviewer_type": "AI independent semantic review; NOT human gold"
+    }
+  ]
+}

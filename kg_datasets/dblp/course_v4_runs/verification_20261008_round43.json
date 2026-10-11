@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-08T07:46:43.876321+00:00",
+  "audit": {
+    "trainDiagnosticMetricsAndErrorsRecomputed": true,
+    "changedTrainSpanCount": 1,
+    "unchangedReceiptLines": 57,
+    "revisedTrainBIORecomputed": 50,
+    "opaqueDevFilesIdentical": 9,
+    "knownRelationCount": 267,
+    "unknownPairs": 1578,
+    "independentHumanGold": false,
+    "trainingExecuted": false,
+    "testSemanticallyRead": false,
+    "modelPromoted": false,
+    "qualityPromotionPassed": false,
+    "engineeringTests": 371,
+    "regressionSeconds": 162.153,
+    "regressionScope": "D_drive_isolated_process_temp; C_drive_previous_rename_problem_not_fixed"
+  },
+  "previousVerificationSha256": "61ac33d201a5f50cc19b112912a11fa3167115c47f234621792aff7edc131bd7",
+  "evidenceManifestSha256": "3a74bc149455ce4f958e3143cda85d38a7a03090689be3cba08e9b11c343635d",
+  "capturesSha256": "4749bda1fe7aadef7478b45bceeedd487aea11529aa537646a91867a46217c34",
+  "qualityPromotionPassed": false
+}

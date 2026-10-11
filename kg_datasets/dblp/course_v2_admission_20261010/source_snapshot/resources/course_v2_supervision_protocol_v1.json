@@ -1,0 +1,39 @@
+{
+  "version": "course_v2_supervision_protocol_v1",
+  "parent": "kg_datasets/dblp/course_v2_priority_revision_20261010_final",
+  "parentManifestSha256": "fa2384689d09bcadfd1addcb377b41e3378154cdfa1bc65d147d11cbb1f9136c",
+  "externalAudit": "D:/Users/Y7000P/Downloads/v2_priority_revision_deep_audit_report_20261010.md",
+  "externalAuditSha256": "0a70dffbb7b1d81a454ff0000455079b85a92a0fb81d3523df4f6f4c73e023f2",
+  "negativeScope": {
+    "target": "Source-attributed relation in the original whole abstract, not universal scientific truth or exhaustive full-text knowledge.",
+    "USED_FOR": "Retain downstream_application, component_operation, training_proxy and background_method_use only with a predicate and actor attribution. Do not inherit whole-model relations into every component.",
+    "EVALUATED_ON": "Require evaluation evidence attributed to this method on this dataset; training use does not imply evaluation.",
+    "NO_RELATION": "Require explicit source-local negation or an exclusion/exclusive contrast that rules out the corresponding positive relation under the SAME broad scope. Different direct actors, no predicate, co-occurrence, poor scores, or training use alone are insufficient.",
+    "UNRESOLVED": "Insufficient or ambiguous evidence, including a role contrast that does not exclude indirect use; mask from ordinary classification training.",
+    "NOT_EXPRESSED": "Diagnostic lack of expression, not an ordinary negative class.",
+    "reviewOfFiveOldNegatives": "Withdraw all five to UNRESOLVED. Preserve previous labels, spans, reasons and support; no new negatives are manufactured.",
+    "ordinaryThreeClassTrainingReady": false
+  },
+  "evaluation": {
+    "protocolFrozen": true,
+    "evaluationInventoryLocked": false,
+    "input": "Original whole abstract only; no title, URL, taskRole or reference coreference evidence injected into model features.",
+    "grain": "Publication group; aliases, mention pairs, text windows and arXiv versions of the same paper stay in one partition.",
+    "exposedPilot": "All twelve reviewed papers remain train-only. Historical corpus, abstract queue identities and supplemental development papers are excluded from new validation/test.",
+    "futureSelection": "Lock a metadata-only inventory and selection seed BEFORE collecting/reviewing evaluation text or viewing predictions. Random representative validation/test and purposive rare-class challenge are separate cohorts; no challenge oversampling in headline metrics.",
+    "representativeSampling": "Uniform sample without replacement at publication-group level from an explicitly declared fresh-paper population; record population hash, seed, planned sizes and inclusion probabilities before drawing.",
+    "testPolicy": "New final test remains sealed through model/config selection. One final evaluation of the frozen candidate; if test-informed changes occur, results become development evidence and a new final holdout is required.",
+    "partialLabels": "UNRESOLVED and NOT_EXPRESSED are never NO_RELATION. Partial-label conditional scores must not be presented as complete end-to-end Precision; full-pipeline evaluation requires complete relation adjudication or an explicit unscored/uncertain denominator.",
+    "metrics": ["strict-span-and-type NER Precision/Recall/F1", "strict directed span/type/label end-to-end RE Precision/Recall/F1", "conditional RE on reference entities (secondary)", "TP/FP/FN and zero-positive documents", "per-class and per-taskRole support, source papers and coverage", "mention-level and distinct support-group-level descriptive results"],
+    "supportGroupMetric": "Count a group hit once if any correct predicted triple matches its reference group. Report incorrect prediction counts separately; do not collapse unrelated false positives into guessed semantic groups or advertise group hit rate as independent fact accuracy.",
+    "trainingRepetition": "Within each training paper/supportGroup use one deterministically chosen mention pair per epoch, rotating aliases by a predeclared seed; apply only after a separately authorized training snapshot. No resampling is executed in this batch.",
+    "selection": "Keep SciBERT/schema fixed for a future bounded data-quality comparison, select checkpoints on new fixed validation only. Predeclared practical candidate gate: end-to-end validation F1 improvement at least 0.02, no deterioration of class-level TP or negative FP under the same supported comparison. Rare classes with fewer than 10 distinct reference papers remain insufficient for reliable class-level generalization claims. Validation improvement is not a test score or statistical significance.",
+    "authorization": "A frozen protocol alone never authorizes training: reviewed negative support, frozen train/validation identities, complete evaluation coverage and a separate explicit training contract are still required. No automatic promotion."
+  },
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "productionMutationAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false
+}

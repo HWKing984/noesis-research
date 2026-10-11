@@ -1,0 +1,10 @@
+{
+  "status": "draft",
+  "input_manifest_sha256": "bc88db81e0c68156c2fcacdbf8523e77b81be9b5d811163da2ed30f3edf3ca8a",
+  "script_sha256": "b66dd0df586db1c6e14f6805d87cb7a2cf68c7e4c2a945f969f334197b316509",
+  "output_sha256": {
+    "rare_candidates_review.html": "be33b28b4e23c26bd5b641fa0f31235dad13c65c670ad6b86f529f81fc250eee",
+    "rare_candidates_train.jsonl": "a3d3eab76c6739da9a9719036f458950c925cc2ff55b483f0eddf3146cfc407e",
+    "summary.json": "f2c83889fedec2914092ff5bded295ce348e238b14d924098bdd6ffc64d3f0a0"
+  }
+}

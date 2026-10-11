@@ -1,0 +1,37 @@
+{
+  "version": "abstract_relation_partial_v1",
+  "parentContract": "resources/course_abstract_v1.json",
+  "parentContractSha256": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+  "textKind": "abstract",
+  "maxTokens": 512,
+  "annotation": "ai_pseudo_same_session_self_review; inherit_unchanged_source_NER; explicit_pair_decisions_only; unknown_never_negative",
+  "relationScope": "document_supported_method_performs_task_or_is_evaluated_on_dataset; object_of_compression_or_assessment_is_not_its_operator",
+  "negativeEvidence": [
+    "explicit_argument_role_contrast",
+    "explicit_dataset_use_contrast"
+  ],
+  "negativeExclusions": "Absence, coexistence, poor performance, training-only mention by itself and differing entity types do not certify NO_RELATION.",
+  "moduleDev": "only_resolved_reviewed_pairs_from_complete_NER_docs; disclose_conditional_precision_recall_f1_and_pair_document_coverage; unknown_pairs_masked",
+  "pipelineDev": "only_fully_resolved_documents_including_zero_pairs; all_predicted_pairs_scored; disclose_locked_19_document_coverage; no_masking_errors_using_reference_entities",
+  "selection": "conditional_dev_all_class_macro_f1_earliest_tie; not_pipeline_or_final_test_selection",
+  "RETraining": {
+    "seed": 20261008,
+    "epochs": 6,
+    "batchSize": 4,
+    "learningRate": 2e-05,
+    "balancedLoss": true,
+    "representation": "entity_markers",
+    "initialization": "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03",
+    "initialWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+  },
+  "NERComparison": {
+    "oldCheckpoint": "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04",
+    "oldWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "candidateCheckpoint": "kg_datasets/dblp/course_v4_runs/abstract_ner_development_20261008_35/checkpoint_epoch_04",
+    "candidateWeightsSha256": "14a1cce3d3cf5da3ac61e6bd651d14713215879b5ce679bd56ec8d2b47e87a96",
+    "candidateRunManifestSha256": "95a3c250100aa89452af0381f142f4a6b9df3e1336a1c4ed956b386e01f5a269"
+  },
+  "testPolicy": "No old or reserved test content, tokenization, inference or tuning. Entire pipeline must be locked separately before any final test.",
+  "automaticPromotionAllowed": false,
+  "notice": "New partial-label diagnostic contract, not a relaxation or rewrite of abstract_v1 final promotion gates. Source AI labels and selected complete-doc cohort can be biased; no real-world reliability guarantee."
+}

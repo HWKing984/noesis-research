@@ -1,0 +1,48 @@
+{
+  "version": "abstract_eval_attribution_v1",
+  "parentRelationContract": "resources/course_abstract_relation_v1.json",
+  "parentRelationContractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "sources": {
+    "train": {
+      "path": "kg_datasets/dblp/course_abstract_relation_enriched_20261008_39",
+      "manifestSha256": "92b23b40237d8e20b0848cf63db8acaf98431d3388b65c5dd2dcdef463a61954"
+    },
+    "dev": {
+      "path": "kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40",
+      "manifestSha256": "c792d4895ffe9d17f474c56f8d1da072aa27ae89bbba4ea5cbb7ba58e23a1199"
+    }
+  },
+  "reviewCohort": {
+    "train": [
+      "2008.10400",
+      "2501.02474",
+      "2107.03374",
+      "1606.05250",
+      "2110.14168",
+      "2406.01574",
+      "2410.14398",
+      "2512.15363",
+      "1910.12770",
+      "2107.10847",
+      "2402.14245",
+      "2510.26830"
+    ],
+    "dev": [
+      "1907.02544",
+      "1904.04163",
+      "2001.11639"
+    ]
+  },
+  "selection": "Every complete-NER source document containing a previously resolved EVALUATED_ON pair in locked train39/dev40, in source order. No model error/score selection, new collection, replacement or reserved-test use.",
+  "goal": "Remove unsupported component/family benchmark attribution from future plain binary supervision while preserving the evidence and original labels. This is source-only label quality control, not model optimization by dev scores.",
+  "meaning": "EVALUATED_ON links the reported measured method/model/protocol configuration to its benchmark. It does not imply independent ablation, causal improvement, good performance or benchmark training. Reported baseline measurement remains positive even when its score is poor.",
+  "retentionPolicy": "Keep a named measured method, explicit reported model baseline or explicitly compared evaluation protocol. A measured combined method may be retained only when the head unambiguously identifies that reported configuration; repeated names are record-local correlated mentions. No independent-ablation prerequisite is introduced.",
+  "retractionPolicy": "If a binary edge loses a required unnamed combination/configuration, maps a measurement to an internal operation without its own reported attribution, or generalizes a specific measured model to a generic family, explicitly return it to UNRESOLVED. Never manufacture NO_RELATION from lack of measurement. This does not assert that the component was never used, contributed nothing or could not be evaluated.",
+  "revisionPolicy": "Only existing EVALUATED_ON pairs may be kept, retracted to UNRESOLVED, or explicitly repaired for a clipped evidence span while retaining label/reason. Cover all such source pairs exactly once. No additions, substitutions, entity changes, same-key duplicate judgments, or revisions of USED_FOR/NO_RELATION/previous UNRESOLVED. Bind whole source and prior receipt hashes; record each changed prior/new pair and their canonical hashes, and retain literal excerpt plus rationale. Evidence-only repair must include the original evidence and the complete supporting excerpt without changing any label.",
+  "entityPolicy": "All train58/dev19 source references, NER fields, quarantines and candidate inventories remain unchanged. Previously resolved non-EVALUATED_ON and previously unresolved pairs remain exact. No implicit reannotation.",
+  "reviewPolicy": "Actual whole-source AI judgment followed by actual root-agent self-review; a read-only parallel AI audit may inform it but is not independent human gold. Fresh generation and one review are distinct from immutable upstream receipt binding. Unselected receipts remain byte-identical.",
+  "experiment": "Label attribution audit/retraction, strict BIO and marked-pair encoding preflight only. No training, model inference, rescoring previous predictions, new model metrics, reserved-test semantic access, graph/database writes or service restart. Future training/comparison must lock the revised snapshots and disclose changed denominators.",
+  "developmentPreviouslyExposed": true,
+  "automaticPromotionAllowed": false,
+  "qualityPromotionPassed": false
+}

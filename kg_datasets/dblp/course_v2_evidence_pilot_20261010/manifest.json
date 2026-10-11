@@ -1,0 +1,28 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "inputSha256": {
+    "resources/course_v2_evidence_pilot_v1.json": "1f9ebd263855d9675a07b7b18de8439e3d76b4627a2d987c994453ce952cd2a2",
+    "scripts/prepare_v2_evidence_pilot.py": "a9f9f625be062d654ca5e34a4968d53b1996177a62cdf610c88eebc0e17f185c",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "kg_datasets/dblp/course_diverse_train_roles_20261010_56_final/manifest.json": "b45ac3019819f67a56e33abc68b8d5a1115fe4b251b0f3d8d47d6dd5e77aa4e8",
+    "kg_datasets/dblp/course_v4_training_inputs_17/manifest.json": "44b4cded1460294e23d7b6d53303ddace56296fb1c0f2eacff4d009c667df9ef",
+    "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "kg_datasets/dblp/course_abstract_pages_20261008_32/selection_lock.json": "e79ff9e828e47da3314da100bd95e26f20c3c13ca12deddc5931b9627ad9d36a",
+    "resources/course_abstract_dev_supplement_v1.json": "18b8b6eb4ca4ac83c3ce28d133736843ff4b43e7d7c28532201730ba4dc1250a",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+    "kg_datasets/dblp/course_v4_weak/train_references.jsonl": "96a77b95cc432ccb5931a07629f243e9ab1ddb1bd477bbf16469cdb156a21dbe"
+  },
+  "filesSha256": {
+    "09_annotation_expansion.html": "21d21669f3465fc7177e2bbe2e61238bd936fb596a793b3e9771fa42219b2075",
+    "contract.json": "9a0d7804a77481de190bc55d389d5523e6d354ed8a204e6f9da0701cbf89bc89",
+    "inherited_receipts.jsonl": "55dfd0bf7c49f4920a6c0a694b62d3f78541e4595dcc312f5f82e3d58a6ee171",
+    "production_protection.json": "b57c445a6e41e8bcf1fb7f2d9019a7abe5a42bb450a4f3ed819ce753c26198f1",
+    "references.jsonl": "8b4bd272c2c2c52ce30e84f361c8c148d44cd0157935dd598dc1f144ca7ffe5d",
+    "review_dossiers.jsonl": "d967054e612473d8f7f3f7e92a5c3df740f9c053324ac4419eb75af84c93736e",
+    "selection_lock.json": "e10522b991b0fdfd43dbb38b1b54ba359af606138a67addfc0e67ef16d9e8079",
+    "source_quarantines.jsonl": "fb2d75d432028370f4b3a7ca00a1dd9a2789a0c3646900abbf56e20a9fccadf1",
+    "summary.json": "5bd84fececfa4f0cb0e9d649e2880d75b9e703464c9a3cec841c6d3e07eb7c12"
+  }
+}
