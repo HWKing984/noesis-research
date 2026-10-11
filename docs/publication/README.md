@@ -4,7 +4,7 @@ This branch publishes the local `D:\a-open_source\neo4j` AI-Literature-KG projec
 
 Source scripts, tests, schemas, resources, annotations, dependency files, documentation, experimental inputs, metrics, review receipts, evidence and delivery archives are included. Local Python environments, caches, personal tooling and pytest scratch directories are excluded.
 
-Model weights and original DBLP/IMDb corpus downloads are excluded from ordinary Git storage. `large_assets.json` records their original relative paths, byte sizes and SHA-256 checksums. Model configs, tokenizers, training scripts, evaluation outputs and provenance remain included; this snapshot alone does not provide the omitted model weights or original corpora. Use the project's documented preparation/training procedures or copy matching assets from the original local project. No model is retrained or promoted during publication.
+Model weights, original DBLP/IMDb corpus downloads, and the large submission ZIP containing model weights are excluded from ordinary Git storage. `large_assets.json` records their original relative paths, byte sizes and SHA-256 checksums. Model configs, tokenizers, training scripts, evaluation outputs and provenance remain included; this snapshot alone does not provide the omitted model weights or original corpora. Use the project's documented preparation/training procedures or copy matching assets from the original local project. No model is retrained or promoted during publication.
 
 Graph JSONL files exceeding the publication's 95 MiB per-file threshold are included as byte-preserving `.jsonl.gz` companions. After cloning, restore them before running graph import or file-integrity verification:
 

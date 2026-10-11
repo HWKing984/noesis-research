@@ -99,12 +99,21 @@ def infer_demo(output):
         decoded = ner.decode_bio(labels, offsets, doc['text'])
         pairs = candidate_rows(doc, decoded['entities'])
         predictions = predict(rm, rt, pairs, 128, DataCollatorWithPadding(rt), device, 8)
+        def span(e):
+            return e['start'], e['end'], e['label'], e['text']
+        if {span(e) for e in decoded['entities']} != {span(e) for e in row['liveDetail']['mentions']}:
+            raise RuntimeError('Production demo entities differ from live graph')
+        positive = {(span(r['head']),span(r['tail']),r['label']) for r in predictions if r['label']!='NO_RELATION'}
+        saved = {(span(r['head']),span(r['tail']),r['assertion']['predicate']) for r in row['liveDetail']['assertions']}
+        if positive != saved:
+            raise RuntimeError('Production demo relations differ from live graph')
         records.append(row | {'entities': decoded['entities'], 'invalidTransitions': decoded['invalidTransitions'],
                                'relations': predictions})
     if output.exists():
         raise FileExistsError('Preserve the existing inference receipt')
     app.g.c.write_json(output, {'status': 'passed', 'actualWeightLoading': True, 'device': str(device),
-                               'trainingExecuted': False, 'evaluationExecuted': False, 'papers': records})
+                               'trainingExecuted': False, 'evaluationExecuted': False,
+                               'entitiesAndPositiveRelationsMatchLiveGraph': True, 'papers': records})
     print('Actual frozen V1 inference completed:', len(records), flush=True)
 
 

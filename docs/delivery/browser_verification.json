@@ -13,6 +13,11 @@
   "humanGoldClaimed": false,
   "video": "video/demo.webm",
   "videoContainsRealBrowserFrames": true,
+  "videoPlaybackMetadataVerified": true,
+  "videoDurationSeconds": 140,
+  "videoWidth": 1440,
+  "videoHeight": 1000,
+  "videoFrameAt70SecondsVisuallyChecked": true,
   "voiceoverIncluded": false,
   "videoIsTrainingConsole": false,
   "viewport": {"width":1440,"height":1000}
