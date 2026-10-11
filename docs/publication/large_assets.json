@@ -437,6 +437,12 @@
       "sha256": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a"
     },
     {
+      "path": "outputs/AI-Literature-KG_20261013_submission.zip",
+      "bytes": 2175273138,
+      "kind": "submission_archive_with_model_weights",
+      "sha256": "b21ea6618ef67dff3f1cd0149b16ffb1af0d42c9563b48c52d62c9ae0f86c645"
+    },
+    {
       "path": "outputs/title_expansion_once_20261010/ner/checkpoint_epoch_01/model.safetensors",
       "bytes": 437356364,
       "kind": "model_weight",
