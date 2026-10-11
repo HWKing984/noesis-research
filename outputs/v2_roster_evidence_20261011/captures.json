@@ -1,0 +1,36 @@
+{
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-roster-capture-a9e650706fa349f8bc0532f5b8fcdee3",
+  "originalConsoleScreenshot": false,
+  "renderer": "installed_Microsoft_Edge_headless",
+  "kind": "actual_browser_render_capture",
+  "captures": [
+    {
+      "sourcePage": "10_roster_and_dev.html",
+      "sha256": "295d53cf85420717ab40d3fa09a8f8c50e0466449069c0c1502affc8627ce014",
+      "capturedAt": "2026-10-11T01:14:10.4611076Z",
+      "url": "file:///D:/a-open_source/neo4j/outputs/v2_roster_evidence_20261011/10_roster_and_dev.html",
+      "viewportHeight": 2000,
+      "image": "10_roster_and_dev.png",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2000",
+        "--screenshot=D:\\a-open_source\\neo4j\\outputs\\v2_roster_evidence_20261011\\10_roster_and_dev.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-roster-capture-a9e650706fa349f8bc0532f5b8fcdee3",
+        "file:///D:/a-open_source/neo4j/outputs/v2_roster_evidence_20261011/10_roster_and_dev.html"
+      ],
+      "sourcePageSha256": "e3b62b2435601ef96527623d826be3af9b50d7996dd931868e1ac19f06eb884d",
+      "viewportWidth": 1280,
+      "originalConsoleScreenshot": false,
+      "bytes": 195921
+    }
+  ],
+  "status": "completed",
+  "browserVersion": "155.0.4283.45",
+  "finishedAt": "2026-10-11T01:14:10.4849642Z"
+}

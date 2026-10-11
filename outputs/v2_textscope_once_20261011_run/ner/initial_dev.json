@@ -1,0 +1,44 @@
+{
+  "loss": 2.0183378396311533,
+  "invalidTransitions": 1284,
+  "metrics": {
+    "micro": {
+      "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+      "truePositive": 9,
+      "predicted": 2156,
+      "reference": 299,
+      "precision": 0.004174397031539889,
+      "recall": 0.030100334448160536,
+      "f1": 0.007331975560081467
+    },
+    "perClass": {
+      "METHOD": {
+        "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+        "truePositive": 8,
+        "predicted": 1241,
+        "reference": 173,
+        "precision": 0.0064464141821112,
+        "recall": 0.046242774566473986,
+        "f1": 0.011315417256011316
+      },
+      "TASK": {
+        "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+        "truePositive": 1,
+        "predicted": 634,
+        "reference": 103,
+        "precision": 0.0015772870662460567,
+        "recall": 0.009708737864077669,
+        "f1": 0.0027137042062415195
+      },
+      "DATASET": {
+        "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+        "truePositive": 0,
+        "predicted": 281,
+        "reference": 23,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    }
+  }
+}

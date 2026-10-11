@@ -1,0 +1,41 @@
+﻿arxivId,split,title,sourceURL,contentStatus,referenceStatus
+2502.12214,dev,Zero Token-Driven Deep Thinking in LLMs: Unlocking the Full Potential of Existing Parameters via Cyclic Refinement,https://arxiv.org/abs/2502.12214,not_collected,not_annotated
+2502.08942,dev,Language in the Flow of Time: Time-Series-Paired Texts Weaved into a Unified Temporal Narrative,https://arxiv.org/abs/2502.08942,not_collected,not_annotated
+2502.12328,dev,LM Agents for Coordinating Multi-User Information Gathering,https://arxiv.org/abs/2502.12328,not_collected,not_annotated
+2502.08754,dev,HistoSmith: Single-Stage Histology Image-Label Generation via Conditional Latent Diffusion for Enhanced Cell Segmentation and Classification,https://arxiv.org/abs/2502.08754,not_collected,not_annotated
+2502.07158,dev,Early Risk Prediction of Pediatric Cardiac Arrest from Electronic Health Records via Multimodal Fused Transformer,https://arxiv.org/abs/2502.07158,not_collected,not_annotated
+2502.01282,dev,Rational Gaussian wavelets and corresponding model driven neural networks,https://arxiv.org/abs/2502.01282,not_collected,not_annotated
+2502.00919,dev,"Attention Sinks: A 'Catch, Tag, Release' Mechanism for Embeddings",https://arxiv.org/abs/2502.00919,not_collected,not_annotated
+2502.09222,dev,ASP-driven User-interaction with Clinguin,https://arxiv.org/abs/2502.09222,not_collected,not_annotated
+2502.12031,dev,Masked Latent Prediction and Classification for Self-Supervised Audio Representation Learning,https://arxiv.org/abs/2502.12031,not_collected,not_annotated
+2502.00840,dev,Activation Approximations Can Incur Safety Vulnerabilities Even in Aligned LLMs: Comprehensive Analysis and Defense,https://arxiv.org/abs/2502.00840,not_collected,not_annotated
+2502.16534,dev,Multilingual != Multicultural: Evaluating Gaps Between Multilingual Capabilities and Cultural Alignment in LLMs,https://arxiv.org/abs/2502.16534,not_collected,not_annotated
+2502.00306,dev,Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation,https://arxiv.org/abs/2502.00306,not_collected,not_annotated
+2502.16828,dev,Predicting the Energy Landscape of Stochastic Dynamical System via Physics-informed Self-supervised Learning,https://arxiv.org/abs/2502.16828,not_collected,not_annotated
+2502.21057,dev,Robust Deterministic Policy Gradient for Disturbance Attenuation and Its Application to Quadrotor Control,https://arxiv.org/abs/2502.21057,not_collected,not_annotated
+2502.18147,dev,"Jacobian Sparse Autoencoders: Sparsify Computations, Not Just Activations",https://arxiv.org/abs/2502.18147,not_collected,not_annotated
+2502.16090,dev,Echo: A Large Language Model with Temporal Episodic Memory,https://arxiv.org/abs/2502.16090,not_collected,not_annotated
+2502.08922,dev,Self-Consistency of the Internal Reward Models Improves Self-Rewarding Language Models,https://arxiv.org/abs/2502.08922,not_collected,not_annotated
+2502.05783,dev,WatchGuardian: Enabling User-Defined Personalized Just-in-Time Intervention on Smartwatch,https://arxiv.org/abs/2502.05783,not_collected,not_annotated
+2502.15838,dev,"A novel approach to the relationships between data features -- based on comprehensive examination of mathematical, technological, and causal methodology",https://arxiv.org/abs/2502.15838,not_collected,not_annotated
+2502.14892,dev,EgoSpeak: Learning When to Speak for Egocentric Conversational Agents in the Wild,https://arxiv.org/abs/2502.14892,not_collected,not_annotated
+2502.13162,test,ShieldLearner: A New Paradigm for Jailbreak Attack Defense in LLMs,https://arxiv.org/abs/2502.13162,not_collected_sealed_test,not_annotated
+2502.20843,test,Hierarchical and Modular Network on Non-prehensile Manipulation in General Environments,https://arxiv.org/abs/2502.20843,not_collected_sealed_test,not_annotated
+2502.03426,test,TruePose: Human-Parsing-guided Attention Diffusion for Full-ID Preserving Pose Transfer,https://arxiv.org/abs/2502.03426,not_collected_sealed_test,not_annotated
+2502.11844,test,BaxBench: Can LLMs Generate Correct and Secure Backends?,https://arxiv.org/abs/2502.11844,not_collected_sealed_test,not_annotated
+2502.00604,test,Gradient Alignment in Physics-informed Neural Networks: A Second-Order Optimization Perspective,https://arxiv.org/abs/2502.00604,not_collected_sealed_test,not_annotated
+2502.00034,test,Towards Efficient Multi-Objective Optimisation for Real-World Power Grid Topology Control,https://arxiv.org/abs/2502.00034,not_collected_sealed_test,not_annotated
+2502.06151,test,Recency Biased Causal Attention for Time-series Forecasting,https://arxiv.org/abs/2502.06151,not_collected_sealed_test,not_annotated
+2502.06574,test,On the Impact of the Utility in Semivalue-based Data Valuation,https://arxiv.org/abs/2502.06574,not_collected_sealed_test,not_annotated
+2502.04194,test,The Best Instruction-Tuning Data are Those That Fit,https://arxiv.org/abs/2502.04194,not_collected_sealed_test,not_annotated
+2502.05220,test,Aero-LLM: A Distributed Framework for Secure UAV Communication and Intelligent Decision-Making,https://arxiv.org/abs/2502.05220,not_collected_sealed_test,not_annotated
+2502.09622,test,Theoretical Benefit and Limitation of Diffusion Language Model,https://arxiv.org/abs/2502.09622,not_collected_sealed_test,not_annotated
+2502.19417,test,Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models,https://arxiv.org/abs/2502.19417,not_collected_sealed_test,not_annotated
+2502.16977,test,Convergence of Shallow ReLU Networks on Weakly Interacting Data,https://arxiv.org/abs/2502.16977,not_collected_sealed_test,not_annotated
+2502.11447,test,Does Editing Provide Evidence for Localization?,https://arxiv.org/abs/2502.11447,not_collected_sealed_test,not_annotated
+2502.14924,test,A Tale of Two Structures: Do LLMs Capture the Fractal Complexity of Language?,https://arxiv.org/abs/2502.14924,not_collected_sealed_test,not_annotated
+2502.07461,test,JamendoMaxCaps: A Large Scale Music-caption Dataset with Imputed Metadata,https://arxiv.org/abs/2502.07461,not_collected_sealed_test,not_annotated
+2502.00345,test,CTC: The Composite Task Challenge for Cooperative Multi-Agent Reinforcement Learning,https://arxiv.org/abs/2502.00345,not_collected_sealed_test,not_annotated
+2502.03750,test,Principal Curvatures Estimation with Applications to Single Cell Data,https://arxiv.org/abs/2502.03750,not_collected_sealed_test,not_annotated
+2502.06843,test,Vision-Integrated LLMs for Autonomous Driving Assistance : Human Performance Comparison and Trust Evaluation,https://arxiv.org/abs/2502.06843,not_collected_sealed_test,not_annotated
+2502.10587,test,Towards Self-Supervised Covariance Estimation in Deep Heteroscedastic Regression,https://arxiv.org/abs/2502.10587,not_collected_sealed_test,not_annotated

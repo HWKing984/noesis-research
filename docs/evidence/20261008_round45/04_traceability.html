@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>局部关系证据与不可变输入 · 第45轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>局部关系证据与不可变输入 · 第45轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<h2>TriviaQA：局部原文与实体</h2><div class="title">We also present two baseline algorithms: a <mark class="METHOD">feature-based classifier<small>METHOD</small></mark> and a state-of-the-art <mark class="METHOD">neural network<small>METHOD</small></mark>, that performs well on <mark class="DATASET">SQuAD<small>DATASET</small></mark> <mark class="TASK">reading comprehension<small>TASK</small></mark>. Neither approach comes close to human performance (23% and 40% vs. 80%), suggesting that <mark class="DATASET">TriviaQA<small>DATASET</small></mark> is a challenging testbed that is worth significant future study.</div><table><thead><tr><th>关系</th><th>为何这样判</th></tr></thead><tbody><tr><td>neural network → SQuAD / reading comprehension</td><td>单数从句描述网络的局部表现与用途，不套给classifier</td></tr><tr><td>classifier、network → 最后TriviaQA提及</td><td>两baseline的23%/40%与human80%对比；同一源论文的3评测不是独立试验</td></tr><tr><td>其余12对</td><td>UNRESOLVED，包括classifier→SQuAD；缺少表现报告不是负例</td></tr></tbody></table><h2>保护与核验</h2><table><thead><tr><th>核验</th><th>实际</th></tr></thead><tbody><tr><td>旧输入</td><td>58行原收据字节不变，267旧关系不变；9dev文件原字节复制</td></tr><tr><td>编码</td><td>58篇BIO重算通过；271对已严格标记编码，最长333 tokens</td></tr><tr><td>完整工程回归</td><td>373通过 / 234.53秒 / D隔离tmp；无失败或跳过</td></tr><tr><td>失败记录</td><td>曾在review未封存时提前请求snapshot，被缺manifest拒绝，未写输出；等待原review完成后再推进</td></tr><tr><td>没有执行</td><td>dev/test摘要或标签消费、模型训练/推理、写库/重启/晋级；C历史rename未修</td></tr></tbody></table><p>mle-workflow约束来源、论文身份隔离与未决遮罩。下一步另锁使用新版数据的单一模型对照与资源预算；四篇同任务族基准仍不能证明跨领域泛化、独立评估或长尾消歧完成。</p><footer>证据页生成时间：2026-10-08T11:58:51.506726+00:00<br>来源：<div class="path">sources/annotations/course_v4/abstract_benchmark_reviews_20261008_45.json</div><div class="path">sources/kg_datasets/dblp/course_abstract_benchmark_sources_20261008_45/requests.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

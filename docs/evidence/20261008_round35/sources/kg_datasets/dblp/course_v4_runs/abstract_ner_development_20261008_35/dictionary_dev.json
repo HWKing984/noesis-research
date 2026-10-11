@@ -1,0 +1,40 @@
+{
+  "micro": {
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "truePositive": 25,
+    "predicted": 43,
+    "reference": 184,
+    "precision": 0.5813953488372093,
+    "recall": 0.1358695652173913,
+    "f1": 0.22026431718061673
+  },
+  "perClass": {
+    "METHOD": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 20,
+      "predicted": 38,
+      "reference": 116,
+      "precision": 0.5263157894736842,
+      "recall": 0.1724137931034483,
+      "f1": 0.2597402597402597
+    },
+    "TASK": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 4,
+      "predicted": 4,
+      "reference": 53,
+      "precision": 1.0,
+      "recall": 0.07547169811320754,
+      "f1": 0.14035087719298245
+    },
+    "DATASET": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 1,
+      "predicted": 1,
+      "reference": 15,
+      "precision": 1.0,
+      "recall": 0.06666666666666667,
+      "f1": 0.125
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "arxivId": "2406.01574",
+  "sourceTextSha256": "bbe7a23fa314b12eab53fcb30fa8994e0db7f7d919913cd51010090bebda3b1e",
+  "oldReceiptSha256": "9f68ec8d5fe3dd3457d4bc0b44f741b6433acd3a71a87e919fb8f1a6ce3b532b",
+  "newReceiptSha256": "c917b2219c046cc8ed24344b966d190d6c9fc29b1351766bc0bebaa4219c01fc",
+  "addedEntity": {
+    "start": 14,
+    "end": 41,
+    "text": "large-scale language models",
+    "label": "METHOD"
+  },
+  "oldToNewEntityIds": {
+    "e1": "e2",
+    "e2": "e3",
+    "e3": "e4",
+    "e4": "e5",
+    "e5": "e6",
+    "e6": "e7",
+    "e7": "e8",
+    "e8": "e9",
+    "e9": "e10",
+    "e10": "e11",
+    "e11": "e12",
+    "e12": "e13",
+    "e13": "e14",
+    "e14": "e15",
+    "e15": "e16",
+    "e16": "e17",
+    "e17": "e18",
+    "e18": "e19"
+  },
+  "oldCandidates": 45,
+  "newCandidates": 60,
+  "newUnknownPairs": 15,
+  "oldRelationLabelsEvidenceReasonsPreserved": true,
+  "independent": false
+}

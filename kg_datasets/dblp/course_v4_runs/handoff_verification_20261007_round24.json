@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-07T03:16:16.676876+00:00",
+  "sourceCopiesVerified": 17,
+  "relativeDocumentLinksChecked": 270,
+  "missingLinks": [],
+  "documentsSha256": {
+    "README.md": "d3cd7f0333f55136d4dc2ba6a53ff596a7c0caef60cb52cce81831f3fcf898a4",
+    "docs/course_v4_progress.md": "114c206442f81beed9ea7b0a95062285d11e0ffd7352667ab0f0f2d36c67be7b",
+    "docs/course_v4_plan.md": "73d99c184e520fc96019145e5da14ded22ee99a11ac81e016fa3da90658642fc",
+    "docs/course_v4_runbook.md": "00f62ae98c0d58437f2383f1abe0bc45a13ab0a41854d9d073aa81dc1248cce8",
+    "docs/course_v4_report_evidence.md": "e904d4f4d88f33cf752637367a111373915cde0056b130349f4a3184ca88ecb7",
+    "docs/course_v4_data_expansion_round24.md": "caa96b91fe7d97c5d39def608c77c4c24df13714bcf3c927ad28c61443995cd8"
+  },
+  "evidenceManifestSha256": "0141ccd98a86db04b539b84c5d4eea0e169f115c106aed6677614345fba25aa8",
+  "capturesSha256": "4ba90fe0051ce86a536a4f08d5937004b4a6703daa03a901fcfc8722cd84e737",
+  "imageSha256": "c5ac7a79ed81c6c63d81fe75ad6b45f40f3641654af9d602b2aa8e980aa8ce05",
+  "imageBytes": 194924,
+  "imageSize": [
+    1280,
+    2300
+  ],
+  "visualReview": "actual saved screenshot viewed; full body and footer visible without clipping",
+  "authoredSourcesMatchSealedRun": true,
+  "initialHandoffCheck": "Only this not-yet-written report link was missing; verified after creation.",
+  "pending": 0,
+  "humanGold": false,
+  "independentReviewer": false
+}

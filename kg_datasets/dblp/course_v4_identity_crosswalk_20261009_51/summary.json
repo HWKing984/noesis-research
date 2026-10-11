@@ -1,0 +1,20 @@
+{
+  "signatures": 88762,
+  "previousUnresolved": 9064,
+  "recoveredSignatures": 2,
+  "remainingUnresolved": 9062,
+  "decisionCounts": {
+    "no_valid_orcid": 7396,
+    "no_disambiguated_crosswalk": 1657,
+    "exact_base_name_mismatch": 1,
+    "single_publication_support_only": 6,
+    "recovered_source_crosswalk": 2,
+    "contradictory_orcid_authority": 2
+  },
+  "globalORCIDSignaturesExamined": 11910,
+  "ORCIDConflicts": 2,
+  "fuzzyMatching": false,
+  "databaseWritten": false,
+  "independentRealWorldVerification": false,
+  "notice": "New links require unique ORCID-to-exact-DBLP-profile binding from >=2 other publications and compatible exact base name; source attribution, not independent identity verification."
+}

@@ -1,0 +1,14 @@
+{
+  "policy": "Actual whole-source train-only AI reading after four-source selection lock. Reuse continuous METHOD/TASK/DATASET scope, not title labels. Named benchmark aliases are DATASET, technical reading/QA tasks are TASK, identifiable classifier/network families are METHOD; unnamed state-of-the-art models, generic systems, human student skills, URLs and Wikipedia provenance are not invented entities. Only explicit local positive assertions; unknown pairs are not negatives. Targeted external papers are not evaluation samples or independent gold.",
+  "testAccessed": false,
+  "devAccessed": false,
+  "nerStatus": "AI completeness claim, not independent semantic validation",
+  "relationStatus": "Unresolved candidates retained and excluded from negative training",
+  "iterationCompact": {
+    "goal": "Whole-abstract DATASET support with source-bound labels",
+    "baseline": "8 excerpts do not annotate whole abstracts",
+    "mistakeBudget": "No source rewriting, title label copying, implied evaluated-on labels or negative filling",
+    "nextExperiment": "Same-session AI review and strict token/offset round-trip preflight",
+    "promotionAllowed": false
+  }
+}

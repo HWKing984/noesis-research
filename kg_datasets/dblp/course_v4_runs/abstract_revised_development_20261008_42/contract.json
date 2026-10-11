@@ -1,0 +1,73 @@
+{
+  "version": "abstract_revised_training_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_eval_attribution_reviewed_20261008_41",
+  "snapshotManifestSha256": "df4521554df1fd4997dc0aad0fc9d7e1e85ab4031edbc12f4632374efd434083",
+  "revisionContract": "resources/course_abstract_eval_attribution_v1.json",
+  "revisionContractSha256": "7fe79c3e544b2df732ae56102a21b7ef3c5965124553c66ad76e6a4d74a0e6bf",
+  "NERParent": "resources/course_abstract_v1.json",
+  "NERParentSha256": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+  "REParent": "resources/course_abstract_relation_v1.json",
+  "REParentSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "textKind": "abstract",
+  "maxTokens": 512,
+  "training": "Exactly one NER and one RE fit, each inheriting the frozen parent settings: seed20261008, 6epochs, batch2/4, lr2e-5, old08/old15 initialization. No hyperparameter search, retries, threshold search or candidate warm-start.",
+  "optimizer": {
+    "weightDecay": 0.01,
+    "clipGradientNorm": 1.0
+  },
+  "precision": "deterministic_eager_FP32_no_TF32",
+  "initialRunManifests": {
+    "NER": "be3e49a72ac661f1ab118d83b96655198c6170c422ddfac45e53dc509bdb5054",
+    "RE": "b857e74d2e66712892d45d32ccf92ae471a0878a28b0fc6174deb5ef90e156a5"
+  },
+  "rowContract": "Serialized row contractSha256 remains the RE parent hash; validate rows_for against reviewed receipts exactly, do not rewrite it as revision or experiment hash. Bind these other contracts separately.",
+  "expected": {
+    "train": {
+      "queue": 58,
+      "ner": 50,
+      "relation": 267,
+      "full_relation": 6,
+      "excluded_ner": 8,
+      "unknown": 1578,
+      "eligiblePairs": 1845,
+      "support": {
+        "USED_FOR": 183,
+        "EVALUATED_ON": 58,
+        "NO_RELATION": 26
+      }
+    },
+    "dev": {
+      "queue": 19,
+      "ner": 16,
+      "relation": 333,
+      "full_relation": 7,
+      "excluded_ner": 3,
+      "unknown": 99,
+      "eligiblePairs": 432,
+      "support": {
+        "USED_FOR": 259,
+        "EVALUATED_ON": 8,
+        "NO_RELATION": 66
+      }
+    }
+  },
+  "baselineNER": {
+    "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_development_20261008_35/checkpoint_epoch_04",
+    "weightsSha256": "14a1cce3d3cf5da3ac61e6bd651d14713215879b5ce679bd56ec8d2b47e87a96",
+    "runManifestSha256": "95a3c250100aa89452af0381f142f4a6b9df3e1336a1c4ed956b386e01f5a269"
+  },
+  "baselinePolicy": "Frozen35 abstract NER plus old15 RE is the prior abstract development baseline, not the production old08 NER. Re-infer all 4 old35/new42 NER x old15/new42 RE combinations on the same new 7 complete dev documents and 107 reference pairs. Additionally report the old08 initialization transfer NER baseline from the fit. Never reuse old 5-document pipeline scores or cached predictions.",
+  "selection": {
+    "NER": "strict_dev_entity_micro_f1_earliest_tie",
+    "RE": "conditional_dev_all_class_macro_f1_earliest_tie",
+    "pipeline": "diagnostic_only_after_selected_checkpoints_no_selection_or_retuning"
+  },
+  "labels": "AI source judgments and same-session self-review, not independent gold. Previously exposed dev used for model selection; no claim of blind or final accuracy.",
+  "unknownPolicy": "Mask UNRESOLVED entirely from RE loss and module score. Full pipeline only on complete documents including true zero-candidate documents; score all predicted pairs without reference-entity masking.",
+  "promotionGates": "Inherit all parent NER promotionGates without relaxation. Compare candidate newNER/newRE to frozen35NER/old15RE on the same new full dev scope. Full EVAL support, not partial module support, controls pipeline readiness. Currently coverage7/19 and full EVAL0 already block promotion.",
+  "testPolicy": "Do not read, label, tokenize or infer reserved or old test content. Binary integrity hashes allowed. No final-test lock or execution in this experiment.",
+  "deployment": "No production inference, graph/database writes, service restart, automatic promotion or replacement. Preserve all historical snapshots/weights/scores.",
+  "checkpointPolicy": "Save every strictly improved checkpoint in a new run, earliest tie; preserve failures. Preflight worst-case 6 checkpoints per model plus 1GB reserve; no deletion of user or historical assets.",
+  "reportExpansionPaused": true,
+  "automaticPromotionAllowed": false
+}

@@ -1,0 +1,10 @@
+{
+  "blocked_candidate_pairs": 588605,
+  "suggestions": 12,
+  "threshold": 0.82,
+  "max_anchor_document_frequency": 60,
+  "year_gap_max": 3,
+  "groups_changed": false,
+  "human_review_complete": false,
+  "limitation": "Heuristic rare-token blocking; not exhaustive. Name overlap is not identity proof. Similar titles may be different works."
+}

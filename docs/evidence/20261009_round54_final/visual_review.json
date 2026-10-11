@@ -1,0 +1,7 @@
+{
+  "acceptedForFinalEvidence": false,
+  "review": "Actual browser captures visually inspected. Training metrics and curve are visible, but the training page footer/source list is clipped at the fixed1450px viewport; relation comparison page is complete.",
+  "rawExperimentModified": false,
+  "capturesPreserved": true,
+  "nextAction": "Compact the training-page layout only and capture a new evidence folder; do not overwrite these screenshots or claim this folder passed final visual review."
+}

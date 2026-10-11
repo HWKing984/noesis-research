@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://api.crossref.org/works/10.1109/IJCNN60899.2024.10651323",
+    "requestedAtUTC": "2026-10-10T02:02:50.868885+00:00",
+    "status": 200,
+    "finalURL": "https://api.crossref.org/works/10.1109/IJCNN60899.2024.10651323",
+    "rawFile": "crossref_01.json",
+    "rawSha256": "3b408ca2dba622854d7d06e7a50ba10a5060bebf84f2a7836c8a08f7a04337ae",
+    "bytes": 6167
+  },
+  {
+    "url": "https://api.crossref.org/works/10.1109/KSE59128.2023.10299416",
+    "requestedAtUTC": "2026-10-10T02:02:54.000532+00:00",
+    "status": 200,
+    "finalURL": "https://api.crossref.org/works/10.1109/KSE59128.2023.10299416",
+    "rawFile": "crossref_02.json",
+    "rawSha256": "7ae5e9952a373fb06cba9d97ac8c507d738ad0754e44fd0b360cc513a871b40e",
+    "bytes": 5793
+  }
+]

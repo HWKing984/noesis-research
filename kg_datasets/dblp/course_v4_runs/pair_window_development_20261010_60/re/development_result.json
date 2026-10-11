@@ -1,0 +1,235 @@
+{
+  "passed": true,
+  "task": "RE",
+  "trainInputs": 408,
+  "devInputs": 333,
+  "epochs": 6,
+  "steps": 612,
+  "bestCheckpoint": "checkpoint_epoch_06",
+  "baselineDev": {
+    "loss": 0.7142919654264527,
+    "metrics": {
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+      "entityScope": "reviewed_reference_entities",
+      "accuracy": 0.8558558558558559,
+      "positiveMicro": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 266,
+        "predicted": 313,
+        "reference": 267,
+        "precision": 0.8498402555910544,
+        "recall": 0.9962546816479401,
+        "f1": 0.9172413793103448
+      },
+      "positiveMacroF1": 0.9574468085106382,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 258,
+          "predicted": 305,
+          "reference": 259,
+          "precision": 0.8459016393442623,
+          "recall": 0.9961389961389961,
+          "f1": 0.9148936170212766
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 8,
+          "predicted": 8,
+          "reference": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NO_RELATION": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 19,
+          "predicted": 20,
+          "reference": 66,
+          "precision": 0.95,
+          "recall": 0.2878787878787879,
+          "f1": 0.4418604651162791
+        }
+      },
+      "confusionLabels": [
+        "USED_FOR",
+        "EVALUATED_ON",
+        "NO_RELATION"
+      ],
+      "confusionMatrix": [
+        [
+          258,
+          0,
+          1
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          47,
+          0,
+          19
+        ]
+      ],
+      "confusionAxes": "rows_reference_columns_prediction"
+    }
+  },
+  "bestDev": {
+    "loss": 0.9138661200472054,
+    "metrics": {
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+      "entityScope": "reviewed_reference_entities",
+      "accuracy": 0.9039039039039038,
+      "positiveMicro": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 266,
+        "predicted": 297,
+        "reference": 267,
+        "precision": 0.8956228956228957,
+        "recall": 0.9962546816479401,
+        "f1": 0.9432624113475178
+      },
+      "positiveMacroF1": 0.9708029197080292,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 258,
+          "predicted": 289,
+          "reference": 259,
+          "precision": 0.8927335640138409,
+          "recall": 0.9961389961389961,
+          "f1": 0.9416058394160584
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 8,
+          "predicted": 8,
+          "reference": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NO_RELATION": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 35,
+          "predicted": 36,
+          "reference": 66,
+          "precision": 0.9722222222222222,
+          "recall": 0.5303030303030303,
+          "f1": 0.6862745098039216
+        }
+      },
+      "confusionLabels": [
+        "USED_FOR",
+        "EVALUATED_ON",
+        "NO_RELATION"
+      ],
+      "confusionMatrix": [
+        [
+          258,
+          0,
+          1
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          31,
+          0,
+          35
+        ]
+      ],
+      "confusionAxes": "rows_reference_columns_prediction"
+    }
+  },
+  "simpleBaselineDev": {
+    "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+    "entityScope": "reviewed_reference_entities",
+    "accuracy": 0.8018018018018018,
+    "positiveMicro": {
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+      "truePositive": 267,
+      "predicted": 333,
+      "reference": 267,
+      "precision": 0.8018018018018018,
+      "recall": 1.0,
+      "f1": 0.89
+    },
+    "positiveMacroF1": 0.9434931506849316,
+    "supportedPositiveClasses": [
+      "USED_FOR",
+      "EVALUATED_ON"
+    ],
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 259,
+        "predicted": 325,
+        "reference": 259,
+        "precision": 0.796923076923077,
+        "recall": 1.0,
+        "f1": 0.886986301369863
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 8,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "NO_RELATION": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 0,
+        "predicted": 0,
+        "reference": 66,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusionLabels": [
+      "USED_FOR",
+      "EVALUATED_ON",
+      "NO_RELATION"
+    ],
+    "confusionMatrix": [
+      [
+        259,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        66,
+        0,
+        0
+      ]
+    ],
+    "confusionAxes": "rows_reference_columns_prediction"
+  },
+  "savedCheckpoints": 1,
+  "classifierAndEncoderChanged": true,
+  "reloadPredictionsIdentical": true,
+  "NERTrained": false,
+  "devUsedForGradient": false,
+  "testEvaluated": false,
+  "modelPromoted": false
+}

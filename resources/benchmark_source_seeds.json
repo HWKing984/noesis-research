@@ -1,0 +1,15 @@
+{
+  "purpose": "Source-verified, training-only enrichment candidates; not gold, not an unbiased test sample",
+  "verified_on": "2026-10-05",
+  "seeds": [
+    {"id": "1708.07747", "title": "Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms"},
+    {"id": "1804.07461", "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding"},
+    {"id": "1905.00537", "title": "SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems"},
+    {"id": "1606.05250", "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text"},
+    {"id": "2406.01574", "title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark"},
+    {"id": "2009.03300", "title": "Measuring Massive Multitask Language Understanding"},
+    {"id": "2107.03374", "title": "Evaluating Large Language Models Trained on Code"},
+    {"id": "2110.14168", "title": "Training Verifiers to Solve Math Word Problems"},
+    {"id": "1609.02907", "title": "Semi-Supervised Classification with Graph Convolutional Networks"}
+  ]
+}

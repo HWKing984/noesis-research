@@ -1,0 +1,37 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "policy": "Actual whole-source train-only AI reading after four-source selection lock. Reuse continuous METHOD/TASK/DATASET scope, not title labels. Named benchmark aliases are DATASET, technical reading/QA tasks are TASK, identifiable classifier/network families are METHOD; unnamed state-of-the-art models, generic systems, human student skills, URLs and Wikipedia provenance are not invented entities. Only explicit local positive assertions; unknown pairs are not negatives. Targeted external papers are not evaluation samples or independent gold.",
+  "documents": [
+    {
+      "arxivId": "1704.04683",
+      "textSha256": "4da6647f57f028a2dd5bcf91f170ff8d6b5fe4672ddf826a0985dcf23f1b26d2",
+      "mentions": {"DATASET": ["RACE"], "TASK": ["reading comprehension", "machine comprehension"]},
+      "notes": "RACE repeated benchmark mentions are correlated. Students' understanding/reasoning skills are not computational named tasks. The unnamed state-of-the-art methods/model group cannot supply a METHOD endpoint; zero scoped relation candidates is genuine, not synthetic negatives. The dataset name in URLs is protected, not labeled."
+    },
+    {
+      "arxivId": "1705.03551",
+      "textSha256": "58c8f59621fffdb1f7a38d0b5ec238235676513599728cf3bc2c6f0df45cfc46",
+      "mentions": {"DATASET": ["TriviaQA", "SQuAD"], "TASK": ["reading comprehension", "cross sentence reasoning"], "METHOD": ["feature-based classifier", "neural network"]},
+      "positives": [
+        {"head": "neural network", "tail": "SQuAD", "label": "EVALUATED_ON", "evidence": "We also present two baseline algorithms: a feature-based classifier and a state-of-the-art neural network, that performs well on SQuAD reading comprehension."},
+        {"head": "neural network", "tail": "reading comprehension", "label": "USED_FOR", "evidence": "We also present two baseline algorithms: a feature-based classifier and a state-of-the-art neural network, that performs well on SQuAD reading comprehension."},
+        {"head": "feature-based classifier", "tail": "TriviaQA", "label": "EVALUATED_ON", "evidence": "We also present two baseline algorithms: a feature-based classifier and a state-of-the-art neural network, that performs well on SQuAD reading comprehension. Neither approach comes close to human performance (23% and 40% vs. 80%), suggesting that TriviaQA is a challenging testbed that is worth significant future study."},
+        {"head": "neural network", "tail": "TriviaQA", "label": "EVALUATED_ON", "evidence": "We also present two baseline algorithms: a feature-based classifier and a state-of-the-art neural network, that performs well on SQuAD reading comprehension. Neither approach comes close to human performance (23% and 40% vs. 80%), suggesting that TriviaQA is a challenging testbed that is worth significant future study."}
+      ],
+      "notes": "Two specifically identified baseline families are methods; do not invent product/model names or apply the singular SQuAD clause to the classifier. The reported baseline performance supports the local final TriviaQA occurrence, not all cross-sentence family/task combinations. Source references elsewhere remain unresolved, not negatives."
+    },
+    {
+      "arxivId": "1809.09600",
+      "textSha256": "ed94ff65de5dab4bd9e37efd40b86219d1713ec93f8bfc34e5f85b11cba102d6",
+      "mentions": {"DATASET": ["HotpotQA"], "TASK": ["question answering", "QA"]},
+      "notes": "QA is the explicit task abbreviation, including task-modifier occurrences in QA systems. Generic QA systems and models are not identifiable METHOD endpoints. Wikipedia-based describes document provenance, not a named evaluation dataset here. Multi-hop question answering is not copied from the paper title; free-form finding/reasoning/explanation verbs do not become invented named tasks."
+    },
+    {
+      "arxivId": "1903.00161",
+      "textSha256": "9d69fb4f7a89b543b6bbf23611ad9ec98169e3900d4b158cf336a803d5df044d",
+      "mentions": {"DATASET": ["DROP"], "TASK": ["Reading comprehension", "English reading comprehension", "reading comprehension", "Discrete Reasoning Over the content of Paragraphs", "addition", "counting", "sorting", "semantic parsing", "numerical reasoning"]},
+      "notes": "Retain the English qualification and paragraph object for distinct task occurrences; overlapping shorter reading-comprehension literals are covered by the longer same-class entity. Addition/counting/sorting are explicitly described computational operations over paragraph/question operands, not educational subject names. Semantic parsing names a technical task even in literature provenance, not an academic domain or method product. Numerical reasoning is a stated computational objective of the unnamed new model, not an invented METHOD. Unnamed best systems/new model cannot supply an evaluation endpoint, despite the reported F1 values."
+    }
+  ]
+}

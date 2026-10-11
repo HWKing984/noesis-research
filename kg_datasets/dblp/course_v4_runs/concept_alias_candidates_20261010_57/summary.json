@@ -1,0 +1,26 @@
+{
+  "concepts": 11,
+  "mentions": 30,
+  "potentialNodeReductions": 6,
+  "kind": "candidate_not_graph_migration",
+  "actualNodeReductions": 0,
+  "localDefinitionGroups": 2,
+  "spellingOnlyGroups": 1,
+  "proposalGroups": 2,
+  "abstractSourcesUsed": false,
+  "modelPromoted": false,
+  "graphMigrated": false,
+  "trainingAllowed": false,
+  "independentHumanGold": false,
+  "primaryUrlsAreExtractionFacts": false,
+  "confidenceProvided": false,
+  "modelSourceManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+  "historicalWeightsSha256FromSourceManifest": {
+    "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04/model.safetensors": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03/model.safetensors": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+  },
+  "weightsReverifiedLive": false,
+  "inferenceExecuted": false,
+  "abstractSourceSha256": null,
+  "notice": "Primary URLs are audit pointers, not corpus-extraction facts or downloaded source receipts. No live graph, retrieval or model-quality improvement is claimed. No calibrated confidence. Existing corpus titles include prior publicly processed samples; this candidate package is never training data."
+}

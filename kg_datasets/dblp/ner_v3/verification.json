@@ -1,0 +1,337 @@
+{
+  "captured_at_utc": "2026-10-05T07:35:27.866372+00:00",
+  "schema_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+  "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "D:\\a-open_source\\neo4j\\.venv-validation\\Scripts\\python.exe",
+  "installed_packages": [
+    "attrs==26.1.0",
+    "colorama==0.4.6",
+    "coverage==7.16.2",
+    "iniconfig==2.3.0",
+    "jsonschema==4.26.0",
+    "jsonschema-specifications==2025.9.1",
+    "lxml==6.0.2",
+    "packaging==26.3",
+    "pluggy==1.6.0",
+    "Pygments==2.21.0",
+    "pytest==9.0.3",
+    "pytest-cov==7.0.0",
+    "referencing==0.37.0",
+    "rpds-py==2026.9.1"
+  ],
+  "playwright_version": "1.62.1",
+  "tests": {
+    "command": [
+      "D:\\a-open_source\\neo4j\\.venv-validation\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests",
+      "-q",
+      "--cov=annotation_v3",
+      "--cov=prepare_revision_v3",
+      "--cov-branch",
+      "--cov-report=term-missing",
+      "--cov-report=json:D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\ner_v3\\coverage.json"
+    ],
+    "exit_code": 0,
+    "output": "........................................................................ [ 43%]\n........................................................................ [ 86%]\n.......................                                                  [100%]\n=============================== tests coverage ================================\n_______________ coverage: platform win32, python 3.13.3-final-0 _______________\n\nName                             Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------------------\nscripts\\annotation_v3.py           175      0    102      0   100%\nscripts\\prepare_revision_v3.py     141      0     60      0   100%\n----------------------------------------------------------------------------\nTOTAL                              316      0    162      0   100%\nCoverage JSON written to file D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\ner_v3\\coverage.json\n167 passed in 4.87s\n"
+  },
+  "browser": {
+    "v1": {
+      "command": [
+        "node",
+        "tests/test_pilot_review.cjs",
+        "C:\\Users\\Y7000P\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"passed\": true,\n  \"mode\": \"headless chromium\",\n  \"checks\": [\n    \"load 200-title pilot\",\n    \"explicit reviewer required\",\n    \"editing clears reviewed status\",\n    \"navigation preserves edits\",\n    \"JSONL export and restore\",\n    \"mismatched source rejected\",\n    \"Unicode codepoint selection\",\n    \"remove entity\",\n    \"load 100 rare candidates\",\n    \"no page errors\"\n  ],\n  \"fixtures_only\": true,\n  \"real_annotations_modified\": false\n}\n"
+    },
+    "v2": {
+      "command": [
+        "node",
+        "tests/test_review_v2.cjs",
+        "C:\\Users\\Y7000P\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright",
+        "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\ner_v2_1"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"passed\": true,\n  \"checks\": [\n    \"schema-derived enums\",\n    \"seven metadata tamper cases rejected\",\n    \"entity review does not complete relation review\",\n    \"notes invalidate review\",\n    \"export/import roundtrip\",\n    \"incomplete/unresolved relation gold rejected\",\n    \"explicit candidate decisions accepted\",\n    \"invalid review import rejected\",\n    \"two truly blank blind pages\",\n    \"Unicode selection and entity deletion\",\n    \"rare page load\",\n    \"no page errors\"\n  ],\n  \"real_dataset_modified\": false\n}\n"
+    },
+    "v3": {
+      "command": [
+        "node",
+        "tests/test_review_v3.cjs",
+        "C:\\Users\\Y7000P\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright",
+        "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\ner_v3"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"passed\": true,\n  \"checks\": [\n    \"45 source-declared AI candidate spans; all draft\",\n    \"schema-derived mention forms\",\n    \"explicit reviewer required\",\n    \"human confirmation keeps AI initial provenance\",\n    \"missing form and provenance tamper rejected\",\n    \"group individual relationships rejected\",\n    \"scoped completion does not imply no other relationships\",\n    \"form edit invalidates entity and relation review\",\n    \"TASK dependency is excluded not negative\",\n    \"20 and 50 truly blank pages\",\n    \"AI progress cannot contaminate blind input\",\n    \"human manual span retains source offsets/form\",\n    \"200/100 pages load\",\n    \"no page errors\"\n  ],\n  \"real_dataset_modified\": false\n}\n"
+    }
+  },
+  "coverage": {
+    "covered_lines": 316,
+    "num_statements": 316,
+    "percent_covered": 100.0,
+    "percent_covered_display": "100",
+    "missing_lines": 0,
+    "excluded_lines": 0,
+    "percent_statements_covered": 100.0,
+    "percent_statements_covered_display": "100",
+    "num_branches": 162,
+    "num_partial_branches": 0,
+    "covered_branches": 162,
+    "missing_branches": 0,
+    "percent_branches_covered": 100.0,
+    "percent_branches_covered_display": "100"
+  },
+  "validations": {
+    "pilot_200.jsonl": {
+      "valid": true,
+      "documents": 200,
+      "entity_counts": {
+        "METHOD": 133,
+        "TASK": 70,
+        "DATASET": 1
+      },
+      "reviews": {
+        "entity_review": {
+          "draft": 200
+        },
+        "relation_review": {
+          "draft": 200
+        },
+        "domain_review": {
+          "draft": 200
+        }
+      },
+      "errors": [],
+      "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+      "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+      "scope_exclusion_counts": {
+        "TASK_TO_TASK_OUT_OF_SCOPE": 5,
+        "COORDINATED_INDIVIDUAL_RELATIONS_EXCLUDED": 1
+      },
+      "schema_status": "candidate_pending_human_pilot",
+      "training_ready": false,
+      "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+    },
+    "rare_candidates_train.jsonl": {
+      "valid": true,
+      "documents": 100,
+      "entity_counts": {
+        "METHOD": 82,
+        "TASK": 13,
+        "DATASET": 6
+      },
+      "reviews": {
+        "entity_review": {
+          "draft": 100
+        },
+        "relation_review": {
+          "draft": 100
+        },
+        "domain_review": {
+          "draft": 100
+        }
+      },
+      "errors": [],
+      "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+      "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+      "scope_exclusion_counts": {
+        "TASK_TO_TASK_OUT_OF_SCOPE": 1
+      },
+      "schema_status": "candidate_pending_human_pilot",
+      "training_ready": false,
+      "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+    },
+    "blind_50_reference.jsonl": {
+      "valid": true,
+      "documents": 50,
+      "entity_counts": {
+        "METHOD": 0,
+        "TASK": 0,
+        "DATASET": 0
+      },
+      "reviews": {
+        "entity_review": {
+          "draft": 50
+        },
+        "relation_review": {
+          "draft": 50
+        },
+        "domain_review": {
+          "draft": 50
+        }
+      },
+      "errors": [],
+      "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+      "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+      "scope_exclusion_counts": {},
+      "schema_status": "candidate_pending_human_pilot",
+      "training_ready": false,
+      "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+    },
+    "pilot20_ai_candidates.jsonl": {
+      "valid": true,
+      "documents": 20,
+      "entity_counts": {
+        "METHOD": 23,
+        "TASK": 21,
+        "DATASET": 1
+      },
+      "reviews": {
+        "entity_review": {
+          "draft": 20
+        },
+        "relation_review": {
+          "draft": 20
+        },
+        "domain_review": {
+          "draft": 20
+        }
+      },
+      "errors": [],
+      "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+      "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+      "scope_exclusion_counts": {
+        "TASK_TO_TASK_OUT_OF_SCOPE": 3,
+        "COORDINATED_INDIVIDUAL_RELATIONS_EXCLUDED": 1
+      },
+      "schema_status": "candidate_pending_human_pilot",
+      "training_ready": false,
+      "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+    },
+    "pilot20_blind_reference.jsonl": {
+      "valid": true,
+      "documents": 20,
+      "entity_counts": {
+        "METHOD": 0,
+        "TASK": 0,
+        "DATASET": 0
+      },
+      "reviews": {
+        "entity_review": {
+          "draft": 20
+        },
+        "relation_review": {
+          "draft": 20
+        },
+        "domain_review": {
+          "draft": 20
+        }
+      },
+      "errors": [],
+      "contract_sha256": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+      "boundary_rules_sha256": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+      "scope_exclusion_counts": {},
+      "schema_status": "candidate_pending_human_pilot",
+      "training_ready": false,
+      "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+    }
+  },
+  "source_review": {
+    "documents": 20,
+    "proposed_entities": 46,
+    "proposed_by_label": {
+      "METHOD": 24,
+      "TASK": 21,
+      "DATASET": 1
+    },
+    "baseline_entities": 21,
+    "strict_matches": 10
+  },
+  "source_abstracts": {
+    "abstract_sources": {
+      "records": 10,
+      "title_matches": 9,
+      "reference_providers": [
+        "DBLP"
+      ],
+      "hashes_verified": true,
+      "candidate_boundary_verified": true,
+      "scope_source": "scope_policy.json",
+      "merged_into_ner": false,
+      "human_annotations": 0
+    },
+    "benchmark_abstract_sources": {
+      "records": 9,
+      "title_matches": 9,
+      "reference_providers": [
+        "arXiv"
+      ],
+      "hashes_verified": true,
+      "candidate_boundary_verified": true,
+      "scope_source": "request.json",
+      "merged_into_ner": false,
+      "human_annotations": 0
+    }
+  },
+  "all_draft_gold_scopes_rejected": true,
+  "blind_answers_and_notes_empty": true,
+  "ai_and_blind20_ids_texts_match": true,
+  "cross_training_candidate_groups": 0,
+  "v1_outputs_unchanged": true,
+  "v2_outputs_unchanged": true,
+  "previous_package_integrity": {
+    "files_checked": 64,
+    "zip_sha256": "87adc485e8dd1bb6ab8eb0be081db01af3709cc427f6200e3d6c9e2d0cfc9b1d"
+  },
+  "previous_package_unchanged": true,
+  "v2_sources_unchanged": true,
+  "raw_dblp_source_unchanged": true,
+  "source_csvs_unchanged": true,
+  "initial_outputs_unchanged": true,
+  "code_sha256": {
+    "scripts/annotation_core.py": "c4f25772112cc5c75849b5e6a424dd77227e2cf0bd7a233d69f8cd481bcb7e56",
+    "scripts/annotation_v2.py": "789ff314bbf4da064008ce63275e3d457c7113714dcc1bfdb96755377a3d91b1",
+    "scripts/annotation_v3.py": "24b02f1c9803b9399fd2356f5cbc95d99984405fc7f50ceebf8f078ce11850b5",
+    "scripts/compare_entity_annotations.py": "dc0a5f903457aa2ea8720cb7a018cd6d01d86282f3288398a8105557f5b1edd4",
+    "scripts/compare_entity_annotations_v3.py": "f5ca20bd85c7f0863ba1e76de9098cbd38e9bfee5215cb6f3ade70e1929ee425",
+    "scripts/export_review_package.py": "b11042f9f5fcbc11d9f8fee805f28284653d26f22c23cfa97c0b3942aa7b8dcb",
+    "scripts/fetch_abstract_pilot.py": "eadc8583ce16ff7ffe72636b484b576d6494bcd810b88ec292e3038c266db620",
+    "scripts/find_near_duplicates.py": "8474d2af4a37b3de6af0cde49b5c4424ca12677a9ee5cc77a687fb06fd4c5e5c",
+    "scripts/prepare_ner.py": "471514fb48382e5c2025c616927428e5106849646d94f2810b674ed23bc771dc",
+    "scripts/prepare_rare_candidates.py": "b66dd0df586db1c6e14f6805d87cb7a2cf68c7e4c2a945f969f334197b316509",
+    "scripts/prepare_revision_v2.py": "0a3c77c0cd527f89115438b2dc50d9d94812c5ce79dfc6690e3a9cb6c7478b47",
+    "scripts/prepare_revision_v3.py": "99658d7c756481045a9b4cf0dbe85a46b7c9554fc777602178e742346958316c",
+    "scripts/process_dblp_ai.py": "efc22715bc7b413c110930a468d2ff6ec762c32b73b5c54849e6433dc053d3d2",
+    "scripts/replay_review_package.py": "e6fb61627684ec05fd6aa0e259fde2bbef7dd0f4c77a67d05b0f1b6a48ca4fd8",
+    "scripts/replay_review_package_v3.py": "22103117b64627a26d3b01fcaf2c19b9449acb587fda551b99acc2381cb573aa",
+    "scripts/run_preparation_checks.py": "06696ba283d6d8f9c05898cbe84169d80e3daaa1749ea05c996de0be2211ad76",
+    "scripts/verify_export_v2.py": "fca954fe746cbe3f97cf7dafe2533d660daaece60090154a0b7ea3d196f10649",
+    "scripts/verify_export_v3.py": "95f32d8a80712ea4797c9350d435df1c0b5f83d8371f05e14e6f27dd87beede0",
+    "tests/test_annotation.py": "e5b78385a4fd5a399f0c46e25bab06e6f8ee010b5b4ab6405f919bc8983f4a3c",
+    "tests/test_annotation_v2.py": "2b8e8f7057ecbfac7efdf98ada9c9d72687da7a8a62853d454c6cb95e3a27e00",
+    "tests/test_annotation_v3.py": "737380fe3812d5ee625cf0575bf360f54b9e17c43e28cc3de345fb57918ac84f",
+    "tests/test_boundary_v3.py": "7de93ac25b73f64d05f4c5b9bf7bee37306b9639ce0c38c725acd34b2749f7a7",
+    "tests/test_package_v2.py": "8b4c9434b3028ffbda6e327ec16be54b3ab7c2a16ffb01c2ea20f3b3f0aad696",
+    "tests/test_pilot_review.cjs": "1ca59036dc396c6e30154d736ba8888dac9de31eaad3ab3ad84489af51376f7e",
+    "tests/test_preparation_v2.py": "8caf935fa1c0317f1c390fab65a163f825843f718dfbbd6f319bcfa8cc3d325d",
+    "tests/test_preparation_v3.py": "88ed7de645f1c0a0cb5cff4460f426b12821d57e61bd16871ef59fac439561e2",
+    "tests/test_process_dblp_ai.py": "ea93b8e80d8163c42a7bf0b27b33a997829aa3bdba1373c881617ddf11e953d0",
+    "tests/test_review_v2.cjs": "aa007c86eb659640f27f948c89906aeb02234ca8457804f3226029bd92e76453",
+    "tests/test_review_v3.cjs": "ad1357ae9dab35648ac39e28efa1d87bddbe642c35c2e0d5e2e9a8bb77eda751",
+    "tests/test_source_and_duplicates.py": "69f2fde8c6f41da309ddce7affb87a21adf730fb2fb2faea591f140fcfc462cf",
+    "docs/annotation_guidelines.md": "ccde5b8b22152b32beebb439433fa16eef4a21f61e899ae8da92ebb00a5555bb",
+    "docs/annotation_guidelines_v2.md": "9e3acbe008940090e68cd67de50e4d1547f1fb083e29aa931c00eb6bf892b8fd",
+    "docs/annotation_guidelines_v3.md": "2488e4ab17383e53fb151b9274317abc7c1da5840c0989ed7576bb0081116284",
+    "docs/pilot_review_template.html": "dd2962c36cbca14b18f9c3a4009f7de4c31e222c126109b53cc6632a768ca143",
+    "docs/review_package_readme.md": "5de8286d49a330a5ec28f060040c86287fea7c51037650ba5fce33e5eb313fa1",
+    "docs/review_package_v2_readme.md": "3ff42c92b40597a4070d8daac28d26c18846ffe3e53fb742cc2e96050087f22c",
+    "docs/review_package_v3_readme.md": "617ae8943ac2ff50925d28f541b33a31eb8b6414214df3951560819f730f2998",
+    "docs/review_v2.js": "61fd2509341e26f8deb4ae6605a188d6fd2001a73b86ff14b4023cc64d0c73a9",
+    "docs/review_v2_template.html": "7b613ea4e66a5d32b4754f4c6b86f844ab07986633e51579bd5b3c0a0c576bab",
+    "docs/review_v3.js": "4b209522752d11943af09b397677be336cda6c759523acdba8214f0fb2ea0632",
+    "docs/review_v3_template.html": "4b803c0435ebc9c92204bad5d364c004f599efeca267b6582a6ca71c307235bf",
+    "schemas/annotation_v2.schema.json": "62a579f3a39f2b8fdc7fd9906378266a6d2102295aa8c3ecb98dd64a8eac8aba",
+    "schemas/annotation_v3.schema.json": "4fb3250934f8cc9e96b3db2c759f2dbe3a11c260add26b8fc3b5e07023b6855b",
+    "resources/benchmark_source_seeds.json": "b5d0116282f706e0f9897ce3bf7f45d4dd30b974a0daa8fe7a40ffda178705a3",
+    "resources/boundary_rules_v3.json": "af33a6707fcab372b1b06b8473ea617196155bd05e30e4858176674f3d6a51ce",
+    "resources/ner_draft_lexicon_v2.json": "787be86afbb511c614482a775a9213ab5d3b06074179aa93a06ca0ff32193ec9"
+  },
+  "human_gold_complete": false,
+  "schema_frozen": false,
+  "training_started": false,
+  "notice": "Source hashes and policy fixtures are not human semantic gold or independent model performance",
+  "passed": true
+}

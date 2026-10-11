@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ai-literature-kg:course-v4:ai-response",
+  "title": "Course v4 AI pseudo annotation response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sampleId", "textSha256", "reviewOfSha256", "entityStatus", "entityReason", "entities", "groupMentions", "relationStatus", "relationReason", "relations", "notes"],
+  "properties": {
+    "sampleId": {"type": "string", "pattern": "^sample-[0-9a-f]{20}$"},
+    "textSha256": {"$ref": "#/$defs/hash"},
+    "reviewOfSha256": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+    "entityStatus": {"enum": ["complete", "unresolved"]},
+    "entityReason": {"type": "string"},
+    "entities": {"type": "array", "items": {"$ref": "#/$defs/entity"}},
+    "groupMentions": {"type": "array", "items": {"$ref": "#/$defs/group"}},
+    "relationStatus": {"enum": ["complete", "unresolved"]},
+    "relationReason": {"type": "string"},
+    "relations": {"type": "array", "items": {"$ref": "#/$defs/relation"}},
+    "notes": {"type": "string"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "span": {
+      "type": "object", "additionalProperties": false,
+      "required": ["start", "end", "text"],
+      "properties": {"start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 1}, "text": {"type": "string", "minLength": 1}}
+    },
+    "entity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["entityId", "start", "end", "text", "label"],
+      "properties": {
+        "entityId": {"type": "string", "pattern": "^e[1-9][0-9]*$"},
+        "start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1}, "label": {"enum": ["METHOD", "TASK", "DATASET"]}
+      }
+    },
+    "group": {
+      "type": "object", "additionalProperties": false,
+      "required": ["groupId", "start", "end", "text", "label"],
+      "properties": {
+        "groupId": {"type": "string", "pattern": "^g[1-9][0-9]*$"},
+        "start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1}, "label": {"const": "METHOD"}
+      }
+    },
+    "relation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["head", "tail", "label", "evidence", "reason"],
+      "properties": {
+        "head": {"type": "string"}, "tail": {"type": "string"},
+        "label": {"enum": ["USED_FOR", "EVALUATED_ON", "NO_RELATION", "UNRESOLVED"]},
+        "evidence": {"anyOf": [{"$ref": "#/$defs/span"}, {"type": "null"}]},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "inputSha256": {
+    "kg_datasets\\dblp\\course_v2_sampling_20261011_final\\manifest.json": "2bacd20461c2dacec54c30b172ca4af0589847edcbceabc8f20aa5b868bc0666",
+    "kg_datasets\\dblp\\course_v2_sampling_20261011_final\\summary.json": "c7e9d7bfc193a763ea2eb1e62bf7184f17f3d16e49876ae46d02f94b78be9af8",
+    "kg_datasets\\dblp\\course_v2_sampling_20261011_final\\sampling_frame.json": "9753c2a51bc06c75b8e9e4e447bc1d5896f421fbaf2cf546fb29a6e949885768",
+    "kg_datasets\\dblp\\course_v2_sampling_20261011_final\\selected_members.json": "69fabcefd99ca086a625a45849dfeb23f1ffcf9fa36bee9ae583992a226da14d",
+    "kg_datasets\\dblp\\course_v2_sampling_20261011_final\\negative_candidates.jsonl": "81370bb613315c3563060afdd8e33757680b8e9459e4ab06ca98d481a4b893fa",
+    "kg_datasets\\dblp\\course_v2_sampling_20261011\\manifest.json": "1511f568d02dbab3f143168d7b6e448ce73b6d8b92bd14e8f524e1ace665e10c",
+    "outputs\\v2_sampling_verified_20261011.xml": "7df53e0f4e4007602b6132dba737cc52e4f58a733c9bace73b83437337e7843b",
+    "scripts\\export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad"
+  },
+  "filesSha256": {
+    "09_annotation_expansion.html": "9c5fae8e430e46e8c01af71fec935d7e51c67ea60fd50de4aba79fb05dc6456b",
+    "selected_metadata_review.csv": "98fc7f42b75c39a9f63c79b3d3d380f035670fa1ebf5eb27bfb5c1bf49756c67",
+    "selection_changes.json": "b79572ac41942c9ccc7f134fa96f59c04ffbc8a3e277763829edbd88a1cbda99"
+  },
+  "createdAtUTC": "2026-10-10T16:23:45.607587+00:00"
+}

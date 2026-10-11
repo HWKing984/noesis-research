@@ -1,0 +1,37 @@
+{
+  "kind": "actual_browser_render_capture",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-a5e733a99c73427e86817d99ddf59d7c",
+  "browserVersion": "154.0.4258.62",
+  "captures": [
+    {
+      "bytes": 90328,
+      "viewportHeight": 2300,
+      "sourcePage": "09_annotation_expansion.html",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_semantic_revision_20261010_final\\09_annotation_expansion.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-a5e733a99c73427e86817d99ddf59d7c",
+        "file:///D:/a-open_source/neo4j/kg_datasets/dblp/course_v2_semantic_revision_20261010_final/09_annotation_expansion.html"
+      ],
+      "originalConsoleScreenshot": false,
+      "capturedAt": "2026-10-10T11:36:15.1886472Z",
+      "image": "09_annotation_expansion.png",
+      "url": "file:///D:/a-open_source/neo4j/kg_datasets/dblp/course_v2_semantic_revision_20261010_final/09_annotation_expansion.html",
+      "sourcePageSha256": "53ec05dfbb4539f342206ca6e977f865d14d667f2832307da9895705c521480c",
+      "sha256": "9172ce7e96b6e26aedd986802d3f1c895b11854f8e28a9bb0ac646059fb7d18e"
+    }
+  ],
+  "renderer": "installed_Microsoft_Edge_headless",
+  "finishedAt": "2026-10-10T11:36:15.1978622Z",
+  "status": "completed",
+  "originalConsoleScreenshot": false,
+  "viewportWidth": 1280,
+  "generatedFromRealArtifacts": true
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "synthetic_cpu_model_contract_not_quality",
+  "orderedMarkerGather": true,
+  "bothTextOrders": true,
+  "noTargetsInForward": true,
+  "typeMask": true,
+  "encoderAndHeadGradients": true,
+  "safeReloadIdentical": true,
+  "malformedMarkerCasesRejected": 6,
+  "checkpointMismatchCasesRejected": 2
+}

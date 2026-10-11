@@ -1,0 +1,34 @@
+{
+  "version": "diverse_train_roles_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_role_enriched_20261009_53",
+  "snapshotManifestSha256": "862621313f1a1a0591f237ef9e9146952367d384a78587b10f3b5bed4692cb59",
+  "relationContract": "resources/course_abstract_relation_v1.json",
+  "relationContractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "revisionCohort": [
+    "2303.17448",
+    "2408.04326",
+    "2312.03556",
+    "2411.04637",
+    "2503.00416"
+  ],
+  "selection": "Train-only purposive source audit of five different topic abstracts outside the previous eleven role-reviewed papers. Sources and unresolved inventories were read before any new relation predictions. Not random sampling, independent evaluation, dev-error targeting or a source of prevalence estimates.",
+  "expected": {
+    "trainReferences": 70,
+    "NERTrainFrozen": 65,
+    "NERQuarantines": 5,
+    "knownPairs": 386,
+    "unknownPairs": 1971,
+    "eligiblePairs": 2357,
+    "addedSupport": {
+      "USED_FOR": 19,
+      "NO_RELATION": 3
+    }
+  },
+  "preservation": "Only UNRESOLVED pairs may be newly judged. All386 old resolved rows including receipt bindings stay identical; five selected papers previously had no known pairs. NER fields remain unchanged, frozen65 NER file and nine dev files remain opaque identical copies. Remaining unknowns are not negatives.",
+  "evidence": "Use the parent relation scope and explicit role-contrast negative policy. Only local supported occurrences; aliases are correlated. CelebAHQ-IDI training use is not EVALUATED_ON. Three negatives come from one paper, not three independent sources. The annotation-strategies source2411.04637 is tutorial prose, not original measured research.",
+  "review": "AI source judgments plus actual same-session source/pair self-review; ai_pseudo, independentHumanGold=false. No promotion or real-world accuracy claim.",
+  "trainingAllowed": false,
+  "testContentAccessAllowed": false,
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true
+}

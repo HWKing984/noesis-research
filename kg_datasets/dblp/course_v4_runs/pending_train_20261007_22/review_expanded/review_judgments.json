@@ -1,0 +1,1146 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "generationDecisionsSha256": "07a81b7f088cfe4b0d10a7160f98809affe862f939cd848fd5234f729595b986",
+  "judgments": [
+    {
+      "sampleId": "sample-90da3e038660735db9a2",
+      "verdict": "confirmed",
+      "reason": "Bioinformatics KG/data review names no algorithm, computational operation or dataset release."
+    },
+    {
+      "sampleId": "sample-2067ce64e026dd50c38a",
+      "verdict": "confirmed",
+      "reason": "Hardware acceleration overlaps the network target; optical infrastructure supplies no complete task boundary."
+    },
+    {
+      "sampleId": "sample-1a78c02e3ee783b0c48c",
+      "verdict": "confirmed",
+      "reason": "Active contours, variational level sets and ML are explicitly combined segmentation techniques."
+    },
+    {
+      "sampleId": "sample-a9fdeb0c132d1366325d",
+      "verdict": "confirmed",
+      "reason": "Networks label topics using unnamed images; complete operation/object retained."
+    },
+    {
+      "sampleId": "sample-b520cf3d43d79e9aefc9",
+      "verdict": "confirmed",
+      "reason": "Translation task retains memory constraint; no implementing algorithm is named."
+    },
+    {
+      "sampleId": "sample-b9a2c2e6f48326325fe8",
+      "verdict": "confirmed",
+      "reason": "L-BFGS optimizer and ML are method families; no METHOD-to-METHOD relation is invented."
+    },
+    {
+      "sampleId": "sample-447ff5abf7c224f28ccb",
+      "verdict": "confirmed",
+      "reason": "Translation is an implementing technique for geoparsing in this sentence, rather than its target."
+    },
+    {
+      "sampleId": "sample-7683bca554a5a315a30e",
+      "verdict": "confirmed",
+      "reason": "DL removes heterogeneous blur; motion flow is output framing, not DATASET."
+    },
+    {
+      "sampleId": "sample-9c3fd9c8788e8a26af6b",
+      "verdict": "confirmed",
+      "reason": "Deep CNN extracts sensor-based gait parameters; no gait benchmark is named."
+    },
+    {
+      "sampleId": "sample-2823cca4ac6e5c6577b8",
+      "verdict": "confirmed",
+      "reason": "Full CNN training task overlaps its target; FFT and overlap-and-add remain methods only."
+    },
+    {
+      "sampleId": "sample-d9adbc368e73a0b974f0",
+      "verdict": "confirmed",
+      "reason": "Neural translation explicitly supplies word-similarity embedding technique."
+    },
+    {
+      "sampleId": "sample-5b202a53a98edebdefd6",
+      "verdict": "revised",
+      "reason": "Expected output change is an acquisition criterion; guiding exploration alone does not establish task execution.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Active and Continuous Exploration",
+            "label": "TASK"
+          },
+          {
+            "text": "Deep Neural Networks",
+            "label": "METHOD"
+          },
+          {
+            "text": "Expected Model Output Changes",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Criterion versus task-executing role not fully specified.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "USED_FOR",
+            "reason": "Exploration explicitly uses DNNs."
+          },
+          {
+            "head": "e3",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "Acquisition criterion may select exploration inputs rather than execute the complete exploration task."
+          }
+        ],
+        "notes": "The acquisition criterion is literal; no unnamed exploration dataset.",
+        "sampleId": "sample-5b202a53a98edebdefd6"
+      }
+    },
+    {
+      "sampleId": "sample-c7f4d5eeec91736dcb85",
+      "verdict": "confirmed",
+      "reason": "Permutation-invariant training of recurrent networks is one composite, not duplicated nested entities."
+    },
+    {
+      "sampleId": "sample-5cd22e49c95adf125511",
+      "verdict": "confirmed",
+      "reason": "Kernelized CNN explicitly describes images; no image corpus is named."
+    },
+    {
+      "sampleId": "sample-0426ea3940343e9c1698",
+      "verdict": "confirmed",
+      "reason": "Echocardiogram classification uses DL; fast/accurate is unverified quality framing."
+    },
+    {
+      "sampleId": "sample-56a9f1552a387bc72e34",
+      "verdict": "confirmed",
+      "reason": "LSTM performs temporal extraction; full downstream QA implementation stays unresolved."
+    },
+    {
+      "sampleId": "sample-348cb525a35a841ad4bb",
+      "verdict": "confirmed",
+      "reason": "Sequential recurrent architecture explicitly models language."
+    },
+    {
+      "sampleId": "sample-dcfa773176a0fd9ff3e7",
+      "verdict": "confirmed",
+      "reason": "Network classifies patients; expansion/compression may only prepare inputs."
+    },
+    {
+      "sampleId": "sample-72f2df87d97a2f83886a",
+      "verdict": "confirmed",
+      "reason": "Batch hierarchical RL is a complete family; bare Algorithms names no second method."
+    },
+    {
+      "sampleId": "sample-cbf018ba0ada53a0cd99",
+      "verdict": "confirmed",
+      "reason": "Topology-adaptive GCN architecture has no stated downstream task."
+    },
+    {
+      "sampleId": "sample-2ae1198f2586a2a911d2",
+      "verdict": "confirmed",
+      "reason": "Embedded deployment targets the DL model; it is not itself the deploying algorithm."
+    },
+    {
+      "sampleId": "sample-4f365331ed132cdd715c",
+      "verdict": "confirmed",
+      "reason": "Recurrent attention discovery explicitly implements multi-label recognition."
+    },
+    {
+      "sampleId": "sample-908a2bf29f96c26cc614",
+      "verdict": "confirmed",
+      "reason": "Full RL-agent design operation overlaps the target; ethics shaping does not resolve flat inventory."
+    },
+    {
+      "sampleId": "sample-1ace2749895e295535c1",
+      "verdict": "confirmed",
+      "reason": "DRL explicitly implements mobile data offloading; cost/energy are constraints."
+    },
+    {
+      "sampleId": "sample-d845352f22a96b077ef3",
+      "verdict": "confirmed",
+      "reason": "Computer vision is domain context, not a named robust-fitting solver; retain uncertainty."
+    },
+    {
+      "sampleId": "sample-1071881f549bbf3e1e70",
+      "verdict": "confirmed",
+      "reason": "GONet and DL explicitly estimate traversability; semi-supervision is setting."
+    },
+    {
+      "sampleId": "sample-8460fae43e580342b18c",
+      "verdict": "confirmed",
+      "reason": "Sensor pattern noise may be a feature rather than method; preserve incomplete inventory despite clear DL association."
+    },
+    {
+      "sampleId": "sample-c081acd346de4505f7c7",
+      "verdict": "confirmed",
+      "reason": "Dynamics-analysis operation overlaps networks; entropy/chaos are properties, not datasets."
+    },
+    {
+      "sampleId": "sample-27abbec4a80e72434975",
+      "verdict": "confirmed",
+      "reason": "CNN segments brain images; localization may be incorporated inputs rather than an executed target."
+    },
+    {
+      "sampleId": "sample-1251b4b9f69929deeba0",
+      "verdict": "confirmed",
+      "reason": "Velocity-porosity supermodel and DNN are model identities without a literal operation."
+    },
+    {
+      "sampleId": "sample-f903a55875bb36c3273d",
+      "verdict": "confirmed",
+      "reason": "Adversarially trained VAE is a full composite for image generation; fidelity is quality wording."
+    },
+    {
+      "sampleId": "sample-68a6a1c6ae3e315e9c03",
+      "verdict": "confirmed",
+      "reason": "SmoothOut smooths minima; large-batch DL is recipient process, not necessarily smoother."
+    },
+    {
+      "sampleId": "sample-5b1df0537ed675d9917f",
+      "verdict": "confirmed",
+      "reason": "Generalization/simple-function bias states a property, not a named task or dataset."
+    },
+    {
+      "sampleId": "sample-376a046f6683fc6b90d5",
+      "verdict": "confirmed",
+      "reason": "DNN explicitly synthesizes propositional proofs; retain logic object."
+    },
+    {
+      "sampleId": "sample-2b7aa6e9b300e7956968",
+      "verdict": "confirmed",
+      "reason": "Xcel-RAM/SRAM are hardware; full binary-network acceleration overlaps model target."
+    },
+    {
+      "sampleId": "sample-0098e88a699d25481c6b",
+      "verdict": "confirmed",
+      "reason": "Improving self-supervision overlaps named learning method; no nested task synthesis."
+    },
+    {
+      "sampleId": "sample-1356b98e297374b347ae",
+      "verdict": "confirmed",
+      "reason": "Event-KG development is explicit; Twitter headlines are unnamed inputs, not DATASET."
+    },
+    {
+      "sampleId": "sample-190d2d78504bfebce11f",
+      "verdict": "confirmed",
+      "reason": "OWLAx/Protege are plugin/software artifacts; ontology axiomatization is the stated task."
+    },
+    {
+      "sampleId": "sample-ec66d9275b3d0b29b111",
+      "verdict": "confirmed",
+      "reason": "dyngraph2vec and dynamic graph representation technique capture network dynamics."
+    },
+    {
+      "sampleId": "sample-b3fe78045749047802e9",
+      "verdict": "confirmed",
+      "reason": "Information diffusion concerns social propagation, not image-generative diffusion."
+    },
+    {
+      "sampleId": "sample-7be18a0afd2b53916929",
+      "verdict": "confirmed",
+      "reason": "Tree extraction uses graph refinement; network refinement versus end-to-end extraction remains uncertain."
+    },
+    {
+      "sampleId": "sample-89148095db86f133245c",
+      "verdict": "confirmed",
+      "reason": "Cost prediction overlaps target DL models; no predictor name is given."
+    },
+    {
+      "sampleId": "sample-6832f81311c1a9b07e00",
+      "verdict": "confirmed",
+      "reason": "Neural networks explicitly model identity rules."
+    },
+    {
+      "sampleId": "sample-b47ddf400db74a7ff378",
+      "verdict": "confirmed",
+      "reason": "Off-grid model-based DL and O-MODL are literal identities; no task is stated."
+    },
+    {
+      "sampleId": "sample-1d770b81c5d7925ab3bd",
+      "verdict": "confirmed",
+      "reason": "Translation is task; unsupervised is setting and unnamed approach supplies no method identity."
+    },
+    {
+      "sampleId": "sample-63dcb2107badeecca7fa",
+      "verdict": "confirmed",
+      "reason": "Interaction-aware Kalman networks explicitly predict trajectories."
+    },
+    {
+      "sampleId": "sample-03b71b29cba5b113d854",
+      "verdict": "revised",
+      "reason": "Bare Curriculum does not identify a specific curriculum-learning algorithm; incomplete method inventory needs quarantine.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Bare Curriculum may denote a schedule/resource or a curriculum-learning technique; no full identity stated.",
+        "entities": [
+          {
+            "text": "Reinforcement Learning",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Complete method/task inventory cannot be established from title.",
+        "relations": [],
+        "notes": "Curriculum is an explicit learning strategy, not a named dataset; method-to-method improvement is outside scoped relations.",
+        "sampleId": "sample-03b71b29cba5b113d854"
+      }
+    },
+    {
+      "sampleId": "sample-9be87186eab405ed4079",
+      "verdict": "confirmed",
+      "reason": "Detection on surveillance UAV is a complete task; latency/accuracy are quality claims."
+    },
+    {
+      "sampleId": "sample-9d43c77acd36d6b626da",
+      "verdict": "confirmed",
+      "reason": "Multimodal ML predicts osteoarthritis progression; radiographs/clinical data are unnamed inputs."
+    },
+    {
+      "sampleId": "sample-78f67e572706538d7d5b",
+      "verdict": "revised",
+      "reason": "Pre-training is a technical operation on GNNs; full task overlaps the target, unlike a complete model-only title.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Full pre-training task overlaps the GNN target in the flat schema.",
+        "entities": [
+          {
+            "text": "Graph Neural Networks",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Target networks are not an independently named pre-training algorithm.",
+        "relations": [],
+        "notes": "Generic pre-training is model-development framing, not a distinct named downstream task or algorithm.",
+        "sampleId": "sample-78f67e572706538d7d5b"
+      }
+    },
+    {
+      "sampleId": "sample-254b3c5d9a4ad212da15",
+      "verdict": "confirmed",
+      "reason": "Evolutionary optimizer is explicit but full network-training target overlaps DNN."
+    },
+    {
+      "sampleId": "sample-42a8274ae0c33f0c4f2a",
+      "verdict": "confirmed",
+      "reason": "DNN detects communication symbols; millimeter wave specifies target context."
+    },
+    {
+      "sampleId": "sample-9ccb413ab7ba723680d1",
+      "verdict": "confirmed",
+      "reason": "BERT task role is not fully settled by robustness question; attack targets rather than executes classification."
+    },
+    {
+      "sampleId": "sample-080587411932324416e6",
+      "verdict": "confirmed",
+      "reason": "Neural machine translation is stated operation; noisy lexical constraints are inputs/settings."
+    },
+    {
+      "sampleId": "sample-4b4cfd790da542482696",
+      "verdict": "confirmed",
+      "reason": "Seq2seq recurrent model translates; parallel training may only train that model."
+    },
+    {
+      "sampleId": "sample-89c4e2382a5df88ccc60",
+      "verdict": "confirmed",
+      "reason": "Relu network performs function approximation; preserve original spelling."
+    },
+    {
+      "sampleId": "sample-c4fc3b206089c2f94812",
+      "verdict": "confirmed",
+      "reason": "Modeling data-structure influence overlaps networks and lacks a named modeling algorithm."
+    },
+    {
+      "sampleId": "sample-a19d7868746063230dcf",
+      "verdict": "confirmed",
+      "reason": "Translation model is fine-tuned recipient, not the sentence selector; explicit negative role retained."
+    },
+    {
+      "sampleId": "sample-bb055373c44151aaddee",
+      "verdict": "confirmed",
+      "reason": "Gradient boosting supports training; full network-training operation overlaps target model."
+    },
+    {
+      "sampleId": "sample-3b421b9936a9e975c9df",
+      "verdict": "confirmed",
+      "reason": "Formula transformers and test generators are symbolic procedures, not neural Transformer inference."
+    },
+    {
+      "sampleId": "sample-2e01667b828b2bf05975",
+      "verdict": "confirmed",
+      "reason": "Optimizer comparison lacks named optimizer and complete literal task inventory."
+    },
+    {
+      "sampleId": "sample-d17d441b34c653d0f713",
+      "verdict": "confirmed",
+      "reason": "DL recognizes sites on mobile devices; crowdsourced imagery is unnamed input."
+    },
+    {
+      "sampleId": "sample-846e41ce0a2216393640",
+      "verdict": "confirmed",
+      "reason": "Bidirectional entailment is a technique for translation evaluation, not EVALUATED_ON without DATASET."
+    },
+    {
+      "sampleId": "sample-d7cba42280ac3472b516",
+      "verdict": "confirmed",
+      "reason": "Failure modes are properties of ML systems; no technical task or benchmark identity."
+    },
+    {
+      "sampleId": "sample-345d454d517625cdc76b",
+      "verdict": "confirmed",
+      "reason": "Word-class embedding technique explicitly supports multiclass classification."
+    },
+    {
+      "sampleId": "sample-df04b5bf471c8d41457b",
+      "verdict": "confirmed",
+      "reason": "RNN explicitly performs predictive precompute; no benchmark is named."
+    },
+    {
+      "sampleId": "sample-4980df9024553a05862d",
+      "verdict": "confirmed",
+      "reason": "Make TCP Great is a slogan without a literal specified networking operation."
+    },
+    {
+      "sampleId": "sample-12902cb10cce16fa53d3",
+      "verdict": "confirmed",
+      "reason": "Adversarial ML may protect or attack forecasting; title does not establish forecaster role."
+    },
+    {
+      "sampleId": "sample-ca7b48ce250d1a3ece64",
+      "verdict": "confirmed",
+      "reason": "Transformer decoding overlaps Transformer target; n-gram attention stays method."
+    },
+    {
+      "sampleId": "sample-c3b9248a7cfc5d6caf7e",
+      "verdict": "confirmed",
+      "reason": "Regularized GP models traffic; generic ML applications do not establish a second direct executor."
+    },
+    {
+      "sampleId": "sample-d243692c20251dbe2f5f",
+      "verdict": "confirmed",
+      "reason": "Priors/regularization are modifiers within one CNN composite, not separately reconstructed shared-head methods."
+    },
+    {
+      "sampleId": "sample-776cb145b4d54ede0fd3",
+      "verdict": "confirmed",
+      "reason": "RL-enhanced quantum-inspired algorithm is one composite for combinatorial optimization."
+    },
+    {
+      "sampleId": "sample-dc49849858fbe8078998",
+      "verdict": "confirmed",
+      "reason": "Networks explicitly implement mechanism design for public projects."
+    },
+    {
+      "sampleId": "sample-d35b0bf0bf8522d55810",
+      "verdict": "confirmed",
+      "reason": "Model-free RL explicitly addresses robotic table tennis; no robot dataset identity."
+    },
+    {
+      "sampleId": "sample-6ed112dba711f901606c",
+      "verdict": "confirmed",
+      "reason": "DL and transfer-learning algorithms explicitly support pneumonia diagnosis; no clinical efficacy asserted."
+    },
+    {
+      "sampleId": "sample-6fde42d2d4f4861393c2",
+      "verdict": "confirmed",
+      "reason": "CNN estimates scale; full visual tracking execution is downstream and unresolved."
+    },
+    {
+      "sampleId": "sample-98426067164dc794bf97",
+      "verdict": "confirmed",
+      "reason": "Transformer translation association is explicit; depth/low-resource describe architecture/setting."
+    },
+    {
+      "sampleId": "sample-c5473c7c3802400ba3ec",
+      "verdict": "confirmed",
+      "reason": "PFNN and penalty-free network solve boundary-value problems; retain geometry object constraints."
+    },
+    {
+      "sampleId": "sample-91997e28b5eba89e42f5",
+      "verdict": "confirmed",
+      "reason": "GIMP-ML and GIMP are software; CV is a model family without a stated processing task."
+    },
+    {
+      "sampleId": "sample-69ee91660fbfe34b2c40",
+      "verdict": "confirmed",
+      "reason": "Transportation systems are broad application context, not a specific survey task."
+    },
+    {
+      "sampleId": "sample-3ed631d46f225d5a44e8",
+      "verdict": "confirmed",
+      "reason": "Privacy and GNN are technique families; title states no operational target."
+    },
+    {
+      "sampleId": "sample-80ae71a7deec713a7e04",
+      "verdict": "confirmed",
+      "reason": "FLAMBE and representation-learning/model families are explicit; structural complexity is a property."
+    },
+    {
+      "sampleId": "sample-b1517b2382357b521e57",
+      "verdict": "confirmed",
+      "reason": "GCN, heat kernel and semi-supervised learning are methods; learning setting alone is not a task."
+    },
+    {
+      "sampleId": "sample-7b5d2f4f282fae8e271c",
+      "verdict": "confirmed",
+      "reason": "Unnamed space-weather ontology is resource/context, not a named dataset or algorithm."
+    },
+    {
+      "sampleId": "sample-60327e30fa459bdf5043",
+      "verdict": "confirmed",
+      "reason": "Transfer learning explicitly mitigates classification bias; no invented underlying classification object."
+    },
+    {
+      "sampleId": "sample-9c99642829a26d9e94ab",
+      "verdict": "confirmed",
+      "reason": "Unnamed model-free method lacks identity and MIMO systems do not specify target operation."
+    },
+    {
+      "sampleId": "sample-f02d2d7b8ef75fe2888f",
+      "verdict": "confirmed",
+      "reason": "Aggregation-and-distribution jointly qualifies one named CoADNet architecture; no member names are reconstructed."
+    },
+    {
+      "sampleId": "sample-62959d950cb5419af15e",
+      "verdict": "confirmed",
+      "reason": "Dialog system operation is unspecified; preserve possible task candidate without certifying inventory."
+    },
+    {
+      "sampleId": "sample-b21114d1f32ad316e57e",
+      "verdict": "confirmed",
+      "reason": "MicroNet explicitly recognizes images; low FLOPs is quality/computation constraint."
+    },
+    {
+      "sampleId": "sample-2fcd5cb413affcd854c8",
+      "verdict": "confirmed",
+      "reason": "Multimodal Transformer explicitly learns video representations; parameter efficiency is architecture framing."
+    },
+    {
+      "sampleId": "sample-e787d5433d00a0c9ac23",
+      "verdict": "confirmed",
+      "reason": "Drug discovery/development is broad goal without a specific ML prediction/search operation."
+    },
+    {
+      "sampleId": "sample-449d7535eaa04ce28a42",
+      "verdict": "confirmed",
+      "reason": "DL completes matrices; manifold learning may only supply geometry/features."
+    },
+    {
+      "sampleId": "sample-86539e762ce4eef02244",
+      "verdict": "confirmed",
+      "reason": "ANN explicitly imputes rounded zeros in compositional data."
+    },
+    {
+      "sampleId": "sample-b1c3e49eb5a83ecf2141",
+      "verdict": "confirmed",
+      "reason": "Performance/cluster-limit evaluation overlaps selection setting; evaluated ML is not necessarily evaluator."
+    },
+    {
+      "sampleId": "sample-ab4a61bedd36af0a672e",
+      "verdict": "confirmed",
+      "reason": "Text-image-layout Transformer implements document understanding; slogan is not another model identity."
+    },
+    {
+      "sampleId": "sample-bad402518330da0e583a",
+      "verdict": "confirmed",
+      "reason": "DL explicitly extracts lumen/media-adventitia in ultrasound; no dataset release named."
+    },
+    {
+      "sampleId": "sample-2478d1c1e61f690c03ce",
+      "verdict": "confirmed",
+      "reason": "Deep-and-wide network predicts Rajasthan rainfall; RSMR names target, not dataset."
+    },
+    {
+      "sampleId": "sample-1b7213f31ad7a2b8449d",
+      "verdict": "confirmed",
+      "reason": "Statistical viewpoint supplies no operational target beyond DL family."
+    },
+    {
+      "sampleId": "sample-a9e4ee6952a7d7e97e34",
+      "verdict": "confirmed",
+      "reason": "Pose-GNN and GNN family estimate camera pose."
+    },
+    {
+      "sampleId": "sample-ec0afec8f4752fc3b45f",
+      "verdict": "confirmed",
+      "reason": "Expert priors have unclear resource/method identity; preserve quarantine despite clear driving association."
+    },
+    {
+      "sampleId": "sample-f15773e40de6416b1bd1",
+      "verdict": "confirmed",
+      "reason": "Group collaborative learning explicitly detects co-salient objects."
+    },
+    {
+      "sampleId": "sample-6a6bebd954b948722689",
+      "verdict": "confirmed",
+      "reason": "Agent-robustness improvement overlaps RL target; environment attacks are not automatically defense execution."
+    },
+    {
+      "sampleId": "sample-4a07c36f44f7ad4d1897",
+      "verdict": "confirmed",
+      "reason": "Stochastic second-order DL is one method; no task or named dataset."
+    },
+    {
+      "sampleId": "sample-a0d9fab02a80caffda11",
+      "verdict": "confirmed",
+      "reason": "Two-layer ensemble is a full composite explicitly segmenting medical images."
+    },
+    {
+      "sampleId": "sample-48fe71837e25d529c966",
+      "verdict": "confirmed",
+      "reason": "VIPriors challenge is not automatically a released DATASET; unspecified competitive method stays unresolved."
+    },
+    {
+      "sampleId": "sample-75426e8b272870e96e36",
+      "verdict": "confirmed",
+      "reason": "Data transformation role is unclear; title gives ML classification association but incomplete inventory."
+    },
+    {
+      "sampleId": "sample-ec8322e5ad5d49f5165a",
+      "verdict": "confirmed",
+      "reason": "Recomposition overlaps RL building blocks; hypernetworks do not resolve target span."
+    },
+    {
+      "sampleId": "sample-c8b554ce0d88ee341903",
+      "verdict": "confirmed",
+      "reason": "Transferred spatiotemporal network composite models seizure videos; no named seizure benchmark."
+    },
+    {
+      "sampleId": "sample-4e29ece24b8a98bad268",
+      "verdict": "confirmed",
+      "reason": "FL with dynamic Transformer explicitly targets text-to-speech; both complete methods retained."
+    },
+    {
+      "sampleId": "sample-9bac22e03a2e3a4df223",
+      "verdict": "confirmed",
+      "reason": "Local ensemble Kalman filters estimate state/parameters and explicitly apply to learning chaotic dynamics."
+    },
+    {
+      "sampleId": "sample-5fb2c65065f5a3081464",
+      "verdict": "confirmed",
+      "reason": "Adam generalization analysis overlaps network target; proper regularization is not a dataset."
+    },
+    {
+      "sampleId": "sample-fd1259956beaa9f78001",
+      "verdict": "confirmed",
+      "reason": "DAE-GAN and dynamic aspect-aware GAN synthesize images from text."
+    },
+    {
+      "sampleId": "sample-46408f3148b3802889bc",
+      "verdict": "confirmed",
+      "reason": "Infinity symbol is preserved literally in named model; expansion is complete Transformer identity."
+    },
+    {
+      "sampleId": "sample-3ab22c55f4262e28382f",
+      "verdict": "confirmed",
+      "reason": "Explainability/safety are desired properties; no particular explanatory method or healthcare task is named."
+    },
+    {
+      "sampleId": "sample-29271bb8d2f4793b8206",
+      "verdict": "confirmed",
+      "reason": "DL detects symptoms; weighting may only combine modes rather than itself detect."
+    },
+    {
+      "sampleId": "sample-99cedb33dfea3009c648",
+      "verdict": "confirmed",
+      "reason": "MFE-NER and feature-fusion embedding explicitly address Chinese NER."
+    },
+    {
+      "sampleId": "sample-6382db139e8f931a6c52",
+      "verdict": "confirmed",
+      "reason": "Gradient compression and FL are techniques; Layerd typo is preserved, not silently corrected."
+    },
+    {
+      "sampleId": "sample-f0a059971be2d4c708f3",
+      "verdict": "confirmed",
+      "reason": "SPARQL silhouette generation is query-generation technique implementing KG question answering."
+    },
+    {
+      "sampleId": "sample-9fbb61bdce7f91b7b001",
+      "verdict": "confirmed",
+      "reason": "Backdoor attack targets network training; flat full task overlaps target model."
+    },
+    {
+      "sampleId": "sample-057c5ab3ad6152786c36",
+      "verdict": "confirmed",
+      "reason": "Exploration lacks technical object/domain; keep uncertain rather than invent a task."
+    },
+    {
+      "sampleId": "sample-1e313b5f04fe945b5881",
+      "verdict": "confirmed",
+      "reason": "Residual-connection Transformer diarizes speakers; unnamed auxiliary loss is not a separate named algorithm."
+    },
+    {
+      "sampleId": "sample-27ec107da088f18d0c5b",
+      "verdict": "confirmed",
+      "reason": "Interpreting DL models overlaps models; NLP names family/domain, not interpretation task object boundary."
+    },
+    {
+      "sampleId": "sample-d1beeacd406a15277d11",
+      "verdict": "confirmed",
+      "reason": "Overparameterization is architecture property; shallow networks are the named family."
+    },
+    {
+      "sampleId": "sample-f95d99e87372b3dc5567",
+      "verdict": "confirmed",
+      "reason": "Attention/CV are methods; survey contains no specific target or benchmark."
+    },
+    {
+      "sampleId": "sample-d60dda2ddcae96a8c1e4",
+      "verdict": "confirmed",
+      "reason": "First- and second-order share Algorithms head; group remains isolated, with no reconstructed member span."
+    },
+    {
+      "sampleId": "sample-92f98e277a3066e77492",
+      "verdict": "confirmed",
+      "reason": "FedSoft and its full clustered-FL expansion are complete methods, not a new task."
+    },
+    {
+      "sampleId": "sample-ed496706f359a98be26a",
+      "verdict": "confirmed",
+      "reason": "ML detects ventricular tachycardia; ECG is modality, not a named dataset."
+    },
+    {
+      "sampleId": "sample-adec3e304a604535d6f1",
+      "verdict": "confirmed",
+      "reason": "Bibliometric title states ML diagnosis association but is not a new diagnostic evaluation."
+    },
+    {
+      "sampleId": "sample-ce0a066bc7bef09e9dde",
+      "verdict": "confirmed",
+      "reason": "Medical imaging is broad context; security/defence does not specify an executed task."
+    },
+    {
+      "sampleId": "sample-b9d15d4ea997b9bed312",
+      "verdict": "confirmed",
+      "reason": "Interactron explicitly performs embodied adaptive object detection."
+    },
+    {
+      "sampleId": "sample-7d261f0f6e7772a8c34c",
+      "verdict": "revised",
+      "reason": "Transfer learning may only train the recognizer; language-model decoding implements recognition but is not interchangeable with training.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Automatic Speech Recognition for Non-Native English",
+            "label": "TASK"
+          },
+          {
+            "text": "Transfer Learning",
+            "label": "METHOD"
+          },
+          {
+            "text": "Language Model Decoding",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Transfer-training versus task-execution role unspecified.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "Transfer learning may only train a recognizer rather than itself perform speech recognition."
+          },
+          {
+            "head": "e3",
+            "tail": "e1",
+            "label": "USED_FOR",
+            "reason": "Language-model decoding explicitly implements this ASR approach."
+          }
+        ],
+        "notes": "Full language/speaker context retained; no speech dataset.",
+        "sampleId": "sample-7d261f0f6e7772a8c34c"
+      }
+    },
+    {
+      "sampleId": "sample-9e90587f0a869780e1be",
+      "verdict": "confirmed",
+      "reason": "Multitasking/importance sampling qualify evolutionary RL; no downstream operation is specified."
+    },
+    {
+      "sampleId": "sample-1f29cd8a4661f8125186",
+      "verdict": "confirmed",
+      "reason": "NLP and ensemble learning explicitly filter liver-injury literature; inputs are unnamed articles."
+    },
+    {
+      "sampleId": "sample-1926650399f142ec668e",
+      "verdict": "confirmed",
+      "reason": "Comparative evaluation task overlaps methods; clear prediction association alone cannot certify entire inventory."
+    },
+    {
+      "sampleId": "sample-ad2c79c7ec7551105bdd",
+      "verdict": "confirmed",
+      "reason": "RL coordinates multiple EV charging points; computational efficiency is a claim."
+    },
+    {
+      "sampleId": "sample-f8dbb4fd32b1a32641a3",
+      "verdict": "confirmed",
+      "reason": "Adaptive multi-size-kernel CNN is a full fault-diagnosis architecture."
+    },
+    {
+      "sampleId": "sample-102327e7beb0eb4be234",
+      "verdict": "confirmed",
+      "reason": "Meta-learning, Bayesian binary networks and Born machines are methods, not a METHOD-to-TASK relation."
+    },
+    {
+      "sampleId": "sample-dfa6aa5f84dcb8a94866",
+      "verdict": "confirmed",
+      "reason": "Feature disentangling versus transfer-trained StyleGAN executor remains uncertain."
+    },
+    {
+      "sampleId": "sample-de2b64596edba9c80677",
+      "verdict": "confirmed",
+      "reason": "RANG/node-generation technique serves physics-informed networks; no separate nested node-generation task."
+    },
+    {
+      "sampleId": "sample-4f288981b169c0d693b0",
+      "verdict": "confirmed",
+      "reason": "Genetic data analysis lacks a specific technical subproblem; preserve candidate uncertainty."
+    },
+    {
+      "sampleId": "sample-688a21f004468a4dbb9b",
+      "verdict": "confirmed",
+      "reason": "Entry-flipped Transformer infers/predicts participant behavior; full coordinated task retained."
+    },
+    {
+      "sampleId": "sample-648e9e08c8d0863304cb",
+      "verdict": "confirmed",
+      "reason": "Subtype-Former/DL discover cancer subtypes; multi-omics data is unnamed."
+    },
+    {
+      "sampleId": "sample-eb86c597abfe75a78f57",
+      "verdict": "confirmed",
+      "reason": "Federated DRL allocates O-RAN slicing resources."
+    },
+    {
+      "sampleId": "sample-091ef4c5e7bf5cccfdfd",
+      "verdict": "confirmed",
+      "reason": "ODformer/spatiotemporal Transformer forecast OD matrices; scenario qualifier is not DATASET."
+    },
+    {
+      "sampleId": "sample-873bd65bc82c4c642e57",
+      "verdict": "confirmed",
+      "reason": "Transformer-based DL predicts stock prices; case location is not dataset identity or financial advice."
+    },
+    {
+      "sampleId": "sample-5482e26942bf0b8bfd3e",
+      "verdict": "confirmed",
+      "reason": "Complex-valued GCN architecture is stated; electric-power AI applications lack specific task."
+    },
+    {
+      "sampleId": "sample-6fa3a0b52ff8b11967ec",
+      "verdict": "confirmed",
+      "reason": "MolGraph/TensorFlow/Keras are packages/frameworks; implementation task overlaps GNN target."
+    },
+    {
+      "sampleId": "sample-81c98e892fc3625d7426",
+      "verdict": "confirmed",
+      "reason": "Membership assessment overlaps inference/ML; Membership-Doctor identity cannot establish neural method from title."
+    },
+    {
+      "sampleId": "sample-84f89386dfe5ccd84784",
+      "verdict": "confirmed",
+      "reason": "Learnable activation belongs to full Transformer architecture; no task stated."
+    },
+    {
+      "sampleId": "sample-0d26176266f68ec8de43",
+      "verdict": "confirmed",
+      "reason": "Pre-training/random initialization are training procedures, not necessarily translation executors."
+    },
+    {
+      "sampleId": "sample-8916aaf0aed3c4571b17",
+      "verdict": "confirmed",
+      "reason": "Deep networks and complex-network mathematical model are literal method/model families only."
+    },
+    {
+      "sampleId": "sample-e65ef829668c21122c1d",
+      "verdict": "confirmed",
+      "reason": "GNN predicts links; sketching may prepare subgraph features rather than execute prediction."
+    },
+    {
+      "sampleId": "sample-294482658e631e6c4ca9",
+      "verdict": "confirmed",
+      "reason": "Distributionally adaptive meta-RL is one full method; no downstream task."
+    },
+    {
+      "sampleId": "sample-13c3723fe3bc9fd0683b",
+      "verdict": "confirmed",
+      "reason": "PTDE expansion includes training/execution composite; preserve Distillated typo."
+    },
+    {
+      "sampleId": "sample-b8148dae9af6e0690110",
+      "verdict": "confirmed",
+      "reason": "DiffuSeq and diffusion models explicitly perform seq2seq text generation."
+    },
+    {
+      "sampleId": "sample-39e505497a3096b13ce1",
+      "verdict": "confirmed",
+      "reason": "Ontology development is a literal operation; consensus/representation are conceptual characterizations."
+    },
+    {
+      "sampleId": "sample-296b447354177e63c718",
+      "verdict": "confirmed",
+      "reason": "Training-performance comparison overlaps target network; Elixir/Python are languages."
+    },
+    {
+      "sampleId": "sample-248b4a23ee0b411ff125",
+      "verdict": "confirmed",
+      "reason": "Diffusion performs speech super-resolution; conditioning/sampling role as a separate task remains uncertain."
+    },
+    {
+      "sampleId": "sample-9c37a2a44b300a3d8657",
+      "verdict": "confirmed",
+      "reason": "Offline RL with primitive discovery is composite; bare Control does not specify technical task."
+    },
+    {
+      "sampleId": "sample-fe44b9c3b28bb45663ce",
+      "verdict": "confirmed",
+      "reason": "MAGVIT and masked generative video Transformer are named/full methods; no literal generation task added."
+    },
+    {
+      "sampleId": "sample-dce328d9bb01318afa9a",
+      "verdict": "confirmed",
+      "reason": "Training-systems task overlaps large-model DL; unnamed Systems supplies no algorithm identity."
+    },
+    {
+      "sampleId": "sample-8cbeb9d87a9469412530",
+      "verdict": "confirmed",
+      "reason": "Signed message is a feature/property question, not a named task or data release."
+    },
+    {
+      "sampleId": "sample-a5068f5696780c4b0879",
+      "verdict": "confirmed",
+      "reason": "RangeViT/vision Transformers segment 3D driving scenes; autonomous driving is task context."
+    },
+    {
+      "sampleId": "sample-51de33d035c59dd7314e",
+      "verdict": "confirmed",
+      "reason": "Generated curriculum goals guide RL; RL is not automatically the goal-generating algorithm."
+    },
+    {
+      "sampleId": "sample-48219a0dbc4fd7ca05f0",
+      "verdict": "confirmed",
+      "reason": "Open problems/solutions are generic discussion, not a specified technical operation."
+    },
+    {
+      "sampleId": "sample-78023cf451932320a660",
+      "verdict": "revised",
+      "reason": "Edited is state/quality framing rather than a specific architecture identity; remove it from model span.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "neural networks",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "complete",
+        "relationReason": "",
+        "relations": [],
+        "notes": "Edited model variant is explicit; robustness is property, not a task.",
+        "sampleId": "sample-78023cf451932320a660"
+      }
+    },
+    {
+      "sampleId": "sample-796425c6a6f58374ab47",
+      "verdict": "confirmed",
+      "reason": "DL authenticates RF fingerprints; chaotic antenna arrays are physical devices."
+    },
+    {
+      "sampleId": "sample-e253b7cb9250b94f2426",
+      "verdict": "confirmed",
+      "reason": "Sparse-latent-point diffusion generates meshes; controllable modifies stated task."
+    },
+    {
+      "sampleId": "sample-34a74b0c1ca25efe1c89",
+      "verdict": "confirmed",
+      "reason": "Online RL and periodic MDP are method/problem models without another task."
+    },
+    {
+      "sampleId": "sample-53a536a79ee15dca6c44",
+      "verdict": "confirmed",
+      "reason": "NASA KG discovery may be resource name or operation; title cannot disambiguate, so quarantine."
+    },
+    {
+      "sampleId": "sample-084f7496914a8b84f3cf",
+      "verdict": "confirmed",
+      "reason": "ProductAE/DL are methods; error-correction codes do not literally name encoding/decoding/construction operation."
+    },
+    {
+      "sampleId": "sample-364e424a848ab8a90c65",
+      "verdict": "confirmed",
+      "reason": "NN-Copula-CD and its copula-guided network detect remote-sensing changes."
+    },
+    {
+      "sampleId": "sample-76baa92eea9e2888f912",
+      "verdict": "confirmed",
+      "reason": "Q-DETR and quantized detection Transformer name model identities; Detector does not synthesize missing task."
+    },
+    {
+      "sampleId": "sample-1c6ad618b381adc4acdb",
+      "verdict": "confirmed",
+      "reason": "Tutor is software and Math Task lacks specified object/operation; no efficacy asserted."
+    },
+    {
+      "sampleId": "sample-d68aeb93805494877a42",
+      "verdict": "confirmed",
+      "reason": "Game-theoretic framework is a mathematical technique for FL, not necessarily software; no task relation."
+    },
+    {
+      "sampleId": "sample-a794967559d6f0c5bc4c",
+      "verdict": "confirmed",
+      "reason": "Phoneme-informed network transcribes singing notes."
+    },
+    {
+      "sampleId": "sample-79fd6defd1bfd7849ed1",
+      "verdict": "confirmed",
+      "reason": "Representation learning is explicit target of Proto-Value Networks here; unnamed auxiliary tasks not invented."
+    },
+    {
+      "sampleId": "sample-52a9148dddb9b351536f",
+      "verdict": "confirmed",
+      "reason": "Neural network scores essays; dynamic loss may only train it, so task-execution pair stays uncertain."
+    },
+    {
+      "sampleId": "sample-d941c8b83289d9fdabe3",
+      "verdict": "confirmed",
+      "reason": "DRL solves stabilize-avoid control; epigraph is formulation rather than necessarily solver."
+    },
+    {
+      "sampleId": "sample-2afaffb77afd46ba1e07",
+      "verdict": "confirmed",
+      "reason": "NavGPT/LLMs perform navigation reasoning; full reasoning target avoids duplicate nested navigation task."
+    },
+    {
+      "sampleId": "sample-754959d9fc1bd283a303",
+      "verdict": "revised",
+      "reason": "Evaluator denotes an evaluation role but object/protocol are unspecified; a complete method-only inventory is overconfident.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Evaluator role implies evaluation, but object/protocol and literal complete task are unspecified.",
+        "entities": [
+          {
+            "text": "Large Language Models",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "No complete evaluation-task inventory; do not invent a target or a negative pair.",
+        "relations": [],
+        "notes": "Fairness of evaluators is a property claim, not evidence of a concrete evaluated task or measured model quality.",
+        "sampleId": "sample-754959d9fc1bd283a303"
+      }
+    },
+    {
+      "sampleId": "sample-90a70e250b82f496b014",
+      "verdict": "confirmed",
+      "reason": "Masked diffusion detects medical-image anomalies; unsupervised is training setting."
+    },
+    {
+      "sampleId": "sample-88213e03355b04090b06",
+      "verdict": "confirmed",
+      "reason": "YOLOv8 detects onboard AR objects; display hardware is not method or dataset."
+    },
+    {
+      "sampleId": "sample-4cd617844ade04ad8108",
+      "verdict": "confirmed",
+      "reason": "Healthcare KG resources/promises name no specific operation, algorithm or dataset."
+    },
+    {
+      "sampleId": "sample-93d5eed6b3b326222559",
+      "verdict": "confirmed",
+      "reason": "Adversarial prompting and LLM explicitly generate astronomy hypotheses; robustness is not demonstrated here."
+    },
+    {
+      "sampleId": "sample-1ae55e7a97faa9a5390c",
+      "verdict": "confirmed",
+      "reason": "Low-rank POMDP is problem model, not a stated planner/representation-learning algorithm."
+    },
+    {
+      "sampleId": "sample-611150063ed8d45f4b50",
+      "verdict": "confirmed",
+      "reason": "FastBCSD and network detect binary-code similarity; no code benchmark named."
+    },
+    {
+      "sampleId": "sample-02a8d768c7fdf42ef8cf",
+      "verdict": "confirmed",
+      "reason": "Nano1D segmentation is specific but coordinated analysis unspecified; full task inventory stays unresolved."
+    },
+    {
+      "sampleId": "sample-02d57514d6d6f5889920",
+      "verdict": "confirmed",
+      "reason": "FL server is offloaded software, not offloading algorithm; Smart NIC is hardware."
+    },
+    {
+      "sampleId": "sample-e534f7dfd7187bffe7ae",
+      "verdict": "confirmed",
+      "reason": "SLSSNN and spike-train/conversion architecture are complete identities; energy efficiency is property."
+    },
+    {
+      "sampleId": "sample-0f15a0a0f677722622d4",
+      "verdict": "confirmed",
+      "reason": "Stack Overflow activity is unnamed evidence, not a named dataset release or technical task."
+    },
+    {
+      "sampleId": "sample-cb88794bfe20444740bc",
+      "verdict": "confirmed",
+      "reason": "Mathematical explanation overlaps encoder-decoder target; explained networks are not necessarily explainers."
+    },
+    {
+      "sampleId": "sample-4477fae76c38189500dd",
+      "verdict": "confirmed",
+      "reason": "SecureBoost is tuned target, not tuner; multi-objective FL explicitly tunes hyperparameters."
+    },
+    {
+      "sampleId": "sample-0f8a6e8b128a7e796118",
+      "verdict": "confirmed",
+      "reason": "BarlowRL, Barlow Twins and RL are method families; data efficiency is property."
+    },
+    {
+      "sampleId": "sample-ba459c92eafccb415165",
+      "verdict": "confirmed",
+      "reason": "Pseudo-label improvement and detection are explicit operations without named implementer; vocabulary is setting."
+    },
+    {
+      "sampleId": "sample-d9d1d7831107f08bd081",
+      "verdict": "confirmed",
+      "reason": "Federated-assisted Q learning is composite implementing joint offloading/routing."
+    },
+    {
+      "sampleId": "sample-22506d950c098c913d1b",
+      "verdict": "confirmed",
+      "reason": "Region proposal network explicitly supports detection; quality/few-shot qualifiers excluded."
+    },
+    {
+      "sampleId": "sample-1710a86bedd61c47d9b3",
+      "verdict": "confirmed",
+      "reason": "MFRL-BI/model-free RL controls process; Bayesian inference may only design scheme."
+    },
+    {
+      "sampleId": "sample-96a6ebf5c8723da90592",
+      "verdict": "confirmed",
+      "reason": "GAME/DL integrate multimodal data; downstream adolescent screening role remains uncertain, not clinical validation."
+    },
+    {
+      "sampleId": "sample-7eb73884cd21971a8908",
+      "verdict": "confirmed",
+      "reason": "Physics-informed ML optimizes power-system parameters; no named power benchmark."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "graphId": "ai-literature-6407af3ed9f67a8cff3d",
+  "createdAtUTC": "2026-10-07T01:33:21.047351+00:00",
+  "inputSha256": {
+    "kg_datasets\\dblp\\processed_ai\\publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "kg_datasets\\dblp\\processed_ai\\persons.csv": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60",
+    "kg_datasets\\dblp\\processed_ai\\venues.csv": "0b5baa6293cf14826f8e191d766e344bd7c30890087c9fbca1e34f7f64324606",
+    "kg_datasets\\dblp\\processed_ai\\authored.csv": "f2fbe133bde8e41e8f7fa9bb04db8109c0e0763ffde28c716976a46a021f9da7",
+    "kg_datasets\\dblp\\processed_ai\\published_in.csv": "bcdf029c0733954c013c77714bad5ee7b7ef17d213221aa94c89e01515370715",
+    "kg_datasets\\dblp\\course_v4_runs\\re_final_test_20261006_17\\manifest.json": "ce9697e286c4532d9e6b18b114b7d96eae65432e5b4f3cadfbc4629b0d4191af",
+    "kg_datasets\\dblp\\course_v4_weak\\manifest.json": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940"
+  },
+  "scope": {
+    "bibliographyTitles": 20000,
+    "modelTitles": 138,
+    "pipelinePairs": 148,
+    "negativeDecisionsExcluded": 8,
+    "modelAppliedToFullCorpus": false,
+    "testQueueCoverage": 0.69
+  },
+  "counts": {
+    "nodes": {
+      "Publication": 20000,
+      "Person": 72694,
+      "Venue": 3205,
+      "Concept": 272,
+      "Mention": 305,
+      "Assertion": 140
+    },
+    "edges": {
+      "AUTHORED": 88762,
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 305,
+      "DENOTES": 305,
+      "SUPPORTED_BY": 140,
+      "HAS_HEAD": 140,
+      "HAS_TAIL": 140
+    }
+  },
+  "liveDatabaseImported": false,
+  "modelSourceManifestSha256": "ce9697e286c4532d9e6b18b114b7d96eae65432e5b4f3cadfbc4629b0d4191af",
+  "notice": "Predictions are candidate assertions, not DBLP facts. No CITES, no human gold, no calibrated confidence. Topic-rule edges intentionally not mixed into this bundle.",
+  "filesSha256": {
+    "nodes.jsonl": "c1e4527dd5c5033d16c30a35f5dd75ee962e8033088b0b26985cde1db8175c8a",
+    "edges.jsonl": "457d16435deac5bcf6f446af63c8db2c1b9f5531ee58537a7890170771c4fa6f"
+  }
+}

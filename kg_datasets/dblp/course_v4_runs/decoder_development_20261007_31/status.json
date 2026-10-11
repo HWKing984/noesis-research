@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "testAccessed": false,
+  "trainingExecuted": false,
+  "errorType": "ModuleNotFoundError",
+  "error": "No module named 'torch'"
+}

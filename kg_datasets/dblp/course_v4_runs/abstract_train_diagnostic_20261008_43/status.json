@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "createdAtUTC": "2026-10-08T07:30:04.794747+00:00",
+  "trainingStarted": false,
+  "devSemanticallyRead": false,
+  "testSemanticallyRead": false,
+  "modelPromoted": false,
+  "finishedAtUTC": "2026-10-08T07:30:27.521057+00:00",
+  "elapsedSeconds": 22.72522829999798
+}

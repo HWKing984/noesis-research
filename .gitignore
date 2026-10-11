@@ -1,30 +1,61 @@
-# Python
+# Local Python environments and caches
+.venv*/
+venv/
 __pycache__/
 *.py[cod]
-.venv/
-venv/
-*.egg-info/
 .pytest_cache/
 .ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
 
-# Node
+# Personal tooling, temporary replay workspaces and test scratch data
+.workbuddy/
+.runtime-gliner/
+.review-replay-*/
+pytest_tmp*/
+pytest-tmp*/
+pytest-of-*/
+pytest-*/
+pytest_*/
+tmp/
 node_modules/
-dist/
-.vite/
+.coverage*
+/kg_datasets/dblp/course_v4_runs/tmp_*/
+/kg_datasets/dblp/course_v4_runs/round*-validation-*/
+/kg_datasets/dblp/course_v4_runs/round*-annotation-*/
+/kg_datasets/dblp/course_v4_runs/round*-final-*/
 
-# Local env / secrets — never commit provider keys
+# Credentials (templates may be committed)
 .env
 .env.*
 !.env.example
+!.env.sample
+*.pem
+*.key
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+token.json
 
-# Local data
-*.log
-tmp/
+# Model weights and original downloaded corpora stay local.
+# Configs, tokenizers, training inputs, metrics and provenance remain versioned.
+*.safetensors
+kg_datasets/models/**/pytorch_model.bin
+/kg_datasets/dblp/dblp.xml.gz
+/kg_datasets/imdb/*.tsv.gz
 
-# Upstream reference clones — shallow, upstream source unmodified, never committed.
-# Mirrors the `参考/` convention used in the NOESIS repository (see its THIRD_PARTY_NOTICES.md).
-# Provenance for each clone is recorded in reference/README.md.
-reference/
-
-# Assistant session workspace (memory logs) — local only
-.workbuddy/
+# Oversized graph JSONL paths are listed below by the publication inventory.
+/kg_datasets/dblp/course_v4_graph_authors_20261009_51/edges.jsonl
+/kg_datasets/dblp/course_v4_graph_authors_20261009_51/nodes.jsonl
+/kg_datasets/dblp/course_v4_graph_concepts_20261010_58/edges.jsonl
+/kg_datasets/dblp/course_v4_graph_concepts_20261010_58/nodes.jsonl
+/kg_datasets/dblp/course_v4_graph_production_20261007_25/edges.jsonl
+/kg_datasets/dblp/course_v4_graph_production_20261007_25/nodes.jsonl
+/kg_datasets/dblp/course_v4_graph_quality_20261009_51/edges.jsonl
+/kg_datasets/dblp/course_v4_graph_quality_20261009_51/nodes.jsonl
+/kg_datasets/dblp/course_v4_graph_resolved_20261007_31/edges.jsonl
+/kg_datasets/dblp/course_v4_graph_resolved_20261007_31/nodes.jsonl
+/kg_datasets/dblp/course_v4_graph_resolved_20261007_31_ready/edges.jsonl
+/kg_datasets/dblp/course_v4_graph_resolved_20261007_31_ready/nodes.jsonl

@@ -1,0 +1,64 @@
+{
+  "status": "semantic_review_complete_with_entity_coverage_quarantines_not_training_ready",
+  "createdAtUTC": "2026-10-10T11:35:29.943961+00:00",
+  "reviewedDocuments": 12,
+  "existingEntityMentionsReviewed": 151,
+  "priorResolvedPairsReviewed": 102,
+  "isolation": {
+    "publicationGroupAndArxivMetadataConflicts": 0,
+    "externalTrainOnlyPapers": 4,
+    "reservedTestTextOverlapChecked": false,
+    "notice": "Metadata identity isolation, not a new representative split or proof against all semantic/near-duplicate overlap. Reserved test text was not parsed."
+  },
+  "candidatePairs": 499,
+  "priorSupport": {
+    "EVALUATED_ON": 17,
+    "UNRESOLVED": 397,
+    "USED_FOR": 69,
+    "NO_RELATION": 16
+  },
+  "revisedSupport": {
+    "EVALUATED_ON": 17,
+    "UNRESOLVED": 414,
+    "USED_FOR": 63,
+    "NO_RELATION": 5
+  },
+  "withdrawnToUnresolved": 19,
+  "newlyResolvedPairs": 2,
+  "NEREligibleDocuments": 8,
+  "NERQuarantinedDocuments": [
+    "2008.10400",
+    "2501.02474",
+    "2501.06756",
+    "2312.03556"
+  ],
+  "candidateEligibleRelationPairs": 57,
+  "candidateEligibleSupport": {
+    "USED_FOR": 43,
+    "EVALUATED_ON": 9,
+    "NO_RELATION": 5
+  },
+  "distinctLiteralPairsPerPaper": {
+    "EVALUATED_ON": 16,
+    "USED_FOR": 34,
+    "NO_RELATION": 4
+  },
+  "sourcePapersByClass": {
+    "EVALUATED_ON": 5,
+    "USED_FOR": 10,
+    "NO_RELATION": 2
+  },
+  "supportGroupsByClass": {
+    "EVALUATED_ON": 8,
+    "USED_FOR": 17,
+    "NO_RELATION": 3
+  },
+  "priorityQueueAdjudicated": 12,
+  "sourceMetadataSidecars": 2,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "modelPromoted": false,
+  "testContentParsed": false,
+  "notice": "Candidate eligibility is not training execution/admission. Four entity coverage gaps and a locked future split/selection contract remain. Retained negatives are scoped operator-role decisions, not global factual negations."
+}

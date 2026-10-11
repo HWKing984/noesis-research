@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "version": "abstract_train_scope_review_v1",
+  "sourceJudgments": 11,
+  "freshReviewedReceipts": 5,
+  "inheritedReceiptDocuments": 53,
+  "trainQueue": 58,
+  "NERtrain": 54,
+  "NERexcluded": 4,
+  "entitySupport": {
+    "TASK": 196,
+    "METHOD": 402,
+    "DATASET": 44
+  },
+  "resolvedRelations": 267,
+  "relationSupport": {
+    "EVALUATED_ON": 58,
+    "USED_FOR": 183,
+    "NO_RELATION": 26
+  },
+  "unknownPairs": 1632,
+  "eligiblePairs": 1899,
+  "completeRelationDocuments": 8,
+  "newZeroCandidateDocuments": 2,
+  "explicitlyRejudgedTouchedPairs": 8,
+  "explicitlyRejudgedResolvedPairs": 3,
+  "DATASETSupportIncreased": false,
+  "trainingExecuted": false,
+  "devCopiedAsOpaqueBytes": true,
+  "testSemanticallyRead": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "independentHumanGold": false
+}

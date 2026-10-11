@@ -1,0 +1,115 @@
+{
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\manifest.json": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_training_inputs_17\\manifest.json": "44b4cded1460294e23d7b6d53303ddace56296fb1c0f2eacff4d009c667df9ef",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\models\\scibert_24f92d32\\manifest.json": "378279b83aa104efa17a202cb455bc1d3598068aad0490147906ccb73d7d7eeb",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "D:\\a-open_source\\neo4j\\scripts\\course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "D:\\a-open_source\\neo4j\\resources\\course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "D:\\a-open_source\\neo4j\\schemas\\annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "D:\\a-open_source\\neo4j\\scripts\\import_course_ai.py": "682ea6e9fea02a512e07495699d4b304305f8c6963e648a4a523aff416755e0f",
+    "D:\\a-open_source\\neo4j\\scripts\\prepare_course_weak.py": "17bbc32c8682e66d4ed7990a496f53414e4dab3805223ffa55dbb70169638953",
+    "D:\\a-open_source\\neo4j\\scripts\\course_relation_model.py": "6cd814207310208dd01c9abeb0c4f68f3082c5c0b8cd331a9f9d1197faad979d"
+  },
+  "archivedInputs": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\manifest.json": "inputs/00_manifest.json",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_training_inputs_17\\manifest.json": "inputs/01_manifest.json",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\models\\scibert_24f92d32\\manifest.json": "inputs/02_manifest.json",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_relation.py": "inputs/03_train_course_relation.py",
+    "D:\\a-open_source\\neo4j\\scripts\\train_course_ner.py": "inputs/04_train_course_ner.py",
+    "D:\\a-open_source\\neo4j\\scripts\\course_weak.py": "inputs/05_course_weak.py",
+    "D:\\a-open_source\\neo4j\\resources\\course_v4_config.json": "inputs/06_course_v4_config.json",
+    "D:\\a-open_source\\neo4j\\schemas\\annotation_course_v4.schema.json": "inputs/07_annotation_course_v4.schema.json",
+    "D:\\a-open_source\\neo4j\\scripts\\import_course_ai.py": "inputs/08_import_course_ai.py",
+    "D:\\a-open_source\\neo4j\\scripts\\prepare_course_weak.py": "inputs/09_prepare_course_weak.py",
+    "D:\\a-open_source\\neo4j\\scripts\\course_relation_model.py": "inputs/10_course_relation_model.py"
+  },
+  "modelProvenance": {
+    "modelId": "allenai/scibert_scivocab_uncased",
+    "revision": "24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1",
+    "upstreamURL": "https://huggingface.co/allenai/scibert_scivocab_uncased/tree/24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1",
+    "downloadedAt": "2026-10-06",
+    "weightUpstreamSha256": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a",
+    "weightUpstreamBytes": 442221694,
+    "weightsFormat": "pytorch_state_dict",
+    "trustRemoteCode": false,
+    "filesSha256": {
+      "config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0",
+      "vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+      "pytorch_model.bin": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a",
+      "README.md": "dbf7cf7e4365de6032a9677a4e305113c46f4597ea7f2f25b9ca4e4e6dafcfe5"
+    }
+  },
+  "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.8.0+cu126",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2",
+    "numpy": "2.2.6",
+    "jsonschema": "4.26.0"
+  },
+  "config": {
+    "seed": 20261006,
+    "batch_size": 8,
+    "learning_rate": 2e-05,
+    "max_length": 128,
+    "epochs": 6,
+    "balanced_loss": true,
+    "selection_metric": "all_class_macro",
+    "representation": "entity_markers"
+  },
+  "labels": [
+    "USED_FOR",
+    "EVALUATED_ON",
+    "NO_RELATION"
+  ],
+  "markers": {
+    "headOpen": "[unused0]",
+    "headClose": "[unused1]",
+    "TASK": "[unused2]",
+    "DATASET": "[unused3]",
+    "tailClose": "[unused4]"
+  },
+  "typeMask": "candidate_positive_or_NO_RELATION",
+  "selection": "dev_all_class_macro_f1_earliest_tie",
+  "trainLossWeights": {
+    "USED_FOR": 0.3468516542155816,
+    "EVALUATED_ON": 108.33333333333333,
+    "NO_RELATION": 9.285714285714286
+  },
+  "resumeSupported": false,
+  "filesSha256": {
+    "baseline_dev_metrics.json": "c52bbd12f68976f21ec21eb2a2ec67320b0f4593744c50fde5379d68f13f8a58",
+    "baseline_dev_predictions.jsonl": "bcf7ea77e86527c64f242619defc09cd129275c6d9c562e9391fe64b62e48252",
+    "checkpoint_epoch_01/config.json": "520c68ec0d40c593a32ef96ac928986200c8ff9e2a2fd5730ad7187271557ccc",
+    "checkpoint_epoch_01/model.safetensors": "74bc5fb008e6a1d4202a7fa6dbe42aba2b2c79496a591f7c7e30e211691bb48e",
+    "checkpoint_epoch_01/special_tokens_map.json": "0cb1aed77aa77f9f8435976f9d55c51b049dc006a3f18ffea76c8b8ff9fcef65",
+    "checkpoint_epoch_01/tokenizer.json": "88bd44354db2e2816f08b40fc45666310c986881649b90046e546f514d711d6a",
+    "checkpoint_epoch_01/tokenizer_config.json": "cf888e0eeb08754257b99e4c57b881db25ff7fd7584222235f1da469a9194e99",
+    "checkpoint_epoch_01/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "dev_encoded.jsonl": "cdd2fddb9de8df7e1ca366326246d924a8ec8937cabc0628e428054fb446d335",
+    "dev_errors.jsonl": "8e81677ec2afb4dcc03a46cfd76d8bd26faf7a5a6a4f3027b2056b5b88d19652",
+    "dev_inputs.jsonl": "df0e9ab9c4e523248d844200ff3bc1c2800505b319ad7dc647c52d182d7fea45",
+    "dev_predictions.jsonl": "e5a645bb924f9457ea0424f88ded973248a4647f94bf15c873c19af3af361ed5",
+    "development_result.json": "98cc944d264f6e45e1898e1d78884617a2812ad0feb8260b008b4da508fe3589",
+    "epochs.json": "d43e496636ef1865f38e1dda7a6fd1c8c9ab82ec0d8b67ae64b43cdd850f0b1f",
+    "inputs/00_manifest.json": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+    "inputs/01_manifest.json": "44b4cded1460294e23d7b6d53303ddace56296fb1c0f2eacff4d009c667df9ef",
+    "inputs/02_manifest.json": "378279b83aa104efa17a202cb455bc1d3598068aad0490147906ccb73d7d7eeb",
+    "inputs/03_train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "inputs/04_train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "inputs/05_course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "inputs/06_course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "inputs/07_annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "inputs/08_import_course_ai.py": "682ea6e9fea02a512e07495699d4b304305f8c6963e648a4a523aff416755e0f",
+    "inputs/09_prepare_course_weak.py": "17bbc32c8682e66d4ed7990a496f53414e4dab3805223ffa55dbb70169638953",
+    "inputs/10_course_relation_model.py": "6cd814207310208dd01c9abeb0c4f68f3082c5c0b8cd331a9f9d1197faad979d",
+    "preflight.json": "3ee4060b5b204e1dd00d420f412e4e2dd1ec7b393b0a5cb382a943ea04893bf8",
+    "status.json": "17a18f5ec3a54a2cc678a499fed300bf1596a9b16113f02d23dcaacc40e2beba",
+    "steps.jsonl": "4301208828f35f3c119b5987b83b863a0c6f850295cc4153df7ccef9cc6ac57c",
+    "train_encoded.jsonl": "a81a23114a0fda0d230a0b1512bb2fa60e5c81fe2923cde24d8121a78131ebfd",
+    "train_inputs.jsonl": "3e113ff19a717b375d0352d1f8220daa225851c1f25f7bcd65867aee937312e9"
+  }
+}

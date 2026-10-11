@@ -1,0 +1,31 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "04_traceability.html": "b2a1f256585f955942971cb0efff740ad24658829a996ba0ddfbf4d306a7f34b",
+    "09_annotation_expansion.html": "2206d1e6f44137163646991a587231470db29337295a859e52cf68ffaf905f9b",
+    "audit_state.json": "a4f1a7de25348fb3a6928d11f36be9defe5992bd4b1d3b6f9ba16c8f9dbcb0d4",
+    "relation_cases.json": "6a083a0747582bab5ed1fbb512e14fe3da0f04ea0cbe9d83fc2ae284ed36b38a",
+    "sources/README.md": "1a7020a25c3707fcccfece59876e186383d1220ba1bbfdfe91bdef344695a420",
+    "sources/docs/system_status_round40.md": "78b8e1365bfc6f50f9a2ff85312bf326dac1ada6243e4d6a0565f2c159cb82d8",
+    "sources/resources/course_abstract_dev_relations_v1.json": "2767eebcc2db05ed27a038babf1906496c26176732f16ea35af574eabec39cf3",
+    "sources/scripts/complete_dev_relations.py": "d7126e0eff3d6dcb3573bd2114d71ab2b7819837a478fd2e384a378b271aa538",
+    "sources/tests/test_dev_relation_revision.py": "45676adbb401c2771f506029127bd435a6202413e1cd24dc5b8832fcc13118f7",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/additional_relation_dev.jsonl": "24981b1d701b4804f27ff7e48d06dc4b831214a9bdacea465af322bac687d33f",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/contract.json": "01a543c92fa08ebb7fc0fe3ede14e52393c49604b2bca387d74994e114241cb7",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/excluded_ner.jsonl": "e13bbf2af675c686a7b9430903ad0aa3498c3f970332032740692fd8beb60df7",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/full_relation_dev.jsonl": "2d4294be6eed97f16fe7ff4ea37a9daf923a1fa189823a892f82e48756e39785",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/generation_receipts.jsonl": "1f8404f6a05f346f1c687be2325697f71f0d4973fccc63ed79d734fcc791dd30",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/manifest.json": "c792d4895ffe9d17f474c56f8d1da072aa27ae89bbba4ea5cbb7ba58e23a1199",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/ner_dev.jsonl": "395eb5c8c6ddfe7782d7877a8cba1ba109680d04695770cdd7a19d8026901954",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/origins.jsonl": "dd39adcdb061c2d9db1a4c0e34b926df9049a58f21de799cd28e4498d73c4879",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/references.jsonl": "5d5b990c462c7b4673f106efc77d5e78fa73d8cf5abf7535d0676827c9cd48f2",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/relation_dev.jsonl": "360567eebf7d2a078b7f1bc5e2714b9e897b0900f3d26cfce565ef33c5581b68",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/reviewed_receipts.jsonl": "017aebe355a801475cd866d116a4b6ac143df0f7b4b17e146f67705f054f27db",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/summary.json": "c26432bc2a2d5c94731c75f2ec722407beb8683f9b91c9e9700fc72525109d21",
+    "sources/kg_datasets/dblp/course_abstract_dev_relation_reviewed_20261008_40/token_alignment.jsonl": "08ba5223f418ea9069bc7702758e488e91cca5924851f9054b71562dfb3c8ce9",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round40.xml": "5d6a1d1e2e3220922dbc4f5be3063eb416aadba538f312af33f5a8f8b2ebd453",
+    "sources/annotations/course_v4/abstract_dev_relation_decisions_20261008_40.json": "81a075c059a8d95cd4d064bd04fc00aa7ad6e8ff9a34e6945ffeddaf0bdfdea2",
+    "sources/annotations/course_v4/abstract_dev_relation_reviews_20261008_40.json": "e7871e5e582dc616c07d255b92b07861834ec9bc38227684c70afb6cc801b73f",
+    "sources/annotations/course_v4/seal_dev_relations_20261008_round40.py": "161763cd937662a2fc0591dc7482c3a51e1e60c78f1c26c987e0c5c4ad6bbdfb"
+  }
+}

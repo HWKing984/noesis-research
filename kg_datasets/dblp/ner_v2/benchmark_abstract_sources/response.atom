@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/wcdiBwLyDHaRWi1HcnLfomfTzOg</id>
+  <title>arXiv Query: search_query=&amp;id_list=1708.07747,1804.07461,1905.00537,1606.05250,2406.01574,2009.03300,2107.03374,2110.14168,1609.02907&amp;start=0&amp;max_results=9</title>
+  <updated>2026-10-05T06:18:50Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=9&amp;id_list=1708.07747,1804.07461,1905.00537,1606.05250,2406.01574,2009.03300,2107.03374,2110.14168,1609.02907" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>9</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1708.07747v2</id>
+    <title>Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms</title>
+    <updated>2017-09-15T21:29:49Z</updated>
+    <link href="https://arxiv.org/abs/1708.07747v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1708.07747v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present Fashion-MNIST, a new dataset comprising of 28x28 grayscale images of 70,000 fashion products from 10 categories, with 7,000 images per category. The training set has 60,000 images and the test set has 10,000 images. Fashion-MNIST is intended to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms, as it shares the same image size, data format and the structure of training and testing splits. The dataset is freely available at https://github.com/zalandoresearch/fashion-mnist</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-08-25T14:01:29Z</published>
+    <arxiv:comment>Dataset is freely available at https://github.com/zalandoresearch/fashion-mnist Benchmark is available at http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Han Xiao</name>
+    </author>
+    <author>
+      <name>Kashif Rasul</name>
+    </author>
+    <author>
+      <name>Roland Vollgraf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.03374v2</id>
+    <title>Evaluating Large Language Models Trained on Code</title>
+    <updated>2021-07-14T17:16:02Z</updated>
+    <link href="https://arxiv.org/abs/2107.03374v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.03374v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-07T17:41:24Z</published>
+    <arxiv:comment>corrected typos, added references, added authors, added acknowledgements</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mark Chen</name>
+    </author>
+    <author>
+      <name>Jerry Tworek</name>
+    </author>
+    <author>
+      <name>Heewoo Jun</name>
+    </author>
+    <author>
+      <name>Qiming Yuan</name>
+    </author>
+    <author>
+      <name>Henrique Ponde de Oliveira Pinto</name>
+    </author>
+    <author>
+      <name>Jared Kaplan</name>
+    </author>
+    <author>
+      <name>Harri Edwards</name>
+    </author>
+    <author>
+      <name>Yuri Burda</name>
+    </author>
+    <author>
+      <name>Nicholas Joseph</name>
+    </author>
+    <author>
+      <name>Greg Brockman</name>
+    </author>
+    <author>
+      <name>Alex Ray</name>
+    </author>
+    <author>
+      <name>Raul Puri</name>
+    </author>
+    <author>
+      <name>Gretchen Krueger</name>
+    </author>
+    <author>
+      <name>Michael Petrov</name>
+    </author>
+    <author>
+      <name>Heidy Khlaaf</name>
+    </author>
+    <author>
+      <name>Girish Sastry</name>
+    </author>
+    <author>
+      <name>Pamela Mishkin</name>
+    </author>
+    <author>
+      <name>Brooke Chan</name>
+    </author>
+    <author>
+      <name>Scott Gray</name>
+    </author>
+    <author>
+      <name>Nick Ryder</name>
+    </author>
+    <author>
+      <name>Mikhail Pavlov</name>
+    </author>
+    <author>
+      <name>Alethea Power</name>
+    </author>
+    <author>
+      <name>Lukasz Kaiser</name>
+    </author>
+    <author>
+      <name>Mohammad Bavarian</name>
+    </author>
+    <author>
+      <name>Clemens Winter</name>
+    </author>
+    <author>
+      <name>Philippe Tillet</name>
+    </author>
+    <author>
+      <name>Felipe Petroski Such</name>
+    </author>
+    <author>
+      <name>Dave Cummings</name>
+    </author>
+    <author>
+      <name>Matthias Plappert</name>
+    </author>
+    <author>
+      <name>Fotios Chantzis</name>
+    </author>
+    <author>
+      <name>Elizabeth Barnes</name>
+    </author>
+    <author>
+      <name>Ariel Herbert-Voss</name>
+    </author>
+    <author>
+      <name>William Hebgen Guss</name>
+    </author>
+    <author>
+      <name>Alex Nichol</name>
+    </author>
+    <author>
+      <name>Alex Paino</name>
+    </author>
+    <author>
+      <name>Nikolas Tezak</name>
+    </author>
+    <author>
+      <name>Jie Tang</name>
+    </author>
+    <author>
+      <name>Igor Babuschkin</name>
+    </author>
+    <author>
+      <name>Suchir Balaji</name>
+    </author>
+    <author>
+      <name>Shantanu Jain</name>
+    </author>
+    <author>
+      <name>William Saunders</name>
+    </author>
+    <author>
+      <name>Christopher Hesse</name>
+    </author>
+    <author>
+      <name>Andrew N. Carr</name>
+    </author>
+    <author>
+      <name>Jan Leike</name>
+    </author>
+    <author>
+      <name>Josh Achiam</name>
+    </author>
+    <author>
+      <name>Vedant Misra</name>
+    </author>
+    <author>
+      <name>Evan Morikawa</name>
+    </author>
+    <author>
+      <name>Alec Radford</name>
+    </author>
+    <author>
+      <name>Matthew Knight</name>
+    </author>
+    <author>
+      <name>Miles Brundage</name>
+    </author>
+    <author>
+      <name>Mira Murati</name>
+    </author>
+    <author>
+      <name>Katie Mayer</name>
+    </author>
+    <author>
+      <name>Peter Welinder</name>
+    </author>
+    <author>
+      <name>Bob McGrew</name>
+    </author>
+    <author>
+      <name>Dario Amodei</name>
+    </author>
+    <author>
+      <name>Sam McCandlish</name>
+    </author>
+    <author>
+      <name>Ilya Sutskever</name>
+    </author>
+    <author>
+      <name>Wojciech Zaremba</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.05250v3</id>
+    <title>SQuAD: 100,000+ Questions for Machine Comprehension of Text</title>
+    <updated>2016-10-11T02:42:36Z</updated>
+    <link href="https://arxiv.org/abs/1606.05250v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.05250v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%). However, human performance (86.8%) is much higher, indicating that the dataset presents a good challenge problem for future research.
+  The dataset is freely available at https://stanford-qa.com</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-16T16:36:00Z</published>
+    <arxiv:comment>To appear in Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing (EMNLP)</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Pranav Rajpurkar</name>
+    </author>
+    <author>
+      <name>Jian Zhang</name>
+    </author>
+    <author>
+      <name>Konstantin Lopyrev</name>
+    </author>
+    <author>
+      <name>Percy Liang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.07461v3</id>
+    <title>GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding</title>
+    <updated>2019-02-22T23:53:34Z</updated>
+    <link href="https://arxiv.org/abs/1804.07461v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.07461v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For natural language understanding (NLU) technology to be maximally useful, both practically and as a scientific object of study, it must be general: it must be able to process language in a way that is not exclusively tailored to any one specific task or dataset. In pursuit of this objective, we introduce the General Language Understanding Evaluation benchmark (GLUE), a tool for evaluating and analyzing the performance of models across a diverse range of existing NLU tasks. GLUE is model-agnostic, but it incentivizes sharing knowledge across tasks because certain tasks have very limited training data. We further provide a hand-crafted diagnostic test suite that enables detailed linguistic analysis of NLU models. We evaluate baselines based on current methods for multi-task and transfer learning and find that they do not immediately give substantial improvements over the aggregate performance of training a separate model per task, indicating room for improvement in developing general and robust NLU systems.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-20T06:35:04Z</published>
+    <arxiv:comment>ICLR 2019; https://gluebenchmark.com/</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Alex Wang</name>
+    </author>
+    <author>
+      <name>Amanpreet Singh</name>
+    </author>
+    <author>
+      <name>Julian Michael</name>
+    </author>
+    <author>
+      <name>Felix Hill</name>
+    </author>
+    <author>
+      <name>Omer Levy</name>
+    </author>
+    <author>
+      <name>Samuel R. Bowman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.14168v2</id>
+    <title>Training Verifiers to Solve Math Word Problems</title>
+    <updated>2021-11-18T00:23:45Z</updated>
+    <link href="https://arxiv.org/abs/2110.14168v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.14168v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>State-of-the-art language models can match human performance on many tasks, but they still struggle to robustly perform multi-step mathematical reasoning. To diagnose the failures of current models and support research, we introduce GSM8K, a dataset of 8.5K high quality linguistically diverse grade school math word problems. We find that even the largest transformer models fail to achieve high test performance, despite the conceptual simplicity of this problem distribution. To increase performance, we propose training verifiers to judge the correctness of model completions. At test time, we generate many candidate solutions and select the one ranked highest by the verifier. We demonstrate that verification significantly improves performance on GSM8K, and we provide strong empirical evidence that verification scales more effectively with increased data than a finetuning baseline.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-27T04:49:45Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Karl Cobbe</name>
+    </author>
+    <author>
+      <name>Vineet Kosaraju</name>
+    </author>
+    <author>
+      <name>Mohammad Bavarian</name>
+    </author>
+    <author>
+      <name>Mark Chen</name>
+    </author>
+    <author>
+      <name>Heewoo Jun</name>
+    </author>
+    <author>
+      <name>Lukasz Kaiser</name>
+    </author>
+    <author>
+      <name>Matthias Plappert</name>
+    </author>
+    <author>
+      <name>Jerry Tworek</name>
+    </author>
+    <author>
+      <name>Jacob Hilton</name>
+    </author>
+    <author>
+      <name>Reiichiro Nakano</name>
+    </author>
+    <author>
+      <name>Christopher Hesse</name>
+    </author>
+    <author>
+      <name>John Schulman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.01574v6</id>
+    <title>MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark</title>
+    <updated>2024-11-06T02:54:00Z</updated>
+    <link href="https://arxiv.org/abs/2406.01574v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.01574v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the age of large-scale language models, benchmarks like the Massive Multitask Language Understanding (MMLU) have been pivotal in pushing the boundaries of what AI can achieve in language comprehension and reasoning across diverse domains. However, as models continue to improve, their performance on these benchmarks has begun to plateau, making it increasingly difficult to discern differences in model capabilities. This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning-focused questions and expanding the choice set from four to ten options. Additionally, MMLU-Pro eliminates the trivial and noisy questions in MMLU. Our experimental results show that MMLU-Pro not only raises the challenge, causing a significant drop in accuracy by 16% to 33% compared to MMLU but also demonstrates greater stability under varying prompts. With 24 different prompt styles tested, the sensitivity of model scores to prompt variations decreased from 4-5% in MMLU to just 2% in MMLU-Pro. Additionally, we found that models utilizing Chain of Thought (CoT) reasoning achieved better performance on MMLU-Pro compared to direct answering, which is in stark contrast to the findings on the original MMLU, indicating that MMLU-Pro includes more complex reasoning questions. Our assessments confirm that MMLU-Pro is a more discriminative benchmark to better track progress in the field.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-03T17:53:00Z</published>
+    <arxiv:comment>This version has been accepted and published at NeurIPS 2024 Track Datasets and Benchmarks (Spotlight)</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yubo Wang</name>
+    </author>
+    <author>
+      <name>Xueguang Ma</name>
+    </author>
+    <author>
+      <name>Ge Zhang</name>
+    </author>
+    <author>
+      <name>Yuansheng Ni</name>
+    </author>
+    <author>
+      <name>Abhranil Chandra</name>
+    </author>
+    <author>
+      <name>Shiguang Guo</name>
+    </author>
+    <author>
+      <name>Weiming Ren</name>
+    </author>
+    <author>
+      <name>Aaran Arulraj</name>
+    </author>
+    <author>
+      <name>Xuan He</name>
+    </author>
+    <author>
+      <name>Ziyan Jiang</name>
+    </author>
+    <author>
+      <name>Tianle Li</name>
+    </author>
+    <author>
+      <name>Max Ku</name>
+    </author>
+    <author>
+      <name>Kai Wang</name>
+    </author>
+    <author>
+      <name>Alex Zhuang</name>
+    </author>
+    <author>
+      <name>Rongqi Fan</name>
+    </author>
+    <author>
+      <name>Xiang Yue</name>
+    </author>
+    <author>
+      <name>Wenhu Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.00537v3</id>
+    <title>SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems</title>
+    <updated>2020-02-13T00:28:00Z</updated>
+    <link href="https://arxiv.org/abs/1905.00537v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.00537v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the last year, new models and methods for pretraining and transfer learning have driven striking performance improvements across a range of language understanding tasks. The GLUE benchmark, introduced a little over one year ago, offers a single-number metric that summarizes progress on a diverse set of such tasks, but performance on the benchmark has recently surpassed the level of non-expert humans, suggesting limited headroom for further research. In this paper we present SuperGLUE, a new benchmark styled after GLUE with a new set of more difficult language understanding tasks, a software toolkit, and a public leaderboard. SuperGLUE is available at super.gluebenchmark.com.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-02T00:41:50Z</published>
+    <arxiv:comment>NeurIPS 2019, super.gluebenchmark.com updating acknowledegments</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Alex Wang</name>
+    </author>
+    <author>
+      <name>Yada Pruksachatkun</name>
+    </author>
+    <author>
+      <name>Nikita Nangia</name>
+    </author>
+    <author>
+      <name>Amanpreet Singh</name>
+    </author>
+    <author>
+      <name>Julian Michael</name>
+    </author>
+    <author>
+      <name>Felix Hill</name>
+    </author>
+    <author>
+      <name>Omer Levy</name>
+    </author>
+    <author>
+      <name>Samuel R. Bowman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.02907v4</id>
+    <title>Semi-Supervised Classification with Graph Convolutional Networks</title>
+    <updated>2017-02-22T09:55:36Z</updated>
+    <link href="https://arxiv.org/abs/1609.02907v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.02907v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient variant of convolutional neural networks which operate directly on graphs. We motivate the choice of our convolutional architecture via a localized first-order approximation of spectral graph convolutions. Our model scales linearly in the number of graph edges and learns hidden layer representations that encode both local graph structure and features of nodes. In a number of experiments on citation networks and on a knowledge graph dataset we demonstrate that our approach outperforms related methods by a significant margin.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-09T19:48:41Z</published>
+    <arxiv:comment>Published as a conference paper at ICLR 2017</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Thomas N. Kipf</name>
+    </author>
+    <author>
+      <name>Max Welling</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.03300v3</id>
+    <title>Measuring Massive Multitask Language Understanding</title>
+    <updated>2021-01-12T18:57:11Z</updated>
+    <link href="https://arxiv.org/abs/2009.03300v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.03300v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-07T17:59:25Z</published>
+    <arxiv:comment>ICLR 2021; the test and code is available at https://github.com/hendrycks/test</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Dan Hendrycks</name>
+    </author>
+    <author>
+      <name>Collin Burns</name>
+    </author>
+    <author>
+      <name>Steven Basart</name>
+    </author>
+    <author>
+      <name>Andy Zou</name>
+    </author>
+    <author>
+      <name>Mantas Mazeika</name>
+    </author>
+    <author>
+      <name>Dawn Song</name>
+    </author>
+    <author>
+      <name>Jacob Steinhardt</name>
+    </author>
+  </entry>
+</feed>

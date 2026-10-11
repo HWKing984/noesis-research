@@ -1,0 +1,59 @@
+{
+  "kind": "training_side_reference_readiness_not_evaluation_scores",
+  "newValidationDocuments": 0,
+  "newTestDocuments": 0,
+  "relations": {
+    "USED_FOR": {
+      "positivePairs": 68,
+      "negativePairs": 0,
+      "unresolvedPairs": 495,
+      "totalPairs": 563,
+      "sourcePapers": 11,
+      "referenceComplete": false,
+      "status": "not_evaluable",
+      "reasons": [
+        "no_explicit_negative_reference",
+        "incomplete_reference",
+        "incomplete_coverage"
+      ],
+      "referenceCoverage": 0.12078152753108348,
+      "sourceSupportStatus": "support_gate_met",
+      "promotionStatus": "not_evaluable",
+      "metrics": {
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tp": null,
+        "fp": null,
+        "fn": null
+      },
+      "notice": "Reference readiness only, no prediction or accuracy. Rare-source threshold is a practical guard, not statistical significance."
+    },
+    "EVALUATED_ON": {
+      "positivePairs": 17,
+      "negativePairs": 0,
+      "unresolvedPairs": 104,
+      "totalPairs": 121,
+      "sourcePapers": 5,
+      "referenceComplete": false,
+      "status": "not_evaluable",
+      "reasons": [
+        "no_explicit_negative_reference",
+        "incomplete_reference",
+        "incomplete_coverage"
+      ],
+      "referenceCoverage": 0.14049586776859505,
+      "sourceSupportStatus": "insufficient_source_support",
+      "promotionStatus": "not_evaluable",
+      "metrics": {
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tp": null,
+        "fp": null,
+        "fn": null
+      },
+      "notice": "Reference readiness only, no prediction or accuracy. Rare-source threshold is a practical guard, not statistical significance."
+    }
+  }
+}

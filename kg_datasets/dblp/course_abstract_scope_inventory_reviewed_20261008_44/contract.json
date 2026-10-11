@@ -1,0 +1,22 @@
+{
+  "version": "abstract_train_inventory_patch_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_scope_reviewed_20261008_44",
+  "snapshotManifestSha256": "8c8d66afbacec040e2e00120d884fd179f215fd42a19024ca2726175d84ad01c",
+  "arxivId": "2406.01574",
+  "textSha256": "bbe7a23fa314b12eab53fcb30fa8994e0db7f7d919913cd51010090bebda3b1e",
+  "addEntity": {
+    "start": 14,
+    "end": 41,
+    "text": "large-scale language models",
+    "label": "METHOD"
+  },
+  "sourceQuote": "In the age of large-scale language models, benchmarks like the Massive Multitask Language Understanding (MMLU)",
+  "decision": "Whole-source self-review found a missing identifiable model-family mention in the opening sentence. Background mention still counts as NER; it does not certify use or evaluation. Add this exact family phrase without altering the eighteen existing entity spans/types, source text, coordinated TASK or dataset aliases. Pure entity-ID renumbering must rebind every old relation by original source span and type, not positional index.",
+  "selfReview": "Re-read the whole abstract and initial eighteen spans, including the first sentence omitted by the prior labels. large-scale language models is a literal model-family phrase at 14:41, not a course-subject list or generic AI field word. The scale qualifier belongs to the preserved source phrase; no model name is inferred. The new METHOD cannot inherit the CoT/direct-answering benchmark evidence. Its fifteen fresh METHOD-to-TASK/DATASET candidates must remain UNRESOLVED. All forty-five old candidate pairs retain the exact endpoint source spans/types, label, evidence and reason through an explicit old-to-new-ID map. This closes one actual omission, not a declaration of universally correct labels or independent gold.",
+  "unknownPolicy": "Only added-endpoint pairs are new UNRESOLVED; no default negatives, no propagation of existing evaluation labels to the background family.",
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "trainingAllowed": false,
+  "automaticPromotionAllowed": false
+}

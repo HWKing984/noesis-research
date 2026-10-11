@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "version": "abstract_structural_abstention_v1",
+  "trainReferencePreserved": 58,
+  "trainEntityPreserved": 678,
+  "devDocuments": 16,
+  "metrics": {
+    "micro": {
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+      "truePositive": 130,
+      "predicted": 177,
+      "reference": 184,
+      "precision": 0.7344632768361582,
+      "recall": 0.7065217391304348,
+      "f1": 0.7202216066481995
+    },
+    "perClass": {
+      "METHOD": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 94,
+        "predicted": 111,
+        "reference": 116,
+        "precision": 0.8468468468468469,
+        "recall": 0.8103448275862069,
+        "f1": 0.8281938325991189
+      },
+      "TASK": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 26,
+        "predicted": 51,
+        "reference": 53,
+        "precision": 0.5098039215686274,
+        "recall": 0.49056603773584906,
+        "f1": 0.5
+      },
+      "DATASET": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 10,
+        "predicted": 15,
+        "reference": 15,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666
+      }
+    }
+  },
+  "pipelineMetrics": {
+    "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+    "entityScope": "cached_frozen_NER_predicted_entities",
+    "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+    "documents": 7,
+    "positiveMicro": {
+      "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+      "truePositive": 50,
+      "predicted": 167,
+      "reference": 84,
+      "precision": 0.2994011976047904,
+      "recall": 0.5952380952380952,
+      "f1": 0.398406374501992
+    },
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "truePositive": 50,
+        "predicted": 161,
+        "reference": 84,
+        "precision": 0.3105590062111801,
+        "recall": 0.5952380952380952,
+        "f1": 0.40816326530612246
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+        "truePositive": 0,
+        "predicted": 6,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      }
+    },
+    "positiveMacroF1": 0.40816326530612246,
+    "supportedPositiveClasses": [
+      "USED_FOR"
+    ],
+    "negativeDecisions": 8,
+    "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed.",
+    "endpointMismatch": {
+      "head+tail": 13,
+      "head": 10,
+      "tail": 83,
+      "relation_only": 11
+    }
+  },
+  "baseline46": {
+    "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+    "truePositive": 50,
+    "predicted": 169,
+    "reference": 84,
+    "precision": 0.2958579881656805,
+    "recall": 0.5952380952380952,
+    "f1": 0.3952569169960474
+  },
+  "baseline42": {
+    "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+    "truePositive": 50,
+    "predicted": 100,
+    "reference": 84,
+    "precision": 0.5,
+    "recall": 0.5952380952380952,
+    "f1": 0.5434782608695652
+  },
+  "abstainedEntities": 6,
+  "abstainedPairs": 2,
+  "exactCacheReplay": true,
+  "gates": {
+    "checks": {
+      "pipelinePrecisionNonRegression": false,
+      "pipelineF1NonRegression": false,
+      "pipelineRecallRegressionWithinGuard": true,
+      "referenceDATASETSupport": true,
+      "completeReferenceEVALUATED_ONSupport": false,
+      "completeDocumentCoverage": false,
+      "NERMicroF1Against46": true,
+      "DATASETRecallAgainst46": true
+    },
+    "developmentGatesPassed": false,
+    "blockedBy": [
+      "pipelinePrecisionNonRegression",
+      "pipelineF1NonRegression",
+      "completeReferenceEVALUATED_ONSupport",
+      "completeDocumentCoverage"
+    ],
+    "parentGates": {
+      "sameDevPipelinePrecisionNonRegression": true,
+      "sameDevPipelineF1NonRegression": true,
+      "maxAbsoluteRecallRegression": 0.02,
+      "minimumReferenceDATASETDev": 10,
+      "minimumReferenceEVALUATED_ONDev": 10,
+      "minimumReferenceRareSupportFinalTest": 10,
+      "minimumDocumentCoverage": 0.8,
+      "independentHumanGoldRequired": false,
+      "automaticPromotionAllowed": false,
+      "notice": "Support minima are operational guards, not statistical proof; insufficient support permits exploratory dev training only, not reliability claims or final promotion."
+    },
+    "finalTestExecuted": false,
+    "finalRareSupportKnown": false,
+    "qualityPromotionPassed": false,
+    "modelPromoted": false,
+    "notice": "Development guards are not final promotion. No final test, independent gold or automatic deployment."
+  },
+  "trainingExecuted": false,
+  "testEvaluated": false,
+  "labelsChanged": false,
+  "qualityPromotionPassed": false,
+  "modelPromoted": false,
+  "notice": "Exposed AI-reference dev diagnostic with structural abstention. No additional fit/inference, calibrated correctness or final test."
+}

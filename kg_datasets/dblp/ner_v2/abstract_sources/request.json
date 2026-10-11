@@ -1,0 +1,26 @@
+{
+  "url": "https://export.arxiv.org/api/query?id_list=2008.10400%2C2208.08300%2C2407.18827%2C2510.09914%2C2501.06756%2C2303.17448%2C2506.05972%2C2208.08485%2C2404.01036%2C2501.02474&max_results=10",
+  "arxiv_ids": [
+    "2008.10400",
+    "2208.08300",
+    "2407.18827",
+    "2510.09914",
+    "2501.06756",
+    "2303.17448",
+    "2506.05972",
+    "2208.08485",
+    "2404.01036",
+    "2501.02474"
+  ],
+  "requested_at_utc": "2026-10-05T06:05:33.576605+00:00",
+  "policy": {
+    "license": "CC0-1.0",
+    "source_policy": "https://info.arxiv.org/help/api/tou.html",
+    "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+    "policy_checked_on": "2026-10-05",
+    "redistribute_metadata": true
+  },
+  "requests": 1,
+  "concurrency": 1,
+  "purpose": "10-record availability/title matching pilot"
+}

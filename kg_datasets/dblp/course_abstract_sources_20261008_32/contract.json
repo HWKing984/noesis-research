@@ -1,0 +1,35 @@
+{
+  "version": "course-abstract-1",
+  "textKind": "abstract",
+  "offsetUnit": "unicode_codepoint",
+  "entityLabels": [
+    "METHOD",
+    "TASK",
+    "DATASET"
+  ],
+  "relationPairs": {
+    "USED_FOR": [
+      "METHOD",
+      "TASK"
+    ],
+    "EVALUATED_ON": [
+      "METHOD",
+      "DATASET"
+    ]
+  },
+  "splitPolicy": "Same paper group across titles and abstracts; cached/exposed external benchmarks train-only. Test sources reserved before annotation.",
+  "annotationSource": "ai_pseudo_not_independent_human_gold",
+  "titleLabelsReusable": false,
+  "normalization": "none: source abstract Unicode text retained exactly",
+  "overlengthPolicy": "reject, never silent truncation",
+  "promotion": "No automatic promotion; require rare-class support and independent evaluation. No closed title test tuning.",
+  "relationScope": "Only explicitly supported METHOD->TASK or METHOD->DATASET; unresolved coreference is not a negative.",
+  "iterationCompact": {
+    "goal": "Add real abstract evidence for missing DATASET/EVALUATED_ON support",
+    "successMetric": "usable source-matched abstracts and explicit rare labels, not inflated F1",
+    "mistakeBudget": "zero fabricated abstracts, source joins, copied title labels or cross-split paper groups",
+    "baseline": "Title production unchanged; preceding dev constrained decoder rejected",
+    "nextExperiment": "Source availability, then AI-labelled pilot and strict token/offset preflight",
+    "fallback": "Keep old model and graph; preserve failed acquisition without synthetic substitute"
+  }
+}

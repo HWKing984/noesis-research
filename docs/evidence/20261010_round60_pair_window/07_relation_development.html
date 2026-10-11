@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>第60轮 · 局部上下文真实训练与整篇开发评测</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>第60轮 · 局部上下文真实训练与整篇开发评测</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>复用408已判训练对、333开发对、固定52 NER与原15 RE初始化。仅改变关系输入为实体对所在句范围及左右各一句；窗口选择不读取关系标签或参考证据，原完整文档评分分母不变。</p><table><thead><tr><th>真实训练</th><th>记录</th></tr></thead><tbody><tr><td>epochs / steps</td><td>6 / 612</td></tr><tr><td>单检查点</td><td>checkpoint_epoch_06</td></tr><tr><td>编码器/分类头更新与重载一致</td><td>True</td></tr><tr><td>每轮408对均消费一次</td><td>True</td></tr><tr><td>保留测试/自动上线</td><td>未读取 / 未晋级</td></tr></tbody></table><h2>同7篇 / 84正参考 / 183预测候选：整篇开发对比</h2><table><thead><tr><th>版本</th><th>Precision</th><th>Recall</th><th>F1</th><th>FP</th><th>FN</th></tr></thead><tbody><tr><td>old</td><td>33.52%</td><td>70.24%</td><td>45.38%</td><td>117</td><td>25</td></tr><tr><td>new</td><td>33.91%</td><td>70.24%</td><td>45.74%</td><td>115</td><td>25</td></tr></tbody></table><p>57对照是封存预测重算，不是新推理。预测变化来自2篇；不是多来源泛化证明。完整评测关系支持0、覆盖7/19仍阻断晋级。</p><h2>输入缩短与限制</h2><table><thead><tr><th>split</th><th>对数</th><th>缩短输入</th><th>原证据片段未完整覆盖</th></tr></thead><tbody><tr><td>train</td><td>408</td><td>374</td><td>23</td></tr><tr><td>dev</td><td>333</td><td>270</td><td>33</td></tr></tbody></table><p>保留原整篇标签与证据，不能把局部共现当事实；窗口可能遗漏远处配置/共指信息。未决1949训练对不填负例。AI参考仍非独立人工金标准；本轮没有生产准确率结论。</p><h2>实际612步损失</h2><p>保留日志中的精确零损失，不删点画对数图。</p><table><thead><tr><th>检查</th><th>结果</th></tr></thead><tbody><tr><td>新增与相关回归</td><td>38</td></tr><tr><td>failed / errors / skipped</td><td>0 / 0 / 0</td></tr><tr><td>现有应用</td><td>ready / 20000篇</td></tr><tr><td>生产模型 / 图配置</td><td>保持不变</td></tr><tr><td>全503项重跑</td><td>本轮未重跑，上一轮503通过仅作历史记录</td></tr></tbody></table><footer>证据页生成时间：2026-10-10T07:34:28.677685+00:00<br>来源：<div class="path">D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\pair_window_development_20261010_60\manifest.json</div><div class="path">D:\a-open_source\neo4j\docs\evidence\20261010_round60_pair_window\check.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

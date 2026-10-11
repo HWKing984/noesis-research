@@ -1,0 +1,23 @@
+{
+  "version": "abstract_train_audit_v1",
+  "goal": "Diagnose DATASET sparsity and NER role/boundary errors on the existing training cohort before another model change.",
+  "snapshot": "kg_datasets/dblp/course_abstract_eval_attribution_reviewed_20261008_41",
+  "snapshotManifestSha256": "df4521554df1fd4997dc0aad0fc9d7e1e85ab4031edbc12f4632374efd434083",
+  "models": {
+    "old35": {"run": "kg_datasets/dblp/course_v4_runs/abstract_ner_development_20261008_35", "manifestSha256": "95a3c250100aa89452af0381f142f4a6b9df3e1336a1c4ed956b386e01f5a269", "checkpoint": "checkpoint_epoch_04", "weightsSha256": "14a1cce3d3cf5da3ac61e6bd651d14713215879b5ce679bd56ec8d2b47e87a96"},
+    "new42": {"run": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42", "manifestSha256": "c56769c8d51bd51b32e0c7058605dfd956e0812de91c21350403086f4b229320", "checkpoint": "ner/checkpoint_epoch_06", "weightsSha256": "6baacb7c6c7f72cbbb2799c61224771fcad9e876e28c3213a0cc6b250bc1f21e"}
+  },
+  "expected": {"references": 58, "eligibleNER": 50, "excludedNER": 8, "entities": {"METHOD": 378, "TASK": 189, "DATASET": 44}, "datasetDocuments": 16},
+  "scope": "Read only train references/receipts/NER rows. Verify other sealed files with binary hashes only. Infer all 50 eligible train papers with both frozen models using label-free features, then score separately.",
+  "evaluationTarget": "in_sample_train_diagnostic_AI_reference_not_generalization",
+  "sourceReview": "Before seeing new train predictions, inspect all 16 DATASET-bearing whole train abstracts. Record source-bound AI judgments and same-session self-review; not independent gold, not a new annotation receipt. No label edits in this diagnostic round.",
+  "errorPolicy": "Exact span/type matches are TP; every unmatched reference/prediction counted once. Type mismatch first if identical span, otherwise overlap gives boundary or type_and_boundary; no overlap gives missing/extra. Overlap categories are geometric diagnostics, not semantic correctness decisions.",
+  "nextExperimentRule": "Use train-only support, token counts and error/source review to choose one bounded follow-up. Do not pick phrases from dev/test, retune thresholds, or claim training fit as new accuracy.",
+  "maxTokens": 512,
+  "trainingAllowed": false,
+  "labelMutationAllowed": false,
+  "semanticDevReadAllowed": false,
+  "semanticTestReadAllowed": false,
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true
+}

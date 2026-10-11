@@ -1,0 +1,62 @@
+{
+  "status": "entity_completion_and_role_export_done_negative_scope_pending_not_training_ready",
+  "createdAtUTC": "2026-10-10T12:23:16.747523+00:00",
+  "documents": 12,
+  "completedInventoryDocuments": 4,
+  "NERCandidateDocuments": 12,
+  "entityMentions": 177,
+  "entitySupport": {
+    "DATASET": 20,
+    "METHOD": 99,
+    "TASK": 58
+  },
+  "addedEntityMentions": 26,
+  "candidatePairs": 684,
+  "inheritedPairs": 499,
+  "newUnresolvedPairs": 185,
+  "relationSupport": {
+    "EVALUATED_ON": 17,
+    "UNRESOLVED": 599,
+    "USED_FOR": 63,
+    "NO_RELATION": 5
+  },
+  "RECandidatePairs": 80,
+  "RECandidateSupport": {
+    "EVALUATED_ON": 17,
+    "USED_FOR": 63
+  },
+  "taskRoleSupport": {
+    "not_applicable": 17,
+    "downstream_application": 54,
+    "component_operation": 4,
+    "training_proxy": 3,
+    "background_method_use": 2
+  },
+  "quarantinedNegativePairs": 5,
+  "sourcePapersByCandidateClass": {
+    "USED_FOR": 10,
+    "EVALUATED_ON": 5,
+    "NO_RELATION": 0
+  },
+  "supportGroupsByCandidateClass": {
+    "USED_FOR": 17,
+    "EVALUATED_ON": 8
+  },
+  "isolation": {
+    "publicationGroupAndArxivMetadataConflicts": 0,
+    "externalTrainOnlyPapers": 4,
+    "reservedTestTextOverlapChecked": false,
+    "notice": "Metadata identity isolation, not a new representative split or proof against all semantic/near-duplicate overlap. Reserved test text was not parsed."
+  },
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "testContentParsed": false,
+  "modelPromoted": false,
+  "openIssues": [
+    "Five inherited negatives require scope adjudication or evidence-based withdrawal; no accepted negative target.",
+    "New entity pairs have not been semantically adjudicated.",
+    "Independent V2 evaluation and selection contract not yet authorized.",
+    "AI label completeness is policy-dependent, not an independent semantic accuracy guarantee."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "elapsedSeconds": 114.20273470000029,
+  "peakCUDAbytes": 2835935744,
+  "steps": 582,
+  "trainingStarted": true,
+  "testEvaluated": false,
+  "modelPromoted": false
+}

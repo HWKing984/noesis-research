@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "createdAtUTC": "2026-10-07T09:01:46.124467+00:00",
+  "recordsScanned": 333118,
+  "databaseWritten": false,
+  "errorType": "ValueError",
+  "error": "Raw author signature differs from sealed bibliography"
+}

@@ -1,0 +1,41 @@
+{
+  "models": [
+    {
+      "name": "V1_NER",
+      "path": "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04",
+      "production": true,
+      "weightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+      "bytes": 437356364
+    },
+    {
+      "name": "V1_RE",
+      "path": "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03",
+      "production": true,
+      "weightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+      "bytes": 439715836
+    },
+    {
+      "name": "V2_NER",
+      "path": "outputs/v2_textscope_once_20261011_run/ner/best_model",
+      "production": false,
+      "weightsSha256": "f2a13e4607ca84f70494b0ce9c3dd8f02086f9c64e06a79d552fc62572a08538",
+      "bytes": 437356364
+    },
+    {
+      "name": "V2_RE",
+      "path": "outputs/v2_textscope_once_20261011_run/re/best_model",
+      "production": false,
+      "weightsSha256": "24656331eb70a6379856c58ba5a399958267267cc25f58615f8fc0778295315a",
+      "bytes": 439715836
+    },
+    {
+      "name": "V2_WEIGHTED_RE",
+      "path": "outputs/v2_targeted_controls_20261011/weighted_re/best_model",
+      "production": false,
+      "weightsSha256": "222a1c29282912d8e284413f8622ad0f4906c76308fabbf9b30e5524461429df",
+      "bytes": 439715836
+    }
+  ],
+  "productionReplacementAllowed": false,
+  "test20BodyIncluded": false
+}

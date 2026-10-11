@@ -1,0 +1,57 @@
+{
+  "status": "identity_guard_fixed_missing_negatives_and_new_evaluation_not_training_ready",
+  "documents": 12,
+  "entityMentions": 177,
+  "candidatePairs": 684,
+  "relationSupport": {
+    "USED_FOR": 68,
+    "EVALUATED_ON": 17,
+    "NO_RELATION": 0,
+    "UNRESOLVED": 599
+  },
+  "RECandidatePairs": 85,
+  "acceptedNegativePairs": 0,
+  "withdrawnNegatives": 5,
+  "totalSourcePapersWithEligibleRE": 11,
+  "supportGroups": 29,
+  "fineCoreferencePairs": 3,
+  "fineCoreferenceFactChains": 2,
+  "protocolFrozen": true,
+  "evaluationInventoryLocked": false,
+  "validationDocuments": 0,
+  "testDocuments": 0,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "modelPromoted": false,
+  "testContentParsed": false,
+  "independentHumanGold": false,
+  "createdAtUTC": "2026-10-10T14:37:12.255605+00:00",
+  "notice": "Known metadata alias guard, not proof of paper existence, complete cross-publication/DOI dedup or semantic near-duplicate isolation. New validation/test/challenge remain empty; no population sampled in this batch.",
+  "identityCoverage": {
+    "canonicalArxivRows": 5425,
+    "fromEncodedKeyRows": 5253,
+    "fromURLOnlyRows": 172,
+    "keyAndURLAgreeRows": 1540,
+    "noArxivMappingRows": 14575,
+    "quarantinedRows": 0,
+    "sourceRows": 20000,
+    "uniqueCanonicalArxivIds": 5425,
+    "historicalMetadataRows": 20138,
+    "historicalRowsWithCanonicalArxiv": 5563,
+    "historicalUniqueCanonicalArxivIds": 5454,
+    "historicalRowsWithoutArxivMapping": 14575,
+    "historicalOrigins": {
+      "historical_corpus": 20000,
+      "historical_train_abstract": 70,
+      "historical_abstract_selection": 60,
+      "exposed_supplement_development": 8
+    },
+    "exhaustiveCrossSourceIsolationProven": false
+  },
+  "activePartitionGuard": "scripts/course_v2_identity.py:validate_partition(assignments, excluded, aliases)",
+  "identityRegressionCases": 6,
+  "evaluationReadiness": {
+    "USED_FOR": "not_evaluable",
+    "EVALUATED_ON": "not_evaluable"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-08T08:28:03.935217+00:00",
+  "audit": {
+    "sourceReviewedTrainDocuments": 11,
+    "NERtrain": 54,
+    "NERexcluded": 4,
+    "entitySupport": {
+      "TASK": 196,
+      "METHOD": 403,
+      "DATASET": 44
+    },
+    "freshReviewedDocumentsComparedTo43": 6,
+    "unchangedReceiptLines": 52,
+    "knownRelations": 267,
+    "unknownPairs": 1647,
+    "eligiblePairs": 1914,
+    "completeRelationDocuments": 8,
+    "newZeroCandidateDocuments": 2,
+    "rejudgedTouchingPairs": 8,
+    "oldInventoryRelationsPreserved": 45,
+    "newInventoryUnknownPairs": 15,
+    "BIORecomputed": 54,
+    "opaqueDevFilesIdentical": 9,
+    "engineeringTests": 372,
+    "regressionSeconds": 144.788,
+    "regressionScope": "D_drive_isolated_process_temp; C_drive_previous_rename_problem_not_fixed",
+    "trainingExecuted": false,
+    "testSemanticallyRead": false,
+    "modelPromoted": false,
+    "qualityPromotionPassed": false,
+    "independentHumanGold": false
+  },
+  "previousVerificationSha256": "7308470f344f189e7207cc888e31e4f756e64a220c12f5fd64d04e0e4ba26271",
+  "finalTrainManifestSha256": "3bbad6603684b1ea47e70ddd9193d8e037eda0d285cea7cbb84050fc21b2921f",
+  "evidenceManifestSha256": "99840d7bda24b3d7b91c338cd841d4be7045495ead0565fb58c23607c3a40ef8",
+  "capturesSha256": "8fb2f5dc9fe92e3856affb8bcb06398c00c681208d4b92dd1cdcc803dd27d88e",
+  "qualityPromotionPassed": false
+}

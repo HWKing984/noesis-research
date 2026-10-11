@@ -1,0 +1,22 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "09_annotation_expansion.html": "d74265558bc0ef8de7d378319f43c2f804f6081dfaae54c33c08c36387979df4",
+    "audit_state.json": "e4c05e8d7594d9806f7a78a3915aa3ad0c0b74f23faa44207dbe710e8a4387af",
+    "default_cli_verify.json": "3df58073ffd97359d442375e4725c7032fd6453d1b5a14a832ec4a1aa60fa875",
+    "live_health.json": "3c9af7feaea65a7b5b39798b5725cb059da962cc1bbe1d03e2bc9712ed7a04af",
+    "stored_metrics_audit.json": "d16f20b42b28caf9882034c13c01224e2ae2d398010b88748cb8828c2fd0b598",
+    "sources/README.md": "e54090d68572f8a5a1428b7c2c0f6683071c9124d5790e34d05d3cbdb96d5141",
+    "sources/docs/model_optimization_abstract_v1.md": "2502ef8c167fc6cb044a85c74f6c433ac81870b25d3d6d05ee98d784da38694e",
+    "sources/docs/system_status_round34.md": "f8863de2dc3892d794299d4b86949e7cadfe3a880adb1c68b6e480aa1f74e482",
+    "sources/resources/course_graph_runtime.json": "93a0beba5afdeb177afe0c6eb12567869ef8b0c502cd127b353f1dde3ccbc0fc",
+    "sources/scripts/course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "sources/tests/test_course_runtime.py": "b7459b68e5b1e4e9814ca809a73877b45e5bec236d2b96204b822954fdf1d357",
+    "sources/kg_datasets/dblp/course_v4_graph_resolved_20261007_31_ready/manifest.json": "eace8e388e5cbec2369e16534870aca145000ae678641cb7fb013eddc412ca1f",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round34_all.xml": "e057f1c4424bf373a84c952c29083a55189dec018e7c678f9f7f1a06c9fc2827",
+    "sources/kg_datasets/dblp/course_v4_runs/ner_final_test_20261006_09/test_result.json": "5672f928646c3234141b188654140dd3f57d85ba3c24fd013442f3533a2d69ce",
+    "sources/kg_datasets/dblp/course_v4_runs/refresh_final_test_20261007_29/test_result.json": "49fad7b77c58e18afc30ad01a0c1b864e2f26db1b2e45b25f46bbbc5d617351c",
+    "sources/kg_datasets/dblp/course_v4_runs/re_final_test_20261006_17/test_result.json": "fbf939e5ef820aae7520025ca6032b602590d7e394171764718178951fcb40e0",
+    "sources/annotations/course_v4/audit_technical_review_20261008_round34.py": "168f627f53ae985e528b4bc4327534d617056d063a2ee4c93309d60d92e81226"
+  }
+}

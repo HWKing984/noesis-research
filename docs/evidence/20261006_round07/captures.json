@@ -1,0 +1,109 @@
+{
+  "renderer": "installed_Microsoft_Edge_headless",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-84e4f9ae852f4437ace1a53a5753b319",
+  "status": "completed",
+  "captures": [
+    {
+      "bytes": 91125,
+      "sourcePage": "01_data.html",
+      "image": "01_data.png",
+      "viewportHeight": 1100,
+      "originalConsoleScreenshot": false,
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1100",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round07\\01_data.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-84e4f9ae852f4437ace1a53a5753b319",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/01_data.html"
+      ],
+      "capturedAt": "2026-10-06T00:57:40.3567209Z",
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/01_data.html",
+      "sha256": "a303891b757313fbad33b326e9f2e1ecfa4befa45ced03b1b50dfc328ef57088",
+      "sourcePageSha256": "0f2e17636bd91d8fa435978cda395174c9f5359d9e7250db703d2e98a82a21ae"
+    },
+    {
+      "bytes": 124087,
+      "sourcePage": "02_training.html",
+      "image": "02_training.png",
+      "viewportHeight": 1450,
+      "originalConsoleScreenshot": false,
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1450",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round07\\02_training.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-84e4f9ae852f4437ace1a53a5753b319",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/02_training.html"
+      ],
+      "capturedAt": "2026-10-06T00:57:41.0120912Z",
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/02_training.html",
+      "sha256": "de6efa66f99fb6c43936bb302ab5a1b85a1eebc716ea63506dc55d9a96699919",
+      "sourcePageSha256": "779d29b7555d23e24bdb5e4ae32baf63b6937dee2b44ee38a0bd6e2023183777"
+    },
+    {
+      "bytes": 103072,
+      "sourcePage": "03_predictions.html",
+      "image": "03_predictions.png",
+      "viewportHeight": 1300,
+      "originalConsoleScreenshot": false,
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round07\\03_predictions.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-84e4f9ae852f4437ace1a53a5753b319",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/03_predictions.html"
+      ],
+      "capturedAt": "2026-10-06T00:57:41.6222199Z",
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/03_predictions.html",
+      "sha256": "15dda0d7d1a974724902f5d5afb460a027f016e87a900dae5cd42555203acde6",
+      "sourcePageSha256": "3b1cc4e407f95c58d14fdc46a60fef2b3ff6f7e6e0ba873ea77555c542ff9567"
+    },
+    {
+      "bytes": 116243,
+      "sourcePage": "04_traceability.html",
+      "image": "04_traceability.png",
+      "viewportHeight": 1800,
+      "originalConsoleScreenshot": false,
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1800",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round07\\04_traceability.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-84e4f9ae852f4437ace1a53a5753b319",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/04_traceability.html"
+      ],
+      "capturedAt": "2026-10-06T00:57:42.2327020Z",
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round07/04_traceability.html",
+      "sha256": "da959422cbcca4bc249df0ed964ad42a2b949915dbf2ffa6f447dc6d4ee84fdf",
+      "sourcePageSha256": "753af17fbb68538e68bfcb8d17ed473ccce24a81038ea445abcf40749f4f8593"
+    }
+  ],
+  "kind": "actual_browser_render_capture",
+  "originalConsoleScreenshot": false,
+  "viewportWidth": 1280,
+  "generatedFromRealArtifacts": true,
+  "finishedAt": "2026-10-06T00:57:42.2338773Z",
+  "browserVersion": "154.0.4258.53"
+}

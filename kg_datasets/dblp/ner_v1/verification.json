@@ -1,0 +1,78 @@
+{
+  "captured_at_utc": "2026-10-05T04:45:26.978364+00:00",
+  "unit_tests": {
+    "passed": true,
+    "exit_code": 0,
+    "output": "test_audit_rejects_duplicate_nodes_and_dangling_edges (test_annotation.AnnotationTest.test_audit_rejects_duplicate_nodes_and_dangling_edges) ... ok\ntest_dictionary_longest_span_unicode_and_boundaries (test_annotation.AnnotationTest.test_dictionary_longest_span_unicode_and_boundaries) ... ok\ntest_draft_cannot_be_gold (test_annotation.AnnotationTest.test_draft_cannot_be_gold) ... ok\ntest_duplicate_group_transitive_links (test_annotation.AnnotationTest.test_duplicate_group_transitive_links) ... ok\ntest_non_object_and_invalid_id_are_errors_not_crashes (test_annotation.AnnotationTest.test_non_object_and_invalid_id_are_errors_not_crashes) ... ok\ntest_pilot_reproducible_and_group_unique (test_annotation.AnnotationTest.test_pilot_reproducible_and_group_unique) ... ok\ntest_reference_text_hash_and_missing_record_rejected (test_annotation.AnnotationTest.test_reference_text_hash_and_missing_record_rejected) ... ok\ntest_relation_direction_and_evidence (test_annotation.AnnotationTest.test_relation_direction_and_evidence) ... ok\ntest_transformer_flag_is_not_llm_claim (test_annotation.AnnotationTest.test_transformer_flag_is_not_llm_claim) ... ok\ntest_wrong_spans_overlap_and_duplicates (test_annotation.AnnotationTest.test_wrong_spans_overlap_and_duplicates) ... ok\ntest_core_cleaning_and_classification (test_process_dblp_ai.ProcessingRulesTest.test_core_cleaning_and_classification) ... ok\ntest_doi_url_preserves_suffix_and_ignores_query (test_process_dblp_ai.ProcessingRulesTest.test_doi_url_preserves_suffix_and_ignores_query) ... ok\ntest_local_dtd_streaming_and_security (test_process_dblp_ai.ProcessingRulesTest.test_local_dtd_streaming_and_security) ... ok\ntest_output_target_rejects_source_ancestor_and_unmanaged_directory (test_process_dblp_ai.ProcessingRulesTest.test_output_target_rejects_source_ancestor_and_unmanaged_directory) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.038s\n\nOK\n"
+  },
+  "draft_validation": {
+    "valid": true,
+    "documents": 200,
+    "review_status": {
+      "draft": 200
+    },
+    "entity_counts": {
+      "METHOD": 121,
+      "TASK": 55,
+      "DOMAIN": 1
+    },
+    "zero_entity_documents": 38,
+    "errors": []
+  },
+  "rare_draft_validation": {
+    "valid": true,
+    "documents": 100,
+    "review_status": {
+      "draft": 100
+    },
+    "entity_counts": {
+      "METHOD": 69,
+      "DATASET": 5,
+      "TASK": 27,
+      "DOMAIN": 96
+    },
+    "zero_entity_documents": 0,
+    "errors": []
+  },
+  "gold_gate": {
+    "passed": true,
+    "draft_rejected": true,
+    "invalid_documents": 200
+  },
+  "cross_package_duplicate_groups": 0,
+  "browser": {
+    "status": "passed",
+    "exit_code": 0,
+    "output": "{\n  \"passed\": true,\n  \"mode\": \"headless chromium\",\n  \"checks\": [\n    \"load 200-title pilot\",\n    \"explicit reviewer required\",\n    \"editing clears reviewed status\",\n    \"navigation preserves edits\",\n    \"JSONL export and restore\",\n    \"mismatched source rejected\",\n    \"Unicode codepoint selection\",\n    \"remove entity\",\n    \"load 100 rare candidates\",\n    \"no page errors\"\n  ],\n  \"fixtures_only\": true,\n  \"real_annotations_modified\": false\n}\n"
+  },
+  "neo4j_bolt_port_7687_reachable": false,
+  "neo4j_http_port_7474_reachable": false,
+  "neo4j_database_state": "not queried; port probe is not proof of import state",
+  "corr_article_records": 5425,
+  "repeated_authorship_endpoint_pairs": [
+    {
+      "personId": "person-adcbd5ea25068520",
+      "publicationId": "journals/corr/abs-2412-20086",
+      "positions": [
+        "2",
+        "5"
+      ]
+    }
+  ],
+  "initial_manifest_files_unchanged": true,
+  "input_csvs_unchanged": true,
+  "source_snapshot_match": true,
+  "current_code_sha256": {
+    "scripts\\annotation_core.py": "c4f25772112cc5c75849b5e6a424dd77227e2cf0bd7a233d69f8cd481bcb7e56",
+    "scripts\\prepare_ner.py": "471514fb48382e5c2025c616927428e5106849646d94f2810b674ed23bc771dc",
+    "scripts\\prepare_rare_candidates.py": "b66dd0df586db1c6e14f6805d87cb7a2cf68c7e4c2a945f969f334197b316509",
+    "scripts\\process_dblp_ai.py": "efc22715bc7b413c110930a468d2ff6ec762c32b73b5c54849e6433dc053d3d2",
+    "scripts\\run_preparation_checks.py": "06696ba283d6d8f9c05898cbe84169d80e3daaa1749ea05c996de0be2211ad76",
+    "tests\\test_annotation.py": "e5b78385a4fd5a399f0c46e25bab06e6f8ee010b5b4ab6405f919bc8983f4a3c",
+    "tests\\test_pilot_review.cjs": "1ca59036dc396c6e30154d736ba8888dac9de31eaad3ab3ad84489af51376f7e",
+    "tests\\test_process_dblp_ai.py": "ea93b8e80d8163c42a7bf0b27b33a997829aa3bdba1373c881617ddf11e953d0",
+    "docs\\annotation_guidelines.md": "ccde5b8b22152b32beebb439433fa16eef4a21f61e899ae8da92ebb00a5555bb",
+    "docs\\pilot_review_template.html": "dd2962c36cbca14b18f9c3a4009f7de4c31e222c126109b53cc6632a768ca143"
+  },
+  "passed": true
+}

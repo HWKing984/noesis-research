@@ -1,0 +1,27 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_abstention_v1.json": "6239d8a0ee6705c656645a15c06e1596e9f9ba80af6cb1d105d037d3e9708fa1",
+    "scripts/evaluate_abstract_abstention.py": "11f87dc74357d11b7c69161c98704aaebdc8918d6d71b0bca1bfac59f5c40165",
+    "scripts/course_bio_abstention.py": "8ae8e3a44d5cd1f924691502abf1d55d71f882b859d80404b230ca43e953a093",
+    "tests/test_abstract_abstention.py": "679fe326e9ef8f4fee73b4d9673f8e72c47c8f2b4fc9945a07acb5fe2c1d1265",
+    "kg_datasets/dblp/course_v4_runs/abstract_decoder_development_20261008_47/manifest.json": "35b0b9ea70f210a3728a9ddbccf66c6c4aeabdc65bc15059930b98170be2ed27",
+    "resources/course_graph_runtime.json": "93a0beba5afdeb177afe0c6eb12567869ef8b0c502cd127b353f1dde3ccbc0fc",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1"
+  },
+  "filesSha256": {
+    "abstained_pairs.jsonl": "d6c56c43ceef1082b2bd66a8df94114d66640a444952ba4bebec56d00dd2bbba",
+    "abstention_ledger.jsonl": "bf48551c4acb4024d779bf6826d88b064ca481109185ca13b530d2ab82c70538",
+    "development_result.json": "cefb92750ee11a2deb892df7b8db16687294b364ca394fb2394c7994aa07de74",
+    "false_relations.jsonl": "5f28db527ac27544ef1e0cb5b41518e321f123a6c5fdcdff5761efc23bd9a40a",
+    "ner_predictions.jsonl": "0d35020d28d80d13eee0a3a8ff562b3c1f8034f0b62bd1a0017b55b2be476349",
+    "pipeline_predictions.jsonl": "17f3af5003ddd19380154df18f3e83c1f522dd327092ebd97c56d63ea0ed4496",
+    "selection_lock.json": "69e5787bc666de7f8899380be38401651632b47a160d48906dfc75ae51115620",
+    "status.json": "c20112eca2ce005bd51fd3973f16e86a3f50cd718744911ffab05eb96cec949d",
+    "sources/0_course_abstract_abstention_v1.json": "6239d8a0ee6705c656645a15c06e1596e9f9ba80af6cb1d105d037d3e9708fa1",
+    "sources/1_evaluate_abstract_abstention.py": "11f87dc74357d11b7c69161c98704aaebdc8918d6d71b0bca1bfac59f5c40165",
+    "sources/2_course_bio_abstention.py": "8ae8e3a44d5cd1f924691502abf1d55d71f882b859d80404b230ca43e953a093",
+    "sources/3_test_abstract_abstention.py": "679fe326e9ef8f4fee73b4d9673f8e72c47c8f2b4fc9945a07acb5fe2c1d1265",
+    "sources/4_manifest.json": "35b0b9ea70f210a3728a9ddbccf66c6c4aeabdc65bc15059930b98170be2ed27",
+    "sources/5_course_graph_runtime.json": "93a0beba5afdeb177afe0c6eb12567869ef8b0c502cd127b353f1dde3ccbc0fc"
+  }
+}

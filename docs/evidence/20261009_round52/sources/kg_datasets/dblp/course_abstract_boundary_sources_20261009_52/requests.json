@@ -1,0 +1,81 @@
+[
+  {
+    "arxivId": "1903.10676",
+    "title": "SciBERT: A Pretrained Language Model for Scientific Text",
+    "url": "https://arxiv.org/abs/1903.10676",
+    "startedAtUTC": "2026-10-09T03:10:31.717635+00:00",
+    "status": "completed",
+    "tokens": 162,
+    "rawResponseFile": "page_001.html",
+    "rawResponseSha256": "7ca8f17367b0fe3f36bb24faab0c27f98ea799273d3762c48602d76da43925b6"
+  },
+  {
+    "arxivId": "1907.10529",
+    "title": "SpanBERT: Improving Pre-training by Representing and Predicting Spans",
+    "url": "https://arxiv.org/abs/1907.10529",
+    "startedAtUTC": "2026-10-09T03:10:46.811835+00:00",
+    "status": "completed",
+    "tokens": 189,
+    "rawResponseFile": "page_002.html",
+    "rawResponseSha256": "69a765f830a8383cc7cd37c236fb786a94cf62033ffd186103294ead8c1ec69f"
+  },
+  {
+    "arxivId": "1909.03546",
+    "title": "Entity, Relation, and Event Extraction with Contextualized Span Representations",
+    "url": "https://arxiv.org/abs/1909.03546",
+    "startedAtUTC": "2026-10-09T03:11:01.901922+00:00",
+    "status": "failed_no_synthetic_fallback",
+    "errorType": "URLError",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>"
+  },
+  {
+    "arxivId": "1909.07755",
+    "title": "Span-based Joint Entity and Relation Extraction with Transformer Pre-training",
+    "url": "https://arxiv.org/abs/1909.07755",
+    "startedAtUTC": "2026-10-09T03:11:17.004811+00:00",
+    "status": "completed",
+    "tokens": 134,
+    "rawResponseFile": "page_004.html",
+    "rawResponseSha256": "234b2120a51d25e8ea5a21d53106fac50616cb52182718ec33be04441826a9b5"
+  },
+  {
+    "arxivId": "2010.12812",
+    "title": "A Frustratingly Easy Approach for Entity and Relation Extraction",
+    "url": "https://arxiv.org/abs/2010.12812",
+    "startedAtUTC": "2026-10-09T03:11:32.113537+00:00",
+    "status": "completed",
+    "tokens": 226,
+    "rawResponseFile": "page_005.html",
+    "rawResponseSha256": "6c099a68a174a9fa41324541443de0becb292adc819797ea069984eb5488a30f"
+  },
+  {
+    "arxivId": "2010.01057",
+    "title": "LUKE: Deep Contextualized Entity Representations with Entity-aware Self-attention",
+    "url": "https://arxiv.org/abs/2010.01057",
+    "startedAtUTC": "2026-10-09T03:11:47.225743+00:00",
+    "status": "completed",
+    "tokens": 250,
+    "rawResponseFile": "page_006.html",
+    "rawResponseSha256": "143825623ec0d7381bb6c2f933c57815b630ce482ca7e455d657f6f4653d383e"
+  },
+  {
+    "arxivId": "2308.03279",
+    "title": "UniversalNER: Targeted Distillation from Large Language Models for Open Named Entity Recognition",
+    "url": "https://arxiv.org/abs/2308.03279",
+    "startedAtUTC": "2026-10-09T03:12:02.327842+00:00",
+    "status": "completed",
+    "tokens": 329,
+    "rawResponseFile": "page_007.html",
+    "rawResponseSha256": "8150d3c711e4c562715af0227a958ebe89d5e287617a7c3335a3d0b8e699ebe1"
+  },
+  {
+    "arxivId": "1906.06127",
+    "title": "DocRED: A Large-Scale Document-Level Relation Extraction Dataset",
+    "url": "https://arxiv.org/abs/1906.06127",
+    "startedAtUTC": "2026-10-09T03:12:17.417514+00:00",
+    "status": "completed",
+    "tokens": 252,
+    "rawResponseFile": "page_008.html",
+    "rawResponseSha256": "d95d7a4f2179f571b4e7f7a97d24adde41bff9954b66f8e1d6f7729b9a0259e8"
+  }
+]

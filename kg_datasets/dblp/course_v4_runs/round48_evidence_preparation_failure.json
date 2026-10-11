@@ -1,0 +1,14 @@
+{
+  "stage": "evidence_prepare_before_execution",
+  "errorType": "SyntaxError",
+  "error": "closing parenthesis ']' does not match opening parenthesis '('",
+  "source": "annotations/course_v4/seal_decoder_abstention_20261008_round48.py",
+  "lineAtFailure": 66,
+  "cause": "An extra closing bracket in the evidence table source.",
+  "repair": "Removed the extra bracket and split table rows for inspection; the actual prepare check was rerun.",
+  "trainingExecuted": false,
+  "modelOrAnnotationChanged": false,
+  "experimentOutputsChanged": false,
+  "evidenceCreatedByFailedAttempt": false,
+  "syntheticFallback": false
+}

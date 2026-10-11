@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:dblp-course:annotation:v2-candidate",
+  "title": "AI literature annotation v2 candidate contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["publicationId", "title", "text", "textKind", "year", "type", "doi", "topics", "groupId", "sourceCsvSha256", "schemaVersion", "schemaSha256", "intendedSplit", "samplingStratum", "ambiguityFlags", "textSource", "entities", "relations", "domains", "entity_review", "relation_review", "domain_review", "notes"],
+  "properties": {
+    "publicationId": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "text": {"type": "string", "minLength": 1},
+    "textKind": {"const": "title"},
+    "year": {"type": "integer", "minimum": 2015, "maximum": 2025},
+    "type": {"enum": ["article", "inproceedings"]},
+    "doi": {"type": "string"},
+    "topics": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true, "minItems": 1},
+    "groupId": {"type": "string", "minLength": 1},
+    "sourceCsvSha256": {"$ref": "#/$defs/sha256"},
+    "schemaVersion": {"const": "v2-candidate"},
+    "schemaSha256": {"$ref": "#/$defs/sha256"},
+    "intendedSplit": {"enum": ["train", "dev", "test"]},
+    "samplingStratum": {"type": "object"},
+    "ambiguityFlags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "textSource": {
+      "type": "object", "additionalProperties": false,
+      "required": ["provider", "sourceRecordId", "snapshot", "sourceUrl", "license", "textSha256"],
+      "properties": {
+        "provider": {"const": "DBLP"}, "sourceRecordId": {"type": "string", "minLength": 1},
+        "snapshot": {"const": "2026-09-01"}, "sourceUrl": {"type": "string", "format": "uri"},
+        "license": {"const": "CC0-1.0"}, "textSha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "entities": {"type": "array", "items": {"$ref": "#/$defs/entity"}},
+    "relations": {"type": "array", "items": {"$ref": "#/$defs/relation"}},
+    "domains": {"type": "array", "items": {"$ref": "#/$defs/domain"}},
+    "entity_review": {"$ref": "#/$defs/review"},
+    "relation_review": {"$ref": "#/$defs/review"},
+    "domain_review": {"$ref": "#/$defs/review"},
+    "notes": {"type": "string"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "evidence": {
+      "type": "object", "additionalProperties": false, "required": ["start", "end", "text"],
+      "properties": {"start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 1}, "text": {"type": "string", "minLength": 1}}
+    },
+    "entity": {
+      "type": "object", "additionalProperties": false, "required": ["start", "end", "text", "label", "origin"],
+      "properties": {
+        "start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1}, "label": {"enum": ["METHOD", "TASK", "DATASET"]},
+        "origin": {"enum": ["draft_dictionary_v2", "human"]}
+      }
+    },
+    "relation": {
+      "type": "object", "additionalProperties": false, "required": ["head", "tail", "label", "evidence", "reason"],
+      "properties": {
+        "head": {"type": "integer", "minimum": 0}, "tail": {"type": "integer", "minimum": 0},
+        "label": {"enum": ["USED_FOR", "EVALUATED_ON", "NO_RELATION", "UNRESOLVED"]},
+        "evidence": {"oneOf": [{"$ref": "#/$defs/evidence"}, {"type": "null"}]},
+        "reason": {"type": "string"}
+      }
+    },
+    "domain": {
+      "type": "object", "additionalProperties": false, "required": ["label", "evidence", "origin"],
+      "properties": {
+        "label": {"enum": ["healthcare", "remote-sensing", "autonomous-driving", "cybersecurity", "agriculture", "energy", "bioinformatics", "finance", "education", "manufacturing", "other"]},
+        "evidence": {"$ref": "#/$defs/evidence"}, "origin": {"enum": ["draft_dictionary_v2", "human"]}
+      }
+    },
+    "review": {
+      "type": "object", "additionalProperties": false, "required": ["status", "reviewer", "reviewed_at", "source"],
+      "properties": {
+        "status": {"enum": ["draft", "reviewed", "unresolved"]},
+        "reviewer": {"type": "string"}, "reviewed_at": {"type": "string"},
+        "source": {"enum": ["draft", "human_reviewed"]}
+      }
+    }
+  },
+  "x-annotation": {
+    "status": "candidate_pending_human_pilot",
+    "owner": "course project maintainer",
+    "consumers": ["Python validator", "offline review page", "package exporter", "future training loader"],
+    "mutable_fields": ["entities", "relations", "domains", "entity_review", "relation_review", "domain_review", "notes"],
+    "offsets": "Unicode codepoints [start,end)",
+    "flat_non_overlapping_entities": true,
+    "relation_scope": "all compatible directed pairs in one title; not abstract or cross-sentence RE",
+    "positive_relation_pairs": {"USED_FOR": ["METHOD", "TASK"], "EVALUATED_ON": ["METHOD", "DATASET"]},
+    "unresolved_relation_label": "UNRESOLVED",
+    "negative_relation_label": "NO_RELATION",
+    "graph_semantics": {"ner": "MENTIONS", "document_domain": "IN_DOMAIN", "dataset_usage": "requires separately reviewed relation evidence"},
+    "compatibility": "Breaking v1 change; retain v1, create new drafts, never silently migrate reviewed labels"
+  }
+}

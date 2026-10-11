@@ -1,0 +1,282 @@
+[
+  {
+    "publicationId": "arxiv:2502.12200",
+    "groupId": "arxiv-group:2502.12200",
+    "arxivId": "2502.12200",
+    "sourceURL": "https://arxiv.org/abs/2502.12200",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.08922",
+    "groupId": "arxiv-group:2502.08922",
+    "arxivId": "2502.08922",
+    "sourceURL": "https://arxiv.org/abs/2502.08922",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.12226",
+    "groupId": "arxiv-group:2502.12226",
+    "arxivId": "2502.12226",
+    "sourceURL": "https://arxiv.org/abs/2502.12226",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.08686",
+    "groupId": "arxiv-group:2502.08686",
+    "arxivId": "2502.08686",
+    "sourceURL": "https://arxiv.org/abs/2502.08686",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.07132",
+    "groupId": "arxiv-group:2502.07132",
+    "arxivId": "2502.07132",
+    "sourceURL": "https://arxiv.org/abs/2502.07132",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.01276",
+    "groupId": "arxiv-group:2502.01276",
+    "arxivId": "2502.01276",
+    "sourceURL": "https://arxiv.org/abs/2502.01276",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.00903",
+    "groupId": "arxiv-group:2502.00903",
+    "arxivId": "2502.00903",
+    "sourceURL": "https://arxiv.org/abs/2502.00903",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.09215",
+    "groupId": "arxiv-group:2502.09215",
+    "arxivId": "2502.09215",
+    "sourceURL": "https://arxiv.org/abs/2502.09215",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.11981",
+    "groupId": "arxiv-group:2502.11981",
+    "arxivId": "2502.11981",
+    "sourceURL": "https://arxiv.org/abs/2502.11981",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.00837",
+    "groupId": "arxiv-group:2502.00837",
+    "arxivId": "2502.00837",
+    "sourceURL": "https://arxiv.org/abs/2502.00837",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.16475",
+    "groupId": "arxiv-group:2502.16475",
+    "arxivId": "2502.16475",
+    "sourceURL": "https://arxiv.org/abs/2502.16475",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.00306",
+    "groupId": "arxiv-group:2502.00306",
+    "arxivId": "2502.00306",
+    "sourceURL": "https://arxiv.org/abs/2502.00306",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.16789",
+    "groupId": "arxiv-group:2502.16789",
+    "arxivId": "2502.16789",
+    "sourceURL": "https://arxiv.org/abs/2502.16789",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.20934",
+    "groupId": "arxiv-group:2502.20934",
+    "arxivId": "2502.20934",
+    "sourceURL": "https://arxiv.org/abs/2502.20934",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.18026",
+    "groupId": "arxiv-group:2502.18026",
+    "arxivId": "2502.18026",
+    "sourceURL": "https://arxiv.org/abs/2502.18026",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.15990",
+    "groupId": "arxiv-group:2502.15990",
+    "arxivId": "2502.15990",
+    "sourceURL": "https://arxiv.org/abs/2502.15990",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.08908",
+    "groupId": "arxiv-group:2502.08908",
+    "arxivId": "2502.08908",
+    "sourceURL": "https://arxiv.org/abs/2502.08908",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.05740",
+    "groupId": "arxiv-group:2502.05740",
+    "arxivId": "2502.05740",
+    "sourceURL": "https://arxiv.org/abs/2502.05740",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.15821",
+    "groupId": "arxiv-group:2502.15821",
+    "arxivId": "2502.15821",
+    "sourceURL": "https://arxiv.org/abs/2502.15821",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.14866",
+    "groupId": "arxiv-group:2502.14866",
+    "arxivId": "2502.14866",
+    "sourceURL": "https://arxiv.org/abs/2502.14866",
+    "split": "dev"
+  },
+  {
+    "publicationId": "arxiv:2502.13135",
+    "groupId": "arxiv-group:2502.13135",
+    "arxivId": "2502.13135",
+    "sourceURL": "https://arxiv.org/abs/2502.13135",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.20704",
+    "groupId": "arxiv-group:2502.20704",
+    "arxivId": "2502.20704",
+    "sourceURL": "https://arxiv.org/abs/2502.20704",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.03397",
+    "groupId": "arxiv-group:2502.03397",
+    "arxivId": "2502.03397",
+    "sourceURL": "https://arxiv.org/abs/2502.03397",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.11777",
+    "groupId": "arxiv-group:2502.11777",
+    "arxivId": "2502.11777",
+    "sourceURL": "https://arxiv.org/abs/2502.11777",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.00604",
+    "groupId": "arxiv-group:2502.00604",
+    "arxivId": "2502.00604",
+    "sourceURL": "https://arxiv.org/abs/2502.00604",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.00034",
+    "groupId": "arxiv-group:2502.00034",
+    "arxivId": "2502.00034",
+    "sourceURL": "https://arxiv.org/abs/2502.00034",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.06124",
+    "groupId": "arxiv-group:2502.06124",
+    "arxivId": "2502.06124",
+    "sourceURL": "https://arxiv.org/abs/2502.06124",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.06494",
+    "groupId": "arxiv-group:2502.06494",
+    "arxivId": "2502.06494",
+    "sourceURL": "https://arxiv.org/abs/2502.06494",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.04153",
+    "groupId": "arxiv-group:2502.04153",
+    "arxivId": "2502.04153",
+    "sourceURL": "https://arxiv.org/abs/2502.04153",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.05214",
+    "groupId": "arxiv-group:2502.05214",
+    "arxivId": "2502.05214",
+    "sourceURL": "https://arxiv.org/abs/2502.05214",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.09604",
+    "groupId": "arxiv-group:2502.09604",
+    "arxivId": "2502.09604",
+    "sourceURL": "https://arxiv.org/abs/2502.09604",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.19325",
+    "groupId": "arxiv-group:2502.19325",
+    "arxivId": "2502.19325",
+    "sourceURL": "https://arxiv.org/abs/2502.19325",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.16902",
+    "groupId": "arxiv-group:2502.16902",
+    "arxivId": "2502.16902",
+    "sourceURL": "https://arxiv.org/abs/2502.16902",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.11418",
+    "groupId": "arxiv-group:2502.11418",
+    "arxivId": "2502.11418",
+    "sourceURL": "https://arxiv.org/abs/2502.11418",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.14908",
+    "groupId": "arxiv-group:2502.14908",
+    "arxivId": "2502.14908",
+    "sourceURL": "https://arxiv.org/abs/2502.14908",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.07441",
+    "groupId": "arxiv-group:2502.07441",
+    "arxivId": "2502.07441",
+    "sourceURL": "https://arxiv.org/abs/2502.07441",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.00345",
+    "groupId": "arxiv-group:2502.00345",
+    "arxivId": "2502.00345",
+    "sourceURL": "https://arxiv.org/abs/2502.00345",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.03729",
+    "groupId": "arxiv-group:2502.03729",
+    "arxivId": "2502.03729",
+    "sourceURL": "https://arxiv.org/abs/2502.03729",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.06833",
+    "groupId": "arxiv-group:2502.06833",
+    "arxivId": "2502.06833",
+    "sourceURL": "https://arxiv.org/abs/2502.06833",
+    "split": "test"
+  },
+  {
+    "publicationId": "arxiv:2502.10567",
+    "groupId": "arxiv-group:2502.10567",
+    "arxivId": "2502.10567",
+    "sourceURL": "https://arxiv.org/abs/2502.10567",
+    "split": "test"
+  }
+]

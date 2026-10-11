@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="13" failures="1" skipped="0" tests="14" time="0.428" timestamp="2026-10-10T10:17:08.822030+08:00" hostname="HWKing"><testcase classname="tests.test_course_concept_app_v3" name="test_v3_aliases_reach_same_typed_canonical_terms[aliases0-expected0]" time="0.001"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_aliases_reach_same_typed_canonical_terms[aliases1-expected1]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_aliases_reach_same_typed_canonical_terms[aliases2-expected2]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[QLoRA]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[AdaLoRA]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[DoRA]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[RankRAG]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[RAG-Token]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[RAG-Sequence]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[GRU]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[CRF]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_does_not_expand_models_variants_or_unapproved_proposals[GPT-4o]" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_legacy_v2_selection_and_drift_fail_closed" time="0.001"><failure message="AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'">def test_legacy_v2_selection_and_drift_fail_closed():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_quality_20261009_51/manifest.json').read_text(encoding='utf-8'))
+&gt;       config, _, sha = app.load_vocabulary(manifest)
+                         ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:39: AttributeError</failure></testcase><testcase classname="tests.test_course_concept_app_v3" name="test_v3_health_search_share_pinned_snapshot_without_request_hashes" time="0.000"><error message="failed on setup with &quot;AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'&quot;">@pytest.fixture(scope='module')
+    def v3():
+        manifest = json.loads((app.g.ROOT/'kg_datasets/dblp/course_v4_graph_concepts_20261010_58/manifest.json').read_text(encoding='utf-8'))
+&gt;       return app.load_vocabulary(manifest)
+               ^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'course_quality_app' has no attribute 'load_vocabulary'
+
+tests\test_course_concept_app_v3.py:15: AttributeError</error></testcase></testsuite></testsuites>

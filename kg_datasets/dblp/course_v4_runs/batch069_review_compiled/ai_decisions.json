@@ -1,0 +1,667 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-b3a96604171aa9473f4d",
+      "entityStatus": "unresolved",
+      "entityReason": "The training clause may be a maximal technical task conflicting with the nested skull-stripping model span.",
+      "entities": [
+        {
+          "text": "Skull-Stripping Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "data augmentation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Training task coverage and the augmentation-versus-training instrument role are not settled.",
+      "relations": [],
+      "notes": "Keep candidate procedure/model mentions without inventing a separate literal skull-stripping task or resolving a flat-span conflict.\nAI self-review: The training/model flat-span conflict is unresolved; augmentation is not automatically a training algorithm or a separately named skull-stripping task."
+    },
+    {
+      "sampleId": "sample-933a5b898a35ea33d59a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Mitigating Architectural Mismatch",
+          "label": "TASK"
+        },
+        {
+          "text": "Evolutionary Synthesis of Deep Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Evolutionary synthesis is the context of mismatch mitigation, not clearly its instrument.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Mitigation during synthesis does not identify synthesis itself as the mitigation procedure."
+        }
+      ],
+      "notes": "The composite evolutionary network-synthesis procedure contains no duplicated inner network entity.\nAI self-review: Mismatch mitigation during synthesis does not say synthesis performs mitigation; keep the known entities with an unresolved instrument role."
+    },
+    {
+      "sampleId": "sample-268116be94472cb7a954",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Checked the whole title: Computer Vision is a field, low power an objective, and status/challenges/opportunities are generic discussion; no concrete method, task or dataset is specified.\nAI self-review: Rechecked the entire short title: low-power vision is field/objective discussion, without a specified method, operation or named resource."
+    },
+    {
+      "sampleId": "sample-372a2606b74d0326a67d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hybrid Terrestrial and Satellite Interference Management",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep learning is explicitly for the hybrid terrestrial/satellite interference-management operation."
+        }
+      ],
+      "notes": "The two network modes jointly specify one interference context; Experimental is not a distinct task or dataset.\nAI self-review: The hybrid terrestrial/satellite setting specifies one interference-management task explicitly served by deep learning."
+    },
+    {
+      "sampleId": "sample-f401e81f47d09f24cf17",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Blackbox Attacks on Reinforcement Learning Agents",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The RL agents are attacked objects inside the maximal task. Approximated temporal information is input content, not an identified attack algorithm.\nAI self-review: The attacked RL agents stay inside the maximal attack task; temporal information is input content, not an asserted attack algorithm."
+    },
+    {
+      "sampleId": "sample-559675823de2ab328c6f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Semi-Supervised Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Text Classification",
+          "label": "TASK"
+        },
+        {
+          "text": "Layer Partitioning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Semi-supervised learning is explicitly for text classification."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Layer partitioning is explicitly the classification-learning mechanism introduced by by."
+        }
+      ],
+      "notes": "The learning regime is retained on the method, not added to the base classification task.\nAI self-review: Semi-supervised learning and layer partitioning explicitly serve text classification; retain the learning regime on the method rather than task."
+    },
+    {
+      "sampleId": "sample-4cb6eb611faa07e79b47",
+      "entityStatus": "unresolved",
+      "entityReason": "Verification may be a generic checking task rather than an identifiable method.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Verification",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Instance Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Verification's task-versus-method status remains unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Deep learning is explicitly combined for object-instance detection."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Verification is explicitly combined for detection, conditional on its method interpretation."
+        }
+      ],
+      "notes": "Precise is evaluative; do not invent a verifier architecture or a dataset.\nAI self-review: Verification remains an unspecified checking operation versus algorithm; keep both conditional detection candidates outside completed training labels."
+    },
+    {
+      "sampleId": "sample-f223f1ed9e1fedf0c1eb",
+      "entityStatus": "unresolved",
+      "entityReason": "Task and Resource Allocation shares an allocation head and has unsettled single-task versus multiple-task granularity.",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Task and Resource Allocation in Wireless High Altitude Balloon Networks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The proposed coordinated task boundary is unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Federated learning is explicitly for the allocation goals, conditional on their combined task boundary."
+        }
+      ],
+      "notes": "Do not fabricate Task Allocation by inserting words or misuse a METHOD-only group for task coordination.\nAI self-review: Task/resource allocation has a shared head and unresolved granularity; preserve the candidate without fabricating words or a METHOD-only task group."
+    },
+    {
+      "sampleId": "sample-77fadc21817fad98695c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Dual-Dimer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Training Physics-Constrained Neural Networks with Minimax Architecture",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Dual-Dimer is explicitly the method for training the specified constrained minimax networks."
+        }
+      ],
+      "notes": "The trained network stays inside the maximal training task; Method is a generic carrier.\nAI self-review: Dual-Dimer is explicitly a training method for the minimax-constrained network; the trained network is the maximal task object, not its instrument."
+    },
+    {
+      "sampleId": "sample-497a17d08d2019bf4fb8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DoubleU-Net",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Convolutional Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Medical Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "DoubleU-Net names the medical-image segmentation approach."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The deep convolutional network is explicitly for medical segmentation."
+        }
+      ],
+      "notes": "The name and neural-family description are distinct mentions; no medical dataset is named.\nAI self-review: DoubleU-Net and its explicit convolutional-family description both serve medical image segmentation; no named medical dataset is stated."
+    },
+    {
+      "sampleId": "sample-0b1adfd827e8e55d7244",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Fuse Sentences",
+          "label": "TASK"
+        },
+        {
+          "text": "Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Summarization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Sentence fusion explicitly uses transformers."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The transformer sentence-fusion procedure is explicitly for summarization."
+        }
+      ],
+      "notes": "Learning to is generic; sentence fusion is a specified subproblem and summarization its stated downstream operation.\nAI self-review: Sentence fusion explicitly uses transformers for summarization; the technical subproblem and downstream operation are independently written tasks."
+    },
+    {
+      "sampleId": "sample-32f000eaa94bda5f5e41",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Taxonomy, advances and trends describe discussion organization, not computational tasks.\nAI self-review: The graph-neural family is explicit, but taxonomy, advances and trends are generic survey organization rather than tasks."
+    },
+    {
+      "sampleId": "sample-62d82922cadc36d0ed2b",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning based Malicious Payload Identification",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The learning-based identification procedure is one composite method; software-defined networking is application context without a separate nonoverlapping task mention.\nAI self-review: The learning-based payload-identification procedure is one composite method; do not duplicate its internal task or classify the networking field as a dataset."
+    },
+    {
+      "sampleId": "sample-9719585351ca5b334b99",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Automated News Summarization",
+          "label": "TASK"
+        },
+        {
+          "text": "Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Automated news summarization explicitly uses transformers."
+        }
+      ],
+      "notes": "News specifies input content, not a named corpus.\nAI self-review: Using directly assigns transformers to automated news summarization; News is content category, not a named corpus."
+    },
+    {
+      "sampleId": "sample-2999daeebfba66ff50e8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Image Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Infinite Generative Adversarial Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Image generation explicitly uses the infinite adversarial networks."
+        }
+      ],
+      "notes": "Infinite identifies the network family; Unsupervised is a learning setting outside the base generation task.\nAI self-review: Infinite specifies the adversarial family, while unsupervised is a learning setting outside the base generation task; with supports use."
+    },
+    {
+      "sampleId": "sample-3b5ee7c3932ef71533fa",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The title explicitly calls PyTorch Geometric Signed Directed software, not an algorithm or dataset. Signed/directed graphs are input structures and the survey names no downstream operation.\nAI self-review: The title explicitly identifies the named artifact as software; only the neural family is an in-scope method, and graph direction/sign are input properties."
+    },
+    {
+      "sampleId": "sample-6e459ae94d7db747c3e9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "TraHGR",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hand Gesture Recognition via ElectroMyography",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "TraHGR names the electromyography-based gesture-recognition approach."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The transformer is explicitly for hand-gesture recognition with that signal modality."
+        }
+      ],
+      "notes": "Electromyography supplies the task input modality, not a named dataset or separate inference algorithm.\nAI self-review: TraHGR and transformer both explicitly serve gesture recognition; electromyography is the signal modality retained within the task."
+    },
+    {
+      "sampleId": "sample-baf2e442c6acd30dd617",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multimodal Fusion Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Remote Sensing Image Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The multimodal fusion transformer is explicitly for remote-sensing classification."
+        }
+      ],
+      "notes": "Retain the fusion mechanism; no named remote-sensing dataset is stated.\nAI self-review: The complete multimodal-fusion transformer explicitly serves remote-sensing classification; no particular image dataset is named."
+    },
+    {
+      "sampleId": "sample-516f88e16ae3bf628949",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Two-Layer ReLU Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Kernel",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Kernel denotes the explicitly stated kernel-method family, with generic Methods excluded. Excess risk is a property; teacher-student is the theoretical setting rather than a dataset/task.\nAI self-review: The two-layer ReLU and explicit kernel-method families are method mentions; excess risk and superiority are properties without a separately stated operation."
+    },
+    {
+      "sampleId": "sample-acfff02747de18e43574",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ConvNext Based Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Anti-Spoofing",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The ConvNext-based network is explicitly for anti-spoofing."
+        }
+      ],
+      "notes": "Preserve the title's ConvNext spelling and the whole composite architecture.\nAI self-review: For directly links the complete ConvNext-based architecture to anti-spoofing; preserve the title's spelling without silently normalizing it."
+    },
+    {
+      "sampleId": "sample-30cd7751029cb33b0a4a",
+      "entityStatus": "unresolved",
+      "entityReason": "Emergence of abstract concepts may be an observed outcome rather than a concrete computational task; neural-network-based scope across the two clauses is uncertain.",
+      "entities": [
+        {
+          "text": "Neural Network based Formation of Cognitive Maps of Semantic Spaces",
+          "label": "METHOD"
+        },
+        {
+          "text": "Emergence of Abstract Concepts",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The emergence phrase's task and direct method role are unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Concept emergence may be a result/property of map formation rather than an operation performed by the method."
+        }
+      ],
+      "notes": "Keep the map-formation composite and literal candidate emergence phrase, without creating an overlapping map task.\nAI self-review: Concept emergence may be an observed outcome rather than an operation; preserve the composite map procedure and unresolved candidate role."
+    },
+    {
+      "sampleId": "sample-f16b1d86957f136ad5eb",
+      "entityStatus": "unresolved",
+      "entityReason": "Explaining has an omitted object and task coverage/granularity beside demonstration finding is uncertain.",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Topic Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Finding Good Demonstrations",
+          "label": "TASK"
+        },
+        {
+          "text": "In-Context Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The colon connects model interpretation to demonstration selection without clearly assigning the selection instrument.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "The title does not explicitly state that the language model performs demonstration finding."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Implicit topic-model interpretation does not settle the demonstration-selection procedure."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "NO_RELATION",
+          "reason": "In-context learning is the beneficiary receiving demonstrations, not the named demonstration-finding instrument."
+        }
+      ],
+      "notes": "Good is internal to the literal finding phrase. Do not reconstruct an explanation object or assume a selection algorithm from the model equivalence claim.\nAI self-review: Implicit model equivalence does not specify a selection instrument; explaining lacks an object and in-context learning is the demonstration beneficiary."
+    },
+    {
+      "sampleId": "sample-cdb76288901801a8b88d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Scale-Independent Multi-Objective Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Scale independence and multiple objectives specify the learning family; generic convergence analysis names no separate computational operation.\nAI self-review: Scale-independent multi-objective learning is an explicit family; generic convergence analysis does not state a separate computational task."
+    },
+    {
+      "sampleId": "sample-26f0dc0cea80fd6f26ad",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformer Encoder with Multiscale Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Pain Classification Using Physiological Signals",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The multiscale transformer-encoder procedure is explicitly for signal-based pain classification."
+        }
+      ],
+      "notes": "Signals specify the classification modality, not a named physiological dataset.\nAI self-review: Retain the multiscale encoder mechanism and physiological signal input; for directly supports the pain-classification use."
+    },
+    {
+      "sampleId": "sample-4eaf659014592e33dc90",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Generating Smooth Human Motion from Sparse Tracking Inputs",
+          "label": "TASK"
+        },
+        {
+          "text": "Diffusion Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Motion generation explicitly uses a diffusion model."
+        }
+      ],
+      "notes": "This is an explicit generative diffusion application, unlike physical reaction-diffusion equations. Internal Smooth stays literal to preserve the operation/object/input span; no avatar dataset is named.\nAI self-review: With explicitly supplies a generative diffusion model for tracking-conditioned human motion, unlike the physical equation-solving diffusion title."
+    }
+  ]
+}

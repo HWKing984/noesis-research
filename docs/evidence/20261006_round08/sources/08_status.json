@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "mode": "smoke",
+  "trainingStarted": true,
+  "formalTrainingStarted": false,
+  "testEvaluated": false,
+  "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+  "createdAt": "2026-10-06T00:30:24.460841+00:00",
+  "config": {
+    "seed": 20261006,
+    "samples": 24,
+    "steps": 120,
+    "batch_size": 8,
+    "learning_rate": 5e-05,
+    "max_length": 128
+  },
+  "device": "cuda",
+  "cudaVersion": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "elapsedSeconds": 100.29917959999875,
+  "testTokenized": false,
+  "finishedAt": "2026-10-06T00:32:04.761454+00:00"
+}

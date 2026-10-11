@@ -1,0 +1,30 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "02_training.html": "9d6c9c6af0a4def03d353b0f4341af831b36f2d17d4a9678a301bc306ab2a9a2",
+    "04_traceability.html": "ae5af48ab196b29a7a42e2c130d94cc7b4720196677273f2a63c0ab0e8a585d5",
+    "audit_state.json": "0e7a6deecaef89f1b4d541a1ffe400f169a47849e00281e562fb95b2cf24d29f",
+    "sources/README.md": "e6d79e9df7c81dc9065c417c3f06ff71ab46d43cbcaf53880578ebcdd4be9280",
+    "sources/docs/system_status_round44.md": "373491a91a2680d5ae5dd2f149088f98ddaa6f5c2c636221f64c9e272de6405b",
+    "sources/resources/course_abstract_inventory_patch_v1.json": "435ef23c78af8eec8a578393309721c5e7c8906f2c44ac4e0d4aa13d6bffc457",
+    "sources/resources/course_abstract_scope_review_v1.json": "bb08d1169bc55d74f47fdaf283d96adb6407bf710f51c62f0845c22289dc687a",
+    "sources/scripts/patch_train_method_inventory.py": "0ccb36c35209c1bfa194972b57b8346db23315cca11fda4154c85ff2f4a7cd63",
+    "sources/scripts/review_train_entity_scope.py": "7c2efa3aadb399e5698e05a37f3449a0658435eeb213a147ad4c02e053abbfb1",
+    "sources/tests/test_train_scope_review.py": "d58d94e5716b58fc150042c9cc589f250c4759942cf8a1553a3ab6776541ded2",
+    "sources/kg_datasets/dblp/course_abstract_scope_generation_20261008_44/generation_receipts.jsonl": "872802c5c91e1947bac407e49d1024b472e3dcaf66710520dad116ed787904e5",
+    "sources/kg_datasets/dblp/course_abstract_scope_generation_20261008_44/manifest.json": "69ff614a23decc204d1fa548b91dbeb41a5007a605172ac5950326afade5df83",
+    "sources/kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44/inventory_generation_receipts.jsonl": "2634b7325ac3708172088a22da4f717e427249d81c11703187ea7be1d4476449",
+    "sources/kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44/inventory_patch.json": "3858e9d4a4a4c5728fe0ec1c87f06ad286bedde395a638b74776652c4a9fcc78",
+    "sources/kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44/manifest.json": "3bbad6603684b1ea47e70ddd9193d8e037eda0d285cea7cbb84050fc21b2921f",
+    "sources/kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44/summary.json": "e466ce821ebcce605bfc677db74f4dca7a71a3ac0ef3cc35d85819547aee6d0f",
+    "sources/kg_datasets/dblp/course_abstract_scope_reviewed_20261008_44/manifest.json": "8c8d66afbacec040e2e00120d884fd179f215fd42a19024ca2726175d84ad01c",
+    "sources/kg_datasets/dblp/course_abstract_scope_reviewed_20261008_44/scope_review_ledger.jsonl": "7457087930bb83fdf62c0bdc7e56824dff33359870af41035edfd44d134859f4",
+    "sources/kg_datasets/dblp/course_abstract_scope_reviewed_20261008_44/summary.json": "47df39a77b3cd2623f9afe5fb31bc469c793850e5096673c0992620423ca1456",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round44_inventory_targeted.xml": "987c4922b236ab450095a6f532030d8a7d74e1c45ef356dc2e5a4718d172ad37",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round44_workspace_temp.xml": "9b07f664af00d20ba47ff304d7df9c5dc308a7fa11db5b16b62507d745781994",
+    "sources/kg_datasets/dblp/course_v4_runs/verification_20261008_round43.json": "7308470f344f189e7207cc888e31e4f756e64a220c12f5fd64d04e0e4ba26271",
+    "sources/annotations/course_v4/abstract_scope_decisions_20261008_44.json": "577f4936f0339fd7d2a1445e5d110757f9709ced7480e2f505d993dbb9fc1124",
+    "sources/annotations/course_v4/abstract_scope_reviews_20261008_44.json": "78ac5992308ff5c3df79ffd5e13c0d1603b192c8888d38375c2561e81fa25558",
+    "sources/annotations/course_v4/seal_train_scope_20261008_round44.py": "4b540a7dba85d8fe2fd6be90560980141d32dae38f3e2eb3abd5f988adba0000"
+  }
+}

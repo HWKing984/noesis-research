@@ -1,0 +1,59 @@
+{
+  "kind": "actual_browser_DOM_and_capture_record",
+  "captures": [
+    {
+      "path": "D:/a-open_source/neo4j/docs/evidence/20261007_round18_retry/chrome_app_1440.png",
+      "viewport": 1440,
+      "dom": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"height\":1000,\"overflow\":false,\"status\":\"Neo4j未就绪\",\"error\":\"Neo4j连接、认证或课程图谱未就绪；未使用离线替代数据。\"}\n```"
+        }
+      ],
+      "capturedAtUTC": "2026-10-07T01:39:06.528Z",
+      "saved": false,
+      "reason": "PNG persistence refused by tool size limit"
+    },
+    {
+      "path": "D:/a-open_source/neo4j/docs/evidence/20261007_round18_retry/chrome_app_768.png",
+      "viewport": 768,
+      "dom": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"height\":1000,\"overflow\":false,\"status\":\"Neo4j未就绪\",\"error\":\"Neo4j连接、认证或课程图谱未就绪；未使用离线替代数据。\"}\n```"
+        }
+      ],
+      "capturedAtUTC": "2026-10-07T01:39:10.345Z",
+      "saved": false,
+      "reason": "PNG persistence refused by tool size limit"
+    },
+    {
+      "path": "D:/a-open_source/neo4j/docs/evidence/20261007_round18_retry/chrome_app_375.png",
+      "viewport": 375,
+      "dom": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"height\":1000,\"overflow\":false,\"status\":\"Neo4j未就绪\",\"error\":\"Neo4j连接、认证或课程图谱未就绪；未使用离线替代数据。\"}\n```"
+        }
+      ],
+      "capturedAtUTC": "2026-10-07T01:39:13.873Z",
+      "saved": false,
+      "reason": "PNG persistence refused by tool size limit"
+    }
+  ],
+  "savedNativeScreenshots": [
+    {
+      "path": "D:/a-open_source/neo4j/docs/evidence/20261007_round18_retry/chrome_app_768.jpg",
+      "width": 768,
+      "format": "jpeg",
+      "quality": 30
+    },
+    {
+      "path": "D:/a-open_source/neo4j/docs/evidence/20261007_round18_retry/chrome_app_375.jpg",
+      "width": 375,
+      "format": "jpeg",
+      "quality": 30
+    }
+  ],
+  "notice": "Use native Chrome mobile/tablet JPEGs and Edge desktop PNG. Edge window-width 375 PNG is cropped because CSS viewport differs; not evidence of mobile layout."
+}

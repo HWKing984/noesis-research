@@ -1,0 +1,24 @@
+{
+ "provider":"OpenAI via Codex","model":"unknown_codex_model","independent":false,
+ "reviews":[
+ {"index":0,"reason":"EMRs/non-IID ICU EMRs describe records without a named dataset. Retain CBFL/FL and explicit prediction targets, not a fabricated dataset identity."},
+ {"index":1,"reason":"RL-Pruner is a whole method name and URL tokens are excluded. Its explicit pruning-distribution objective is supported; architecture-comparison models are not datasets."},
+ {"index":2,"reason":"BI-LSTM must not produce a nested LSTM mention. The using sentence supports each named architecture's phishing-detection use; URL sequences are not named datasets."},
+ {"index":3,"reason":"BigBiGAN and BigGAN are distinct names; keep maximal unsupervised/unconditional task phrases. ImageNet is explicitly an evaluated benchmark for BigBiGAN, not an automatic GAN-family relation."},
+ {"index":4,"reason":"Retain the nested-task quarantine. MuJoCo names a simulator/environment, not a released dataset under this contract; don't relabel it to improve DATASET support."},
+ {"index":5,"addMentions":{"METHOD":["deep learning models"]},"reason":"Add the omitted explicit method family. The hybrid model's detection purpose is explicit; a detection rate alone supplies no dataset name."},
+ {"index":6,"reason":"This is paper metadata annotation only. NN TSC and NNs are method surfaces; synthetic engagements have no named dataset and generalized capabilities do not certify every method-task pair."},
+ {"index":7,"reason":"Preserve Penn Treebank and Wall Street Journal dataset names and the source N-bestrescoring spelling. Distillation/regularization results require longer-context links; leave those pairs unresolved."},
+ {"index":8,"reason":"sMoRe is the proposed system; keep full expansion, model families and explicit object-creation/placement objectives. Physical MR scenes and a user study are not named datasets."},
+ {"index":9,"reason":"ParkingSticker and PASCAL VOC remain separate datasets. The YOLOv2-ParkingSticker result is explicit; PASCAL VOC is background comparison and not automatically an evaluated-on positive or negative."},
+ {"index":10,"reason":"Keep the nested repair-task exclusion and document quarantine; don't shift DNN boundaries to force flat NER eligibility. Aircraft/rocket benchmarks are unnamed tasks/controllers, not DATASET names."},
+ {"index":11,"reason":"DRL is separate from DRL-TDCTM; the latter's full acronym stays intact. This is bibliographic annotation, not implementation of UAV movement planning. Simulations have no named dataset."},
+ {"index":12,"reason":"Keep metric/method-scope ambiguity unresolved. Correlation and perceived agreement are not independent semantic correctness; the paper supplies no named dataset."},
+ {"index":13,"reason":"ITO is explicitly a released knowledge-graph dataset; annotate its full name and acronym as DATASET, not an AI method. No specific learning task or evaluated method is named."},
+ {"index":14,"reason":"Keep STGED and named architecture components as method mentions, network prediction as tasks. Military-context source metadata is not implementation guidance; no named dataset is present."},
+ {"index":15,"addMentions":{"TASK":["issue resolution"]},"reason":"Add the explicit issue-resolution objective. TaDaa and Transformers are methods; a ticketing sample dataset is unnamed. Don't invent all cross-sentence use links."},
+ {"index":16,"reason":"The first sentence explicitly compares both model descriptions for SDG detection. Preserve descriptive source spans without assigning a fabricated stable identity to the unnamed specialized model."},
+ {"index":17,"addMentions":{"METHOD":["F0 post-processing strategy"]},"reason":"Add the explicit post-processing technique. Preserve DAR/DARs names and the maximal synthesis-task phrase; the Chinese singing corpus has no named identity."},
+ {"index":18,"reason":"SciHorizon is the named assessment framework, not a dataset. Keep explicit readiness-assessment objectives and language-model families; unnamed benchmark datasets do not become DATASET labels."}
+ ]
+}

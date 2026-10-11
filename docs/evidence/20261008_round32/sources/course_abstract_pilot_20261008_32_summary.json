@@ -1,0 +1,20 @@
+{
+  "documents": 8,
+  "paperGroups": 7,
+  "entityCounts": {
+    "DATASET": 9,
+    "METHOD": 5,
+    "TASK": 5
+  },
+  "relationCounts": {
+    "USED_FOR": 5,
+    "EVALUATED_ON": 2
+  },
+  "labelSource": "ai_pseudo",
+  "selfReviewCompleted": false,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "testSourcesUsed": false,
+  "titleLabelsReused": false
+}

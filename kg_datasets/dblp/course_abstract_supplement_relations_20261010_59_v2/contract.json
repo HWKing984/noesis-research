@@ -1,0 +1,17 @@
+{
+  "version": "supplement_relation_revision_v1",
+  "source": "kg_datasets/dblp/course_abstract_supplement_reviewed_20261009_49",
+  "sourceManifestSha256": "2fc9aeaefa200100de611e5940ee5fa3cf6bbcfcea520f3700542be11f8c82f7",
+  "relationContractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "revisionCohort": [
+    "2003.10555",
+    "2006.03654"
+  ],
+  "selection": "First two papers in frozen49 source order with complete NER, no groups, METHOD and DATASET and existing explicit EVALUATED_ON. Selection fixed before reading these full abstracts in59; targeted source-label-driven slice, not random or blind evaluation. No replacements after ambiguity.",
+  "scope": "Only explicit source pair evidence, fixed NER; full eight-paper denominator. Inherit all old labels. Unknown never negative. Same-session AI decisions/self-review, not independent gold. No model predictions supplied for judgments.",
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false
+}

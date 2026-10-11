@@ -1,0 +1,44 @@
+{
+  "wholeTrainQueue": 70,
+  "NERTrainFrozen": 65,
+  "NEREntitiesFrozen": 787,
+  "NERQuarantines": 5,
+  "reviewedRoleDocuments": 5,
+  "inheritedReceipts": 65,
+  "inheritedKnownPairs": 386,
+  "knownPairs": 408,
+  "addedKnownPairs": 22,
+  "relationSupport": {
+    "USED_FOR": 307,
+    "EVALUATED_ON": 64,
+    "NO_RELATION": 37
+  },
+  "addedSupport": {
+    "USED_FOR": 19,
+    "NO_RELATION": 3
+  },
+  "knownSourceDocuments": 36,
+  "sourceDocumentsByClass": {
+    "USED_FOR": 34,
+    "EVALUATED_ON": 14,
+    "NO_RELATION": 10
+  },
+  "addedSourceDocumentsByClass": {
+    "USED_FOR": 5,
+    "EVALUATED_ON": 0,
+    "NO_RELATION": 1
+  },
+  "eligiblePairs": 2357,
+  "unknownPairs": 1949,
+  "knownPairCoverage": 0.17310140008485364,
+  "completeTrainDocuments": 12,
+  "maxMarkedTokens": 333,
+  "opaqueDevFilesPreserved": 9,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "devContentParsed": false,
+  "testContentConsumed": false,
+  "independentHumanGold": false,
+  "qualityPromotionPassed": false,
+  "modelPromoted": false
+}

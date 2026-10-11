@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "elapsedSeconds": 36.63833019999947,
+  "inferenceExecuted": true,
+  "trainingExecuted": false,
+  "testEvaluated": false,
+  "modelPromoted": false
+}

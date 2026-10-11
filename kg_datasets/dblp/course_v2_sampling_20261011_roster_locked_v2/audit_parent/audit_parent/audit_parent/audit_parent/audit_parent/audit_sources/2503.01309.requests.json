@@ -1,0 +1,218 @@
+[
+  {
+    "arxivId": "2307.03130",
+    "url": "https://arxiv.org/abs/2307.03130",
+    "startedAtUTC": "2026-10-08T03:59:24.895458+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 283,
+    "rawResponseFile": "page_001.html"
+  },
+  {
+    "arxivId": "2411.04637",
+    "url": "https://arxiv.org/abs/2411.04637",
+    "startedAtUTC": "2026-10-08T03:59:39.992147+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 164,
+    "rawResponseFile": "page_002.html"
+  },
+  {
+    "arxivId": "2503.00416",
+    "url": "https://arxiv.org/abs/2503.00416",
+    "startedAtUTC": "2026-10-08T03:59:55.091273+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 176,
+    "rawResponseFile": "page_003.html"
+  },
+  {
+    "arxivId": "2110.02932",
+    "url": "https://arxiv.org/abs/2110.02932",
+    "startedAtUTC": "2026-10-08T04:00:10.190431+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 234,
+    "rawResponseFile": "page_004.html"
+  },
+  {
+    "arxivId": "1812.11737",
+    "url": "https://arxiv.org/abs/1812.11737",
+    "startedAtUTC": "2026-10-08T04:00:25.304465+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 146,
+    "rawResponseFile": "page_005.html"
+  },
+  {
+    "arxivId": "2503.01309",
+    "url": "https://arxiv.org/abs/2503.01309",
+    "startedAtUTC": "2026-10-08T04:00:40.405232+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 254,
+    "rawResponseFile": "page_006.html"
+  },
+  {
+    "arxivId": "2110.08010",
+    "url": "https://arxiv.org/abs/2110.08010",
+    "startedAtUTC": "2026-10-08T04:00:55.501276+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 227,
+    "rawResponseFile": "page_007.html"
+  },
+  {
+    "arxivId": "2103.11133",
+    "url": "https://arxiv.org/abs/2103.11133",
+    "startedAtUTC": "2026-10-08T04:01:10.589391+00:00",
+    "status": "completed",
+    "titleMatch": false,
+    "tokens": 141,
+    "rawResponseFile": "page_008.html"
+  },
+  {
+    "arxivId": "2506.16934",
+    "url": "https://arxiv.org/abs/2506.16934",
+    "startedAtUTC": "2026-10-08T04:01:25.680297+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 337,
+    "rawResponseFile": "page_009.html"
+  },
+  {
+    "arxivId": "2407.20251",
+    "url": "https://arxiv.org/abs/2407.20251",
+    "startedAtUTC": "2026-10-08T04:01:40.777354+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 301,
+    "rawResponseFile": "page_010.html"
+  },
+  {
+    "arxivId": "2409.13884",
+    "url": "https://arxiv.org/abs/2409.13884",
+    "startedAtUTC": "2026-10-08T04:01:55.872927+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 208,
+    "rawResponseFile": "page_011.html"
+  },
+  {
+    "arxivId": "2107.10847",
+    "url": "https://arxiv.org/abs/2107.10847",
+    "startedAtUTC": "2026-10-08T04:02:10.977146+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 175,
+    "rawResponseFile": "page_012.html"
+  },
+  {
+    "arxivId": "2402.17595",
+    "url": "https://arxiv.org/abs/2402.17595",
+    "startedAtUTC": "2026-10-08T04:02:26.071219+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 285,
+    "rawResponseFile": "page_013.html"
+  },
+  {
+    "arxivId": "2402.14245",
+    "url": "https://arxiv.org/abs/2402.14245",
+    "startedAtUTC": "2026-10-08T04:02:41.175009+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 219,
+    "rawResponseFile": "page_014.html"
+  },
+  {
+    "arxivId": "2206.08747",
+    "url": "https://arxiv.org/abs/2206.08747",
+    "startedAtUTC": "2026-10-08T04:02:56.284048+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 297,
+    "rawResponseFile": "page_015.html"
+  },
+  {
+    "arxivId": "2310.02147",
+    "url": "https://arxiv.org/abs/2310.02147",
+    "startedAtUTC": "2026-10-08T04:03:11.394071+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 254,
+    "rawResponseFile": "page_016.html"
+  },
+  {
+    "arxivId": "1909.11730",
+    "url": "https://arxiv.org/abs/1909.11730",
+    "startedAtUTC": "2026-10-08T04:03:26.502838+00:00",
+    "status": "completed",
+    "titleMatch": false,
+    "tokens": 284,
+    "rawResponseFile": "page_017.html"
+  },
+  {
+    "arxivId": "2510.26830",
+    "url": "https://arxiv.org/abs/2510.26830",
+    "startedAtUTC": "2026-10-08T04:03:41.606025+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 224,
+    "rawResponseFile": "page_018.html"
+  },
+  {
+    "arxivId": "2107.09145",
+    "url": "https://arxiv.org/abs/2107.09145",
+    "startedAtUTC": "2026-10-08T04:03:56.709724+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 275,
+    "rawResponseFile": "page_019.html"
+  },
+  {
+    "arxivId": "2509.18445",
+    "url": "https://arxiv.org/abs/2509.18445",
+    "startedAtUTC": "2026-10-08T04:04:11.815480+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 205,
+    "rawResponseFile": "page_020.html"
+  },
+  {
+    "arxivId": "2509.19325",
+    "url": "https://arxiv.org/abs/2509.19325",
+    "startedAtUTC": "2026-10-08T04:04:26.927461+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 256,
+    "rawResponseFile": "page_021.html"
+  },
+  {
+    "arxivId": "2208.08554",
+    "url": "https://arxiv.org/abs/2208.08554",
+    "startedAtUTC": "2026-10-08T04:04:42.030593+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 240,
+    "rawResponseFile": "page_022.html"
+  },
+  {
+    "arxivId": "2510.03955",
+    "url": "https://arxiv.org/abs/2510.03955",
+    "startedAtUTC": "2026-10-08T04:04:57.120455+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 236,
+    "rawResponseFile": "page_023.html"
+  },
+  {
+    "arxivId": "2408.00275",
+    "url": "https://arxiv.org/abs/2408.00275",
+    "startedAtUTC": "2026-10-08T04:05:12.213159+00:00",
+    "status": "completed",
+    "titleMatch": false,
+    "tokens": 194,
+    "rawResponseFile": "page_024.html"
+  }
+]

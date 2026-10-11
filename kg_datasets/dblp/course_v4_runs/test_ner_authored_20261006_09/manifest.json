@@ -1,0 +1,20 @@
+{
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\annotations\\course_v4\\test_ner_generation_20261006.py": "c21c1fbaf0755be595bf4dd910f64673489da00a7c63ac872512d5d788de57c6",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0073.jsonl": "c48006b24ed977e3c98e45c38fe852a2c734c64b5767ebae3812f4f73dae1dfc",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0074.jsonl": "81ed2498368357c77445d70002a66b719a600bb187257f8b10de485040a93686",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0075.jsonl": "f7034e30381a21163155ee33aaa68194c8e111354c2a1c19aacadb2ac240c978",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0076.jsonl": "4305598ba07cb2fee15ff520fed8799171bf0ea86a09a5171dcd78fbef17eab3",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0077.jsonl": "c7ee74782f2873df7e31c8b9084ea88cb5a4ce7e06622bf2809976308c74017b",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0078.jsonl": "f3af9c8b92d4bc428a099cf6183c9086408360a424246fb194e98dcf3f8f8465",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0079.jsonl": "9dc702ec2895b41b0cce8d1242150dcede1a96e7cb4b5ad32f70b80890bc8a34",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_weak\\jobs\\generation\\batch-0080.jsonl": "70bc014dc27a517bba0d352ae551b80f36fe8535d4f41960a1bdcbdd151ae8a8"
+  },
+  "taskScope": "NER_only",
+  "modelCallExecutedByExporter": false,
+  "filesSha256": {
+    "authored_generation.py": "c21c1fbaf0755be595bf4dd910f64673489da00a7c63ac872512d5d788de57c6",
+    "generation_decisions.json": "ade00f83a4be9c6f1e16b24141732e1e5568b26741a186a8eb6ad688e6422adc",
+    "jobs.jsonl": "824e77b17a373cf7fe178364fe4fbfd61d45851fd8b77f9c98fcb515ec7adc18"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "instruction": "Check all explicit mentions and directed typed relations against original excerpt only. Verify maximal distinctive name boundaries, generic-word exclusions, duplicate surfaces and parent offsets. This is same-session self-review, not human gold."
+}

@@ -1,0 +1,790 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-4152fad07f88dabc29f9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Camouflaged Poisoning Attack",
+          "label": "TASK"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "Graph neural networks are the explicit target of the poisoning attack, not the mechanism performing that attack."
+        }
+      ],
+      "notes": "Attack target is not attack instrument; no named data collection.\nAI self-review: Poisoning attack targets graph neural networks; camouflaged attack scope is literal, model is not attacker. Negative remains scoped rather than general absence."
+    },
+    {
+      "sampleId": "sample-ce4f4b7f722715636877",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Iterative pruning algorithm",
+          "label": "METHOD"
+        },
+        {
+          "text": "look-up table implementation",
+          "label": "TASK"
+        },
+        {
+          "text": "binary neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Pruning as direct table-implementation mechanism versus preparation of an implementable model is not established.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "The for phrase expresses the intended downstream implementation, not enough to distinguish direct implementation from preprocessing."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "NO_RELATION",
+          "reason": "Binary neural networks are what is implemented in the table, not the implementation instrument."
+        }
+      ],
+      "notes": "Retain the literal target-network negative, but exclude the entire unresolved relation document; do not cherry-pick its convenient pair.\nAI self-review: Pruning may support a later look-up table implementation instead of implementing that table itself; the direct-instrument rule used for distillation requires preserving this uncertainty."
+    },
+    {
+      "sampleId": "sample-f0f1cb8a7cbb36f9bfe0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Evasion Attacks",
+          "label": "TASK"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Influence Function",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "The graph neural networks are attacked targets, not the evasion attack instrument."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The evasion attacks explicitly proceed via the influence function."
+        }
+      ],
+      "notes": "Preserve two distinct method roles in the same title.\nAI self-review: Via Influence Function states attack instrument while Graph Neural Networks is attacked target; opposite roles in same context both retained."
+    },
+    {
+      "sampleId": "sample-e5067ea6166807e7658d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Blockwise Compression",
+          "label": "TASK"
+        },
+        {
+          "text": "Transformer-based Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "Transformer-based models are the objects being compressed, not the compressors."
+        }
+      ],
+      "notes": "Without Retraining is a procedure constraint, not a separate named dataset or model.\nAI self-review: Compression target is Transformer-based Models, not compression instrument; no model newly inferred for the compression technique."
+    },
+    {
+      "sampleId": "sample-a2763e935ff89cc2f10e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ReLeQ",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Quantization",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "ReLeQ is introduced as the reinforcement-learning approach to quantization."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Reinforcement learning is explicitly used for the quantization operation."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "NO_RELATION",
+          "reason": "The neural networks are quantization targets, not the quantization procedure."
+        }
+      ],
+      "notes": "Automatic describes execution and Deep the model context; basic operation is Quantization. Network target and optimizer are distinct literal mentions.\nAI self-review: ReLeQ and reinforcement learning name the quantizer; networks are quantized targets. Basic Quantization operation excludes setup modifiers and separates target method span."
+    },
+    {
+      "sampleId": "sample-733cd0fe508c8d67a8c8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pruning",
+          "label": "TASK"
+        },
+        {
+          "text": "ensemble of convolutional neural networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "second-order cone programming",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "The ensemble is being pruned; it is not the pruning instrument."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Pruning explicitly uses second-order cone programming."
+        }
+      ],
+      "notes": "Ensemble construction is retained in the contiguous method mention; no inferred individual network members.\nAI self-review: Second-order cone programming performs pruning while the full CNN ensemble receives pruning; task/action and nonoverlapping model roles clear."
+    },
+    {
+      "sampleId": "sample-e16787a3e0d5f3f69119",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Robustness Enhancement",
+          "label": "TASK"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Conditional Random Fields",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "Graph neural networks receive the robustness enhancement; they are not the named enhancement instrument."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The title explicitly performs robustness enhancement with conditional random fields."
+        }
+      ],
+      "notes": "Post-Hoc specifies timing rather than the basic task; distinguishes beneficiary and instrument.\nAI self-review: Conditional random fields are the explicit enhancement mechanism; GNNs are beneficiaries. Post-Hoc timing does not create another task."
+    },
+    {
+      "sampleId": "sample-8d8c233a329fe6cc004d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Validation",
+          "label": "TASK"
+        },
+        {
+          "text": "LLM-based Evaluators",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "LLM-based evaluators are themselves being validated, not the validator carrying out this validation."
+        }
+      ],
+      "notes": "Software Engineering Artifacts scopes the evaluators' intended application; not evidence that the evaluated evaluators perform their own validation.\nAI self-review: Validation is a technical checking operation on the evaluator itself; downstream software artifacts do not establish self-validation by those same evaluators."
+    },
+    {
+      "sampleId": "sample-311cb1ed53c99dafcd7f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Constructing Domain-Specific Evaluation Sets",
+          "label": "TASK"
+        },
+        {
+          "text": "LLM-as-a-judge",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "The evaluation sets are being constructed for the judge model; the title does not name that judge as the set-construction instrument."
+        }
+      ],
+      "notes": "Evaluation Sets is an unnamed resource and therefore not DATASET; intended evaluated consumer is not construction algorithm.\nAI self-review: Constructed unnamed evaluation sets serve the LLM judge; for names the evaluated consumer, not the set-construction method. Generic sets not DATASET."
+    },
+    {
+      "sampleId": "sample-cc55f3e34f6f4b2a134a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "red teaming",
+          "label": "TASK"
+        },
+        {
+          "text": "LLMs",
+          "label": "METHOD"
+        },
+        {
+          "text": "content safety evaluation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "LLMs are the target of the red-teaming evaluation, not the red-teaming instrument."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "NO_RELATION",
+          "reason": "LLM content safety is being evaluated; no use of those same LLMs as evaluators is asserted."
+        }
+      ],
+      "notes": "Query-efficient/dataset-independent describe procedure constraints; no named dataset is present.\nAI self-review: LLMs are objects of red teaming and content-safety evaluation, no same-model evaluator assertion. Both scoped negatives independently explicit."
+    },
+    {
+      "sampleId": "sample-a53e5bd5ef0bc14054e8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Targeted Attacks and Defenses",
+          "label": "TASK"
+        },
+        {
+          "text": "Distributed Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "Distributed federated learning is the attacked and defended system, not the attack/defense instrument."
+        }
+      ],
+      "notes": "Vehicular Networks is application infrastructure, not a dataset; task coordination preserves the literal scope.\nAI self-review: Distributed federated learning is what is attacked/defended; complete literal task coordination retained, vehicular network infrastructure not a named collection."
+    },
+    {
+      "sampleId": "sample-95d5dd73313e388f078d",
+      "entityStatus": "unresolved",
+      "entityReason": "The full updates task includes On-Satellite Neural Networks, which is also a model target; a complete nonoverlapping task/model inventory is uncertain.",
+      "entities": [
+        {
+          "text": "On-Satellite Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Vector Quantization",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not truncate the update target or invent task spans just to create a negative relation.",
+      "relations": [],
+      "notes": "Fault tolerance is desired outcome; model is updated, vector quantization is the stated update mechanism. Quarantine flat-span conflict.\nAI self-review: Updates target overlaps the neural-model mention; preserve unresolved full inventory rather than constructing shortened negative endpoints."
+    },
+    {
+      "sampleId": "sample-387b3765cc7e28914a15",
+      "entityStatus": "unresolved",
+      "entityReason": "Explaining Deep Neural Network Compression overlaps its network model target; Probabilistic Latent Space is a representation but not clearly a named modeling method.",
+      "entities": [
+        {
+          "text": "Deep Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Uncertain complete entity boundaries prevent complete scoped candidate judgments.",
+      "relations": [],
+      "notes": "Do not label a latent representation as a model solely to increase negative support.\nAI self-review: Explanation/compression/model boundary and latent representation identity remain unclear; not mislabeled as an empty complete training title."
+    },
+    {
+      "sampleId": "sample-de089502a0204f5ec85e",
+      "entityStatus": "unresolved",
+      "entityReason": "Diagnostics for Deep Neural Networks names an analysis target, while Automated Copy/Paste Attacks could be an attack technique or task; complete flat typed inventory is uncertain.",
+      "entities": [
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Unresolved diagnostic and attack roles stay unresolved, not negative filler.",
+      "relations": [],
+      "notes": "Attack-method ambiguity is explicitly preserved.\nAI self-review: Copy/Paste attack may name a method or task; diagnostics target overlap unresolved. Existing known network mention is not a complete inventory."
+    },
+    {
+      "sampleId": "sample-836a2db5203ba688798b",
+      "entityStatus": "unresolved",
+      "entityReason": "Pruned Large Language Model Recovery overlaps the model mention; full nonoverlapping task inventory is uncertain.",
+      "entities": [
+        {
+          "text": "PASER",
+          "label": "METHOD"
+        },
+        {
+          "text": "Post-Training Data Selection",
+          "label": "TASK"
+        },
+        {
+          "text": "Pruned Large Language Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Recovery role cannot be established with complete task boundaries; do not salvage only convenient negative pairs.",
+      "relations": [],
+      "notes": "Data selection supports recovery, but this title is quarantined for the unresolved recovery/model boundary.\nAI self-review: Recovery task and pruned model overlap; PASER and data selection retained only as partial inventory. Do not salvage convenient negative pairs."
+    },
+    {
+      "sampleId": "sample-ce39355f46f7c85b80b4",
+      "entityStatus": "unresolved",
+      "entityReason": "Kill All Bugs does not unambiguously specify fixing, localization or elimination; the full TASK inventory remains uncertain.",
+      "entities": [
+        {
+          "text": "GPT-O1",
+          "label": "METHOD"
+        },
+        {
+          "text": "GPT-Family LLMs",
+          "label": "METHOD"
+        },
+        {
+          "text": "QuixBugs",
+          "label": "DATASET"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Incomplete task inventory and unconfirmed specific GPT-O1 benchmark link prevent a complete relation document.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Title explicitly benchmarks the GPT family, but the specific GPT-O1 link is not separately certain."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "EVALUATED_ON",
+          "reason": "An Evaluation of GPT-Family LLMs on QuixBugs explicitly states family-to-benchmark evaluation."
+        }
+      ],
+      "notes": "Rare evaluation judgment stays in provenance only; no complete training row or nonzero coverage is manufactured from this partial document.\nAI self-review: Kill All Bugs is rhetorical and could mean localization, fixing or complete removal; marking its task as fully resolved overstates title evidence."
+    },
+    {
+      "sampleId": "sample-4d161ce9c31cf0477001",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Information Fusion",
+          "label": "TASK"
+        },
+        {
+          "text": "Knowledge Distillation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Remote Sensing Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Distillation's role in fusion is explicit; whether it is the direct detector rather than training support is not established.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Information fusion explicitly uses knowledge distillation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Knowledge distillation may train the downstream detector rather than perform object detection itself."
+        }
+      ],
+      "notes": "Fine-grained is detection resolution/evaluation specificity; avoid treating training mechanism as inference detector without evidence.\nAI self-review: Distillation directly supports fusion; inference-time detector relation unresolved under same policy as table-pruning case. Training support is not automatically a detector."
+    },
+    {
+      "sampleId": "sample-42f54fff6bd123c8f226",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Cross-Weighting Knowledge Distillation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The title supplies intended detection application but not whether distillation is direct detector or training support.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Do not automatically equate a detector-training mechanism with the detector performing the task."
+        }
+      ],
+      "notes": "Entire cross-weighting distillation mechanism is one composite method; no nested duplicate.\nAI self-review: Distillation for detection may train rather than execute detector. Composite mechanism preserved but relation not forced positive to increase support."
+    },
+    {
+      "sampleId": "sample-5a8571b62840b7a7a8cc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Detection of Network Attacks",
+          "label": "TASK"
+        },
+        {
+          "text": "Weight-Insensitive Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Network attack detection explicitly uses weight-insensitive neural networks."
+        }
+      ],
+      "notes": "Early is a timing/evaluation modifier; attacks are detection targets, not another model.\nAI self-review: Attack detection explicitly uses weight-insensitive networks, unlike attacked networks in poisoning and evasion examples; full attack object retained."
+    },
+    {
+      "sampleId": "sample-8579e55f5304e7d7f4d3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "S2IGAN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Speech-to-Image Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Adversarial Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "S2IGAN is introduced as the speech-to-image generation model."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Speech-to-image generation explicitly proceeds via adversarial learning."
+        }
+      ],
+      "notes": "Explicit generation approach, not an attack on a protected model.\nAI self-review: Named S2IGAN and explicit via adversarial-learning instrument for speech-to-image generation; no claim about attack detection or evaluated datasets."
+    },
+    {
+      "sampleId": "sample-120725376486636fb088",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DinoSR",
+          "label": "METHOD"
+        },
+        {
+          "text": "Self-Distillation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Online Clustering",
+          "label": "METHOD"
+        },
+        {
+          "text": "Speech Representation Learning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "DinoSR is explicitly a speech representation-learning approach."
+        },
+        {
+          "head": "e2",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "Self-distillation is an explicit mechanism for speech representation learning itself, not an inferred downstream recognizer."
+        },
+        {
+          "head": "e3",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "Online clustering is explicitly used for the representation-learning task."
+        }
+      ],
+      "notes": "Self-supervised is training setting; the stated task is representation learning, not downstream speech recognition.\nAI self-review: Representation learning is the direct learning task; self-distillation and online clustering explicitly implement it. No inferred downstream speech recognition."
+    },
+    {
+      "sampleId": "sample-e8ea14a44e289e88a0ed",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Bi-Population Competition Adaptive Interior Search Algorithm Based on Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Flexible Job Shop Scheduling",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The composed reinforcement-learning search algorithm explicitly solves flexible job-shop scheduling."
+        }
+      ],
+      "notes": "Retain the complete composed method; unlike LLM scheduling targets, this title states a scheduling instrument.\nAI self-review: Complete composed search algorithm is a scheduling instrument, not the scheduled model; nested reinforcement learning not duplicated. Job-shop object remains in task."
+    },
+    {
+      "sampleId": "sample-5092ab68204e3e4cb412",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Detecting Replay Attacks",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Network-Based",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The explicitly neural-network-based method performs replay-attack detection."
+        }
+      ],
+      "notes": "Multi-Channel Audio is input modality, not a named dataset; generic Method stripped from the technique-family mention.\nAI self-review: Neural Network-Based describes the explicit detection technique family; replay attack is detection object, multi-channel audio is modality rather than named DATASET."
+    },
+    {
+      "sampleId": "sample-f4f63dcba713225d1053",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "graphical password authentication",
+          "label": "TASK"
+        },
+        {
+          "text": "shoulder-surfing attacks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Graphical password authentication is explicitly deep-learning based."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "NO_RELATION",
+          "reason": "The authentication method defends against shoulder-surfing attacks; it is not an instrument that performs those attacks."
+        }
+      ],
+      "notes": "Defensive application is not offensive execution; against is not an automatic positive link.\nAI self-review: Deep learning performs authentication but does not perform the attacks it defends against. Both task endpoints fully judged; attacks not confused with detection."
+    },
+    {
+      "sampleId": "sample-b538c8259df364dc6f90",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DiffRA",
+          "label": "METHOD"
+        },
+        {
+          "text": "restorative adversarial attack",
+          "label": "TASK"
+        },
+        {
+          "text": "diffusion model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "DiffRA is introduced as the named restorative adversarial attack approach."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The attack explicitly uses a diffusion model as instrument."
+        }
+      ],
+      "notes": "Universal is a scope/evaluation modifier; generative diffusion model is an attack instrument rather than attacked model in this title.\nAI self-review: DiffRA and diffusion model are attack instruments here; target-model negatives elsewhere cannot be generalized to all attack titles. Literal restorative task scope retained."
+    }
+  ]
+}

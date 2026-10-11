@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "createdAtUTC": "2026-10-07T03:33:42.812143+00:00",
+  "documentsRequested": 64,
+  "processed": 64,
+  "trainingStarted": false,
+  "evaluationExecuted": false,
+  "databaseWriteExecuted": false,
+  "elapsedSeconds": 16.90600000000086,
+  "finishedAtUTC": "2026-10-07T03:33:59.713380+00:00"
+}

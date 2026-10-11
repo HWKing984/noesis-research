@@ -1,0 +1,196 @@
+[
+  {
+    "arxivId": "1704.04683",
+    "added": [],
+    "removed": [],
+    "reason": "RACE names a dataset, not a method. Unnamed methods/models and student ability descriptions are not identifiable method instances. No method-dataset relation is fabricated."
+  },
+  {
+    "arxivId": "1705.03551",
+    "added": [
+      [
+        321,
+        344,
+        "answering the questions",
+        "TASK"
+      ]
+    ],
+    "removed": [],
+    "reason": "The singular performs-well clause attaches to the neural network. It supports SQuAD evaluation, not automatic attribution of that evaluation to both baselines. TriviaQA evaluation attribution stays unresolved in this first batch."
+  },
+  {
+    "arxivId": "1809.09600",
+    "added": [
+      [
+        78,
+        95,
+        "complex reasoning",
+        "TASK"
+      ],
+      [
+        100,
+        132,
+        "provide explanations for answers",
+        "TASK"
+      ],
+      [
+        269,
+        325,
+        "finding and reasoning over multiple supporting documents",
+        "TASK"
+      ],
+      [
+        686,
+        708,
+        "extract relevant facts",
+        "TASK"
+      ],
+      [
+        713,
+        741,
+        "perform necessary comparison",
+        "TASK"
+      ],
+      [
+        873,
+        901,
+        "make explainable predictions",
+        "TASK"
+      ]
+    ],
+    "removed": [],
+    "reason": "QA is the explicit task abbreviation, not a named model. Wikipedia-based describes provenance but contains no standalone Wikipedia resource mention under the current exact-span boundary. Generic QA systems/models do not create identifiable METHOD endpoints."
+  },
+  {
+    "arxivId": "1903.00161",
+    "added": [
+      [
+        472,
+        504,
+        "resolve references in a question",
+        "TASK"
+      ]
+    ],
+    "removed": [],
+    "reason": "The abstract does not name the proposed or evaluated methods. Task-family terms in reading-comprehension/semantic-parsing literature remain TASK; generic methods and a new model do not supply stable METHOD endpoints. Scores alone do not justify invented method identities."
+  },
+  {
+    "arxivId": "1903.10676",
+    "added": [
+      [
+        41,
+        50,
+        "NLP tasks",
+        "TASK"
+      ],
+      [
+        128,
+        153,
+        "pretrained language model",
+        "METHOD"
+      ],
+      [
+        402,
+        422,
+        "scientific NLP tasks",
+        "TASK"
+      ]
+    ],
+    "removed": [],
+    "reason": "Scientific NLP tasks uses the longest complete task span instead of overlapping NLP tasks. No dataset is named. The three task relations use the SciBERT occurrence preceding We evaluate; the actor link is an explicit AI discourse interpretation, not independent semantic proof."
+  },
+  {
+    "arxivId": "1909.03546",
+    "added": [
+      [
+        73,
+        95,
+        "information extraction",
+        "TASK"
+      ],
+      [
+        523,
+        553,
+        "construct span representations",
+        "TASK"
+      ],
+      [
+        714,
+        759,
+        "model long-range cross-sentence relationships",
+        "TASK"
+      ]
+    ],
+    "removed": [],
+    "reason": "Output span representations are not separate methods; the explicitly described propagation procedure is a METHOD. No names for the four evaluated datasets are supplied. The all-tasks antecedent supports DyGIE++, not automatic downstream inheritance for every component."
+  },
+  {
+    "arxivId": "1909.07755",
+    "added": [],
+    "removed": [
+      [
+        252,
+        297,
+        "localized, marker-free context representation",
+        "METHOD"
+      ]
+    ],
+    "reason": "The localized context representation is an intermediate representation, not a method endpoint. Strong negative samples in the article are not annotation negatives for this dataset. The two names in the first sentence denote the same method, with shared evidence."
+  },
+  {
+    "arxivId": "2010.12812",
+    "added": [
+      [
+        981,
+        1004,
+        "efficient approximation",
+        "METHOD"
+      ]
+    ],
+    "removed": [],
+    "reason": "No PURE name is imported from the title or external knowledge. The explicitly introduced pipelined approach is a concrete method descriptor. The three named benchmarks attach to it, not automatically to all its encoders or the contrasted joint models."
+  },
+  {
+    "arxivId": "2308.03279",
+    "added": [],
+    "removed": [],
+    "reason": "The 43 datasets and benchmark are unnamed, so no invented dataset endpoint. General model categories stay entity mentions but receive relations only from their own predicate. Unspecified benchmark comparison does not authorize evaluation edges."
+  },
+  {
+    "arxivId": "1906.06127",
+    "added": [
+      [
+        144,
+        146,
+        "RE",
+        "TASK"
+      ],
+      [
+        351,
+        360,
+        "Wikipedia",
+        "DATASET"
+      ],
+      [
+        365,
+        373,
+        "Wikidata",
+        "DATASET"
+      ],
+      [
+        976,
+        978,
+        "RE",
+        "TASK"
+      ],
+      [
+        1104,
+        1106,
+        "RE",
+        "TASK"
+      ]
+    ],
+    "removed": [],
+    "reason": "Wikipedia and Wikidata are explicitly named construction-source data resources, not evaluation datasets for a named method. RE denotes the task. Generic recent methods are not supplied with invented identities, so the evaluation sentence alone yields no accepted METHOD-DATASET pair."
+  }
+]

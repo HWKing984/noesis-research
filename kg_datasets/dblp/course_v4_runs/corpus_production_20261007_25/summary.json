@@ -1,0 +1,32 @@
+{
+  "documentsRequested": 20000,
+  "NERStatuses": {
+    "inferred": 19855,
+    "cached": 144,
+    "rejected": 1
+  },
+  "entitySupport": {
+    "METHOD": 26694,
+    "TASK": 17904,
+    "DATASET": 306
+  },
+  "invalidBIOTransitions": 13145,
+  "relationCandidatePairs": 22574,
+  "relationPredictions": 22574,
+  "relationSources": {
+    "cached": 148,
+    "inferred": 22426
+  },
+  "relationSupport": {
+    "USED_FOR": 21318,
+    "NO_RELATION": 1077,
+    "EVALUATED_ON": 179
+  },
+  "rejectedPairs": 0,
+  "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+  "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+  "elapsedSeconds": 97.85999999999876,
+  "documentsPerSecond": 204.37359493153744,
+  "qualityPromotionPassed": false,
+  "notice": "Counts are model candidates, not precision/recall or verified facts; no new evaluation, tuning or training. Token-limit rejects remain explicit."
+}

@@ -1,0 +1,18 @@
+{
+  "signatures": 88762,
+  "previousUnresolved": 9064,
+  "recoveredSignatures": 0,
+  "remainingUnresolved": 9064,
+  "decisionCounts": {
+    "missing_or_invalid_orcid": 7396,
+    "orcid_no_profile": 1666,
+    "orcid_exact_name_conflict": 2
+  },
+  "authorityProfilesScanned": 12928181,
+  "matchedORCIDProfiles": 2,
+  "neededORCIDs": 1631,
+  "fuzzyMatching": false,
+  "independentRealWorldVerification": false,
+  "databaseWritten": false,
+  "notice": "Unique local DBLP profile ORCID plus exact base-name match, not ORCID Registry authentication. Unknown signatures remain separate."
+}

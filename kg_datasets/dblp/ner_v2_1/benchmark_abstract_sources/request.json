@@ -1,0 +1,27 @@
+{
+  "url": "https://export.arxiv.org/api/query?id_list=1708.07747%2C1804.07461%2C1905.00537%2C1606.05250%2C2406.01574%2C2009.03300%2C2107.03374%2C2110.14168%2C1609.02907&max_results=9",
+  "arxiv_ids": [
+    "1708.07747",
+    "1804.07461",
+    "1905.00537",
+    "1606.05250",
+    "2406.01574",
+    "2009.03300",
+    "2107.03374",
+    "2110.14168",
+    "1609.02907"
+  ],
+  "requested_at_utc": "2026-10-05T06:18:50.445665+00:00",
+  "policy": {
+    "license": "CC0-1.0",
+    "source_policy": "https://info.arxiv.org/help/api/tou.html",
+    "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+    "policy_checked_on": "2026-10-05",
+    "redistribute_metadata": true
+  },
+  "requests": 1,
+  "concurrency": 1,
+  "purpose": "small source availability/title matching pilot",
+  "seed_file": "resources\\benchmark_source_seeds.json",
+  "intended_split": "train_candidates_only"
+}

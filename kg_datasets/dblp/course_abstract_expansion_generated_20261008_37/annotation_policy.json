@@ -1,0 +1,14 @@
+{
+  "policy": "Per-document reading of whole, source-matched TRAIN abstracts before candidate predictions; preserve literal Unicode spans, include explicit method families, exclude physical research objects, disciplines and unnamed corpora. Longest same-class mentions only; unresolved document or coordinated head quarantined rather than all-O. All relations remain UNRESOLVED pending separate evidence review. Same-session AI pseudo labels, not independent gold.",
+  "testAccessed": false,
+  "devAccessed": false,
+  "nerStatus": "AI completeness claim, not independent semantic validation",
+  "relationStatus": "Unresolved candidates retained and excluded from negative training",
+  "iterationCompact": {
+    "goal": "Whole-abstract DATASET support with source-bound labels",
+    "baseline": "8 excerpts do not annotate whole abstracts",
+    "mistakeBudget": "No source rewriting, title label copying, implied evaluated-on labels or negative filling",
+    "nextExperiment": "Same-session AI review and strict token/offset round-trip preflight",
+    "promotionAllowed": false
+  }
+}

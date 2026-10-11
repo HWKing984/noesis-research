@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>训练侧诊断，不是新测试成绩 · 第43轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>训练侧诊断，不是新测试成绩 · 第43轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>仅推理50篇已参与训练的摘要；旧35只训练过其中29篇，新42训练过全部50篇。分数不表示新模型泛化能力，未执行新的dev/test。</p><table><thead><tr><th>冻结模型</th><th>训练集P / R / F1</th><th>DATASET TP / 参考</th><th>TASK TP / 参考</th><th>FP / FN</th></tr></thead><tbody><tr><td>old35</td><td>86.00% / 83.47% / 84.72%</td><td>41 / 44</td><td>149 / 189</td><td>83 / 101</td></tr><tr><td>new42</td><td>99.84% / 99.67% / 99.75%</td><td>44 / 44</td><td>187 / 189</td><td>1 / 2</td></tr></tbody></table><h2>稀有类支持与重复集中</h2><table><thead><tr><th>量</th><th>实际</th></tr></thead><tbody><tr><td>实体提及</td><td>METHOD 378 / TASK 189 / DATASET 44</td></tr><tr><td>DATASET文档 / 字面名称</td><td>16 / 27（未做同义名归一）</td></tr><tr><td>同一MMLU-Pro文档</td><td>14 / 44提及，31.82%</td></tr><tr><td>DATASET标注token</td><td>142 / 11220，1.27%</td></tr><tr><td>严格BIO</td><td>50篇通过；新42训练侧非法转移0</td></tr><tr><td>新42剩余训练错例</td><td>同一2501.02474中TASK漏1、边界错1（计FP1/FN2）</td></tr></tbody></table><p>新42训练DATASET召回100%，第42轮已有dev记录只有40%（本轮不重评）。这更符合泛化/分布或标签规则问题，不支持再增加epoch就能解决；不是已证明的唯一因果解释。</p><p>后续优先统一训练侧任务规则并增加独立论文/上下文多样性；不从dev/test挑词，不补未知负例，不降低晋级护栏。所有分数基于AI参考，不能当事实正确率。</p><footer>证据页生成时间：2026-10-08T07:45:20.947742+00:00<br>来源：<div class="path">sources/kg_datasets/dblp/course_v4_runs/abstract_train_diagnostic_20261008_43/audit.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

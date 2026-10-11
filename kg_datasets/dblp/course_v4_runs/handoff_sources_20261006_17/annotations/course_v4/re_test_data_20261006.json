@@ -1,0 +1,13 @@
+{
+  "kind": "RE_test_labels_and_cached_frozen_NER_sealed_before_inference",
+  "sealedAtUTC": "2026-10-06T15:18:49.019979+00:00",
+  "snapshotManifestSha256": "1bd4930f706a666ea681fae2a99924cfd36b9acb20b16c8c870d4e5b529d2815",
+  "selectionSha256": "e4010d162f525221de7da30cf4c412892564a1da894d1271a72f1ddfa1893978",
+  "relationLabelsManifestSha256": "80a2a77004399b66fa1702474217078d82b78c855184ef018af52dd7cfd1574a",
+  "frozenNERTestManifestSha256": "0e64965da7f521cebded4bf01afc6cfe3d40aeb84685bec5e1fce9d56d1a1602",
+  "evaluationPolicy": "fixed 138 complete AI-reference test documents including zero-pair titles; exclude 56 inherited NER-unresolved + 6 RE-unresolved; module exact pairs; pipeline exact directed typed endpoints and label; no threshold tuning or weight changes; reuse prior frozen NER predictions; disclose rare support and coverage",
+  "referenceEntityAnnotationChanged": false,
+  "humanGold": false,
+  "independentAnnotator": false,
+  "newNERTestInferenceAllowed": false
+}

@@ -1,0 +1,82 @@
+{
+  "status": "draft_pending_human_review",
+  "schema_status": "candidate_pending_human_pilot",
+  "pilot": {
+    "valid": true,
+    "documents": 200,
+    "entity_counts": {
+      "METHOD": 123,
+      "TASK": 57,
+      "DATASET": 0
+    },
+    "reviews": {
+      "entity_review": {
+        "draft": 200
+      },
+      "relation_review": {
+        "draft": 200
+      },
+      "domain_review": {
+        "draft": 200
+      }
+    },
+    "errors": [],
+    "contract_sha256": "62a579f3a39f2b8fdc7fd9906378266a6d2102295aa8c3ecb98dd64a8eac8aba",
+    "schema_status": "candidate_pending_human_pilot",
+    "training_ready": false,
+    "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+  },
+  "rare": {
+    "valid": true,
+    "documents": 100,
+    "entity_counts": {
+      "METHOD": 82,
+      "TASK": 13,
+      "DATASET": 6
+    },
+    "reviews": {
+      "entity_review": {
+        "draft": 100
+      },
+      "relation_review": {
+        "draft": 100
+      },
+      "domain_review": {
+        "draft": 100
+      }
+    },
+    "errors": [],
+    "contract_sha256": "62a579f3a39f2b8fdc7fd9906378266a6d2102295aa8c3ecb98dd64a8eac8aba",
+    "schema_status": "candidate_pending_human_pilot",
+    "training_ready": false,
+    "notice": "Structural/state checks do not prove actual human review or semantic correctness"
+  },
+  "rare_dataset_surface_mentions": {
+    "arc": 2,
+    "mnist": 2,
+    "pubmed": 1,
+    "squad": 1
+  },
+  "rare_dataset_distinct_surfaces": 4,
+  "rare_domain_documents": {
+    "autonomous-driving": 11,
+    "agriculture": 10,
+    "bioinformatics": 9,
+    "cybersecurity": 11,
+    "education": 10,
+    "energy": 9,
+    "finance": 9,
+    "healthcare": 9,
+    "manufacturing": 9,
+    "remote-sensing": 10
+  },
+  "blind_documents": 50,
+  "human_annotations_completed": 0,
+  "limitations": [
+    "Draft lexicon coverage is not actual entity prevalence",
+    "Expanded title dictionary is not sufficient evidence of DATASET diversity",
+    "Domains are independent document labels, not NER spans",
+    "Near-duplicate candidate review and author identities remain unresolved",
+    "Title-only candidate contract; sourced abstracts require a separately reviewed text-unit contract"
+  ]
+}

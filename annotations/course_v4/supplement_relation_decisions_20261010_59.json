@@ -1,0 +1,71 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "modelPredictionsUsed": false,
+  "documents": [
+    {
+      "arxivId": "2003.10555",
+      "textSha256": "911ea266bee1c81302e0e0e71c44f852701caaa3349bc915ff589d0d587d9b77",
+      "upstreamReceiptSha256": "73f6268d9a0705dd8bf312a62d1663bae27be4d7fa2aa6cb808e0315654cbd32",
+      "groups": [
+        {
+          "heads": ["e3", "e11"], "tails": ["e5", "e9"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "Masked language modeling (MLM) pre-training methods such as BERT corrupt the input by replacing some tokens with [MASK] and then train a model to reconstruct the original tokens. While they produce good results when transferred to downstream NLP tasks, they generally require large amounts of compute to be effective. As an alternative, we propose a more sample-efficient pre-training task called replaced token detection. Instead of masking the input, our approach corrupts it by replacing some tokens with plausible alternatives sampled from a small generator network. Then, instead of training a model that predicts the original identities of the corrupted tokens, we train a discriminative model that predicts whether each token in the corrupted input was replaced by a generator sample or not.",
+          "reason": "The described BERT/MLM reconstruction operator is explicitly contrasted with the alternative discriminative replaced-token objective. This is a local task-role negative, not a universal assertion that a BERT architecture cannot ever detect replacements. Two BERT occurrences and the detection name/explanation are correlated references."
+        },
+        {
+          "heads": ["e3", "e11"], "tails": ["e7"], "label": "USED_FOR",
+          "supportExcerpt": "Then, instead of training a model that predicts the original identities of the corrupted tokens, we train a discriminative model that predicts whether each token in the corrupted input was replaced by a generator sample or not.",
+          "reason": "The opening sentence assigns BERT the reconstruction of original tokens. This later contrasted original-token-identity prediction describes that same reconstruction objective, not the new discriminator's actual objective. The evidence window includes the original BERT attribution; no external model knowledge is used."
+        },
+        {
+          "heads": ["e6"], "tails": ["e5"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "As an alternative, we propose a more sample-efficient pre-training task called replaced token detection. Instead of masking the input, our approach corrupts it by replacing some tokens with plausible alternatives sampled from a small generator network. Then, instead of training a model that predicts the original identities of the corrupted tokens, we train a discriminative model that predicts whether each token in the corrupted input was replaced by a generator sample or not.",
+          "reason": "The generator supplies plausible replacement alternatives; the discriminator explicitly performs the replacement decision. This excludes the generator as the direct operator of the named detection task in this local role contrast, not as a contributor to the overall system."
+        },
+        {
+          "heads": ["e8"], "tails": ["e1", "e2", "e4", "e10"], "label": "NO_RELATION",
+          "negativeBasis": "explicit_argument_role_contrast",
+          "supportExcerpt": "Masked language modeling (MLM) pre-training methods such as BERT corrupt the input by replacing some tokens with [MASK] and then train a model to reconstruct the original tokens. While they produce good results when transferred to downstream NLP tasks, they generally require large amounts of compute to be effective. As an alternative, we propose a more sample-efficient pre-training task called replaced token detection. Instead of masking the input, our approach corrupts it by replacing some tokens with plausible alternatives sampled from a small generator network. Then, instead of training a model that predicts the original identities of the corrupted tokens, we train a discriminative model that predicts whether each token in the corrupted input was replaced by a generator sample or not.",
+          "reason": "Instead-of explicitly distinguishes this discriminator's replacement classification from the original-token/MLM reconstruction task. The four reconstruction mentions denote the contrasted objective; repeated MLM does not define another experiment. No negative is inferred merely from absence or coexistence."
+        },
+        {
+          "heads": ["e12"], "tails": ["e14"], "label": "USED_FOR",
+          "supportExcerpt": "The gains are particularly strong for small models; for example, we train a model on one GPU for 4 days that outperforms GPT (trained using 30x more compute) on the GLUE natural language understanding benchmark.",
+          "reason": "GPT is explicitly the measured comparison baseline on this natural-language-understanding benchmark. Lower comparative performance does not remove its task relationship. This complements the already preserved GPT-to-GLUE evaluation edge."
+        }
+      ],
+      "deferred": "All unlisted pairs remain unknown, including e8-to-GLUE/NLU: the small downstream model example is not uniquely bound to the earlier discriminative-model configuration. BERT, generator and at-scale RoBERTa/XLNet do not inherit an unspecified GLUE experiment. All original resolved labels and NER spans are inherited unchanged."
+    },
+    {
+      "arxivId": "2006.03654",
+      "textSha256": "6e51be908ca93534b364ac20ace62314008e7b4062020faa0f94c542e346ca3b",
+      "upstreamReceiptSha256": "fc773befd57587735f7b0b37aeae40359992127963165cb5364163b025e7300c",
+      "groups": [
+        {
+          "heads": ["e2", "e3"], "tails": ["e8", "e9", "e11"], "label": "USED_FOR",
+          "supportExcerpt": "Second, an enhanced mask decoder is used to incorporate absolute positions in the decoding layer to predict the masked tokens in model pre-training.",
+          "reason": "The stated DeBERTa architecture incorporates the explicitly described mask decoder for masked-token prediction during model pre-training. The later model-pre-training mention denotes this same stage. This assigns a component-supported function to the complete proposed architecture, not benchmark results to generic families or other configurations."
+        },
+        {
+          "heads": ["e7"], "tails": ["e9", "e11"], "label": "USED_FOR",
+          "supportExcerpt": "Second, an enhanced mask decoder is used to incorporate absolute positions in the decoding layer to predict the masked tokens in model pre-training.",
+          "reason": "This decoder is directly used in the named model-pre-training stage; the repeated later mention refers to that pre-training, not the separately stated adversarial fine-tuning. The existing direct masked-token task edge remains unchanged."
+        },
+        {
+          "heads": ["e21", "e22"], "tails": ["e25"], "label": "EVALUATED_ON",
+          "supportExcerpt": "Notably, we scale up DeBERTa by training a larger version that consists of 48 Transform layers with 1.5 billion parameters. The significant performance boost makes the single DeBERTa model surpass the human performance on the SuperGLUE benchmark (Wang et al., 2019a) for the first time in terms of macro-average score (89.9 versus 89.8), and the ensemble DeBERTa model sits atop the SuperGLUE leaderboard as of January 6, 2021, out performing the human baseline by a decent margin (90.3 versus 89.8).",
+          "reason": "The two SuperGLUE mentions in this single comparison denote the same benchmark. Only the binary dataset identity is extended to its second mention for the scaled/single model; its own reported 89.9 result is not transferred to the ensemble. These occurrence edges are not additional independent experiments."
+        },
+        {
+          "heads": ["e24"], "tails": ["e23"], "label": "EVALUATED_ON",
+          "supportExcerpt": "Notably, we scale up DeBERTa by training a larger version that consists of 48 Transform layers with 1.5 billion parameters. The significant performance boost makes the single DeBERTa model surpass the human performance on the SuperGLUE benchmark (Wang et al., 2019a) for the first time in terms of macro-average score (89.9 versus 89.8), and the ensemble DeBERTa model sits atop the SuperGLUE leaderboard as of January 6, 2021, out performing the human baseline by a decent margin (90.3 versus 89.8).",
+          "reason": "The ensemble explicitly has its own SuperGLUE measurement. The first mention refers to the same benchmark as the second; preserve the ensemble's own 90.3 attribution without merging it with the single model or importing the single-model score."
+        }
+      ],
+      "deferred": "All other unjudged pairs stay unknown, especially generic families/components and half-data versus scaled/single/ensemble configurations. No result is transferred to an unmeasured configuration, no benchmark common knowledge supplies task labels, and no absence-based negatives are added. Keep every NER span and source typo unchanged."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "version": "abstract_train_task_boundary_v1",
+  "trainQueue": 58,
+  "NERtrain": 50,
+  "NERexcluded": 8,
+  "resolvedRelations": 267,
+  "unknownPairs": 1578,
+  "freshlyReviewedDocuments": 1,
+  "inheritedReceiptDocuments": 57,
+  "changedEntitySpans": 1,
+  "sourceTextChanged": false,
+  "devCopiedAsOpaqueBytes": true,
+  "testSemanticallyRead": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false
+}

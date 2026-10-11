@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "version": "abstract_train_inventory_patch_v1",
+  "sourceReviewDocuments": 11,
+  "freshReviewedDocumentsComparedTo43": 6,
+  "inheritedReceiptDocumentsComparedTo43": 52,
+  "trainQueue": 58,
+  "NERtrain": 54,
+  "NERexcluded": 4,
+  "entitySupport": {
+    "TASK": 196,
+    "METHOD": 403,
+    "DATASET": 44
+  },
+  "resolvedRelations": 267,
+  "relationSupport": {
+    "EVALUATED_ON": 58,
+    "USED_FOR": 183,
+    "NO_RELATION": 26
+  },
+  "unknownPairs": 1647,
+  "eligiblePairs": 1914,
+  "completeRelationDocuments": 8,
+  "DATASETSupportIncreased": false,
+  "trainingExecuted": false,
+  "devCopiedAsOpaqueBytes": true,
+  "testSemanticallyRead": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "independentHumanGold": false
+}

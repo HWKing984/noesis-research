@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>训练摘要扩充与未晋级决定 · 第37轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>训练摘要扩充与未晋级决定 · 第37轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<h2>24次限速官方采集 → 21篇匹配 → 19篇NER新增输入</h2><table><thead><tr><th>范围</th><th>本轮结果</th><th>保留边界</th></tr></thead><tbody><tr><td>采集</td><td>24/24请求完成，3篇题名不一致</td><td>不补足失败/隔离样本；网页按robots至少15.1秒单连接</td></tr><tr><td>AI标注</td><td>21篇初标+同会话自复核；19篇严格BIO通过</td><td>2篇多义/嵌套隔离；非独立gold；724个未决关系不填负例</td></tr><tr><td>训练集</td><td>29→48篇；METHOD362 / TASK185 / DATASET44</td><td>新增DATASET9来自4篇；教程/综述只作训练语言样本</td></tr><tr><td>来源规模</td><td>75→96篇摘要，DBLP书目仍20,000</td><td>原dev16/19、test19、旧图和权重不变</td></tr></tbody></table><h2>固定旧RE · 同5/19完整dev文档</h2><table><thead><tr><th>NER</th><th>Precision</th><th>Recall</th><th>F1</th><th>TP / 预测 / 参考</th></tr></thead><tbody><tr><td>旧题名NER</td><td>8.59%</td><td>47.83%</td><td>14.57%</td><td>22 / 256 / 46</td></tr><tr><td>35轮NER</td><td>24.32%</td><td>39.13%</td><td>30.00%</td><td>18 / 74 / 46</td></tr><tr><td>37轮扩充NER</td><td>19.05%</td><td>43.48%</td><td>26.49%</td><td>20 / 105 / 46</td></tr></tbody></table><h2>拒绝新候选 · 不能把数据量增加当性能提升</h2><p>相对35轮NER：召回提高4.35百分点，但Precision与F1退化；相对旧题名NER召回仍下降4.35百分点，超过2点护栏。完整文档覆盖26.32%，EVALUATED_ON参考0；不晋级，不更换线上模型，也不读取保留测试。</p><h2>实际错误归因与下一步</h2><table><thead><tr><th>项目</th><th>35轮摘要NER</th><th>37轮扩充NER</th></tr></thead><tbody><tr><td>漏关系主因</td><td>缺失19 / 边界7 / 类型2</td><td>{&quot;missing&quot;: 5, &quot;boundary&quot;: 21}</td></tr><tr><td>FP / FN</td><td>56 / 28</td><td>85 / 26</td></tr><tr><td>新FP主因</td><td>与FN分别计算</td><td>{&quot;NER_endpoint_mismatch&quot;: 82, &quot;RE_decision&quot;: 3}</td></tr><tr><td>下一步</td><td>不盲调RE/重跑test</td><td>训练侧逐次出现的上下文与任务跨度边界；补完整dev证据</td></tr></tbody></table><p>当前365项工程回归通过，逐条重算指标、每轮48篇覆盖和FP/FN原因；不是365项语义认证。所有数据为已暴露AI开发标签，不与旧60.07%题名test直接比较。原评分JSON保留历史默认目标字符串，审计文件仅修正为dev口径，数字与原记录不改。</p><footer>证据页生成时间：2026-10-08T04:19:13.320796+00:00<br>来源：<div class="path">candidate_decision.json</div><div class="path">pipeline_error_audit.json</div><div class="path">audited_development_metrics.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

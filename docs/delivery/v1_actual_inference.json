@@ -1,0 +1,1442 @@
+{
+  "status": "passed",
+  "actualWeightLoading": true,
+  "device": "cuda",
+  "trainingExecuted": false,
+  "evaluationExecuted": false,
+  "papers": [
+    {
+      "publicationId": "conf/seeda/VonitsanosESKM25",
+      "sampleId": "corpus-7b82083310f7b8b75d9f",
+      "text": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+      "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+      "liveDetail": {
+        "publication": {
+          "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+          "year": 2025,
+          "source": "dblp_structured_xml",
+          "title": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+          "type": "inproceedings",
+          "modelApplicationStatus": "inferred",
+          "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+          "urls": [
+            "https://doi.org/10.1109/SEEDA-CECNSM68644.2025.11329671"
+          ],
+          "pages": "1-6",
+          "modelSampleId": "corpus-7b82083310f7b8b75d9f",
+          "modelApplied": true,
+          "id": "ai-literature-63686318d85cccb07afb:Publication:7b82083310f7b8b75d9fd29077f249a8c4be630f26370f3e9c31f4452cfe48b5",
+          "publicationId": "conf/seeda/VonitsanosESKM25",
+          "graphId": "ai-literature-63686318d85cccb07afb",
+          "dblpUrl": "https://dblp.org/rec/conf/seeda/VonitsanosESKM25",
+          "doi": "10.1109/seeda-cecnsm68644.2025.11329671",
+          "publicationStatus": {
+            "code": "unverified",
+            "notice": "未检出撤稿/更正题名前缀信号；出版状态未经独立核验。",
+            "source": "title_prefix_rule_v1",
+            "verified": false,
+            "evidence": null
+          }
+        },
+        "authors": [
+          {
+            "name": "Gerasimos Vonitsanos",
+            "signatureName": "Gerasimos Vonitsanos",
+            "position": 1,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/235/0825",
+            "aliases": [
+              "Gerasimos Vonitsanos"
+            ],
+            "dblpPid": "235/0825",
+            "dblpUrl": "https://dblp.org/pid/235/0825.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": [
+              "0000-0001-9555-4775"
+            ]
+          },
+          {
+            "name": "Emmanouela-Electra Economopoulou",
+            "signatureName": "Emmanouela-Electra Economopoulou",
+            "position": 2,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/379/0056",
+            "aliases": [
+              "Emmanouela-Electra Economopoulou"
+            ],
+            "dblpPid": "379/0056",
+            "dblpUrl": "https://dblp.org/pid/379/0056.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Spyros Sioutas",
+            "signatureName": "Spyros Sioutas",
+            "position": 3,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/73/2079",
+            "aliases": [
+              "Spyros Sioutas"
+            ],
+            "dblpPid": "73/2079",
+            "dblpUrl": "https://dblp.org/pid/73/2079.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": [
+              "0000-0003-1825-5565"
+            ]
+          },
+          {
+            "name": "Andreas Kanavos",
+            "signatureName": "Andreas Kanavos",
+            "position": 4,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/118/9960",
+            "aliases": [
+              "Andreas Kanavos"
+            ],
+            "dblpPid": "118/9960",
+            "dblpUrl": "https://dblp.org/pid/118/9960.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": [
+              "0000-0002-9964-4134"
+            ]
+          },
+          {
+            "name": "Phivos Mylonas",
+            "signatureName": "Phivos Mylonas",
+            "position": 5,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/35/1802",
+            "aliases": [
+              "Phivos Mylonas"
+            ],
+            "dblpPid": "35/1802",
+            "dblpUrl": "https://dblp.org/pid/35/1802.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          }
+        ],
+        "venues": [
+          {
+            "name": "SEEDA-CECNSM",
+            "type": "conference"
+          }
+        ],
+        "mentions": [
+          {
+            "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+            "sampleId": "corpus-7b82083310f7b8b75d9f",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 12,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 32,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:1ee2b43395ae1a20a45c08b917a80d20e56447b6e54b5b530353228abaa56b34",
+            "text": "Attention Mechanisms",
+            "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+            "sampleId": "corpus-7b82083310f7b8b75d9f",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 38,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 67,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:839ad6b8ce128a00d9f4c9d7616ef6237c516a666588398d39a7409f0ee2a85b",
+            "text": "Convolutional Neural Networks",
+            "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+            "sampleId": "corpus-7b82083310f7b8b75d9f",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 72,
+            "source": "model_prediction",
+            "label": "TASK",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 92,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:1d2d9535acc749f4cc10cce31256348a5b8eaa8d896e0f84fffb2acc7b296c80",
+            "text": "Image Classification",
+            "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          }
+        ],
+        "assertions": [
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 3.71850637748139e-06, \"USED_FOR\": 0.9999963045120239}",
+              "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+              "sampleId": "corpus-7b82083310f7b8b75d9f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.9999963,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "USED_FOR",
+              "pairId": "pair-ef1e28127231d6971cde8dc3",
+              "id": "ai-literature-63686318d85cccb07afb:Assertion:8a76e91e3a520f7feed5625165b9a99e769f2d3b3ce738f3cfe725627e0d0400",
+              "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+              "sampleId": "corpus-7b82083310f7b8b75d9f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 12,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 32,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:1ee2b43395ae1a20a45c08b917a80d20e56447b6e54b5b530353228abaa56b34",
+              "text": "Attention Mechanisms",
+              "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+              "sampleId": "corpus-7b82083310f7b8b75d9f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 72,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 92,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:1d2d9535acc749f4cc10cce31256348a5b8eaa8d896e0f84fffb2acc7b296c80",
+              "text": "Image Classification",
+              "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            }
+          },
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.0005678872694261372, \"USED_FOR\": 0.9994321465492249}",
+              "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+              "sampleId": "corpus-7b82083310f7b8b75d9f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.99943215,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "USED_FOR",
+              "pairId": "pair-a1f09176714a4d27fde0dbd8",
+              "id": "ai-literature-63686318d85cccb07afb:Assertion:b0dbef3d3d282b961916b6e847146a7f06231ff147552cb2ff8afe4a69dd3474",
+              "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+              "sampleId": "corpus-7b82083310f7b8b75d9f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 38,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 67,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:839ad6b8ce128a00d9f4c9d7616ef6237c516a666588398d39a7409f0ee2a85b",
+              "text": "Convolutional Neural Networks",
+              "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+              "sampleId": "corpus-7b82083310f7b8b75d9f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 72,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 92,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:1d2d9535acc749f4cc10cce31256348a5b8eaa8d896e0f84fffb2acc7b296c80",
+              "text": "Image Classification",
+              "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            }
+          }
+        ],
+        "citationDraft": "Gerasimos Vonitsanos; Emmanouela-Electra Economopoulou; Spyros Sioutas; Andreas Kanavos; Phivos Mylonas. Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification. SEEDA-CECNSM, 2025. DOI: 10.1109/seeda-cecnsm68644.2025.11329671",
+        "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+      },
+      "entities": [
+        {
+          "start": 12,
+          "end": 32,
+          "text": "Attention Mechanisms",
+          "label": "METHOD"
+        },
+        {
+          "start": 38,
+          "end": 67,
+          "text": "Convolutional Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "start": 72,
+          "end": 92,
+          "text": "Image Classification",
+          "label": "TASK"
+        }
+      ],
+      "invalidTransitions": 0,
+      "relations": [
+        {
+          "sampleId": "corpus-7b82083310f7b8b75d9f",
+          "text": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+          "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+          "head": {
+            "start": 12,
+            "end": 32,
+            "text": "Attention Mechanisms",
+            "label": "METHOD"
+          },
+          "tail": {
+            "start": 72,
+            "end": 92,
+            "text": "Image Classification",
+            "label": "TASK"
+          },
+          "label": "USED_FOR",
+          "probabilities": {
+            "USED_FOR": 0.9999963045120239,
+            "EVALUATED_ON": 0.0,
+            "NO_RELATION": 3.7185097880865214e-06
+          },
+          "pairId": "pair-ef1e28127231d6971cde8dc3"
+        },
+        {
+          "sampleId": "corpus-7b82083310f7b8b75d9f",
+          "text": "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification.",
+          "textSha256": "5fdd68ab26b16489f69d9d1306a16c4ccd1a33598ea622559b1b2005b341a016",
+          "head": {
+            "start": 38,
+            "end": 67,
+            "text": "Convolutional Neural Networks",
+            "label": "METHOD"
+          },
+          "tail": {
+            "start": 72,
+            "end": 92,
+            "text": "Image Classification",
+            "label": "TASK"
+          },
+          "label": "USED_FOR",
+          "probabilities": {
+            "USED_FOR": 0.9994321465492249,
+            "EVALUATED_ON": 0.0,
+            "NO_RELATION": 0.0005678878515027463
+          },
+          "pairId": "pair-a1f09176714a4d27fde0dbd8"
+        }
+      ]
+    },
+    {
+      "publicationId": "conf/aaai/0002LCWHL25",
+      "sampleId": "corpus-4725bc95e616016639dc",
+      "text": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+      "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+      "liveDetail": {
+        "publication": {
+          "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+          "year": 2025,
+          "source": "dblp_structured_xml",
+          "title": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+          "type": "inproceedings",
+          "modelApplicationStatus": "inferred",
+          "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+          "urls": [
+            "https://doi.org/10.1609/aaai.v39i6.32630"
+          ],
+          "pages": "5901-5909",
+          "modelSampleId": "corpus-4725bc95e616016639dc",
+          "modelApplied": true,
+          "id": "ai-literature-63686318d85cccb07afb:Publication:4725bc95e616016639dc89817da435d1c4ebdf38ddfd506fb70c5db15366fa02",
+          "publicationId": "conf/aaai/0002LCWHL25",
+          "graphId": "ai-literature-63686318d85cccb07afb",
+          "dblpUrl": "https://dblp.org/rec/conf/aaai/0002LCWHL25",
+          "doi": "10.1609/aaai.v39i6.32630",
+          "publicationStatus": {
+            "code": "unverified",
+            "notice": "未检出撤稿/更正题名前缀信号；出版状态未经独立核验。",
+            "source": "title_prefix_rule_v1",
+            "verified": false,
+            "evidence": null
+          }
+        },
+        "authors": [
+          {
+            "name": "Kai Lv 0002",
+            "signatureName": "Kai Lv 0002",
+            "position": 1,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/191/2440-2",
+            "aliases": [
+              "Kai Lv 0002"
+            ],
+            "dblpPid": "191/2440-2",
+            "dblpUrl": "https://dblp.org/pid/191/2440-2.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Yunlong Li",
+            "signatureName": "Yunlong Li",
+            "position": 2,
+            "identityStatus": "unresolved_profile",
+            "personId": "unresolved-signature:[\"conf/aaai/0002LCWHL25\", 2]",
+            "aliases": [
+              "Yunlong Li"
+            ],
+            "dblpPid": null,
+            "dblpUrl": null,
+            "identityEvidence": "publication_author_signature_only",
+            "identityEvidenceMethods": null,
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Zhuo Chen",
+            "signatureName": "Zhuo Chen",
+            "position": 3,
+            "identityStatus": "unresolved_profile",
+            "personId": "unresolved-signature:[\"conf/aaai/0002LCWHL25\", 3]",
+            "aliases": [
+              "Zhuo Chen"
+            ],
+            "dblpPid": null,
+            "dblpUrl": null,
+            "identityEvidence": "publication_author_signature_only",
+            "identityEvidenceMethods": null,
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Shuo Wang 0031",
+            "signatureName": "Shuo Wang 0031",
+            "position": 4,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/63/1591-31",
+            "aliases": [
+              "Shuo Wang 0031"
+            ],
+            "dblpPid": "63/1591-31",
+            "dblpUrl": "https://dblp.org/pid/63/1591-31.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Sheng Han 0001",
+            "signatureName": "Sheng Han 0001",
+            "position": 5,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/142/0013-1",
+            "aliases": [
+              "Sheng Han 0001"
+            ],
+            "dblpPid": "142/0013-1",
+            "dblpUrl": "https://dblp.org/pid/142/0013-1.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Youfang Lin",
+            "signatureName": "Youfang Lin",
+            "position": 6,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/12/4988",
+            "aliases": [
+              "Youfang Lin",
+              "You-Fang Lin"
+            ],
+            "dblpPid": "12/4988",
+            "dblpUrl": "https://dblp.org/pid/12/4988.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          }
+        ],
+        "venues": [
+          {
+            "name": "AAAI",
+            "type": "conference"
+          }
+        ],
+        "mentions": [
+          {
+            "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+            "sampleId": "corpus-4725bc95e616016639dc",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 0,
+            "source": "model_prediction",
+            "label": "TASK",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 15,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:e11a3e027d79cb1778fd2fced3ee294b9e2856bdd0ac5e6de8643daa6a54969b",
+            "text": "Infer the Whole",
+            "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+            "sampleId": "corpus-4725bc95e616016639dc",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 42,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 72,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:7e6003f3c9878fd236371b8f3a5059089e4ed3e33618892baf24c2ae64ff28cd",
+            "text": "Keypoint-Based Knowledge Graph",
+            "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+            "sampleId": "corpus-4725bc95e616016639dc",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 77,
+            "source": "model_prediction",
+            "label": "TASK",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 102,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:a624864b43de86e505c232ac795261b7a234c57026fa624fffc7d2830f6f47f3",
+            "text": "Vehicle Re-Identification",
+            "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          }
+        ],
+        "assertions": [
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.0009498187573626637, \"USED_FOR\": 0.9990501999855042}",
+              "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+              "sampleId": "corpus-4725bc95e616016639dc",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.9990502,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "USED_FOR",
+              "pairId": "pair-a8c5fbcc59113d8ac4df0ba2",
+              "id": "ai-literature-63686318d85cccb07afb:Assertion:780c1091c566b9812cdb3d9b5beb7603a1f9a10678766e3232d0eec0eb70f3e5",
+              "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+              "sampleId": "corpus-4725bc95e616016639dc",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 42,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 72,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:7e6003f3c9878fd236371b8f3a5059089e4ed3e33618892baf24c2ae64ff28cd",
+              "text": "Keypoint-Based Knowledge Graph",
+              "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+              "sampleId": "corpus-4725bc95e616016639dc",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 15,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:e11a3e027d79cb1778fd2fced3ee294b9e2856bdd0ac5e6de8643daa6a54969b",
+              "text": "Infer the Whole",
+              "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            }
+          },
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 6.358279733831296e-07, \"USED_FOR\": 0.9999994039535522}",
+              "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+              "sampleId": "corpus-4725bc95e616016639dc",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.9999994,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "USED_FOR",
+              "pairId": "pair-c57449e800f0a9d30170f5cc",
+              "id": "ai-literature-63686318d85cccb07afb:Assertion:40ee2b3118dfad5a3e9a8fd9e739b233c5ef32d4a3447b8724ba4adb31483b0c",
+              "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+              "sampleId": "corpus-4725bc95e616016639dc",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 42,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 72,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:7e6003f3c9878fd236371b8f3a5059089e4ed3e33618892baf24c2ae64ff28cd",
+              "text": "Keypoint-Based Knowledge Graph",
+              "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+              "sampleId": "corpus-4725bc95e616016639dc",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 77,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 102,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:a624864b43de86e505c232ac795261b7a234c57026fa624fffc7d2830f6f47f3",
+              "text": "Vehicle Re-Identification",
+              "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            }
+          }
+        ],
+        "citationDraft": "Kai Lv 0002; Yunlong Li; Zhuo Chen; Shuo Wang 0031; Sheng Han 0001; Youfang Lin. Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification. AAAI, 2025. DOI: 10.1609/aaai.v39i6.32630",
+        "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 15,
+          "text": "Infer the Whole",
+          "label": "TASK"
+        },
+        {
+          "start": 42,
+          "end": 72,
+          "text": "Keypoint-Based Knowledge Graph",
+          "label": "METHOD"
+        },
+        {
+          "start": 77,
+          "end": 102,
+          "text": "Vehicle Re-Identification",
+          "label": "TASK"
+        }
+      ],
+      "invalidTransitions": 7,
+      "relations": [
+        {
+          "sampleId": "corpus-4725bc95e616016639dc",
+          "text": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+          "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+          "head": {
+            "start": 42,
+            "end": 72,
+            "text": "Keypoint-Based Knowledge Graph",
+            "label": "METHOD"
+          },
+          "tail": {
+            "start": 0,
+            "end": 15,
+            "text": "Infer the Whole",
+            "label": "TASK"
+          },
+          "label": "USED_FOR",
+          "probabilities": {
+            "USED_FOR": 0.9990501999855042,
+            "EVALUATED_ON": 0.0,
+            "NO_RELATION": 0.0009498205618001521
+          },
+          "pairId": "pair-a8c5fbcc59113d8ac4df0ba2"
+        },
+        {
+          "sampleId": "corpus-4725bc95e616016639dc",
+          "text": "Infer the Whole from a Glimpse of a Part: Keypoint-Based Knowledge Graph for Vehicle Re-Identification.",
+          "textSha256": "a2cc43e5c8d128798d6c04617d28528de38b762011f08615502dd0867159ab3e",
+          "head": {
+            "start": 42,
+            "end": 72,
+            "text": "Keypoint-Based Knowledge Graph",
+            "label": "METHOD"
+          },
+          "tail": {
+            "start": 77,
+            "end": 102,
+            "text": "Vehicle Re-Identification",
+            "label": "TASK"
+          },
+          "label": "USED_FOR",
+          "probabilities": {
+            "USED_FOR": 0.9999994039535522,
+            "EVALUATED_ON": 0.0,
+            "NO_RELATION": 6.358291670949257e-07
+          },
+          "pairId": "pair-c57449e800f0a9d30170f5cc"
+        }
+      ]
+    },
+    {
+      "publicationId": "conf/3dim/VavilalaVF25",
+      "sampleId": "corpus-eea73ed743e3cca75a16",
+      "text": "Denoising Monte Carlo Renders with Diffusion Models.",
+      "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+      "liveDetail": {
+        "publication": {
+          "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+          "year": 2025,
+          "source": "dblp_structured_xml",
+          "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+          "type": "inproceedings",
+          "modelApplicationStatus": "inferred",
+          "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+          "urls": [
+            "https://doi.org/10.1109/3DV66043.2025.00082"
+          ],
+          "pages": "835-844",
+          "modelSampleId": "corpus-eea73ed743e3cca75a16",
+          "modelApplied": true,
+          "id": "ai-literature-63686318d85cccb07afb:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+          "publicationId": "conf/3dim/VavilalaVF25",
+          "graphId": "ai-literature-63686318d85cccb07afb",
+          "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+          "doi": "10.1109/3dv66043.2025.00082",
+          "publicationStatus": {
+            "code": "unverified",
+            "notice": "未检出撤稿/更正题名前缀信号；出版状态未经独立核验。",
+            "source": "title_prefix_rule_v1",
+            "verified": false,
+            "evidence": null
+          }
+        },
+        "authors": [
+          {
+            "name": "Vaibhav Vavilala",
+            "signatureName": "Vaibhav Vavilala",
+            "position": 1,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/176/5565",
+            "aliases": [
+              "Vaibhav Vavilala"
+            ],
+            "dblpPid": "176/5565",
+            "dblpUrl": "https://dblp.org/pid/176/5565.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Rahul Vasanth",
+            "signatureName": "Rahul Vasanth",
+            "position": 2,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/131/8964",
+            "aliases": [
+              "Rahul Vasanth"
+            ],
+            "dblpPid": "131/8964",
+            "dblpUrl": "https://dblp.org/pid/131/8964.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "David A. Forsyth",
+            "signatureName": "David A. Forsyth",
+            "position": 3,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/f/DavidAForsyth",
+            "aliases": [
+              "David A. Forsyth",
+              "David Alexander Forsyth"
+            ],
+            "dblpPid": "f/DavidAForsyth",
+            "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          }
+        ],
+        "venues": [
+          {
+            "name": "3DV",
+            "type": "conference"
+          }
+        ],
+        "mentions": [
+          {
+            "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "sampleId": "corpus-eea73ed743e3cca75a16",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 0,
+            "source": "model_prediction",
+            "label": "TASK",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 29,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+            "text": "Denoising Monte Carlo Renders",
+            "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "sampleId": "corpus-eea73ed743e3cca75a16",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 35,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 51,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+            "text": "Diffusion Models",
+            "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          }
+        ],
+        "assertions": [
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.9997346,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "USED_FOR",
+              "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+              "id": "ai-literature-63686318d85cccb07afb:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            }
+          }
+        ],
+        "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+        "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 29,
+          "text": "Denoising Monte Carlo Renders",
+          "label": "TASK"
+        },
+        {
+          "start": 35,
+          "end": 51,
+          "text": "Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "invalidTransitions": 0,
+      "relations": [
+        {
+          "sampleId": "corpus-eea73ed743e3cca75a16",
+          "text": "Denoising Monte Carlo Renders with Diffusion Models.",
+          "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+          "head": {
+            "start": 35,
+            "end": 51,
+            "text": "Diffusion Models",
+            "label": "METHOD"
+          },
+          "tail": {
+            "start": 0,
+            "end": 29,
+            "text": "Denoising Monte Carlo Renders",
+            "label": "TASK"
+          },
+          "label": "USED_FOR",
+          "probabilities": {
+            "USED_FOR": 0.9997345805168152,
+            "EVALUATED_ON": 0.0,
+            "NO_RELATION": 0.00026536054792813957
+          },
+          "pairId": "pair-a1b15f2f90bbb6250f1d2831"
+        }
+      ]
+    },
+    {
+      "publicationId": "conf/aaai/AdamE25",
+      "sampleId": "corpus-ee15571a94cc548116db",
+      "text": "ASP-Driven Emergency Planning for Norm Violations in Reinforcement Learning.",
+      "textSha256": "2c8a5f67990715d2e789026cdafe0ee8ef88f4eba534edd1489c9e3b12e23f5c",
+      "liveDetail": {
+        "publication": {
+          "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+          "year": 2025,
+          "source": "dblp_structured_xml",
+          "title": "ASP-Driven Emergency Planning for Norm Violations in Reinforcement Learning.",
+          "type": "inproceedings",
+          "modelApplicationStatus": "inferred",
+          "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+          "urls": [
+            "https://doi.org/10.1609/aaai.v39i14.33619"
+          ],
+          "pages": "14772-14780",
+          "modelSampleId": "corpus-ee15571a94cc548116db",
+          "modelApplied": true,
+          "id": "ai-literature-63686318d85cccb07afb:Publication:ee15571a94cc548116db9a933c0ede3730b2cf3348816f5f10fe43d38a530d4c",
+          "publicationId": "conf/aaai/AdamE25",
+          "graphId": "ai-literature-63686318d85cccb07afb",
+          "dblpUrl": "https://dblp.org/rec/conf/aaai/AdamE25",
+          "doi": "10.1609/aaai.v39i14.33619",
+          "publicationStatus": {
+            "code": "unverified",
+            "notice": "未检出撤稿/更正题名前缀信号；出版状态未经独立核验。",
+            "source": "title_prefix_rule_v1",
+            "verified": false,
+            "evidence": null
+          }
+        },
+        "authors": [
+          {
+            "name": "Sebastian P. Adam",
+            "signatureName": "Sebastian P. Adam",
+            "position": 1,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/274/0540",
+            "aliases": [
+              "Sebastian P. Adam",
+              "Sebastian Philipp Adam"
+            ],
+            "dblpPid": "274/0540",
+            "dblpUrl": "https://dblp.org/pid/274/0540.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Thomas Eiter",
+            "signatureName": "Thomas Eiter",
+            "position": 2,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/e/TEiter",
+            "aliases": [
+              "Thomas Eiter"
+            ],
+            "dblpPid": "e/TEiter",
+            "dblpUrl": "https://dblp.org/pid/e/TEiter.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          }
+        ],
+        "venues": [
+          {
+            "name": "AAAI",
+            "type": "conference"
+          }
+        ],
+        "mentions": [
+          {
+            "evidence": "ASP-Driven Emergency Planning for Norm Violations in Reinforcement Learning.",
+            "sampleId": "corpus-ee15571a94cc548116db",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 0,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 3,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:a0ea8cd8d5cd84498eb8d6a751c44b2a01bb288db66cf29852b317d5949bb78e",
+            "text": "ASP",
+            "textSha256": "2c8a5f67990715d2e789026cdafe0ee8ef88f4eba534edd1489c9e3b12e23f5c",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "ASP-Driven Emergency Planning for Norm Violations in Reinforcement Learning.",
+            "sampleId": "corpus-ee15571a94cc548116db",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 53,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 75,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:5d06a4a9ecb0eb3d8b1819986ffb6db7f89f94c7cf2e8f21a875de0a85b58010",
+            "text": "Reinforcement Learning",
+            "textSha256": "2c8a5f67990715d2e789026cdafe0ee8ef88f4eba534edd1489c9e3b12e23f5c",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          }
+        ],
+        "assertions": [],
+        "citationDraft": "Sebastian P. Adam; Thomas Eiter. ASP-Driven Emergency Planning for Norm Violations in Reinforcement Learning. AAAI, 2025. DOI: 10.1609/aaai.v39i14.33619",
+        "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "ASP",
+          "label": "METHOD"
+        },
+        {
+          "start": 53,
+          "end": 75,
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "invalidTransitions": 4,
+      "relations": []
+    },
+    {
+      "publicationId": "conf/aclwat/NeubigMN15",
+      "sampleId": "corpus-845dbead7e41a85c1717",
+      "text": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+      "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+      "liveDetail": {
+        "publication": {
+          "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+          "year": 2015,
+          "source": "dblp_structured_xml",
+          "title": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+          "type": "inproceedings",
+          "modelApplicationStatus": "inferred",
+          "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+          "urls": [
+            "https://aclanthology.org/W15-5003/"
+          ],
+          "pages": "35-41",
+          "modelSampleId": "corpus-845dbead7e41a85c1717",
+          "modelApplied": true,
+          "id": "ai-literature-63686318d85cccb07afb:Publication:845dbead7e41a85c1717c616f5b2050f029747e84b1b0547aaf7ce688e01d57e",
+          "publicationId": "conf/aclwat/NeubigMN15",
+          "graphId": "ai-literature-63686318d85cccb07afb",
+          "dblpUrl": "https://dblp.org/rec/conf/aclwat/NeubigMN15",
+          "doi": "",
+          "publicationStatus": {
+            "code": "unverified",
+            "notice": "未检出撤稿/更正题名前缀信号；出版状态未经独立核验。",
+            "source": "title_prefix_rule_v1",
+            "verified": false,
+            "evidence": null
+          }
+        },
+        "authors": [
+          {
+            "name": "Graham Neubig",
+            "signatureName": "Graham Neubig",
+            "position": 1,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/03/8155",
+            "aliases": [
+              "Graham Neubig"
+            ],
+            "dblpPid": "03/8155",
+            "dblpUrl": "https://dblp.org/pid/03/8155.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Makoto Morishita",
+            "signatureName": "Makoto Morishita",
+            "position": 2,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/169/9763",
+            "aliases": [
+              "Makoto Morishita"
+            ],
+            "dblpPid": "169/9763",
+            "dblpUrl": "https://dblp.org/pid/169/9763.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Satoshi Nakamura 0001",
+            "signatureName": "Satoshi Nakamura 0001",
+            "position": 3,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/57/1548-1",
+            "aliases": [
+              "Satoshi Nakamura 0001"
+            ],
+            "dblpPid": "57/1548-1",
+            "dblpUrl": "https://dblp.org/pid/57/1548-1.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          }
+        ],
+        "venues": [
+          {
+            "name": "WAT",
+            "type": "conference"
+          }
+        ],
+        "mentions": [
+          {
+            "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+            "sampleId": "corpus-845dbead7e41a85c1717",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 0,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 16,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:192bb0895985697b586b393733d6e25a59637c7ea179e7bf9b47b9b1dc3c7c24",
+            "text": "Neural Reranking",
+            "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+            "sampleId": "corpus-845dbead7e41a85c1717",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 26,
+            "source": "model_prediction",
+            "label": "TASK",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 67,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:b949f4856588865c83e426cea0b866c9561fd01639902cd7c902867a2e10d4e5",
+            "text": "Subjective Quality of Machine Translation",
+            "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+            "sampleId": "corpus-845dbead7e41a85c1717",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 69,
+            "source": "model_prediction",
+            "label": "DATASET",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 74,
+            "id": "ai-literature-63686318d85cccb07afb:Mention:ed2ef16bdf67a9c33179aafd75f57c4fa7146611c215ef3a00ceb1412c66b0f9",
+            "text": "NAIST",
+            "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+            "graphId": "ai-literature-63686318d85cccb07afb",
+            "status": "candidate"
+          }
+        ],
+        "assertions": [
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 3.989814285887405e-05, \"USED_FOR\": 0.9999600648880005}",
+              "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+              "sampleId": "corpus-845dbead7e41a85c1717",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.99996006,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "USED_FOR",
+              "pairId": "pair-96da776194bfe93597f02066",
+              "id": "ai-literature-63686318d85cccb07afb:Assertion:f94bae10db7050cd8ccad29d5d0339008f1a9abedbbb2342353ff87a7f84e0b5",
+              "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+              "sampleId": "corpus-845dbead7e41a85c1717",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 16,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:192bb0895985697b586b393733d6e25a59637c7ea179e7bf9b47b9b1dc3c7c24",
+              "text": "Neural Reranking",
+              "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+              "sampleId": "corpus-845dbead7e41a85c1717",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 26,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 67,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:b949f4856588865c83e426cea0b866c9561fd01639902cd7c902867a2e10d4e5",
+              "text": "Subjective Quality of Machine Translation",
+              "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            }
+          },
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.9994192123413086, \"NO_RELATION\": 0.0005808303249068558, \"USED_FOR\": 0.0}",
+              "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+              "sampleId": "corpus-845dbead7e41a85c1717",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.9994192,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "EVALUATED_ON",
+              "pairId": "pair-79214e751786da1514087115",
+              "id": "ai-literature-63686318d85cccb07afb:Assertion:1884aec1b0eb944a1b993b035dc2251e0341f4ae3ef66041210affceb5f23d0a",
+              "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+              "sampleId": "corpus-845dbead7e41a85c1717",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 16,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:192bb0895985697b586b393733d6e25a59637c7ea179e7bf9b47b9b1dc3c7c24",
+              "text": "Neural Reranking",
+              "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+              "sampleId": "corpus-845dbead7e41a85c1717",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 69,
+              "source": "model_prediction",
+              "label": "DATASET",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 74,
+              "id": "ai-literature-63686318d85cccb07afb:Mention:ed2ef16bdf67a9c33179aafd75f57c4fa7146611c215ef3a00ceb1412c66b0f9",
+              "text": "NAIST",
+              "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+              "graphId": "ai-literature-63686318d85cccb07afb",
+              "status": "candidate"
+            }
+          }
+        ],
+        "citationDraft": "Graham Neubig; Makoto Morishita; Satoshi Nakamura 0001. Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015. WAT, 2015. DOI: 缺失",
+        "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 16,
+          "text": "Neural Reranking",
+          "label": "METHOD"
+        },
+        {
+          "start": 26,
+          "end": 67,
+          "text": "Subjective Quality of Machine Translation",
+          "label": "TASK"
+        },
+        {
+          "start": 69,
+          "end": 74,
+          "text": "NAIST",
+          "label": "DATASET"
+        }
+      ],
+      "invalidTransitions": 0,
+      "relations": [
+        {
+          "sampleId": "corpus-845dbead7e41a85c1717",
+          "text": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+          "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+          "head": {
+            "start": 0,
+            "end": 16,
+            "text": "Neural Reranking",
+            "label": "METHOD"
+          },
+          "tail": {
+            "start": 26,
+            "end": 67,
+            "text": "Subjective Quality of Machine Translation",
+            "label": "TASK"
+          },
+          "label": "USED_FOR",
+          "probabilities": {
+            "USED_FOR": 0.9999600648880005,
+            "EVALUATED_ON": 0.0,
+            "NO_RELATION": 3.9898219256429e-05
+          },
+          "pairId": "pair-96da776194bfe93597f02066"
+        },
+        {
+          "sampleId": "corpus-845dbead7e41a85c1717",
+          "text": "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015.",
+          "textSha256": "24e1b379aff6b25679ef0969390a5ef74764bee9616b9a28ec52a1d5506bc39e",
+          "head": {
+            "start": 0,
+            "end": 16,
+            "text": "Neural Reranking",
+            "label": "METHOD"
+          },
+          "tail": {
+            "start": 69,
+            "end": 74,
+            "text": "NAIST",
+            "label": "DATASET"
+          },
+          "label": "EVALUATED_ON",
+          "probabilities": {
+            "USED_FOR": 0.0,
+            "EVALUATED_ON": 0.9994192123413086,
+            "NO_RELATION": 0.0005808311398141086
+          },
+          "pairId": "pair-79214e751786da1514087115"
+        }
+      ]
+    }
+  ]
+}

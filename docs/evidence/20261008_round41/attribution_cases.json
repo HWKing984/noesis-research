@@ -1,0 +1,2142 @@
+[
+  {
+    "split": "train",
+    "arxivId": "2107.03374",
+    "source": {
+      "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+      "publicationId": "arxiv:2107.03374",
+      "arxivId": "2107.03374",
+      "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+      "textKind": "abstract",
+      "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+      "sourceURL": "http://arxiv.org/abs/2107.03374v2",
+      "sourceOrigin": "cached_exposed_train_only",
+      "groupId": "abstract-paper-2107.03374",
+      "split": "train",
+      "schemaVersion": "course-whole-abstract-1",
+      "contractSha256": "bd6cb98a0ec8d13026bc85d2275df01bb92b862007b0825f78339b1273164493",
+      "sourceCorpusSha256": "a8f5a3fc6bba56511498119a856d9fc9a9168bbffc0ef6a2b6b60cc7a387423e",
+      "tokens": 196,
+      "annotationStatus": "pending"
+    },
+    "before": {
+      "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+      "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+      "reviewOfSha256": "839082b28ee05b089cd59931a2ad993754a00c82136c8405bc862bd15b6525fc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "entityId": "e1",
+          "start": 13,
+          "end": 18,
+          "text": "Codex",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e2",
+          "start": 22,
+          "end": 25,
+          "text": "GPT",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e3",
+          "start": 106,
+          "end": 125,
+          "text": "Python code-writing",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e4",
+          "start": 173,
+          "end": 178,
+          "text": "Codex",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e5",
+          "start": 205,
+          "end": 214,
+          "text": "HumanEval",
+          "label": "DATASET"
+        },
+        {
+          "entityId": "e6",
+          "start": 286,
+          "end": 323,
+          "text": "synthesizing programs from docstrings",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e7",
+          "start": 371,
+          "end": 376,
+          "text": "GPT-3",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e8",
+          "start": 391,
+          "end": 396,
+          "text": "GPT-J",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e9",
+          "start": 437,
+          "end": 454,
+          "text": "repeated sampling",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e10",
+          "start": 889,
+          "end": 904,
+          "text": "code generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Explicitly unjudged pairs retain UNRESOLVED; no negative filling.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 139,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities."
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e1",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 13,
+            "end": 410,
+            "text": "Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e1",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 323,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e1",
+          "tail": "e10",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 904,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 139,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities."
+          },
+          "reason": "Explicit AI decision supported by the preserved excerpt; no label inferred from entity types."
+        },
+        {
+          "head": "e2",
+          "tail": "e5",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e6",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 178,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e4",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 173,
+            "end": 410,
+            "text": "Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 323,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e4",
+          "tail": "e10",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 904,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e7",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 202,
+            "end": 410,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 286,
+            "end": 560,
+            "text": "synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          "reason": "GPT-3/GPT-J are measured on the program synthesis evaluation and repeated sampling produces solutions to those same problems."
+        },
+        {
+          "head": "e7",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 202,
+            "end": 410,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 286,
+            "end": 560,
+            "text": "synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          "reason": "GPT-3/GPT-J are measured on the program synthesis evaluation and repeated sampling produces solutions to those same problems."
+        },
+        {
+          "head": "e8",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e9",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e9",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 202,
+            "end": 454,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling"
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e9",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 286,
+            "end": 560,
+            "text": "synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          "reason": "GPT-3/GPT-J are measured on the program synthesis evaluation and repeated sampling produces solutions to those same problems."
+        },
+        {
+          "head": "e9",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        }
+      ],
+      "notes": "Same-session AI whole-abstract candidate.  Self-review: GPT, GPT-3 and GPT-J are distinct whole names. Preserve Codex/GPT use and explicit GPT-3/GPT-J HumanEval results; do not infer all Codex coreference pairs. Relation revision: immutable source NER, explicit source-role decisions only. Self-review: Confirmed HumanEval comparison plus repeated-sampling follow-up on the same problems. GPT-3 zero successes is still evaluated and used, not a negative. Do not evaluate the generic GPT family separately."
+    },
+    "after": {
+      "sampleId": "sample-3921fe8b1cb01ddb7dd1",
+      "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+      "reviewOfSha256": "458bc1a8f84ea7c3dc0b50909da3f9c82a94faf3d22e9286c5e5cb2c7f1416ef",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "entityId": "e1",
+          "start": 13,
+          "end": 18,
+          "text": "Codex",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e2",
+          "start": 22,
+          "end": 25,
+          "text": "GPT",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e3",
+          "start": 106,
+          "end": 125,
+          "text": "Python code-writing",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e4",
+          "start": 173,
+          "end": 178,
+          "text": "Codex",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e5",
+          "start": 205,
+          "end": 214,
+          "text": "HumanEval",
+          "label": "DATASET"
+        },
+        {
+          "entityId": "e6",
+          "start": 286,
+          "end": 323,
+          "text": "synthesizing programs from docstrings",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e7",
+          "start": 371,
+          "end": 376,
+          "text": "GPT-3",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e8",
+          "start": 391,
+          "end": 396,
+          "text": "GPT-J",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e9",
+          "start": 437,
+          "end": 454,
+          "text": "repeated sampling",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e10",
+          "start": 889,
+          "end": 904,
+          "text": "code generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Explicit attribution retractions and previous unknown pairs remain unresolved, never negative.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 139,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities."
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e1",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 13,
+            "end": 410,
+            "text": "Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e1",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 323,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e1",
+          "tail": "e10",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 904,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 139,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities."
+          },
+          "reason": "Explicit AI decision supported by the preserved excerpt; no label inferred from entity types."
+        },
+        {
+          "head": "e2",
+          "tail": "e5",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e6",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 178,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e4",
+          "tail": "e5",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "This Codex occurrence explicitly denotes a distinct production version. The HumanEval paragraph measures the introduced research model and named comparators; identical surface text is insufficient to bind that measurement to the production version. Return the edge to unknown, not NO_RELATION; this does not assert that the production model was never evaluated."
+        },
+        {
+          "head": "e4",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 323,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e4",
+          "tail": "e10",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 904,
+            "text": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation"
+          },
+          "reason": "The repeated Codex name denotes the program synthesis/code generation system; task wording is coreferent in this abstract."
+        },
+        {
+          "head": "e7",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 202,
+            "end": 410,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 286,
+            "end": 560,
+            "text": "synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          "reason": "GPT-3/GPT-J are measured on the program synthesis evaluation and repeated sampling produces solutions to those same problems."
+        },
+        {
+          "head": "e7",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 202,
+            "end": 410,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 286,
+            "end": 560,
+            "text": "synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          "reason": "GPT-3/GPT-J are measured on the program synthesis evaluation and repeated sampling produces solutions to those same problems."
+        },
+        {
+          "head": "e8",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e9",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e9",
+          "tail": "e5",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 202,
+            "end": 640,
+            "text": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem."
+          },
+          "reason": "Codex and both compared GPT systems are evaluated on HumanEval. Repeated sampling evaluates the same problems in the following sentences. A zero success rate is not a negative relation."
+        },
+        {
+          "head": "e9",
+          "tail": "e6",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 286,
+            "end": 560,
+            "text": "synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts."
+          },
+          "reason": "GPT-3/GPT-J are measured on the program synthesis evaluation and repeated sampling produces solutions to those same problems."
+        },
+        {
+          "head": "e9",
+          "tail": "e10",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        }
+      ],
+      "notes": "Same-session AI whole-abstract candidate.  Self-review: GPT, GPT-3 and GPT-J are distinct whole names. Preserve Codex/GPT use and explicit GPT-3/GPT-J HumanEval results; do not infer all Codex coreference pairs. Relation revision: immutable source NER, explicit source-role decisions only. Self-review: Confirmed HumanEval comparison plus repeated-sampling follow-up on the same problems. GPT-3 zero successes is still evaluated and used, not a negative. Do not evaluate the generic GPT family separately. Attribution revision: old pairs retained in a reversible quality ledger. Self-review: Re-read the whole version contrast, HumanEval comparison and sampling-result paragraph. The e4 mention is explicitly a distinct production Codex version, so withdraw exactly e4-e5 to UNRESOLVED, not a negative. Keep research Codex/GPT-3/GPT-J measurements even when one score is zero. e9-e5 remains positive because the sampling protocol has its own result on the same problems; expand its old [202,454) excerpt through [202,640), preserving old evidence and label/reason. All other pairs and NER remain exact. The parallel AI finding was checked against the source by the root; this is still AI reference/self-review, not human gold."
+    }
+  },
+  {
+    "split": "dev",
+    "arxivId": "1904.04163",
+    "source": {
+      "sampleId": "sample-e6a06d7413acbec18afb",
+      "publicationId": "journals/corr/abs-1904-04163",
+      "arxivId": "1904.04163",
+      "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data. In a speech recognition N-bestrescoring task, we reduce the RNNLM model size to 18.5% of the baseline system, with no degradation in word error rate(WER) performance on Wall Street Journal data set.",
+      "textKind": "abstract",
+      "textSha256": "4572d4db5c00adc0bac512f15f7784f5cb8a7a184fb3df869d05e963bec587b0",
+      "sourceURL": "https://arxiv.org/abs/1904.04163",
+      "sourceOrigin": "fresh_locked_dblp_html_metadata",
+      "groupId": "paper-group-f147312e46397aa795f9",
+      "split": "dev",
+      "schemaVersion": "course-whole-abstract-1",
+      "contractSha256": "bd6cb98a0ec8d13026bc85d2275df01bb92b862007b0825f78339b1273164493",
+      "sourceCorpusSha256": "a8f5a3fc6bba56511498119a856d9fc9a9168bbffc0ef6a2b6b60cc7a387423e",
+      "tokens": 202,
+      "annotationStatus": "pending"
+    },
+    "before": {
+      "sampleId": "sample-e6a06d7413acbec18afb",
+      "textSha256": "4572d4db5c00adc0bac512f15f7784f5cb8a7a184fb3df869d05e963bec587b0",
+      "reviewOfSha256": "5be59a675c3b9215e6c11d77f71c01b2887d06ac321c83a56cafa74671e5e8f0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "entityId": "e1",
+          "start": 0,
+          "end": 25,
+          "text": "Recurrent Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e2",
+          "start": 27,
+          "end": 31,
+          "text": "RNNs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e3",
+          "start": 48,
+          "end": 65,
+          "text": "language modeling",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e4",
+          "start": 121,
+          "end": 140,
+          "text": "N-gram based models",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e5",
+          "start": 172,
+          "end": 211,
+          "text": "Recurrent Neural Network language model",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e6",
+          "start": 213,
+          "end": 218,
+          "text": "RNNLM",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e7",
+          "start": 246,
+          "end": 252,
+          "text": "RNNLMs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e8",
+          "start": 384,
+          "end": 406,
+          "text": "knowledge distillation",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e9",
+          "start": 410,
+          "end": 433,
+          "text": "reducing the model size",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e10",
+          "start": 438,
+          "end": 444,
+          "text": "RNNLMs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e11",
+          "start": 472,
+          "end": 492,
+          "text": "trust regularization",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e12",
+          "start": 515,
+          "end": 537,
+          "text": "knowledge distillation",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e13",
+          "start": 551,
+          "end": 557,
+          "text": "RNNLMs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e14",
+          "start": 565,
+          "end": 587,
+          "text": "knowledge distillation",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e15",
+          "start": 593,
+          "end": 613,
+          "text": "trust regularization",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e16",
+          "start": 762,
+          "end": 775,
+          "text": "Penn Treebank",
+          "label": "DATASET"
+        },
+        {
+          "entityId": "e17",
+          "start": 787,
+          "end": 821,
+          "text": "speech recognition N-bestrescoring",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e18",
+          "start": 842,
+          "end": 847,
+          "text": "RNNLM",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e19",
+          "start": 951,
+          "end": 970,
+          "text": "Wall Street Journal",
+          "label": "DATASET"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Explicitly unjudged pairs retain UNRESOLVED; no negative filling.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 141,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models."
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e1",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 0,
+            "end": 558,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e1",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e1",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e1",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 141,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models."
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e2",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 27,
+            "end": 558,
+            "text": "RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e2",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 141,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models."
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e4",
+          "tail": "e9",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e5",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 211,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e5",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 172,
+            "end": 558,
+            "text": "Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e5",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e5",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e5",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e6",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 218,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e6",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 213,
+            "end": 558,
+            "text": "RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e6",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e6",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e6",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 252,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e7",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 246,
+            "end": 558,
+            "text": "RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e7",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 384,
+            "end": 701,
+            "text": "knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e8",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e10",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 444,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e10",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 335,
+            "end": 558,
+            "text": "In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e10",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e10",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e10",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e11",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e12",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e13",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 557,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e13",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 335,
+            "end": 558,
+            "text": "In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e13",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e13",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e13",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e14",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e14",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e14",
+          "tail": "e16",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 565,
+            "end": 781,
+            "text": "knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data."
+          },
+          "reason": "The immediately preceding distillation-with-trust-regularization method is measured by perplexity on Penn Treebank. This is a method-level benchmark statement, not a claim of separately isolated ablations."
+        },
+        {
+          "head": "e14",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e14",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e15",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e15",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e15",
+          "tail": "e16",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 593,
+            "end": 781,
+            "text": "trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data."
+          },
+          "reason": "The immediately preceding distillation-with-trust-regularization method is measured by perplexity on Penn Treebank. This is a method-level benchmark statement, not a claim of separately isolated ablations."
+        },
+        {
+          "head": "e15",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e15",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e18",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 847,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data. In a speech recognition N-bestrescoring task, we reduce the RNNLM"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e18",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 335,
+            "end": 847,
+            "text": "In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data. In a speech recognition N-bestrescoring task, we reduce the RNNLM"
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e18",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e18",
+          "tail": "e17",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 782,
+            "end": 890,
+            "text": "In a speech recognition N-bestrescoring task, we reduce the RNNLM model size to 18.5% of the baseline system"
+          },
+          "reason": "This RNNLM mention is explicitly the model in the named rescoring task."
+        },
+        {
+          "head": "e18",
+          "tail": "e19",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 842,
+            "end": 980,
+            "text": "RNNLM model size to 18.5% of the baseline system, with no degradation in word error rate(WER) performance on Wall Street Journal data set."
+          },
+          "reason": "The stated rescoring RNNLM result is measured on Wall Street Journal, not inferred solely from co-occurrence."
+        }
+      ],
+      "notes": "Same-session AI whole-abstract candidate.  Self-review: Preserve Penn Treebank and Wall Street Journal dataset names and the source N-bestrescoring spelling. Distillation/regularization results require longer-context links; leave those pairs unresolved. Relation revision: immutable source NER, explicit source-role decisions only. Self-review: Confirmed Penn Treebank perplexity and Wall Street Journal WER scopes; methods measured as a combined procedure are not isolated ablation claims. Original N-gram dataset pair remains unknown. Relation revision: immutable source NER, explicit source-role decisions only. Self-review: Re-read the model-compression operator/receiver distinction and the eight target-model negatives. Their fixed-source role is receiving compression, not executing it; this does not deny the models' actual output capabilities. Preserve forty-four unknown pairs and all eighteen historical labels. Separately flag the two inherited component-to-Penn-Treebank evaluation labels: the text describes a combined distillation-plus-regularization result. This revision cannot silently retract them or authenticate separate component measurements; that legacy concern remains open."
+    },
+    "after": {
+      "sampleId": "sample-e6a06d7413acbec18afb",
+      "textSha256": "4572d4db5c00adc0bac512f15f7784f5cb8a7a184fb3df869d05e963bec587b0",
+      "reviewOfSha256": "b957e5e4f371a352bc41342113f725fc71e19203a687973a6bf3ed7f31b7e1a6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "entityId": "e1",
+          "start": 0,
+          "end": 25,
+          "text": "Recurrent Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e2",
+          "start": 27,
+          "end": 31,
+          "text": "RNNs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e3",
+          "start": 48,
+          "end": 65,
+          "text": "language modeling",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e4",
+          "start": 121,
+          "end": 140,
+          "text": "N-gram based models",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e5",
+          "start": 172,
+          "end": 211,
+          "text": "Recurrent Neural Network language model",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e6",
+          "start": 213,
+          "end": 218,
+          "text": "RNNLM",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e7",
+          "start": 246,
+          "end": 252,
+          "text": "RNNLMs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e8",
+          "start": 384,
+          "end": 406,
+          "text": "knowledge distillation",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e9",
+          "start": 410,
+          "end": 433,
+          "text": "reducing the model size",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e10",
+          "start": 438,
+          "end": 444,
+          "text": "RNNLMs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e11",
+          "start": 472,
+          "end": 492,
+          "text": "trust regularization",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e12",
+          "start": 515,
+          "end": 537,
+          "text": "knowledge distillation",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e13",
+          "start": 551,
+          "end": 557,
+          "text": "RNNLMs",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e14",
+          "start": 565,
+          "end": 587,
+          "text": "knowledge distillation",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e15",
+          "start": 593,
+          "end": 613,
+          "text": "trust regularization",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e16",
+          "start": 762,
+          "end": 775,
+          "text": "Penn Treebank",
+          "label": "DATASET"
+        },
+        {
+          "entityId": "e17",
+          "start": 787,
+          "end": 821,
+          "text": "speech recognition N-bestrescoring",
+          "label": "TASK"
+        },
+        {
+          "entityId": "e18",
+          "start": 842,
+          "end": 847,
+          "text": "RNNLM",
+          "label": "METHOD"
+        },
+        {
+          "entityId": "e19",
+          "start": 951,
+          "end": 970,
+          "text": "Wall Street Journal",
+          "label": "DATASET"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Explicit attribution retractions and previous unknown pairs remain unresolved, never negative.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 141,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models."
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e1",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 0,
+            "end": 558,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e1",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e1",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e1",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 141,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models."
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e2",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 27,
+            "end": 558,
+            "text": "RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e2",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e2",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 141,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models."
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e4",
+          "tail": "e9",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e4",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e5",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 211,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e5",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 172,
+            "end": 558,
+            "text": "Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e5",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e5",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e5",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e6",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 218,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e6",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 213,
+            "end": 558,
+            "text": "RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e6",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e6",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e6",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 252,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e7",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 246,
+            "end": 558,
+            "text": "RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e7",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e7",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 384,
+            "end": 701,
+            "text": "knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e8",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e8",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e10",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 444,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e10",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 335,
+            "end": 558,
+            "text": "In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e10",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e10",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e10",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e11",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e11",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e12",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e12",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e13",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 557,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e13",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 335,
+            "end": 558,
+            "text": "In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs."
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e13",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e13",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e13",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e14",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e14",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e14",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "The measured configuration requires knowledge distillation WITH trust regularization. Each separate head names only one part; the plain binary supervision lacks the necessary combination constraint and neither head uniquely identifies the complete measured configuration. Preserve that combined-result evidence in the retraction ledger and return these two standalone attributions to unknown. This does not deny component use, require isolated ablations, prove absence of evaluation, or relabel either edge NO_RELATION."
+        },
+        {
+          "head": "e14",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e14",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e15",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e15",
+          "tail": "e9",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 410,
+            "end": 701,
+            "text": "reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model"
+          },
+          "reason": "Distillation and trust regularization are explicitly the procedure for reducing RNNLM size; the RNNLM is the target model, not assumed the compressor."
+        },
+        {
+          "head": "e15",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "The measured configuration requires knowledge distillation WITH trust regularization. Each separate head names only one part; the plain binary supervision lacks the necessary combination constraint and neither head uniquely identifies the complete measured configuration. Preserve that combined-result evidence in the retraction ledger and return these two standalone attributions to unknown. This does not deny component use, require isolated ablations, prove absence of evaluation, or relabel either edge NO_RELATION."
+        },
+        {
+          "head": "e15",
+          "tail": "e17",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e15",
+          "tail": "e19",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e18",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 0,
+            "end": 847,
+            "text": "Recurrent Neural Networks (RNNs) have dominated language modeling because of their superior performance over traditional N-gram based models. In many applications, a large Recurrent Neural Network language model (RNNLM) or an ensemble of several RNNLMs is used. These models have large memory footprints and require heavy computation. In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data. In a speech recognition N-bestrescoring task, we reduce the RNNLM"
+          },
+          "reason": "RNN/RNNLM mentions and the compared N-gram family are language modeling methods in this abstract; compression/evaluation claims are not automatically transferred to the N-gram comparator."
+        },
+        {
+          "head": "e18",
+          "tail": "e9",
+          "label": "NO_RELATION",
+          "evidence": {
+            "start": 335,
+            "end": 847,
+            "text": "In this paper, we examine the effect of applying knowledge distillation in reducing the model size for RNNLMs. In addition, we propose a trust regularization method to improve the knowledge distillation training for RNNLMs. Using knowledge distillation with trust regularization, we reduce the parameter size to a third of that of the previously published best model while maintaining the state-of-the-art perplexity result on Penn Treebank data. In a speech recognition N-bestrescoring task, we reduce the RNNLM"
+          },
+          "reason": "The RNN/RNNLM mentions identify the language models whose size is reduced; distillation with regularization is the compression operator. A target model is not the operator reducing itself in this source-role judgment. This does not deny its language-modeling capability or assert a universal inability to self-compress."
+        },
+        {
+          "head": "e18",
+          "tail": "e16",
+          "label": "UNRESOLVED",
+          "evidence": null,
+          "reason": "AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation."
+        },
+        {
+          "head": "e18",
+          "tail": "e17",
+          "label": "USED_FOR",
+          "evidence": {
+            "start": 782,
+            "end": 890,
+            "text": "In a speech recognition N-bestrescoring task, we reduce the RNNLM model size to 18.5% of the baseline system"
+          },
+          "reason": "This RNNLM mention is explicitly the model in the named rescoring task."
+        },
+        {
+          "head": "e18",
+          "tail": "e19",
+          "label": "EVALUATED_ON",
+          "evidence": {
+            "start": 842,
+            "end": 980,
+            "text": "RNNLM model size to 18.5% of the baseline system, with no degradation in word error rate(WER) performance on Wall Street Journal data set."
+          },
+          "reason": "The stated rescoring RNNLM result is measured on Wall Street Journal, not inferred solely from co-occurrence."
+        }
+      ],
+      "notes": "Same-session AI whole-abstract candidate.  Self-review: Preserve Penn Treebank and Wall Street Journal dataset names and the source N-bestrescoring spelling. Distillation/regularization results require longer-context links; leave those pairs unresolved. Relation revision: immutable source NER, explicit source-role decisions only. Self-review: Confirmed Penn Treebank perplexity and Wall Street Journal WER scopes; methods measured as a combined procedure are not isolated ablation claims. Original N-gram dataset pair remains unknown. Relation revision: immutable source NER, explicit source-role decisions only. Self-review: Re-read the model-compression operator/receiver distinction and the eight target-model negatives. Their fixed-source role is receiving compression, not executing it; this does not deny the models' actual output capabilities. Preserve forty-four unknown pairs and all eighteen historical labels. Separately flag the two inherited component-to-Penn-Treebank evaluation labels: the text describes a combined distillation-plus-regularization result. This revision cannot silently retract them or authenticate separate component measurements; that legacy concern remains open. Attribution revision: old pairs retained in a reversible quality ledger. Self-review: Re-read the full combined distillation-WITH-trust-regularization result and expand the two proposed withdrawals. Neither separate component head uniquely denotes the required combined measured configuration in the plain binary label format. Return e14-e16 and e15-e16 to UNRESOLVED and keep their original positive evidence/value in the reversible ledger; this is a context-loss precaution, not a denial of use or demand for isolated ablation. Retain the directly measured contextual RNNLM-e19 Wall Street Journal pair; all non-EVAL/previous unknown and NER fields stay exact. Development is already exposed and this self-review is not a blind gold evaluation."
+    }
+  }
+]

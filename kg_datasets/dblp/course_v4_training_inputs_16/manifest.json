@@ -1,0 +1,20 @@
+{
+  "sourceDatasetManifestSha256": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+  "inputReceiptsSha256": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_training_inputs_15\\receipts.jsonl": "3ef5f3d0364caad6ebea11c0b664f8ba168745e274f9d059efc21bbdc299f89d",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\pending_train_20261007_23\\review\\receipts.jsonl": "8fb1241c68efd0f43baac262f8015ef3a871eeecd2d6ffeb1eef11fe45272da6"
+  },
+  "filesSha256": {
+    "ner_inputs_dev.jsonl": "e1b283e5bbf4183ff589c07d73c3e72e8da3e1bb0a61c3fdd1794342133a6b87",
+    "ner_inputs_test.jsonl": "461e022d51c03807c2da4be052634033b8c4cb5e2045cf80aae21c6b114b8bd6",
+    "ner_inputs_train.jsonl": "c4d4d4324b289df185cba94716183c2e29355fa193c5d8e373178e40efea3a92",
+    "pending_generation.jsonl": "38171d601f56ab5d49ce9b6dac224cb4969918d5efe46771be977c85cd6960a3",
+    "receipts.jsonl": "f26d10eceeda42c683a3a2e3be33b8adb135da8b4cf3d063d98d31a76905c5ea",
+    "relation_inputs_dev.jsonl": "df0e9ab9c4e523248d844200ff3bc1c2800505b319ad7dc647c52d182d7fea45",
+    "relation_inputs_test.jsonl": "96dbabf4b2a9dbda4f22a5f792fd8ef26295289197a32d1e412ae40bf87800b1",
+    "relation_inputs_train.jsonl": "d12c56eef6b6b79f3e6fe711448baed6d305ce28f0a49f8e11635f2fce069500",
+    "summary.json": "45c7d46b741923940fd98890fd69fb4e5171bec6acf8faa9d55da7e89fec034e"
+  },
+  "schemaVersion": "course-v4-weak-1",
+  "importerCodeSha256": "682ea6e9fea02a512e07495699d4b304305f8c6963e648a4a523aff416755e0f"
+}

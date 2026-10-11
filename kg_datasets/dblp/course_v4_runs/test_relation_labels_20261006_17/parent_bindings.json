@@ -1,0 +1,12 @@
+{
+  "parentSnapshot": "kg_datasets\\dblp\\course_v4_training_inputs_10",
+  "parentManifestSha256": "fc70d7865c59791dc48bc5947e54bd5e07c20cc1a08eb755fe6fdb0f009f3e09",
+  "RESelectionSha256": "e4010d162f525221de7da30cf4c412892564a1da894d1271a72f1ddfa1893978",
+  "scope": "144 fixed-NER-eligible test papers RE judgments; 56 frozen NER-incomplete test receipts inherited, not treated as negative",
+  "allNEREntitiesAndStatusesIdentical": true,
+  "trainDevReceiptsIdentical": true,
+  "humanGold": false,
+  "independentAnnotator": false,
+  "prior200TestNERLabelsPreservedInParentSnapshot": true,
+  "newDocumentsAnnotated": 0
+}

@@ -1,0 +1,30 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_scope_review_v1.json": "bb08d1169bc55d74f47fdaf283d96adb6407bf710f51c62f0845c22289dc687a",
+    "annotations/course_v4/abstract_scope_decisions_20261008_44.json": "577f4936f0339fd7d2a1445e5d110757f9709ced7480e2f505d993dbb9fc1124",
+    "kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43/manifest.json": "401267ceeb46e8f0f0b6e25f6fdf09d9f1caaaf8654d29d21ce1f56f22bbb5a1",
+    "kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43/train_references.jsonl": "67e37e5f20a0ac6b1fd9ba24fddd274e5ea1263dbdfb15f59ef0d648d894b0c5",
+    "kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43/train_reviewed_receipts.jsonl": "1ce1e092883d5efb62a25f426f0e33d18c691193dd83bbed81ed5821642ddc38",
+    "scripts/review_train_entity_scope.py": "7c2efa3aadb399e5698e05a37f3449a0658435eeb213a147ad4c02e053abbfb1",
+    "resources/course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "scripts/compile_abstract_annotations.py": "16c33870897bdcfb18cbca9219c6929f48bceb6e8a5ec32e983355e4ed8f7016",
+    "scripts/course_abstract_relation.py": "96aa877e8d95c34e9768460818625b9c358a14d6ca46eb7d32a4fea203a96bdf",
+    "scripts/course_abstract_v1.py": "1327e537f46a260a18b215899fa72341f32fd0864fb45fed5f89c30358af85a6",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "resources/course_abstract_relation_v1.json": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+    "docs/course_v4_ai_prompt.md": "6eb18d89232376f8515449455d424dfb762a17c05e30431d09532de2f04c0ad8",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+    "resources/course_graph_runtime.json": "93a0beba5afdeb177afe0c6eb12567869ef8b0c502cd127b353f1dde3ccbc0fc"
+  },
+  "filesSha256": {
+    "contract.json": "76373e9d22e9d6385d703fb77276392cb6b0c04f539b72415b394b944f62ec50",
+    "generation_receipts.jsonl": "872802c5c91e1947bac407e49d1024b472e3dcaf66710520dad116ed787904e5",
+    "origins.jsonl": "d119f1b49885ddd5cb15293124dba7a9227aa7d5673fc7ab78e145caaf1b2fc4",
+    "summary.json": "c513c49415d961a9853f9e6de04b0ed0bafee746e0457a9b076ec63bc540be30"
+  }
+}

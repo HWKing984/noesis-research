@@ -1,0 +1,28 @@
+{
+  "structuralChecksPassed": true,
+  "documents": 20,
+  "entityCounts": {
+    "METHOD": 165,
+    "TASK": 87,
+    "DATASET": 23
+  },
+  "positiveRelations": {
+    "USED_FOR": 45,
+    "EVALUATED_ON": 9
+  },
+  "legalCandidatePairs": 834,
+  "explicitUnresolvedExamples": 1,
+  "unadjudicatedOrUnresolvedPairs": 780,
+  "negativeRelations": 0,
+  "standaloneArtifactsEqualArchive": {
+    "dev20_relation_review.csv": true,
+    "dev20_annotation_review.html": true
+  },
+  "externalZipSha256": "8d6641eeb73029ff837e3067b242792c3ab08d8b1783b80401aa1144ffc2211f",
+  "sourceJSONLSha256": "b24e53dc3442d44973313125f8c9c9c5a6a39e82135681b91377c08302610d33",
+  "semanticReviewExhaustive": false,
+  "formalF1Authorized": false,
+  "devReturnedToTraining": false,
+  "testContentRead": false,
+  "externalScriptsExecuted": false
+}

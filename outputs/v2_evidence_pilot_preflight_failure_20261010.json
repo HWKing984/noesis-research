@@ -1,0 +1,10 @@
+{
+  "status": "failed_before_output_creation",
+  "errorType": "KeyError",
+  "error": "split",
+  "source": "scripts/prepare_v2_evidence_pilot.py initial title inventory validation",
+  "reason": "Historical encoded title training rows omit split/textKind. They must be joined to canonical TRAIN references, not treated as references.",
+  "trainingExecuted": false,
+  "productionModified": false,
+  "retryPolicy": "Repair the data adapter and add a regression; keep this failure record. No model or label retry."
+}

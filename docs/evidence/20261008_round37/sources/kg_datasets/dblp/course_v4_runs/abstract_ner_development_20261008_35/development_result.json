@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "version": "abstract_v1",
+  "trainDocuments": 29,
+  "devDocuments": 16,
+  "steps": 90,
+  "epochs": 6,
+  "bestCheckpoint": "checkpoint_epoch_04",
+  "baselineDev": {
+    "loss": 0.7872264352546904,
+    "invalidTransitions": 246,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 109,
+        "predicted": 253,
+        "reference": 184,
+        "precision": 0.4308300395256917,
+        "recall": 0.592391304347826,
+        "f1": 0.4988558352402746
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 78,
+          "predicted": 137,
+          "reference": 116,
+          "precision": 0.5693430656934306,
+          "recall": 0.6724137931034483,
+          "f1": 0.616600790513834
+        },
+        "TASK": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 28,
+          "predicted": 107,
+          "reference": 53,
+          "precision": 0.2616822429906542,
+          "recall": 0.5283018867924528,
+          "f1": 0.35
+        },
+        "DATASET": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 3,
+          "predicted": 9,
+          "reference": 15,
+          "precision": 0.3333333333333333,
+          "recall": 0.2,
+          "f1": 0.25
+        }
+      }
+    }
+  },
+  "bestDev": {
+    "loss": 0.2567375299876853,
+    "invalidTransitions": 55,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 135,
+        "predicted": 195,
+        "reference": 184,
+        "precision": 0.6923076923076923,
+        "recall": 0.7336956521739131,
+        "f1": 0.712401055408971
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 91,
+          "predicted": 106,
+          "reference": 116,
+          "precision": 0.8584905660377359,
+          "recall": 0.7844827586206896,
+          "f1": 0.8198198198198198
+        },
+        "TASK": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 31,
+          "predicted": 65,
+          "reference": 53,
+          "precision": 0.47692307692307695,
+          "recall": 0.5849056603773585,
+          "f1": 0.5254237288135594
+        },
+        "DATASET": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 13,
+          "predicted": 24,
+          "reference": 15,
+          "precision": 0.5416666666666666,
+          "recall": 0.8666666666666667,
+          "f1": 0.6666666666666666
+        }
+      }
+    }
+  },
+  "dictionaryDev": {
+    "micro": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 25,
+      "predicted": 43,
+      "reference": 184,
+      "precision": 0.5813953488372093,
+      "recall": 0.1358695652173913,
+      "f1": 0.22026431718061673
+    },
+    "perClass": {
+      "METHOD": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 20,
+        "predicted": 38,
+        "reference": 116,
+        "precision": 0.5263157894736842,
+        "recall": 0.1724137931034483,
+        "f1": 0.2597402597402597
+      },
+      "TASK": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 4,
+        "predicted": 4,
+        "reference": 53,
+        "precision": 1.0,
+        "recall": 0.07547169811320754,
+        "f1": 0.14035087719298245
+      },
+      "DATASET": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 1,
+        "predicted": 1,
+        "reference": 15,
+        "precision": 1.0,
+        "recall": 0.06666666666666667,
+        "f1": 0.125
+      }
+    }
+  },
+  "entitySupport": {
+    "train": {
+      "TASK": 109,
+      "METHOD": 211,
+      "DATASET": 35
+    },
+    "dev": {
+      "METHOD": 116,
+      "TASK": 53,
+      "DATASET": 15
+    }
+  },
+  "classifierAndEncoderChanged": true,
+  "reloadPredictionsIdentical": true,
+  "devUsedForGradient": false,
+  "testEvaluated": false,
+  "testTokenized": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "notice": "Warm-started abstract NER development candidate, AI self-reviewed labels only; baseline is title-trained model transferred to this same abstract dev set, not production title accuracy. No complete RE/pipeline training or final-test result."
+}

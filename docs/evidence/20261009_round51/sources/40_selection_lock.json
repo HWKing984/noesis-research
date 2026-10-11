@@ -1,0 +1,34 @@
+{
+  "lockedAtUTC": "2026-10-09T02:37:35.955698+00:00",
+  "contract": {
+    "version": "local_relation_evidence_gate_v1",
+    "goal": "Abstain when a positive model relation lacks an explicit local connector; retain literal evidence and all rejected predictions",
+    "baseline": "kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48",
+    "baselineManifestSha256": "489bf9095484c76a79786b0a8427a93320e2ed30154ed29df95a85cd6eac5497",
+    "supplement": "kg_datasets/dblp/course_abstract_supplement_reviewed_20261009_49",
+    "supplementManifestSha256": "2fc9aeaefa200100de611e5940ee5fa3cf6bbcfcea520f3700542be11f8c82f7",
+    "experiment": "One fixed same-sentence directional-connector rule; no threshold search, training, label edits or reserved-test access",
+    "abstentionMeaning": "No emitted edge, not NO_RELATION and not a proven false relation",
+    "evidenceMeaning": "Lexical support window, not independently verified semantics or calibrated probability",
+    "fullPipelineScope": "Only the historical 7 fully resolved exposed development documents; all reference positives remain in recall denominator",
+    "supplementScope": "NER on 7 BIO-complete documents; conditional RE on 88 resolved reference pairs; unknowns masked and coverage disclosed. No complete-document pipeline score",
+    "trainingAllowed": false,
+    "labelMutationAllowed": false,
+    "testContentAccessAllowed": false,
+    "automaticPromotionAllowed": false
+  },
+  "inputSha256": {
+    "resources/course_relation_evidence_v1.json": "354e01079b92bbf8d5463a84ad321ddcb2eb5dbd8bfc002a5de738bc7464430d",
+    "scripts/evaluate_relation_evidence.py": "c0706ea656d19d9255d5b6810e085fba1d2e2c10b5dfe4134a87d2bff09da2e8",
+    "scripts/course_relation_evidence.py": "77f0f7b04ca670afbb0e229649227c9b9583cb8845c5013a584ae358ca388d55",
+    "tests/test_relation_evidence.py": "56a977203809e329a162648ebea1351f54d5109a6243db4a2313bf59947cef80",
+    "kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48/manifest.json": "489bf9095484c76a79786b0a8427a93320e2ed30154ed29df95a85cd6eac5497",
+    "kg_datasets/dblp/course_abstract_supplement_reviewed_20261009_49/manifest.json": "2fc9aeaefa200100de611e5940ee5fa3cf6bbcfcea520f3700542be11f8c82f7",
+    "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/manifest.json": "7bd4820ea44f8da7dd1d5e58495eb025994cf2379fede4f85cf7e3e62156c874",
+    "resources/course_graph_runtime.json": "93a0beba5afdeb177afe0c6eb12567869ef8b0c502cd127b353f1dde3ccbc0fc",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+    "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/ner/checkpoint_epoch_04/model.safetensors": "df93480647db1abacaefb752a89980be9a5a1527ee0ec7a5367086f707353c96",
+    "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/re/checkpoint_epoch_06/model.safetensors": "9b60cbfaa8beef7ce7010d2181164507446d03c50e7c8a12d31e5bfb69b32566",
+    "resources/course_abstract_benchmark_training_v1.json": "1a69a36986f6d603091c57c05ef4ba58e13e41e0233cf1458720275cd41ba644"
+  }
+}

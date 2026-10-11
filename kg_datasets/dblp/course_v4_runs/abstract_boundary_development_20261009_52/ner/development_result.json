@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "trainInputs": 65,
+  "devInputs": 16,
+  "epochs": 6,
+  "steps": 198,
+  "bestCheckpoint": "checkpoint_epoch_06",
+  "bestDev": {
+    "loss": 0.29976656153609915,
+    "invalidTransitions": 56,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 138,
+        "predicted": 196,
+        "reference": 184,
+        "precision": 0.7040816326530612,
+        "recall": 0.75,
+        "f1": 0.7263157894736842
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 98,
+          "predicted": 120,
+          "reference": 116,
+          "precision": 0.8166666666666667,
+          "recall": 0.8448275862068966,
+          "f1": 0.8305084745762712
+        },
+        "TASK": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 28,
+          "predicted": 60,
+          "reference": 53,
+          "precision": 0.4666666666666667,
+          "recall": 0.5283018867924528,
+          "f1": 0.49557522123893805
+        },
+        "DATASET": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 12,
+          "predicted": 16,
+          "reference": 15,
+          "precision": 0.75,
+          "recall": 0.8,
+          "f1": 0.7741935483870968
+        }
+      },
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold"
+    }
+  },
+  "initialDev": {
+    "loss": 0.7872264352546904,
+    "invalidTransitions": 246,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 109,
+        "predicted": 253,
+        "reference": 184,
+        "precision": 0.4308300395256917,
+        "recall": 0.592391304347826,
+        "f1": 0.4988558352402746
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 78,
+          "predicted": 137,
+          "reference": 116,
+          "precision": 0.5693430656934306,
+          "recall": 0.6724137931034483,
+          "f1": 0.616600790513834
+        },
+        "TASK": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 28,
+          "predicted": 107,
+          "reference": 53,
+          "precision": 0.2616822429906542,
+          "recall": 0.5283018867924528,
+          "f1": 0.35
+        },
+        "DATASET": {
+          "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+          "truePositive": 3,
+          "predicted": 9,
+          "reference": 15,
+          "precision": 0.3333333333333333,
+          "recall": 0.2,
+          "f1": 0.25
+        }
+      },
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold"
+    }
+  },
+  "simpleBaselineDev": {
+    "micro": {
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+      "truePositive": 29,
+      "predicted": 57,
+      "reference": 184,
+      "precision": 0.5087719298245614,
+      "recall": 0.15760869565217392,
+      "f1": 0.24066390041493776
+    },
+    "perClass": {
+      "METHOD": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 24,
+        "predicted": 49,
+        "reference": 116,
+        "precision": 0.4897959183673469,
+        "recall": 0.20689655172413793,
+        "f1": 0.2909090909090909
+      },
+      "TASK": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 4,
+        "predicted": 7,
+        "reference": 53,
+        "precision": 0.5714285714285714,
+        "recall": 0.07547169811320754,
+        "f1": 0.13333333333333333
+      },
+      "DATASET": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 1,
+        "predicted": 1,
+        "reference": 15,
+        "precision": 1.0,
+        "recall": 0.06666666666666667,
+        "f1": 0.125
+      }
+    }
+  },
+  "savedCheckpoints": 1,
+  "classifierAndEncoderChanged": true,
+  "reloadPredictionsIdentical": true,
+  "RETrained": false,
+  "devUsedForGradient": false,
+  "testEvaluated": false,
+  "modelPromoted": false
+}

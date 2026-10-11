@@ -1,0 +1,37 @@
+{
+  "valid": true,
+  "rejected": [],
+  "pairCounts": {
+    "train": 315,
+    "dev": 162
+  },
+  "documentCounts": {
+    "train": 247,
+    "dev": 113
+  },
+  "maxTokens": {
+    "train": 36,
+    "dev": 35
+  },
+  "classSupport": {
+    "train": {
+      "USED_FOR": 300,
+      "EVALUATED_ON": 3,
+      "NO_RELATION": 12
+    },
+    "dev": {
+      "USED_FOR": 155,
+      "EVALUATED_ON": 2,
+      "NO_RELATION": 5
+    }
+  },
+  "markers": {
+    "headOpen": "[unused0]",
+    "headClose": "[unused1]",
+    "TASK": "[unused2]",
+    "DATASET": "[unused3]",
+    "tailClose": "[unused4]"
+  },
+  "formalRelationReadiness": false,
+  "testTokenized": false
+}

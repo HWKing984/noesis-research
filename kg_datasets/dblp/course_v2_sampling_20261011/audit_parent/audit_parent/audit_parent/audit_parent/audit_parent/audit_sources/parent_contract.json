@@ -1,0 +1,35 @@
+{
+  "version": "course_v2_semantic_revision_v1",
+  "pilot": "kg_datasets/dblp/course_v2_evidence_pilot_20261010",
+  "pilotManifestSha256": "734ae61d92d9fa36a028050dc97ec7754726b9a326ac2afcbe70ed202adec4c1",
+  "externalQueue": "D:/Users/Y7000P/Downloads/v2_semantic_review_queue.csv",
+  "externalQueueSha256": "0f8ad726726ec2b100c943ff6fc4f834224dd961df958bb92ca5dc005d505d4d",
+  "externalReport": "D:/Users/Y7000P/Downloads/v2_first_batch_audit_report.md",
+  "externalReportSha256": "359d17dffd8b1b32a449f5f4cfb79078307b473daa7f045c7d2d30e82a405a04",
+  "sourceRepairs": {
+    "2503.01309": {
+      "folder": "kg_datasets/dblp/course_abstract_train_sources_20261008_37",
+      "manifestSha256": "698a0ff6e5e451123cc382ce94f8c4add17c44ea1056c7f4253f6abe6543dbbb",
+      "collectionContract": "resources/course_abstract_expansion_v1.json"
+    },
+    "2010.01057": {
+      "folder": "kg_datasets/dblp/course_abstract_boundary_sources_20261009_52_retry",
+      "manifestSha256": "465475e835d9b51243436c90820f31bd8f9e735eead7811ef17617aa17779d55",
+      "collectionContract": "resources/course_abstract_boundary_expansion_v1.json"
+    }
+  },
+  "rules": {
+    "USED_FOR": "A source-supported task performed by the specific local method actor. A training objective may be retained only with taskRole=training_proxy, not advertised as a downstream application. An appositional family description alone does not inherit a specialized model's capability.",
+    "EVALUATED_ON": "A model or explicit inference strategy must have its own reported result attributable to the named dataset through recorded source-local coreference. Model components do not inherit overall-model scores.",
+    "NO_RELATION": "Scoped direct-operator contrast, not global incapability: retain only explicit object-versus-operator or explicitly partitioned module-output roles. Mere different components or training-only dataset mentions stay UNRESOLVED.",
+    "evidence": "Keep original contiguous endpoint-covering evidence; store separate exact predicate spans and coreference explanation. Never replace necessary attribution with a shorter but unsupported sentence.",
+    "entityCoverage": "Audit every existing mention, but quarantine documents with concrete unreviewed omission candidates instead of training omitted spans as O. No old entity boundaries are changed in this batch.",
+    "duplicateSupport": "Report mention-pair, distinct literal head-tail per paper, and source-paper counts separately. Do not assign duplicate mention pairs independent evidential weight."
+  },
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "productionMutationAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false
+}

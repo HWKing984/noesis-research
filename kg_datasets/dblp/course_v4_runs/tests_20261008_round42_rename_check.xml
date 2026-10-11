@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.303" timestamp="2026-10-08T15:00:57.355325+08:00" hostname="HWKing"><testcase classname="tests.test_process_dblp_ai.ProcessingRulesTest" name="test_snapshot_date_is_explicit_and_not_invented" time="0.050"><failure message="PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\Y7000P\\AppData\\Local\\Temp\\tmpjt27y2an\\.cli-ryl_78qc' -&gt; 'C:\\Users\\Y7000P\\AppData\\Local\\Temp\\tmpjt27y2an\\cli'">self = &lt;test_process_dblp_ai.ProcessingRulesTest testMethod=test_snapshot_date_is_explicit_and_not_invented&gt;
+
+    def test_snapshot_date_is_explicit_and_not_invented(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            source = directory / 'unrelated.xml.gz'
+            source.write_bytes(b'synthetic input, not a DBLP snapshot')
+            summary = write_outputs(directory, [], {'candidate_count': 0}, source, 42, 2015, 2025)
+            self.assertIsNone(summary['source']['snapshot'])
+            declared = write_outputs(directory, [], {'candidate_count': 0}, source, 42, 2015, 2025,
+                                     snapshot_date='2026-09-01')
+            self.assertEqual(declared['source']['snapshot'], '2026-09-01')
+            self.assertEqual(declared['source']['snapshot_basis'], 'user_declared_not_independently_verified')
+            with self.assertRaises(ValueError):
+                write_outputs(directory, [], {'candidate_count': 0}, source, 42, 2015, 2025,
+                              snapshot_date='2026-02-30')
+            with gzip.open(source, 'wb') as stream:
+                stream.write(b'&lt;!DOCTYPE dblp SYSTEM "dblp.dtd"&gt;&lt;dblp&gt;&lt;article key="test/1"&gt;&lt;title&gt;Machine Learning&lt;/title&gt;&lt;year&gt;2020&lt;/year&gt;&lt;/article&gt;&lt;/dblp&gt;')
+            (directory / 'dblp.dtd').write_text('&lt;!ELEMENT dblp ANY&gt;', encoding='utf-8')
+            with patch.object(sys, 'argv', ['process', '--source', str(source), '--output', str(directory / 'cli'),
+                                           '--limit', '1', '--snapshot-date', '2026-09-01']), patch('builtins.print'):
+&gt;               main()
+
+tests\test_process_dblp_ai.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\process_dblp_ai.py:577: in main
+    temporary.replace(output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/tmpjt27y2an/.cli-ryl_78qc')
+target = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/tmpjt27y2an/cli')
+
+    def replace(self, target):
+        """
+        Rename this path to the target path, overwriting if that path exists.
+    
+        The target path may be absolute or relative. Relative paths are
+        interpreted relative to the current working directory, *not* the
+        directory of the Path object.
+    
+        Returns the new Path instance pointing to the target path.
+        """
+&gt;       os.replace(self, target)
+E       PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\Y7000P\\AppData\\Local\\Temp\\tmpjt27y2an\\.cli-ryl_78qc' -&gt; 'C:\\Users\\Y7000P\\AppData\\Local\\Temp\\tmpjt27y2an\\cli'
+
+C:\Python313\Lib\pathlib\_local.py:780: PermissionError</failure></testcase></testsuite></testsuites>

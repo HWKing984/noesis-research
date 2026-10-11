@@ -1,0 +1,52 @@
+{
+  "captures": [
+    {
+      "observed": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015."
+        ],
+        "labels": true
+      },
+      "sha256": "67271414033e8fae56b4ecdb83aceecad5f1ecf1b8fde4fa2aae46fdb27f1524",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261009_search_repair_cdp\\search_1440.png"
+    },
+    {
+      "observed": {
+        "width": 768,
+        "scrollWidth": 753,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015."
+        ],
+        "labels": true
+      },
+      "sha256": "39d49a74df128e028f6571a9d92cadfc4940b848ccf4474cfa4cbc20be23c0c2",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261009_search_repair_cdp\\search_768.png"
+    },
+    {
+      "observed": {
+        "width": 375,
+        "scrollWidth": 360,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Neural Reranking Improves Subjective Quality of Machine Translation: NAIST at WAT2015."
+        ],
+        "labels": true
+      },
+      "sha256": "1531d02fca200fb1c18e63a585833d9bd06fd1b06e66a12aa4dc542b3cc93a54",
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261009_search_repair_cdp\\search_375.png"
+    }
+  ],
+  "INP": "not_measured",
+  "WCAG": "not_fully_audited",
+  "networkErrors": [],
+  "status": "passed",
+  "baselineComparison": "INCONCLUSIVE_no_baseline",
+  "exceptions": []
+}

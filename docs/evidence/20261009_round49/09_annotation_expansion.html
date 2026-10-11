@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>补充开发标注与完整性缺口 · 第49轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>补充开发标注与完整性缺口 · 第49轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>固定8篇补充开发来源，官方HTML原文、身份元数据重叠拒绝、串行采集。限速配置15.1秒；UTC记录最短15.092014秒，均满足保存robots的15秒要求，但UTC记录不能证明每次达到配置裕量。实际AI初标及同会话复核，不是独立人工金标准；不扩大生产图或改旧dev/test。</p><table><thead><tr><th>论文ID</th><th>NER状态</th><th>提及数</th><th>明确EVAL</th><th>未决对</th><th>关系状态</th></tr></thead><tbody><tr><td>1907.11692</td><td>complete</td><td>6</td><td>0</td><td>8</td><td>unresolved</td></tr><tr><td>1909.11942</td><td>complete</td><td>12</td><td>0</td><td>30</td><td>unresolved</td></tr><tr><td>2003.10555</td><td>complete</td><td>16</td><td>1</td><td>50</td><td>unresolved</td></tr><tr><td>2006.03654</td><td>complete</td><td>25</td><td>9</td><td>138</td><td>unresolved</td></tr><tr><td>1906.08237</td><td>complete</td><td>17</td><td>0</td><td>29</td><td>unresolved</td></tr><tr><td>1910.10683</td><td>complete</td><td>11</td><td>0</td><td>29</td><td>unresolved</td></tr><tr><td>1910.13461</td><td>complete</td><td>22</td><td>4</td><td>106</td><td>unresolved</td></tr><tr><td>1908.10084</td><td>unresolved</td><td>24</td><td>0</td><td>140</td><td>unresolved</td></tr></tbody></table><h2>实际数据产物</h2><p>8采集成功，7篇NER通过/1篇共享词头隔离，109参考实体（METHOD55/TASK39/DATASET15）。明确88对：用途70/评测14/角色负例4；合格NER中的390/478对未决，未填负例。14条EVAL来自3论文，其中9条来自同一DeBERTa摘要，不是14次独立实验。</p><h2>停止质量晋级</h2><p>补充切片完整关系文档0/8、完整EVAL支持0；旧开发仍7/19、完整EVAL0。不能用部分标签证明整体关系正确率，不能缩小分母追分。暂缓新训练和替换，下一阶段转向现有候选检索系统终验。</p><table><thead><tr><th>工程检查</th><th>结果</th></tr></thead><tbody><tr><td>严格BIO</td><td>7篇原文/跨度/标签逐项重放通过</td></tr><tr><td>回归</td><td>378通过；JUnit 161.589秒；D隔离tmp</td></tr><tr><td>失败留痕</td><td>初次环境缺分词器，请求前停止；原失败保留。首次证据审核误把UTC与单调计时15.1秒等同，改为核验真实robots底线并公开全部间隔，原始采集记录未改</td></tr><tr><td>本轮没有</td><td>新模型训练、推理、最终测试、图谱写入或质量晋级</td></tr></tbody></table><footer>证据页生成时间：2026-10-09T01:43:56.507319+00:00<br>来源：
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

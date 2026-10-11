@@ -1,0 +1,74 @@
+{
+  "loss": 0.7142919654264527,
+  "metrics": {
+    "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+    "entityScope": "reviewed_reference_entities",
+    "accuracy": 0.8558558558558559,
+    "positiveMicro": {
+      "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+      "truePositive": 266,
+      "predicted": 313,
+      "reference": 267,
+      "precision": 0.8498402555910544,
+      "recall": 0.9962546816479401,
+      "f1": 0.9172413793103448
+    },
+    "positiveMacroF1": 0.9574468085106382,
+    "supportedPositiveClasses": [
+      "USED_FOR",
+      "EVALUATED_ON"
+    ],
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 258,
+        "predicted": 305,
+        "reference": 259,
+        "precision": 0.8459016393442623,
+        "recall": 0.9961389961389961,
+        "f1": 0.9148936170212766
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 8,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "NO_RELATION": {
+        "evaluationTarget": "dev_ai_reference_agreement_not_human_gold",
+        "truePositive": 19,
+        "predicted": 20,
+        "reference": 66,
+        "precision": 0.95,
+        "recall": 0.2878787878787879,
+        "f1": 0.4418604651162791
+      }
+    },
+    "confusionLabels": [
+      "USED_FOR",
+      "EVALUATED_ON",
+      "NO_RELATION"
+    ],
+    "confusionMatrix": [
+      [
+        258,
+        0,
+        1
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        47,
+        0,
+        19
+      ]
+    ],
+    "confusionAxes": "rows_reference_columns_prediction"
+  }
+}

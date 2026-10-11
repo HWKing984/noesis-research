@@ -1,0 +1,57 @@
+{
+  "valid": true,
+  "documents": 200,
+  "review_status": {
+    "draft": 200
+  },
+  "entity_counts": {
+    "METHOD": 121,
+    "TASK": 55,
+    "DOMAIN": 1
+  },
+  "zero_entity_documents": 38,
+  "errors": [],
+  "seed": 42,
+  "duplicate_group_count": 19901,
+  "non_singleton_groups": 99,
+  "corpus_ambiguity_flags": {
+    "diffusion_requires_context": 383,
+    "transformer_not_necessarily_llm_or_even_ai": 1505,
+    "ontology_scope_review": 474
+  },
+  "topic_quota": {
+    "computer-vision": 25,
+    "generative-ai": 25,
+    "graph-neural-network": 25,
+    "knowledge-graph": 25,
+    "large-language-model": 25,
+    "machine-learning": 25,
+    "natural-language-processing": 25,
+    "reinforcement-learning": 25
+  },
+  "years": {
+    "2015": 14,
+    "2016": 16,
+    "2017": 16,
+    "2018": 18,
+    "2019": 21,
+    "2020": 20,
+    "2021": 20,
+    "2022": 18,
+    "2023": 17,
+    "2024": 23,
+    "2025": 17
+  },
+  "types": {
+    "article": 101,
+    "inproceedings": 99
+  },
+  "relations_auto_created": 0,
+  "sampling": "purposeful equal-topic round robin over year/type; one paper per known duplicate group; not a probability sample",
+  "limitations": [
+    "Exact normalized title/DOI grouping only; near duplicates require further review",
+    "All annotations are draft; zero dictionary hits do not imply no entity",
+    "Schema remains candidate pending human pilot review",
+    "Existing CSVs and topic assignments were not modified; AI precision/recall not yet measured"
+  ]
+}

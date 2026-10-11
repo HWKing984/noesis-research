@@ -1,0 +1,34 @@
+{
+  "queue": 8,
+  "NER": 7,
+  "quarantines": 1,
+  "revisedDocuments": 2,
+  "NERChanged": false,
+  "knownPairs": 111,
+  "addedPairs": 23,
+  "relationSupport": {
+    "USED_FOR": 81,
+    "NO_RELATION": 13,
+    "EVALUATED_ON": 17
+  },
+  "addedSupport": {
+    "NO_RELATION": 9,
+    "USED_FOR": 11,
+    "EVALUATED_ON": 3
+  },
+  "eligiblePairs": 478,
+  "unknownPairs": 367,
+  "completeDocuments": 0,
+  "completeCoverage": 0.0,
+  "completeEVALSupport": 0,
+  "completeEVALPapers": 0,
+  "maxMarkedTokens": 428,
+  "strictBIOPassed": true,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "modelPredictionsUsedForAnnotation": false,
+  "testContentConsumed": false,
+  "independentHumanGold": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false
+}

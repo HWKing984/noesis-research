@@ -1,0 +1,61 @@
+{
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-be08ed170eb448e3a34013f17a09296a",
+  "captures": [
+    {
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round39/04_traceability.html",
+      "capturedAt": "2026-10-08T05:19:39.1352590Z",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1800",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261008_round39\\04_traceability.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-be08ed170eb448e3a34013f17a09296a",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round39/04_traceability.html"
+      ],
+      "sourcePage": "04_traceability.html",
+      "originalConsoleScreenshot": false,
+      "viewportHeight": 1800,
+      "sourcePageSha256": "17a2d362d5b1a639fe3bee61d92668b3f4f22ff6fe31c53d6db07f9ac23f7c96",
+      "image": "04_traceability.png",
+      "sha256": "47c201743876f7c4ee76973b846c308d7da01197c3f1f92292c90cbd91f4eda4",
+      "bytes": 161023
+    },
+    {
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round39/09_annotation_expansion.html",
+      "capturedAt": "2026-10-08T05:19:39.8000422Z",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261008_round39\\09_annotation_expansion.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-be08ed170eb448e3a34013f17a09296a",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round39/09_annotation_expansion.html"
+      ],
+      "sourcePage": "09_annotation_expansion.html",
+      "originalConsoleScreenshot": false,
+      "viewportHeight": 2300,
+      "sourcePageSha256": "5dfe9bab1a663f24e25ae16f276c63ff41cd6b03d17f9780b715acb374b4582b",
+      "image": "09_annotation_expansion.png",
+      "sha256": "5836ecb71486061bbf69e2c89fd390b6c0fce3347f3eca690d1d47e11ed965a0",
+      "bytes": 179715
+    }
+  ],
+  "status": "completed",
+  "renderer": "installed_Microsoft_Edge_headless",
+  "finishedAt": "2026-10-08T05:19:39.8013326Z",
+  "kind": "actual_browser_render_capture",
+  "originalConsoleScreenshot": false,
+  "viewportWidth": 1280,
+  "generatedFromRealArtifacts": true,
+  "browserVersion": "154.0.4258.62"
+}

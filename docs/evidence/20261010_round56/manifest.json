@@ -1,0 +1,18 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "createdAtUTC": "2026-10-10T00:50:35.058566+00:00",
+  "inputSha256": {
+    "annotations/course_v4/seal_diverse_roles_20261010_56.py": "f9c79e8d44df5e733426b09c9be7527f0728cbb2a5878c02fea7daad0bfe0b70",
+    "kg_datasets/dblp/course_diverse_train_roles_20261010_56_final/manifest.json": "b45ac3019819f67a56e33abc68b8d5a1115fe4b251b0f3d8d47d6dd5e77aa4e8",
+    "kg_datasets/dblp/course_v4_runs/diverse_role_diagnostic_20261010_56/manifest.json": "d23922305f32ea7eb5b641f9a0cc5679085e329a31efdadbdabe471ed966c44e",
+    "kg_datasets/dblp/course_v4_runs/tests_role56_final.xml": "819a0324e39ffe7f2427bb38949480bf594ea640b0a80cbbaabc0243aa87ff2d",
+    "scripts/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "scripts/course_bio_constraints.py": "0e30e9386ca7eecc50aea86b9167e5aa6cfc20bb39cd825a16ebed29df1301ec",
+    "kg_datasets/dblp/course_v4_runs/abstract_boundary_development_20261009_52/new_ner_dev_predictions.jsonl": "96c21033e214f94607c1d4536931b9c3dbcc246feb1f845f735bc08c0d29d5aa"
+  },
+  "filesSha256": {
+    "01_data.html": "5084ca007000a5ca1cc3ded51052edb8a64986f271fb30e1e97d40faa64e2f61",
+    "03_predictions.html": "83d6ecca42d9b52e645008ea432ea0fba3de52a8b08c800b69403f60bd83a2c6",
+    "audit_state.json": "4118d6a88bb8c51260876caa882799680379e4c6cc5bb8a8d7982f9db62ea8d2"
+  }
+}

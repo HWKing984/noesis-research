@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DBLP v2 人工试标</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;max-width:1050px;margin:25px auto;padding:0 20px;color:#222;background:#fafafa}
+header,.card{background:white;border:1px solid #ddd;border-radius:9px;padding:20px;margin:16px 0}h1{font-size:23px}h2{font-size:18px}
+button,input,select,textarea{font:inherit;border:1px solid #aaa;border-radius:4px;padding:6px;margin:4px}button{cursor:pointer;background:white}button:hover{background:#eef3fa}
+#title{font-size:22px;white-space:pre-wrap;line-height:2;padding:16px 0;user-select:text}mark{background:#e8eef8;border-bottom:2px solid #444;cursor:pointer}mark[data-label=TASK]{background:#e3f3e8}mark[data-label=DATASET]{background:#fff0cb}
+.muted{font-size:14px;color:#666}.warning{color:#924b00}#error{color:#ad1824}#notes{width:95%;height:65px}.pair{border-top:1px solid #ddd;padding:10px 0}.reason{width:85%}
+</style>
+<header><h1 id="heading"></h1><p class="warning" id="warning"></p>
+<label>实际标注者 <input id="reviewer" placeholder="真实姓名或人员编号"></label><button id="export">导出进度 JSONL</button>
+<label>恢复进度 <input id="import" type="file" accept=".jsonl"></label><p id="progress"></p><p id="error"></p>
+<p class="muted">schema仍是候选版；三项复核互相独立。通过结构校验不证明语义正确，也不表示可以开始正式训练。刷新前务必导出。</p></header>
+<div class="card"><button id="prev">上一条</button><input id="jump" type="number" min="1" style="width:70px"><button id="go">跳转</button><button id="next">下一条</button>
+<p id="meta" class="muted"></p><div id="title"></div>
+<h2>一、实体：METHOD / TASK / DATASET</h2><select id="label"></select><button id="add">选中原文后添加实体</button><button id="clear">清空实体</button>
+<p class="muted">连续平面字符跨度，[start,end)。点击色块删除。模型名称、架构限定词与未知数据集名称需人工检查，不以词典为准。</p><div id="spans"></div>
+<button id="review">确认本条实体人工复核</button><button id="draft">实体退回待复核</button>
+<h2>二、论文级领域标签（不是NER实体）</h2><select id="domainLabel"></select><button id="domainAdd">用选中文字作为领域证据</button><div id="domains"></div>
+<p class="muted">领域证据可以与TASK文字重合，不改变实体跨度。无法判断时保留待复核，不强行归类。</p><button id="domainReview">确认本条领域复核（可为无标签）</button>
+<h2>三、关系（后续可单独复核）</h2><p class="muted">共现不是关系。空项表示未判定；NO_RELATION须说明理由；UNRESOLVED不能作为正式训练标签。当前证据单位为完整标题，EVALUATED_ON须有明确评测文字，不因出现数据集就创建。</p>
+<div id="pairs"></div><button id="relationReview">确认全部候选关系已判定</button>
+<h2>四、歧义及备注</h2><textarea id="notes"></textarea></div>
+<script id="pilot-data" type="application/json">__PILOT_JSON__</script>
+<script id="schema-data" type="application/json">__SCHEMA_JSON__</script>
+<script id="page-data" type="application/json">__PAGE_JSON__</script>
+<script>__REVIEW_JS__</script></html>

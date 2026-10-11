@@ -1,0 +1,22 @@
+{
+  "status": "failed_attempt_preserved",
+  "stage": "temporary_extracted_isolated_replay",
+  "archive": "outputs/v2_admission_audit_20261010_first_failed.zip",
+  "archiveSha256": "91e4d2413545e262794c8068538711fb575766c3cdf0ff4c775e82a43a374456",
+  "archiveBytes": 4987451,
+  "zipCRCVerified": true,
+  "allEntrySha256VerifiedBeforeReplay": true,
+  "verifierExitCode": 1,
+  "error": "ValueError: admission_file_hashes",
+  "attemptedCommand": ["python", "-I", "kg_datasets/dblp/course_v2_admission_20261010/source_snapshot/scripts/finalize_v2_admission.py", "--verify", "kg_datasets/dblp/course_v2_admission_20261010"],
+  "cause": "Extracted snapshot imports wrote relocated Python bytecode into inherited manifest-bound cache files.",
+  "changedMembers": [
+    "source_snapshot/scripts/__pycache__/course_v2_identity.cpython-314.pyc",
+    "source_snapshot/scripts/__pycache__/finalize_v2_supervision.cpython-314.pyc"
+  ],
+  "remedy": "Use python -I -B for genuinely read-only extracted replay. Preserve all frozen source, cache hashes and first archive.",
+  "diagnosticReadOnlyReplayExitCode": 0,
+  "diagnosticReadOnlyReplayAssertionCategories": 130,
+  "actualRegressionTestsUnchanged": 239,
+  "newModelScoreProduced": false
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "actual_live_browser_screenshots_and_application_evidence",
+  "sealedAtUTC": "2026-10-07T06:39:59.928828+00:00",
+  "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+  "filesSha256": {
+    "sources/kg_datasets/dblp/course_v4_graph_production_20261007_25/manifest.json": "246e695ec3aa0ae32af5287955f9acf1a6e8502ca1c56078b8538a34eb30126b",
+    "sources/annotations/course_v4/seal_application_20261007_round26.py": "10b9df3663a5b426f61773e97e04f767894da9be9d692fb95be12288e7ce63ae",
+    "sources/annotations/course_v4/check_application_20261007_round26.py": "415cb680fe1a4aa9cb48e0f9b3210c16bc2a9650ad37e161c65d160944a5d1ad",
+    "sources/scripts/course_graph.py": "ebb39337f66e6b9d5d2bcf3ce6e77030a9ea8cb7f7d2eff210d31706b932f8da",
+    "sources/resources/course_literature.html": "d3ab6011b0e1a1888c9e7f53511d93934ff6cab9c45e3ee38ce7ae1ad582940e",
+    "sources/tests/test_course_graph.py": "d84f9eae005a6ff9785e97b6281f1b4a673ce279b447933e7230075f1b938b39",
+    "sources/kg_datasets/dblp/course_v4_runs/graph_import_20261007_26.json": "bf260720218a733d357221228910908d18f7df069397546db89e36d99c9d9325",
+    "sources/kg_datasets/dblp/course_v4_runs/graph_import_20261007_26_idempotent.json": "d6e0bf02bb024dc9672292821d28c7816324bf64f80c02b57ad02faeef876240",
+    "sources/kg_datasets/dblp/course_v4_runs/application_acceptance_20261007_26.json": "f8ac2be0bb8210276cf325a7d15b225acad9952edece100899690daa7b69a47b",
+    "sources/kg_datasets/dblp/course_v4_runs/application_acceptance_20261007_26_final.json": "1a29b43849c96747e473fab77bc3784c62cf4ba550b27bc18187b692ebd995f7",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_graph_20261007_round26.xml": "bdcb6f347347669544f879030c3bca17dc7ff9e01b9eb0b943cbc6b4441a3c01",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261007_round26_all.xml": "e95001531f82be1cec0c19236dfac05469a55cbde2f803c639e07f4ecddc7e2c",
+    "01_neo4j_graph.jpeg": "b0ce711d869a069df8726b2744df629ac4ab33f6d4ecca5e0bc8d558945d9acc",
+    "02_live_search.png": "98a1a9ddb39841430af9c6d1edfe8a67d153b773dde4fda5bc54921504e38d64",
+    "03_live_detail.png": "d4695b502262cdc5a22ffa5bd2bbda456b53c479568a0cfa87e8a9d9fb3c5931",
+    "04_desktop_evidence.jpeg": "d0c8e00bcd9eef7d5d58af5eca16df489f6a3b372b9c35465cc69503343569e0",
+    "graph_query.cypher": "dc4614d47347d540ac287d77968130cc1401002641872d58f09d73bcd982e706",
+    "acceptance_initial_source.py": "85a8f9a6b1a7ac3801eee6571223d8f02cabb290923a56bfc7483abab1771a2d"
+  },
+  "sourceSha256": {
+    "kg_datasets/dblp/course_v4_graph_production_20261007_25/manifest.json": "246e695ec3aa0ae32af5287955f9acf1a6e8502ca1c56078b8538a34eb30126b",
+    "annotations/course_v4/seal_application_20261007_round26.py": "10b9df3663a5b426f61773e97e04f767894da9be9d692fb95be12288e7ce63ae",
+    "annotations/course_v4/check_application_20261007_round26.py": "415cb680fe1a4aa9cb48e0f9b3210c16bc2a9650ad37e161c65d160944a5d1ad",
+    "scripts/course_graph.py": "ebb39337f66e6b9d5d2bcf3ce6e77030a9ea8cb7f7d2eff210d31706b932f8da",
+    "resources/course_literature.html": "d3ab6011b0e1a1888c9e7f53511d93934ff6cab9c45e3ee38ce7ae1ad582940e",
+    "tests/test_course_graph.py": "d84f9eae005a6ff9785e97b6281f1b4a673ce279b447933e7230075f1b938b39",
+    "kg_datasets/dblp/course_v4_runs/graph_import_20261007_26.json": "bf260720218a733d357221228910908d18f7df069397546db89e36d99c9d9325",
+    "kg_datasets/dblp/course_v4_runs/graph_import_20261007_26_idempotent.json": "d6e0bf02bb024dc9672292821d28c7816324bf64f80c02b57ad02faeef876240",
+    "kg_datasets/dblp/course_v4_runs/application_acceptance_20261007_26.json": "f8ac2be0bb8210276cf325a7d15b225acad9952edece100899690daa7b69a47b",
+    "kg_datasets/dblp/course_v4_runs/application_acceptance_20261007_26_final.json": "1a29b43849c96747e473fab77bc3784c62cf4ba550b27bc18187b692ebd995f7",
+    "kg_datasets/dblp/course_v4_runs/tests_graph_20261007_round26.xml": "bdcb6f347347669544f879030c3bca17dc7ff9e01b9eb0b943cbc6b4441a3c01",
+    "kg_datasets/dblp/course_v4_runs/tests_20261007_round26_all.xml": "e95001531f82be1cec0c19236dfac05469a55cbde2f803c639e07f4ecddc7e2c"
+  },
+  "credentialSaved": false,
+  "visualReviewPerformed": true,
+  "screenshotNotice": "Unmodified native MCP screenshot bytes; file-save time is not capture-start time. Basic graph layout, no optimized zoom screenshot claimed.",
+  "captureFailures": [
+    "Direct filePath rejected by tool workspace roots",
+    "Dynamic graph calls interrupted",
+    "Oversized node_repl data transfer rejected; native bytes transported in bounded chunks",
+    "Closed console stdin export failed PNG validation before any file creation"
+  ]
+}

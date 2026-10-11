@@ -1,0 +1,201 @@
+{
+  "reviewer":"codex_ai_source_read_not_independent_human_gold",
+  "task":"whole_abstract_expressed_relation_v2",
+  "retainReviewedParentPositives":true,
+  "documents":[
+    {"arxivId":"2303.17448","reason":"Copula theory models random-variable relationships; NN-Copula-CD detects changes. Disaster monitoring is an application of change detection, not automatically an independently demonstrated capability of each loss/component.","rules":[
+      {"heads":["e6","e7","e8","e9","e13","e15","e16","e17","e18","e22"],"tails":["e1","e2","e5","e10","e14"],"label":"USED_FOR","role":"downstream_application","evidence":"the heterogeneous CD problem has significantly benefited from the development of deep neural networks (DNNs)"},
+      {"heads":["e19"],"tails":["e20"],"label":"USED_FOR","role":"component_operation","evidence":"supervise a neural network to learn the dependence between bi-temporal heterogeneous superpixel pairs"}
+    ]},
+    {"arxivId":"2008.10400","reason":"The abstract explicitly says pooling is not used. Rotation and translation augment training data; do not transfer CNN evaluation to these augmentation components.","rules":[
+      {"heads":["e10"],"tails":["e1","e13","e14"],"label":"NO_RELATION","reason":"Pooling is explicitly not used in the described CNN/augmentation pipeline; no source-attributed task/evaluation for pooling is expressed.","evidence":"Every convolution layer uses batch normalization and ReLU activation, and pooling is not used."}
+    ]},
+    {"arxivId":"2208.08300","reason":"The historical never-used-at-DSE statement is followed by this paper's actual Transformer application, so it is not a present negative. time2vec explicitly represents time-series features.","rules":[
+      {"heads":["e7"],"tails":["e12"],"label":"USED_FOR","role":"component_operation","evidence":"time2vec encoding to represent the time series features"},
+      {"heads":["e3"],"tails":["e4","e5"],"label":"USED_FOR","role":"background_method_use","evidence":"The transformer model has been widely leveraged for natural language processing and computer vision tasks"}
+    ]},
+    {"arxivId":"2208.08485","reason":"Retain the single contiguous coordinated operation with its shared object: representation/precessing/analysis/visualization of graph data. Length alone is not a deletion criterion; flat BIO cannot copy the shared object into four discontinuous spans. Preserve the original spelling.","replace":[{"id":"e8","text":"representation, precessing, analysis, and visualization of large-scale structured data over graphs"}],"rules":[
+      {"heads":["e1","e2","e4","e5"],"tails":["e3"],"label":"USED_FOR","role":"component_operation","evidence":"generalize graph convolutional neural networks (GCN) to the complex domain"},
+      {"heads":["e4"],"tails":["e6","e7"],"label":"USED_FOR","role":"downstream_application","evidence":"Then we apply complex GCN to power grid state forecasting, power grid cyber-attack detection and localization."}
+    ]},
+    {"arxivId":"2510.09914","reason":"K-DREAM names one framework; its explicit drug-discovery, molecular-generation and multi-target design goals are source claims, not verified therapeutic efficacy.","rules":[
+      {"heads":["K-DREAM","Knowledge-Driven Embedding-Augmented Model"],"tails":["e1","e5","e7","e8","e13","e11","e10"],"label":"USED_FOR","role":"downstream_application","evidence":"K-DREAM directs molecular generation toward candidates with higher biological relevance and therapeutic suitability"},
+      {"heads":["e14"],"tails":["e1"],"label":"USED_FOR","role":"background_method_use","evidence":"Recent breakthroughs in generative modeling have demonstrated remarkable capabilities in molecular generation"}
+    ]},
+    {"arxivId":"2407.18827","reason":"LLMs expedite extraction of relevant AM information. BERT/GPT are motivational foundation-model examples; their use in the demonstration tool is not established.","rules":[
+      {"heads":["e8","e9"],"tails":["e1","e6","e7","e10","e11"],"label":"USED_FOR","role":"downstream_application","evidence":"We show the ability of LLMs (Large Language Models) to expedite the extraction of relevant information from data-driven AM literature."}
+    ]},
+    {"arxivId":"2501.02474","reason":"The GE-FSOD benchmark attribution is to the full model. Preserve component-to-benchmark uncertainty; generalization/classification performance phrases are not extra tasks."},
+    {"arxivId":"2501.06756","reason":"Path loss supports data transmission, diffusion generates placements, and EFGD is the complete placement algorithm. Other layer/component objectives are not automatically inherited."},
+    {"arxivId":"1708.07747","reason":"Dataset-description abstract with no labeled METHOD actor. Do not invent a machine-learning algorithm or an evaluation triple."},
+    {"arxivId":"2107.03374","reason":"Research Codex and its distinct production version are not interchangeable mentions. Retain the previously adjudicated HumanEval/coreference evidence; generic GPT does not inherit Codex's task/evaluation."},
+    {"arxivId":"1606.05250","reason":"The logistic regression model is evaluated on the described SQuAD benchmark; retain both explicit dataset aliases and reading-comprehension purpose."},
+    {"arxivId":"2110.14168","reason":"Verifier judging is explicit. Verification's GSM8K result is a complete strategy result, not independent evaluation of every component.","rules":[
+      {"heads":["e4"],"tails":["e10"],"label":"USED_FOR","role":"component_operation","evidence":"select the one ranked highest by the verifier"},
+      {"heads":["e6","e8"],"tails":["e1"],"label":"USED_FOR","role":"downstream_application","evidence":"We demonstrate that verification significantly improves performance on GSM8K"}
+    ]},
+    {"arxivId":"2406.01574","reason":"CoT and Chain of Thought are explicit aliases. The text compares CoT and direct answering on MMLU-Pro; original-MMLU retrospective findings do not settle every other benchmark pair.","rules":[
+      {"heads":["e14","e16"],"tails":["e15"],"label":"EVALUATED_ON","evidence":"models utilizing Chain of Thought (CoT) reasoning achieved better performance on MMLU-Pro compared to direct answering"}
+    ]},
+    {"arxivId":"1905.00537","reason":"Pretraining/transfer learning are background methods for language understanding. SuperGLUE is newly introduced; the abstract reports no evaluation of these methods on it.","rules":[
+      {"heads":["e1","e2"],"tails":["e5","e8"],"label":"NO_RELATION","reason":"The full abstract introduces SuperGLUE without reporting evaluations of pretraining or transfer-learning methods on that benchmark; no model/dataset coreference supplies such a result.","evidence":"we present SuperGLUE, a new benchmark styled after GLUE"}
+    ]},
+    {"arxivId":"1609.02907","reason":"The convolutional architecture performs graph semi-supervised learning and representation learning. Unnamed citation/knowledge-graph collections are not invented dataset names.","rules":[
+      {"heads":["e2","e5"],"tails":["e1","e4"],"label":"USED_FOR","role":"downstream_application","evidence":"Our model scales linearly in the number of graph edges and learns hidden layer representations"}
+    ]},
+    {"arxivId":"2009.03300","reason":"Sort the restored evaluation TASK before GPT-3. The test measures accuracy; GPT-3 is the measured model, not the actor performing that measurement.","rules":[
+      {"heads":["e2"],"tails":["e1"],"label":"NO_RELATION","reason":"The new test measures a model's multitask accuracy. GPT-3 is the object of assessment, and the full abstract does not attribute the assessment operation to GPT-3.","evidence":"We propose a new test to measure a text model's multitask accuracy."}
+    ]},
+    {"arxivId":"2509.00025","reason":"Preserve the source spelling LTSMs. Emotion-classification model names and best-model ResNet34 attribution are supported; augmentation/transfer operate on model training.","add":{"TASK":["trained our models"]},"rules":[
+      {"heads":["e3","e4","e5","e9"],"tails":["e1","e2","e6"],"label":"USED_FOR","role":"downstream_application","evidence":"we built several machine learning models using SVMs, LTSMs, and CNNs to classify emotions in human speeches"},
+      {"heads":["e7","e8"],"tails":["trained our models"],"label":"USED_FOR","role":"training_proxy","evidence":"by leveraging transfer learning and data augmentation, we efficiently trained our models"}
+    ]},
+    {"arxivId":"2105.15057","reason":"Dominant patterns are discovered features, not automatically labeled algorithm actors. DNN feature analysis/robustness is a motivation; UAP-to-goal attribution is not established."},
+    {"arxivId":"2008.07342","reason":"Separate correlation-based relationship analysis from the named sequential predictive pipeline; unspecified shared data does not establish every cross-stage relation.","rules":[
+      {"heads":["e1"],"tails":["e8"],"label":"USED_FOR","role":"component_operation","evidence":"correlation analysis techniques to observe value and order relationships between features, feature groups, and COVID-19 occurrences"},
+      {"heads":["e3","e4","e7"],"tails":["e5","e6"],"label":"USED_FOR","role":"downstream_application","evidence":"A specific RNN-based inference pipeline called DoubleWindowLSTM-CP is proposed in this work for predictive event modeling."}
+    ]},
+    {"arxivId":"1903.07107","reason":"Neuroevolution's control application and NN state/action mapping are explicit. The unnamed new algorithm does not become a named NEAT benchmark result.","rules":[
+      {"heads":["e2","e3"],"tails":["e13"],"label":"USED_FOR","role":"background_method_use","evidence":"neural networks (NN) through an evolutionary algorithm, usually to serve as a state-to-action mapping model"}
+    ]},
+    {"arxivId":"2410.14398","reason":"DNG/full method are local aliases; negative guidance requires posterior estimation. Do not assume NP or Stable Diffusion individually received the stated MNIST/CIFAR10 evaluation.","rules":[
+      {"heads":["e6","e9","e13","e14"],"tails":["e10"],"label":"USED_FOR","role":"downstream_application","evidence":"We evaluate the performance of DNG class-removal on MNIST and CIFAR10"},
+      {"heads":["e6","e13","e14"],"tails":["e11","e12"],"label":"EVALUATED_ON","evidence":"We evaluate the performance of DNG class-removal on MNIST and CIFAR10"},
+      {"heads":["e8","e18"],"tails":["e17"],"label":"USED_FOR","role":"component_operation","evidence":"negative guidance requires estimating the posterior class probability during the denoising process, which is achieved with limited additional computational overhead by tracking the discrete Markov Chain"}
+    ]},
+    {"arxivId":"2412.10656","reason":"Named comparison models participate in the EKE reconstruction comparison. Taylor expansion motivates the approach; it is not described as independently reconstructing EKE.","rules":[
+      {"heads":["e3","e4","e5","e6","e7","e8","e9","e10","e11","e12","e13","e14","e15","e16","e18","e20","e23"],"tails":["e17"],"label":"USED_FOR","role":"downstream_application","evidence":"The MI-ResNet model outperforms the FCNN, ResNet, and MI-FCNN models, and traditional physics-based models in both regional and global reconstruction of subsurface EKE"},
+      {"heads":["e22"],"tails":["e2","e17","e21"],"label":"NO_RELATION","reason":"Taylor-series expansion is an inspiration for the proposed neural approach; no reconstruction operation is attributed to the expansion itself in the complete abstract.","evidence":"inspired by the Taylor-series expansion of subsurface EKE, a multiple-input neural network approach is proposed"}
+    ]},
+    {"arxivId":"2408.04326","reason":"CNN/Transformer feature extraction is explicit background usage; MLFM utilizes multi-level information. Prompt limitations do not prove that SAM can never support SOD.","rules":[
+      {"heads":["e4","e5","e6"],"tails":["e7"],"label":"USED_FOR","role":"background_method_use","evidence":"Convolutional Neural Networks (CNN) or Transformers for deep feature extraction"},
+      {"heads":["e20","e21"],"tails":["e28"],"label":"USED_FOR","role":"component_operation","evidence":"a Multi-Level Fusion Module (MLFM) to comprehensively utilize the multi-level information"}
+    ]},
+    {"arxivId":"1903.10404","reason":"Retain explicitly described autoencoder compression. The three historical RL-to-compression pairs remain UNRESOLVED even under the new text scope: compression representations feed the RL agents, so a role contrast alone is not sufficient."},
+    {"arxivId":"2512.15363","reason":"Separate KATS complete search system, extraction framework, entity-resolution component, retrieval engine, and compared RAG systems. Do not transfer CS-TDS evaluation to every component.","rules":[
+      {"heads":["e4"],"tails":["e5","e16"],"label":"USED_FOR","role":"component_operation","evidence":"constructs a high-quality, dynamically updatable task-dataset knowledge graph by employing a collaborative multi-agent framework for information extraction"},
+      {"heads":["e10","e11","e12"],"tails":["e23"],"label":"USED_FOR","role":"component_operation","evidence":"For online retrieval, KATS utilizes a specialized hybrid query engine that combines vector search with graph-based ranking"},
+      {"heads":["e17"],"tails":["e13"],"label":"EVALUATED_ON","evidence":"Experiments on our benchmark suite show that KATS significantly outperforms state-of-the-art retrieval-augmented generation frameworks"}
+    ]},
+    {"arxivId":"2507.22101","reason":"The survey lists model families and agricultural task families collectively; it does not supply an individual CLIP/transformer-to-each-task assignment. These pairs remain masked."},
+    {"arxivId":"2506.20241","reason":"Optimization algorithms are introduced after data preparation and enhance structured reasoning. They are not described as preparing/annotating the dataset.","rules":[
+      {"heads":["e14","e15","e16","e17","e18","e19"],"tails":["e8","e12","e20"],"label":"USED_FOR","role":"downstream_application","evidence":"enhance the structured reasoning capabilities of LLMs using Group Relative Policy Optimization (GRPO), incorporating two innovative algorithms--MAX-Flow and Longest Common Subsequence (LCS)"},
+      {"heads":["e16","e17","e18"],"tails":["e22","e23"],"label":"NO_RELATION","reason":"MAX-Flow/LCS are optimization-stage methods; source-local dataset conversion and annotation occur before training, with no attribution to these algorithms.","evidence":"First, we convert unstructured data into structured formats by explicitly annotating reasoning steps."}
+    ]},
+    {"arxivId":"2509.03845","reason":"The proposed IRL method infers rewards and is tested on taxi pricing. Mean-field games are the modeling setting, not automatically the reward-inference actor.","rules":[
+      {"heads":["e5"],"tails":["e6","e7"],"label":"USED_FOR","role":"downstream_application","evidence":"our method can infer rewards from different yet structurally similar tasks"}
+    ]},
+    {"arxivId":"2503.03790","reason":"Keep DDCSR full-model CSR relations and explicit module operations. The two historical cross-module negative pairs remain UNRESOLVED: intermediate surface output may support final mesh prediction."},
+    {"arxivId":"2312.14977","reason":"Generative diffusion's noise-addition step is explicit. A conceptual connection to PDE diffusion does not express that the PDE model adds noise to a training dataset.","rules":[
+      {"heads":["e1","e4","e5"],"tails":["e7"],"label":"USED_FOR","role":"training_proxy","evidence":"Diffusion models work by adding noise to the available training data"},
+      {"heads":["e6"],"tails":["e7"],"label":"NO_RELATION","reason":"PDE diffusion models are introduced for a mathematical connection; no training-data noise-addition operation is attributed to them in this abstract.","evidence":"draw a connection with partial differential equation (PDE) diffusion models"}
+    ]},
+    {"arxivId":"2312.03556","reason":"PVA's inpainting and identity-preservation claims are explicit. CelebAHQ-IDI trains attention/encoder components; evaluation on it remains ambiguous, not automatically positive or negative."},
+    {"arxivId":"2509.20659","reason":"Domain adaptation supports beam prediction. Adversarial training/domain classifiers explicitly extract invariant features; comparison performance is not a named dataset relation.","rules":[
+      {"heads":["e10","e15","e16"],"tails":["e14"],"label":"USED_FOR","role":"component_operation","evidence":"The model extracts domain-invariant features in adversarial training with domain classifier"},
+      {"heads":["e3","e4","e7","e9","e13"],"tails":["e2","e6","e12"],"label":"USED_FOR","role":"background_method_use","evidence":"Existing transfer learning-based beam prediction approaches primarily rely on simple fine-tuning."}
+    ]},
+    {"arxivId":"1910.12770","reason":"Skip-Clip's ranking task is a training proxy; its action-recognition evaluation is UCF101. ImageNet is an initialization source for a compared model, not the stated evaluation benchmark.","rules":[
+      {"heads":["e2","e3","e9"],"tails":["e8"],"label":"NO_RELATION","reason":"The only ImageNet statement concerns compared models initialized with ImageNet parameters. The complete abstract's evaluation is on UCF101, not ImageNet; no unresolved benchmark anaphor changes this attribution.","evidence":"outperform models initialized using inflated ImageNet parameters"}
+    ]},
+    {"arxivId":"2307.03130","reason":"VisKoP supports KBQA and program editing; neural program induction converts questions. The execution engine explicitly supports practical KBQA, without automatically inheriting program-conversion/GUI operations.","rules":[
+      {"heads":["e10","e13"],"tails":["e3","e4","e9"],"label":"USED_FOR","role":"component_operation","evidence":"To facilitate the practical KBQA on a million-entity-level KB, we design a highly efficient KoPL execution engine"}
+    ]},
+    {"arxivId":"2411.04637","reason":"Active/hybrid labeling support annotation. The machine-learning models are trained using the labels; the tutorial does not assign annotation to those models themselves.","rules":[
+      {"heads":["e1"],"tails":["e2","e3","e8","e9"],"label":"NO_RELATION","reason":"Machine-learning models are label consumers in the opening training/deployment statement. Annotation strategies and human annotators perform labeling and quality control, not this unspecified consumer model group.","evidence":"Training and deploying machine learning models relies on a large amount of human-annotated data."}
+    ]},
+    {"arxivId":"2503.00416","reason":"Generator and detector are attack-analysis tools. LLama-3/GPT-4o are target LLMs, not the recurrence-detection tools.","rules":[
+      {"heads":["e5"],"tails":["e6"],"label":"USED_FOR","role":"downstream_application","evidence":"a black-box evolutionary algorithm that efficiently identifies recurrent generation scenarios"},
+      {"heads":["e11"],"tails":["e12"],"label":"USED_FOR","role":"downstream_application","evidence":"a lightweight real-time classifier trained on activation patterns"},
+      {"heads":["e8","e9"],"tails":["e6","e12"],"label":"NO_RELATION","reason":"The named LLMs are the investigated targets. Identification is attributed to RecurrentGenerator and loop detection to RecurrentDetector, not to these target LLMs.","evidence":"identifies recurrent generation scenarios in prominent LLMs like LLama-3 and GPT-4o"}
+    ]},
+    {"arxivId":"2110.02932","reason":"Interview/population study with no labeled research TASK endpoint. Do not fabricate classifier outputs or benchmark relations."},
+    {"arxivId":"1812.11737","reason":"FiLM and the studied deep-learning models are explicitly visual-question-answering models trained on quantifier questions.","rules":[
+      {"heads":["e2","e4"],"tails":["e1","e3","e5"],"label":"USED_FOR","role":"downstream_application","evidence":"deep learning models for visual question answering learn when trained on such questions"}
+    ]},
+    {"arxivId":"2503.01309","reason":"Keep voxel-hashing query and similarity-filtering merge operations. The complete proposed approach is unnamed in the abstract; VFMs and component hashes do not automatically inherit ScanNet/SceneNN evaluation or all querying tasks."},
+    {"arxivId":"2110.08010","reason":"The MTL approach is evaluated by submitting runs to TREC-IS. The encoder components are not separately reported benchmark actors.","rules":[
+      {"heads":["e1","e2"],"tails":["e9","e10"],"label":"EVALUATED_ON","evidence":"We evaluate the effectiveness of our approach with a variety of metrics by submitting runs to the TREC Incident Streams (IS) track"},
+      {"heads":["e6"],"tails":["e3","e4","e5"],"label":"USED_FOR","role":"downstream_application","evidence":"an ensemble approach combining disparate transformer encoders within our approach helps to improve the overall effectiveness"}
+    ]},
+    {"arxivId":"2506.16934","reason":"Retain PET modality removal. The MS-CDT model has explicit separation/feature-capture/preservation goals; do not assign all these to every diffusion/transformer/imaging component.","rules":[
+      {"heads":["e1","e2","e10","e11"],"tails":["e3","e4","e9","e13","e15"],"label":"USED_FOR","role":"downstream_application","evidence":"the model captures multi-level feature representations, aiming to balance computational efficiency and detail preservation"}
+    ]},
+    {"arxivId":"2407.20251","reason":"The uncertainty-aware model quantifies uncertainties. The deterministic comparison explicitly considers none; this is a clear source-local negative.","rules":[
+      {"heads":["e4"],"tails":["e13"],"label":"USED_FOR","role":"component_operation","evidence":"The proposed approach utilizes the probabilistic nature of the deep learning framework and quantifies both aleatoric and epistemic uncertainties"},
+      {"heads":["e12"],"tails":["e13"],"label":"NO_RELATION","reason":"The deterministic comparison framework explicitly does not consider uncertainties in the system.","evidence":"deterministic deep learning framework-based design optimization where none of the uncertainties in the system are explicitly considered"}
+    ]},
+    {"arxivId":"2409.13884","reason":"Background augmentation/prompting/fine-tuning mitigate bias. The centralized/decentralized methods are explicitly the two proposed debiasing approaches; central LLM conversation facilitation does not independently establish every debiasing result.","rules":[
+      {"heads":["e4","e5","e6"],"tails":["e3"],"label":"USED_FOR","role":"background_method_use","evidence":"bias mitigation techniques using data augmentation, zero-shot prompting, and model fine-tuning"},
+      {"heads":["e10","e16","e18","e19"],"tails":["e11","e13","e20"],"label":"USED_FOR","role":"downstream_application","evidence":"two distinct approaches within this framework for debiasing LLMs: a centralized method"}
+    ]},
+    {"arxivId":"2107.10847","reason":"RLQP is the tuning policy; OSQP is the optimizer being improved. Keep the existing QPLIB/Netlib/Maros evaluation attribution and mask unreported component evaluation.","rules":[
+      {"heads":["e6","e7","e10","e12","e16"],"tails":["e8"],"label":"USED_FOR","role":"component_operation","evidence":"Reinforcement Learning (RL) can learn a policy to tune parameters"},
+      {"heads":["e3"],"tails":["e8"],"label":"NO_RELATION","reason":"OSQP is the optimizer facing tuning/convergence challenges; the abstract assigns the tuning operation to the RL policy, not an automatic self-tuning operation by OSQP.","evidence":"These methods face two persistent challenges: manual hyperparameter tuning and convergence time"}
+    ]},
+    {"arxivId":"2402.17595","reason":"SNN and Spectral Neural Networks are defined aliases. Matrix-learning suitability and matrix-sensing investigations are expressed; comparator vanilla networks are not assigned every SNN property.","rules":[
+      {"heads":["e9","e10","e13","e16"],"tails":["e11","e12","e17"],"label":"USED_FOR","role":"downstream_application","evidence":"Spectral Neural Networks (abbrv. SNN) that is particularly suitable for matrix learning problems"},
+      {"heads":["e9","e10","e13","e16"],"tails":["e15"],"label":"USED_FOR","role":"downstream_application","evidence":"confirm its effectiveness in the context of matrix sensing"}
+    ]},
+    {"arxivId":"2402.14245","reason":"CriticGPT understands trajectories and produces preference feedback; its separately described reward model guides policy learning and is the Meta-World result actor.","rules":[
+      {"heads":["e8","e9","e12"],"tails":["e10","e19","e20"],"label":"USED_FOR","role":"downstream_application","evidence":"a multimodal LLM, termed CriticGPT, capable of understanding trajectory videos in robot manipulation tasks, serving as a critic to offer analysis and preference feedback"},
+      {"heads":["e16"],"tails":["e17"],"label":"USED_FOR","role":"component_operation","evidence":"CriticGPT's reward model efficiently guides policy learning"}
+    ]},
+    {"arxivId":"2206.08747","reason":"Retain the source-adjudicated outputs-to-channel-dimensions antecedent. Forward prediction and inverse input selection are separate operations; do not automatically assign both to every ML mention.","rules":[
+      {"heads":["e8","e6"],"tails":["e5"],"label":"USED_FOR","role":"downstream_application","evidence":"Neural Networks (NN) are the most efficient in predicting the outputs"},
+      {"heads":["e2","e3"],"tails":["e13","e4"],"label":"USED_FOR","role":"downstream_application","evidence":"employ machine learning (ML) techniques to capture the relationship between picosecond laser machining parameters for finding proper parameter combinations"},
+      {"heads":["e10"],"tails":["e12","e11"],"label":"USED_FOR","role":"downstream_application","evidence":"Equipped with an ML model that captures the interconnection between laser parameters and the engraved channel dimensions, one can predict the required input parameters"}
+    ]},
+    {"arxivId":"2310.02147","reason":"Whittle policies and Neural-Q-Whittle solve RMAB; Lyapunov drift is used for the convergence proof, not as the decision policy solving bandits.","rules":[
+      {"heads":["e1","e5","e6","e11","e14","e19"],"tails":["e2","e3","e7"],"label":"USED_FOR","role":"downstream_application","evidence":"Neural-Q-Whittle, a Whittle index based Q-learning algorithm for RMAB"},
+      {"heads":["e17"],"tails":["e2","e3","e7"],"label":"NO_RELATION","reason":"Lyapunov drift analyzes evolution/convergence of parameters; the abstract does not attribute policy actions or RMAB solving to this proof technique.","evidence":"Our analysis leverages a Lyapunov drift approach to capture the evolution of two coupled parameters"}
+    ]},
+    {"arxivId":"2510.26830","reason":"The generalized attack-generation approach and SmoothGuard defense are separately introduced. Noise/clustering defend against perturbations, not the described adversarial-image generation attack.","rules":[
+      {"heads":["e5","e14"],"tails":["e10","e15"],"label":"USED_FOR","role":"downstream_application","evidence":"Our method perturbs continuous modalities (e.g., images and audio) with Gaussian noise, generates multiple candidate outputs, and applies embedding-based clustering to filter out adversarially influenced predictions."},
+      {"heads":["e5","e14"],"tails":["e4"],"label":"NO_RELATION","reason":"The attack-generation approach is introduced before the separate SmoothGuard defense. The full abstract assigns generation of adversarial images to that separate approach, not SmoothGuard.","evidence":"we first generalize an approach for generating adversarial images within the HuggingFace ecosystem and then introduce SmoothGuard"}
+    ]},
+    {"arxivId":"2107.09145","reason":"AWD distills information and penalizes neural-network attributions. The source neural network is the object of that penalty, not its executor.","rules":[
+      {"heads":["e2","e3","e7","e10","e13","e15"],"tails":["e4","e11","e12","e16","e17"],"label":"USED_FOR","role":"downstream_application","evidence":"AWD penalizes feature attributions of a neural network in the wavelet domain"},
+      {"heads":["e5","e8"],"tails":["e16"],"label":"NO_RELATION","reason":"These neural-network mentions identify the model whose attributions AWD penalizes; no self-penalization operation is attributed to that network in the abstract.","evidence":"AWD penalizes feature attributions of a neural network"}
+    ]},
+    {"arxivId":"2509.18445","reason":"MeshODENet's long-term prediction uses an explicit introduction/result anaphor chain. GNN spatial reasoning and Neural ODE continuous-time modeling are separately stated roles.","rules":[
+      {"heads":["e2","e3"],"tails":["e4"],"label":"USED_FOR","role":"background_method_use","evidence":"their standard autoregressive application for long-term prediction"},
+      {"heads":["e6"],"tails":["e11"],"label":"USED_FOR","role":"component_operation","evidence":"synergizes the spatial reasoning of GNNs with the continuous-time modeling of Neural Ordinary Differential Equations"},
+      {"heads":["e7"],"tails":["e9"],"label":"USED_FOR","role":"component_operation","evidence":"the continuous-time modeling of Neural Ordinary Differential Equations"}
+    ]},
+    {"arxivId":"2509.19325","reason":"The abstract recommends high-quality data curation but describes no model/training algorithm performing that curation.","rules":[
+      {"heads":["$METHOD"],"tails":["e10"],"label":"NO_RELATION","reason":"The named models and SFT methods consume differing-quality data and are evaluated for consequences; data curation is a concluding recommendation, not an operation attributed to these methods.","evidence":"highlighting the critical need for extremely high-quality data curation"}
+    ]},
+    {"arxivId":"2208.08554","reason":"The survey explicitly reports GNN hardware-security applications and taxonomy; retain these as background usage claims, not new experiments on named datasets.","rules":[
+      {"heads":["e1","e2","e4","e7","e9","e11","e12","e17"],"tails":["e10","e13","e14","e15","e16"],"label":"USED_FOR","role":"background_method_use","evidence":"the state-of-the-art GNN-based hardware security systems into four categories: (i) HT detection systems, (ii) IP piracy detection systems, (iii) reverse engineering platforms, and (iv) attacks on logic locking"}
+    ]},
+    {"arxivId":"2510.03955","reason":"TimeWarp generates synthetic temporal data to fine-tune model responses. Improved temporal understanding is a training-purpose chain, not an independently named evaluation dataset.","rules":[
+      {"heads":["e7","e9"],"tails":["e8","e13"],"label":"USED_FOR","role":"training_proxy","evidence":"TimeWarp, a systematic method to create a targeted synthetic temporal dataset to fine-tune the model's responses"}
+    ]},
+    {"arxivId":"1704.04683","reason":"RACE dataset description has no labeled METHOD actor; keep the no-relation-pair document without fabricating state-of-the-art model names."},
+    {"arxivId":"1705.03551","reason":"Both baselines have reported TriviaQA results. Only the neural-network relative clause attributes prior SQuAD performance; it does not attribute that result to the feature-based classifier.","rules":[
+      {"heads":["e7","e8"],"tails":["e1","e3","e5","e11"],"label":"EVALUATED_ON","evidence":"Neither approach comes close to human performance (23% and 40% vs. 80%), suggesting that TriviaQA is a challenging testbed"},
+      {"heads":["e7"],"tails":["e9"],"label":"NO_RELATION","reason":"The singular relative clause about SQuAD describes the neural network, while classifier results are described for TriviaQA; no SQuAD evaluation of the classifier is expressed.","evidence":"a feature-based classifier and a state-of-the-art neural network, that performs well on SQuAD reading comprehension"}
+    ]},
+    {"arxivId":"1809.09600","reason":"HotpotQA describes unnamed QA systems, currently represented by task mentions rather than named METHOD actors. Do not inject unnamed model identities."},
+    {"arxivId":"1903.00161","reason":"DROP methods/models are unnamed in the supplied flat annotation scope; operation/task mentions remain NER data without fabricated METHOD endpoints."},
+    {"arxivId":"1903.10676","reason":"SciBERT and its model descriptor perform the named NLP tasks; the explicitly compared BERT mention is a comparator. Generic pretraining does not automatically receive every downstream task.","rules":[
+      {"heads":["e2","e3","e5","e11"],"tails":["e8","e9","e10"],"label":"USED_FOR","role":"downstream_application","evidence":"We evaluate on a suite of tasks including sequence tagging, sentence classification and dependency parsing"}
+    ]},
+    {"arxivId":"1909.03546","reason":"Keep DyGIE++ extraction tasks and explicit component roles. Add its explicitly stated span-enumeration/refinement/scoring operation without assigning all model goals to every span mechanism.","rules":[
+      {"heads":["e5"],"tails":["e6","e7"],"label":"USED_FOR","role":"component_operation","evidence":"Our framework (called DyGIE++) accomplishes all tasks by enumerating, refining, and scoring text spans"}
+    ]},
+    {"arxivId":"1909.07755","reason":"SpERT is the whole attention model doing entity/relation extraction. BERT embeddings/negative sampling are components, not independent extraction actors.","rules":[
+      {"heads":["e1","e2"],"tails":["e5","e6","e8","e11"],"label":"USED_FOR","role":"downstream_application","evidence":"Our key contribution is a light-weight reasoning on BERT embeddings, which features entity recognition and filtering, as well as relation classification"}
+    ]},
+    {"arxivId":"2010.12812","reason":"Keep the independent-encoder pipeline's three benchmark results. The compared previous joint model group shares this comparison; do not propagate all evaluation results into individual contextual-representation components.","rules":[
+      {"heads":["e11"],"tails":["e8","e9","e10"],"label":"EVALUATED_ON","evidence":"standard benchmarks (ACE04, ACE05 and SciERC), obtaining a 1.7%-2.8% absolute improvement in relation F1 over previous joint models"},
+      {"heads":["e16"],"tails":["e7"],"label":"USED_FOR","role":"downstream_application","evidence":"an efficient approximation to our approach which requires only one pass of both entity and relation encoders"}
+    ]},
+    {"arxivId":"2010.01057","reason":"LUKE is not named in the abstract body. The unnamed complete model's five benchmark results do not identify bidirectional-transformer/BERT/self-attention components as separately evaluated models; keep all such pairs masked."},
+    {"arxivId":"2308.03279","reason":"UniversalNER repeated mentions denote the same proposed model and explicit NER capability. Do not invent a name for the assembled 43-dataset benchmark.","rules":[
+      {"heads":["UniversalNER"],"tails":["e12","e13","e16","e17","e19","e25","e26","e30"],"label":"USED_FOR","role":"downstream_application","evidence":"UniversalNER not only acquires ChatGPT's capability in recognizing arbitrary entity types"}
+    ]},
+    {"arxivId":"1906.06127","reason":"DocRED, Wikipedia, and Wikidata are datasets/resources; the latter two are construction sources, not evaluation benchmarks for a named METHOD. No new actor or EVALUATED_ON relation is invented."}
+  ]
+}

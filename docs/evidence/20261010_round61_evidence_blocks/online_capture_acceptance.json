@@ -1,0 +1,19 @@
+{
+  "kind": "record_of_actual_read_only_tool_checks",
+  "checkedAtUTC": "2026-10-10T08:09:56.7239709Z",
+  "appStatus": "ready",
+  "papers": 20000,
+  "graphId": "ai-literature-63686318d85cccb07afb",
+  "liveImportCompleted": true,
+  "captureCount": 1,
+  "captureSHA256": "bf0cc8102edb326535f4ad9cc4a75fd0505c42c382792a5fd2b8c2e4f91c02e7",
+  "browserVersion": "154.0.4258.62",
+  "captureHashesVerified": true,
+  "screenshotFooterVisuallyChecked": true,
+  "appSourceSHA256": "6db2411dc2aa41e4792871d89ed753c36f64de409c7e91cc002ea603c7a27ebd",
+  "reservedTestBinarySHA256": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+  "reservedTestSemanticsAccessed": false,
+  "graphOrServiceMutated": false,
+  "fullApplicationAcceptanceRepeated": false,
+  "notice": "Read-only health and screenshot acceptance, not model quality promotion, full UI acceptance, a new training run or human semantic validation. Capture is a real rendering of saved artifacts, not Neo4j or training-console UI. Recorded separately after the sealed experiment visualization."
+}

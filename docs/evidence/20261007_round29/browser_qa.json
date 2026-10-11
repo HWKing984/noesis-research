@@ -1,0 +1,37 @@
+{
+  "recordedAtUTC": "2026-10-07T08:21:46+00:00",
+  "liveURL": "http://127.0.0.1:8765/#paper=conf%2F3dim%2FVavilalaVF25&view=paper",
+  "previewPortStoppedAfterLiveAcceptance": 8766,
+  "liveHTTPChecks": 15,
+  "nativeCapture": "Installed Edge CDP Page.captureScreenshot; unmodified PNG bytes; awaited actual graph status before capture",
+  "screenshots": [
+    {"file":"04_graph_desktop_live.png","width":1440,"height":1100,"documentHorizontalOverflow":false},
+    {"file":"05_graph_tablet_live.png","width":768,"height":1100,"documentHorizontalOverflow":false},
+    {"file":"06_graph_mobile_live.png","width":375,"height":1100,"documentHorizontalOverflow":false}
+  ],
+  "visualInspection": "All three native live images viewed; six colored node categories and 10 nodes/11 edges visible. Mobile labels small at fit size; explicit zoom available.",
+  "interactions": {
+    "titleAndChineseMethodSearch": "1 real paper result",
+    "paperGraph": {"nodes":10,"edges":11,"paths":8},
+    "coauthorTwoHop": {"nodes":4,"edges":3,"paths":2},
+    "sharedMethodFourHop": {"nodes":63,"edges":62,"paths":30,"hasMorePaths":true},
+    "keyboardEnterOnSVGNode": "Raw Publication properties shown; one open-evidence button",
+    "openEvidenceThenReloadGraph": "detail loads, properties hidden and stale open buttons cleared",
+    "zoomToggle": "200 percent then fitted width",
+    "liveReset": "detail and graph hidden; SVG nodes zero; reset summary shown",
+    "livePermalinkReload": "10 nodes/11 edges; error empty"
+  },
+  "freshLiveNavigationNetwork": {"document":200,"health":200,"publication":200,"graph":200},
+  "freshLiveNavigationConsoleErrorsAndWarnings": 0,
+  "accessibilityBasics": {"formInputsLabelled":true,"SVGNodesKeyboardFocusableAndNamed":true,"nativeEnterActivationVerified":true,"fullWCAGAuditPerformed":false},
+  "oneLocalDesktopNavigationPerformance": {"width":1441,"height":934,"LCPMilliseconds":204,"CLS":0.01377718690158543,"INPMeasured":false,"productionPerformanceClaim":false},
+  "visualRegression": "INCONCLUSIVE: no committed baseline",
+  "preservedFailures": [
+    "MCP filePath rejected by tool workspace roots; inline screenshots still worked",
+    "01-03 headless timed screenshots blank despite browser exit zero; failed_capture_source.ps1 preserved; not accepted evidence",
+    "Root pytest collected immutable source copies and failed with import mismatch; corrected scope pytest tests, 355 passed; failed XML preserved",
+    "First live startup used nonexistent bundle path; no database write; corrected to verified production bundle",
+    "Initial Cypher concatenation omitted whitespace for coauthors; raw failure record preserved and shared join fixed"
+  ],
+  "scope": "Local read-only course prototype; not full graph, citation graph, calibrated facts or production security acceptance"
+}

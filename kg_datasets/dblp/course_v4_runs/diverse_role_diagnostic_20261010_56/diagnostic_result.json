@@ -1,0 +1,238 @@
+{
+  "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+  "models": {
+    "frozen46": {
+      "metrics": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.9545454545454546,
+        "positiveMicro": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 19,
+          "predicted": 20,
+          "reference": 19,
+          "precision": 0.95,
+          "recall": 1.0,
+          "f1": 0.9743589743589743
+        },
+        "positiveMacroF1": 0.9743589743589743,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 19,
+            "predicted": 20,
+            "reference": 19,
+            "precision": 0.95,
+            "recall": 1.0,
+            "f1": 0.9743589743589743
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 0,
+            "predicted": 0,
+            "reference": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 2,
+            "predicted": 2,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            19,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      },
+      "errors": 1,
+      "negativeContrastCorrect": 2,
+      "positiveTaskCorrect": 19
+    },
+    "frozen54": {
+      "metrics": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "entityScope": "reviewed_reference_entities",
+        "accuracy": 0.8636363636363636,
+        "positiveMicro": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 19,
+          "predicted": 22,
+          "reference": 19,
+          "precision": 0.8636363636363636,
+          "recall": 1.0,
+          "f1": 0.926829268292683
+        },
+        "positiveMacroF1": 0.926829268292683,
+        "supportedPositiveClasses": [
+          "USED_FOR"
+        ],
+        "perClass": {
+          "USED_FOR": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 19,
+            "predicted": 22,
+            "reference": 19,
+            "precision": 0.8636363636363636,
+            "recall": 1.0,
+            "f1": 0.926829268292683
+          },
+          "EVALUATED_ON": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 0,
+            "predicted": 0,
+            "reference": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "NO_RELATION": {
+            "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+            "truePositive": 0,
+            "predicted": 0,
+            "reference": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusionLabels": [
+          "USED_FOR",
+          "EVALUATED_ON",
+          "NO_RELATION"
+        ],
+        "confusionMatrix": [
+          [
+            19,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ]
+        ],
+        "confusionAxes": "rows_reference_columns_prediction"
+      },
+      "errors": 3,
+      "negativeContrastCorrect": 0,
+      "positiveTaskCorrect": 19
+    }
+  },
+  "typeMajorityFromOld386": {
+    "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+    "entityScope": "reviewed_reference_entities",
+    "accuracy": 0.8636363636363636,
+    "positiveMicro": {
+      "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+      "truePositive": 19,
+      "predicted": 22,
+      "reference": 19,
+      "precision": 0.8636363636363636,
+      "recall": 1.0,
+      "f1": 0.926829268292683
+    },
+    "positiveMacroF1": 0.926829268292683,
+    "supportedPositiveClasses": [
+      "USED_FOR"
+    ],
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "truePositive": 19,
+        "predicted": 22,
+        "reference": 19,
+        "precision": 0.8636363636363636,
+        "recall": 1.0,
+        "f1": 0.926829268292683
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "truePositive": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "NO_RELATION": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "truePositive": 0,
+        "predicted": 0,
+        "reference": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusionLabels": [
+      "USED_FOR",
+      "EVALUATED_ON",
+      "NO_RELATION"
+    ],
+    "confusionMatrix": [
+      [
+        19,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ]
+    ],
+    "confusionAxes": "rows_reference_columns_prediction"
+  },
+  "referencePairs": 22,
+  "referenceSourceDocuments": 5,
+  "negativeSupport": 3,
+  "negativeSourceDocuments": 1,
+  "EVALUATED_ONsupport": 0,
+  "referenceEntities": true,
+  "trainingExecuted": false,
+  "devContentAccessed": false,
+  "testContentConsumed": false,
+  "independentHumanGold": false,
+  "qualityPromotionPassed": false,
+  "modelPromoted": false,
+  "notice": "New labels belong to TRAIN papers already seen by earlier NER/other stages. Not independent model accuracy, generalization, end-to-end evaluation, or calibrated confidence. Three negatives are correlated source occurrences; no EVALUATED_ON conclusions."
+}

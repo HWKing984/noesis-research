@@ -1,0 +1,15 @@
+﻿{
+    "temporaryProfile":  "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-a9307b7ddbd44d2988f5914058090d9f",
+    "browserVersion":  "154.0.4258.62",
+    "kind":  "actual_browser_render_capture",
+    "viewportWidth":  1280,
+    "captures":  [
+
+                 ],
+    "finishedAt":  "2026-10-10T01:39:27.2943201Z",
+    "error":  "Method invocation failed because [System.Convert] does not contain a method named \u0027ToHexString\u0027.",
+    "originalConsoleScreenshot":  false,
+    "generatedFromRealArtifacts":  true,
+    "status":  "failed",
+    "renderer":  "installed_Microsoft_Edge_headless"
+}

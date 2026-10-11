@@ -1,0 +1,30 @@
+{
+  "renderer": "installed_Edge_headless",
+  "kind": "actual_live_application_screenshot",
+  "passwordRecorded": false,
+  "url": "http://127.0.0.1:8765/",
+  "captures": [
+    {
+      "bytes": 152972,
+      "sha256": "7d1c78a0fbcf20a09104dc353fbdcbe861f29dcc49fb8bba97578627e2d9b61c",
+      "file": "app_1440.png",
+      "capturedAtUTC": "2026-10-09T12:02:08.8021175Z",
+      "requestedWindowWidth": 1440
+    },
+    {
+      "bytes": 146942,
+      "sha256": "27260222c0a9163920e08176762a142dcf57f9c060c71b28d56ef234d8b9f3f7",
+      "file": "app_768.png",
+      "capturedAtUTC": "2026-10-09T12:02:09.9921113Z",
+      "requestedWindowWidth": 768
+    },
+    {
+      "bytes": 96023,
+      "sha256": "538bb459f8eddd87d0157fe81a66415029449873f8da2ddf32243184c1fddd84",
+      "file": "app_375.png",
+      "capturedAtUTC": "2026-10-09T12:02:11.2522194Z",
+      "requestedWindowWidth": 375
+    }
+  ],
+  "status": "completed"
+}

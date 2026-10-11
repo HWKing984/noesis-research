@@ -1,0 +1,22 @@
+{
+  "version": "course_v2_priority_revision_v1",
+  "parent": "kg_datasets/dblp/course_v2_entity_completion_20261010",
+  "parentManifestSha256": "2f42a6e3f063c1297e499aa70ade33f0ad34eb84f01656f677a9d498a77e2d82",
+  "externalAudit": "D:/Users/Y7000P/Downloads/v2_deep_audit_20261010.md",
+  "externalAuditSha256": "3e0046aff70a4089d397191ff1c563437c7c834d6391c4b596743311030e6bc2",
+  "externalQueue": "D:/Users/Y7000P/Downloads/v2_semantic_priority_review_20261010.csv",
+  "externalQueueSha256": "d2f495249598838ad577db7ebc6ee1cd4bb4a76a7b72864f3f90bc64629275fd",
+  "taskGuidelines": "docs/course_v2_task_scope_v1.md",
+  "rules": {
+    "taskRoleCompatibility": "Training data augmentation remains taskRole=training_proxy, with taskSubRole=training_augmentation as audit metadata only. Do not silently extend the model relation Schema or role vocabulary from a review CSV.",
+    "priorityScope": "Only the five nominated UNRESOLVED mention pairs may change labels. Two nominated evaluation chains receive antecedent/coreference spans; the same SQuAD chain is also attached to its existing alias pair. Existing entities, candidate universe, other labels and five quarantined negatives remain unchanged.",
+    "evidence": "Use full literal source spans, never evidenceHint as replacement text. Preserve prior evidence and reasons for evidence-only changes. Support links record AI discourse interpretation, not authenticated semantic proof.",
+    "replay": "Offline standard-library checker validates frozen exports and bindings without models or Neo4j. Deliver controlled source/test snapshots and historical failure XML separately; do not claim it reruns training or the complete original environment-dependent suite."
+  },
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "productionMutationAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false
+}

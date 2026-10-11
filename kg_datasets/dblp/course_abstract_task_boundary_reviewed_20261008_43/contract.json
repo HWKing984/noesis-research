@@ -1,0 +1,43 @@
+{
+  "version": "abstract_train_task_boundary_v1",
+  "diagnosticContract": "resources/course_abstract_train_audit_v1.json",
+  "diagnosticContractSha256": "285f4d7acbf2c7902687c7ae5f6bea2c0b354c5664437a81f673d0d70d6ab148",
+  "scope": "One train-only, source-backed consistency correction, not a universal maximal TASK rule. Preserve existing dev bytes, old snapshots and model results.",
+  "arxivId": "2501.02474",
+  "sampleId": "sample-f50e3264cb44031bf342",
+  "textSha256": "ff56a01af2224720cc8d795cfaf3cc9502de2a5396fbc37e6c1b31f5615a38b4",
+  "entityId": "e3",
+  "before": {
+    "entityId": "e3",
+    "start": 377,
+    "end": 393,
+    "text": "object detection",
+    "label": "TASK"
+  },
+  "after": {
+    "entityId": "e3",
+    "start": 362,
+    "end": 393,
+    "text": "remote sensing object detection",
+    "label": "TASK"
+  },
+  "equivalentSourceOccurrence": {
+    "entityId": "e1",
+    "start": 0,
+    "end": 31,
+    "text": "Remote sensing object detection",
+    "label": "TASK"
+  },
+  "sourceQuote": "While deep learning methods have achieved remarkable success in remote sensing object detection, they typically rely on large amounts of labeled data.",
+  "decision": "The same contiguous task in this abstract includes remote sensing as the domain modifier in both standalone occurrences. The second has no competing named-method container. Expand e3 only; keep generic object detection at e2/e8, few-shot tasks, model names and all other spans unchanged. This inconsistency was documented in source review before new training predictions were seen.",
+  "selfReview": "Re-read the whole original abstract and both literal task occurrences. The original source has the entire 31-character task at 362:393 and at 0:31, but only the latter retained the modifier. No entity overlap, new entity, type change or source-text rewrite occurs. All 10 pairs touching e3 are already UNRESOLVED; rebind them to the revised endpoint without assigning a positive or negative label. Keep other source-supported relations unchanged. This is same-session AI review, not independent gold or a demonstrated model improvement.",
+  "relationsPolicy": "Reject if any resolved relation touches changed e3. Existing ten UNRESOLVED pairs remain unknown; unaffected labels/evidence are inherited. Regenerate serialized endpoints and receipt hashes from reviewed annotation.",
+  "expectedAffectedUnknownPairs": 10,
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "trainingAllowed": false,
+  "semanticDevReadAllowed": false,
+  "semanticTestReadAllowed": false,
+  "automaticPromotionAllowed": false
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "09_annotation_expansion.html": "dfd4ea11a312d26d9b55bb427c6777d596557a44f4a183461c11725491c0113d",
+    "artifact_summary.json": "1fab893da4a6959b6ee6539e361931366454aa0bd28ad3fffd8cd6a423b2fd28",
+    "sources/abstract_pilot_decisions_20261008_32.json": "960ed7ac6b4246cb005e37b7f4a9af8a89ed6928f7602a99b659130ee21f23b7",
+    "sources/abstract_pilot_review_20261008_32.json": "aedabd69ee8adecdcc25bc4274a0f661eb6fa8ed04dbd8d0cbbfe71ed5e11c3f",
+    "sources/capture_course_evidence.ps1": "3b2c3581fad0a109ed4ab26604c3e49768a2b70a8f32c7738dd5b784e3eee8c2",
+    "sources/collect_course_abstracts.py": "125dc0bcc9940594b357e2234e91656db05d4d4d52a23c82bab0bfd489b0c896",
+    "sources/collect_course_abstract_pages.py": "4aea32450612164cd82392a502093d1946e9b7161ec6cdb3c848826ba4d6d004",
+    "sources/course_abstract_pages_20261008_32_manifest.json": "a8f5a3fc6bba56511498119a856d9fc9a9168bbffc0ef6a2b6b60cc7a387423e",
+    "sources/course_abstract_pages_20261008_32_summary.json": "778fcdc9d39d9661ce887a0a2566e08c4f61b55e64b95a23f56820463075575c",
+    "sources/course_abstract_pilot_20261008_32_manifest.json": "de4acf554742c640b837ea6b1b90fc18bc5498152c2c379a1d71f064407be8b2",
+    "sources/course_abstract_pilot_20261008_32_summary.json": "5446b742462411f6e54bdbc98d8fcc6dca78d3a45fff6290639136f387bb5109",
+    "sources/course_abstract_pilot_reviewed_ready_20261008_32_manifest.json": "dde178ce4334672b68b70998585b1387bcd3ea7d2869cb2387893480b0e6ff9b",
+    "sources/course_abstract_pilot_reviewed_ready_20261008_32_summary.json": "b7049a1faafa23af8f0945c607191b797a476a0cd05350fc71a1754f275e5a39",
+    "sources/course_abstract_queue_20261008_32_manifest.json": "acfe489a3c8e4d574b8fd0472008ca92bf66f2a092ad50922b7c2868b3979645",
+    "sources/course_abstract_queue_20261008_32_summary.json": "1631de0c031b7ac2a1205356553c9e8ad7bbe2ff395dabe0125ae4de4d217de8",
+    "sources/course_abstract_sources_20261008_32_manifest.json": "10f7554bf6ff1305f07cf18a9d9077467a539ea6fdc55c21fc3b6c7aa840cd7f",
+    "sources/course_abstract_sources_20261008_32_summary.json": "f585dedb7dbc617625573c6885855fb9e77d244e234fd03f53990febeefc5eed",
+    "sources/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "sources/prepare_abstract_pilot.py": "303cc32a752f295b951ae7b9ddc7bf4233bdc1c968eef1c8727db99e4f617081",
+    "sources/prepare_abstract_queue_20261008_round32.py": "6accef1afa7cf442256ae9e641892e49d5fe04ba247f22c2ef356b1d0366d93e",
+    "sources/review_abstract_pilot.py": "62294d6f4be76a5ff378744d6f0695c78a8e9365adb7acf2e6f2d2da3b4c3fdd",
+    "sources/seal_abstracts_20261008_round32.py": "e7f128cbf82d121172e6e6930c158db6cd4a4ccb7aff5e9645d7a5960dbf9dfc",
+    "sources/tests_20261008_round32_final.xml": "877cbad526e32a5eb33dc7dfb6059e486397293b4e495180ee8abf8166135b38",
+    "sources/test_course_abstracts.py": "f1331debba8abf1e7d41ec042b70d5c8242b1a9e0ff2a8e6c98a1da0ffe2e30b"
+  }
+}

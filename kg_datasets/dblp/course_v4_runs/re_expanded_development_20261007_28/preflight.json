@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "rejected": [],
+  "pairCounts": {
+    "train": 975,
+    "dev": 162
+  },
+  "documentCounts": {
+    "train": 754,
+    "dev": 113
+  },
+  "maxTokens": {
+    "train": 39,
+    "dev": 35
+  },
+  "classSupport": {
+    "train": {
+      "USED_FOR": 937,
+      "EVALUATED_ON": 3,
+      "NO_RELATION": 35
+    },
+    "dev": {
+      "USED_FOR": 155,
+      "EVALUATED_ON": 2,
+      "NO_RELATION": 5
+    }
+  },
+  "markers": {
+    "headOpen": "[unused0]",
+    "headClose": "[unused1]",
+    "TASK": "[unused2]",
+    "DATASET": "[unused3]",
+    "tailClose": "[unused4]"
+  },
+  "formalRelationReadiness": true,
+  "testTokenized": false,
+  "trainLossWeights": {
+    "USED_FOR": 0.3468516542155816,
+    "EVALUATED_ON": 108.33333333333333,
+    "NO_RELATION": 9.285714285714286
+  }
+}

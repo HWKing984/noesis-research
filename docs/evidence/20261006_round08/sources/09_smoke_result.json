@@ -1,0 +1,109 @@
+{
+  "evaluationScope": "in_sample_overfit_smoke_not_generalization",
+  "documents": 24,
+  "support": {
+    "METHOD": 27,
+    "TASK": 18,
+    "DATASET": 1
+  },
+  "initial": {
+    "loss": 2.143906385503351,
+    "invalidTransitions": 254,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+        "truePositive": 1,
+        "predicted": 86,
+        "reference": 46,
+        "precision": 0.011627906976744186,
+        "recall": 0.021739130434782608,
+        "f1": 0.015151515151515152
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+          "truePositive": 1,
+          "predicted": 32,
+          "reference": 27,
+          "precision": 0.03125,
+          "recall": 0.037037037037037035,
+          "f1": 0.03389830508474576
+        },
+        "TASK": {
+          "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+          "truePositive": 0,
+          "predicted": 0,
+          "reference": 18,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "DATASET": {
+          "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+          "truePositive": 0,
+          "predicted": 54,
+          "reference": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "final": {
+    "loss": 0.0001976049496925481,
+    "invalidTransitions": 0,
+    "metrics": {
+      "micro": {
+        "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+        "truePositive": 46,
+        "predicted": 46,
+        "reference": 46,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "perClass": {
+        "METHOD": {
+          "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+          "truePositive": 27,
+          "predicted": 27,
+          "reference": 27,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "TASK": {
+          "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+          "truePositive": 18,
+          "predicted": 18,
+          "reference": 18,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "DATASET": {
+          "evaluationTarget": "in_sample_ai_reference_agreement_not_generalization",
+          "truePositive": 1,
+          "predicted": 1,
+          "reference": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    }
+  },
+  "classifierChanged": true,
+  "encoderChanged": true,
+  "reloadPredictionsIdentical": true,
+  "passed": true,
+  "gates": {
+    "maxFinalInitialLossRatio": 0.5,
+    "minInSampleStrictEntityF1": 0.9
+  },
+  "devUsedForGradient": false,
+  "testEvaluated": false,
+  "humanGold": false,
+  "notice": "Memorizing reviewed AI train labels does not establish generalization or semantic accuracy."
+}

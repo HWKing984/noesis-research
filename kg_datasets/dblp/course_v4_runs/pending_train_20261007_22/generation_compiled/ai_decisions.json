@@ -1,0 +1,5120 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "generation",
+  "decisions": [
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Review of unnamed data/KG resources in bioinformatics; no identifiable algorithm, concrete computational task, or named dataset. Entire title checked.",
+      "sampleId": "sample-90da3e038660735db9a2"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Accelerators are hardware artifacts; the full network-acceleration task overlaps the target model.",
+      "entities": [
+        {
+          "text": "neural network",
+          "label": "METHOD"
+        },
+        {
+          "text": "optical computing",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No complete literal acceleration-task inventory.",
+      "relations": [],
+      "notes": "Optical communication is hardware/infrastructure.",
+      "sampleId": "sample-2067ce64e026dd50c38a"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Regional Active Contours",
+          "label": "METHOD"
+        },
+        {
+          "text": "Variational level sets",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "Regional active contours explicitly implement segmentation."
+        },
+        {
+          "head": "e2",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "The segmentation approach explicitly uses variational level sets."
+        },
+        {
+          "head": "e3",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "Segmentation explicitly uses ML."
+        }
+      ],
+      "notes": "Three complete method phrases, not unnamed datasets.",
+      "sampleId": "sample-1a78c02e3ee783b0c48c"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Labeling Topics with Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Neural networks explicitly label topics with images."
+        }
+      ],
+      "notes": "Images are unnamed input data.",
+      "sampleId": "sample-a9fdeb0c132d1366325d"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Translation in Memory Constrained Environments",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Translation is the stated operation; scalable is quality framing and no implementing algorithm is named.",
+      "sampleId": "sample-b520cf3d43d79e9aefc9"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-Batch L-BFGS",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named optimizer and learning family are explicit; optimizer-to-learning is METHOD-to-METHOD, outside current relations.",
+      "sampleId": "sample-b9a2c2e6f48326325fe8"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-lingual Geoparsing",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Translation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Geoparsing explicitly is based on machine translation."
+        }
+      ],
+      "notes": "Translation is the stated implementing technique here, not a dataset.",
+      "sampleId": "sample-447ff5abf7c224f28ccb"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Removing Heterogeneous Motion Blur",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "DL explicitly removes heterogeneous motion blur."
+        }
+      ],
+      "notes": "Motion Flow is an output description, not a named dataset.",
+      "sampleId": "sample-7683bca554a5a315a30e"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Sensor-based Gait Parameter Extraction",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Deep CNNs explicitly extract sensor-based gait parameters."
+        }
+      ],
+      "notes": "Sensors are modality context; no named gait benchmark.",
+      "sampleId": "sample-9c3fd9c8788e8a26af6b"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full CNN-training task overlaps the model target; no duplicate nested span.",
+      "entities": [
+        {
+          "text": "Convolutional Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Fast Fourier Transform",
+          "label": "METHOD"
+        },
+        {
+          "text": "Overlap-and-Add",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Incomplete flat training-task inventory.",
+      "relations": [],
+      "notes": "FFT and overlap-and-add are explicit computational techniques.",
+      "sampleId": "sample-2823cca4ac6e5c6577b8"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Embedding Word Similarity",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Machine Translation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Neural translation explicitly is used to embed word similarity."
+        }
+      ],
+      "notes": "Word similarity is a stated technical operation, not a corpus name.",
+      "sampleId": "sample-d9adbc368e73a0b974f0"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Active and Continuous Exploration",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Expected Model Output Changes",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Exploration explicitly uses DNNs."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Expected output changes explicitly guide exploration."
+        }
+      ],
+      "notes": "The acquisition criterion is literal; no unnamed exploration dataset.",
+      "sampleId": "sample-5b202a53a98edebdefd6"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-talker Speech Separation and Tracing",
+          "label": "TASK"
+        },
+        {
+          "text": "Permutation Invariant Training of Deep Recurrent Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The recurrent-network permutation-invariant training approach explicitly supports speech separation/tracing."
+        }
+      ],
+      "notes": "One complete training-qualified composite; do not nest recurrent networks inside it.",
+      "sampleId": "sample-c7f4d5eeec91736dcb85"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Kernelized Deep Convolutional Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Describing Complex Images",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Kernelized CNN explicitly describes complex images."
+        }
+      ],
+      "notes": "Describing images is a concrete generation operation; no image dataset named.",
+      "sampleId": "sample-5cd22e49c95adf125511"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "classification of echocardiograms",
+          "label": "TASK"
+        },
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Echocardiogram classification explicitly uses DL."
+        }
+      ],
+      "notes": "Fast/accurate are quality adjectives; no clinical accuracy claim.",
+      "sampleId": "sample-0426ea3940343e9c1698"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Temporal Information Extraction",
+          "label": "TASK"
+        },
+        {
+          "text": "Question Answering",
+          "label": "TASK"
+        },
+        {
+          "text": "LSTM-based Architecture",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Extraction component versus end-to-end QA execution is unclear.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The LSTM architecture explicitly extracts temporal information."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Temporal extraction may provide inputs to QA rather than implement the full QA task."
+        }
+      ],
+      "notes": "Syntactic dependencies are input features, not a named dataset.",
+      "sampleId": "sample-56a9f1552a387bc72e34"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Sequential Recurrent Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Language Modeling",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Sequential RNNs explicitly perform language modeling."
+        }
+      ],
+      "notes": "Retain sequential architecture modifier.",
+      "sampleId": "sample-348cb525a35a841ad4bb"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Classify Liver Cancer Patients",
+          "label": "TASK"
+        },
+        {
+          "text": "Data Expansion and Compression",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Input preparation versus patient classifier role unspecified.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The network explicitly classifies liver-cancer patients."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Data expansion/compression may prepare training inputs, not classify patients."
+        }
+      ],
+      "notes": "Joint data processing is not a named dataset; no clinical validity claim.",
+      "sampleId": "sample-dcfa773176a0fd9ff3e7"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Batch Hierarchical Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Batch/hierarchy define the technique family; generic Algorithms do not identify additional methods.",
+      "sampleId": "sample-72f2df87d97a2f83886a"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Topology adaptive graph convolutional networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Complete adaptive-architecture phrase; no downstream task is stated.",
+      "sampleId": "sample-cbf018ba0ada53a0cd99"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "multitask deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "deployment in embedded systems",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "NO_RELATION",
+          "reason": "The learning model is deployed; it is not explicitly the deployment algorithm."
+        }
+      ],
+      "notes": "Embedded platform is context, not a named dataset; target and implementer roles are distinct.",
+      "sampleId": "sample-2ae1198f2586a2a911d2"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-label Image Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Recurrently Discovering Attentional Regions",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Recurrent attentional-region discovery explicitly implements image recognition."
+        }
+      ],
+      "notes": "The recurrent attention mechanism is one continuous stated technique.",
+      "sampleId": "sample-4f365331ed132cdd715c"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full designing-RL-agents task overlaps its model family.",
+      "entities": [
+        {
+          "text": "Ethics Shaping",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not treat the designed agent family as the designer.",
+      "relations": [],
+      "notes": "Low-Cost is quality framing.",
+      "sampleId": "sample-908a2bf29f96c26cc614"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-Flow Mobile Data Offloading",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep RL explicitly performs mobile mult-flow offloading."
+        }
+      ],
+      "notes": "Cost/energy-aware describe constraints; preserve flow and mobile-data object.",
+      "sampleId": "sample-1ace2749895e295535c1"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Technique-family versus domain use of Computer Vision is ambiguous.",
+      "entities": [
+        {
+          "text": "Robust Fitting",
+          "label": "TASK"
+        },
+        {
+          "text": "Computer Vision",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No explicit fitting instrument is identified.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Computer vision may be the application field rather than a fitting algorithm."
+        }
+      ],
+      "notes": "Easy or Hard is question framing.",
+      "sampleId": "sample-d845352f22a96b077ef3"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "GONet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Traversability Estimation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "GONet explicitly estimates traversability."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The DL approach explicitly estimates traversability."
+        }
+      ],
+      "notes": "Semi-supervised is training setting; no navigation dataset named.",
+      "sampleId": "sample-1071881f549bbf3e1e70"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "The noise feature versus standalone method identity is uncertain.",
+      "entities": [
+        {
+          "text": "Distinguishing Computer-generated Graphics from Natural Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Keep clear DL association but do not certify complete instrument inventory.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "DL explicitly distinguishes generated graphics from natural images."
+        }
+      ],
+      "notes": "Sensor Pattern Noise could be a feature or fingerprint technique.",
+      "sampleId": "sample-8460fae43e580342b18c"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full nonlinear-dynamics analysis overlaps the network target; no identified analyzer algorithm.",
+      "entities": [
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "A model being analyzed is not the analyzer.",
+      "relations": [],
+      "notes": "Topological entropy and chaos describe properties.",
+      "sampleId": "sample-c081acd346de4505f7c7"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "spatial localization",
+          "label": "TASK"
+        },
+        {
+          "text": "convolutional neural networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "brain image segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Localization representation versus execution is unspecified.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Localization may be integrated as network information rather than executed as a network task."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "CNNs explicitly target brain segmentation."
+        }
+      ],
+      "notes": "Spatial integration and segmentation execution have distinct component roles.",
+      "sampleId": "sample-27abbec4a80e72434975"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Velocity-Porosity Supermodel",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The concept names a model/family, but no literal prediction task or named velocity/porosity dataset is stated.",
+      "sampleId": "sample-1251b4b9f69929deeba0"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Adversarial Training of Variational Auto-encoders",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The adversarially trained VAE approach explicitly generates images."
+        }
+      ],
+      "notes": "Full training/architecture composite; High Fidelity is quality wording.",
+      "sampleId": "sample-f903a55875bb36c3273d"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "SmoothOut",
+          "label": "METHOD"
+        },
+        {
+          "text": "Smoothing Out Sharp Minima",
+          "label": "TASK"
+        },
+        {
+          "text": "Large-Batch Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Improved process versus smoothing instrument is not explicit.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "SmoothOut explicitly smooths sharp minima."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Large-batch DL is the improved learning process, not necessarily the smoother."
+        }
+      ],
+      "notes": "Generalization is outcome property.",
+      "sampleId": "sample-68a6a1c6ae3e315e9c03"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Theoretical explanation of generalization/parameter-function bias; no named downstream computation or dataset.",
+      "sampleId": "sample-5b1df0537ed675d9917f"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Automated proof synthesis for propositional logic",
+          "label": "TASK"
+        },
+        {
+          "text": "deep neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "DNNs explicitly synthesize propositional proofs."
+        }
+      ],
+      "notes": "Logic is the target formalism, not a dataset.",
+      "sampleId": "sample-376a046f6683fc6b90d5"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full acceleration task overlaps its network target; hardware name is not a learning algorithm.",
+      "entities": [
+        {
+          "text": "Binary Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not infer a complete acceleration method-task inventory from hardware artifact names.",
+      "relations": [],
+      "notes": "Xcel-RAM/SRAM compute arrays are accelerator hardware.",
+      "sampleId": "sample-2b7aa6e9b300e7956968"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "The full self-supervision-improvement operation overlaps its method target.",
+      "entities": [
+        {
+          "text": "Spatiotemporal Self-Supervision",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Improvement process is not an independent literal task span.",
+      "relations": [],
+      "notes": "Self-supervision is the improved technique.",
+      "sampleId": "sample-0098e88a699d25481c6b"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Developing a Knowledge Graph of Interlinked Events from News Headlines on Twitter",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "KG development is explicit; Twitter is platform, headlines unnamed data; no named constructor.",
+      "sampleId": "sample-1356b98e297374b347ae"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Ontology Axiomatization through Diagramming",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "OWLAx is explicitly a Protege plugin, not a named neural method or dataset; the formal axiomatization operation is explicit.",
+      "sampleId": "sample-190d2d78504bfebce11f"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "dyngraph2vec",
+          "label": "METHOD"
+        },
+        {
+          "text": "Capturing Network Dynamics",
+          "label": "TASK"
+        },
+        {
+          "text": "Dynamic Graph Representation Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "dyngraph2vec explicitly captures network dynamics."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Dynamic graph representation learning explicitly captures network dynamics."
+        }
+      ],
+      "notes": "Named approach and expanded representation technique are disjoint.",
+      "sampleId": "sample-ec66d9275b3d0b29b111"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Self-Learning Information Diffusion Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Social information propagation is not generative diffusion; no literal prediction operation is named.",
+      "sampleId": "sample-b3fe78045749047802e9"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Graph-refinement-based tree extraction may be a single compound technique rather than separate flat mentions.",
+      "entities": [
+        {
+          "text": "Graph Refinement",
+          "label": "METHOD"
+        },
+        {
+          "text": "Tree Extraction",
+          "label": "TASK"
+        },
+        {
+          "text": "Mean-Field Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Refinement versus end-to-end extraction roles unclear.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Tree extraction explicitly is refinement-based."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Mean-field networks may refine the graph rather than extract trees."
+        },
+        {
+          "head": "e4",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "GNNs may perform refinement rather than execute tree extraction."
+        }
+      ],
+      "notes": "Composite method/task boundary and component roles are uncertain.",
+      "sampleId": "sample-7be18a0afd2b53916929"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full cost-prediction task overlaps the DL model target; predictor is unnamed.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not make the costed model its own cost predictor.",
+      "relations": [],
+      "notes": "Computational cost is the modeled quantity.",
+      "sampleId": "sample-89148095db86f133245c"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Modelling Identity Rules",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Neural networks explicitly model identity rules."
+        }
+      ],
+      "notes": "No named rule dataset is supplied.",
+      "sampleId": "sample-6832f81311c1a9b07e00"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Off-the-grid model based deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "O-MODL",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named alias and full grid-free model-based technique; no downstream task stated.",
+      "sampleId": "sample-b47ddf400db74a7ff378"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Translation is a stated operation; unsupervised is setting, Effective and Approach are generic framing; no named algorithm.",
+      "sampleId": "sample-1d770b81c5d7925ab3bd"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Interaction-aware Kalman Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Trajectory Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Interaction-aware Kalman networks explicitly predict trajectories."
+        }
+      ],
+      "notes": "Keep Kalman/interaction composite; no trajectory dataset named.",
+      "sampleId": "sample-63dcb2107badeecca7fa"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Curriculum",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Curriculum is an explicit learning strategy, not a named dataset; method-to-method improvement is outside scoped relations.",
+      "sampleId": "sample-03b71b29cba5b113d854"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "object detection on a surveillance UAV",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Super accurate/low latency are quality claims; no detection algorithm is named.",
+      "sampleId": "sample-9be87186eab405ed4079"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multimodal Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Knee Osteoarthritis Progression Prediction from Plain Radiographs and Clinical Data",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Multimodal ML explicitly predicts knee-OA progression."
+        }
+      ],
+      "notes": "Full task input modalities retained; clinical data is unnamed, not DATASET.",
+      "sampleId": "sample-9d43c77acd36d6b626da"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Generic pre-training is model-development framing, not a distinct named downstream task or algorithm.",
+      "sampleId": "sample-78f67e572706538d7d5b"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full training-DNN task overlaps its network target in the flat inventory.",
+      "entities": [
+        {
+          "text": "Evolutionary Algorithm",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not certify a truncated training task or make the trained model its own trainer.",
+      "relations": [],
+      "notes": "Linear complexity is quality/complexity description.",
+      "sampleId": "sample-254b3c5d9a4ad212da15"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Symbol Detection for Millimeter Wave Communications",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The DNN explicitly detects millimeter-wave communication symbols."
+        }
+      ],
+      "notes": "Retain communications context; no benchmark named.",
+      "sampleId": "sample-42a8274ae0c33f0c4f2a"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "BERT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Natural Language Attack",
+          "label": "METHOD"
+        },
+        {
+          "text": "Text Classification and Entailment",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "BERT-to-both-target implementing association is not explicit.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "The robustness question does not directly establish BERT as both task implementers."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "NO_RELATION",
+          "reason": "The attack is against classification/entailment rather than implements those tasks."
+        }
+      ],
+      "notes": "Robustness is investigated, not proved by the title.",
+      "sampleId": "sample-9ccb413ab7ba723680d1"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Neural translation is the operation; noisy lexical constraints are inputs/constraints, not an independently named model or dataset.",
+      "sampleId": "sample-080587411932324416e6"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hybrid Data-Model Parallel Training",
+          "label": "METHOD"
+        },
+        {
+          "text": "Sequence-to-Sequence Recurrent Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Distributed training versus task implementer role is uncertain.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Parallel training trains translators rather than necessarily executes translation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The sequence-to-sequence RNN explicitly translates."
+        }
+      ],
+      "notes": "Training parallelization and inference execution distinguished.",
+      "sampleId": "sample-4b4cfd790da542482696"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Function Approximation",
+          "label": "TASK"
+        },
+        {
+          "text": "Relu Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Relu networks explicitly approximate functions."
+        }
+      ],
+      "notes": "Optimal is evaluation framing; preserve original Relu casing.",
+      "sampleId": "sample-89c4e2382a5df88ccc60"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full modeling-influence-on-learning task overlaps its neural-network target.",
+      "entities": [
+        {
+          "text": "neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No separately named influence-modeling algorithm.",
+      "relations": [],
+      "notes": "Data structure is unnamed input property.",
+      "sampleId": "sample-c4fc3b206089c2f94812"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Selecting Artificially-Generated Sentences",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Machine Translation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "NO_RELATION",
+          "reason": "Translation is the model being fine-tuned with selected sentences, not the stated sentence selector."
+        }
+      ],
+      "notes": "Do not reverse input-selection and downstream translator roles.",
+      "sampleId": "sample-a19d7868746063230dcf"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full sequential network-training operation overlaps its network object.",
+      "entities": [
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Gradient Boosting",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No complete nonoverlapping training-task inventory.",
+      "relations": [],
+      "notes": "Gradient boosting is a named learning technique.",
+      "sampleId": "sample-bb055373c44151aaddee"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Formula Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Combinatorial Test Generators",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Transformers here manipulate logical formulas, not neural architectures; theorem provers are software targets, not an unstated theorem-proving task.",
+      "sampleId": "sample-3b421b9936a9e975c9df"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full optimizer-comparison operation includes the DL context and does not identify its implementing methods.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Optimizers being evaluated are not automatically evaluation methods.",
+      "relations": [],
+      "notes": "Optimizer comparison is evaluation framing without individually named optimizers.",
+      "sampleId": "sample-2e01667b828b2bf05975"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Notable Site Recognition on Mobile Devices",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "DL explicitly recognizes notable sites on mobile devices."
+        }
+      ],
+      "notes": "Crowd-sourced imagery is unnamed input, not a named dataset.",
+      "sampleId": "sample-d17d441b34c653d0f713"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Translation Evaluation",
+          "label": "TASK"
+        },
+        {
+          "text": "Bi-directional Entailment",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Bidirectional entailment explicitly evaluates machine translation."
+        }
+      ],
+      "notes": "Entailment serves as the stated evaluation technique here, not a dataset.",
+      "sampleId": "sample-846e41ce0a2216393640"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Failure modes are properties, not an identified detecting/analyzing task; no dataset named.",
+      "sampleId": "sample-d7cba42280ac3472b516"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Word-Class Embeddings",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multiclass Text Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Word-class embeddings explicitly support multiclass text classification."
+        }
+      ],
+      "notes": "No named text corpus; preserve the word-class qualifier.",
+      "sampleId": "sample-345d454d517625cdc76b"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Predictive Precompute",
+          "label": "TASK"
+        },
+        {
+          "text": "Recurrent Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Predictive precomputation explicitly uses RNNs."
+        }
+      ],
+      "notes": "Precompute is a specific computational operation, not generic analysis.",
+      "sampleId": "sample-df04b5bf471c8d41457b"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "No concrete throughput/congestion-control operation is literally specified.",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not invent a control task from a slogan.",
+      "relations": [],
+      "notes": "TCP is a network protocol; Make TCP Great is title framing, not an instruction.",
+      "sampleId": "sample-4980df9024553a05862d"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Load Forecasting",
+          "label": "TASK"
+        },
+        {
+          "text": "Adversarial Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Robustness-training technique versus implementing forecasting model is unclear.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Adversarial learning may train robustness rather than be the load forecaster."
+        }
+      ],
+      "notes": "Cyberattack resilience is desired property.",
+      "sampleId": "sample-12902cb10cce16fa53d3"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full Transformer-decoding operation overlaps its model target.",
+      "entities": [
+        {
+          "text": "Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "N-gram Masked Self-Attention",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No complete flat decoding-task inventory.",
+      "relations": [],
+      "notes": "Transformer is the decoded model, not automatically the decoding algorithm.",
+      "sampleId": "sample-ca7b48ce250d1a3ece64"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Macroscopic Traffic Flow Modeling",
+          "label": "TASK"
+        },
+        {
+          "text": "Physics Regularized Gaussian Process",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Generic ML context versus independent implementing method uncertain.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Physics-regularized GP explicitly models macroscopic traffic flow."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Generic ML applications are context, not a separately specified traffic model."
+        }
+      ],
+      "notes": "Retain physics regularization and traffic scale.",
+      "sampleId": "sample-c3b9248a7cfc5d6caf7e"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Convolutional Neural Networks with Spatial Regularization, Volume and Star-shape Priori",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The regularized prior-aware CNN explicitly segments images."
+        }
+      ],
+      "notes": "One stated network composite with prior modifiers; no missing independent prior-method member names are reconstructed.",
+      "sampleId": "sample-d243692c20251dbe2f5f"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reinforcement Learning Enhanced Quantum-inspired Algorithm",
+          "label": "METHOD"
+        },
+        {
+          "text": "Combinatorial Optimization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The RL-enhanced quantum-inspired algorithm explicitly performs combinatorial optimization."
+        }
+      ],
+      "notes": "One full hybrid method, not nested duplicate methods.",
+      "sampleId": "sample-776cb145b4d54ede0fd3"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Mechanism Design for Public Projects",
+          "label": "TASK"
+        },
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Networks explicitly design public-project mechanisms."
+        }
+      ],
+      "notes": "Public projects are context, not a dataset.",
+      "sampleId": "sample-dc49849858fbe8078998"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Robotic Table Tennis",
+          "label": "TASK"
+        },
+        {
+          "text": "Model-Free Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Model-free RL explicitly performs robotic table tennis."
+        }
+      ],
+      "notes": "Table tennis is the concrete robotic game/control task; no simulator dataset inferred.",
+      "sampleId": "sample-d35b0bf0bf8522d55810"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Diagnosing COVID-19 Pneumonia from X-Ray and CT Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "DL explicitly addresses X-ray/CT pneumonia diagnosis."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Transfer learning explicitly addresses this diagnosis."
+        }
+      ],
+      "notes": "Title association only, not clinical accuracy or advice; unnamed images are not datasets.",
+      "sampleId": "sample-6ed112dba711f901606c"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Scale Estimation",
+          "label": "TASK"
+        },
+        {
+          "text": "Lightweight Deep Convolutional Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Visual Tracking",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Scale component versus full visual tracker role unclear.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Lightweight CNN explicitly estimates scale."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Scale estimation may provide inputs to a tracker rather than perform full tracking."
+        }
+      ],
+      "notes": "Efficient is quality wording.",
+      "sampleId": "sample-6fde42d2d4f4861393c2"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Language Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The Transformer depth study explicitly concerns language translation."
+        }
+      ],
+      "notes": "Depth is configuration property; low-resource is training setting, not task span.",
+      "sampleId": "sample-98426067164dc794bf97"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "PFNN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Penalty-Free Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Solving a Class of Second-Order Boundary-Value Problems on Complex Geometries",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "PFNN explicitly solves these boundary-value problems."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The penalty-free network explicitly solves the geometric boundary-value problems."
+        }
+      ],
+      "notes": "Full order/geometric problem qualifiers retained.",
+      "sampleId": "sample-c5473c7c3802400ba3ec"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Computer Vision",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "GIMP-ML is explicitly Python plugins and GIMP is a platform; neither is automatically a learning algorithm or dataset.",
+      "sampleId": "sample-91997e28b5eba89e42f5"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Intelligent transportation systems is broad application domain; survey has no specified computational task.",
+      "sampleId": "sample-69ee91660fbfe34b2c40"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Differential Privacy",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Privacy technique and GNN family are explicit; method-to-method combination is outside current relations.",
+      "sampleId": "sample-3ed631d46f225d5a44e8"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "FLAMBE",
+          "label": "METHOD"
+        },
+        {
+          "text": "Representation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Low Rank MDPs",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named learning approach and low-rank decision-process model family; structural complexity is a property, not a downstream task.",
+      "sampleId": "sample-80ae71a7deec713a7e04"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Convolutional Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Heat Kernel",
+          "label": "METHOD"
+        },
+        {
+          "text": "Semi-supervised Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Learning regime and graph/kernel techniques are stated; no downstream classification task or dataset is invented.",
+      "sampleId": "sample-b1517b2382357b521e57"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Modular ontology is an unnamed resource; space-weather research is domain framing. No in-scope algorithm/task/dataset in the title.",
+      "sampleId": "sample-7b5d2f4f282fae8e271c"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Mitigating Classification Bias",
+          "label": "TASK"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Transfer learning explicitly mitigates classification bias."
+        }
+      ],
+      "notes": "Bias mitigation is a specified technical subproblem, not generic improvement.",
+      "sampleId": "sample-60327e30fa459bdf5043"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Quoted Model-Free method does not identify a technique family without additional qualifiers; downstream operation is unspecified.",
+      "entities": [
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Unknown model-free approach is not a complete negative.",
+      "relations": [],
+      "notes": "MIMO systems are target hardware/system context.",
+      "sampleId": "sample-9c99642829a26d9e94ab"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "CoADNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Collaborative Aggregation-and-Distribution Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Co-Salient Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "CoADNet explicitly performs co-salient detection."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The collaborative aggregation/distribution network explicitly detects co-salient objects."
+        }
+      ],
+      "notes": "The named expansion describes a combined network; no absent member-name strings are reconstructed.",
+      "sampleId": "sample-f02d2d7b8ef75fe2888f"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Task-oriented dialog artifact versus specified modeling/generation task is uncertain.",
+      "entities": [
+        {
+          "text": "Hierarchical Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Task Oriented Dialog",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Precise dialogue operation is not stated.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Dialog systems name software applications without specifying the exact computational dialogue operation."
+        }
+      ],
+      "notes": "Do not invent response generation/state tracking.",
+      "sampleId": "sample-62959d950cb5419af15e"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MicroNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "MicroNet explicitly targets image recognition."
+        }
+      ],
+      "notes": "Low FLOPs is complexity claim, not model accuracy evidence.",
+      "sampleId": "sample-b21114d1f32ad316e57e"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Parameter Efficient Multimodal Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Video Representation Learning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The multimodal Transformers explicitly learn video representations."
+        }
+      ],
+      "notes": "Parameter efficiency qualifies the architecture; no video dataset named.",
+      "sampleId": "sample-2fcd5cb413affcd854c8"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Drug discovery/development is broad domain workflow, not a specified computational operation; no drug dataset named.",
+      "sampleId": "sample-e787d5433d00a0c9ac23"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Matrix Completion",
+          "label": "TASK"
+        },
+        {
+          "text": "Manifold Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Manifold representation versus implementing completion role uncertain.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "DL explicitly performs matrix completion."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Manifold learning may provide representations rather than itself complete the matrix."
+        }
+      ],
+      "notes": "Representation component versus completing method distinguished.",
+      "sampleId": "sample-449d7535eaa04ce28a42"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Artificial Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Impute Rounded Zeros in Compositional Data",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "ANNs explicitly impute rounded zeros in compositional data."
+        }
+      ],
+      "notes": "Keep rounded-zero and compositional-data task scope; input is unnamed.",
+      "sampleId": "sample-86539e762ce4eef02244"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Exact distributed-AI algorithms and the joint performance-evaluation operation are underspecified.",
+      "entities": [
+        {
+          "text": "5G D2D Transmission Mode Selection Performance & Cluster Limits Evaluation",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Evaluated subject versus evaluation algorithm ambiguous.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Learning techniques may be evaluated subjects rather than the evaluator."
+        }
+      ],
+      "notes": "Distributed AI is a broad umbrella; no named technique or dataset.",
+      "sampleId": "sample-b1c3e49eb5a83ecf2141"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Document Understanding",
+          "label": "TASK"
+        },
+        {
+          "text": "Text-Image-Layout Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The multimodal layout Transformer explicitly performs document understanding."
+        }
+      ],
+      "notes": "Full-TILT slogan is framing; document understanding is the named technical task family.",
+      "sampleId": "sample-ab4a61bedd36af0a672e"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Extract Lumen and Media-Adventitia in Intravascular Ultrasound Images",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "DL explicitly extracts vessel layers from intravascular ultrasound images."
+        }
+      ],
+      "notes": "Joint anatomical targets and imaging modality retained; no dataset named.",
+      "sampleId": "sample-bad402518330da0e583a"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep and Wide Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Rajasthan Summer Monsoon Rainfall (RSMR) Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The deep/wide network explicitly predicts Rajasthan monsoon rainfall."
+        }
+      ],
+      "notes": "RSMR is task-target acronym, not a named evaluation dataset.",
+      "sampleId": "sample-2478d1c1e61f690c03ce"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Statistical viewpoint is research framing without a concrete downstream task.",
+      "sampleId": "sample-1b7213f31ad7a2b8449d"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pose-GNN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Camera Pose Estimation",
+          "label": "TASK"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Pose-GNN explicitly estimates camera pose."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The pose-estimation system explicitly uses GNNs."
+        }
+      ],
+      "notes": "System is generic software framing; no camera dataset named.",
+      "sampleId": "sample-a9e4ee6952a7d7e97e34"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Expert-prior resource versus additional method identity is unresolved.",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Complete implementing-method inventory cannot be certified.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep RL explicitly targets autonomous driving."
+        }
+      ],
+      "notes": "Imitative expert priors may be guidance resources.",
+      "sampleId": "sample-ec0afec8f4752fc3b45f"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Group Collaborative Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Co-Salient Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Group collaborative learning explicitly performs co-salient detection."
+        }
+      ],
+      "notes": "Retain collaborative group mechanism.",
+      "sampleId": "sample-f15773e40de6416b1bd1"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full RL-agent robustness-improvement task overlaps the target method family.",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Environment Attacks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Critic Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Attack versus agent-improvement implementing role is distinct; no complete task span.",
+      "relations": [],
+      "notes": "Critic networks implement attacks against RL environments.",
+      "sampleId": "sample-6a6bebd954b948722689"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Exact Stochastic Second Order Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full second-order stochastic learning technique; no downstream task or dataset named.",
+      "sampleId": "sample-4a07c36f44f7ad4d1897"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Two layer Ensemble of Deep Learning Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Medical Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The two-layer DL ensemble explicitly segments medical images."
+        }
+      ],
+      "notes": "Preserve original Two layer wording; no nested duplicate DL family.",
+      "sampleId": "sample-a0d9fab02a80caffda11"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Challenge-resource identity and proposed method are not established.",
+      "entities": [
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No named detector or evaluated-on dataset fact can be certified.",
+      "relations": [],
+      "notes": "VIPriors names a challenge, not automatically a released dataset; Competitive Method is unnamed.",
+      "sampleId": "sample-48fe71837e25d529c966"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Complete transformation-method identity is uncertain.",
+      "entities": [
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "classification of geological domains",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Keep the ML classification association but quarantine incomplete component inventory.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "ML explicitly classifies geological domains."
+        }
+      ],
+      "notes": "Data transformation may be a preprocessing method or unspecified data operation.",
+      "sampleId": "sample-75426e8b272870e96e36"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full RL-building-block recomposition task overlaps the target family.",
+      "entities": [
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hypernetworks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No complete flat recomposition-task inventory.",
+      "relations": [],
+      "notes": "Hypernetworks are explicit; recomposition changes the RL process.",
+      "sampleId": "sample-ec8322e5ad5d49f5165a"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transfer Learning of Deep Spatiotemporal Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Model Arbitrarily Long Videos of Seizures",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Transferred spatiotemporal networks explicitly model long seizure videos."
+        }
+      ],
+      "notes": "Full transfer/network composite; no epilepsy dataset or clinical validity claim.",
+      "sampleId": "sample-c8b554ce0d88ee341903"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Dynamic Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Text to Speech",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The federated-learning approach explicitly targets speech synthesis."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The dynamic Transformer explicitly performs text-to-speech."
+        }
+      ],
+      "notes": "Two complete method phrases; no speech corpus named.",
+      "sampleId": "sample-4e29ece24b8a98bad268"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "State, global and local parameter estimation",
+          "label": "TASK"
+        },
+        {
+          "text": "local ensemble Kalman filters",
+          "label": "METHOD"
+        },
+        {
+          "text": "online machine learning of chaotic dynamics",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Local ensemble Kalman filters explicitly estimate state and parameters."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Their stated application explicitly learns chaotic dynamics online."
+        }
+      ],
+      "notes": "State/parameter coordination is a complete task; no missing METHOD members reconstructed.",
+      "sampleId": "sample-9bac22e03a2e3a4df223"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full generalization-understanding/learning operation overlaps its model/optimizer targets.",
+      "entities": [
+        {
+          "text": "Adam",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Regularization",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No separate complete technical task span.",
+      "relations": [],
+      "notes": "Generalization is a property; Adam and regularization are identifiable techniques.",
+      "sampleId": "sample-5fb2c65065f5a3081464"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DAE-GAN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Dynamic Aspect-aware GAN",
+          "label": "METHOD"
+        },
+        {
+          "text": "Text-to-Image Synthesis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "DAE-GAN explicitly synthesizes images from text."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The expanded GAN explicitly performs text-to-image synthesis."
+        }
+      ],
+      "notes": "Name and expansion are disjoint original spans.",
+      "sampleId": "sample-fd1259956beaa9f78001"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "∞-former",
+          "label": "METHOD"
+        },
+        {
+          "text": "Infinite Memory Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Preserve literal infinity Unicode character; no downstream task is stated.",
+      "sampleId": "sample-46408f3148b3802889bc"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Explainability/safety are assurance properties and healthcare is domain; no explanation algorithm or concrete computational task named.",
+      "sampleId": "sample-3ab22c55f4262e28382f"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multimodal Detection of COVID-19 Symptoms",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Probability-based Weighting of Modes",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Fusion component versus detector execution is uncertain.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "DL explicitly detects symptoms multimodally."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Probability-based weighting may fuse outputs rather than directly detect symptoms."
+        }
+      ],
+      "notes": "Title association is not medical advice.",
+      "sampleId": "sample-29271bb8d2f4793b8206"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MFE-NER",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-feature Fusion Embedding",
+          "label": "METHOD"
+        },
+        {
+          "text": "Chinese Named Entity Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "MFE-NER explicitly performs Chinese NER."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Multi-feature fusion embedding explicitly supports Chinese NER."
+        }
+      ],
+      "notes": "Chinese language qualifier preserved; no Chinese corpus named.",
+      "sampleId": "sample-99cedb33dfea3009c648"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Layerd Gradient Compression",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Preserve original Layerd typo; mobile-edge network is infrastructure, not a named dataset.",
+      "sampleId": "sample-6382db139e8f931a6c52"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Knowledge Graph Question Answering",
+          "label": "TASK"
+        },
+        {
+          "text": "SPARQL Silhouette Generation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "SPARQL silhouette generation explicitly implements KG QA."
+        }
+      ],
+      "notes": "Query-generation technique is one complete literal method; no nested duplicate task.",
+      "sampleId": "sample-f0a059971be2d4c708f3"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full network-training task overlaps its model target.",
+      "entities": [
+        {
+          "text": "FooBaR",
+          "label": "METHOD"
+        },
+        {
+          "text": "Fault Fooling Backdoor Attack",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not reverse attack-target roles or invent a training span.",
+      "relations": [],
+      "notes": "Attack is against network training, not a neural-network trainer.",
+      "sampleId": "sample-9fbb61bdce7f91b7b001"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Exploration type/object are not identified; complete method/task inventory uncertain.",
+      "entities": [
+        {
+          "text": "Decentralized Cooperative Multi-Agent Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Unspecified exploration does not define a resolved target.",
+      "relations": [],
+      "notes": "Exploration may be a learning mechanism or a scoped technical operation.",
+      "sampleId": "sample-057c5ab3ad6152786c36"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformer with Residual Connection",
+          "label": "METHOD"
+        },
+        {
+          "text": "Speaker Diarization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The residual-connection Transformer explicitly performs speaker diarization."
+        }
+      ],
+      "notes": "Auxiliary loss is unnamed criterion; end-to-end is execution setting.",
+      "sampleId": "sample-1e313b5f04fe945b5881"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full interpreting-models task overlaps its model target.",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Natural Language Processing",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No separately identified interpreter method.",
+      "relations": [],
+      "notes": "NLP is application family; interpretation concerns DL model targets.",
+      "sampleId": "sample-27ec107da088f18d0c5b"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Shallow Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Subquadratic overparameterization is a width/complexity property here, not a separately named downstream task.",
+      "sampleId": "sample-d1beeacd406a15277d11"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Attention Mechanisms",
+          "label": "METHOD"
+        },
+        {
+          "text": "Computer Vision",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Survey discusses identifiable attention/vision families; no concrete task or dataset stated.",
+      "sampleId": "sample-f95d99e87372b3dc5567"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [
+        {
+          "text": "Adaptive First- and Second-Order Algorithms",
+          "label": "METHOD"
+        }
+      ],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "First-/second-order algorithms share the Algorithms head; retain group, not reconstructed member names.",
+      "sampleId": "sample-d60dda2ddcae96a8c1e4"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "FedSoft",
+          "label": "METHOD"
+        },
+        {
+          "text": "Soft Clustered Federated Learning with Proximal Local Updating",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named and expanded full clustered/proximal technique; no downstream task stated.",
+      "sampleId": "sample-92f98e277a3066e77492"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Ventricular Tachycardia Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The ML model explicitly detects ventricular tachycardia."
+        }
+      ],
+      "notes": "ECG signal is modality outside the contiguous base task phrase, not a named dataset; no clinical accuracy claim.",
+      "sampleId": "sample-ed496706f359a98be26a"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Disease Diagnosis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The bibliometric title explicitly associates ML with disease diagnosis."
+        }
+      ],
+      "notes": "Bibliometric association is not evidence of a new diagnostic experiment.",
+      "sampleId": "sample-adec3e304a604535d6f1"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Medical-imaging defence security is a property; no named defence/evaluation algorithm or concrete operation.",
+      "sampleId": "sample-ce0a066bc7bef09e9dde"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Interactron",
+          "label": "METHOD"
+        },
+        {
+          "text": "Embodied Adaptive Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Interactron explicitly names embodied adaptive detection."
+        }
+      ],
+      "notes": "Embodied task context retained; no named robotic dataset.",
+      "sampleId": "sample-b9d15d4ea997b9bed312"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Automatic Speech Recognition for Non-Native English",
+          "label": "TASK"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Language Model Decoding",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Transfer learning explicitly improves non-native English ASR."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Language-model decoding explicitly implements this ASR approach."
+        }
+      ],
+      "notes": "Full language/speaker context retained; no speech dataset.",
+      "sampleId": "sample-7d261f0f6e7772a8c34c"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Evolutionary Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multitasking",
+          "label": "METHOD"
+        },
+        {
+          "text": "Importance Sampling",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Learning strategy combination is METHOD-to-METHOD; no downstream task stated.",
+      "sampleId": "sample-9e90587f0a869780e1be"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Filter Drug-induced Liver Injury Literature",
+          "label": "TASK"
+        },
+        {
+          "text": "Natural Language Processing",
+          "label": "METHOD"
+        },
+        {
+          "text": "Ensemble Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "NLP explicitly filters DILI literature."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Ensemble learning explicitly filters this literature."
+        }
+      ],
+      "notes": "Literature is unnamed document input, not a named corpus.",
+      "sampleId": "sample-1f29cd8a4661f8125186"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full comparative-method evaluation task overlaps its ML target family.",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Prediction of R/C Buildings' Seismic Damage",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Incomplete flat evaluation-task inventory.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The evaluated ML methods explicitly predict building seismic damage."
+        }
+      ],
+      "notes": "Original apostrophe retained.",
+      "sampleId": "sample-1926650399f142ec668e"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "joint coordination of multiple electric vehicle charging points",
+          "label": "TASK"
+        },
+        {
+          "text": "reinforcement learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "RL explicitly coordinates multiple EV charging points."
+        }
+      ],
+      "notes": "Computational efficiency is a property; no EV dataset named.",
+      "sampleId": "sample-ad2c79c7ec7551105bdd"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-size Kernel based Adaptive Convolutional Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Bearing Fault Diagnosis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The multikernel adaptive CNN explicitly diagnoses bearing faults."
+        }
+      ],
+      "notes": "Retain full adaptive/kernel architecture.",
+      "sampleId": "sample-f8dbb4fd32b1a32641a3"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Quantum-Aided Meta-Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Bayesian Binary Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Born Machines",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Quantum meta-learning and Born machines concern learning the named Bayesian network; no separate downstream task.",
+      "sampleId": "sample-102327e7beb0eb4be234"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Disentangling Source Feature",
+          "label": "TASK"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "StyleGAN",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Source-disentangler versus transferred model roles unclear.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Transfer learning may be the process helped by disentangling rather than its instrument."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "StyleGAN may be the transfer target rather than the feature disentangler."
+        }
+      ],
+      "notes": "Fix the Noise is title framing, not an instruction.",
+      "sampleId": "sample-dfa6aa5f84dcb8a94866"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "RANG",
+          "label": "METHOD"
+        },
+        {
+          "text": "Residual-based Adaptive Node Generation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Physics-Informed Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named residual-guided node-generation method supports a network family; no overlapping duplicate node-generation task added.",
+      "sampleId": "sample-de2b64596edba9c80677"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Analysis is broad without a concrete technical subproblem.",
+      "entities": [
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Genetic Data Analysis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not certify a generic analysis task merely to obtain positive relations.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "The analysis operation is not specified enough to certify a concrete task."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Transfer-learning association concerns an unspecified genetic-data operation."
+        }
+      ],
+      "notes": "Genetic data is unnamed.",
+      "sampleId": "sample-4f288981b169c0d693b0"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Entry-Flipped Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Inference and Prediction of Participant Behavior",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Entry-flipped Transformer explicitly infers/predicts participant behavior."
+        }
+      ],
+      "notes": "One complete coordinated behavioral target; no participant dataset named.",
+      "sampleId": "sample-688a21f004468a4dbb9b"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Subtype-Former",
+          "label": "METHOD"
+        },
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "cancer subtype discovery",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Subtype-Former explicitly discovers cancer subtypes."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "DL explicitly discovers the cancer subtypes."
+        }
+      ],
+      "notes": "Multi-omics is input modality, not a named dataset or clinical efficacy evidence.",
+      "sampleId": "sample-648e9e08c8d0863304cb"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Resource Allocation in O-RAN Slicing",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Federated deep RL explicitly allocates O-RAN slicing resources."
+        }
+      ],
+      "notes": "Retain O-RAN context; no named simulator dataset.",
+      "sampleId": "sample-eb86c597abfe75a78f57"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ODformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Spatial-Temporal Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Long Sequence Origin-Destination Matrix Forecasting",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "ODformer explicitly forecasts origin-destination matrices."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Spatiotemporal Transformers explicitly forecast these long sequences."
+        }
+      ],
+      "notes": "Cross-application scenario is evaluation context, not dataset.",
+      "sampleId": "sample-091ef4c5e7bf5cccfdfd"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformer-Based Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Stock Price Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Transformer-based DL explicitly predicts stock prices."
+        }
+      ],
+      "notes": "Bangladesh market is case location/context; no investment advice or named market dataset.",
+      "sampleId": "sample-873bd65bc82c4c642e57"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Complex-Value Spatio-temporal Graph Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Electric-power systems AI is broad domain; no specified forecasting/control task.",
+      "sampleId": "sample-5482e26942bf0b8bfd3e"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full graph/network implementation operation overlaps its GNN target; software METHOD identity not established.",
+      "entities": [
+        {
+          "text": "graph neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not equate package implementation target to an implementing learning model.",
+      "relations": [],
+      "notes": "MolGraph, TensorFlow and Keras are software packages/frameworks, not dataset releases.",
+      "sampleId": "sample-6fa3a0b52ff8b11967ec"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full membership-inference assessment overlaps the attack-family target.",
+      "entities": [
+        {
+          "text": "Membership Inference",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Assessing an attack/model is not executing that attack as the evaluator.",
+      "relations": [],
+      "notes": "Membership-Doctor could be an evaluation tool or resource, not a named attack model.",
+      "sampleId": "sample-81c98e892fc3625d7426"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transformers with Learnable Activation Functions",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "One complete learnable-activation Transformer composite; no downstream task named.",
+      "sampleId": "sample-84f89386dfe5ccd84784"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pre-Training",
+          "label": "METHOD"
+        },
+        {
+          "text": "Random-Initialization",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Initialization/training procedures versus translation execution uncertain.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Pre-training initializes translation models rather than executes translation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Random initialization is a setup procedure, not a translator."
+        }
+      ],
+      "notes": "Resource-rich is data setting; no named corpus.",
+      "sampleId": "sample-0d26176266f68ec8de43"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Complex Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Analogy between model families, not a specified downstream computation.",
+      "sampleId": "sample-8916aaf0aed3c4571b17"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Link Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Subgraph Sketching",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Subgraph sketches may be predictor inputs rather than predicting methods.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "GNNs explicitly predict links."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Sketching may provide representations rather than implement link prediction."
+        }
+      ],
+      "notes": "Representation component versus predictor distinguished.",
+      "sampleId": "sample-e65ef829668c21122c1d"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Distributionally Adaptive Meta Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full adaptive/meta-RL family; no downstream task or dataset.",
+      "sampleId": "sample-294482658e631e6c4ca9"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "PTDE",
+          "label": "METHOD"
+        },
+        {
+          "text": "Personalized Training with Distillated Execution",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-Agent Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Preserve original Distillated spelling; named training/execution method concerns another method family, outside scoped relations.",
+      "sampleId": "sample-13c3723fe3bc9fd0683b"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DiffuSeq",
+          "label": "METHOD"
+        },
+        {
+          "text": "Sequence to Sequence Text Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "DiffuSeq explicitly generates sequence-to-sequence text."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Diffusion models explicitly perform this generation."
+        }
+      ],
+      "notes": "No unnamed text data becomes DATASET.",
+      "sampleId": "sample-b8148dae9af6e0690110"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Ontology Development",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Ontology development is explicit; consensus/representation are methodological viewpoints, not named learning algorithms.",
+      "sampleId": "sample-39e505497a3096b13ce1"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full training-performance comparison overlaps its network target.",
+      "entities": [
+        {
+          "text": "neural network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "No separately identified performance-comparison algorithm.",
+      "relations": [],
+      "notes": "Elixir/Python are programming languages, not models or datasets.",
+      "sampleId": "sample-296b447354177e63c718"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Conditioning and Sampling",
+          "label": "TASK"
+        },
+        {
+          "text": "Variational Diffusion Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Speech Super-resolution",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Configured model versus conditioning operator role uncertain.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Conditioning may configure the model rather than be executed by it."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Variational diffusion explicitly performs speech super-resolution."
+        }
+      ],
+      "notes": "Sampling/conditioning are specific operations, but the role of conditioning is unsettled.",
+      "sampleId": "sample-248b4a23ee0b411ff125"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Offline Reinforcement Learning with Lossless Primitive Discovery",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full offline-RL/discovery composite; Flow to Control is framing, not a specified separate control task.",
+      "sampleId": "sample-9c37a2a44b300a3d8657"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MAGVIT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Masked Generative Video Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named and expanded architecture; generative adjective does not supply a separate literal video-generation task.",
+      "sampleId": "sample-fe44b9c3b28bb45663ce"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full model-training task overlaps its learning family; no distinct training algorithm named.",
+      "entities": [
+        {
+          "text": "Large-Model Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Model being trained is not the training system.",
+      "relations": [],
+      "notes": "Parallel/distributed training systems are unnamed infrastructure.",
+      "sampleId": "sample-dce328d9bb01318afa9a"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Signed Message is an input/message property, not a named method, task, or dataset.",
+      "sampleId": "sample-8cbeb9d87a9469412530"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "RangeViT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Vision Transformers",
+          "label": "METHOD"
+        },
+        {
+          "text": "3D Semantic Segmentation in Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "RangeViT explicitly performs driving 3D segmentation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Vision Transformers explicitly perform that segmentation."
+        }
+      ],
+      "notes": "Full 3D/driving task context retained.",
+      "sampleId": "sample-a5068f5696780c4b0879"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Outcome-directed Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Uncertainty & Temporal Distance-Aware Curriculum Goal Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Goal recipient versus generating instrument role not explicit.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Curriculum goals may be generated to guide RL rather than generated by the RL method."
+        }
+      ],
+      "notes": "Goal-generation operation retains temporal/uncertainty qualifiers.",
+      "sampleId": "sample-51de33d035c59dd7314e"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Open problems/solutions are research framing without a specific computational task.",
+      "sampleId": "sample-48219a0dbc4fd7ca05f0"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "edited neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Edited model variant is explicit; robustness is property, not a task.",
+      "sampleId": "sample-78023cf451932320a660"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "RF Fingerprint Authentication",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "DL explicitly authenticates RF fingerprints."
+        }
+      ],
+      "notes": "Chaotic antenna arrays are hardware, not neural models or datasets.",
+      "sampleId": "sample-796425c6a6f58374ab47"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Controllable Mesh Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Sparse Latent Point Diffusion Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Sparse latent-point diffusion explicitly generates controllable meshes."
+        }
+      ],
+      "notes": "Keep latent-point representation and controllable-generation target.",
+      "sampleId": "sample-e253b7cb9250b94f2426"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Online Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Periodic MDP",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Periodic decision-process model and online RL are explicit; no downstream control operation named.",
+      "sampleId": "sample-34a74b0c1ca25efe1c89"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Knowledge Graph Discovery may be resource discovery rather than a specified computational operation; no named dataset release confirmed.",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Unknown resource/task identity is not a complete all-O negative.",
+      "relations": [],
+      "notes": "NASA directorate names an organization and potentially a KG resource.",
+      "sampleId": "sample-53a536a79ee15dca6c44"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Code construction/encoding/decoding operation is not literally stated.",
+      "entities": [
+        {
+          "text": "ProductAE",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not invent an error-correction task from a code artifact alone.",
+      "relations": [],
+      "notes": "Error-correction codes are formal objects.",
+      "sampleId": "sample-084f7496914a8b84f3cf"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "NN-Copula-CD",
+          "label": "METHOD"
+        },
+        {
+          "text": "Copula-Guided Interpretable Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Change Detection in Heterogeneous Remote Sensing Images",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "NN-Copula-CD explicitly detects remote-sensing changes."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The copula-guided network explicitly detects those changes."
+        }
+      ],
+      "notes": "No named remote-sensing dataset; interpretable is part of stated model descriptor.",
+      "sampleId": "sample-364e424a848ab8a90c65"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Q-DETR",
+          "label": "METHOD"
+        },
+        {
+          "text": "Low-Bit Quantized Detection Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named quantized architecture; Detection Transformer is a model name, not a separately stated object-detection task.",
+      "sampleId": "sample-76baa92eea9e2888f912"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Specific mathematical operation and tutor-model identity are not given.",
+      "entities": [
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not turn generic Math Task into a concrete computational label.",
+      "relations": [],
+      "notes": "Tutor is a software artifact; Math Task is generic.",
+      "sampleId": "sample-1c6ad618b381adc4acdb"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Game-theoretic Framework",
+          "label": "METHOD"
+        },
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Game-theoretic modeling framework is a mathematical technique, not a claimed software package; method-to-method association outside scope.",
+      "sampleId": "sample-d68aeb93805494877a42"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Phoneme-Informed Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Note-Level Singing Transcription",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The phoneme-informed network explicitly transcribes singing notes."
+        }
+      ],
+      "notes": "Phonemes are representation inputs; no singing dataset named.",
+      "sampleId": "sample-a794967559d6f0c5bc4c"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Proto-Value Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Representation Learning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Proto-value networks explicitly support representation learning."
+        }
+      ],
+      "notes": "Auxiliary Tasks is unnamed plural, not invented specific tasks.",
+      "sampleId": "sample-79fd6defd1bfd7849ed1"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Dynamic Loss Function",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Automated Essay Scoring",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Training loss versus scoring execution unspecified.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Dynamic loss may train a scorer rather than itself score essays."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The NN explicitly performs automated essay scoring."
+        }
+      ],
+      "notes": "No named essay corpus; criterion versus predictor distinction.",
+      "sampleId": "sample-52a9148dddb9b351536f"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Stabilize-Avoid Optimal Control",
+          "label": "TASK"
+        },
+        {
+          "text": "Epigraph Form",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Problem formulation versus implementing optimal control unclear.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Epigraph form may formulate the control problem rather than implement a controller."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Deep RL explicitly solves stabilize-avoid control."
+        }
+      ],
+      "notes": "Mathematical formulation is not necessarily controller execution.",
+      "sampleId": "sample-d941c8b83289d9fdabe3"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "NavGPT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Explicit Reasoning in Vision-and-Language Navigation",
+          "label": "TASK"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "NavGPT explicitly reasons in vision-language navigation."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "LLMs explicitly perform that reasoning."
+        }
+      ],
+      "notes": "Full reasoning task contains navigation context; no nested duplicate navigation task.",
+      "sampleId": "sample-2afaffb77afd46ba1e07"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Fairness of evaluators is a property claim, not evidence of a concrete evaluated task or measured model quality.",
+      "sampleId": "sample-754959d9fc1bd283a303"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Anomaly Detection in Medical Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Masked Diffusion Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Masked diffusion explicitly detects anomalies in medical images."
+        }
+      ],
+      "notes": "Unsupervised is training setting; no medical dataset named.",
+      "sampleId": "sample-90a70e250b82f496b014"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Onboard Object Detection for Augmented Reality",
+          "label": "TASK"
+        },
+        {
+          "text": "YOLOv8",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "YOLOv8 explicitly performs onboard AR detection."
+        }
+      ],
+      "notes": "Head-mounted display is hardware; Real-Time is performance setting.",
+      "sampleId": "sample-88213e03355b04090b06"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Survey of healthcare KG resources/applications/promises; no named dataset or identified technical operation/algorithm. Entire title checked.",
+      "sampleId": "sample-4cd617844ade04ad8108"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Adversarial Prompting",
+          "label": "METHOD"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hypothesis Generation in Astronomy",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Adversarial prompting explicitly supports astronomy hypothesis generation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "LLMs explicitly generate astronomy hypotheses."
+        }
+      ],
+      "notes": "Robust is quality wording, not validation evidence.",
+      "sampleId": "sample-93d5eed6b3b326222559"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Representation Learning",
+          "label": "TASK"
+        },
+        {
+          "text": "Tractable Planning",
+          "label": "TASK"
+        },
+        {
+          "text": "Low-Rank POMDP",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Problem-model setting versus learning/planning algorithm uncertain.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Low-rank POMDP is the problem/model setting, not a stated representation learner."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "POMDP is the planning problem, not an explicitly named planner."
+        }
+      ],
+      "notes": "Provably efficient is paper claim, not measured quality here.",
+      "sampleId": "sample-1ae55e7a97faa9a5390c"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "FastBCSD",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Binary Code Similarity Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "FastBCSD explicitly detects binary-code similarity."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The network explicitly detects binary-code similarity."
+        }
+      ],
+      "notes": "Fast/efficient are evaluation adjectives; no code dataset named.",
+      "sampleId": "sample-611150063ed8d45f4b50"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "The complete coordinated analysis component is generic/unspecified.",
+      "entities": [
+        {
+          "text": "Nano1D",
+          "label": "METHOD"
+        },
+        {
+          "text": "Computer Vision",
+          "label": "METHOD"
+        },
+        {
+          "text": "segmentation and analysis of low-dimensional objects",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Cannot certify the whole combined task as complete.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Nano1D explicitly targets this segmentation/analysis."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Its CV model explicitly concerns these objects."
+        }
+      ],
+      "notes": "Segmentation is specific, while analysis lacks a technical subproblem.",
+      "sampleId": "sample-02a8d768c7fdf42ef8cf"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full learning-server offloading task overlaps the learning family and no offloader is named.",
+      "entities": [
+        {
+          "text": "Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Offloaded learning process is not the offloading algorithm.",
+      "relations": [],
+      "notes": "Smart NIC is hardware; learning server is a software/system artifact.",
+      "sampleId": "sample-02d57514d6d6f5889920"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "SLSSNN",
+          "label": "METHOD"
+        },
+        {
+          "text": "spike-train level spiking neural networks with spatio-temporal conversion",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full spike-train/conversion architecture; energy efficiency is a quality claim, not task or dataset.",
+      "sampleId": "sample-e534f7dfd7187bffe7ae"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Digital public goods is policy context; Stack Overflow activity is unnamed evidence, not a released dataset or stated computational task.",
+      "sampleId": "sample-0f15a0a0f677722622d4"
+    },
+    {
+      "entityStatus": "unresolved",
+      "entityReason": "Full mathematical-explanation task overlaps its neural-network target.",
+      "entities": [
+        {
+          "text": "PottsMGNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Encoder-Decoder Based Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Do not equate explained networks with the explanation algorithm.",
+      "relations": [],
+      "notes": "The mathematical explanation concerns networks.",
+      "sampleId": "sample-cb88794bfe20444740bc"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "SecureBoost",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hyperparameter Tuning",
+          "label": "TASK"
+        },
+        {
+          "text": "Multi-Objective Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "NO_RELATION",
+          "reason": "SecureBoost is the model being tuned, not the tuning algorithm."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Multi-objective federated learning explicitly tunes SecureBoost hyperparameters."
+        }
+      ],
+      "notes": "Explicit tuner/target roles; no named boosting dataset.",
+      "sampleId": "sample-4477fae76c38189500dd"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "BarlowRL",
+          "label": "METHOD"
+        },
+        {
+          "text": "Barlow Twins",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Named representation technique and RL family; data-efficiency is a property, not a task.",
+      "sampleId": "sample-0f8a6e8b128a7e796118"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Improving Pseudo Labels",
+          "label": "TASK"
+        },
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Pseudo-label improvement and object detection are explicit operations; Open-Vocabulary is learning setting; no implementing algorithm named.",
+      "sampleId": "sample-ba459c92eafccb415165"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Learning Assisted Deep Q-Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Joint Task Offloading and Fronthaul Segment Routing in Open RAN",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The federated-assisted deep Q learner explicitly offloads/routes in Open RAN."
+        }
+      ],
+      "notes": "One complete composite method and coordinated networking task.",
+      "sampleId": "sample-d9d1d7831107f08bd081"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Region Proposal Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The proposal network explicitly supports object detection."
+        }
+      ],
+      "notes": "Improved/Enhanced are quality words; Few-Shot is training setting.",
+      "sampleId": "sample-22506d950c098c913d1b"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "MFRL-BI",
+          "label": "METHOD"
+        },
+        {
+          "text": "Model-free Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Process Control",
+          "label": "TASK"
+        },
+        {
+          "text": "Bayesian Inference",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Bayesian design component versus live control execution unclear.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "MFRL-BI names the process-control approach."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Model-free RL explicitly controls the process."
+        },
+        {
+          "head": "e4",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Bayesian inference may design the scheme rather than directly control the process."
+        }
+      ],
+      "notes": "Controller design and execution distinguished.",
+      "sampleId": "sample-1710a86bedd61c47d9b3"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "GAME",
+          "label": "METHOD"
+        },
+        {
+          "text": "deep learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "multimodal data integration",
+          "label": "TASK"
+        },
+        {
+          "text": "early screening of adolescent mental disorders",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Integration model versus downstream screener role uncertain.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "GAME explicitly integrates multimodal data."
+        },
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Integration may provide screening inputs rather than be the screener."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "DL explicitly targets integration."
+        },
+        {
+          "head": "e2",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "Its downstream screening execution is not directly settled."
+        }
+      ],
+      "notes": "No clinical screening validity claim; input integration versus screening execution.",
+      "sampleId": "sample-96a6ebf5c8723da90592"
+    },
+    {
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Physics Informed Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Power System Model Parameter Optimization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Physics-informed ML explicitly optimizes power-system model parameters."
+        }
+      ],
+      "notes": "Physical system is task object; no named power dataset.",
+      "sampleId": "sample-7eb73884cd21971a8908"
+    }
+  ]
+}

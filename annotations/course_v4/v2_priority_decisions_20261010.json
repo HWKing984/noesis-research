@@ -1,0 +1,73 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "documents": [
+    {
+      "arxivId": "2008.10400",
+      "textSha256": "5f1d561b2d161b2c930488c1f61d3c86ca07ff2415e0e261bc8098d46e548cda",
+      "upstreamReceiptSha256": "ea731d76a1a4d199778d96a056653663256fd208e91849d174fc405d38a1c793",
+      "groups": [
+        {"heads": ["e11", "e12"], "tails": ["e13"], "label": "USED_FOR", "taskRole": "training_proxy", "taskSubRole": "training_augmentation", "predicateExcerpts": ["Rotation and translation is used to augment training data, which is frequently used in most image classification tasks."], "attribution": "The coordinated Rotation and translation are explicitly used to augment training data. Accept the two mention pairs as one shared training-operation evidence group, not two independent experiments, and do not infer a classification or MNIST evaluation edge."}
+      ],
+      "coreference": [],
+      "selfReview": "核对完整句子而非CSV截短提示，主语为两个增广操作、宾语为原有TASK；角色使用已有training_proxy，新增子类型仅供审计。pooling否定与模型评测不变。"
+    },
+    {
+      "arxivId": "2501.02474",
+      "textSha256": "ff56a01af2224720cc8d795cfaf3cc9502de2a5396fbc37e6c1b31f5615a38b4",
+      "upstreamReceiptSha256": "d8d75d67f76b64c0d54539fefcb8c48a2ca0499122d642a683a876d666fbe79e",
+      "groups": [
+        {"heads": ["e3"], "tails": ["e4"], "label": "USED_FOR", "taskRole": "background_method_use", "taskSubRole": null, "predicateExcerpts": ["While deep learning methods have achieved remarkable success in remote sensing object detection, they typically rely on large amounts of labeled data."], "attribution": "The source directly states the background method family deep learning has achieved success in remote sensing object detection. This is a background-use assertion, not a GE-FSOD component or dataset evaluation result."}
+      ],
+      "coreference": [],
+      "selfReview": "句内方法类别与研究任务均字面出现，success明确连接用途；只接受背景角色，不补模型/组件或评测事实。"
+    },
+    {
+      "arxivId": "2312.03556",
+      "textSha256": "30c195e7c374af71ae3957b0e1b4e7c166172ff95ea396b99eae331cebcdb309",
+      "upstreamReceiptSha256": "843157304ab3eaca6751713b48ec7ebd2bef45a965b003f71454639f8d66129c",
+      "groups": [
+        {"heads": ["e24"], "tails": ["e25"], "label": "USED_FOR", "taskRole": "downstream_application", "taskSubRole": null, "predicateExcerpts": ["Our findings reveal that PVA ensures good identity preservation while offering effective language-controllability."], "attribution": "Under the declared TASK policy, identity preservation is the identity-maintenance objective in face inpainting rather than a named numerical metric. The sentence explicitly attributes this objective to PVA; accept a source claim, not a verified performance or dataset evaluation claim."}
+      ],
+      "coreference": [],
+      "selfReview": "identity preservation保留研究目标口径，good不入实体跨度；PVA主体和ensures谓词直接明示。CelebAHQ-IDI仍仅训练数据，所有评测标签保持。"
+    },
+    {
+      "arxivId": "2501.06756",
+      "textSha256": "d82bb4791d31a9035b37c9ed2601f856aceffd271242d8ef9f797b15e79ff4be",
+      "upstreamReceiptSha256": "cef6544db6422f5759ff82b4820e25d5c067723b1696864ad867d84e7a8a309e",
+      "groups": [
+        {"heads": ["e10"], "tails": ["e11"], "label": "USED_FOR", "taskRole": "component_operation", "taskSubRole": null, "predicateExcerpts": ["Therefore, we introduce the Experience Feedback Graph Diffusion (EFGD) algorithm, which utilizes a diffusion process to generate optimal sensor placement strategies."], "attribution": "The instrument construction utilizes a diffusion process to generate explicitly assigns the generation operation to the diffusion process used by EFGD. Accept only this component operation; do not inherit anomaly detection, communication resilience, reward improvement or whole-algorithm evaluation."}
+      ],
+      "coreference": [],
+      "selfReview": "不是组件共现推断：utilizes X to generate Y直接给X操作用途。保留完整主句解释which，限定为生成策略，不向其分派整体模型全部目标。"
+    },
+    {
+      "arxivId": "1606.05250",
+      "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
+      "upstreamReceiptSha256": "73119317af963e9bd7b09dbb2fff4c04ae7cca643f1bb618e40729fc9f72ef12",
+      "groups": [],
+      "coreference": [
+        {"heads": ["e4"], "tails": ["e1", "e2"], "links": [
+          {"anaphorExcerpt": "We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees.", "antecedentExcerpt": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage.", "kind": "sole_dataset_discourse_context", "explanation": "The dataset refers to the named SQuAD dataset introduced in the first sentence. The later baseline F1 result is interpreted in this sole evaluation-dataset discourse context; this remains an AI attribution, not a new explicit on SQuAD string."},
+          {"anaphorExcerpt": "which achieves an F1 score of 51.0%", "antecedentExcerpt": "We build a strong logistic regression model", "kind": "relative_clause_model_actor", "explanation": "Which syntactically attaches the result to the logistic regression model, not to the earlier parsing trees. Apply the same evidence chain to full-name and acronym mentions; do not add or change evaluation labels."}
+        ]}
+      ],
+      "selfReview": "两种数据集别名共用同一上下文链，补全先行句与模型which归属，原标签、理由、完整证据、支持组不改；明确这不是新增独立评测事实。"
+    },
+    {
+      "arxivId": "2107.03374",
+      "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+      "upstreamReceiptSha256": "053a2eb3f00c981f37144cd075211e4bc17fbb379d6fb5304e300afdda94d332",
+      "groups": [],
+      "coreference": [
+        {"heads": ["e9"], "tails": ["e5"], "links": [
+          {"anaphorExcerpt": "Using this method, we solve 70.2% of our problems with 100 samples per problem.", "antecedentExcerpt": "Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts.", "kind": "strategy_reference", "explanation": "This method refers to the immediately preceding repeated sampling strategy, not the distinct production Codex actor."},
+          {"anaphorExcerpt": "Using this method, we solve 70.2% of our problems with 100 samples per problem.", "antecedentExcerpt": "On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%.", "kind": "benchmark_discourse_resolution", "explanation": "Our problems is interpreted as the HumanEval problems introduced in the prior benchmark result context. Record the full antecedent sentence, but retain the existing label as an AI source-local coreference judgment rather than a new independent result."}
+        ]}
+      ],
+      "selfReview": "Using this method与our problems分别补策略和benchmark先行句，两条解释均源内受限；保留已有策略评测标签，不给生产Codex或泛化GPT新增关系。"
+    }
+  ]
+}

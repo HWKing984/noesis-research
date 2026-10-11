@@ -1,0 +1,37 @@
+{
+  "viewportWidth": 1280,
+  "originalConsoleScreenshot": false,
+  "generatedFromRealArtifacts": true,
+  "renderer": "installed_Microsoft_Edge_headless",
+  "kind": "actual_browser_render_capture",
+  "finishedAt": "2026-10-10T15:21:29.2658600Z",
+  "status": "completed",
+  "browserVersion": "154.0.4258.62",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-9a4e503043f24e9f927277da24f96d0d",
+  "captures": [
+    {
+      "bytes": 90418,
+      "image": "09_annotation_expansion.png",
+      "sourcePage": "09_annotation_expansion.html",
+      "originalConsoleScreenshot": false,
+      "sourcePageSha256": "dabeb976c527637dbde4ae1dde41726e97cae8cfc76245526cca80981de3ed95",
+      "viewportHeight": 2300,
+      "capturedAt": "2026-10-10T15:21:29.2434943Z",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_admission_20261010\\09_annotation_expansion.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-9a4e503043f24e9f927277da24f96d0d",
+        "file:///D:/a-open_source/neo4j/kg_datasets/dblp/course_v2_admission_20261010/09_annotation_expansion.html"
+      ],
+      "sha256": "6e62c9ca7ee8d04a5d4352129fac00b7a047e504d5864c78033454c841ee51c1",
+      "url": "file:///D:/a-open_source/neo4j/kg_datasets/dblp/course_v2_admission_20261010/09_annotation_expansion.html"
+    }
+  ]
+}

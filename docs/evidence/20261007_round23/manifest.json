@@ -1,0 +1,36 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "generatedAtUTC": "2026-10-07T02:51:31.701871+00:00",
+  "screenshotCapturePending": true,
+  "sourceFilesSha256": {
+    "kg_datasets/dblp/course_v4_training_inputs_16/summary.json": "45c7d46b741923940fd98890fd69fb4e5171bec6acf8faa9d55da7e89fec034e",
+    "kg_datasets/dblp/course_v4_training_inputs_16/manifest.json": "aa0d3969b1832b217659a86a661e25afa1ff09431471807659451863c836be57",
+    "kg_datasets/dblp/course_v4_runs/tests_20261007_round23_all.xml": "d89312389aaa578c61e8163d6b25f38341977a84b53327bb2bbc4a3993371b05",
+    "kg_datasets/dblp/course_v4_runs/verification_20261007_round23.json": "c9a6f0eb2d00e0cce8d3a17cf7e74d4dec8811630763fe461004e1ab82e1b782",
+    "annotations/course_v4/check_pending_train_20261007_round23.py": "30c2f79bffd19c34ae2c858bc7d57a2d53c23ed63128e46815e2edaef3570fde",
+    "scripts/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "scripts/capture_course_evidence.ps1": "3b2c3581fad0a109ed4ab26604c3e49768a2b70a8f32c7738dd5b784e3eee8c2",
+    "kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/manifest.json": "a32352d833be7be75ae08f815fda32d711aeeda6e8c5a14727d4811e262a005d",
+    "kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/generation_decisions.json": "c5c15b7da2201740a8690b33149021dca72671e1a74926c315f0afd00533354f",
+    "kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/review/receipts.jsonl": "8fb1241c68efd0f43baac262f8015ef3a871eeecd2d6ffeb1eef11fe45272da6",
+    "kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/review_judgments.json": "b297ff87401cb162695e42e42521c7654709ab30d84c1269c25250212c8546bb",
+    "kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/authored_generation.py": "5bd64755479b4cce23939cd880df757f46a029d88f481beb7cf6856d72c766f7",
+    "kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/authored_review.py": "843fe92492bfadc61636e779b0606e09c5a5a74b23aa57f6446bff40981a41d2"
+  },
+  "filesSha256": {
+    "09_annotation_expansion.html": "70bc928468e1da5ba7d9011e851d48305dac2ea603b10cfd48afde6b9d78bc6b",
+    "sources/annotations/course_v4/check_pending_train_20261007_round23.py": "30c2f79bffd19c34ae2c858bc7d57a2d53c23ed63128e46815e2edaef3570fde",
+    "sources/kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/authored_generation.py": "5bd64755479b4cce23939cd880df757f46a029d88f481beb7cf6856d72c766f7",
+    "sources/kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/authored_review.py": "843fe92492bfadc61636e779b0606e09c5a5a74b23aa57f6446bff40981a41d2",
+    "sources/kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/generation_decisions.json": "c5c15b7da2201740a8690b33149021dca72671e1a74926c315f0afd00533354f",
+    "sources/kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/manifest.json": "a32352d833be7be75ae08f815fda32d711aeeda6e8c5a14727d4811e262a005d",
+    "sources/kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/review/receipts.jsonl": "8fb1241c68efd0f43baac262f8015ef3a871eeecd2d6ffeb1eef11fe45272da6",
+    "sources/kg_datasets/dblp/course_v4_runs/pending_train_20261007_23/review_judgments.json": "b297ff87401cb162695e42e42521c7654709ab30d84c1269c25250212c8546bb",
+    "sources/kg_datasets/dblp/course_v4_runs/tests_20261007_round23_all.xml": "d89312389aaa578c61e8163d6b25f38341977a84b53327bb2bbc4a3993371b05",
+    "sources/kg_datasets/dblp/course_v4_runs/verification_20261007_round23.json": "c9a6f0eb2d00e0cce8d3a17cf7e74d4dec8811630763fe461004e1ab82e1b782",
+    "sources/kg_datasets/dblp/course_v4_training_inputs_16/manifest.json": "aa0d3969b1832b217659a86a661e25afa1ff09431471807659451863c836be57",
+    "sources/kg_datasets/dblp/course_v4_training_inputs_16/summary.json": "45c7d46b741923940fd98890fd69fb4e5171bec6acf8faa9d55da7e89fec034e",
+    "sources/scripts/capture_course_evidence.ps1": "3b2c3581fad0a109ed4ab26604c3e49768a2b70a8f32c7738dd5b784e3eee8c2",
+    "sources/scripts/export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad"
+  }
+}

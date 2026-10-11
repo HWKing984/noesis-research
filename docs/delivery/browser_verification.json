@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "date": "2026-10-11",
+  "renderer": "Installed Microsoft Edge controlled through installed Playwright",
+  "origin": "http://127.0.0.1:8765",
+  "productionGraph": "ai-literature-63686318d85cccb07afb",
+  "actualInteractions": ["Chinese method search", "paper detail and evidence", "paper graph", "coauthor 2-hop graph", "method 4-hop graph", "JSON download", "TXT download", "three frozen abstract evidence cards", "comparison report"],
+  "graphs": [{"mode":"paper","nodes":15,"edges":18,"paths":13},{"mode":"coauthors","nodes":10,"edges":11,"paths":7},{"mode":"methods","nodes":65,"edges":64,"paths":30}],
+  "abstracts": [{"arxivId":"2107.03374","highlights":10},{"arxivId":"1606.05250","highlights":4},{"arxivId":"1905.00537","highlights":8}],
+  "pageExceptions": [],
+  "HTTPFailures": [],
+  "humanCheckboxesLeftUnchecked": true,
+  "humanGoldClaimed": false,
+  "video": "video/demo.webm",
+  "videoContainsRealBrowserFrames": true,
+  "voiceoverIncluded": false,
+  "videoIsTrainingConsole": false,
+  "viewport": {"width":1440,"height":1000}
+}

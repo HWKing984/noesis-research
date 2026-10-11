@@ -1,0 +1,39 @@
+[
+  {
+    "Workflow": "actual_live_detail_add_and_native_button_download",
+    "JSONItems": 1,
+    "Assertions": 1,
+    "Source": "live_neo4j_detail_snapshot",
+    "Screenshot": "07_selection_downloads.png"
+  },
+  {
+    "Screenshot": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261009_round51\\04_graph_desktop_round51.png",
+    "LiveURL": "http://127.0.0.1:8766/#paper=conf%2F3dim%2FVavilalaVF25&view=paper",
+    "Observed": {
+      "width": 1440,
+      "height": 1100,
+      "overflow": false,
+      "status": "10节点 / 11关系 · 8条路径 · 真实Neo4j"
+    }
+  },
+  {
+    "Screenshot": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261009_round51\\05_graph_tablet_round51.png",
+    "LiveURL": "http://127.0.0.1:8766/#paper=conf%2F3dim%2FVavilalaVF25&view=paper",
+    "Observed": {
+      "width": 768,
+      "height": 1100,
+      "overflow": false,
+      "status": "10节点 / 11关系 · 8条路径 · 真实Neo4j"
+    }
+  },
+  {
+    "Screenshot": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261009_round51\\06_graph_mobile_round51.png",
+    "LiveURL": "http://127.0.0.1:8766/#paper=conf%2F3dim%2FVavilalaVF25&view=paper",
+    "Observed": {
+      "width": 375,
+      "height": 1100,
+      "overflow": false,
+      "status": "10节点 / 11关系 · 8条路径 · 真实Neo4j"
+    }
+  }
+]

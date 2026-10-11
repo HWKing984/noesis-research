@@ -1,0 +1,30 @@
+{
+  "filesSha256": {
+    "04_graph_desktop_round31.png": "d32ad5b96c2edfd66b68878e33ab30f03ccd71e02fe0492eb7dd349fde8aae58",
+    "05_graph_tablet_round31.png": "cd9716346eb321275cb6be6f6d2eab908514a49907a3d03802d8c783c2796457",
+    "06_graph_mobile_round31.png": "beefcb95ce7e65504ac93b3744044ecc63fa411d97e216460c496a603a2369b3",
+    "07_selection_downloads.png": "129e97b85f00f0bc70aed6b34c9232b5c23507c95d1d683174198aee464bf1fc",
+    "08_author_identity.png": "690b8888e40e2a829bad062d125af623651a5cf4cba957004759254a984ae2fd",
+    "browser_qa.json": "a253e105b963561721f8f67e4ad9c17ade59e0f8998081a92e95e9ffcc8f7571",
+    "capture_receipt.json": "3603e9b0fb6e51d64651cd1214287510281aa9a2c867f8f80acd6ee52f9802cc",
+    "development_result.json": "a429c20a7f0be0fc660f4e6b2dfd07d24ef10a603fa65da78ccf865c150dd8c8",
+    "graph_explorer_resolved_20261007_31.json": "d927bce131b0dddb6fff56fe0d41725f2e6e7003698526b5497cedb21ff69dcc",
+    "graph_import_resolved_retry_20261007_31.json": "88c8b262958c116e7c224752ab92eb9343725b06c100b413b1aa17420a091675",
+    "identity_acceptance_20261007_31.json": "b9df616b42148d3179a8f8ba7df4e9cbe4ff42aaa003f34323749d73cce108d8",
+    "resolution_summary.json": "6f8df8378edf68ec05f1643436b3813210610f5f2d29a4bc08587fcb26047b51",
+    "tests_20261007_round31_all.xml": "69b97b911bf0bef0acc650ca9220fd6c3c869f0009074df69bb3523e9915c24c",
+    "downloads/ai-literature-candidates.json": "58b7bed2c57a8fda40fdd61e3ac565d0c131957f2ba046890f027b2ab35d2e98",
+    "downloads/ai-literature-reference-drafts.txt": "0d735f522977521abe04ecc36cdb50aae8c6847b0396552288cae70beb921873",
+    "sources/capture_system_20261007_round29.ps1": "969716ddae08ae996112625932d9479c1ef1b9085c4e326f6fae0616f9ed7313",
+    "sources/check_graph_explorer_20261007_round29.py": "fe9388caae70e0bfbd63a14c52104d2bf434789ab9cfc7cf97ae517598081dd2",
+    "sources/check_identity_20261007_round31.py": "bdaac9d79666f1928fa4798660f7c1bdcd3894340e98fc9bb8ba117efdca9add",
+    "sources/course_bio_constraints.py": "0e30e9386ca7eecc50aea86b9167e5aa6cfc20bb39cd825a16ebed29df1301ec",
+    "sources/course_graph.py": "9f66bba9415d15d5357da50a6c70afbaab6902bbbc7d990f5c44b2e54762af7d",
+    "sources/course_identity.py": "17cd32acbccd59a96dbec1e889416db63b7da57eed3d45de28e526397ef67621",
+    "sources/course_literature.html": "cc37e37e4bf1455a812dce9752534fdc818e3c13c567537fea03b7189bc0aa66",
+    "sources/course_resolution.py": "78d57c37a2baf368e80bc43d66778529196cab28c2b8b60e3c1566a127f49f6e",
+    "sources/decoder_dev_20261007_round31.py": "1f8177ad4c4404499ce65fe8bee3df4cb8e9f0f2c62ed85d7308591870152ef1",
+    "sources/prepare_rare_queue_20261007_round31.py": "303964013a0fed341fe163fccbb5feab94cba75ff1f653999ce7611b471894ce",
+    "sources/seal_resolution_20261007_round31.py": "700a100651c5049db0ff4af967159475af57d0297a7e99f8751e076fb2afa0bc"
+  }
+}

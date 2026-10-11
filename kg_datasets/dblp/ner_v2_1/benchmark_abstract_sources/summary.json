@@ -1,0 +1,16 @@
+{
+  "status": "source_pilot_complete",
+  "requested": 9,
+  "received": 9,
+  "exact_normalized_title_matches": 9,
+  "missing_ids": [],
+  "policy": {
+    "license": "CC0-1.0",
+    "source_policy": "https://info.arxiv.org/help/api/tou.html",
+    "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+    "policy_checked_on": "2026-10-05",
+    "redistribute_metadata": true
+  },
+  "human_annotations": 0,
+  "merged_into_title_annotations": false
+}

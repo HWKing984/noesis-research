@@ -1,0 +1,207 @@
+{
+  "passed": true,
+  "newKnownRelations": 115,
+  "trainKnown": 386,
+  "unknown": 1971,
+  "eligibleTrainPairs": 2357,
+  "knownTrainCoverage": 0.16376750106067034,
+  "NERtrainPreserved": 65,
+  "NERentitiesPreserved": 787,
+  "NERquarantinesPreserved": 5,
+  "inheritedKnownRelationsUnchanged": 271,
+  "opaqueDevFilesPreserved": 9,
+  "inheritedReceiptsPreserved": 59,
+  "newClassSourceDocuments": {
+    "USED_FOR": 9,
+    "EVALUATED_ON": 1,
+    "NO_RELATION": 3
+  },
+  "diagnostic": {
+    "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+    "referenceEntities": true,
+    "knownPairs": 115,
+    "newReferenceSupport": {
+      "NO_RELATION": 8,
+      "USED_FOR": 104,
+      "EVALUATED_ON": 3
+    },
+    "knownTotalTrainPairs": 386,
+    "eligibleTotalTrainPairs": 2357,
+    "knownPairCoverage": 0.16376750106067034,
+    "unknownPairs": 1971,
+    "model": {
+      "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+      "entityScope": "reviewed_reference_entities",
+      "accuracy": 0.8956521739130435,
+      "positiveMicro": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "truePositive": 103,
+        "predicted": 111,
+        "reference": 107,
+        "precision": 0.9279279279279279,
+        "recall": 0.9626168224299065,
+        "f1": 0.944954128440367
+      },
+      "positiveMacroF1": 0.9716981132075472,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 100,
+          "predicted": 108,
+          "reference": 104,
+          "precision": 0.9259259259259259,
+          "recall": 0.9615384615384616,
+          "f1": 0.9433962264150944
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 3,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NO_RELATION": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 0,
+          "predicted": 4,
+          "reference": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusionLabels": [
+        "USED_FOR",
+        "EVALUATED_ON",
+        "NO_RELATION"
+      ],
+      "confusionMatrix": [
+        [
+          100,
+          0,
+          4
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ]
+      ],
+      "confusionAxes": "rows_reference_columns_prediction"
+    },
+    "typeMajorityBaselineFromOld271": {
+      "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+      "entityScope": "reviewed_reference_entities",
+      "accuracy": 0.9304347826086956,
+      "positiveMicro": {
+        "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+        "truePositive": 107,
+        "predicted": 115,
+        "reference": 107,
+        "precision": 0.9304347826086956,
+        "recall": 1.0,
+        "f1": 0.963963963963964
+      },
+      "positiveMacroF1": 0.9814814814814814,
+      "supportedPositiveClasses": [
+        "USED_FOR",
+        "EVALUATED_ON"
+      ],
+      "perClass": {
+        "USED_FOR": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 104,
+          "predicted": 112,
+          "reference": 104,
+          "precision": 0.9285714285714286,
+          "recall": 1.0,
+          "f1": 0.9629629629629629
+        },
+        "EVALUATED_ON": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 3,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NO_RELATION": {
+          "evaluationTarget": "new_training_reference_role_diagnostic_not_dev_or_final_test",
+          "truePositive": 0,
+          "predicted": 0,
+          "reference": 8,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusionLabels": [
+        "USED_FOR",
+        "EVALUATED_ON",
+        "NO_RELATION"
+      ],
+      "confusionMatrix": [
+        [
+          104,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ]
+      ],
+      "confusionAxes": "rows_reference_columns_prediction"
+    },
+    "modelErrors": 12,
+    "negativeContrastCorrect": 0,
+    "negativeContrastSupport": 8,
+    "positiveBenchmarkSupport": 3,
+    "positiveBenchmarkSourceDocuments": 1,
+    "pipelineMetrics": null,
+    "trainingExecuted": false,
+    "devContentAccessed": false,
+    "testContentConsumed": false,
+    "independentHumanGold": false,
+    "modelPromoted": false,
+    "qualityPromotionPassed": false,
+    "notice": "Training-side reference-entity diagnostic, not held-out accuracy. Unknowns not negatives; correlated spans not independent trials. Scores uncalibrated, AI judgments not human gold. No threshold/model selection or production change."
+  },
+  "dataManifestSha256": "862621313f1a1a0591f237ef9e9146952367d384a78587b10f3b5bed4692cb59",
+  "runManifestSha256": "670f5a0cb47c6772fbc1a3b2bb07a41cd0df318039732af7fbb502516401c6a6",
+  "engineeringTests": {
+    "tests": 390,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "regressionSeconds": 143.176,
+  "trainingExecuted": false,
+  "testContentConsumed": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "authorWorkPerformed": false,
+  "conceptWorkPerformed": false,
+  "onlineAcceptancePerformed": false,
+  "reportExpansionPaused": true,
+  "evidenceManifestSha256": "f3c6b9feaa8d9abde59d00b37f51a251b84a3a05681bbe4ef9e5bf89601537e7",
+  "actualBrowserCaptures": 2
+}

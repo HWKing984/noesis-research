@@ -1,0 +1,14 @@
+{
+  "policy": "Actual source reading of eight locked train-only whole abstracts. Reuse44 computational TASK scope, flat contiguous BIO and named DATASET rules. Contiguous coordinated computational goals are retained as compound TASKs as in44; never reconstruct disconnected method or dataset names. Named models absent from abstracts are not copied from titles. URLs, unnamed datasets and Wikipedia/Wikidata provenance excluded. No relations judged in this NER-only experiment: every eligible candidate remains UNRESOLVED, never negative. AI initial labels and same-session review are not independent human gold.",
+  "testAccessed": false,
+  "devAccessed": false,
+  "nerStatus": "AI completeness claim, not independent semantic validation",
+  "relationStatus": "Unresolved candidates retained and excluded from negative training",
+  "iterationCompact": {
+    "goal": "Whole-abstract DATASET support with source-bound labels",
+    "baseline": "8 excerpts do not annotate whole abstracts",
+    "mistakeBudget": "No source rewriting, title label copying, implied evaluated-on labels or negative filling",
+    "nextExperiment": "Same-session AI review and strict token/offset round-trip preflight",
+    "promotionAllowed": false
+  }
+}

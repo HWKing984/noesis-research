@@ -1,0 +1,7 @@
+{
+  "status": "failed_no_synthetic_fallback",
+  "checkedAtUTC": "2026-10-10T02:20:06.341192+00:00",
+  "errorType": "StopIteration",
+  "error": "",
+  "qualityPromotionPassed": false
+}

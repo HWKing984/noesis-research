@@ -1,0 +1,17 @@
+{
+  "version": "abstract_pair_window_training_v1",
+  "parent": "resources/course_diverse_role_training_v1.json",
+  "baselineRun": "kg_datasets/dblp/course_v4_runs/diverse_role_development_20261010_57",
+  "baselineManifestSha256": "716c5cd973681636bfef1bf08be94165f8bc8d6d8f339b618758f2015688ed1a",
+  "neighborSentences": 1,
+  "boundaryPattern": "(?<=[.!?])\\s+(?=[A-Z0-9])",
+  "expectedSteps": 612,
+  "experiment": "One fixed RE input-context experiment, same408 known training pairs,333 known dev pairs, initial15 checkpoint,6epochs/batch4/lr2e-5/seed20261008/weighted-loss and optimizer as57. Keep every pair; retain all sentences between ordered endpoints plus one adjacent sentence each side. Cropping uses text and endpoint spans only, never labels, gold evidence, reasons or predictions. No search or retries.",
+  "evaluation": "Freeze52 NER. Restore all RE predictions to original whole-document spans and score all generated pairs on unchanged7 complete dev documents including zero-pair document. Recount sealed57 predictions as baseline cache, not new inference. Known-pair conditional scores retain original333 denominator. Original whole-document AI labels remain references; cropped input can omit remote disambiguation and does not certify local entailment.",
+  "selection": "Same333 exposed dev pairs all-class macro F1, earliest tie; pipeline does not select checkpoint. Same one-checkpoint policy and unchanged resource/promotion guards. Label-free inference shares the identical crop transform used by training.",
+  "labels": "ai_pseudo_same_session_self_review_not_independent_human_gold; unknown_never_negative; no_annotation_edits",
+  "NERTrainingAllowed": false,
+  "testContentAccessAllowed": false,
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true
+}

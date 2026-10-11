@@ -1,0 +1,50 @@
+{
+  "version": "course_v2_evidence_pilot_v1",
+  "goal": "Improve source-supported METHOD/TASK/DATASET and USED_FOR/EVALUATED_ON extraction, not graph size.",
+  "abstractSource": "kg_datasets/dblp/course_diverse_train_roles_20261010_56_final",
+  "abstractSourceManifestSha256": "b45ac3019819f67a56e33abc68b8d5a1115fe4b251b0f3d8d47d6dd5e77aa4e8",
+  "titleSource": "kg_datasets/dblp/course_v4_training_inputs_17",
+  "titleSourceManifestSha256": "44b4cded1460294e23d7b6d53303ddace56296fb1c0f2eacff4d009c667df9ef",
+  "titleTrainReferences": "kg_datasets/dblp/course_v4_weak/train_references.jsonl",
+  "titleTrainReferencesSha256": "96a77b95cc432ccb5931a07629f243e9ab1ddb1bd477bbf16469cdb156a21dbe",
+  "splitMetadata": "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl",
+  "splitMetadataSha256": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+  "abstractSelectionMetadata": "kg_datasets/dblp/course_abstract_pages_20261008_32/selection_lock.json",
+  "abstractSelectionMetadataSha256": "e79ff9e828e47da3314da100bd95e26f20c3c13ca12deddc5931b9627ad9d36a",
+  "supplementMetadata": "resources/course_abstract_dev_supplement_v1.json",
+  "supplementMetadataSha256": "18b8b6eb4ca4ac83c3ce28d133736843ff4b43e7d7c28532201730ba4dc1250a",
+  "reservedTest": "kg_datasets/dblp/course_abstract_queue_20261008_32/test_references.jsonl",
+  "reservedTestSha256": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+  "pilotStrata": {
+    "evaluation_positive": 4,
+    "explicit_negative": 4,
+    "dataset_unresolved": 4
+  },
+  "selection": "Eligible whole TRAIN abstracts in immutable source order; select four previously known evaluation-positive papers, then four explicit-negative papers, then four dataset-containing papers with unresolved candidates and no known evaluation positive; no repeated paper. Uses historical TRAIN labels for purposive review selection, not predictions or dev/test errors.",
+  "tasks": {
+    "title": "Only original title supplies entities and relation evidence; never backfill a title label from an abstract.",
+    "abstract": "Original whole abstract only, no title/URL concatenation; local mention endpoints with explicit predicate and attribution. Components do not inherit our model's evaluation."
+  },
+  "entityRules": {
+    "METHOD": "Named models, algorithms, architectures and clearly designated method families; exclude hardware, receiver/object of an operation, generic pronouns and context-only domain words.",
+    "TASK": "Explicit research task or objective; a data modality/object alone is not a task. No abstract-level task propagated to every method mention.",
+    "DATASET": "Explicitly named dataset or benchmark; conferences, metrics and training hardware are not datasets. Dataset mention does not imply evaluation.",
+    "boundaries": "Exact Unicode code-point spans, shortest complete technical name; preserve versions and standalone alias occurrences; non-overlapping, source ordered. Shared-head coordination ambiguity stays quarantined."
+  },
+  "relationRules": {
+    "USED_FOR": "Explicit evidence attributes performing the task to the head method, not merely co-occurrence or being the object assessed/compressed.",
+    "EVALUATED_ON": "Explicit evaluation on the named dataset attributed to the head method; training use, reporting a benchmark or being a component alone is insufficient.",
+    "NO_RELATION": "Require explicit_argument_role_contrast or explicit_dataset_use_contrast and a source-local explanation; poor performance, absence or co-occurrence alone are not negatives.",
+    "UNRESOLVED": "Preserve uncertainty and mask in training; never relabel as NO_RELATION.",
+    "NOT_EXPRESSED": "Diagnostic absence of a local predicate, not a factual negative or automatic training label."
+  },
+  "review": "AI-assisted initial decisions plus disclosed same-session source review, not independent human gold; initial pilot inherits old labels for review, not newly certified training labels.",
+  "evaluation": "Keep prior exposed dev/test results historical. Plan a new paper-group-disjoint evaluation before training, with random representative set separate from targeted rare-class challenge. Full-pipeline predictions and zero-positive documents stay in denominator; report P/R/F1, per-class source-paper support, coverage and FP/FN.",
+  "phaseExit": "Source integrity and split checks pass; twelve review dossiers prepared; inherit counts without certifying semantics. Training requires a separately locked reviewed snapshot and evaluation/selection contract.",
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "automaticPromotionAllowed": false,
+  "productionMutationAllowed": false,
+  "independentHumanGold": false
+}

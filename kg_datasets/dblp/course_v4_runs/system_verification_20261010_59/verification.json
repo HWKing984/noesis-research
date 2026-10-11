@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "checkedAtUTC": "2026-10-10T07:10:46.539706+00:00",
+  "pythonTests": {
+    "tests": 503,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeNodeUIExitCode": 0,
+  "nativeNodeUIOutput": "PASS: bounded snapshot export, literal text, remove/reset, stale search, permalink and directed path explanations\n✔ D:\\a-open_source\\neo4j\\tests\\test_course_ui.cjs (103.3677ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 116.0344\n",
+  "coverageStatements": "81/81_not_branch_or_model_accuracy",
+  "sourceAmendmentCheck": {
+    "status": "passed",
+    "checkedAtUTC": "2026-10-10T07:03:45.954273+00:00",
+    "inheritedRelationsExact": 88,
+    "addedSupport": {
+      "NO_RELATION": 9,
+      "USED_FOR": 11,
+      "EVALUATED_ON": 3
+    },
+    "summary": {
+      "queue": 8,
+      "NER": 7,
+      "quarantines": 1,
+      "revisedDocuments": 2,
+      "NERChanged": false,
+      "knownPairs": 111,
+      "addedPairs": 23,
+      "relationSupport": {
+        "USED_FOR": 81,
+        "NO_RELATION": 13,
+        "EVALUATED_ON": 17
+      },
+      "addedSupport": {
+        "NO_RELATION": 9,
+        "USED_FOR": 11,
+        "EVALUATED_ON": 3
+      },
+      "eligiblePairs": 478,
+      "unknownPairs": 367,
+      "completeDocuments": 0,
+      "completeCoverage": 0.0,
+      "completeEVALSupport": 0,
+      "completeEVALPapers": 0,
+      "maxMarkedTokens": 428,
+      "strictBIOPassed": true,
+      "trainingExecuted": false,
+      "inferenceExecuted": false,
+      "modelPredictionsUsedForAnnotation": false,
+      "testContentConsumed": false,
+      "independentHumanGold": false,
+      "modelPromoted": false,
+      "qualityPromotionPassed": false
+    },
+    "trainSourceReceiptsChecked": 70,
+    "eligibleTrainNER": 65,
+    "literalTaskInconsistencies": 0,
+    "reservedTestParsed": false,
+    "trainingExecuted": false,
+    "modelPromoted": false,
+    "liveStatus": "ready",
+    "liveGraphId": "ai-literature-63686318d85cccb07afb",
+    "livePapers": 20000,
+    "limits": "Same-session AI source reference, not independent gold; no new accuracy score; complete rare-relation support remains0."
+  },
+  "liveGraphId": "ai-literature-63686318d85cccb07afb",
+  "liveStatus": "ready",
+  "livePapers": 20000,
+  "HTTPChecks": 33,
+  "oracleCases": 22,
+  "replaySemanticFilesByteEqual": [
+    "ner_dev.jsonl",
+    "relation_dev.jsonl",
+    "additional_relation_dev.jsonl",
+    "full_relation_dev.jsonl",
+    "excluded_ner.jsonl",
+    "token_alignment.jsonl",
+    "summary.json"
+  ],
+  "reservedTestParsedOrCopied": false,
+  "reservedTestSha256": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+  "productionWeightsUnchanged": true,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "newAccuracyClaimed": false,
+  "humanGoldClaimed": false
+}

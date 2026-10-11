@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "exportedAtUTC": "2026-10-09T02:48:57.824Z",
+  "notice": "候选文献快照，不是人工核验事实、必引清单或正式参考文献格式；引用前阅读原文。",
+  "items": [
+    {
+      "savedAtUTC": "2026-10-09T02:48:57.824Z",
+      "graphId": "ai-literature-2ba355fe96d011524e55",
+      "source": "live_neo4j_detail_snapshot",
+      "data": {
+        "publication": {
+          "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+          "year": 2025,
+          "source": "dblp_structured_xml",
+          "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+          "type": "inproceedings",
+          "modelApplicationStatus": "inferred",
+          "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+          "urls": [
+            "https://doi.org/10.1109/3DV66043.2025.00082"
+          ],
+          "pages": "835-844",
+          "modelSampleId": "corpus-eea73ed743e3cca75a16",
+          "modelApplied": true,
+          "id": "ai-literature-2ba355fe96d011524e55:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+          "publicationId": "conf/3dim/VavilalaVF25",
+          "graphId": "ai-literature-2ba355fe96d011524e55",
+          "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+          "doi": "10.1109/3dv66043.2025.00082"
+        },
+        "authors": [
+          {
+            "name": "Vaibhav Vavilala",
+            "signatureName": "Vaibhav Vavilala",
+            "position": 1,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/176/5565",
+            "aliases": [
+              "Vaibhav Vavilala"
+            ],
+            "dblpPid": "176/5565",
+            "dblpUrl": "https://dblp.org/pid/176/5565.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "Rahul Vasanth",
+            "signatureName": "Rahul Vasanth",
+            "position": 2,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/131/8964",
+            "aliases": [
+              "Rahul Vasanth"
+            ],
+            "dblpPid": "131/8964",
+            "dblpUrl": "https://dblp.org/pid/131/8964.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          },
+          {
+            "name": "David A. Forsyth",
+            "signatureName": "David A. Forsyth",
+            "position": 3,
+            "identityStatus": "dblp_homepage_resolved",
+            "personId": "homepages/f/DavidAForsyth",
+            "aliases": [
+              "David A. Forsyth",
+              "David Alexander Forsyth"
+            ],
+            "dblpPid": "f/DavidAForsyth",
+            "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html",
+            "identityEvidence": "dblp_exact_case_sensitive_homepage_alias",
+            "identityEvidenceMethods": [
+              "dblp_exact_case_sensitive_homepage_alias"
+            ],
+            "independentlyVerified": false,
+            "orcidSourceValues": []
+          }
+        ],
+        "venues": [
+          {
+            "name": "3DV",
+            "type": "conference"
+          }
+        ],
+        "mentions": [
+          {
+            "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "sampleId": "corpus-eea73ed743e3cca75a16",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 0,
+            "source": "model_prediction",
+            "label": "TASK",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 29,
+            "id": "ai-literature-2ba355fe96d011524e55:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+            "text": "Denoising Monte Carlo Renders",
+            "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+            "graphId": "ai-literature-2ba355fe96d011524e55",
+            "status": "candidate"
+          },
+          {
+            "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "sampleId": "corpus-eea73ed743e3cca75a16",
+            "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+            "start": 35,
+            "source": "model_prediction",
+            "label": "METHOD",
+            "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "offsetUnit": "Unicode_code_points",
+            "end": 51,
+            "id": "ai-literature-2ba355fe96d011524e55:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+            "text": "Diffusion Models",
+            "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+            "graphId": "ai-literature-2ba355fe96d011524e55",
+            "status": "candidate"
+          }
+        ],
+        "assertions": [
+          {
+            "assertion": {
+              "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "confidence": 0.9997346,
+              "source": "model_prediction",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "predicate": "USED_FOR",
+              "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+              "id": "ai-literature-2ba355fe96d011524e55:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-2ba355fe96d011524e55",
+              "confidenceCalibrated": false,
+              "entitySource": "frozen_NER_prediction",
+              "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+              "status": "candidate"
+            },
+            "head": {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-2ba355fe96d011524e55:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-2ba355fe96d011524e55",
+              "status": "candidate"
+            },
+            "tail": {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-2ba355fe96d011524e55:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-2ba355fe96d011524e55",
+              "status": "candidate"
+            }
+          }
+        ],
+        "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+        "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+      }
+    }
+  ]
+}

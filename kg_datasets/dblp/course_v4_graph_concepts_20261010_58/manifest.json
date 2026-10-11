@@ -1,0 +1,87 @@
+{
+  "graphId": "ai-literature-63686318d85cccb07afb",
+  "createdAtUTC": "2026-10-10T02:06:19.340573+00:00",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_graph_quality_20261009_51/manifest.json": "6af9120403cf2f5e3f20f942f6c9f4a06c63105159ca3a193d7b63e5d5b5a2c5",
+    "kg_datasets/dblp/course_v4_identity_crosswalk_20261009_51/manifest.json": "a7eec07d788abcbcfb9871c46b1a82b41a6ca5dc198892dafe1befdf53659a53",
+    "resources/course_concept_v3.json": "8046177aa77160b0ce78b8d10c7f2ede43e18d8ce59b9e86220292cf38756a91",
+    "scripts/normalize_course_concepts.py": "9f191645062501cf4df9d4aea742718839a3a530d9f5fec6f54f59614d44836a",
+    "tests/test_normalize_course_concepts.py": "a5c1f37b26571a8e9d909bc6298f3975f91e0b812c25633e554f1718049e799f"
+  },
+  "scope": {
+    "bibliographyTitles": 20000,
+    "modelTitles": 19999,
+    "pipelinePairs": 22574,
+    "negativeDecisionsExcluded": 1077,
+    "modelAppliedToFullCorpus": false,
+    "testQueueCoverage": null,
+    "production": true,
+    "rejectedRelationPairs": 0,
+    "processedModelTitles": 20000,
+    "rejectedNERTitles": 1
+  },
+  "counts": {
+    "nodes": {
+      "Publication": 20000,
+      "Venue": 3205,
+      "Concept": 29836,
+      "Mention": 44904,
+      "Assertion": 21497,
+      "Person": 75155
+    },
+    "edges": {
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 44904,
+      "DENOTES": 44904,
+      "SUPPORTED_BY": 21497,
+      "HAS_HEAD": 21497,
+      "HAS_TAIL": 21497,
+      "AUTHORED": 88762
+    }
+  },
+  "liveDatabaseImported": false,
+  "modelSourceManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+  "exporterCodeSha256": "9f191645062501cf4df9d4aea742718839a3a530d9f5fec6f54f59614d44836a",
+  "notice": "Typed controlled aliases; variants not equivalence. Original model candidates and evidence preserved, not verified facts.",
+  "filesSha256": {
+    "concept_mapping.jsonl": "8913eb7dc8a0ece045219155c6797cd4a4e88358689d50ebf1b02d6d1db65d57",
+    "edges.jsonl": "4ee9f5a991e0c1d75333addb314d5a0d0e14895b4a76e62d5f2fdd8fd8b109ba",
+    "migration_verification.json": "8215e6ef77e6567af114c88a779d7ae56ffca3f457476bbe29b1483964cdee95",
+    "nodes.jsonl": "8adcc4fdb030ccf35700d1c445ff112d27a6fec61fd9fe3180350674fd8bd060",
+    "resolution_summary.json": "2fae767e2cc12a724302dfcd3bb6c708c5a45d3284d3fdb9aaabed6e07a017d2"
+  },
+  "resolution": {
+    "oldPersonNodes": 72694,
+    "newPersonNodes": 75155,
+    "resolvedPersonNodes": 66093,
+    "unresolvedSignatureNodes": 9062,
+    "oldConceptNodes": 29839,
+    "newConceptNodes": 29836,
+    "controlledConceptNodes": 36,
+    "sourceConceptsGrouped": 3,
+    "authorSignatures": 88762,
+    "literalMentionsUnchanged": true,
+    "candidateAssertionCountUnchanged": true,
+    "modelReliabilityPromoted": false,
+    "controlledAliasGroups": 38,
+    "variantConceptNodes": 18,
+    "authorSignaturesUnchanged": true,
+    "liveDatabaseImported": false
+  },
+  "baseGraphId": "ai-literature-2ba355fe96d011524e55",
+  "vocabularySha256": "8046177aa77160b0ce78b8d10c7f2ede43e18d8ce59b9e86220292cf38756a91",
+  "baseExporterCodeSha256": "619d323aa9a85a642b3b9e6e1cb5329e4b4782f27f328e0894c920b38bc9f755",
+  "candidateStatus": "offline_parity_passed_not_live",
+  "vocabularyVersion": "typed_controlled_aliases_v3",
+  "migrationInputSha256": {
+    "resources/course_concept_v2.json": "d4e0eff6056a47ec881b768d1ce64b91efa8ee32589d15f22205155043541fce",
+    "scripts/normalize_course_concepts.py": "9f191645062501cf4df9d4aea742718839a3a530d9f5fec6f54f59614d44836a",
+    "kg_datasets/dblp/course_v4_runs/concept_alias_candidates_20261010_57/manifest.json": "f401a4419ffe1c1747b076b341e3526a19ab81416405214041a15e016146fa0a",
+    "kg_datasets/dblp/course_v4_graph_quality_20261009_51/manifest.json": "6af9120403cf2f5e3f20f942f6c9f4a06c63105159ca3a193d7b63e5d5b5a2c5",
+    "kg_datasets/dblp/course_v4_identity_crosswalk_20261009_51/manifest.json": "a7eec07d788abcbcfb9871c46b1a82b41a6ca5dc198892dafe1befdf53659a53",
+    "scripts/normalize_course_concepts_v3.py": "c040be9c273a8ed16aa0aeeb230890913f4d3c787b8493e3f48758c48dfd1f4c",
+    "tests/test_normalize_course_concepts_v3.py": "84f82abb44e8c4cf3928ebe9137fefcad4780c23c7024af2afac250e05b8b261",
+    "resources/course_concept_v3.json": "8046177aa77160b0ce78b8d10c7f2ede43e18d8ce59b9e86220292cf38756a91"
+  },
+  "migrationEntryPointSha256": "c040be9c273a8ed16aa0aeeb230890913f4d3c787b8493e3f48758c48dfd1f4c"
+}

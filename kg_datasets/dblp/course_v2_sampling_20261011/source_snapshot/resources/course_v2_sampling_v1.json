@@ -1,0 +1,23 @@
+{
+  "version": "course_v2_sampling_v1",
+  "parent": "kg_datasets/dblp/course_v2_admission_20261010",
+  "population": "fresh_modern_arxiv_identifiable_AI_abstracts",
+  "category": "cs.AI",
+  "listingMonth": "2025-02",
+  "sourceURL": "https://arxiv.org/list/cs.AI/2025-02",
+  "pageSize": 2000,
+  "seed": 20261011,
+  "devSize": 20,
+  "testSize": 20,
+  "challengeSize": 0,
+  "samplingMethod": "python_random_sample_without_replacement_publication_group_v1",
+  "samplingRule": "Sort canonical arXiv IDs ascending; random.Random(seed).sample(population, devSize+testSize); first devSize to dev, remaining to sealed test. No resampling based on titles, labels, predictions or availability.",
+  "scope": "Finite metadata listing snapshot: cs.AI February 2025 after canonical historical exposure exclusion. Not all arXiv, all AI or all DBLP; metadata isolation alone is not proof of semantic independence.",
+  "metadataFields": ["arxivId", "sourceURL", "title"],
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "productionMutationAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false
+}

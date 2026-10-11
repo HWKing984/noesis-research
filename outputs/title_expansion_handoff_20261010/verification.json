@@ -1,0 +1,10 @@
+{
+  "verifiedAtUTC": "2026-10-10T09:27:36.543663+00:00",
+  "allChecksPassed": true,
+  "independentSetMetricRecomputation": true,
+  "trainingSteps": [918, 732],
+  "originalTestArtifactsUnchanged": true,
+  "lockedInputsAndProtectedFilesUnchanged": true,
+  "decision": "stop_no_production_replacement",
+  "method": "Read-only assert-based recomputation from saved predictions and logs; no model rerun, training, or semantic gold adjudication."
+}

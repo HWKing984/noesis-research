@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>01 数据处理与固定划分</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>01 数据处理与固定划分</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>当前数据快照：<code>course_v4_training_inputs_07</code>；队列 1600/200/200 按论文组固定划分，未移动样本。</p><div class="cards"><div class="card">已完成两轮 AI 判断<strong>658 篇</strong></div><div class="card">NER 可用<strong>547 篇</strong></div><div class="card">尚未首轮<strong>1342 篇</strong></div></div><table><thead><tr><th>split</th><th>AI复核篇数</th><th>NER篇数</th><th>关系样本条数</th><th>METHOD跨度</th><th>TASK跨度</th><th>DATASET跨度</th></tr></thead><tbody><tr><td>train</td><td>458</td><td>380</td><td>297</td><td>438</td><td>327</td><td>12</td></tr><tr><td>dev</td><td>200</td><td>167</td><td>162</td><td>208</td><td>148</td><td>3</td></tr><tr><td>test</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></tbody></table><h2>真实 tokenizer 对齐检查</h2><p>train/dev 通过 547 篇；拒绝 0；最长 token：train 33 / dev 32。无截断、无静默丢样本。</p><p>此快照的训练词典 dev 严格实体 F1：27.29%；这是 AI 留出参考一致性，不是神经网络成绩。</p><p>未决不作为空负例；测试尚无标签，正式训练准备状态仍为 false。</p><footer>证据页生成时间：2026-10-06T00:53:27.020256+00:00<br>来源：<div class="path">kg_datasets\dblp\course_v4_training_inputs_07</div><div class="path">kg_datasets\dblp\course_v4_runs\ner_preflight_20261006_07</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

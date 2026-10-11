@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.247" timestamp="2026-10-10T09:22:46.097132+08:00" hostname="HWKing"><testcase classname="" name="tests.test_concept_alias_candidates" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\a-open_source\neo4j\tests\test_concept_alias_candidates.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_concept_alias_candidates.py:9: in &lt;module&gt;
+    import propose_course_concept_aliases as candidates
+E   ModuleNotFoundError: No module named 'propose_course_concept_aliases'</error></testcase></testsuite></testsuites>

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "bundleManifestSha256": "da86ef12159470ce99d8392e5a4d5f688ea1232a84ef433ab5b58e3c062186a7",
+  "sourceArchiveManifestSha256": "41679426cd65a1a12be18690249b2fcb610e34dd05c22547a062bc5acfa3a0ee",
+  "frozenREManifestUnchanged": true,
+  "noTrainingOrFinalTestInference": true,
+  "nodes": 96616,
+  "edges": 109790,
+  "regressionTests": 345,
+  "databaseImport": {
+    "status": "failed",
+    "graphId": "ai-literature-2fd435585d2db5c94e0a",
+    "bundleManifestSha256": "da86ef12159470ce99d8392e5a4d5f688ea1232a84ef433ab5b58e3c062186a7",
+    "startedAtUTC": "2026-10-07T01:34:40.617817+00:00",
+    "batchesCommitted": 0,
+    "databaseReset": false,
+    "error": "Neo4j HTTP 401",
+    "liveDatabaseImported": false,
+    "finishedAtUTC": "2026-10-07T01:34:40.893647+00:00"
+  },
+  "evidenceManifestSha256": "2a8d349a7864e09f912c2f9aeff713b1ed1941172c9be55af22088bc2b2f2c30",
+  "newReportScreenshots": [
+    "app_1440.png",
+    "chrome_app_768.jpg",
+    "chrome_app_375.jpg"
+  ],
+  "passwordPersisted": false,
+  "localDocLinksChecked": 334,
+  "missingLinks": [],
+  "LighthouseAccessibility": 1,
+  "successQueryAcceptance": false
+}

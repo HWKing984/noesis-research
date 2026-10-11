@@ -1,0 +1,59 @@
+{
+  "kind": "candidate_not_graph_migration",
+  "version": "typed_alias_evidence_candidates_v1",
+  "reviewOrigin": "actual_AI_read_and_self_review_of_saved_titles_20261010_not_independent_gold",
+  "trainingAllowed": false,
+  "databaseWriteAllowed": false,
+  "abstractSourcesUsed": false,
+  "expected": {"concepts": 11, "mentions": 30, "potentialNodeReductions": 6},
+  "sources": {
+    "kg_datasets/dblp/course_v4_graph_quality_20261009_51/concept_mapping.jsonl": "c4629374b02906d37110391f18bc6d7276391a4444689c48dea229a13d61134d",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/documents.jsonl": "9de46d38f795a7d2ccff34bdf66b8b009746b6754e2ba299120617b55b6c9643",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/ner_predictions.jsonl": "b214d6a5f6ab6373b2257cb20c369d6c316149eab84783c3f0d6ba2d5280a5ac",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/manifest.json": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+    "resources/course_concept_v2.json": "d4e0eff6056a47ec881b768d1ce64b91efa8ee32589d15f22205155043541fce"
+  },
+  "groups": [
+    {
+      "type": "METHOD", "canonical": "low-rank adaptation", "members": ["lora", "low-rank adaptation"],
+      "status": "candidate_local_definition", "basis": "explicit_local_definition",
+      "anchorPublicationId": "conf/iclr/HuSWALWWC22", "supportQuote": "LoRA: Low-Rank Adaptation",
+      "reviewReason": "原始方法论文题名直接展开LoRA；另一发生点在神经机器翻译方法题名中。仅一般方法术语候选，不合并适配变体或断言应用效果。",
+      "reviewedPublicationIds": ["conf/iclr/HuSWALWWC22", "journals/corr/abs-2512-09910"],
+      "primaryUrls": ["https://arxiv.org/abs/2106.09685", "https://arxiv.org/abs/2512.09910"]
+    },
+    {
+      "type": "METHOD", "canonical": "retrieval-augmented generation", "members": ["rag", "retrieval-augmented generation"],
+      "status": "candidate_local_definition", "basis": "explicit_local_definition",
+      "anchorPublicationId": "journals/ijcopi/MoralesRSSCM25", "supportQuote": "Retrieval-Augmented Generation (RAG)",
+      "reviewReason": "一个既有题名明确括号展开RAG；全部12处METHOD发生点均描述LLM、检索、问答或相关应用。TASK同名节点及特定RAG架构不归并。",
+      "reviewedPublicationIds": ["conf/emnlp/YangWZJH25", "conf/globecom/KhanHTBS24", "conf/nips/He0SC0LBH24", "conf/nips/YuP0WYZSC24", "conf/ragekg/CarusoLMPP25", "journals/corr/abs-2408-12060", "journals/corr/abs-2502-10596", "journals/corr/abs-2505-17156", "journals/corr/abs-2506-11415", "journals/ijcopi/MoralesRSSCM25", "journals/information/MokashiPDH25", "journals/softx/DoNH25"],
+      "primaryUrls": ["https://arxiv.org/abs/2005.11401"]
+    },
+    {
+      "type": "METHOD", "canonical": "gated recurrent unit", "members": ["gru", "gated recurrent units"],
+      "status": "proposal_needs_local_definition", "basis": "typed_context_only",
+      "anchorPublicationId": "conf/icccnt/PrasadSA24", "supportQuote": "Convolutional Neural Networks and Gated Recurrent Units",
+      "reviewReason": "全名用于DNS攻击分类，三个GRU发生点用于文本分类、NER和气体预测的神经网络比较；本文题名没有缩写展开，只可提案，不能据外部词典冒充本文确认。",
+      "reviewedPublicationIds": ["conf/cse/LiuMTSWL20", "conf/icccnt/PrasadSA24", "journals/corr/abs-2304-03399", "journals/tim/AddaeKK25"],
+      "primaryUrls": ["https://docs.pytorch.org/docs/2.14/generated/torch.nn.GRU.html"]
+    },
+    {
+      "type": "METHOD", "canonical": "conditional random field", "members": ["crf", "conditional random field", "conditional random fields"],
+      "status": "proposal_needs_local_definition", "basis": "typed_context_only",
+      "anchorPublicationId": "conf/ictcs2/ChopraJM16", "supportQuote": "Named Entity Recognition in Hindi Using Conditional Random Fields",
+      "reviewReason": "两处CRF与三处全名均处于抽取、检测、分类的方法语境；既有题名未直接展开CRF，保留提案而非确认，线性链等特定变体不等价。",
+      "reviewedPublicationIds": ["conf/cscwd/LangLWWD22", "conf/icacs/AbdullahJ23", "conf/ictcs2/ChopraJM16", "journals/ijon/WangSXWQ18", "journals/pr/KosovSLG18"],
+      "primaryUrls": ["https://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf"]
+    },
+    {
+      "type": "METHOD", "canonical": "random forest", "members": ["random forest", "random forests"],
+      "status": "candidate_spelling_only", "basis": "singular_plural_spelling",
+      "anchorPublicationId": "conf/dicta/DhungelCB15", "supportQuote": "Random Forests",
+      "reviewReason": "七处均为算法方法题名，只提出一般术语单复数归一；不新增RF缩写，不把random forest classifier或具体改进模型合并。",
+      "reviewedPublicationIds": ["conf/dicta/DhungelCB15", "conf/igarss/Symeonakis16", "journals/gis/Jun21", "journals/ijon/Zekic-SusacHK21", "journals/ijwmc/ZhangFJ24", "journals/midm/TongLYLLWYLYQ20", "journals/vciba/SuleimanAPNF24"],
+      "primaryUrls": ["https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html"]
+    }
+  ],
+  "notice": "Primary URLs are audit pointers, not corpus-extraction facts or downloaded source receipts. No live graph, retrieval or model-quality improvement is claimed. No calibrated confidence. Existing corpus titles include prior publicly processed samples; this candidate package is never training data."
+}

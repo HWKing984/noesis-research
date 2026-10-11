@@ -1,0 +1,10 @@
+{
+  "requested": 8,
+  "usable": 8,
+  "excluded": 0,
+  "status": "completed",
+  "testEvaluated": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "modelPromoted": false
+}

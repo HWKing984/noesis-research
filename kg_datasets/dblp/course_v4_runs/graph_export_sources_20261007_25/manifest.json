@@ -1,0 +1,7 @@
+{
+  "kind": "actual_graph_exporter_source_archive",
+  "exporterCodeSha256": "619d323aa9a85a642b3b9e6e1cb5329e4b4782f27f328e0894c920b38bc9f755",
+  "filesSha256": {
+    "course_graph.py": "619d323aa9a85a642b3b9e6e1cb5329e4b4782f27f328e0894c920b38bc9f755"
+  }
+}

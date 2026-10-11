@@ -1,0 +1,8 @@
+{"sampleId": "sample-37cf886b8ccba80b9d07", "reason": "GenAI tools are unnamed and the many pedagogic assessment constructs do not map unambiguously to this extraction schema; do not turn this ambiguous document into an all-O example."}
+{"sampleId": "sample-8be4b371116f4ac27a34", "reason": "Group quarantine"}
+{"sampleId": "sample-fec507319935c47c8c22", "reason": "The 57 task categories include broad subjects such as law and history; their TASK boundaries are not settled. Keep GPT-3 as partial evidence rather than train missing tasks as O."}
+{"sampleId": "sample-13b04432ae769d66c472", "reason": "Source joins words in outputof DNNs and Deep NeuralNetworks and contains DNN-specific. The current standalone rule misses a family mention in the compound; quarantine rather than mark omitted method tokens O."}
+{"sampleId": "sample-bc1cb6c0dd6dfa03eb30", "reason": "This survey mixes broad ML/deep-learning families, named examples and future directions; family boundaries remain inconsistent. Retain known mentions as partial evidence, not complete NER supervision."}
+{"sampleId": "sample-e74ddd20535f2e0a2cac", "reason": "Unnamed LLMs, unnamed 14 datasets and unspecified NLP tasks cannot be distinguished confidently from generic mentions under the current named-entity contract."}
+{"sampleId": "sample-c0f5f63942c0bdebacf5", "reason": "This business/platform description has no specific AI method or named dataset and weak research content. Exclude from NER training rather than use an incomplete all-O sample."}
+{"sampleId": "sample-e52f08f4c43fe7ea1564", "reason": "Keep PDE diffusion explicitly excluded, but generic text-to-image/large-language-model boundaries in this overview are unsettled. Quarantine the incomplete method-family inventory."}

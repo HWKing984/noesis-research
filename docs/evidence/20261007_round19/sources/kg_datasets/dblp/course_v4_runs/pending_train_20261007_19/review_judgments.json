@@ -1,0 +1,572 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "generationDecisionsSha256": "f44bc708e6bb35153754c874842f6a14524e8cad5039eda64ca3061a6b77f9af",
+  "judgments": [
+    {
+      "sampleId": "sample-dfbc6324139843866077",
+      "verdict": "confirmed",
+      "reason": "Music-genre heading and automated-classification subtitle establish both target associations; the neural-network family is literal."
+    },
+    {
+      "sampleId": "sample-bc1b2ba9fa5ad2a1336a",
+      "verdict": "confirmed",
+      "reason": "Daily prognosis target is direct, while the uncertainty-handling component must remain unresolved."
+    },
+    {
+      "sampleId": "sample-8dbcde618991148386ff",
+      "verdict": "confirmed",
+      "reason": "Educational game-based learning is not ML training; agent algorithms and computational operation are unspecified."
+    },
+    {
+      "sampleId": "sample-3f44aeaee1ce48d2fb9b",
+      "verdict": "confirmed",
+      "reason": "Dictionary-based text classification is one composite; broad process analysis cannot be certified as a second flat technical task."
+    },
+    {
+      "sampleId": "sample-c37804c3451961e54d7d",
+      "verdict": "confirmed",
+      "reason": "Machine and production monitoring is a concrete explicit tool target; no unnamed algorithm is added."
+    },
+    {
+      "sampleId": "sample-f86da7b507157f8f9469",
+      "verdict": "confirmed",
+      "reason": "OWL language/schema objects are not datasets; diagram generation is the only explicit technical operation."
+    },
+    {
+      "sampleId": "sample-7e2872db36f9bf9a2695",
+      "verdict": "confirmed",
+      "reason": "Pseudo-language for temporal requirements leaves learning/translation/interpretation direction unclear."
+    },
+    {
+      "sampleId": "sample-7d151b638fc0fab65b3f",
+      "verdict": "confirmed",
+      "reason": "Two complete named method phrases explicitly implement non-query fake-news detection."
+    },
+    {
+      "sampleId": "sample-004466e869d25273692e",
+      "verdict": "confirmed",
+      "reason": "MAST-NER implements named-entity recognition; trigger pool is unnamed, and low-resource is a setting."
+    },
+    {
+      "sampleId": "sample-ae5ac8f07af752a169a6",
+      "verdict": "confirmed",
+      "reason": "Authorship-hypothesis exploration is specified and explicitly linked to GCNs."
+    },
+    {
+      "sampleId": "sample-02d0ff00be20a2d910ab",
+      "verdict": "confirmed",
+      "reason": "Compared rescaling/sampling approaches and LLM family all concern dataset personalization; generic dataset is not DATASET."
+    },
+    {
+      "sampleId": "sample-c7671b942beec52a75e2",
+      "verdict": "confirmed",
+      "reason": "CoNLL-RDF is identified here by RDF/TSV data structures, not a named evaluation dataset; ontology remains an out-of-schema resource."
+    },
+    {
+      "sampleId": "sample-9714bdc9bd658e91650d",
+      "verdict": "confirmed",
+      "reason": "RL instrument and full microservice autoscaling target are direct."
+    },
+    {
+      "sampleId": "sample-e4ba4a6aa40096c022a4",
+      "verdict": "confirmed",
+      "reason": "Risk-/quantization-aware shared training head stays a group; no absent Risk-Aware Training phrase is reconstructed."
+    },
+    {
+      "sampleId": "sample-c690c996b70ff35e1e54",
+      "verdict": "confirmed",
+      "reason": "Joint medication/adverse-event detection retains clinical-note object and does not invent duplicated verb spans."
+    },
+    {
+      "sampleId": "sample-f59eb6e949d8c5bc81f2",
+      "verdict": "confirmed",
+      "reason": "Ambiguous broad analysis/standardization cannot be turned into a complete empty-entity negative."
+    },
+    {
+      "sampleId": "sample-ac4efd91cfc44f646202",
+      "verdict": "confirmed",
+      "reason": "Clinical-text deep-learning model family is known, but Painless model identity and downstream task remain unknown."
+    },
+    {
+      "sampleId": "sample-bff8b024cb16ddf00c72",
+      "verdict": "confirmed",
+      "reason": "Association is the reviewed DL machinery time-series classification topic, not new experiments carried out by this paper."
+    },
+    {
+      "sampleId": "sample-ae01fa795b2896c4451f",
+      "verdict": "confirmed",
+      "reason": "Camera hardware/CAD geometry are not established learning algorithms; joint detection/pose operation is explicit."
+    },
+    {
+      "sampleId": "sample-4446678d3e114619a7f4",
+      "verdict": "confirmed",
+      "reason": "Reaction-diffusion is a mathematical biological model here, not a generative diffusion architecture."
+    },
+    {
+      "sampleId": "sample-5027b87605df3946a90c",
+      "verdict": "confirmed",
+      "reason": "Non-pooling network modifier is retained with explicit medical segmentation."
+    },
+    {
+      "sampleId": "sample-986ee85c46a5fda076e3",
+      "verdict": "confirmed",
+      "reason": "ML is explicitly one energy-saving instrument; IoT is not a separately named learner."
+    },
+    {
+      "sampleId": "sample-240f0765892bb628f65c",
+      "verdict": "confirmed",
+      "reason": "Aortic-annulus target and aortic-dissection patient context are preserved without asserting clinical effectiveness."
+    },
+    {
+      "sampleId": "sample-17994c82e1b415b25872",
+      "verdict": "confirmed",
+      "reason": "Full boundary-aware end-to-end network descriptor is method, not overlapping nested mentions."
+    },
+    {
+      "sampleId": "sample-1cfee1073427d503315b",
+      "verdict": "confirmed",
+      "reason": "PitVQA name and image-grounded LLM expansion are disjoint and tied to pituitary-surgery VQA."
+    },
+    {
+      "sampleId": "sample-4f469f320cecdb519e81",
+      "verdict": "confirmed",
+      "reason": "ACLNet and DL family implement rupture classification; bone morphology remains an input feature."
+    },
+    {
+      "sampleId": "sample-ad94b91502576ab80e56",
+      "verdict": "confirmed",
+      "reason": "Ontology-based relationship learning may be a representation objective or method; segmentation alone is confidently typed."
+    },
+    {
+      "sampleId": "sample-733ea43fb443033bea4e",
+      "verdict": "confirmed",
+      "reason": "Diffusion imaging terminology does not imply generative models or a named benchmark; generalizability is a property."
+    },
+    {
+      "sampleId": "sample-666690a4e8cf5dc2e7ee",
+      "verdict": "confirmed",
+      "reason": "Named and expanded multimodal fusion method phrases both directly target breast-cancer response prediction."
+    },
+    {
+      "sampleId": "sample-52c60824bbd199962e11",
+      "verdict": "confirmed",
+      "reason": "Named hybrid transformer and full multi-phase lesion classification target are explicit."
+    },
+    {
+      "sampleId": "sample-66ebecf32938b451ce07",
+      "verdict": "confirmed",
+      "reason": "Map refinement overlaps the DL phrase; model/map inputs do not automatically prove full quantification implementation."
+    },
+    {
+      "sampleId": "sample-bae58376d54de3e3005b",
+      "verdict": "confirmed",
+      "reason": "Siamese content-loss architecture is one method; class imbalance is a training/data setting."
+    },
+    {
+      "sampleId": "sample-d8bb79b167c6266de617",
+      "verdict": "confirmed",
+      "reason": "SPARQL inference is explicitly applied to guideline modelling/execution; unnamed ontologies are not datasets."
+    },
+    {
+      "sampleId": "sample-8cd8d19972b109d9b1eb",
+      "verdict": "confirmed",
+      "reason": "Comparative LLM extraction topic is direct, but no quality improvement or clinical outcome is certified."
+    },
+    {
+      "sampleId": "sample-a9f11ebd65e71b0d7280",
+      "verdict": "confirmed",
+      "reason": "Mass-spectrometry stage ambiguity remains unresolved even though the ML classification association is clear."
+    },
+    {
+      "sampleId": "sample-ed66b936097c7272a279",
+      "verdict": "confirmed",
+      "reason": "Coordinated segmentation/identification task keeps the shared anatomical target, all in one original contiguous span."
+    },
+    {
+      "sampleId": "sample-7283f9279ee471699da9",
+      "verdict": "confirmed",
+      "reason": "Attack-graph-embedded ML is identifiable; broad cyber awareness lacks a specified computational task."
+    },
+    {
+      "sampleId": "sample-533e9bf3721c8e521079",
+      "verdict": "confirmed",
+      "reason": "Offline RL is the model being selected, not the selection algorithm; preserve the explicit target-versus-instrument negative."
+    },
+    {
+      "sampleId": "sample-b2c3bd13251158c7b3a0",
+      "verdict": "confirmed",
+      "reason": "Connectivity-reinforced method modifier and complete cerebrovascular delineation object are retained; TOF-MRA is a modality."
+    },
+    {
+      "sampleId": "sample-b43cd863e7ca776ad205",
+      "verdict": "confirmed",
+      "reason": "Advertising does not identify a particular extraction/ranking/generation task; technique families alone do not resolve it."
+    },
+    {
+      "sampleId": "sample-0834c0f72c7c5e93f5ea",
+      "verdict": "confirmed",
+      "reason": "Multimodal learning and web extraction have an explicit for relation."
+    },
+    {
+      "sampleId": "sample-f7ef873f44f6f6399ba4",
+      "verdict": "confirmed",
+      "reason": "Assembly Line is expressly a tool; software identity must not be assumed equivalent to an algorithm."
+    },
+    {
+      "sampleId": "sample-b33ff9b163ec5e273fe4",
+      "verdict": "confirmed",
+      "reason": "DenseNet-based segmentation model remains composite, with document-level extraction as separate target."
+    },
+    {
+      "sampleId": "sample-b75a12790554ce5082e8",
+      "verdict": "confirmed",
+      "reason": "Controlling the IEEE contention window explicitly uses ML; the protocol is not a dataset."
+    },
+    {
+      "sampleId": "sample-75d951bd9cc50a3c764f",
+      "verdict": "revised",
+      "reason": "Self-generating figure patterns can be generated training material rather than an identifiable method; first-pass METHOD and direct USED_FOR were too definite.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "Self-generating figure patterns could be training materials rather than an identifiable implementing method.",
+        "entities": [
+          {
+            "text": "Microscopy Image Segmentation",
+            "label": "TASK"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "The proposed strategy identity and its implementing role are not settled.",
+        "relations": [],
+        "notes": "Keep the explicit microscopy task; unnamed training material is not a named DATASET. Do not certify a pattern-to-segmentation method relation.",
+        "sampleId": "sample-75d951bd9cc50a3c764f"
+      }
+    },
+    {
+      "sampleId": "sample-3e89c15d8392466dbea8",
+      "verdict": "confirmed",
+      "reason": "Word embeddings are used to improve the specified phrasal-verb translation operation; no nested MT-family method added."
+    },
+    {
+      "sampleId": "sample-e57719ffa460401b3466",
+      "verdict": "confirmed",
+      "reason": "Both de-embedding and inverse NN are stated filter-design instruments; this is a physical filter target, not a transformer-model confusion."
+    },
+    {
+      "sampleId": "sample-7e558b8bbce74f63f77b",
+      "verdict": "confirmed",
+      "reason": "Personality expression is literal, but an ability investigation and PersonaLLM identity do not settle a deployed implementing model."
+    },
+    {
+      "sampleId": "sample-27747aae144adf6a79c0",
+      "verdict": "confirmed",
+      "reason": "LLM-driven knowledge injection is one composite method; zero-shot/cross-target remain settings outside the stance-detection span."
+    },
+    {
+      "sampleId": "sample-187df311d6d0a9d02bb6",
+      "verdict": "confirmed",
+      "reason": "Logic-based reasoning explicitly implements VQA; performance/explainability modifiers do not create extra entities."
+    },
+    {
+      "sampleId": "sample-3f67b61ee9d8ffafc13e",
+      "verdict": "confirmed",
+      "reason": "Transfer-learning and autoencoder families are explicit; coherent/consistent are properties and no downstream task is spelled out."
+    },
+    {
+      "sampleId": "sample-962aca37f3282f5549ac",
+      "verdict": "confirmed",
+      "reason": "Drone energy consumption prediction is explicit; MEC is infrastructure context, not a benchmark."
+    },
+    {
+      "sampleId": "sample-f0a9796a444dcf7d6f5f",
+      "verdict": "confirmed",
+      "reason": "FedRolex component extraction is stated, while reversing generic federated-learning family into the extractor is not settled."
+    },
+    {
+      "sampleId": "sample-24106c3f18b6a4f41ca7",
+      "verdict": "confirmed",
+      "reason": "Text Painters is a figurative role, not an original Text Generation span; two method mentions remain without invented task."
+    },
+    {
+      "sampleId": "sample-16e3e191d18eb1243e01",
+      "verdict": "confirmed",
+      "reason": "Tree Mover distance and GNN family are identifiable; stability is a property rather than a prediction task."
+    },
+    {
+      "sampleId": "sample-60cff258f3c10d50986f",
+      "verdict": "confirmed",
+      "reason": "Symplectic-integration/sparsity neural-network mechanism stays one complete method phrase."
+    },
+    {
+      "sampleId": "sample-aff6e79a05764cdc07de",
+      "verdict": "confirmed",
+      "reason": "Personalize omits the object and operation; incomplete inventory cannot become a resolved no-pair negative."
+    },
+    {
+      "sampleId": "sample-79377d199fcf42cde2f5",
+      "verdict": "confirmed",
+      "reason": "Nearest-neighbor is an algorithm learned by a transformer; current schema excludes method-to-method learning relations."
+    },
+    {
+      "sampleId": "sample-3910fb136dcb89081eef",
+      "verdict": "confirmed",
+      "reason": "Full temporal-polynomial GNN architecture is explicitly the multivariate forecasting instrument."
+    },
+    {
+      "sampleId": "sample-7e4815bcfacdb05fa93a",
+      "verdict": "confirmed",
+      "reason": "Partial supervision modifies the RL mechanism, and visual active search is a distinct concrete target."
+    },
+    {
+      "sampleId": "sample-246234ad53d5eec0b552",
+      "verdict": "confirmed",
+      "reason": "Distral and multitask RL are name/family mentions without a literal separate target; robustness is a property."
+    },
+    {
+      "sampleId": "sample-e1ed6c4061e7f61cc5c0",
+      "verdict": "confirmed",
+      "reason": "CARLA may be simulator rather than DATASET and world-model role is uncertain; keep only the explicit driving pairs."
+    },
+    {
+      "sampleId": "sample-9f57f23b1689686274a2",
+      "verdict": "confirmed",
+      "reason": "Cross-view geo-localization and complete layer-to-layer transformer are direct."
+    },
+    {
+      "sampleId": "sample-9f3b14224434d4760589",
+      "verdict": "confirmed",
+      "reason": "Two explicit technical operations are tasks; no algorithm is named to implement them."
+    },
+    {
+      "sampleId": "sample-f724d2b5587e708bee7f",
+      "verdict": "confirmed",
+      "reason": "Iconicity is a linguistic/data property, while transfer learning explicitly applies to sign-language recognition."
+    },
+    {
+      "sampleId": "sample-2557d33345a2c195503e",
+      "verdict": "confirmed",
+      "reason": "Swedish-dialogue target and three disjoint method name/family mentions are directly associated; non-ASCII name is preserved."
+    },
+    {
+      "sampleId": "sample-77ffb14e6d24f2faae0e",
+      "verdict": "confirmed",
+      "reason": "Full Clifford-group equivariant layer architecture, not generic layers alone, implements protein-structure prediction."
+    },
+    {
+      "sampleId": "sample-893a3fdf38b735764bd3",
+      "verdict": "confirmed",
+      "reason": "Knowledge base is unnamed input and QA system is unnamed software; do not invent a neural method."
+    },
+    {
+      "sampleId": "sample-012029e0a1378d727b77",
+      "verdict": "confirmed",
+      "reason": "Context/multidimensional mechanism is part of the contiguous transformer extension, not a second overlapping model."
+    },
+    {
+      "sampleId": "sample-e1a0b6667be9f6a3af40",
+      "verdict": "confirmed",
+      "reason": "VPformer-to-forecasting pair is clear, but ambiguous shared-head transformer phrase is quarantined rather than reconstructed."
+    },
+    {
+      "sampleId": "sample-02fb7cbc0a6ecada8ab2",
+      "verdict": "confirmed",
+      "reason": "DL family implements network intrusion detection; semi-supervision and robustness are not separate tasks."
+    },
+    {
+      "sampleId": "sample-74d83193603df0a276cf",
+      "verdict": "confirmed",
+      "reason": "Spatial beam transformer, PLC and SDM fibers are optical hardware; this inspected title is a genuine neural-model keyword false positive."
+    },
+    {
+      "sampleId": "sample-f19a1f5c0760d7f7a272",
+      "verdict": "confirmed",
+      "reason": "Agricultural-zone target retains El Jadida/Morocco; remote sensing is acquisition context rather than a named dataset."
+    },
+    {
+      "sampleId": "sample-63f1887ed651f180ae9f",
+      "verdict": "confirmed",
+      "reason": "CNN predicts both driving-control quantities; shared target conjunction stays one literal task phrase."
+    },
+    {
+      "sampleId": "sample-671b3abd5e079fa54f3f",
+      "verdict": "confirmed",
+      "reason": "Named application ontology and geographic place are outside the current three entity classes; no algorithm is claimed."
+    },
+    {
+      "sampleId": "sample-f4c06e3ff9b0d66bb20a",
+      "verdict": "confirmed",
+      "reason": "Ontology-enabled NLP is the composite processing method, provenance extraction the separate biomedical target."
+    },
+    {
+      "sampleId": "sample-444a057e05d451a8134d",
+      "verdict": "confirmed",
+      "reason": "Deep learning may classify while radios jam; combined target cannot safely receive a resolved all-operations USED_FOR."
+    },
+    {
+      "sampleId": "sample-b814a01970bbdda7d771",
+      "verdict": "confirmed",
+      "reason": "ML is accelerated computation, not the accelerator; explicit target-role negative is retained."
+    },
+    {
+      "sampleId": "sample-1d0177cd23d3cf761236",
+      "verdict": "confirmed",
+      "reason": "Model integration task overlaps generic model families and no named satellite dataset appears; unresolved is appropriate."
+    },
+    {
+      "sampleId": "sample-32047df74da048706f23",
+      "verdict": "confirmed",
+      "reason": "Try-on is embedded inside the full diffusion-transformer method; flat schema cannot add its nested task span."
+    },
+    {
+      "sampleId": "sample-7203007db98e402cff4c",
+      "verdict": "confirmed",
+      "reason": "Name, adaptation mechanism and LLM family explicitly concern change captioning; original Adaption spelling must remain."
+    },
+    {
+      "sampleId": "sample-8f0ba746da8717706a54",
+      "verdict": "confirmed",
+      "reason": "Target-aware bi-transformer implements segmentation; the title supplies no object modality to invent."
+    },
+    {
+      "sampleId": "sample-b5a8072e3beef7e8f4d3",
+      "verdict": "revised",
+      "reason": "Cosine fitting energy is a criterion within the Chan Vese model, not necessarily a standalone segmenter; direct relation needs an unresolved decision.",
+      "replacement": {
+        "entityStatus": "complete",
+        "entityReason": "",
+        "entities": [
+          {
+            "text": "Image Segmentation",
+            "label": "TASK"
+          },
+          {
+            "text": "Local Chan Vese Model",
+            "label": "METHOD"
+          },
+          {
+            "text": "Cosine Fitting Energy",
+            "label": "METHOD"
+          }
+        ],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "The energy functional is a model criterion; standalone segmentation implementation is uncertain.",
+        "relations": [
+          {
+            "head": "e2",
+            "tail": "e1",
+            "label": "USED_FOR",
+            "reason": "The local Chan Vese model explicitly implements image segmentation."
+          },
+          {
+            "head": "e3",
+            "tail": "e1",
+            "label": "UNRESOLVED",
+            "reason": "The criterion is employed inside a model and is not explicitly a standalone segmenter."
+          }
+        ],
+        "notes": "Preserve the named computational criterion mention but do not force its component role into a resolved end-to-end relation.",
+        "sampleId": "sample-b5a8072e3beef7e8f4d3"
+      }
+    },
+    {
+      "sampleId": "sample-bde72b55d041bc5ebaaf",
+      "verdict": "confirmed",
+      "reason": "Interpretive-inductive interview analysis is a scoped operation, unlike bare analysis; named technique families are explicit instruments."
+    },
+    {
+      "sampleId": "sample-216901e00e4ed88879a5",
+      "verdict": "confirmed",
+      "reason": "Nonstationarity describes the series target and selective recurrence describes the model mechanism."
+    },
+    {
+      "sampleId": "sample-dc18c747e53d43967b26",
+      "verdict": "confirmed",
+      "reason": "Reduction-step count estimation is concrete; preserve the unusual original Lambda- Term spacing."
+    },
+    {
+      "sampleId": "sample-0c077813487af13d2936",
+      "verdict": "confirmed",
+      "reason": "RL safety-improvement task overlaps RL and no specific flat nonoverlapping task can be invented; intervention is method-to-method."
+    },
+    {
+      "sampleId": "sample-9fd5d7b4d71325e04332",
+      "verdict": "confirmed",
+      "reason": "Matrix pseudoinverse names a concrete mathematical computation problem, with time-varying object and harmonic-resistant RNN instrument."
+    },
+    {
+      "sampleId": "sample-a45503df3c4f4d89eb63",
+      "verdict": "confirmed",
+      "reason": "LLMs explicitly structure/explore linguistic puzzles; Lingdex website and unnamed puzzles are not inferred methods/datasets."
+    },
+    {
+      "sampleId": "sample-804d74b4cfbde05d6cd0",
+      "verdict": "confirmed",
+      "reason": "Gated architecture and exact turbine-blade icing detection object are explicit."
+    },
+    {
+      "sampleId": "sample-1abcbfd17e67a4d2d292",
+      "verdict": "confirmed",
+      "reason": "Multi-task learning explicitly constructs event-centric temporal KGs; Automatic is not an additional entity."
+    },
+    {
+      "sampleId": "sample-9bfa6372c289ababdf70",
+      "verdict": "confirmed",
+      "reason": "LLM support for recommendation is stated; LLMRec named reproducibility target retains uncertain implementation relation."
+    },
+    {
+      "sampleId": "sample-33feb312f1f960028564",
+      "verdict": "confirmed",
+      "reason": "Counsellor support remains a broad application goal; unnamed LLM tool does not establish a specific technical task."
+    },
+    {
+      "sampleId": "sample-912e13ac5f7f9ad5b050",
+      "verdict": "confirmed",
+      "reason": "Depth and explainability interventions do not identify a named implementing method; unknown does not mean negative."
+    },
+    {
+      "sampleId": "sample-c36b5a5075bc6172dada",
+      "verdict": "confirmed",
+      "reason": "No dataset is named, and RoboCup SSL is competition context; preserve the specified embedded detection task only."
+    },
+    {
+      "sampleId": "sample-2b61242c5d1c45f1c49e",
+      "verdict": "confirmed",
+      "reason": "Slash-composed network stays one method with separate transfer-learning family and search/rescue segmentation target."
+    },
+    {
+      "sampleId": "sample-a978a8ae146bdfb0adf0",
+      "verdict": "confirmed",
+      "reason": "Both independent auditing and HTML-validation tasks explicitly use the LLM family."
+    },
+    {
+      "sampleId": "sample-bea66396a71b572b83fb",
+      "verdict": "revised",
+      "reason": "RecKG is a named graph resource which could constitute a released dataset; complete empty entities overstates what the title establishes.",
+      "replacement": {
+        "entityStatus": "unresolved",
+        "entityReason": "RecKG explicitly names a knowledge-graph resource; title alone cannot distinguish schema/system from a released named dataset.",
+        "entities": [],
+        "groupMentions": [],
+        "relationStatus": "unresolved",
+        "relationReason": "Resource type unresolved, not an inspected complete negative.",
+        "relations": [],
+        "notes": "Recommender systems is a broad application; no literal recommendation operation or learning algorithm is named.",
+        "sampleId": "sample-bea66396a71b572b83fb"
+      }
+    },
+    {
+      "sampleId": "sample-d76430f952f000fa8d99",
+      "verdict": "confirmed",
+      "reason": "Downstream malware-classification pair is clear but deriving models introduces an overlapping uncertain selection task; keep quarantine."
+    },
+    {
+      "sampleId": "sample-3400397f88bb370ce29a",
+      "verdict": "confirmed",
+      "reason": "WebAI could be an environment, while web tasks are unspecified and agent training roles unclear; do not synthesize a dataset or task."
+    }
+  ]
+}

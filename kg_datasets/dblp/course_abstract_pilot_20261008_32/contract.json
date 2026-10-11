@@ -1,0 +1,23 @@
+{
+  "version": "course-abstract-excerpt-1",
+  "textKind": "abstract_excerpt",
+  "offsetUnit": "unicode_codepoint",
+  "split": "train_only_exposed_targeted_pilot",
+  "selectionBias": "AI-selected clear examples, not independent or representative evaluation",
+  "entities": "Named models or distinctive algorithms/architectures/techniques as METHOD; explicit task descriptions as TASK; named datasets/benchmarks as DATASET. Generic models, tasks, datasets, URLs and pronouns excluded.",
+  "relationScope": {
+    "USED_FOR": [
+      "METHOD",
+      "TASK"
+    ],
+    "EVALUATED_ON": [
+      "METHOD",
+      "DATASET"
+    ]
+  },
+  "coreference": "Do not import entities or facts from outside the model-input excerpt.",
+  "reviewPolicy": "Same-session AI self-review only; not independent human annotation.",
+  "sourceAbstracts": "Original whole abstracts retained; excerpt offsets identify input boundaries and absolute entity positions.",
+  "trainingPolicy": "Separate abstract unit; not accepted silently by title-only training loader; strict token alignment preflight required.",
+  "modelPromotionAllowed": false
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.278" timestamp="2026-10-10T09:21:21.347362+08:00" hostname="HWKing"><testcase classname="" name="tests.test_diverse_role_training" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\a-open_source\neo4j\tests\test_diverse_role_training.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_diverse_role_training.py:10: in &lt;module&gt;
+    import train_diverse_abstract_relation as training
+E   ModuleNotFoundError: No module named 'train_diverse_abstract_relation'</error></testcase></testsuite></testsuites>

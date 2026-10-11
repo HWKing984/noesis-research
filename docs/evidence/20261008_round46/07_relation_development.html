@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>同范围完整抽取对照与晋级门槛 · 第46轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>同范围完整抽取对照与晋级门槛 · 第46轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>同7篇完整开发摘要、84条正关系参考重新推理四种组合。完整流程按文献、方向、实体边界/类型和关系标签精确匹配，负关系不计为真阴性。</p><table><thead><tr><th>组合</th><th>P</th><th>R</th><th>F1</th><th>正确正边</th><th>错报正边</th></tr></thead><tbody><tr><td>旧NER＋旧RE</td><td>50.00%</td><td>59.52%</td><td>54.35%</td><td>50</td><td>50</td></tr><tr><td>新NER＋旧RE</td><td>29.24%</td><td>59.52%</td><td>39.22%</td><td>50</td><td>121</td></tr><tr><td>旧NER＋新RE</td><td>50.00%</td><td>59.52%</td><td>54.35%</td><td>50</td><td>50</td></tr><tr><td>新NER＋新RE</td><td>29.59%</td><td>59.52%</td><td>39.53%</td><td>50</td><td>119</td></tr></tbody></table><h2>条件关系模块（输入参考实体，333个已判对）</h2><table><thead><tr><th>模型</th><th>正关系F1</th><th>NO_RELATION召回</th></tr></thead><tbody><tr><td>旧42</td><td>92.06%</td><td>40.91%</td></tr><tr><td>新46</td><td>94.18%</td><td>50.00%</td></tr></tbody></table><p>旧NER配新RE仍为54.35%；新NER配旧RE为39.22%。当前退化主要随新NER进入完整流程，不能拿条件模块94.18%代替完整流程39.53%。新NER更常给出边界不同的实体，漏边原因从missing26/boundary8变为missing11/boundary23；多出约69条错报正边。</p><h2>晋级约束</h2><table><thead><tr><th>条件</th><th>结果</th></tr></thead><tbody><tr><td>pipelinePrecisionNonRegression</td><td>未通过</td></tr><tr><td>pipelineF1NonRegression</td><td>未通过</td></tr><tr><td>pipelineRecallRegressionWithinGuard</td><td>通过</td></tr><tr><td>referenceDATASETSupport</td><td>通过</td></tr><tr><td>completeReferenceEVALUATED_ONSupport</td><td>未通过</td></tr><tr><td>completeDocumentCoverage</td><td>未通过</td></tr><tr><td>DATASETRecallRegressionWithinGuard</td><td>通过</td></tr></tbody></table><p>完整EVALUATED_ON正例0，完整开发文档7/19，既有测试未运行；两模型与生产图谱均未替换。首次入口文件绑定错误在训练前失败，已保存失败记录并修复；374项回归通过。</p><footer>证据页生成时间：2026-10-08T13:43:04.455971+00:00<br>来源：<div class="path">sources/kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/pipeline_development_result.json</div><div class="path">sources/kg_datasets/dblp/course_v4_runs/tests_20261008_round46_workspace_temp_final.xml</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

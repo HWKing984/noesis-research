@@ -1,0 +1,201 @@
+{
+  "version": "v3-candidate-boundary-1",
+  "status": "candidate_pending_human_pilot",
+  "scope": "training-side AI rule stress cases, not human gold or model evaluation",
+  "source_review_sha256": "0d8bc4691e71bccd6a01d98cffdf0ed7fffebb501b3ae736f68fde088a58f1f9",
+  "source_csv_sha256": "69533ccdd5afe3bc34e4cb013c08b576b1f6bd73525a2fa9c4261ade07c46313",
+  "source_markdown_sha256": "ee1bcc0aa0ba7e0e0a26ce44d5a06af651aef748495601e4d3d690112ff6a4bf",
+  "source_blind_reference_sha256": "797c199bcb310bd8779c8570790a07c8f4c10bd1cd8d4fa50c83d2d7ee7581a3",
+  "policies": {
+    "method_boundary": "最大连续方法短语，只包含方法内部的结构、训练范式或组合限定。保留Deep/Inverse/Model-Free/Distributed/Temporal Polynomial/Transformer-Based等技术限定；去掉泛称approach/method/technique/algorithm及一般评价词，不吞入for/using/via后的任务或独立论元。",
+    "method_composition": "X-based Y、X-driven Y等形式在明确以Y为方法中心且X限定其结构/优化机制时标整体composite；实际关系句或并列完整方法不因字面连续就强行合并。模糊情况保留待裁决。这是候选项目政策，不是普遍语言学结论。",
+    "named_objects": "命名模型/系统可由标题上下文提出METHOD候选；命名Dataset/Benchmark提出DATASET候选。冒号、大小写或连字符本身不是类型证明，不自动产生gold。",
+    "task_scope": "TASK包括明确下游任务和技术子问题，例如feature fusion、prompt design、topic identification、ontology alignment；泛称analysis/study/research及单独ontology/knowledge graph不标。类型依据概念，不依据当前句中充当技术手段或目标的角色。",
+    "task_boundary": "保留任务对象、语言、模态、应用场景限定，例如Green Grape、Food、Arabic、Chinese、Web、Multivariate Time-Series。评价/效果、训练设定和目标性质修饰默认另记备注，不纳入基础TASK。",
+    "task_modifier_decisions": {
+      "Human-Like": "exclude from base TASK; retain in notes/source text",
+      "Low-Resource": "exclude as resource setting; retain in notes/source text",
+      "few-shot": "exclude as training setting",
+      "Controllable": "exclude as target property",
+      "Disentangled": "exclude as target property",
+      "Robust": "exclude as evaluation modifier",
+      "Safe": "exclude as target property",
+      "Interpretable": "exclude as target property"
+    },
+    "coordination": "共享中心词的省略并列保持一个连续coordinated提及，不造缺失文字，不把它当单一规范实体，也不自动拆出独立关系。个体关系抽取暂排除coordinated两端；后续解析需独立证据与版本化方案。",
+    "representations": "有技术限定且作为具体表示方案的短语可提出METHOD候选，例如Multi-feature Fusion Embedding、Static/Contextual/Character Embeddings；泛称features/embeddings/representations与Color Features默认不标。是否具体方法仍需上下文人工判断。",
+    "homographs": "物理transformer器件不标AI方法；算法/数学Diffusion Models可标，但禁止凭同名把PDE扩散与生成式扩散自动链接为同一实体。",
+    "relation_scope": "仅非coordinated METHOD→TASK/ DATASET的同标题候选；TASK→TASK的技术依赖不在本轮范围。无范围内候选不意味着标题或论文没有关系，范围外关系不是NO_RELATION。"
+  },
+  "case_decisions": [
+    {
+      "blind_index": 1,
+      "forms": [
+        "single",
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 2,
+      "forms": [
+        "composite",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 3,
+      "forms": [
+        "single",
+        "single"
+      ],
+      "note": "Machine Translation维持TASK；TASK→TASK依赖仅记录范围提示，不伪造METHOD或负例。"
+    },
+    {
+      "blind_index": 4,
+      "forms": [
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 5,
+      "forms": [
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 6,
+      "forms": [
+        "single",
+        "composite",
+        "single"
+      ],
+      "replace_entities": [
+        {
+          "start": 10,
+          "end": 23,
+          "text": "prompt design",
+          "label": "TASK"
+        },
+        {
+          "start": 28,
+          "end": 66,
+          "text": "particle swarm optimization driven LLM",
+          "label": "METHOD"
+        },
+        {
+          "start": 81,
+          "end": 111,
+          "text": "medical information extraction",
+          "label": "TASK"
+        }
+      ],
+      "note": "按组合方法规则合并原PSO与LLM；原始AI建议4个跨度原样保留。本版3个跨度仍为AI候选，不是人工裁决。"
+    },
+    {
+      "blind_index": 7,
+      "forms": [
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 9,
+      "forms": [
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 13,
+      "forms": [
+        "coordinated",
+        "single"
+      ],
+      "note": "整个共享中心词短语保留提及；不自动拆为三种规范方法/关系。"
+    },
+    {
+      "blind_index": 15,
+      "forms": [],
+      "note": "物理光束器件同形词，候选为空；不据此自动删除论文或当作已审核筛选结果。"
+    },
+    {
+      "blind_index": 16,
+      "forms": [
+        "single"
+      ]
+    },
+    {
+      "blind_index": 18,
+      "forms": [
+        "single",
+        "composite"
+      ]
+    },
+    {
+      "blind_index": 20,
+      "forms": [
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 21,
+      "forms": [
+        "single",
+        "composite"
+      ]
+    },
+    {
+      "blind_index": 22,
+      "forms": [
+        "single",
+        "composite"
+      ]
+    },
+    {
+      "blind_index": 24,
+      "forms": [
+        "single",
+        "composite"
+      ],
+      "note": "基础TASK维持Planning；Human-Like/Safe/Interpretable保留于原文及备注，不改写题名。"
+    },
+    {
+      "blind_index": 25,
+      "forms": [
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 29,
+      "forms": [
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 31,
+      "forms": [
+        "single",
+        "single"
+      ]
+    },
+    {
+      "blind_index": 41,
+      "forms": [
+        "single",
+        "composite",
+        "single"
+      ]
+    }
+  ]
+}

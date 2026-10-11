@@ -1,0 +1,70 @@
+{
+  "checkedAtUTC": "2026-10-09T01:50:07.991714+00:00",
+  "instancePath": "D:\\DevData\\neo4j-desktop-data\\Application\\Data\\dbmss\\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34",
+  "modelPromoted": false,
+  "graphWritten": false,
+  "licenseAcceptedByAgent": false,
+  "javaConfigChanged": false,
+  "onlineAcceptanceExecuted": false,
+  "commands": [
+    {
+      "arguments": [
+        "E:\\Java\\JDK\\bin\\java.exe",
+        "-version"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "java version \"23.0.1\" 2024-10-15\nJava(TM) SE Runtime Environment (build 23.0.1+11-39)\nJava HotSpot(TM) 64-Bit Server VM (build 23.0.1+11-39, mixed mode, sharing)\n"
+    },
+    {
+      "arguments": [
+        "C:\\WINDOWS\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\DevData\\neo4j-desktop-data\\Application\\Data\\dbmss\\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\\bin\\neo4j-admin.bat",
+        "server",
+        "license"
+      ],
+      "returncode": 0,
+      "stdout": "No license is accepted.\n\nIn order to use Neo4j Enterprise Edition you must accept the license agreement.\n\nThe license agreement is available at https://neo4j.com/terms/licensing/\nIf you have a support contract the following terms apply https://neo4j.com/terms/support-terms/\n\nIf you do not have a commercial license and want to evaluate the Software\nplease read the terms of the evaluation agreement before you accept.\nhttps://neo4j.com/terms/enterprise_us/\n\n(c) Neo4j Sweden AB. All Rights Reserved.\nUse of this Software without a proper commercial license, or evaluation license\nwith Neo4j, Inc. or its affiliates is prohibited.\nNeo4j has the right to terminate your usage if you are not compliant.\n\nPlease contact us about licensing via https://neo4j.com/contact-us/\n\nMore information is also available at: https://neo4j.com/licensing/\n\n\nTo accept the commercial license agreement run\n    neo4j-admin server license --accept-commercial\nTo accept the terms of the evaluation agreement run\n    neo4j-admin server license --accept-evaluation\n\n",
+      "stderr": "WARNING! You are using an unsupported Java runtime.\n* Please use Java(TM) 21 or Java(TM) 25 to run Neo4j.\n* Please see https://neo4j.com/docs/ for Neo4j installation instructions.\nWARNING: Using incubator modules: jdk.incubator.vector\n"
+    },
+    {
+      "arguments": [
+        "C:\\WINDOWS\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\DevData\\neo4j-desktop-data\\Application\\Data\\dbmss\\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34\\bin\\neo4j.bat",
+        "status"
+      ],
+      "returncode": 3,
+      "stdout": "",
+      "stderr": "Owner 'BUILTIN\\Administrators' of 'D:\\DevData\\neo4j-desktop-data\\Application\\Data\\dbmss\\dbms-4da0e003-b3f9-4536-bacc-c65d6ab4df34' and user running this process 'HWKING\\Y7000P' differs, potentially resulting in a file permission problem. Ensure that the file has the same owner, or at least has write access for the user running the Neo4j process trying to use it.\n-----------------------------------------------------\nCommand Failed\nNeo4j is not running.\n-----------------------------------------------------\n"
+    }
+  ],
+  "ports": [
+    {
+      "port": 7474,
+      "listening": false
+    },
+    {
+      "port": 7687,
+      "listening": false
+    },
+    {
+      "port": 8765,
+      "listening": false
+    }
+  ],
+  "logSha256": {
+    "kg_datasets/dblp/course_v4_runs/neo4j_console_20261009_round49.stdout.log": "de72c6ec2a760ca540ac3eb4b6d407ad34e2c06bbe23b933dbe5d8f4292531af",
+    "kg_datasets/dblp/course_v4_runs/neo4j_console_20261009_round49.stderr.log": "f94069f83053f557400aeb7684ea57d8ca2393ffff58b63c494e77834ff68616"
+  },
+  "shutdownConfirmed": true,
+  "blockingConditions": [
+    "CLI license check says No license is accepted",
+    "Installed Java 23 is unsupported; CLI requests Java 21 or 25",
+    "Existing graph/search online acceptance has not been rerun"
+  ],
+  "status": "blocked_runtime_environment_not_model_failure"
+}

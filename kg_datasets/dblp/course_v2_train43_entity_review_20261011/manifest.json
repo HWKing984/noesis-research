@@ -1,0 +1,30 @@
+{
+  "kind": "same_session_ai_entity_revision_not_training_authorization",
+  "createdAt": "2026-10-11T02:42:16.351466+00:00",
+  "inputs": {
+    "D:\\Users\\Y7000P\\Downloads\\v2_train65_cot_binding_fixed_20261011.zip": "57d5233e91c7b5d6f2e9726e5b6f8f96f1b3dba8ac550768fdd75a86d9a78d21",
+    "D:\\a-open_source\\neo4j\\annotations\\course_v2\\train43_entity_review_20261011.json": "4141fa4d62ccc31adde75da0826ca508b6236c3ecb0f399252f0b1cca61596e5",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_train65_workset_20261011\\pending43_sources.jsonl": "cf148fbe90b0787b2302aa61f1b9eb7315a12c02c74d02d01ef61ed41a49ac50",
+    "D:\\a-open_source\\neo4j\\scripts\\review_train43_entities.py": "db15468a951215af0a1a6db321ad8e9d61f40955d701febec7f3f1a49c5a8f83"
+  },
+  "parentMemberSha256": {
+    "train65_ner_revised.jsonl": "f374b9c28a6f66f859538a77992b93b9e51ac452a1ebdf3e11200a05cb1a0396",
+    "train65_positive_revised.jsonl": "2b68f89f388cbce2eb6768f76a5bf4bb69fa6aaeaa93426931c9ff51d3cb5c90",
+    "train65_all_pairs_rebuilt.jsonl": "aaacb4ca522405fb47ba4ed33732a5fba553ab6e8d38841ec8700bd0abb3be62"
+  },
+  "filesSha256": {
+    "entity_change_ledger.jsonl": "1d917eed683bf31f93625125374f30627bdbc9e0c608980b162421495f05a4b5",
+    "review_decisions.json": "4141fa4d62ccc31adde75da0826ca508b6236c3ecb0f399252f0b1cca61596e5",
+    "summary.json": "608c47f34a06e05edf3539a1f02e62d876e1a7571663401abf6546c192570757",
+    "train43_entity_review.csv": "d9dc0dee8f4c93a9f96b938d65dcc465a377bb508ed5b105a3ba3c53740ee317",
+    "train43_entity_review.html": "ba611cc4df73099bf0763d8653de30600406f12f46f907e8a1c9cfdb70a9100e",
+    "train43_entity_reviews.jsonl": "3e05b484da498774192137cbef0a4768280ebdf79aedecd7d74b8e1df2ec0564",
+    "train65_all_pairs_rebuilt.jsonl": "ee494b60ad0fdac33bbd0555acb6b670c5337f3ac7d4c79d86c04b25880caf2c",
+    "train65_ner_reviewed_candidates.jsonl": "c2e5e7aa5bab84faa9c42e65f7df2f349fcd42be97b408053c5cb1c28849269e",
+    "train65_positive_retained.jsonl": "7d5eb18ef25a701299ae2e29678e58dcf0df2304915e9ef6207ff490bacf25b6",
+    "train65_relations_deferred.jsonl": "4ea8187ee00a5480110e206137f5cd37f3b3c3a81a1a4995ce75310e2aa4ad51"
+  },
+  "trainingAuthorized": false,
+  "independentHumanGold": false,
+  "testContentRead": false
+}

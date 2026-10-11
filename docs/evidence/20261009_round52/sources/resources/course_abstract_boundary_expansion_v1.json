@@ -1,0 +1,28 @@
+{
+  "version": "abstract_boundary_train_expansion_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_benchmark_inputs_20261008_45",
+  "snapshotManifestSha256": "efbd9c2fc1f1e89f7cfc2cc59ec2df239e534f763d07a4a38b92d9464016e167",
+  "metadataLock": "kg_datasets/dblp/course_abstract_pages_20261008_32/selection_lock.json",
+  "supplement": "kg_datasets/dblp/course_abstract_supplement_reviewed_20261009_49",
+  "supplementManifestSha256": "2fc9aeaefa200100de611e5940ee5fa3cf6bbcfcea520f3700542be11f8c82f7",
+  "seeds": [
+    {"arxivId":"1903.10676","title":"SciBERT: A Pretrained Language Model for Scientific Text"},
+    {"arxivId":"1907.10529","title":"SpanBERT: Improving Pre-training by Representing and Predicting Spans"},
+    {"arxivId":"1909.03546","title":"Entity, Relation, and Event Extraction with Contextualized Span Representations"},
+    {"arxivId":"1909.07755","title":"Span-based Joint Entity and Relation Extraction with Transformer Pre-training"},
+    {"arxivId":"2010.12812","title":"A Frustratingly Easy Approach for Entity and Relation Extraction"},
+    {"arxivId":"2010.01057","title":"LUKE: Deep Contextualized Entity Representations with Entity-aware Self-attention"},
+    {"arxivId":"2308.03279","title":"UniversalNER: Targeted Distillation from Large Language Models for Open Named Entity Recognition"},
+    {"arxivId":"1906.06127","title":"DocRED: A Large-Scale Document-Level Relation Extraction Dataset"}
+  ],
+  "selection": "Eight fixed scientific information-extraction papers chosen by train-side METHOD/TASK/DATASET support imbalance and entity boundary need, not held-out names or predictions. GLiNER/RoBERTa rejected by identity metadata, not assigned to train. Selection occurs before fresh source/annotation/predictions. Targeted NLP training is biased and not a representative evaluation sample.",
+  "identityPolicy": "Reject exact arXiv IDs and normalized title overlaps with the entire20k corpus, original abstract selection metadata, current train/dev identities and supplementary dev identities. Reserved test content never opened; metadata-only exclusion plus binary integrity checks.",
+  "crawlDelaySeconds": 15.1,
+  "maxTokens": 512,
+  "annotation": "Whole abstract AI labels and actual same-session source self-review. Same three typed classes and flat BIO scope as44/45; specific task phrases retain modifiers. Original raw Unicode spans; no title labels, global dictionary or partial-word labels. Shared-head/nested ambiguity is quarantined, not silently repaired.",
+  "relationPolicy": "NER-only supplementation: all new relation candidates explicitly UNRESOLVED, no new RE gradient or invented NO_RELATION. Original271 train relations byte-identical.",
+  "trainingAllowed": false,
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true,
+  "independentHumanGold": false
+}

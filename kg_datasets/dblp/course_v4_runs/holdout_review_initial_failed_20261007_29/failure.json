@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "stage": "AI_review_judgment_coverage_before_export",
+  "error": "Judgment count/unique sample assertion failed",
+  "diagnostic": "Rows 83 and 99 were listed as both confirmed and revised. No sample was missing.",
+  "correction": "Remove the two conflicting confirmation literals; retain their explicit revisions.",
+  "testInferenceExecuted": false,
+  "judgmentsExported": false,
+  "originalArtifactsOverwritten": false
+}

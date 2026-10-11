@@ -1,0 +1,133 @@
+{
+  "captures": [
+    {
+      "image": "01_data.png",
+      "sha256": "929798d6c196cd9d55c0e66275569975ac633091fe7ef82c06288fda796c0e68",
+      "sourcePage": "01_data.html",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1100",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round08\\01_data.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-c582059c385547019d69f560fc11afc7",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/01_data.html"
+      ],
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/01_data.html",
+      "sourcePageSha256": "d4ea6a3ee1ba06921eb447f263febb89b628682087c556b42664489a6b44f48c",
+      "viewportHeight": 1100,
+      "capturedAt": "2026-10-06T01:23:05.5539586Z",
+      "originalConsoleScreenshot": false,
+      "bytes": 91171
+    },
+    {
+      "image": "02_training.png",
+      "sha256": "474e1ba23e77f6d6374b0824f9121d00059b34c73ead5240839e53c0fd0f0fdf",
+      "sourcePage": "02_training.html",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1450",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round08\\02_training.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-c582059c385547019d69f560fc11afc7",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/02_training.html"
+      ],
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/02_training.html",
+      "sourcePageSha256": "cc81b34d379574ea353dc44bfa0d59c0e7a3fe4bd247587704e4a290ddc9c711",
+      "viewportHeight": 1450,
+      "capturedAt": "2026-10-06T01:23:06.3288218Z",
+      "originalConsoleScreenshot": false,
+      "bytes": 124188
+    },
+    {
+      "image": "03_predictions.png",
+      "sha256": "01a66dee5ac52fe61d8bf6b64c4f572740af41afc311b5ae299fc54e0f897918",
+      "sourcePage": "03_predictions.html",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round08\\03_predictions.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-c582059c385547019d69f560fc11afc7",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/03_predictions.html"
+      ],
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/03_predictions.html",
+      "sourcePageSha256": "4b0699c518c48f4cf2157c2167e066df6e35f8b50ffbde2fea4afb2ee688f76a",
+      "viewportHeight": 1300,
+      "capturedAt": "2026-10-06T01:23:06.9991625Z",
+      "originalConsoleScreenshot": false,
+      "bytes": 103167
+    },
+    {
+      "image": "04_traceability.png",
+      "sha256": "5297218ac5ac75f9cdc8e78b7bc2b8ba9b6ea2acb1bf46df9cb3f598aaca2c2b",
+      "sourcePage": "04_traceability.html",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1800",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round08\\04_traceability.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-c582059c385547019d69f560fc11afc7",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/04_traceability.html"
+      ],
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/04_traceability.html",
+      "sourcePageSha256": "9311b421cfdb27f3efa5563c9ae567a76502b734a2ea358cb8fa46feed07cc8b",
+      "viewportHeight": 1800,
+      "capturedAt": "2026-10-06T01:23:07.7201112Z",
+      "originalConsoleScreenshot": false,
+      "bytes": 116425
+    },
+    {
+      "image": "05_development.png",
+      "sha256": "385e48304918f6324bad8b2b8d8e30a166e589b83b5f8f70c61f3b506fb953fd",
+      "sourcePage": "05_development.html",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261006_round08\\05_development.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-c582059c385547019d69f560fc11afc7",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/05_development.html"
+      ],
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261006_round08/05_development.html",
+      "sourcePageSha256": "a2d7799b39781bd111374b4afa20c14d1bc25d0acb9ea41f494661ef8d510c1c",
+      "viewportHeight": 2300,
+      "capturedAt": "2026-10-06T01:23:08.5350509Z",
+      "originalConsoleScreenshot": false,
+      "bytes": 218104
+    }
+  ],
+  "renderer": "installed_Microsoft_Edge_headless",
+  "browserVersion": "154.0.4258.53",
+  "finishedAt": "2026-10-06T01:23:08.5360211Z",
+  "generatedFromRealArtifacts": true,
+  "viewportWidth": 1280,
+  "status": "completed",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-c582059c385547019d69f560fc11afc7",
+  "originalConsoleScreenshot": false,
+  "kind": "actual_browser_render_capture"
+}

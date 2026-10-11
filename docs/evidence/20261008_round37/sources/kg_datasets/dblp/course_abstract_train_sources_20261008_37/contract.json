@@ -1,0 +1,37 @@
+{
+  "version": "course-whole-abstract-1",
+  "textKind": "abstract",
+  "offsetUnit": "unicode_codepoint",
+  "entityLabels": [
+    "METHOD",
+    "TASK",
+    "DATASET"
+  ],
+  "bioLabels": [
+    "O",
+    "B-METHOD",
+    "I-METHOD",
+    "B-TASK",
+    "I-TASK",
+    "B-DATASET",
+    "I-DATASET"
+  ],
+  "relationPairs": {
+    "USED_FOR": [
+      "METHOD",
+      "TASK"
+    ],
+    "EVALUATED_ON": [
+      "METHOD",
+      "DATASET"
+    ]
+  },
+  "splitPolicy": "Original paper-group split. Cached exposed sources train-only; any existing held-out conflict is quarantined. All excerpts inherit parent group.",
+  "annotationPolicy": "Fresh AI annotations required. Do not copy title/excerpt labels to whole abstracts. Pronoun-dependent or ambiguous relations unresolved, not negative.",
+  "normalization": "Exact extracted abstract metadata Unicode text retained; no title concatenation or whitespace rewriting.",
+  "maxTokens": 512,
+  "overlengthPolicy": "Reject without truncation; raw source retained for later explicit windowing.",
+  "annotationSource": "ai_pseudo_not_independent_human_gold",
+  "promotionAllowed": false,
+  "testPolicy": "Test jobs only reserved; no model inference, fitting, selection or test label generation in this step."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "graphId": "ai-literature-63686318d85cccb07afb",
+  "bundleManifestSha256": "393069faa8091c9def9d57e935ba433a95db407386697d3ecd17fb05afd45574",
+  "startedAtUTC": "2026-10-10T02:12:07.757112+00:00",
+  "batchesCommitted": 918,
+  "databaseReset": false,
+  "actualCounts": {
+    "nodes": {
+      "Publication": 20000,
+      "Person": 75155,
+      "Venue": 3205,
+      "Concept": 29836,
+      "Mention": 44904,
+      "Assertion": 21497
+    },
+    "edges": {
+      "AUTHORED": 88762,
+      "PUBLISHED_IN": 19998,
+      "MENTIONS": 44904,
+      "DENOTES": 44904,
+      "SUPPORTED_BY": 21497,
+      "HAS_HEAD": 21497,
+      "HAS_TAIL": 21497
+    }
+  },
+  "liveDatabaseImported": true,
+  "finishedAtUTC": "2026-10-10T02:14:08.687426+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "local_relation_evidence_gate_v1",
+  "goal": "Abstain when a positive model relation lacks an explicit local connector; retain literal evidence and all rejected predictions",
+  "baseline": "kg_datasets/dblp/course_v4_runs/abstract_abstention_development_20261008_48",
+  "baselineManifestSha256": "489bf9095484c76a79786b0a8427a93320e2ed30154ed29df95a85cd6eac5497",
+  "supplement": "kg_datasets/dblp/course_abstract_supplement_reviewed_20261009_49",
+  "supplementManifestSha256": "2fc9aeaefa200100de611e5940ee5fa3cf6bbcfcea520f3700542be11f8c82f7",
+  "experiment": "One fixed same-sentence directional-connector rule; no threshold search, training, label edits or reserved-test access",
+  "abstentionMeaning": "No emitted edge, not NO_RELATION and not a proven false relation",
+  "evidenceMeaning": "Lexical support window, not independently verified semantics or calibrated probability",
+  "fullPipelineScope": "Only the historical 7 fully resolved exposed development documents; all reference positives remain in recall denominator",
+  "supplementScope": "NER on 7 BIO-complete documents; conditional RE on 88 resolved reference pairs; unknowns masked and coverage disclosed. No complete-document pipeline score",
+  "trainingAllowed": false,
+  "labelMutationAllowed": false,
+  "testContentAccessAllowed": false,
+  "automaticPromotionAllowed": false
+}

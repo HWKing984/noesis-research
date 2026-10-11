@@ -1,0 +1,36 @@
+{
+  "wholeTrainQueue": 70,
+  "NERtrainFrozen": 65,
+  "NEREntitiesFrozen": 787,
+  "NERQuarantines": 5,
+  "reviewedRoleDocuments": 11,
+  "inheritedReceipts": 59,
+  "inheritedKnownPairs": 271,
+  "knownPairs": 386,
+  "addedKnownPairs": 115,
+  "relationSupport": {
+    "EVALUATED_ON": 64,
+    "USED_FOR": 288,
+    "NO_RELATION": 34
+  },
+  "addedSupport": {
+    "NO_RELATION": 8,
+    "USED_FOR": 104,
+    "EVALUATED_ON": 3
+  },
+  "eligiblePairs": 2357,
+  "unknownPairs": 1971,
+  "knownPairCoverage": 0.16376750106067034,
+  "completeTrainDocuments": 12,
+  "addedBenchmarkSourceDocuments": 1,
+  "maxMarkedTokens": 333,
+  "opaqueDevFilesPreserved": 9,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "devContentAccessed": false,
+  "testContentConsumed": false,
+  "independentHumanGold": false,
+  "qualityPromotionPassed": false,
+  "modelPromoted": false,
+  "NERSource": "kg_datasets/dblp/course_abstract_boundary_inputs_20261009_52/ner_train.jsonl"
+}

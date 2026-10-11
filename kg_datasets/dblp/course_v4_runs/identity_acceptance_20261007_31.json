@@ -1,0 +1,2862 @@
+{
+  "status": "completed",
+  "checks": [
+    {
+      "route": "/api/health",
+      "parameters": {},
+      "response": {
+        "data": {
+          "status": "ready",
+          "graphId": "ai-literature-ed16399925fac2a599ed",
+          "source": "live_neo4j",
+          "scope": {
+            "bibliographyTitles": 20000,
+            "modelTitles": 19999,
+            "rejectedNERTitles": 1,
+            "candidateAssertions": 21497
+          },
+          "resolution": {
+            "oldPersonNodes": 72694,
+            "newPersonNodes": 75155,
+            "resolvedPersonNodes": 66091,
+            "unresolvedSignatureNodes": 9064,
+            "oldConceptNodes": 29885,
+            "newConceptNodes": 29878,
+            "controlledConceptNodes": 20,
+            "sourceConceptsGrouped": 7,
+            "authorSignatures": 88762,
+            "literalMentionsUnchanged": true,
+            "candidateAssertionCountUnchanged": true,
+            "modelReliabilityPromoted": false
+          },
+          "terminology": {
+            "version": "zh_alias_v1",
+            "nodeLabels": {
+              "Publication": "论文/文献",
+              "Person": "作者",
+              "Venue": "会议/期刊",
+              "Concept": "概念",
+              "Mention": "实体提及",
+              "Assertion": "候选断言"
+            },
+            "entityLabels": {
+              "METHOD": "方法",
+              "TASK": "任务",
+              "DATASET": "数据集"
+            },
+            "relationshipLabels": {
+              "AUTHORED": "署名",
+              "PUBLISHED_IN": "发表于",
+              "MENTIONS": "提及",
+              "DENOTES": "指向概念",
+              "SUPPORTED_BY": "题名证据来自",
+              "HAS_HEAD": "头实体",
+              "HAS_TAIL": "尾实体",
+              "USED_FOR": "用于（候选）",
+              "EVALUATED_ON": "在数据集上评估（候选）"
+            },
+            "publicationTypes": {
+              "inproceedings": "会议论文",
+              "article": "期刊文章",
+              "proceedings": "会议论文集",
+              "book": "图书",
+              "incollection": "书中章节",
+              "phdthesis": "博士论文",
+              "mastersthesis": "硕士论文"
+            },
+            "aliases": [
+              {
+                "zh": "扩散模型",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "diffusion model",
+                  "diffusion models"
+                ]
+              },
+              {
+                "zh": "知识图谱",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "knowledge graph",
+                  "knowledge graphs"
+                ]
+              },
+              {
+                "zh": "图神经网络",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "graph neural network",
+                  "graph neural networks"
+                ]
+              },
+              {
+                "zh": "卷积神经网络",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "convolutional neural network",
+                  "convolutional neural networks"
+                ]
+              },
+              {
+                "zh": "神经网络",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "neural network",
+                  "neural networks"
+                ]
+              },
+              {
+                "zh": "机器学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "machine learning"
+                ]
+              },
+              {
+                "zh": "深度学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "deep learning"
+                ]
+              },
+              {
+                "zh": "强化学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "reinforcement learning"
+                ]
+              },
+              {
+                "zh": "大语言模型",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "large language model",
+                  "large language models"
+                ]
+              },
+              {
+                "zh": "大型语言模型",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "large language model",
+                  "large language models"
+                ]
+              },
+              {
+                "zh": "对比学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "contrastive learning"
+                ]
+              },
+              {
+                "zh": "迁移学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "transfer learning"
+                ]
+              },
+              {
+                "zh": "联邦学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "federated learning"
+                ]
+              },
+              {
+                "zh": "自监督学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "self-supervised learning"
+                ]
+              },
+              {
+                "zh": "命名实体识别",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "named entity recognition"
+                ]
+              },
+              {
+                "zh": "关系抽取",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "relation extraction"
+                ]
+              },
+              {
+                "zh": "机器翻译",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "machine translation"
+                ]
+              },
+              {
+                "zh": "目标检测",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "object detection"
+                ]
+              },
+              {
+                "zh": "图像分类",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "image classification"
+                ]
+              },
+              {
+                "zh": "语义分割",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "semantic segmentation"
+                ]
+              },
+              {
+                "zh": "推荐系统",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "recommender system",
+                  "recommender systems",
+                  "recommendation system",
+                  "recommendation systems"
+                ]
+              },
+              {
+                "zh": "AAAI会议",
+                "fields": [
+                  "venue"
+                ],
+                "terms": [
+                  "aaai"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dim/VavilalaVF25"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          "authors": [
+            {
+              "name": "Vaibhav Vavilala",
+              "signatureName": "Vaibhav Vavilala",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/176/5565",
+              "aliases": [
+                "Vaibhav Vavilala"
+              ],
+              "dblpPid": "176/5565",
+              "dblpUrl": "https://dblp.org/pid/176/5565.html"
+            },
+            {
+              "name": "Rahul Vasanth",
+              "signatureName": "Rahul Vasanth",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/131/8964",
+              "aliases": [
+                "Rahul Vasanth"
+              ],
+              "dblpPid": "131/8964",
+              "dblpUrl": "https://dblp.org/pid/131/8964.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "homepages/176/5565",
+        "limit": 50
+      },
+      "response": {
+        "data": [
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          }
+        ],
+        "meta": {
+          "offset": 0,
+          "limit": 50,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dim/VavilalaVF25"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          "authors": [
+            {
+              "name": "Vaibhav Vavilala",
+              "signatureName": "Vaibhav Vavilala",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/176/5565",
+              "aliases": [
+                "Vaibhav Vavilala"
+              ],
+              "dblpPid": "176/5565",
+              "dblpUrl": "https://dblp.org/pid/176/5565.html"
+            },
+            {
+              "name": "Rahul Vasanth",
+              "signatureName": "Rahul Vasanth",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/131/8964",
+              "aliases": [
+                "Rahul Vasanth"
+              ],
+              "dblpPid": "131/8964",
+              "dblpUrl": "https://dblp.org/pid/131/8964.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "176/5565",
+        "limit": 50
+      },
+      "response": {
+        "data": [
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          }
+        ],
+        "meta": {
+          "offset": 0,
+          "limit": 50,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dim/VavilalaVF25"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          "authors": [
+            {
+              "name": "Vaibhav Vavilala",
+              "signatureName": "Vaibhav Vavilala",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/176/5565",
+              "aliases": [
+                "Vaibhav Vavilala"
+              ],
+              "dblpPid": "176/5565",
+              "dblpUrl": "https://dblp.org/pid/176/5565.html"
+            },
+            {
+              "name": "Rahul Vasanth",
+              "signatureName": "Rahul Vasanth",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/131/8964",
+              "aliases": [
+                "Rahul Vasanth"
+              ],
+              "dblpPid": "131/8964",
+              "dblpUrl": "https://dblp.org/pid/131/8964.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "homepages/131/8964",
+        "limit": 50
+      },
+      "response": {
+        "data": [
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          }
+        ],
+        "meta": {
+          "offset": 0,
+          "limit": 50,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dim/VavilalaVF25"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          "authors": [
+            {
+              "name": "Vaibhav Vavilala",
+              "signatureName": "Vaibhav Vavilala",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/176/5565",
+              "aliases": [
+                "Vaibhav Vavilala"
+              ],
+              "dblpPid": "176/5565",
+              "dblpUrl": "https://dblp.org/pid/176/5565.html"
+            },
+            {
+              "name": "Rahul Vasanth",
+              "signatureName": "Rahul Vasanth",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/131/8964",
+              "aliases": [
+                "Rahul Vasanth"
+              ],
+              "dblpPid": "131/8964",
+              "dblpUrl": "https://dblp.org/pid/131/8964.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "131/8964",
+        "limit": 50
+      },
+      "response": {
+        "data": [
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          }
+        ],
+        "meta": {
+          "offset": 0,
+          "limit": 50,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dim/VavilalaVF25"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          "authors": [
+            {
+              "name": "Vaibhav Vavilala",
+              "signatureName": "Vaibhav Vavilala",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/176/5565",
+              "aliases": [
+                "Vaibhav Vavilala"
+              ],
+              "dblpPid": "176/5565",
+              "dblpUrl": "https://dblp.org/pid/176/5565.html"
+            },
+            {
+              "name": "Rahul Vasanth",
+              "signatureName": "Rahul Vasanth",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/131/8964",
+              "aliases": [
+                "Rahul Vasanth"
+              ],
+              "dblpPid": "131/8964",
+              "dblpUrl": "https://dblp.org/pid/131/8964.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "homepages/f/DavidAForsyth",
+        "limit": 50
+      },
+      "response": {
+        "data": [
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2020,
+            "source": "dblp_structured_xml",
+            "title": "Cooperating RPN's Improve Few-Shot Object Detection.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://arxiv.org/abs/2011.10142"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-066b7a69af2f0fc181d8",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:066b7a69af2f0fc181d8f7a450c7bbf8c07eb5e4df51233cf7a055f5e033f9e9",
+            "publicationId": "journals/corr/abs-2011-10142",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/abs-2011-10142",
+            "doi": ""
+          },
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2017,
+            "source": "dblp_structured_xml",
+            "title": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "http://arxiv.org/abs/1707.03501"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-02aabe04833567b4be9d",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:02aabe04833567b4be9d3efcd20b36ee855a8ecb5bcd78e26c8c8e803ea08937",
+            "publicationId": "journals/corr/LuSFF17",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/LuSFF17",
+            "doi": ""
+          }
+        ],
+        "meta": {
+          "offset": 0,
+          "limit": 50,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dim/VavilalaVF25"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          "authors": [
+            {
+              "name": "Vaibhav Vavilala",
+              "signatureName": "Vaibhav Vavilala",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/176/5565",
+              "aliases": [
+                "Vaibhav Vavilala"
+              ],
+              "dblpPid": "176/5565",
+              "dblpUrl": "https://dblp.org/pid/176/5565.html"
+            },
+            {
+              "name": "Rahul Vasanth",
+              "signatureName": "Rahul Vasanth",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/131/8964",
+              "aliases": [
+                "Rahul Vasanth"
+              ],
+              "dblpPid": "131/8964",
+              "dblpUrl": "https://dblp.org/pid/131/8964.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "journals/corr/abs-2011-10142"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2020,
+            "source": "dblp_structured_xml",
+            "title": "Cooperating RPN's Improve Few-Shot Object Detection.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://arxiv.org/abs/2011.10142"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-066b7a69af2f0fc181d8",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:066b7a69af2f0fc181d8f7a450c7bbf8c07eb5e4df51233cf7a055f5e033f9e9",
+            "publicationId": "journals/corr/abs-2011-10142",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/abs-2011-10142",
+            "doi": ""
+          },
+          "authors": [
+            {
+              "name": "Weilin Zhang",
+              "signatureName": "Weilin Zhang",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/187/1607",
+              "aliases": [
+                "Weilin Zhang"
+              ],
+              "dblpPid": "187/1607",
+              "dblpUrl": "https://dblp.org/pid/187/1607.html"
+            },
+            {
+              "name": "Yu-Xiong Wang",
+              "signatureName": "Yu-Xiong Wang",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/35/10700",
+              "aliases": [
+                "Yu-Xiong Wang"
+              ],
+              "dblpPid": "35/10700",
+              "dblpUrl": "https://dblp.org/pid/35/10700.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "CoRR",
+              "type": "journal"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+              "sampleId": "corpus-066b7a69af2f0fc181d8",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 17,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:e7e2878e52679657b03b2a508278b220b70fab29099a9b9a1d2f5fbe07754617",
+              "text": "Cooperating RPN's",
+              "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+              "sampleId": "corpus-066b7a69af2f0fc181d8",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 26,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:5c431b798fc89954b1c5bfe2d5e4ca8cd4e305ab5c4520cfe9446030e19767e6",
+              "text": "Few-Shot Object Detection",
+              "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 2.952165414171759e-05, \"USED_FOR\": 0.9999704360961914}",
+                "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+                "sampleId": "corpus-066b7a69af2f0fc181d8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.99997044,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-1310491bbd9fbd68dc4c6e04",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:166cb2666ed7790c370ebdcb792fd99e3ac53b5a86dec12468038906ba8187f2",
+                "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+                "sampleId": "corpus-066b7a69af2f0fc181d8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 17,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:e7e2878e52679657b03b2a508278b220b70fab29099a9b9a1d2f5fbe07754617",
+                "text": "Cooperating RPN's",
+                "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+                "sampleId": "corpus-066b7a69af2f0fc181d8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 26,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:5c431b798fc89954b1c5bfe2d5e4ca8cd4e305ab5c4520cfe9446030e19767e6",
+                "text": "Few-Shot Object Detection",
+                "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Weilin Zhang; Yu-Xiong Wang; David A. Forsyth. Cooperating RPN's Improve Few-Shot Object Detection. CoRR, 2020. DOI: 缺失",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "journals/corr/LuSFF17"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2017,
+            "source": "dblp_structured_xml",
+            "title": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "http://arxiv.org/abs/1707.03501"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-02aabe04833567b4be9d",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:02aabe04833567b4be9d3efcd20b36ee855a8ecb5bcd78e26c8c8e803ea08937",
+            "publicationId": "journals/corr/LuSFF17",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/LuSFF17",
+            "doi": ""
+          },
+          "authors": [
+            {
+              "name": "Jiajun Lu",
+              "signatureName": "Jiajun Lu",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/62/2742",
+              "aliases": [
+                "Jiajun Lu"
+              ],
+              "dblpPid": "62/2742",
+              "dblpUrl": "https://dblp.org/pid/62/2742.html"
+            },
+            {
+              "name": "Hussein Sibai",
+              "signatureName": "Hussein Sibai",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/198/6856",
+              "aliases": [
+                "Hussein Sibai"
+              ],
+              "dblpPid": "198/6856",
+              "dblpUrl": "https://dblp.org/pid/198/6856.html"
+            },
+            {
+              "name": "Evan Fabry",
+              "signatureName": "Evan Fabry",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/203/9127",
+              "aliases": [
+                "Evan Fabry"
+              ],
+              "dblpPid": "203/9127",
+              "dblpUrl": "https://dblp.org/pid/203/9127.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 4,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "CoRR",
+              "type": "journal"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+              "sampleId": "corpus-02aabe04833567b4be9d",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 23,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 34,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:82f926d6a0cc64186ae5984dc23cb1feab66ef2e0cf3505502a7e8748f33e074",
+              "text": "Adversarial",
+              "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+              "sampleId": "corpus-02aabe04833567b4be9d",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 47,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 86,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:24945d8e755c080ae126524bad5f6519d6a3f1565eb0a9f2651a097d6f020e3e",
+              "text": "Object Detection in Autonomous Vehicles",
+              "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.055273063480854034, \"USED_FOR\": 0.9447268843650818}",
+                "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+                "sampleId": "corpus-02aabe04833567b4be9d",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9447269,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-03cf722528b6fb5317fea929",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:77f204c1013bcbdede692ba278a98a04e5385e26d7caa787c53293fdc54c8e4c",
+                "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+                "sampleId": "corpus-02aabe04833567b4be9d",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 23,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 34,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:82f926d6a0cc64186ae5984dc23cb1feab66ef2e0cf3505502a7e8748f33e074",
+                "text": "Adversarial",
+                "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+                "sampleId": "corpus-02aabe04833567b4be9d",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 47,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 86,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:24945d8e755c080ae126524bad5f6519d6a3f1565eb0a9f2651a097d6f020e3e",
+                "text": "Object Detection in Autonomous Vehicles",
+                "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Jiajun Lu; Hussein Sibai; Evan Fabry; David A. Forsyth. NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles. CoRR, 2017. DOI: 缺失",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "f/DavidAForsyth",
+        "limit": 50
+      },
+      "response": {
+        "data": [
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2020,
+            "source": "dblp_structured_xml",
+            "title": "Cooperating RPN's Improve Few-Shot Object Detection.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://arxiv.org/abs/2011.10142"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-066b7a69af2f0fc181d8",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:066b7a69af2f0fc181d8f7a450c7bbf8c07eb5e4df51233cf7a055f5e033f9e9",
+            "publicationId": "journals/corr/abs-2011-10142",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/abs-2011-10142",
+            "doi": ""
+          },
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2017,
+            "source": "dblp_structured_xml",
+            "title": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "http://arxiv.org/abs/1707.03501"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-02aabe04833567b4be9d",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:02aabe04833567b4be9d3efcd20b36ee855a8ecb5bcd78e26c8c8e803ea08937",
+            "publicationId": "journals/corr/LuSFF17",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/LuSFF17",
+            "doi": ""
+          }
+        ],
+        "meta": {
+          "offset": 0,
+          "limit": 50,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dim/VavilalaVF25"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2025,
+            "source": "dblp_structured_xml",
+            "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DV66043.2025.00082"
+            ],
+            "pages": "835-844",
+            "modelSampleId": "corpus-eea73ed743e3cca75a16",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+            "publicationId": "conf/3dim/VavilalaVF25",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+            "doi": "10.1109/3dv66043.2025.00082"
+          },
+          "authors": [
+            {
+              "name": "Vaibhav Vavilala",
+              "signatureName": "Vaibhav Vavilala",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/176/5565",
+              "aliases": [
+                "Vaibhav Vavilala"
+              ],
+              "dblpPid": "176/5565",
+              "dblpUrl": "https://dblp.org/pid/176/5565.html"
+            },
+            {
+              "name": "Rahul Vasanth",
+              "signatureName": "Rahul Vasanth",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/131/8964",
+              "aliases": [
+                "Rahul Vasanth"
+              ],
+              "dblpPid": "131/8964",
+              "dblpUrl": "https://dblp.org/pid/131/8964.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 29,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "text": "Denoising Monte Carlo Renders",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+              "sampleId": "corpus-eea73ed743e3cca75a16",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 35,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "text": "Diffusion Models",
+              "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "journals/corr/abs-2011-10142"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2020,
+            "source": "dblp_structured_xml",
+            "title": "Cooperating RPN's Improve Few-Shot Object Detection.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://arxiv.org/abs/2011.10142"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-066b7a69af2f0fc181d8",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:066b7a69af2f0fc181d8f7a450c7bbf8c07eb5e4df51233cf7a055f5e033f9e9",
+            "publicationId": "journals/corr/abs-2011-10142",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/abs-2011-10142",
+            "doi": ""
+          },
+          "authors": [
+            {
+              "name": "Weilin Zhang",
+              "signatureName": "Weilin Zhang",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/187/1607",
+              "aliases": [
+                "Weilin Zhang"
+              ],
+              "dblpPid": "187/1607",
+              "dblpUrl": "https://dblp.org/pid/187/1607.html"
+            },
+            {
+              "name": "Yu-Xiong Wang",
+              "signatureName": "Yu-Xiong Wang",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/35/10700",
+              "aliases": [
+                "Yu-Xiong Wang"
+              ],
+              "dblpPid": "35/10700",
+              "dblpUrl": "https://dblp.org/pid/35/10700.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "CoRR",
+              "type": "journal"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+              "sampleId": "corpus-066b7a69af2f0fc181d8",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 17,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:e7e2878e52679657b03b2a508278b220b70fab29099a9b9a1d2f5fbe07754617",
+              "text": "Cooperating RPN's",
+              "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+              "sampleId": "corpus-066b7a69af2f0fc181d8",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 26,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 51,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:5c431b798fc89954b1c5bfe2d5e4ca8cd4e305ab5c4520cfe9446030e19767e6",
+              "text": "Few-Shot Object Detection",
+              "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 2.952165414171759e-05, \"USED_FOR\": 0.9999704360961914}",
+                "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+                "sampleId": "corpus-066b7a69af2f0fc181d8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.99997044,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-1310491bbd9fbd68dc4c6e04",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:166cb2666ed7790c370ebdcb792fd99e3ac53b5a86dec12468038906ba8187f2",
+                "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+                "sampleId": "corpus-066b7a69af2f0fc181d8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 17,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:e7e2878e52679657b03b2a508278b220b70fab29099a9b9a1d2f5fbe07754617",
+                "text": "Cooperating RPN's",
+                "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Cooperating RPN's Improve Few-Shot Object Detection.",
+                "sampleId": "corpus-066b7a69af2f0fc181d8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 26,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:5c431b798fc89954b1c5bfe2d5e4ca8cd4e305ab5c4520cfe9446030e19767e6",
+                "text": "Few-Shot Object Detection",
+                "textSha256": "0f6bf7b6de8de7936521a965bcae3bc64e0cd68069e41b7797fdcc8a7c232bbf",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Weilin Zhang; Yu-Xiong Wang; David A. Forsyth. Cooperating RPN's Improve Few-Shot Object Detection. CoRR, 2020. DOI: 缺失",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "journals/corr/LuSFF17"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2017,
+            "source": "dblp_structured_xml",
+            "title": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+            "type": "article",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "http://arxiv.org/abs/1707.03501"
+            ],
+            "pages": "",
+            "modelSampleId": "corpus-02aabe04833567b4be9d",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:02aabe04833567b4be9d3efcd20b36ee855a8ecb5bcd78e26c8c8e803ea08937",
+            "publicationId": "journals/corr/LuSFF17",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/journals/corr/LuSFF17",
+            "doi": ""
+          },
+          "authors": [
+            {
+              "name": "Jiajun Lu",
+              "signatureName": "Jiajun Lu",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/62/2742",
+              "aliases": [
+                "Jiajun Lu"
+              ],
+              "dblpPid": "62/2742",
+              "dblpUrl": "https://dblp.org/pid/62/2742.html"
+            },
+            {
+              "name": "Hussein Sibai",
+              "signatureName": "Hussein Sibai",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/198/6856",
+              "aliases": [
+                "Hussein Sibai"
+              ],
+              "dblpPid": "198/6856",
+              "dblpUrl": "https://dblp.org/pid/198/6856.html"
+            },
+            {
+              "name": "Evan Fabry",
+              "signatureName": "Evan Fabry",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/203/9127",
+              "aliases": [
+                "Evan Fabry"
+              ],
+              "dblpPid": "203/9127",
+              "dblpUrl": "https://dblp.org/pid/203/9127.html"
+            },
+            {
+              "name": "David A. Forsyth",
+              "signatureName": "David A. Forsyth",
+              "position": 4,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/f/DavidAForsyth",
+              "aliases": [
+                "David A. Forsyth",
+                "David Alexander Forsyth"
+              ],
+              "dblpPid": "f/DavidAForsyth",
+              "dblpUrl": "https://dblp.org/pid/f/DavidAForsyth.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "CoRR",
+              "type": "journal"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+              "sampleId": "corpus-02aabe04833567b4be9d",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 23,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 34,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:82f926d6a0cc64186ae5984dc23cb1feab66ef2e0cf3505502a7e8748f33e074",
+              "text": "Adversarial",
+              "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+              "sampleId": "corpus-02aabe04833567b4be9d",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 47,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 86,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:24945d8e755c080ae126524bad5f6519d6a3f1565eb0a9f2651a097d6f020e3e",
+              "text": "Object Detection in Autonomous Vehicles",
+              "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.055273063480854034, \"USED_FOR\": 0.9447268843650818}",
+                "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+                "sampleId": "corpus-02aabe04833567b4be9d",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9447269,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-03cf722528b6fb5317fea929",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:77f204c1013bcbdede692ba278a98a04e5385e26d7caa787c53293fdc54c8e4c",
+                "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+                "sampleId": "corpus-02aabe04833567b4be9d",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 23,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 34,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:82f926d6a0cc64186ae5984dc23cb1feab66ef2e0cf3505502a7e8748f33e074",
+                "text": "Adversarial",
+                "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+                "sampleId": "corpus-02aabe04833567b4be9d",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 47,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 86,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:24945d8e755c080ae126524bad5f6519d6a3f1565eb0a9f2651a097d6f020e3e",
+                "text": "Object Detection in Autonomous Vehicles",
+                "textSha256": "a62e35f68743f4ee90319dd93ffcf484385cf9575f7afec51a4d468353db1d68",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Jiajun Lu; Hussein Sibai; Evan Fabry; David A. Forsyth. NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles. CoRR, 2017. DOI: 缺失",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/wacv/AhnKKPK23"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2023,
+            "source": "dblp_structured_xml",
+            "title": "Searching for Robust Binary Neural Networks via Bimodal Parameter Perturbation.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/WACV56688.2023.00244"
+            ],
+            "pages": "2409-2418",
+            "modelSampleId": "sample-13cea546271e6dbc00d5",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:7bc578bbbf5dca2ea87fcfbca7440d106e6accd7910fc9a60b442173f20fd1df",
+            "publicationId": "conf/wacv/AhnKKPK23",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/wacv/AhnKKPK23",
+            "doi": "10.1109/wacv56688.2023.00244"
+          },
+          "authors": [
+            {
+              "name": "Daehyun Ahn",
+              "signatureName": "Daehyun Ahn",
+              "position": 1,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/223/9559",
+              "aliases": [
+                "Daehyun Ahn"
+              ],
+              "dblpPid": "223/9559",
+              "dblpUrl": "https://dblp.org/pid/223/9559.html"
+            },
+            {
+              "name": "Hyungjun Kim",
+              "signatureName": "Hyungjun Kim",
+              "position": 2,
+              "identityStatus": "unresolved_profile",
+              "personId": "unresolved-signature:[\"conf/wacv/AhnKKPK23\", 2]",
+              "aliases": [
+                "Hyungjun Kim"
+              ],
+              "dblpPid": null,
+              "dblpUrl": null
+            },
+            {
+              "name": "Taesu Kim",
+              "signatureName": "Taesu Kim",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/44/6997",
+              "aliases": [
+                "Taesu Kim"
+              ],
+              "dblpPid": "44/6997",
+              "dblpUrl": "https://dblp.org/pid/44/6997.html"
+            },
+            {
+              "name": "Eunhyeok Park",
+              "signatureName": "Eunhyeok Park",
+              "position": 4,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/161/0829",
+              "aliases": [
+                "Eunhyeok Park"
+              ],
+              "dblpPid": "161/0829",
+              "dblpUrl": "https://dblp.org/pid/161/0829.html"
+            },
+            {
+              "name": "Jae-Joon Kim",
+              "signatureName": "Jae-Joon Kim",
+              "position": 5,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/79/6708",
+              "aliases": [
+                "Jae-Joon Kim"
+              ],
+              "dblpPid": "79/6708",
+              "dblpUrl": "https://dblp.org/pid/79/6708.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "WACV",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Searching for Robust Binary Neural Networks via Bimodal Parameter Perturbation.",
+              "sampleId": "sample-13cea546271e6dbc00d5",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 21,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 43,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:6ed29893ba364e8cce9aa92f8511457c347576fb3d0e8c8ee0b04ee64af16e89",
+              "text": "Binary Neural Networks",
+              "textSha256": "df7c644b256b42aeb36a5f9bfe207026e1b903c2045de9fbaad6caafcb577556",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Searching for Robust Binary Neural Networks via Bimodal Parameter Perturbation.",
+              "sampleId": "sample-13cea546271e6dbc00d5",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 48,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 78,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:97c86ca5f5bf3c904109e55ab44ed13e7cf174bce7fd3e770890d881fe8cb12f",
+              "text": "Bimodal Parameter Perturbation",
+              "textSha256": "df7c644b256b42aeb36a5f9bfe207026e1b903c2045de9fbaad6caafcb577556",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [],
+          "citationDraft": "Daehyun Ahn; Hyungjun Kim; Taesu Kim; Eunhyeok Park; Jae-Joon Kim. Searching for Robust Binary Neural Networks via Bimodal Parameter Perturbation. WACV, 2023. DOI: 10.1109/wacv56688.2023.00244",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publication",
+      "parameters": {
+        "id": "conf/3dic/LiLDYHLJ24"
+      },
+      "response": {
+        "data": {
+          "publication": {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2024,
+            "source": "dblp_structured_xml",
+            "title": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DIC63395.2024.10830028"
+            ],
+            "pages": "1-6",
+            "modelSampleId": "corpus-950e5c7974dabace610f",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:950e5c7974dabace610fafb2f3096fb5c00bd7ac156251fca4eee2fa62dcf08c",
+            "publicationId": "conf/3dic/LiLDYHLJ24",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dic/LiLDYHLJ24",
+            "doi": "10.1109/3dic63395.2024.10830028"
+          },
+          "authors": [
+            {
+              "name": "Junming Li",
+              "signatureName": "Junming Li",
+              "position": 1,
+              "identityStatus": "unresolved_profile",
+              "personId": "unresolved-signature:[\"conf/3dic/LiLDYHLJ24\", 1]",
+              "aliases": [
+                "Junming Li"
+              ],
+              "dblpPid": null,
+              "dblpUrl": null
+            },
+            {
+              "name": "Huaguo Liang",
+              "signatureName": "Huaguo Liang",
+              "position": 2,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/30/6037",
+              "aliases": [
+                "Huaguo Liang"
+              ],
+              "dblpPid": "30/6037",
+              "dblpUrl": "https://dblp.org/pid/30/6037.html"
+            },
+            {
+              "name": "Xianrui Dou",
+              "signatureName": "Xianrui Dou",
+              "position": 3,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/395/4397",
+              "aliases": [
+                "Xianrui Dou"
+              ],
+              "dblpPid": "395/4397",
+              "dblpUrl": "https://dblp.org/pid/395/4397.html"
+            },
+            {
+              "name": "Le Yu",
+              "signatureName": "Le Yu",
+              "position": 4,
+              "identityStatus": "unresolved_profile",
+              "personId": "unresolved-signature:[\"conf/3dic/LiLDYHLJ24\", 4]",
+              "aliases": [
+                "Le Yu"
+              ],
+              "dblpPid": null,
+              "dblpUrl": null
+            },
+            {
+              "name": "Zhengfeng Huang",
+              "signatureName": "Zhengfeng Huang",
+              "position": 5,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/78/6679",
+              "aliases": [
+                "Zhengfeng Huang"
+              ],
+              "dblpPid": "78/6679",
+              "dblpUrl": "https://dblp.org/pid/78/6679.html"
+            },
+            {
+              "name": "Yingchun Lu",
+              "signatureName": "Yingchun Lu",
+              "position": 6,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/198/5556",
+              "aliases": [
+                "Yingchun Lu"
+              ],
+              "dblpPid": "198/5556",
+              "dblpUrl": "https://dblp.org/pid/198/5556.html"
+            },
+            {
+              "name": "Cuiyun Jiang",
+              "signatureName": "Cuiyun Jiang",
+              "position": 7,
+              "identityStatus": "dblp_homepage_resolved",
+              "personId": "homepages/16/1576",
+              "aliases": [
+                "Cuiyun Jiang"
+              ],
+              "dblpPid": "16/1576",
+              "dblpUrl": "https://dblp.org/pid/16/1576.html"
+            }
+          ],
+          "venues": [
+            {
+              "name": "3DIC",
+              "type": "conference"
+            }
+          ],
+          "mentions": [
+            {
+              "evidence": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+              "sampleId": "corpus-950e5c7974dabace610f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 0,
+              "source": "model_prediction",
+              "label": "METHOD",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 16,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:65de7d619424dca5a8ce63b7df6bee397238fc74f6b3c573a6a52e392db2ad42",
+              "text": "Machine Learning",
+              "textSha256": "445433bc4e80043ca1b2847137ea3d4426d0dce43a66719b35360fe0c9f6b1b3",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            },
+            {
+              "evidence": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+              "sampleId": "corpus-950e5c7974dabace610f",
+              "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+              "start": 23,
+              "source": "model_prediction",
+              "label": "TASK",
+              "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+              "offsetUnit": "Unicode_code_points",
+              "end": 68,
+              "id": "ai-literature-ed16399925fac2a599ed:Mention:589599cceb82f468083093497fe75d4b5d86d9b2d2da2a0900518dfbc31c3210",
+              "text": "Diagnosis of Defects in Chiplet Interconnects",
+              "textSha256": "445433bc4e80043ca1b2847137ea3d4426d0dce43a66719b35360fe0c9f6b1b3",
+              "graphId": "ai-literature-ed16399925fac2a599ed",
+              "status": "candidate"
+            }
+          ],
+          "assertions": [
+            {
+              "assertion": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 2.2100916794443037e-06, \"USED_FOR\": 0.9999977350234985}",
+                "evidence": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+                "sampleId": "corpus-950e5c7974dabace610f",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.99999774,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-3be5018da1802ce5e0b4e2f1",
+                "id": "ai-literature-ed16399925fac2a599ed:Assertion:4623f063624e5a74f58f4983e338c488adc7a20e8c51a725c64ba6bc6bfd746a",
+                "textSha256": "445433bc4e80043ca1b2847137ea3d4426d0dce43a66719b35360fe0c9f6b1b3",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              },
+              "head": {
+                "evidence": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+                "sampleId": "corpus-950e5c7974dabace610f",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 16,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:65de7d619424dca5a8ce63b7df6bee397238fc74f6b3c573a6a52e392db2ad42",
+                "text": "Machine Learning",
+                "textSha256": "445433bc4e80043ca1b2847137ea3d4426d0dce43a66719b35360fe0c9f6b1b3",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              },
+              "tail": {
+                "evidence": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+                "sampleId": "corpus-950e5c7974dabace610f",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 23,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 68,
+                "id": "ai-literature-ed16399925fac2a599ed:Mention:589599cceb82f468083093497fe75d4b5d86d9b2d2da2a0900518dfbc31c3210",
+                "text": "Diagnosis of Defects in Chiplet Interconnects",
+                "textSha256": "445433bc4e80043ca1b2847137ea3d4426d0dce43a66719b35360fe0c9f6b1b3",
+                "graphId": "ai-literature-ed16399925fac2a599ed",
+                "status": "candidate"
+              }
+            }
+          ],
+          "citationDraft": "Junming Li; Huaguo Liang; Xianrui Dou; Le Yu; Zhengfeng Huang; Yingchun Lu; Cuiyun Jiang. Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects. 3DIC, 2024. DOI: 10.1109/3dic63395.2024.10830028",
+          "notice": "候选参考文献；引用前阅读原文并核验书目信息。模型分数未校准，题名证据不等于全文结论。"
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "unresolved-signature:[\"conf/3dic/LiLDYHLJ24\", 1]",
+        "limit": 50
+      },
+      "response": {
+        "data": [
+          {
+            "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+            "year": 2024,
+            "source": "dblp_structured_xml",
+            "title": "Machine Learning-Based Diagnosis of Defects in Chiplet Interconnects.",
+            "type": "inproceedings",
+            "modelApplicationStatus": "inferred",
+            "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+            "urls": [
+              "https://doi.org/10.1109/3DIC63395.2024.10830028"
+            ],
+            "pages": "1-6",
+            "modelSampleId": "corpus-950e5c7974dabace610f",
+            "modelApplied": true,
+            "id": "ai-literature-ed16399925fac2a599ed:Publication:950e5c7974dabace610fafb2f3096fb5c00bd7ac156251fca4eee2fa62dcf08c",
+            "publicationId": "conf/3dic/LiLDYHLJ24",
+            "graphId": "ai-literature-ed16399925fac2a599ed",
+            "dblpUrl": "https://dblp.org/rec/conf/3dic/LiLDYHLJ24",
+            "doi": "10.1109/3dic63395.2024.10830028"
+          }
+        ],
+        "meta": {
+          "offset": 0,
+          "limit": 50,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    },
+    {
+      "route": "/api/publications",
+      "parameters": {
+        "authorId": "x') MATCH (n) DETACH DELETE n //"
+      },
+      "response": {
+        "data": [],
+        "meta": {
+          "offset": 0,
+          "limit": 20,
+          "hasNext": false,
+          "source": "live_neo4j",
+          "aliasVersion": "zh_alias_v1",
+          "expandedTerms": {}
+        }
+      }
+    }
+  ],
+  "modelQualityEvaluation": false,
+  "passed": true,
+  "graphId": "ai-literature-ed16399925fac2a599ed"
+}

@@ -1,0 +1,22 @@
+{
+  "version": "draft_dictionary_v2",
+  "purpose": "Draft candidate discovery only; never gold or an independent test oracle",
+  "entities": {
+    "METHOD": ["large language model", "large language models", "LLM", "LLMs", "BERT", "GPT", "ChatGPT", "SciBERT", "BioBERT", "RoBERTa", "T5", "LLaMA", "Llama", "graph neural network", "graph neural networks", "graph convolutional network", "graph convolutional networks", "multi-view graph convolutional networks", "convolutional neural network", "convolutional neural networks", "deep convolutional neural network", "deep convolutional neural networks", "siamese neural network", "siamese neural networks", "neural network", "neural networks", "deep neural network", "deep neural networks", "reinforcement learning", "deep reinforcement learning", "machine learning", "deep learning", "federated learning", "transfer learning", "contrastive learning", "representation learning", "transformer", "transformers", "vision transformer", "vision transformers", "hierarchical transformer", "hierarchical transformers", "diffusion model", "diffusion models", "support vector machine", "random forest", "decision tree", "autoencoder", "auto-encoder", "variational autoencoder", "variational autoencoders", "variational auto-encoder", "variational auto-encoders", "generative adversarial network"],
+    "TASK": ["named entity recognition", "relation extraction", "entity linking", "question answering", "visual question answering", "machine translation", "text classification", "object detection", "image segmentation", "medical image segmentation", "semantic segmentation", "image recognition", "image generation", "link prediction", "node classification", "knowledge graph completion", "sentiment analysis", "anomaly detection", "fraud detection", "time series forecasting", "recommendation", "text summarization", "geoparsing", "multilingual geoparsing", "multi-lingual geoparsing"],
+    "DATASET": ["ImageNet", "ImageNet-1K", "ImageNet-21K", "CIFAR", "CIFAR-10", "CIFAR-100", "MNIST", "Fashion-MNIST", "COCO", "MS COCO", "SQuAD", "SQuAD 2.0", "GLUE", "SuperGLUE", "WikiText-103", "Cora", "CiteSeer", "PubMed", "FB15k", "FB15k-237", "WN18", "WN18RR", "Human3.6M", "MMLU", "MMLU-Pro", "GSM8K", "HumanEval", "ARC", "HellaSwag", "WinoGrande", "KITTI", "Cityscapes", "ADE20K", "ScanNet", "MovieLens", "CoNLL-2003", "OntoNotes"]
+  },
+  "document_domains": {
+    "healthcare": ["healthcare", "medical imaging", "medical image", "medical images", "clinical", "diabetes care"],
+    "remote-sensing": ["remote sensing", "satellite imagery"],
+    "autonomous-driving": ["autonomous driving", "self-driving"],
+    "cybersecurity": ["cybersecurity", "intrusion detection"],
+    "agriculture": ["precision agriculture", "crop classification", "agricultural"],
+    "energy": ["smart grid", "power system", "power systems"],
+    "bioinformatics": ["bioinformatics", "drug discovery"],
+    "finance": ["financial", "stock market", "credit scoring"],
+    "education": ["education", "student performance", "intelligent tutoring"],
+    "manufacturing": ["manufacturing", "industrial inspection"]
+  },
+  "warnings": ["Homographs such as ARC/PubMed require context; hits are not proof of a dataset", "Named models unknown to this dictionary must be manually added", "No automatic relation labels"]
+}

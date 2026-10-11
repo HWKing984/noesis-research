@@ -1,0 +1,14 @@
+{
+  "kind": "verified_artifact_evidence_page_not_original_application_ui",
+  "inputSha256": {
+    "bundleManifest": "b54977f88b400567d5c6779c3a7f0fd9c06b97591c715129ea2fef854cfacb67",
+    "devManifest": "8a92c978c326c5823d8157f80a5494a185ba8c3152da20b764c1e7f6c1a3d4fe",
+    "testReceipt": "8ece62bb3ff142ccccd0595a840bed45996e17685b75d0290bb714a9d5d09664",
+    "renderer": "2beb12fd397816c4dc7d00c5bb895b8c1e651b2ee7b3b14b7a53a5ce9f576ec4"
+  },
+  "filesSha256": {
+    "10_roster_and_dev.html": "e3b62b2435601ef96527623d826be3af9b50d7996dd931868e1ac19f06eb884d",
+    "dev_review.csv": "02f70ed6a68f21d1a459f0623606f3cce5cd4bcba96a79345efe5cca5205a52a",
+    "verification.json": "e0c2e1462304ef17dcac1c3937a89dec87d7152a833222d00f6b232e9bef3336"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "version": "abstract_benchmark_training_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_benchmark_inputs_20261008_45",
+  "snapshotManifestSha256": "efbd9c2fc1f1e89f7cfc2cc59ec2df239e534f763d07a4a38b92d9464016e167",
+  "revisionContract": "resources/course_abstract_benchmark_expansion_v1.json",
+  "revisionContractSha256": "fda21b9c838a3071ce8eba3232c18dcb6c56c572bb1a27eaac4e6e8bf5213985",
+  "NERParent": "resources/course_abstract_v1.json",
+  "NERParentSha256": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+  "REParent": "resources/course_abstract_relation_v1.json",
+  "REParentSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "baselineRun": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42",
+  "baselineManifestSha256": "c56769c8d51bd51b32e0c7058605dfd956e0812de91c21350403086f4b229320",
+  "baselineWeightsSha256": {
+    "NER": "6baacb7c6c7f72cbbb2799c61224771fcad9e876e28c3213a0cc6b250bc1f21e",
+    "RE": "a05e40a819b1656864770646be7db6927e8cfc468f11cab667ba29ea937d4a0d"
+  },
+  "initialRunManifests": {
+    "NER": "be3e49a72ac661f1ab118d83b96655198c6170c422ddfac45e53dc509bdb5054",
+    "RE": "b857e74d2e66712892d45d32ccf92ae471a0878a28b0fc6174deb5ef90e156a5"
+  },
+  "expected": {
+    "train": {"queue": 62, "ner": 58, "relation": 271, "full_relation": 11, "excluded_ner": 4, "unknown": 1659, "eligiblePairs": 1930, "support": {"USED_FOR": 184, "EVALUATED_ON": 61, "NO_RELATION": 26}},
+    "dev": {"queue": 19, "ner": 16, "relation": 333, "full_relation": 7, "excluded_ner": 3, "unknown": 99, "eligiblePairs": 432, "support": {"USED_FOR": 259, "EVALUATED_ON": 8, "NO_RELATION": 66}}
+  },
+  "textKind": "abstract",
+  "maxTokens": 512,
+  "optimizer": {"weightDecay": 0.01, "clipGradientNorm": 1.0},
+  "training": "One fit per task from original08/15 initialization, not warm-start42. Inherit seed20261008, six epochs, batch2/4, lr2e-5, balanced RE loss and deterministic eager FP32. Reuse frozen42 fit. No parameter/threshold search, retries or test evaluation.",
+  "selection": "NER strict dev micro F1; RE conditional all-class macro F1; earliest tie. Four combinations of frozen42/new46 NER and RE are post-selection diagnostics only.",
+  "baselinePolicy": "Re-infer frozen42 NER and RE on exactly the unchanged16 NER dev /333 known pairs /7 complete documents and107 full pairs. Never reuse old5-document pipeline scores. Compare both modules and four pipeline combinations; data changes include43/44 repairs and45 supplementation, not an isolated four-paper ablation.",
+  "maxAbsoluteDATASETRecallRegression": 0.02,
+  "promotionPolicy": "Inherit all parent guards without relaxing support or coverage; additionally guard DATASET recall against frozen42. No automatic promotion. Exposed dev is not blind/final performance.",
+  "labels": "ai_pseudo with actual same-session self-review; AI references accepted, independentHumanGold=false. No manual labeling prerequisite and no misrepresentation as human gold.",
+  "unknownPolicy": "1659 train and99 dev UNRESOLVED pairs excluded from loss/module scoring. Full pipeline scores all predicted pairs on only complete documents including true zero-pair documents.",
+  "testPolicy": "Reserved test19 neither read semantically, labeled, tokenized nor inferred. Integrity hashes only. No final test in this experiment.",
+  "checkpointPolicy": "Preserve each improving checkpoint and failures; worst-case six per task plus1GB free reserve; no historical deletion.",
+  "deployment": "No production model replacement, full-corpus inference, graph/database write or service restart.",
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true
+}

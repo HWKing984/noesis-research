@@ -1,0 +1,13 @@
+﻿priority,line_in_review_dossiers_jsonl,arxiv_id,head_entity_id,tail_entity_id,prior_label,review_note
+P1,3,2107.03374,e2,e3,USED_FOR,GPT 只是 Codex 的上位模型类别描述；检查是否应该将泛称 GPT 单独认作执行 Python code-writing 的具体方法。
+P1,3,2107.03374,e9,e5,EVALUATED_ON,repeated sampling 是 Codex 的推断策略，HumanEval 上的 100 samples 描述涉及指代；复核是否允许策略继承测试集关系。
+P1,6,1903.10404,e3,e4,USED_FOR,deep neural network 是 autoencoder 的泛化类别描述；复核是否允许上位类别继承该任务的特定关系。
+P1,8,1910.12770,e2,e4,USED_FOR,future clip order ranking 是训练代理目标，不一定是表示学习的实际应用目标；复核方向和 USED_FOR 定义。
+P1,8,1910.12770,e3,e5,USED_FOR,video future prediction 表述为 surrogate objective，复核它是否属于直接任务关系而非训练机制。
+P1,11,2503.01309,e2,e10,NO_RELATION,VFM 与 3D querying 是流程组件角色对比；仅在 USED_FOR 严格定义直接执行者时保留此负例。
+P1,11,2503.01309,e2,e11,NO_RELATION,VFM 参与整体方法但不直接执行 3D merging；复核负例界线，避免将间接贡献当作否定关系。
+P2,7,2503.03790,e11,e14,NO_RELATION,implicit 模块的中间输出和 explicit 模块的网格输出应区别直接执行与整体贡献。
+P2,8,1910.12770,e3,e8,NO_RELATION,ImageNet 只用于对比初始化而非 Skip-Clip 的测试集；核验负例是证据限定而非全局否定。
+P2,10,2312.03556,e6,e8,UNRESOLVED,CelebAHQ-IDI 被描述为训练集，不能推断为 EVALUATED_ON；保持未决或按可证据规则处理。
+P2,11,2503.01309,e9,e13,UNRESOLVED,ScanNet 和 SceneNN 显示总体方法的评测，但 voxel hashing 是组件，不能擅自继承该结果。
+P2,12,2010.01057,e5,e10,UNRESOLVED,正文声明 our model 在五个数据集上有结果，但未出现完整独立 LUKE 模型提及；复核实体锚点和指代策略，勿自动派给组件。

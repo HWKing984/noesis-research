@@ -1,0 +1,16 @@
+{
+  "modelId": "allenai/scibert_scivocab_uncased",
+  "revision": "24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1",
+  "upstreamURL": "https://huggingface.co/allenai/scibert_scivocab_uncased/tree/24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1",
+  "downloadedAt": "2026-10-06",
+  "weightUpstreamSha256": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a",
+  "weightUpstreamBytes": 442221694,
+  "weightsFormat": "pytorch_state_dict",
+  "trustRemoteCode": false,
+  "filesSha256": {
+    "config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0",
+    "vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "pytorch_model.bin": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a",
+    "README.md": "dbf7cf7e4365de6032a9677a4e305113c46f4597ea7f2f25b9ca4e4e6dafcfe5"
+  }
+}

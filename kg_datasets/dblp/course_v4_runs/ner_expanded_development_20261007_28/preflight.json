@@ -1,0 +1,36 @@
+{
+  "valid": true,
+  "documents": {
+    "train": 1219,
+    "dev": 167
+  },
+  "tokenized": {
+    "train": 1219,
+    "dev": 167
+  },
+  "rejected": [],
+  "maxTokens": {
+    "train": 37,
+    "dev": 32
+  },
+  "classSupport": {
+    "train": {
+      "METHOD": 1545,
+      "TASK": 1039,
+      "DATASET": 12
+    },
+    "dev": {
+      "METHOD": 208,
+      "TASK": 148,
+      "DATASET": 3
+    },
+    "test": {
+      "METHOD": 192,
+      "TASK": 118,
+      "DATASET": 2
+    }
+  },
+  "formalReadiness": true,
+  "testTokenized": false,
+  "notice": "Preflight is not model accuracy or formal experiment readiness."
+}

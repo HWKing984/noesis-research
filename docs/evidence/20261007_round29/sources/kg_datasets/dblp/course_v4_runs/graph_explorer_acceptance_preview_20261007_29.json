@@ -1,0 +1,2545 @@
+{
+  "status": "completed",
+  "createdAtUTC": "2026-10-07T08:07:53.453938+00:00",
+  "readOnly": true,
+  "checks": [
+    {
+      "path": "/api/health",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "response": {
+        "data": {
+          "status": "ready",
+          "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+          "source": "live_neo4j",
+          "scope": {
+            "bibliographyTitles": 20000,
+            "modelTitles": 19999,
+            "rejectedNERTitles": 1,
+            "candidateAssertions": 21497
+          },
+          "terminology": {
+            "version": "zh_alias_v1",
+            "nodeLabels": {
+              "Publication": "论文/文献",
+              "Person": "作者",
+              "Venue": "会议/期刊",
+              "Concept": "概念",
+              "Mention": "实体提及",
+              "Assertion": "候选断言"
+            },
+            "entityLabels": {
+              "METHOD": "方法",
+              "TASK": "任务",
+              "DATASET": "数据集"
+            },
+            "relationshipLabels": {
+              "AUTHORED": "署名",
+              "PUBLISHED_IN": "发表于",
+              "MENTIONS": "提及",
+              "DENOTES": "指向概念",
+              "SUPPORTED_BY": "题名证据来自",
+              "HAS_HEAD": "头实体",
+              "HAS_TAIL": "尾实体",
+              "USED_FOR": "用于（候选）",
+              "EVALUATED_ON": "在数据集上评估（候选）"
+            },
+            "publicationTypes": {
+              "inproceedings": "会议论文",
+              "article": "期刊文章",
+              "proceedings": "会议论文集",
+              "book": "图书",
+              "incollection": "书中章节",
+              "phdthesis": "博士论文",
+              "mastersthesis": "硕士论文"
+            },
+            "aliases": [
+              {
+                "zh": "扩散模型",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "diffusion model",
+                  "diffusion models"
+                ]
+              },
+              {
+                "zh": "知识图谱",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "knowledge graph",
+                  "knowledge graphs"
+                ]
+              },
+              {
+                "zh": "图神经网络",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "graph neural network",
+                  "graph neural networks"
+                ]
+              },
+              {
+                "zh": "卷积神经网络",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "convolutional neural network",
+                  "convolutional neural networks"
+                ]
+              },
+              {
+                "zh": "神经网络",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "neural network",
+                  "neural networks"
+                ]
+              },
+              {
+                "zh": "机器学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "machine learning"
+                ]
+              },
+              {
+                "zh": "深度学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "deep learning"
+                ]
+              },
+              {
+                "zh": "强化学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "reinforcement learning"
+                ]
+              },
+              {
+                "zh": "大语言模型",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "large language model",
+                  "large language models"
+                ]
+              },
+              {
+                "zh": "大型语言模型",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "large language model",
+                  "large language models"
+                ]
+              },
+              {
+                "zh": "对比学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "contrastive learning"
+                ]
+              },
+              {
+                "zh": "迁移学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "transfer learning"
+                ]
+              },
+              {
+                "zh": "联邦学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "federated learning"
+                ]
+              },
+              {
+                "zh": "自监督学习",
+                "fields": [
+                  "q",
+                  "method"
+                ],
+                "terms": [
+                  "self-supervised learning"
+                ]
+              },
+              {
+                "zh": "命名实体识别",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "named entity recognition"
+                ]
+              },
+              {
+                "zh": "关系抽取",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "relation extraction"
+                ]
+              },
+              {
+                "zh": "机器翻译",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "machine translation"
+                ]
+              },
+              {
+                "zh": "目标检测",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "object detection"
+                ]
+              },
+              {
+                "zh": "图像分类",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "image classification"
+                ]
+              },
+              {
+                "zh": "语义分割",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "semantic segmentation"
+                ]
+              },
+              {
+                "zh": "推荐系统",
+                "fields": [
+                  "q",
+                  "task"
+                ],
+                "terms": [
+                  "recommender system",
+                  "recommender systems",
+                  "recommendation system",
+                  "recommendation systems"
+                ]
+              },
+              {
+                "zh": "AAAI会议",
+                "fields": [
+                  "venue"
+                ],
+                "terms": [
+                  "aaai"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&mode=paper&limit=30",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "response": {
+        "data": {
+          "nodes": [
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/3DV66043.2025.00082"
+                ],
+                "pages": "835-844",
+                "modelSampleId": "corpus-eea73ed743e3cca75a16",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+                "publicationId": "conf/3dim/VavilalaVF25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+                "doi": "10.1109/3dv66043.2025.00082"
+              }
+            },
+            {
+              "kind": "Person",
+              "props": {
+                "aliases": "",
+                "identityStatus": "normalized_name_not_disambiguated",
+                "name": "Vaibhav Vavilala",
+                "personId": "person-8981e31d2706b3c5",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Person:f9cc730906277f00b9050d25e33251752090c95f1058068e8a6ec969843ef831",
+                "source": "dblp_structured_xml",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "sourceFileSha256": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60"
+              }
+            },
+            {
+              "kind": "Person",
+              "props": {
+                "aliases": "",
+                "identityStatus": "normalized_name_not_disambiguated",
+                "name": "David A. Forsyth",
+                "personId": "person-f08fd170406e5bde",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Person:7da3777368cc102aa8916c5b044b42d0c9382284613754c5c7d635177d9b0bfc",
+                "source": "dblp_structured_xml",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "sourceFileSha256": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60"
+              }
+            },
+            {
+              "kind": "Person",
+              "props": {
+                "aliases": "",
+                "identityStatus": "normalized_name_not_disambiguated",
+                "name": "Rahul Vasanth",
+                "personId": "person-fcd606a5d93c60ed",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Person:c2b50bbab73b8e4755e9ddb56dc409e502658e7f5e6d640a677080aa1a8b1445",
+                "source": "dblp_structured_xml",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "sourceFileSha256": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60"
+              }
+            },
+            {
+              "kind": "Venue",
+              "props": {
+                "venueType": "conference",
+                "venueId": "venue-950fbf54a97fa103",
+                "name": "3DV",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Venue:67dcb0cc82a63595df7bf360c4b2a6b90f31425230fa92aa950c34827543421f",
+                "source": "dblp_structured_xml",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "sourceFileSha256": "0b5baa6293cf14826f8e191d766e344bd7c30890087c9fbca1e34f7f64324606"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "TASK",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 29,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+                "text": "Denoising Monte Carlo Renders",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Concept",
+              "props": {
+                "name": "Denoising Monte Carlo Renders",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Concept:5b903dabeea66c0a27136c885e53e358b052e1d4b5bbeff42402c5abcc81515e",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "normalization": "casefold_only_no_alias_resolution",
+                "entityType": "TASK"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Concept",
+              "props": {
+                "name": "diffusion models",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "normalization": "casefold_only_no_alias_resolution",
+                "entityType": "METHOD"
+              }
+            },
+            {
+              "kind": "Assertion",
+              "props": {
+                "probabilitiesJson": "{\"EVALUATED_ON\": 0.0, \"NO_RELATION\": 0.00026536104269325733, \"USED_FOR\": 0.9997345805168152}",
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "confidence": 0.9997346,
+                "source": "model_prediction",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "predicate": "USED_FOR",
+                "pairId": "pair-a1b15f2f90bbb6250f1d2831",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "confidenceCalibrated": false,
+                "entitySource": "frozen_NER_prediction",
+                "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+                "status": "candidate"
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:949221a1894c0c3c80903699639351794ae97e31f799c37cbe13c7a94d411478",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Person:f9cc730906277f00b9050d25e33251752090c95f1058068e8a6ec969843ef831",
+              "kind": "AUTHORED",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:4cbef71caac24b724950ed926f63ff25b03acc1a6af611d34575e93725306f77",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Person:7da3777368cc102aa8916c5b044b42d0c9382284613754c5c7d635177d9b0bfc",
+              "kind": "AUTHORED",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:2ebb28b9c5be1115f55d578b65ff188eaff5900e7907f31885f5d8a07faff7f5",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Person:c2b50bbab73b8e4755e9ddb56dc409e502658e7f5e6d640a677080aa1a8b1445",
+              "kind": "AUTHORED",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:c8018329cdc5e1f1f9fddd169722d260a56baa63635d4ee2ec5fe121ff228eb4",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+              "kind": "PUBLISHED_IN",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Venue:67dcb0cc82a63595df7bf360c4b2a6b90f31425230fa92aa950c34827543421f"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:0bfc43cf507ccd06067a8336aff8c568ee500d3af23cd5e0340f5e47c6188575",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:8ff5438deabb8cea6551415bae3e42ec1d9af7e7a0bdf9cb499b949740eac29d",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:5b903dabeea66c0a27136c885e53e358b052e1d4b5bbeff42402c5abcc81515e"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:8282f1cd69038a1913c926d6520b84b580bbb2cae1472c252d7a28a9cab2cf8c",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:7b59853b435a34ddff3ea3f3816b96d51f6378a4160a877f009560945b9763d4",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:0de01716c17e2a109474d44a5a88b8192493b78a5784f4beb41a5404e020e0c1",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+              "kind": "SUPPORTED_BY",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:64e4a0e18c386da2127f66b293febf463160622b5e58a3010c0faa14b956150a",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+              "kind": "HAS_HEAD",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:5f594e6bc3e322a4e78a36eff022c05e2df4f9b33af8b8e4a639cc75b9a8d0ec",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Assertion:89c6c7dfbbb2eef0e6f2e5e90c7f236c5447dd326d9b6921a8dc14acce8adadc",
+              "kind": "HAS_TAIL",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:8b8875cf58bf4b0f7650ae35ba503d190294e30b56d97ac9420df2a774a52ae7"
+            }
+          ],
+          "rootId": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+        },
+        "meta": {
+          "source": "live_neo4j",
+          "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+          "mode": "paper",
+          "pathsReturned": 8,
+          "hasMorePaths": false,
+          "pathLimit": 30,
+          "wholeGraph": false,
+          "notice": "局部有界路径；共享作者姓名未消歧，同方法仅表示模型提及，不是引用或已验证语义相似。"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&mode=coauthors&limit=30",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "response": {
+        "data": {
+          "nodes": [
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/3DV66043.2025.00082"
+                ],
+                "pages": "835-844",
+                "modelSampleId": "corpus-eea73ed743e3cca75a16",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+                "publicationId": "conf/3dim/VavilalaVF25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+                "doi": "10.1109/3dv66043.2025.00082"
+              }
+            },
+            {
+              "kind": "Person",
+              "props": {
+                "aliases": "",
+                "identityStatus": "normalized_name_not_disambiguated",
+                "name": "David A. Forsyth",
+                "personId": "person-f08fd170406e5bde",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Person:7da3777368cc102aa8916c5b044b42d0c9382284613754c5c7d635177d9b0bfc",
+                "source": "dblp_structured_xml",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "sourceFileSha256": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2017,
+                "source": "dblp_structured_xml",
+                "title": "NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.",
+                "type": "article",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "http://arxiv.org/abs/1707.03501"
+                ],
+                "pages": "",
+                "modelSampleId": "corpus-02aabe04833567b4be9d",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:02aabe04833567b4be9d3efcd20b36ee855a8ecb5bcd78e26c8c8e803ea08937",
+                "publicationId": "journals/corr/LuSFF17",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/journals/corr/LuSFF17",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2020,
+                "source": "dblp_structured_xml",
+                "title": "Cooperating RPN's Improve Few-Shot Object Detection.",
+                "type": "article",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://arxiv.org/abs/2011.10142"
+                ],
+                "pages": "",
+                "modelSampleId": "corpus-066b7a69af2f0fc181d8",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:066b7a69af2f0fc181d8f7a450c7bbf8c07eb5e4df51233cf7a055f5e033f9e9",
+                "publicationId": "journals/corr/abs-2011-10142",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/journals/corr/abs-2011-10142",
+                "doi": ""
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:4cbef71caac24b724950ed926f63ff25b03acc1a6af611d34575e93725306f77",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Person:7da3777368cc102aa8916c5b044b42d0c9382284613754c5c7d635177d9b0bfc",
+              "kind": "AUTHORED",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:5ecb12bb4628f363e17cc78bdefa41625e9d8df2b1f7d74fbeb478c40d58f97b",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Person:7da3777368cc102aa8916c5b044b42d0c9382284613754c5c7d635177d9b0bfc",
+              "kind": "AUTHORED",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:02aabe04833567b4be9d3efcd20b36ee855a8ecb5bcd78e26c8c8e803ea08937"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:ed75f8530b363b7495194b7eeea0b4211f308c5e921d8cd39252d0e93253846e",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Person:7da3777368cc102aa8916c5b044b42d0c9382284613754c5c7d635177d9b0bfc",
+              "kind": "AUTHORED",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:066b7a69af2f0fc181d8f7a450c7bbf8c07eb5e4df51233cf7a055f5e033f9e9"
+            }
+          ],
+          "rootId": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+        },
+        "meta": {
+          "source": "live_neo4j",
+          "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+          "mode": "coauthors",
+          "pathsReturned": 2,
+          "hasMorePaths": false,
+          "pathLimit": 30,
+          "wholeGraph": false,
+          "notice": "局部有界路径；共享作者姓名未消歧，同方法仅表示模型提及，不是引用或已验证语义相似。"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&mode=methods&limit=30",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "response": {
+        "data": {
+          "nodes": [
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/3DV66043.2025.00082"
+                ],
+                "pages": "835-844",
+                "modelSampleId": "corpus-eea73ed743e3cca75a16",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+                "publicationId": "conf/3dim/VavilalaVF25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+                "doi": "10.1109/3dv66043.2025.00082"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "sampleId": "corpus-eea73ed743e3cca75a16",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 35,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 51,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+                "text": "Diffusion Models",
+                "textSha256": "fafcc0bc271c06e01892b61a582fd2bca9c33e025bcc6494f57a117c20caa361",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Concept",
+              "props": {
+                "name": "diffusion models",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "normalization": "casefold_only_no_alias_resolution",
+                "entityType": "METHOD"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "ResAdapter: Domain Consistent Resolution Adapter for Diffusion Models.",
+                "sampleId": "corpus-e702041dcae39ed7c4bf",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 53,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 69,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:ded0821091a42b53fff596359fa5c6dee148360d63c955f00ae242a97fd0d9eb",
+                "text": "Diffusion Models",
+                "textSha256": "f5295f0410f8f3e642ab7b103f491665476d6f9062adf86968ab442026c745a9",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "ResAdapter: Domain Consistent Resolution Adapter for Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1609/aaai.v39i3.32245"
+                ],
+                "pages": "2438-2446",
+                "modelSampleId": "corpus-e702041dcae39ed7c4bf",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:e702041dcae39ed7c4bf053ce9e2d4ab93d85d217423c1704c95e5d55051afad",
+                "publicationId": "conf/aaai/ChengXXLWRLXWF25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/aaai/ChengXXLWRLXWF25",
+                "doi": "10.1609/aaai.v39i3.32245"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Deciphering Oracle Bone Language with Diffusion Models.",
+                "sampleId": "corpus-5a7c60592bb8a96bc546",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 38,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 54,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:1b59d64f13926b73eee4c7cde64bd227ffbd4676e38d0536346439d9ef13baf8",
+                "text": "Diffusion Models",
+                "textSha256": "21d158de2c20f8abd817a225d8f82f764c22c07b307b66da30531c654906806b",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "Deciphering Oracle Bone Language with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.18653/v1/2024.acl-long.831",
+                  "https://aclanthology.org/2024.acl-long.831"
+                ],
+                "pages": "15554-15567",
+                "modelSampleId": "corpus-5a7c60592bb8a96bc546",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:5a7c60592bb8a96bc546892aa9ba6aeb44dfe2743bae8aa5bdd6839618ee94fd",
+                "publicationId": "conf/acl/GuanY0HLJBL24",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/acl/GuanY0HLJBL24",
+                "doi": "10.18653/v1/2024.acl-long.831"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Unraveling Elevated Data Leakage in Split Learning for Fine-Tuning Stable Diffusion Models.",
+                "sampleId": "corpus-6f3101124d435546bd5e",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 74,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 90,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:2a8135d1093e9d552eff5958a5dc56a71f49c0b10570a6822848a88bfaca41ca",
+                "text": "Diffusion Models",
+                "textSha256": "1ea6cbe66e4df245bffaef79b80da80cd946f3aecb7084c59e779e148b824394",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Unraveling Elevated Data Leakage in Split Learning for Fine-Tuning Stable Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1145/3708821.3733865"
+                ],
+                "pages": "501-516",
+                "modelSampleId": "corpus-6f3101124d435546bd5e",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:6f3101124d435546bd5e7f2b48a04dd12c2acfd2a2f2fc8ecd809006c3af65a0",
+                "publicationId": "conf/asiaccs/WangZL25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/asiaccs/WangZL25",
+                "doi": "10.1145/3708821.3733865"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Laughing Matters: Introducing Audio-Driven Laughing-Face Generation with Diffusion Models.",
+                "sampleId": "corpus-ccf686ab025dfbdf07ac",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 73,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 89,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:8c05b10fa514dd45d5e1518db89a7a7aea405e666974d9eef8b5270f34909461",
+                "text": "Diffusion Models",
+                "textSha256": "f99687a29b1989c9831527cc33e131a65f934cc7c9918ef58e1a388157ab9f35",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "Laughing Matters: Introducing Audio-Driven Laughing-Face Generation with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "http://proceedings.bmvc2023.org/761/"
+                ],
+                "pages": "761",
+                "modelSampleId": "corpus-ccf686ab025dfbdf07ac",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:ccf686ab025dfbdf07ac869502a2dbe17b4f65c9a5d2a08075f474f4a73561c6",
+                "publicationId": "conf/bmvc/CasademuntMDVPP23",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/bmvc/CasademuntMDVPP23",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "A Multi-Dimensional Comparative Study of Generative Adversarial Networks, Diffusion Models, and Statistical Methods for Synthetic Health Data Generation.",
+                "sampleId": "corpus-a962543378b74c694c9b",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 74,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 90,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:302619cf5610012ffd90901bca1c6bc258e66d4b465889f6169d270fcfbb4d01",
+                "text": "Diffusion Models",
+                "textSha256": "01eff7b20f8c4997513741c86cc5ab12e0b75dc7be06d599fbb0471f98adde2e",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "A Multi-Dimensional Comparative Study of Generative Adversarial Networks, Diffusion Models, and Statistical Methods for Synthetic Health Data Generation.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1007/978-3-032-15990-8_2"
+                ],
+                "pages": "19-34",
+                "modelSampleId": "corpus-a962543378b74c694c9b",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:a962543378b74c694c9b02ad1437e7d3e240cce0a6444029fd39ce79dd880f18",
+                "publicationId": "conf/bracis/OmoleFABMGA25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/bracis/OmoleFABMGA25",
+                "doi": "10.1007/978-3-032-15990-8_2"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Extreme Two-View Geometry From Object Poses with Diffusion Models.",
+                "sampleId": "corpus-92e0fdd1a22c60462276",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 49,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 65,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:f19348cafdc2f83dc1fb94eff51dc37afe32217ae018d04dd6dc8f9a0342c218",
+                "text": "Diffusion Models",
+                "textSha256": "7ca7bbdfcb162a449ef2ff80e9db9617a487a494fbb1fb819102b4df0c984e05",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Extreme Two-View Geometry From Object Poses with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1007/978-981-96-5812-1_16"
+                ],
+                "pages": "294-315",
+                "modelSampleId": "corpus-92e0fdd1a22c60462276",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:92e0fdd1a22c60462276561389e0ff6ea7a6f776eb1418e86a8af984e2b459f9",
+                "publicationId": "conf/cvm/SunSLMY25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/cvm/SunSLMY25",
+                "doi": "10.1007/978-981-96-5812-1_16"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Generation of Structurally Realistic Retinal Fundus Images with Diffusion Models.",
+                "sampleId": "corpus-7542ff756e1136a4b518",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 64,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 80,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:610ed19a9cb9f51ab1497bfcf3907ccc66a19afbdf17d5d9da79488b4429d5ea",
+                "text": "Diffusion Models",
+                "textSha256": "54216bb38a26baeac5bcd427355d7079522bc5484d810f8d777c8d4b7bab57bc",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "Generation of Structurally Realistic Retinal Fundus Images with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/CVPRW63382.2024.00239"
+                ],
+                "pages": "2335-2344",
+                "modelSampleId": "corpus-7542ff756e1136a4b518",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:7542ff756e1136a4b5189a4eb97570d0a336380a7b5293011065d927f5eb1b97",
+                "publicationId": "conf/cvpr/GoJPL22",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/cvpr/GoJPL22",
+                "doi": "10.1109/cvprw63382.2024.00239"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "DiffCollage: Parallel Generation of Large Content with Diffusion Models.",
+                "sampleId": "corpus-ef146860765043b49f12",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 55,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 71,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:c9d5e6e4dbe1e4824e2ace9e3cdc9222cf88d28dfff1bc761671f3cd85897831",
+                "text": "Diffusion Models",
+                "textSha256": "ab96b2400cf9fc27f468d36307aa13899100292bb899599706763a0e09e5827e",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "DiffCollage: Parallel Generation of Large Content with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/CVPR52729.2023.00982"
+                ],
+                "pages": "10188-10198",
+                "modelSampleId": "corpus-ef146860765043b49f12",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:ef146860765043b49f12351d6612b8d32e584f6c2af9980fcdb927c6e7774899",
+                "publicationId": "conf/cvpr/ZhangSHC023",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/cvpr/ZhangSHC023",
+                "doi": "10.1109/cvpr52729.2023.00982"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "∞-Brush: Controllable Large Image Synthesis with Diffusion Models in Infinite Dimensions.",
+                "sampleId": "corpus-a78e83114a8acd862b98",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 49,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 65,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:f6240042f2429be3b78105b13c580951b49ae2705c9ca04b9465c5b72e16d60c",
+                "text": "Diffusion Models",
+                "textSha256": "4a6f7bd16b8741839a9a7816f19b1b66656e30ab766d0aa3c04ae872a9284fd6",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "∞-Brush: Controllable Large Image Synthesis with Diffusion Models in Infinite Dimensions.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1007/978-3-031-73411-3_22"
+                ],
+                "pages": "385-401",
+                "modelSampleId": "corpus-a78e83114a8acd862b98",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:a78e83114a8acd862b9804d60a4e18dff39db6b6574ab97ca78128c79d37235d",
+                "publicationId": "conf/eccv/LeGYGSS24",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/eccv/LeGYGSS24",
+                "doi": "10.1007/978-3-031-73411-3_22"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "AdaDiff: Accelerating Diffusion Models Through Step-Wise Adaptive Computation.",
+                "sampleId": "sample-ee2cf71de3c1ed524847",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 22,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 38,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:8f4c39817a9e18ffca90e3fd98380c8bf048a337759d577f187c1725f82aaad8",
+                "text": "Diffusion Models",
+                "textSha256": "2f69c850e9775098ca59c63c158de5735bff6a5dc5dd775ac81cbf3865d62be6",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "AdaDiff: Accelerating Diffusion Models Through Step-Wise Adaptive Computation.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1007/978-3-031-72986-7_5"
+                ],
+                "pages": "73-90",
+                "modelSampleId": "sample-ee2cf71de3c1ed524847",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:36606c276aa6eb3d90a87d92ac088e2342ac8f74b04dbf0e630f31480507420d",
+                "publicationId": "conf/eccv/TangWDLLX24",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/eccv/TangWDLLX24",
+                "doi": "10.1007/978-3-031-72986-7_5"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "EXION: Exploiting Inter-and Intra-Iteration Output Sparsity for Diffusion Models.",
+                "sampleId": "corpus-0528b910e607cf73f4ae",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 64,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 80,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:6f393aad729be463ae67064bef881ede312a54ab13f6af5f20f51e4e7996316f",
+                "text": "Diffusion Models",
+                "textSha256": "43f324ee6135533d3354dc3471e7dfcffedbb95c5a1a6c637c22eeebaf99c4a6",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "EXION: Exploiting Inter-and Intra-Iteration Output Sparsity for Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/HPCA61900.2025.00034"
+                ],
+                "pages": "324-337",
+                "modelSampleId": "corpus-0528b910e607cf73f4ae",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:0528b910e607cf73f4aee205874e7aa2b4d362d78b1b1a192c73725373ca6386",
+                "publicationId": "conf/hpca/HeoPYYL0025",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/hpca/HeoPYYL0025",
+                "doi": "10.1109/hpca61900.2025.00034"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "A High-Precision Character Cartoon Style Transfer Method Based on VToonify and Diffusion Models.",
+                "sampleId": "corpus-9211aedd1ba78faffe39",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 79,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 95,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:7a15a6e54085e862cade59d2113721624672ad6531c151eac9dbfe7900216d02",
+                "text": "Diffusion Models",
+                "textSha256": "6cecc288e5f764f5ea1e4f9555921b7395afe4f40dddd3471fb1f5379ba410ec",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "A High-Precision Character Cartoon Style Transfer Method Based on VToonify and Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/ICASSP49660.2025.10889721"
+                ],
+                "pages": "1-5",
+                "modelSampleId": "corpus-9211aedd1ba78faffe39",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:9211aedd1ba78faffe3908168157e5c956e0a205e78e8d0d4d081a3ce5bad20e",
+                "publicationId": "conf/icassp/WangWB25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/icassp/WangWB25",
+                "doi": "10.1109/icassp49660.2025.10889721"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "StyleDiffusion: Controllable Disentangled Style Transfer via Diffusion Models.",
+                "sampleId": "sample-dbb739963b63dbb1e127",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 61,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 77,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:38bcc1569933c0d2f97dfdfe03449e912c5a1cc404d2dc5755e85481bdf2d77f",
+                "text": "Diffusion Models",
+                "textSha256": "315666db8622b67442a10835f4328a50fea2dbb583b9cd099f972f53f4b3b4b9",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "StyleDiffusion: Controllable Disentangled Style Transfer via Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/ICCV51070.2023.00706"
+                ],
+                "pages": "7643-7655",
+                "modelSampleId": "sample-dbb739963b63dbb1e127",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:10012756cac43d60b779680a073a5221a1c8fc646109ca6b9c70a4b33a45fdb1",
+                "publicationId": "conf/iccv/WangZX23",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/iccv/WangZX23",
+                "doi": "10.1109/iccv51070.2023.00706"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "DiffuMask: Synthesizing Images with Pixel-level Annotations for Semantic Segmentation Using Diffusion Models.",
+                "sampleId": "corpus-ed3c2a85cd67b39305ab",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 92,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 108,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:ab09f16828d9d6b8198616b804af140893d260e21735be3d544e8a7a1fd3d337",
+                "text": "Diffusion Models",
+                "textSha256": "6ed504fae50532c621f6da06f05783cdc24fa064969226764e3dce9c2d2539c7",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "DiffuMask: Synthesizing Images with Pixel-level Annotations for Semantic Segmentation Using Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/ICCV51070.2023.00117"
+                ],
+                "pages": "1206-1217",
+                "modelSampleId": "corpus-ed3c2a85cd67b39305ab",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:ed3c2a85cd67b39305ab4f387eb13df7f2eefc4351af33da01b1c5e4e062ed03",
+                "publicationId": "conf/iccv/WuZSZS23",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/iccv/WuZSZS23",
+                "doi": "10.1109/iccv51070.2023.00117"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "CoInD: Enabling Logical Compositions in Diffusion Models.",
+                "sampleId": "corpus-bc65f71f1e4ac11d2a5d",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 40,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 56,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:19a4480242acec9c0b0e6bb9d3afe3adb593f089ea93caeb894305ee8529d17c",
+                "text": "Diffusion Models",
+                "textSha256": "f8f732dfa870b5c8c84247d14db0010804f1d8d9c949c0ffdeb17e8c18511dc6",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "CoInD: Enabling Logical Compositions in Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://openreview.net/forum?id=cCRlEvjrx4"
+                ],
+                "pages": "",
+                "modelSampleId": "corpus-bc65f71f1e4ac11d2a5d",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:bc65f71f1e4ac11d2a5dee395444a5fb8a8994dd6a13aa29f31eb08e509739f0",
+                "publicationId": "conf/iclr/GaudiSB25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/iclr/GaudiSB25",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Influence Functions for Scalable Data Attribution in Diffusion Models.",
+                "sampleId": "corpus-7fb9a4489e62c1c54326",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 53,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 69,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:2f3b4d1bbdbca438c782f3ae434b0e387b8624db3071da5c08a285e991e83157",
+                "text": "Diffusion Models",
+                "textSha256": "aa7f8a84d9b06012581baedba8c38112bfd8597f8e05f386492e6a0954de3fdb",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Influence Functions for Scalable Data Attribution in Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://openreview.net/forum?id=esYrEndGsr"
+                ],
+                "pages": "",
+                "modelSampleId": "corpus-7fb9a4489e62c1c54326",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:7fb9a4489e62c1c54326adaca39095156a5cee12690bf20a8cd017bf21b41893",
+                "publicationId": "conf/iclr/MlodozeniecEBI025",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/iclr/MlodozeniecEBI025",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Controlling Space and Time with Diffusion Models.",
+                "sampleId": "corpus-5f10d753ccc0959d9da7",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 32,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 48,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:1ec071336eddbc9116781ca558a3495d0d914d10fe23d58b05a43564e9940c4a",
+                "text": "Diffusion Models",
+                "textSha256": "38d7434e4716882ab741fb823b12118329d8a0f5aaf59f2c51878e0843170460",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Controlling Space and Time with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://openreview.net/forum?id=d2UrCGtntF"
+                ],
+                "pages": "",
+                "modelSampleId": "corpus-5f10d753ccc0959d9da7",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:5f10d753ccc0959d9da78776290710d9a1220e9928078574541e922fa877bb62",
+                "publicationId": "conf/iclr/WatsonSLTF25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/iclr/WatsonSLTF25",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Optimization of Multimodal Inputs Based on Diffusion Models: Zero-Shot Semantic Image Generation.",
+                "sampleId": "corpus-daa61fa608a0a336a232",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 43,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 59,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:723e6218b3008e25483616707bd667f938873e03dc4af06edd4593b036fe5b22",
+                "text": "Diffusion Models",
+                "textSha256": "295fbb8566c1a0e962a0e4240c2113857d7c313d129f41375076286a3d75ae2a",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Optimization of Multimodal Inputs Based on Diffusion Models: Zero-Shot Semantic Image Generation.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/ICME59968.2025.11209790"
+                ],
+                "pages": "1-6",
+                "modelSampleId": "corpus-daa61fa608a0a336a232",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:daa61fa608a0a336a232e755a34198cad025ea1aac315b490892d8c45c0408cd",
+                "publicationId": "conf/icmcs/WangLSZYLSL25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/icmcs/WangLSZYLSL25",
+                "doi": "10.1109/icme59968.2025.11209790"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples.",
+                "sampleId": "corpus-c9d1d068c5b23ad20cf8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 66,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 82,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:8afcbc8a672004f895dd7fec0e31391e99d84dce940f20bee90c24e2f29dc547",
+                "text": "Diffusion Models",
+                "textSha256": "f126138f3cbc38d9b4227f75014ab7023ceb82c603a7cd5c277ea3a54f05c855",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://proceedings.mlr.press/v202/liang23g.html"
+                ],
+                "pages": "20763-20786",
+                "modelSampleId": "corpus-c9d1d068c5b23ad20cf8",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:c9d1d068c5b23ad20cf8c7d0cd77192f90565486a5c171bc2af45c2be1cc86f4",
+                "publicationId": "conf/icml/LiangWHZXSXMG23",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/icml/LiangWHZXSXMG23",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Non-confusing Generation of Customized Concepts in Diffusion Models.",
+                "sampleId": "corpus-630a067d1b0cff383fce",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 51,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 67,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:08f2f86f63a1c668f1cc37db56475197384f2903019832e15a03f0e5603f837a",
+                "text": "Diffusion Models",
+                "textSha256": "5c8f0d20a535d76cb3bf511a932b1283c60733d6cd88d86992fbc26c39715a94",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "Non-confusing Generation of Customized Concepts in Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://proceedings.mlr.press/v235/lin24d.html",
+                  "https://openreview.net/forum?id=XoencoHWy7"
+                ],
+                "pages": "29935-29948",
+                "modelSampleId": "corpus-630a067d1b0cff383fce",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:630a067d1b0cff383fce7b5500fa6e9e80cd92dc27181a2431aeb6fe58c4ffe8",
+                "publicationId": "conf/icml/LinCSZLM0Z0YZ24",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/icml/LinCSZLM0Z0YZ24",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "TimeStep Master: Asymmetrical Mixture of Timestep LoRA Experts for Versatile and Efficient Diffusion Models in Vision.",
+                "sampleId": "corpus-ffcbc5a85f0cdaabf6ec",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 91,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 107,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:5dc10abf0d33323a8e09651a2479f2c10b2eb9aec63811575076e537965996c4",
+                "text": "Diffusion Models",
+                "textSha256": "f59e5385fc8b3ed81e6a35fd26cff68949a73e1c2e51030809d32cefb1662b25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "TimeStep Master: Asymmetrical Mixture of Timestep LoRA Experts for Versatile and Efficient Diffusion Models in Vision.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://proceedings.mlr.press/v267/zhuang25a.html",
+                  "https://openreview.net/forum?id=9mPhtzB9XP"
+                ],
+                "pages": "",
+                "modelSampleId": "corpus-ffcbc5a85f0cdaabf6ec",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:ffcbc5a85f0cdaabf6ec30d3b717895a10d3c3cfb68907d69fc825de4c289b80",
+                "publicationId": "conf/icml/ZhuangGD0C0WZ0025",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/icml/ZhuangGD0C0WZ0025",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "DroneDiffusion: Robust Quadrotor Dynamics Learning with Diffusion Models.",
+                "sampleId": "corpus-14e8df1134904c1a169c",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 56,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 72,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:73a60a7cc755b8a3d47b7a4ae8668d88d3cfcd7e9c562c666262eecbe9d1efb5",
+                "text": "Diffusion Models",
+                "textSha256": "88baab7e4206992f3bf76822929d005e1f46742cf837a0c716cbaeee610f6107",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "DroneDiffusion: Robust Quadrotor Dynamics Learning with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/ICRA55743.2025.11127523"
+                ],
+                "pages": "1604-1610",
+                "modelSampleId": "corpus-14e8df1134904c1a169c",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:14e8df1134904c1a169c5e13223b99cffb04525e86ebc2334a1cf46ba27db5ff",
+                "publicationId": "conf/icra/DasYSSKP25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/icra/DasYSSKP25",
+                "doi": "10.1109/icra55743.2025.11127523"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Semi-supervised Brain Tumor Segmentation Using Diffusion Models.",
+                "sampleId": "corpus-fc065a9877baa1591b97",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 47,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 63,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:68b590ab3ad3d7e1df519123da31c1d54c2914272cac6f9eae18beccd0b621ab",
+                "text": "Diffusion Models",
+                "textSha256": "dd4a78bcf7a9c1fb4ab10e4871b628ecd8a927c8eb9f501710aac510706d8da0",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "Semi-supervised Brain Tumor Segmentation Using Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1007/978-3-031-34111-3_27"
+                ],
+                "pages": "314-325",
+                "modelSampleId": "corpus-fc065a9877baa1591b97",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:fc065a9877baa1591b976d615fd44447a206e26e62b3eb9bc3a0336d5653791a",
+                "publicationId": "conf/ifip12/AlshenoudySTGK23",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/ifip12/AlshenoudySTGK23",
+                "doi": "10.1007/978-3-031-34111-3_27"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Optical Image Translation Using Diffusion Models in Support of Heterogeneous Change Detection.",
+                "sampleId": "corpus-ad8fc6f594b6a5c81992",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 32,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 48,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:1fd2781eb4af0a78284504f0d05bf70edbf06975c63c725641749ad225c4d84c",
+                "text": "Diffusion Models",
+                "textSha256": "13360189d0cd700759cbd46b77abc4ce00abb63446e5666e07e1691baa8556a0",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "Optical Image Translation Using Diffusion Models in Support of Heterogeneous Change Detection.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/IGARSS53475.2024.10642027"
+                ],
+                "pages": "7231-7234",
+                "modelSampleId": "corpus-ad8fc6f594b6a5c81992",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:ad8fc6f594b6a5c81992ce4d67096619758578f0aca974c294affd7e77750451",
+                "publicationId": "conf/igarss/VinholiCAMM24",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/igarss/VinholiCAMM24",
+                "doi": "10.1109/igarss53475.2024.10642027"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Bring Metric Functions into Diffusion Models.",
+                "sampleId": "corpus-c920e82579ed717b5ae8",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 28,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 44,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:c9cb24fda8bd74b4cbcbeb232a6dff8d9ce56b4cf1ba171701ffc58474d57019",
+                "text": "Diffusion Models",
+                "textSha256": "2c8db99c88f0ef12f3ac64cb7839c35d5ae1a3adbd12d50731653cef1988f9a6",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "Bring Metric Functions into Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://www.ijcai.org/proceedings/2024/64"
+                ],
+                "pages": "578-586",
+                "modelSampleId": "corpus-c920e82579ed717b5ae8",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:c920e82579ed717b5ae8814c9470b87654115b78a17a6bc70ba324519e4d85fd",
+                "publicationId": "conf/ijcai/0002YWLLWL24",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/ijcai/0002YWLLWL24",
+                "doi": ""
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "EmoMix: Emotion Mixing via Diffusion Models for Emotional Speech Synthesis.",
+                "sampleId": "corpus-d8ae4c4d56a4519b0f03",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 27,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 43,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:314e26434c56a0f01f070d6f5f78a5ad9d0333ae7457fad350023a0934817bc9",
+                "text": "Diffusion Models",
+                "textSha256": "86d62429f657ee56dcae8966392ee9f3e49e6a59ee83f0fec84d2dee7d5ade0d",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "EmoMix: Emotion Mixing via Diffusion Models for Emotional Speech Synthesis.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.21437/Interspeech.2023-1317"
+                ],
+                "pages": "12-16",
+                "modelSampleId": "corpus-d8ae4c4d56a4519b0f03",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:d8ae4c4d56a4519b0f03aff2349a3dbb48a88730fc2c34986e76244f81333a99",
+                "publicationId": "conf/interspeech/Tang0W0023",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/interspeech/Tang0W0023",
+                "doi": "10.21437/interspeech.2023-1317"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Motion Planning Diffusion: Learning and Planning of Robot Motions with Diffusion Models.",
+                "sampleId": "corpus-68ca84c64b52dcf99cb1",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 71,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 87,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:8f7164280d02ec5bb533c2af5a9686487cf45b7d39e057664a9d5a18897afd07",
+                "text": "Diffusion Models",
+                "textSha256": "08288d06852b056169648140e6a32290bd3ca153a0b54f5b5d47279bfc53fd2f",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "Motion Planning Diffusion: Learning and Planning of Robot Motions with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/IROS55552.2023.10342382"
+                ],
+                "pages": "1916-1923",
+                "modelSampleId": "corpus-68ca84c64b52dcf99cb1",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:68ca84c64b52dcf99cb15577c42c1fefd0dcd6bdc8af5f120b15ff25bd621dab",
+                "publicationId": "conf/iros/Carvalho0BK023",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/iros/Carvalho0BK023",
+                "doi": "10.1109/iros55552.2023.10342382"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "MedDataset: Synthesizing Infinite Image and Segmentation Data Using Diffusion Models.",
+                "sampleId": "sample-e178dcc83c5a6579f554",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 68,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 84,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:4dc7d6d7d8a963c8dcafd2fa6b0c695e0d2c64a71a8c6ca8056b0b6dcaf38d1f",
+                "text": "Diffusion Models",
+                "textSha256": "38cbfd0a47edc6bbba2520e49c7a1dbda88c5855366b50fb9b6b3b626038ef49",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "MedDataset: Synthesizing Infinite Image and Segmentation Data Using Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/ISBI60581.2025.10980905"
+                ],
+                "pages": "1-5",
+                "modelSampleId": "sample-e178dcc83c5a6579f554",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:7ab7db64811c09a8093afc79957ca8872f9a7b89062cad149dc51364d35629ba",
+                "publicationId": "conf/isbi/SharminiNP25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/isbi/SharminiNP25",
+                "doi": "10.1109/isbi60581.2025.10980905"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Diffusion Models for Unsupervised Anomaly Detection in Fetal Brain Ultrasound.",
+                "sampleId": "corpus-73b82ce2f72450399048",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 0,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 16,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:67ac39d57829feed28c024cbe2f5a3d8548702c834902bbe97e5d78241f228bc",
+                "text": "Diffusion Models",
+                "textSha256": "ac0dddbf010b6f893a01358d679ec3fa757cde36d309b031b577110856dfecb9",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2024,
+                "source": "dblp_structured_xml",
+                "title": "Diffusion Models for Unsupervised Anomaly Detection in Fetal Brain Ultrasound.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1007/978-3-031-73647-6_21"
+                ],
+                "pages": "220-230",
+                "modelSampleId": "corpus-73b82ce2f72450399048",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:73b82ce2f724503990480c34016beaf64c727402fb3bbb99e4e11406b4608b92",
+                "publicationId": "conf/miccai/MykulaGLSZB24",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/miccai/MykulaGLSZB24",
+                "doi": "10.1007/978-3-031-73647-6_21"
+              }
+            },
+            {
+              "kind": "Mention",
+              "props": {
+                "evidence": "Exploring Image Transformations with Diffusion Models: A Survey of Applications and Implementation Code.",
+                "sampleId": "corpus-f765c44946e33fc43a76",
+                "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+                "start": 37,
+                "source": "model_prediction",
+                "label": "METHOD",
+                "sourceRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "offsetUnit": "Unicode_code_points",
+                "end": 53,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Mention:acb1a0ddc2eb0ad8e279aefec5cb70b091c81e79b05bf1c69249aae6f9cad78a",
+                "text": "Diffusion Models",
+                "textSha256": "1c9bf531d2ef0ba600a45ff86ee4cbd6fee08b869cf3e2c207203cb0329d4e51",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "status": "candidate"
+              }
+            },
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2023,
+                "source": "dblp_structured_xml",
+                "title": "Exploring Image Transformations with Diffusion Models: A Survey of Applications and Implementation Code.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1007/978-3-031-53966-4_2"
+                ],
+                "pages": "19-33",
+                "modelSampleId": "corpus-f765c44946e33fc43a76",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:f765c44946e33fc43a769abfc949150c7bbdd336d61a28b01822341036f1f26b",
+                "publicationId": "conf/mod/ArellanoOT23",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/mod/ArellanoOT23",
+                "doi": "10.1007/978-3-031-53966-4_2"
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:8282f1cd69038a1913c926d6520b84b580bbb2cae1472c252d7a28a9cab2cf8c",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:7b59853b435a34ddff3ea3f3816b96d51f6378a4160a877f009560945b9763d4",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:1e333c46b48fed41fc5f6b4b7eca54dd4ea37769749b6701e0e32ddd9acce4dd",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:456782b9b67e34a3d399568f5e12160608021819b75d72a7011197a1aa3bc02c",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:ded0821091a42b53fff596359fa5c6dee148360d63c955f00ae242a97fd0d9eb",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:8b680261ad44c99ecdfbf4c255f3c01847030bf0a27035aa4e54810d9876a75b",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:e702041dcae39ed7c4bf053ce9e2d4ab93d85d217423c1704c95e5d55051afad",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:ded0821091a42b53fff596359fa5c6dee148360d63c955f00ae242a97fd0d9eb"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:e23e074bc5eb4ac150213675c823753f73ee475cc78610aa8c01a8c2b81535c2",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:1b59d64f13926b73eee4c7cde64bd227ffbd4676e38d0536346439d9ef13baf8",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:2e2d0f13de7e1aace2407cf0d2b129520e3703228df0abae10c5ec6cb9d870ee",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:5a7c60592bb8a96bc546892aa9ba6aeb44dfe2743bae8aa5bdd6839618ee94fd",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:1b59d64f13926b73eee4c7cde64bd227ffbd4676e38d0536346439d9ef13baf8"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:6d36a403d1bf5375f69c5eca94d62fb5699e40337ce47da3945fee19ca8d72cb",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:2a8135d1093e9d552eff5958a5dc56a71f49c0b10570a6822848a88bfaca41ca",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:0aabb02854889fe46df7cc9adafaf5b6ecb24334d2b604e9bddc169d369225d3",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:6f3101124d435546bd5e7f2b48a04dd12c2acfd2a2f2fc8ecd809006c3af65a0",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:2a8135d1093e9d552eff5958a5dc56a71f49c0b10570a6822848a88bfaca41ca"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:21f73f7d90b3ea4bcdd7a0bc25b2aa825c91459b94696b2b3d08f58a5f92f32d",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:8c05b10fa514dd45d5e1518db89a7a7aea405e666974d9eef8b5270f34909461",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:f6209a138d12b4912e4609286d835120b5eedfa08889537001b88e1c54670dea",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:ccf686ab025dfbdf07ac869502a2dbe17b4f65c9a5d2a08075f474f4a73561c6",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:8c05b10fa514dd45d5e1518db89a7a7aea405e666974d9eef8b5270f34909461"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:884702f259111cf6b0ce05abbde79ac73432b3715042c315008addb62189a8c7",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:302619cf5610012ffd90901bca1c6bc258e66d4b465889f6169d270fcfbb4d01",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:83f75c6c1f47ff476ed867670225ebc74964214a5d5582bb6f9be06a558fb73f",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:a962543378b74c694c9b02ad1437e7d3e240cce0a6444029fd39ce79dd880f18",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:302619cf5610012ffd90901bca1c6bc258e66d4b465889f6169d270fcfbb4d01"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:e7649e7a06b621a1e516e4eab12c99af4b303ea0f0a050b31c3a13be968e3a9e",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:f19348cafdc2f83dc1fb94eff51dc37afe32217ae018d04dd6dc8f9a0342c218",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:a1bb3c9afbd86a47003dd55423f78c7e5bb058f488c2e68f6cebfecf1aa9feb6",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:92e0fdd1a22c60462276561389e0ff6ea7a6f776eb1418e86a8af984e2b459f9",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:f19348cafdc2f83dc1fb94eff51dc37afe32217ae018d04dd6dc8f9a0342c218"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:bb5b2cc721ff25b708907234ce5f55f694a1fdb1ce50452eb58b2380655dbe38",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:610ed19a9cb9f51ab1497bfcf3907ccc66a19afbdf17d5d9da79488b4429d5ea",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:e51a6d6ca479ebda3efffcec67e2734cf3b01a98c6910afb3874b67fd42df192",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:7542ff756e1136a4b5189a4eb97570d0a336380a7b5293011065d927f5eb1b97",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:610ed19a9cb9f51ab1497bfcf3907ccc66a19afbdf17d5d9da79488b4429d5ea"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:6a12b185cae7bafc265d278a5d61f03ecfe4bb0d1d1e67f559c46fdd14e28b37",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:c9d5e6e4dbe1e4824e2ace9e3cdc9222cf88d28dfff1bc761671f3cd85897831",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:3425046b94d97fa805dd0681c579ca77bf975611fb783692e2c4264ede566969",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:ef146860765043b49f12351d6612b8d32e584f6c2af9980fcdb927c6e7774899",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:c9d5e6e4dbe1e4824e2ace9e3cdc9222cf88d28dfff1bc761671f3cd85897831"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:ba50ff4ddf19e11597ad5f77551abbfd6f316dcc7e4f320a0aa20bff646e236b",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:f6240042f2429be3b78105b13c580951b49ae2705c9ca04b9465c5b72e16d60c",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:71ec7d04fbe89e748634dfbdf3689bf8280b187bc714b987a16ca4758288ffa0",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:a78e83114a8acd862b9804d60a4e18dff39db6b6574ab97ca78128c79d37235d",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:f6240042f2429be3b78105b13c580951b49ae2705c9ca04b9465c5b72e16d60c"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:9a12b01040983de2369951421859aa8dbd418b3e4abf3cefe9e715ddfa59a24d",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:8f4c39817a9e18ffca90e3fd98380c8bf048a337759d577f187c1725f82aaad8",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:e5ca598ea09052e106a032ad1ddd364f8bf891f723471e8cdb91896f93e8d4ca",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:36606c276aa6eb3d90a87d92ac088e2342ac8f74b04dbf0e630f31480507420d",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:8f4c39817a9e18ffca90e3fd98380c8bf048a337759d577f187c1725f82aaad8"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:a4619a98c7037c87a27ca0cd2a95a381b5657e971ff8d83f98bc11b319a2edd7",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:6f393aad729be463ae67064bef881ede312a54ab13f6af5f20f51e4e7996316f",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:9b5027113546ade3b6b22f6c91594ded52cbf40356ffaa6af9c31e6cd60fc91e",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:0528b910e607cf73f4aee205874e7aa2b4d362d78b1b1a192c73725373ca6386",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:6f393aad729be463ae67064bef881ede312a54ab13f6af5f20f51e4e7996316f"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:da4fbe44a843f05d3ebae5834dcfe0c667ba6471dd24c999ea355c7391272e03",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:7a15a6e54085e862cade59d2113721624672ad6531c151eac9dbfe7900216d02",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:90861ebf53c39be891928822ad329a49f4f6e1e2ed8799bb6e9ef7211469f47b",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:9211aedd1ba78faffe3908168157e5c956e0a205e78e8d0d4d081a3ce5bad20e",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:7a15a6e54085e862cade59d2113721624672ad6531c151eac9dbfe7900216d02"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:ddb199cd16c4b4934356ca68c3a21aa6956c503d9ba05f9a7f2a25bff491a3e2",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:38bcc1569933c0d2f97dfdfe03449e912c5a1cc404d2dc5755e85481bdf2d77f",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:fb0dde9be7347c45f0f8feb5ea1f661f683d84f8e02bdd3fd85a5f1a2925b2f1",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:10012756cac43d60b779680a073a5221a1c8fc646109ca6b9c70a4b33a45fdb1",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:38bcc1569933c0d2f97dfdfe03449e912c5a1cc404d2dc5755e85481bdf2d77f"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:2067bb4328564c04e2f4fcd22599ed9aff9aa2d4e4ed7d0906c2e00041682053",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:ab09f16828d9d6b8198616b804af140893d260e21735be3d544e8a7a1fd3d337",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:a2f842692c5cc3fb99746f60b27ce06997bee6d7110276ca5d887ab408c07512",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:ed3c2a85cd67b39305ab4f387eb13df7f2eefc4351af33da01b1c5e4e062ed03",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:ab09f16828d9d6b8198616b804af140893d260e21735be3d544e8a7a1fd3d337"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:a3d94a287c445ce0ff372bce6636552566ab197a8eb53a7b61a8ebd00638de80",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:19a4480242acec9c0b0e6bb9d3afe3adb593f089ea93caeb894305ee8529d17c",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:af87eca99a5375f554a766b8d250e45b5d722ec1d3095d944bff37a3619fee52",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:bc65f71f1e4ac11d2a5dee395444a5fb8a8994dd6a13aa29f31eb08e509739f0",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:19a4480242acec9c0b0e6bb9d3afe3adb593f089ea93caeb894305ee8529d17c"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:4f45701bd3f2269d919bfc324ca6cb0170e70d1fba6ccec3cce5c7a8fb6bdfb8",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:2f3b4d1bbdbca438c782f3ae434b0e387b8624db3071da5c08a285e991e83157",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:c922c16b02b7324eb5fba318ff07c48d7aa26866865b8e02f70cbe7da7ec5b6f",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:7fb9a4489e62c1c54326adaca39095156a5cee12690bf20a8cd017bf21b41893",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:2f3b4d1bbdbca438c782f3ae434b0e387b8624db3071da5c08a285e991e83157"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:35de46ad61bcaaac52f9dcc3f8b13fd107b7bf05af6dec06cb8d310bbf552395",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:1ec071336eddbc9116781ca558a3495d0d914d10fe23d58b05a43564e9940c4a",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:3a4ad4098f7fd4a6c0c822385ae15e827f451d357eb7f7f9c822d5eb3e24f006",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:5f10d753ccc0959d9da78776290710d9a1220e9928078574541e922fa877bb62",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:1ec071336eddbc9116781ca558a3495d0d914d10fe23d58b05a43564e9940c4a"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:731bcb762b3ee4e39a3deae2ba1124d332811363edc967e21846e3baa9398a06",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:723e6218b3008e25483616707bd667f938873e03dc4af06edd4593b036fe5b22",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:4059fe2597751c2375dbd468eaf31df770e39d5d021b44dbcfa19e0fc1aa0c13",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:daa61fa608a0a336a232e755a34198cad025ea1aac315b490892d8c45c0408cd",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:723e6218b3008e25483616707bd667f938873e03dc4af06edd4593b036fe5b22"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:6f29e283d95c58d7d97b8be103783f483c45c4789f473d1f0409be2808bde87c",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:8afcbc8a672004f895dd7fec0e31391e99d84dce940f20bee90c24e2f29dc547",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:543627130849c75098629f2ebfcb9ada4a28004f32249b2875540eda11e297d7",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:c9d1d068c5b23ad20cf8c7d0cd77192f90565486a5c171bc2af45c2be1cc86f4",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:8afcbc8a672004f895dd7fec0e31391e99d84dce940f20bee90c24e2f29dc547"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:80ad43b71135aec0aeaa8d357ce7052d762f6ac68b1c3cd2c6bf32927fd717dc",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:08f2f86f63a1c668f1cc37db56475197384f2903019832e15a03f0e5603f837a",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:5704c9b1fc9bfde3c17a51c63f0b702b5940351b61f0231be3f16585ead6abf2",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:630a067d1b0cff383fce7b5500fa6e9e80cd92dc27181a2431aeb6fe58c4ffe8",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:08f2f86f63a1c668f1cc37db56475197384f2903019832e15a03f0e5603f837a"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:e21e5c8f4587cd90049f0e0b458577aa67d63855779fc30569d5b8a6f84e8c02",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:5dc10abf0d33323a8e09651a2479f2c10b2eb9aec63811575076e537965996c4",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:67867362a713129cea7549312e61ec6e068a478f3c11a7c45c1035744a3118e6",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:ffcbc5a85f0cdaabf6ec30d3b717895a10d3c3cfb68907d69fc825de4c289b80",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:5dc10abf0d33323a8e09651a2479f2c10b2eb9aec63811575076e537965996c4"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:1eb27344bb8552d171022482c2abc2a491ff4775fea9db7d9ad369842f5acdf5",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:73a60a7cc755b8a3d47b7a4ae8668d88d3cfcd7e9c562c666262eecbe9d1efb5",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:c3a3d2e8b16108f42b5e367a39856f18bde413b626ab339c2b985aedbdcdb259",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:14e8df1134904c1a169c5e13223b99cffb04525e86ebc2334a1cf46ba27db5ff",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:73a60a7cc755b8a3d47b7a4ae8668d88d3cfcd7e9c562c666262eecbe9d1efb5"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:e0f0c1571efd0d996fde7e4361443bf242821549e9a3c9ec97bd0966a90f0255",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:68b590ab3ad3d7e1df519123da31c1d54c2914272cac6f9eae18beccd0b621ab",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:506590aa28272f257306846b6675bd0c73e8f0a3a1e543ff38ddea62da5d26ea",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:fc065a9877baa1591b976d615fd44447a206e26e62b3eb9bc3a0336d5653791a",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:68b590ab3ad3d7e1df519123da31c1d54c2914272cac6f9eae18beccd0b621ab"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:cbcbcdf6fd257fd9de83ae4058300da806ba16a5a55370882af4130f4ce09d44",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:1fd2781eb4af0a78284504f0d05bf70edbf06975c63c725641749ad225c4d84c",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:51471d74d41f831c4111b8e55de3048954a4de2ee7313cd3f9e841734db8d081",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:ad8fc6f594b6a5c81992ce4d67096619758578f0aca974c294affd7e77750451",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:1fd2781eb4af0a78284504f0d05bf70edbf06975c63c725641749ad225c4d84c"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:1e17fe7bc986d106b7c1de9fa6b6f13b469b56ff87045e21507e8b0241b9ee4c",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:c9cb24fda8bd74b4cbcbeb232a6dff8d9ce56b4cf1ba171701ffc58474d57019",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:6c4f63e6c79dac8916d771821410e04ebb2183c8cd5cf6eadd495ccae851219f",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:c920e82579ed717b5ae8814c9470b87654115b78a17a6bc70ba324519e4d85fd",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:c9cb24fda8bd74b4cbcbeb232a6dff8d9ce56b4cf1ba171701ffc58474d57019"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:90913c7c9830e2b2f23537976abc897afc23fb21fda862998d03e4cb8fc8554c",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:314e26434c56a0f01f070d6f5f78a5ad9d0333ae7457fad350023a0934817bc9",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:806acee26edc08d59e1f43d38f4031ed323068cd44d7e456a38e39296a13ca47",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:d8ae4c4d56a4519b0f03aff2349a3dbb48a88730fc2c34986e76244f81333a99",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:314e26434c56a0f01f070d6f5f78a5ad9d0333ae7457fad350023a0934817bc9"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:c48e6fdbd837011a840a88ca511579fd8a24d7089dbfaa8133959e056766cc53",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:8f7164280d02ec5bb533c2af5a9686487cf45b7d39e057664a9d5a18897afd07",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:a4e794ef96d0427901edf29f7edf2dbdeb89c61a66f905acde815bf000a21a1b",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:68ca84c64b52dcf99cb15577c42c1fefd0dcd6bdc8af5f120b15ff25bd621dab",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:8f7164280d02ec5bb533c2af5a9686487cf45b7d39e057664a9d5a18897afd07"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:eec449df3478049cac7b74f0db0c95876ad8e9b7c1e3db25cace8722870b8789",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:4dc7d6d7d8a963c8dcafd2fa6b0c695e0d2c64a71a8c6ca8056b0b6dcaf38d1f",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:b7f730ba8879539721251b88ddc46fd5a43aa15a0ae4399faab8525742d47670",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:7ab7db64811c09a8093afc79957ca8872f9a7b89062cad149dc51364d35629ba",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:4dc7d6d7d8a963c8dcafd2fa6b0c695e0d2c64a71a8c6ca8056b0b6dcaf38d1f"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:d6ad72760f642af042a39bc5c9952bb548ead8a00f5cb3c656695a06f8d857dd",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:67ac39d57829feed28c024cbe2f5a3d8548702c834902bbe97e5d78241f228bc",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:231165bbc6c11f7d3af5148a03e16a6b0c872d95a702ac726e3f3e310f7aa960",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:73b82ce2f724503990480c34016beaf64c727402fb3bbb99e4e11406b4608b92",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:67ac39d57829feed28c024cbe2f5a3d8548702c834902bbe97e5d78241f228bc"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:4364f966a8d7cb87c677701fb2fc1605d46ba0829c58ae53f89f7b85424e73dd",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Mention:acb1a0ddc2eb0ad8e279aefec5cb70b091c81e79b05bf1c69249aae6f9cad78a",
+              "kind": "DENOTES",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Concept:e940ba5104cf99e3f50022b91ce9db49edbf52afd323ee2f90b65f8fffe5ff53"
+            },
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:20db88a6d2e70822232559ea9071b16adfce58ee0a48a9f0ce347a7e0bcc2843",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Publication:f765c44946e33fc43a769abfc949150c7bbdd336d61a28b01822341036f1f26b",
+              "kind": "MENTIONS",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Mention:acb1a0ddc2eb0ad8e279aefec5cb70b091c81e79b05bf1c69249aae6f9cad78a"
+            }
+          ],
+          "rootId": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+        },
+        "meta": {
+          "source": "live_neo4j",
+          "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+          "mode": "methods",
+          "pathsReturned": 30,
+          "hasMorePaths": true,
+          "pathLimit": 30,
+          "wholeGraph": false,
+          "notice": "局部有界路径；共享作者姓名未消歧，同方法仅表示模型提及，不是引用或已验证语义相似。"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&limit=1",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "response": {
+        "data": {
+          "nodes": [
+            {
+              "kind": "Publication",
+              "props": {
+                "modelRunManifestSha256": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+                "year": 2025,
+                "source": "dblp_structured_xml",
+                "title": "Denoising Monte Carlo Renders with Diffusion Models.",
+                "type": "inproceedings",
+                "modelApplicationStatus": "inferred",
+                "sourceFileSha256": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+                "urls": [
+                  "https://doi.org/10.1109/3DV66043.2025.00082"
+                ],
+                "pages": "835-844",
+                "modelSampleId": "corpus-eea73ed743e3cca75a16",
+                "modelApplied": true,
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e",
+                "publicationId": "conf/3dim/VavilalaVF25",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "dblpUrl": "https://dblp.org/rec/conf/3dim/VavilalaVF25",
+                "doi": "10.1109/3dv66043.2025.00082"
+              }
+            },
+            {
+              "kind": "Person",
+              "props": {
+                "aliases": "",
+                "identityStatus": "normalized_name_not_disambiguated",
+                "name": "Vaibhav Vavilala",
+                "personId": "person-8981e31d2706b3c5",
+                "id": "ai-literature-1020b3aaea22e8e72eb2:Person:f9cc730906277f00b9050d25e33251752090c95f1058068e8a6ec969843ef831",
+                "source": "dblp_structured_xml",
+                "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+                "sourceFileSha256": "709ed088e42ee20be0756c659cf352aae929b916cdfcaf4b33b6d5cb4fd83a60"
+              }
+            }
+          ],
+          "edges": [
+            {
+              "id": "ai-literature-1020b3aaea22e8e72eb2:Edge:949221a1894c0c3c80903699639351794ae97e31f799c37cbe13c7a94d411478",
+              "source": "ai-literature-1020b3aaea22e8e72eb2:Person:f9cc730906277f00b9050d25e33251752090c95f1058068e8a6ec969843ef831",
+              "kind": "AUTHORED",
+              "target": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+            }
+          ],
+          "rootId": "ai-literature-1020b3aaea22e8e72eb2:Publication:eea73ed743e3cca75a16778e3afefaa4a0fff7d852174fa58df710ff3f90ef6e"
+        },
+        "meta": {
+          "source": "live_neo4j",
+          "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+          "mode": "paper",
+          "pathsReturned": 1,
+          "hasMorePaths": true,
+          "pathLimit": 1,
+          "wholeGraph": false,
+          "notice": "局部有界路径；共享作者姓名未消歧，同方法仅表示模型提及，不是引用或已验证语义相似。"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=not-a-publication",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "response": {
+        "error": {
+          "code": "not_found",
+          "message": "文献不存在"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=x%27%29+MATCH+%28n%29+DETACH+DELETE+n+%2F%2F",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "response": {
+        "error": {
+          "code": "not_found",
+          "message": "文献不存在"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&mode=unsupported",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "response": {
+        "error": {
+          "code": "invalid_request",
+          "message": "查询参数无效"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&limit=0",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "response": {
+        "error": {
+          "code": "invalid_request",
+          "message": "查询参数无效"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&limit=51",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "response": {
+        "error": {
+          "code": "invalid_request",
+          "message": "查询参数无效"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?mode=paper",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "response": {
+        "error": {
+          "code": "invalid_request",
+          "message": "查询参数无效"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&unknown=x",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "response": {
+        "error": {
+          "code": "invalid_request",
+          "message": "查询参数无效"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25&id=another",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "response": {
+        "error": {
+          "code": "invalid_request",
+          "message": "查询参数无效"
+        }
+      }
+    },
+    {
+      "path": "/api/graph?id=conf%2F3dim%2FVavilalaVF25",
+      "expectedStatus": 501,
+      "actualStatus": 501,
+      "response": {
+        "bodyFormat": "non_json"
+      }
+    },
+    {
+      "path": "/api/health",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "response": {
+        "bodyFormat": "non_json"
+      }
+    }
+  ],
+  "baseURL": "http://127.0.0.1:8766",
+  "modelQualityEvaluation": false,
+  "graphId": "ai-literature-1020b3aaea22e8e72eb2",
+  "passed": true,
+  "finishedAtUTC": "2026-10-07T08:07:55.124571+00:00"
+}

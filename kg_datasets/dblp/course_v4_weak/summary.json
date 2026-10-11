@@ -1,0 +1,38 @@
+{
+  "status": "queue_prepared_ai_labeling_pending",
+  "createdAt": "2026-10-05T11:16:16.800335+00:00",
+  "corpusDocuments": 20000,
+  "paperGroups": 19889,
+  "corpusSplits": {
+    "train": 16025,
+    "dev": 1963,
+    "test": 2012
+  },
+  "selectedDocuments": 2000,
+  "selectedSplits": {
+    "train": 1600,
+    "dev": 200,
+    "test": 200
+  },
+  "historicalTrainOnlyDocuments": 387,
+  "forcedTrainGroupDocuments": 388,
+  "nearDuplicatePairsCoLocated": 12,
+  "crossSplitGroups": 0,
+  "pendingGenerationJobs": 2000,
+  "generationBatches": 80,
+  "legacyAiCandidateDocuments": 20,
+  "legacyRegularEntityCandidates": 44,
+  "legacyGroupMentions": 1,
+  "aiReviewedDocuments": 0,
+  "humanReviewedDocuments": 0,
+  "nerTrainingReady": false,
+  "relationTrainingReady": false,
+  "trainingStarted": false,
+  "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+  "limitations": [
+    "Group heuristics are conservative and not exhaustive; publication identities were not merged.",
+    "The original AI model/prompt were not supplied; unknown/null are preserved.",
+    "Legacy suggestions are incomplete first-pass candidates, not reviewed training labels.",
+    "Class coverage is unknown until complete AI labels exist; no empty jobs become negative examples."
+  ]
+}

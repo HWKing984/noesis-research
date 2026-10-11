@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-06T09:00:03.0402839+08:00",
+  "valid": true,
+  "originalInputsUnchanged": 21,
+  "runDirectories": 141,
+  "hashedRunOutputs": 787,
+  "exportVersions": 7,
+  "hashedExportFiles": 61,
+  "latestSnapshot": "course_v4_training_inputs_07",
+  "latestSnapshotManifestSha256": "80eb181d53e471deb69c418bc39eb9eaa923ee361c9010f2651f9d5b7cae1e9c",
+  "annotation": {
+    "reviewedDocuments": 658,
+    "newDocuments": 50,
+    "newConfirmed": 47,
+    "newRevised": 3,
+    "confirmedCumulative": 629,
+    "revisedCumulative": 29,
+    "reviewedSplits": {"train": 458, "dev": 200, "test": 0},
+    "pendingDocuments": 1342,
+    "pendingUnique": true,
+    "pendingAnnotatedIntersection": 0,
+    "pendingAnonymous": true,
+    "annotatedCrossSplitGroups": 0,
+    "entityUnresolved": 110,
+    "relationUnresolved": 156,
+    "nerEligibleDocuments": 547,
+    "nerSplits": {"train": 380, "dev": 167, "test": 0},
+    "relationExamples": {"train": 297, "dev": 162, "test": 0},
+    "humanGold": false,
+    "independentBlindReview": false
+  },
+  "preflight": {"tokenizedTrain": 380, "tokenizedDev": 167, "rejected": 0, "testTokenized": false},
+  "dictionaryDevF1": 0.27289719626168224,
+  "formalTrainingStarted": false,
+  "testEvaluated": false,
+  "screenshots": {
+    "bundle": "docs/evidence/20261006_round07",
+    "boundPageAndSourceFiles": 21,
+    "pngCount": 4,
+    "visuallyInspectedPNG": 4,
+    "originalConsoleScreenshots": false,
+    "kind": "actual_browser_screenshots_of_verified_artifact_visualizations",
+    "renderer": "Microsoft_Edge_154.0.4258.53_headless",
+    "bundleManifestSha256": "84fb2f9f901879a5b75e51246f449f9f5749f63e300bb94c2da9d8f012a5278a",
+    "capturesManifestSha256": "3b39e87dea74d7e7044f955bb1cecc3ce5c815cf99253d9a65711231a73f34fa",
+    "pngAndPageHashesVerified": true,
+    "notice": "Data page uses snapshot07; smoke and model prediction pages replay actual snapshot06 experiment, not new training."
+  },
+  "tests": {
+    "passed": 302, "failures": 0, "errors": 0, "skipped": 0, "xmlSeconds": 13.993,
+    "xmlSha256": "771d21b8133255bbe0ac89bc6aa86276e225e63452f9dbd5d1c27796fb177d87"
+  }
+}

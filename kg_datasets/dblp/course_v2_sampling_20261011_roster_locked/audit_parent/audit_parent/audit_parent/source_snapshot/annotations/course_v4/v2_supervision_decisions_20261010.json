@@ -1,0 +1,61 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "not_exposed",
+  "independent": false,
+  "documents": [
+    {
+      "arxivId": "1903.10404",
+      "textSha256": "e7422351d8f78ae95bdaf4e5b4de65ae043f14b9db7e15c683e9a2fee1a79e9c",
+      "upstreamReceiptSha256": "07c768739bd0cb574a7d6cdc48f7197589008959742b72559c61e09669785d14",
+      "withdrawNegativePairs": [["e1", "e4"], ["e7", "e4"], ["e9", "e4"]],
+      "withdrawReason": "The abstract attributes compression to autoencoders and representation consumption/policy learning to RL. This distinguishes immediate roles but neither explicitly negates nor exclusively excludes the broad USED_FOR relation for RL. Do not turn lack of a supporting predicate into a factual negative; withdraw the three mention-level negatives to UNRESOLVED.",
+      "coreference": [],
+      "selfReview": "Read the whole abstract and all three inherited evidence windows. The producer/consumer contrast is real, but the old negative conclusion requires a narrower direct-operator scope than the retained positive schema. No replacement positive is inferred."
+    },
+    {
+      "arxivId": "2503.03790",
+      "textSha256": "4775a8fdf6cb11330ded046d7b32cfd90b25038734f5711d20999f66dc385566",
+      "upstreamReceiptSha256": "8658555a917380e392725cdb294330f2458d381eeee75ccfc66dbfb850d28217",
+      "withdrawNegativePairs": [["e11", "e14"], ["e13", "e12"]],
+      "withdrawReason": "The sentence assigns intermediate representation prediction to the implicit module and mesh prediction to the explicit module. It does not explicitly state that the other module cannot contribute indirectly or that these responsibilities are exclusive under broad USED_FOR. Withdraw the two cross-task negatives to UNRESOLVED; retain the clearly attributed original positives.",
+      "coreference": [],
+      "selfReview": "Checked the full two-component sentence and overall DDCSR context. The cross-task pairs cannot become ordinary negatives merely by swapping the direct actor. No claim about actual module capability outside this abstract is made."
+    },
+    {
+      "arxivId": "1606.05250",
+      "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
+      "upstreamReceiptSha256": "5a279197e25bfe7b7b81128b910cb7d534c984ca8fe849de76623f8d65f187aa",
+      "withdrawNegativePairs": [],
+      "coreference": [
+        {
+          "heads": ["e4"], "tails": ["e1", "e2"],
+          "factId": "1606.05250:logistic_regression_on_squad",
+          "relationEvidenceLevel": "discourse_inferred",
+          "links": [
+            {"trigger": "the dataset", "resolvedEntityId": "e1", "referentAliasIds": ["e1", "e2"], "evidenceLevel": "discourse_inferred"},
+            {"trigger": "which", "resolvedEntityId": "e4", "referentAliasIds": ["e4"], "evidenceLevel": "direct"}
+          ]
+        }
+      ],
+      "selfReview": "The relative clause locally attributes the score to logistic regression; dataset attribution still needs the SQuAD discourse context. Full-name and acronym rows share one fact chain. Fine offsets improve auditability, not independent semantic certainty."
+    },
+    {
+      "arxivId": "2107.03374",
+      "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
+      "upstreamReceiptSha256": "68e4678664a566d209f4d98b16ffffc6e133bd5667b11864976fbe6617b93a54",
+      "withdrawNegativePairs": [],
+      "coreference": [
+        {
+          "heads": ["e9"], "tails": ["e5"],
+          "factId": "2107.03374:repeated_sampling_on_humaneval",
+          "relationEvidenceLevel": "discourse_inferred",
+          "links": [
+            {"trigger": "this method", "resolvedEntityId": "e9", "referentAliasIds": ["e9"], "evidenceLevel": "discourse_inferred"},
+            {"trigger": "our problems", "resolvedEntityId": "e5", "referentAliasIds": ["e5"], "evidenceLevel": "discourse_inferred"}
+          ]
+        }
+      ],
+      "selfReview": "Separated method anaphora from benchmark anaphora in the same result sentence. Both depend on previous sentences; neither creates an explicit on-HumanEval local string or a result for production Codex."
+    }
+  ]
+}

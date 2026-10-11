@@ -1,0 +1,15 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/course_abstract_benchmark_sources_20261008_45/manifest.json": "51446422108d0fbbb8a23607248d888cbbff6c052fd566cedfecfd25cbcdde0d",
+    "annotations/course_v4/abstract_benchmark_decisions_20261008_45.json": "a6b31d807b398ed49686facbd8c36374ba51907b26dbe87306e7c51702d9f228",
+    "scripts/compile_abstract_annotations.py": "16c33870897bdcfb18cbca9219c6929f48bceb6e8a5ec32e983355e4ed8f7016",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5"
+  },
+  "filesSha256": {
+    "annotation_policy.json": "ffb07821091d25d87429709d14a5a3aa7209d90ee1b7a2da4dde02bb675d0a96",
+    "generation_receipts.jsonl": "b373741d889928fa5456177ab5caf39dca817284b36f299f79f0aa85822d8240",
+    "references.jsonl": "71500dfc71fbf86fc75d7396e4d4c994a989fb6cf5f5fc25c3b07aa14a030a2f",
+    "summary.json": "cfd81765f46e3b4c03c77a6ddee48f386cb9e90d6b16998f210750bde2fceedf"
+  }
+}

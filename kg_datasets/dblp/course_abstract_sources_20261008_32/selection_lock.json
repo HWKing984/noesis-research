@@ -1,0 +1,737 @@
+{
+  "eligibleCounts": {
+    "train": 3817,
+    "dev": 456,
+    "test": 426
+  },
+  "selectedCounts": {
+    "train": 60,
+    "dev": 20,
+    "test": 20
+  },
+  "selection": "Prior paper-group split fixed; no new title keyword or model-score targeting. Prior labelled and cached exposed groups excluded from new cohort.",
+  "lockedAtUTC": "2026-10-08T01:10:57.411934+00:00",
+  "selected": [
+    {
+      "publicationId": "journals/corr/abs-2509-00025",
+      "arxivId": "2509.00025",
+      "title": "DeepEmoNet: Building Machine Learning Models for Automatic Emotion Recognition in Human Speeches.",
+      "groupId": "paper-group-0b6c41cc422db4a566cc",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2105-15057",
+      "arxivId": "2105.15057",
+      "title": "Dominant Patterns: Critical Features Hidden in Deep Neural Networks.",
+      "groupId": "paper-group-79a1085914923e4b87d2",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2008-07342",
+      "arxivId": "2008.07342",
+      "title": "Statistical Analytics and Regional Representation Learning for COVID-19 Pandemic Understanding.",
+      "groupId": "paper-group-ef7e8ec3019361eaac6e",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1903-07107",
+      "arxivId": "1903.07107",
+      "title": "Adaptive Genomic Evolution of Neural Network Topologies (AGENT) for State-to-Action Mapping in Autonomous Agents.",
+      "groupId": "paper-group-1cf853b51e9ca5370828",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2410-14398",
+      "arxivId": "2410.14398",
+      "title": "Dynamic Negative Guidance of Diffusion Models.",
+      "groupId": "paper-group-a3fcd3741e00e24af826",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2412-10656",
+      "arxivId": "2412.10656",
+      "title": "Global Estimation of Subsurface Eddy Kinetic Energy of Mesoscale Eddies Using a Multiple-input Residual Neural Network.",
+      "groupId": "paper-group-b6302185f8d4573a1a39",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2408-04326",
+      "arxivId": "2408.04326",
+      "title": "Multi-Scale and Detail-Enhanced Segment Anything Model for Salient Object Detection.",
+      "groupId": "paper-group-3352f4bf5378a6b5cf69",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1903-10404",
+      "arxivId": "1903.10404",
+      "title": "On the use of Deep Autoencoders for Efficient Embedded Reinforcement Learning.",
+      "groupId": "paper-group-302083f2f56f59d2ebd0",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2512-15363",
+      "arxivId": "2512.15363",
+      "title": "Revisiting Task-Oriented Dataset Search in the Era of Large Language Models: Challenges, Benchmark, and Solution.",
+      "groupId": "paper-group-f5f1e72d36aa4e70ca8d",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2507-22101",
+      "arxivId": "2507.22101",
+      "title": "AI in Agriculture: A Survey of Deep Learning Techniques for Crops, Fisheries and Livestock.",
+      "groupId": "paper-group-9b2ade2037806893e12a",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2308-05731",
+      "arxivId": "2308.05731",
+      "title": "Rethinking Integration of Prediction and Planning in Deep Learning-Based Automated Driving Systems: A Review.",
+      "groupId": "paper-group-e90cf52a98faf78bc54b",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2506-20241",
+      "arxivId": "2506.20241",
+      "title": "Enhancing Large Language Models through Structured Reasoning.",
+      "groupId": "paper-group-295174a23f63aa93c7a7",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-03845",
+      "arxivId": "2509.03845",
+      "title": "Meta-Inverse Reinforcement Learning for Mean Field Games via Probabilistic Context Variables.",
+      "groupId": "paper-group-a46c95d306eea82f0c70",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2510-02719",
+      "arxivId": "2510.02719",
+      "title": "TravelBench : Exploring LLM Performance in Low-Resource Domains.",
+      "groupId": "paper-group-04384a65ced4b0720d66",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2503-03790",
+      "arxivId": "2503.03790",
+      "title": "DDCSR: A Novel End-to-End Deep Learning Framework for Cortical Surface Reconstruction from Diffusion MRI.",
+      "groupId": "paper-group-82290619b204c50337f2",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2208-08611",
+      "arxivId": "2208.08611",
+      "title": "Intellectual Property Evaluation Utilizing Machine Learning.",
+      "groupId": "paper-group-27ed8aac932883bb0e3c",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2312-14977",
+      "arxivId": "2312.14977",
+      "title": "Diffusion Models for Generative Artificial Intelligence: An Introduction for Applied Mathematicians.",
+      "groupId": "paper-group-a1cbbf19cc920ab60ddb",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2312-03556",
+      "arxivId": "2312.03556",
+      "title": "Personalized Face Inpainting with Diffusion Models by Parallel Visual Attention.",
+      "groupId": "paper-group-7a6b7d8b0e60b0e93cc8",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-20659",
+      "arxivId": "2509.20659",
+      "title": "A Deep Transfer Learning-Based Low-overhead Beam Prediction in Vehicle Communications.",
+      "groupId": "paper-group-1b67269c43d62f23d2de",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1910-12770",
+      "arxivId": "1910.12770",
+      "title": "Skip-Clip: Self-Supervised Spatiotemporal Representation Learning by Future Clip Order Ranking.",
+      "groupId": "paper-group-73378b382f6105fba6cf",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2307-03130",
+      "arxivId": "2307.03130",
+      "title": "VisKoP: Visual Knowledge oriented Programming for Interactive Knowledge Base Question Answering.",
+      "groupId": "paper-group-91912be68824448ff013",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2411-04637",
+      "arxivId": "2411.04637",
+      "title": "Hands-On Tutorial: Labeling with LLM and Human-in-the-Loop.",
+      "groupId": "paper-group-4a253e7e88cf896171dd",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2503-00416",
+      "arxivId": "2503.00416",
+      "title": "Breaking the Loop: Detecting and Mitigating Denial-of-Service Vulnerabilities in Large Language Models.",
+      "groupId": "paper-group-51eba04d3a0d59696859",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2110-02932",
+      "arxivId": "2110.02932",
+      "title": "Machine Learning Practices Outside Big Tech: How Resource Constraints Challenge Responsible Development.",
+      "groupId": "paper-group-637f405df7fbe7490aff",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1812-11737",
+      "arxivId": "1812.11737",
+      "title": "The meaning of \"most\" for visual question answering models.",
+      "groupId": "paper-group-0acabc91e234d21c6637",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2503-01309",
+      "arxivId": "2503.01309",
+      "title": "OnlineAnySeg: Online Zero-Shot 3D Segmentation by Visual Foundation Model Guided 2D Mask Merging.",
+      "groupId": "paper-group-42e394d51832d4e8ed25",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2110-08010",
+      "arxivId": "2110.08010",
+      "title": "Transformer-based Multi-task Learning for Disaster Tweet Categorisation.",
+      "groupId": "paper-group-cde55a240b4f14912c55",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2103-11133",
+      "arxivId": "2103.11133",
+      "title": "Water Need Models and Irrigation Decision Systems: A Survey on Machine Learning and Control Theory.",
+      "groupId": "paper-group-e67d9828b152ffead49d",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2506-16934",
+      "arxivId": "2506.16934",
+      "title": "PET Tracer Separation Using Conditional Diffusion Transformer with Multi-latent Space Learning.",
+      "groupId": "paper-group-8aae17871b2caf4e659c",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2407-20251",
+      "arxivId": "2407.20251",
+      "title": "An Uncertainty-aware Deep Learning Framework-based Robust Design Optimization of Metamaterial Units.",
+      "groupId": "paper-group-010f46ae8a7d4c58665f",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2409-13884",
+      "arxivId": "2409.13884",
+      "title": "A Multi-LLM Debiasing Framework.",
+      "groupId": "paper-group-25b5445f35fce8029428",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2107-10847",
+      "arxivId": "2107.10847",
+      "title": "Accelerating Quadratic Optimization with Reinforcement Learning.",
+      "groupId": "paper-group-eff0f17a971730b7fee1",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2402-17595",
+      "arxivId": "2402.17595",
+      "title": "Implicit Regularization via Spectral Neural Networks and Non-linear Matrix Sensing.",
+      "groupId": "paper-group-3fa400ebb151b25c8941",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2402-14245",
+      "arxivId": "2402.14245",
+      "title": "Enhancing Robotic Manipulation with AI Feedback from Multimodal Large Language Models.",
+      "groupId": "paper-group-ad664398fa938e6691c0",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2206-08747",
+      "arxivId": "2206.08747",
+      "title": "Machine Learning-Driven Process of Alumina Ceramics Laser Machining.",
+      "groupId": "paper-group-eac58bf70ef5e63fad2c",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2310-02147",
+      "arxivId": "2310.02147",
+      "title": "Finite-Time Analysis of Whittle Index based Q-Learning for Restless Multi-Armed Bandits with Neural Network Function Approximation.",
+      "groupId": "paper-group-920f57fae7469903a42d",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1909-11730",
+      "arxivId": "1909.11730",
+      "title": "\"Good Robot!\": Efficient Reinforcement Learning for Multi-Step Visual Tasks via Reward Shaping.",
+      "groupId": "paper-group-bc21d67e4c751061b958",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2510-26830",
+      "arxivId": "2510.26830",
+      "title": "SmoothGuard: Defending Multimodal Large Language Models with Noise Perturbation and Clustering Aggregation.",
+      "groupId": "paper-group-9774a9ebbbc53cfb1bd0",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2107-09145",
+      "arxivId": "2107.09145",
+      "title": "Adaptive wavelet distillation from neural networks through interpretations.",
+      "groupId": "paper-group-5469f2b764afbcf1223e",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-18445",
+      "arxivId": "2509.18445",
+      "title": "MeshODENet: A Graph-Informed Neural Ordinary Differential Equation Neural Network for Simulating Mesh-Based Physical Systems.",
+      "groupId": "paper-group-18edaeb8895efa6ccfec",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-19325",
+      "arxivId": "2509.19325",
+      "title": "How Much of Your Data Can Suck? Thresholds for Domain Performance and Emergent Misalignment in LLMs.",
+      "groupId": "paper-group-77ca99c04b3ec13c9f3b",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2208-08554",
+      "arxivId": "2208.08554",
+      "title": "Embracing Graph Neural Networks for Hardware Security (Invited Paper).",
+      "groupId": "paper-group-2f75b407330a938d0dbf",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2510-03955",
+      "arxivId": "2510.03955",
+      "title": "Harnessing Synthetic Preference Data for Enhancing Temporal Understanding of Video-LLMs.",
+      "groupId": "paper-group-719554894a5554326230",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2408-00275",
+      "arxivId": "2408.00275",
+      "title": "A Reinforcement Learning Based Motion Planner for Quadrotor Autonomous Flight in Dense Environment.",
+      "groupId": "paper-group-8a6b49f7a60a174d4ff3",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2512-03749",
+      "arxivId": "2512.03749",
+      "title": "Fully Unsupervised Self-debiasing of Text-to-Image Diffusion Models.",
+      "groupId": "paper-group-ac1ba0da498b7ce75642",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2501-06625",
+      "arxivId": "2501.06625",
+      "title": "Guided Code Generation with LLMs: A Multi-Agent Framework for Complex Code Tasks.",
+      "groupId": "paper-group-5a9517f7cdda3f89902e",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2510-19264",
+      "arxivId": "2510.19264",
+      "title": "LAPRAD: LLM-Assisted PRotocol Attack Discovery.",
+      "groupId": "paper-group-59564d34fabf7816df50",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-06956",
+      "arxivId": "2509.06956",
+      "title": "H2OT: Hierarchical Hourglass Tokenizer for Efficient Video Pose Transformers.",
+      "groupId": "paper-group-89889c55136489fc49f3",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2202-06128",
+      "arxivId": "2202.06128",
+      "title": "Grasp-and-Lift Detection from EEG Signal Using Convolutional Neural Network.",
+      "groupId": "paper-group-f66edbc6067077498ac0",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2103-07084",
+      "arxivId": "2103.07084",
+      "title": "Discovering Diverse Solutions in Deep Reinforcement Learning.",
+      "groupId": "paper-group-b2da568b0344fdf57c47",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2502-13345",
+      "arxivId": "2502.13345",
+      "title": "Secure and Efficient Watermarking for Latent Diffusion Models in Model Distribution Scenarios.",
+      "groupId": "paper-group-e3f25b9cd34b16a88134",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2410-01272",
+      "arxivId": "2410.01272",
+      "title": "\"No Matter What You Do!\": Mitigating Backdoor Attacks in Graph Neural Networks.",
+      "groupId": "paper-group-ddbc273a9e898420300d",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2411-18385",
+      "arxivId": "2411.18385",
+      "title": "Federated Learning with Uncertainty and Personalization via Efficient Second-order Optimization.",
+      "groupId": "paper-group-5a6f555dbfa775de4734",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2206-01432",
+      "arxivId": "2206.01432",
+      "title": "On the Generalization of Wasserstein Robust Federated Learning.",
+      "groupId": "paper-group-37e17365b2240c6e49f7",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2412-17810",
+      "arxivId": "2412.17810",
+      "title": "Token Statistics Transformer: Linear-Time Attention via Variational Rate Reduction.",
+      "groupId": "paper-group-c87f7437ea8155c1bc95",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2510-13811",
+      "arxivId": "2510.13811",
+      "title": "Generative AI in Heritage Practice: Improving the Accessibility of Heritage Guidance.",
+      "groupId": "paper-group-3b4e8f30a3363932061b",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-23809",
+      "arxivId": "2509.23809",
+      "title": "Tequila: Trapping-free Ternary Quantization for Large Language Models.",
+      "groupId": "paper-group-78032107df4bc699cbcc",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2512-13059",
+      "arxivId": "2512.13059",
+      "title": "An Open and Reproducible Deep Research Agent for Long-Form Question Answering.",
+      "groupId": "paper-group-2cbe51bd73b45463777f",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2401-11471",
+      "arxivId": "2401.11471",
+      "title": "LR-CNN: Lightweight Row-centric Convolutional Neural Network Training for Memory Reduction.",
+      "groupId": "paper-group-91b34e451b014b312ad1",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-2509-01081",
+      "arxivId": "2509.01081",
+      "title": "Assessing Large Language Models on Islamic Legal Reasoning: Evidence from Inheritance Law Evaluation.",
+      "groupId": "paper-group-97c12e24fe7ec3238fb2",
+      "split": "train"
+    },
+    {
+      "publicationId": "journals/corr/abs-1903-09296",
+      "arxivId": "1903.09296",
+      "title": "Patient Clustering Improves Efficiency of Federated Machine Learning to predict mortality and hospital stay time using distributed Electronic Medical Records.",
+      "groupId": "paper-group-53fc2fe7d51a6b4146be",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2411-06463",
+      "arxivId": "2411.06463",
+      "title": "RL-Pruner: Structured Pruning Using Reinforcement Learning for CNN Compression and Acceleration.",
+      "groupId": "paper-group-880eaac1a7b7b3f195d9",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2404-09802",
+      "arxivId": "2404.09802",
+      "title": "The Performance of Sequential Deep Learning Models in Detecting Phishing Websites Using Contextual Features of URLs.",
+      "groupId": "paper-group-86c721b400bb7757ca6b",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-1907-02544",
+      "arxivId": "1907.02544",
+      "title": "Large Scale Adversarial Representation Learning.",
+      "groupId": "paper-group-0640b5cfa139ab25cc1e",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2407-09247",
+      "arxivId": "2407.09247",
+      "title": "Constrained Intrinsic Motivation for Reinforcement Learning.",
+      "groupId": "paper-group-4ca0cda5af9e70c7a29a",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2501-17123",
+      "arxivId": "2501.17123",
+      "title": "Hybrid Deep Learning Model for Multiple Cache Side Channel Attacks Detection: A Comparative Analysis.",
+      "groupId": "paper-group-5e5a4acc02e1719f2c36",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2403-19572",
+      "arxivId": "2403.19572",
+      "title": "Swarm Characteristics Classification Using Neural Networks.",
+      "groupId": "paper-group-d3fe96b94ec4220acdd4",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-1904-04163",
+      "arxivId": "1904.04163",
+      "title": "Knowledge Distillation For Recurrent Neural Network Language Modeling With Trust Regularization.",
+      "groupId": "paper-group-f147312e46397aa795f9",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2411-11752",
+      "arxivId": "2411.11752",
+      "title": "sMoRe: Enhancing Object Manipulation and Organization in Mixed Reality Spaces with LLMs and Generative AI.",
+      "groupId": "paper-group-944fd2cf10517eb11408",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2001-11639",
+      "arxivId": "2001.11639",
+      "title": "ParkingSticker: A Real-World Object Detection Dataset.",
+      "groupId": "paper-group-10358da80b14dbb06d25",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2108-04214",
+      "arxivId": "2108.04214",
+      "title": "Neural Network Repair with Reachability Analysis.",
+      "groupId": "paper-group-516ba2b2787403b2438d",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2108-00668",
+      "arxivId": "2108.00668",
+      "title": "Three-Dimensional Trajectory Design for Multi-User MISO UAV Communications: A Deep Reinforcement Learning Approach.",
+      "groupId": "paper-group-facbbef8a4136793d4c0",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2410-03775",
+      "arxivId": "2410.03775",
+      "title": "Beyond correlation: The impact of human uncertainty in measuring the effectiveness of automatic evaluation and LLM-as-a-judge.",
+      "groupId": "paper-group-d3c03d2c084727863cf1",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2110-01434",
+      "arxivId": "2110.01434",
+      "title": "A curated, ontology-based, large-scale knowledge graph of artificial intelligence tasks and benchmarks.",
+      "groupId": "paper-group-e0bb4a7c07677ce0b29f",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2306-13720",
+      "arxivId": "2306.13720",
+      "title": "Decoupled Diffusion Models with Explicit Transition Probability.",
+      "groupId": "paper-group-585a9b6573583e9e1ebd",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2403-13872",
+      "arxivId": "2403.13872",
+      "title": "Spatial-Temporal Graph Representation Learning for Tactical Networks Future State Prediction.",
+      "groupId": "paper-group-d4931bee4ce3393bb98e",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2207-11187",
+      "arxivId": "2207.11187",
+      "title": "TaDaa: real time Ticket Assignment Deep learning Auto Advisor for customer support, help desk, and issue ticketing systems.",
+      "groupId": "paper-group-26bdb8e8eebe7f442a36",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2307-15425",
+      "arxivId": "2307.15425",
+      "title": "A Critical Review of Large Language Models: Sensitivity, Bias, and the Path Toward Specialized AI.",
+      "groupId": "paper-group-1e4ccd452fa9ddf18ef1",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-1906-08977",
+      "arxivId": "1906.08977",
+      "title": "Singing Voice Synthesis Using Deep Autoregressive Neural Networks for Acoustic Modeling.",
+      "groupId": "paper-group-827d93a55c6094c8da3b",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2503-13503",
+      "arxivId": "2503.13503",
+      "title": "SciHorizon: Benchmarking AI-for-Science Readiness from Scientific Data to Large Language Models.",
+      "groupId": "paper-group-bed26b371fad06e907ed",
+      "split": "dev"
+    },
+    {
+      "publicationId": "journals/corr/abs-2006-12001",
+      "arxivId": "2006.12001",
+      "title": "MultiImport: Inferring Node Importance in a Knowledge Graph from Multiple Input Signals.",
+      "groupId": "paper-group-f87d5f7a4f2011ae5766",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2405-06487",
+      "arxivId": "2405.06487",
+      "title": "Improving Deep Learning Model Calibration for Cardiac Applications using Deterministic Uncertainty Networks and Uncertainty-aware Training.",
+      "groupId": "paper-group-87355b8e2d1d4fae7a04",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2110-13515",
+      "arxivId": "2110.13515",
+      "title": "Modular Gaussian Processes for Transfer Learning.",
+      "groupId": "paper-group-efaffb1e94ccc5b04af6",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2106-14229",
+      "arxivId": "2106.14229",
+      "title": "Multi-task Over-the-Air Federated Learning: A Non-Orthogonal Transmission Approach.",
+      "groupId": "paper-group-f97d4874ca35a7e97cd1",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2311-08166",
+      "arxivId": "2311.08166",
+      "title": "MechAgents: Large language model multi-agent collaborations can solve mechanics problems, generate new data, and integrate knowledge.",
+      "groupId": "paper-group-f424dc25c6344185435a",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2410-13080",
+      "arxivId": "2410.13080",
+      "title": "Graph-constrained Reasoning: Faithful Reasoning on Knowledge Graphs with Large Language Models.",
+      "groupId": "paper-group-ea00e6d6b0583a04b485",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2005-12019",
+      "arxivId": "2005.12019",
+      "title": "Malware Detection at the Microarchitecture Level using Machine Learning Techniques.",
+      "groupId": "paper-group-db2c94f0d1dea6cdc6e6",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2402-05027",
+      "arxivId": "2402.05027",
+      "title": "Towards Generalizability of Multi-Agent Reinforcement Learning in Graphs with Recurrent Message Passing.",
+      "groupId": "paper-group-a46d9c8025b378784842",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2004-13959",
+      "arxivId": "2004.13959",
+      "title": "Video Contents Understanding using Deep Neural Networks.",
+      "groupId": "paper-group-b5c0ee3fd137948998da",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2206-05499",
+      "arxivId": "2206.05499",
+      "title": "Soft-mask: Adaptive Substructure Extractions for Graph Neural Networks.",
+      "groupId": "paper-group-894c1cc78290bcebd1fc",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2102-00902",
+      "arxivId": "2102.00902",
+      "title": "Fail-Safe Execution of Deep Learning based Systems through Uncertainty Monitoring.",
+      "groupId": "paper-group-fc997d2746a553b8f87c",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2009-03947",
+      "arxivId": "2009.03947",
+      "title": "Covid-Transformer: Detecting COVID-19 Trending Topics on Twitter Using Universal Sentence Encoder.",
+      "groupId": "paper-group-df16f5a11c9dd72f7dd3",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2502-09172",
+      "arxivId": "2502.09172",
+      "title": "LOB-Bench: Benchmarking Generative AI for Finance - an Application to Limit Order Book Data.",
+      "groupId": "paper-group-0c3f3edbe4f4a80c3784",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-1910-05895",
+      "arxivId": "1910.05895",
+      "title": "Transformers without Tears: Improving the Normalization of Self-Attention.",
+      "groupId": "paper-group-84b50d85d1ba7fe37236",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2410-09187",
+      "arxivId": "2410.09187",
+      "title": "Automated Rewards via LLM-Generated Progress Functions.",
+      "groupId": "paper-group-8137365be4b6d27fbaf6",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2405-19164",
+      "arxivId": "2405.19164",
+      "title": "Learning from Litigation: Graphs and LLMs for Retrieval and Reasoning in eDiscovery.",
+      "groupId": "paper-group-1cb57ec76a1cb61c97a7",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2505-15136",
+      "arxivId": "2505.15136",
+      "title": "Hybrid Audio Detection Using Fine-Tuned Audio Spectrogram Transformers: A Dataset-Driven Evaluation of Mixed AI-Human Speech.",
+      "groupId": "paper-group-e64ab1003b301e1ad1c2",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2305-09815",
+      "arxivId": "2305.09815",
+      "title": "Exploring outlooks towards generative AI-based assistive technologies for people with Autism.",
+      "groupId": "paper-group-41b698df624329d782ba",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2503-03329",
+      "arxivId": "2503.03329",
+      "title": "Deep Learning-Based Diffusion MRI Tractography: Integrating Spatial and Anatomical Information.",
+      "groupId": "paper-group-8c0e323ac31bcbfa1e5d",
+      "split": "test"
+    },
+    {
+      "publicationId": "journals/corr/abs-2512-11087",
+      "arxivId": "2512.11087",
+      "title": "Clip-and-Verify: Linear Constraint-Driven Domain Clipping for Accelerating Neural Network Verification.",
+      "groupId": "paper-group-d9d20b04894f6afc5b40",
+      "split": "test"
+    }
+  ],
+  "inputSha256": {
+    "kg_datasets/dblp/processed_ai/publications.csv": "73d8ca83073da2f5625869b1fd74ec3291e4adb85848a2c1ebe04aad912410a9",
+    "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "kg_datasets/dblp/course_v4_weak/references.jsonl": "e67e1e50565e562abbd979db3730cb7d7a77058dd801a23fbcb6d9a3b8d61439",
+    "kg_datasets/dblp/course_v4_holdout_20261007_29/references.jsonl": "0423e07419411a20643ca08af8fe574f9772ea4ee7f9e776c0be21114d61c690",
+    "scripts/collect_course_abstracts.py": "125dc0bcc9940594b357e2234e91656db05d4d4d52a23c82bab0bfd489b0c896",
+    "scripts/fetch_abstract_pilot.py": "eadc8583ce16ff7ffe72636b484b576d6494bcd810b88ec292e3038c266db620",
+    "kg_datasets/dblp/ner_v3_1/abstract_sources/abstracts.jsonl": "0ef23f054b6ae02ae744255f2d8bf68b366aab17c23b41eb9ef7b211b56585a1",
+    "kg_datasets/dblp/ner_v3_1/abstract_sources/response.atom": "3150cb85bbca8173d12a4976611d2684d98a7383fb324a874a765f2a6b174e16",
+    "kg_datasets/dblp/ner_v3_1/abstract_sources/request.json": "cb39aa14fbb52654bdf36c1140ee4145a726f7808a2ca5a767b944f9d38fbecc",
+    "kg_datasets/dblp/ner_v3_1/benchmark_abstract_sources/abstracts.jsonl": "1da13c82d223d7ddae987482117512fb28ddff4fe35e78e2972f8f6e31120980",
+    "kg_datasets/dblp/ner_v3_1/benchmark_abstract_sources/response.atom": "65761800d90cc767b68d069c5d9f3b9ff2b6f75e318a3987787d31c67ddd08a8",
+    "kg_datasets/dblp/ner_v3_1/benchmark_abstract_sources/request.json": "2202e05fa10dbe1a3c20b1e00f5c263409c8f960282f891638ef543eed7bbdea"
+  },
+  "policy": {
+    "license": "CC0-1.0",
+    "source_policy": "https://info.arxiv.org/help/api/tou.html",
+    "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+    "policy_checked_on": "2026-10-08",
+    "redistribute_metadata": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "offline_bundle_verify": {
+    "status": "passed",
+    "assertionCategories": 116
+  },
+  "archived_junit": {
+    "actual_case_count": 205,
+    "failures": 0,
+    "errors": 0
+  },
+  "core_jsonl_sha_match_parent": 6,
+  "junit_gate_reproducer": {
+    "input": "one fabricated passing testcase, suite declares 205",
+    "returned": 1,
+    "rejected": false
+  },
+  "partition_trials": [
+    {
+      "case": "arXiv:2107.03374V3",
+      "result": "rejected",
+      "reason": "Exposed paper cannot enter new evaluation"
+    },
+    {
+      "case": "arxiv:1511.00111",
+      "result": "rejected",
+      "reason": "Exposed paper cannot enter new evaluation"
+    },
+    {
+      "case": "synthetic arxiv 2610.88888 no text SHA",
+      "result": "accepted",
+      "warning": "synthetic only; does not verify identity or paper existence"
+    },
+    {
+      "case": "synthetic arxiv 2610.88888 with historically exposed text SHA",
+      "result": "rejected",
+      "reason": "Exposed paper cannot enter new evaluation"
+    }
+  ],
+  "v2_training_ready": false,
+  "new_eval_members": 0,
+  "accepted_negatives": 0,
+  "confirmed_new_issues": [
+    "pre-build JUnit testcase-list gate too weak",
+    "final dev/test admission permits missing textSha256"
+  ]
+}

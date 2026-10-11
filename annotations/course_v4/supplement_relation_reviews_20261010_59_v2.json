@@ -1,0 +1,15 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "reviews": [
+    {
+      "arxivId": "2003.10555",
+      "reason": "Actual same-session AI source review: re-read the complete original abstract, all 16 fixed spans and the accepted literal quotes. Confirm only 12 previously unknown pairs: 3 task positives and 9 local role-contrast negatives. Rejected the discriminator-to-GLUE/NLU two-edge chain because the small-model example is not uniquely tied to that earlier configuration; both stay UNRESOLVED. The generator contributes to the whole system but does not execute the discriminator's direct replacement decision. No title-derived ELECTRA entity, external model facts or absence-based negatives. All original 13 known occurrence pairs stay unchanged; the full document is still unresolved. Initial59 review prose incorrectly stated 12 inherited pairs; this separate reviewed version corrects the prose to the actual13 without changing any relation decision or overwriting the initial snapshot. Not independent gold or a model improvement."
+    },
+    {
+      "arxivId": "2006.03654",
+      "reason": "Actual same-session AI source review: re-read the whole abstract and its 25 fixed spans. The complete architecture and mask decoder have explicitly stated pre-training roles, yielding eight new task occurrence pairs. The two SuperGLUE mentions share dataset identity in one coordinated sentence, yielding three binary evaluation occurrence edges only; preserve distinct half-data, scaled/single and ensemble configurations and their own scores. Do not attach measurements to generic families/components or use external benchmark task knowledge. Preserve the source typo natural langauge and all original 18 known pairs. Initial59 review prose incorrectly stated19; this separate reviewed version corrects the count without changing any pair label. Unjudged pairs stay unknown, so complete-EVALUATED_ON document support remains zero. Same-session AI self-review, not independent gold."
+    }
+  ]
+}

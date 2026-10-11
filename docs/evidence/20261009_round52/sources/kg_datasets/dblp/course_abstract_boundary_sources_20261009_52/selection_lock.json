@@ -1,0 +1,39 @@
+{
+  "lockedAtUTC": "2026-10-09T03:10:06.071737+00:00",
+  "selected": [
+    {
+      "arxivId": "1903.10676",
+      "title": "SciBERT: A Pretrained Language Model for Scientific Text"
+    },
+    {
+      "arxivId": "1907.10529",
+      "title": "SpanBERT: Improving Pre-training by Representing and Predicting Spans"
+    },
+    {
+      "arxivId": "1909.03546",
+      "title": "Entity, Relation, and Event Extraction with Contextualized Span Representations"
+    },
+    {
+      "arxivId": "1909.07755",
+      "title": "Span-based Joint Entity and Relation Extraction with Transformer Pre-training"
+    },
+    {
+      "arxivId": "2010.12812",
+      "title": "A Frustratingly Easy Approach for Entity and Relation Extraction"
+    },
+    {
+      "arxivId": "2010.01057",
+      "title": "LUKE: Deep Contextualized Entity Representations with Entity-aware Self-attention"
+    },
+    {
+      "arxivId": "2308.03279",
+      "title": "UniversalNER: Targeted Distillation from Large Language Models for Open Named Entity Recognition"
+    },
+    {
+      "arxivId": "1906.06127",
+      "title": "DocRED: A Large-Scale Document-Level Relation Extraction Dataset"
+    }
+  ],
+  "selection": "Eight fixed scientific information-extraction papers chosen by train-side METHOD/TASK/DATASET support imbalance and entity boundary need, not held-out names or predictions. GLiNER/RoBERTa rejected by identity metadata, not assigned to train. Selection occurs before fresh source/annotation/predictions. Targeted NLP training is biased and not a representative evaluation sample.",
+  "identityOverlap": false
+}

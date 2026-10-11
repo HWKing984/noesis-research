@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>扩充题名数据：一次固定验证对照</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>扩充题名数据：一次固定验证对照</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<table><thead><tr><th>固定验证范围</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead><tbody><tr><td>NER old</td><td>73.73%</td><td>76.60%</td><td>75.14%</td></tr><tr><td>NER new</td><td>79.60%</td><td>77.16%</td><td>78.36%</td></tr><tr><td>Pipeline old_ner_old_re</td><td>62.22%</td><td>71.34%</td><td>66.47%</td></tr><tr><td>Pipeline new_ner_old_re</td><td>72.19%</td><td>69.43%</td><td>70.78%</td></tr><tr><td>Pipeline old_ner_new_re</td><td>61.20%</td><td>71.34%</td><td>65.88%</td></tr><tr><td>Pipeline new_ner_new_re</td><td>70.78%</td><td>69.43%</td><td>70.10%</td></tr></tbody></table><table><thead><tr><th>候选门槛</th><th>结果</th></tr></thead><tbody><tr><td>NEROverallImproved</td><td>True</td></tr><tr><td>METHODAndTASKNotWorse</td><td>True</td></tr><tr><td>PipelineF1GainAtLeastTwoPoints</td><td>True</td></tr><tr><td>PipelineFalsePositivesNotIncreased</td><td>True</td></tr><tr><td>PipelineUSED_FORNotWorse</td><td>True</td></tr><tr><td>ModuleNegativeRecallNotWorse</td><td>True</td></tr><tr><td>NERDATASETTruePositivesNotLost</td><td>False</td></tr><tr><td>ModuleEVALUATED_ONTruePositivesNotLost</td><td>True</td></tr><tr><td>PipelineEVALUATED_ONTruePositivesNotLost</td><td>False</td></tr></tbody></table><p>仅一次随机种子；NER覆盖167/200，完整关系158/200。DATASET支持3、EVALUATED_ON支持2。旧测试不重评，线上图谱/模型不替换。混合组合仅用于诊断；结果不证明统计显著性或真实泛化。</p><footer>证据页生成时间：2026-10-10T09:26:09.082226+00:00<br>来源：<div class="path">experiment_lock.json</div><div class="path">comparison.json</div><div class="path">ner/epochs.json</div><div class="path">re/epochs.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

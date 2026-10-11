@@ -1,0 +1,24 @@
+{
+  "version": "abstract_evidence_blocks_v1",
+  "source": "kg_datasets/dblp/course_abstract_supplement_relations_20261010_59_v2",
+  "sourceManifestSha256": "0332ad183381385be6701a27f6ac0db947cfd6fe679ebb224b7281fc343be259",
+  "papers": ["1907.11692", "1909.11942", "2003.10555", "2006.03654", "1906.08237", "1910.10683", "1910.13461", "1908.10084"],
+  "boundaryPattern": "(?<=[.!?])\\s+(?=[A-Z])",
+  "sentencesPerBlock": 2,
+  "selection": "Every nonoverlapping consecutive two-sentence block from all eight exposed targeted development abstracts, including empty-entity/empty-relation blocks. Never use predictions or relation labels to select text.",
+  "target": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+  "relationPolicy": "Review every typed reference-entity pair for a directed predicate attached to those mention occurrences. Resolve anaphora only within the block. A repeated name alone does not propagate predicates between occurrences or model configurations. NOT_EXPRESSED is a local textual state, not NO_RELATION, not a real-world negative and never training data. Preserve ambiguous local readings as UNRESOLVED; exclude the entire unresolved block from pipeline scoring and disclose coverage.",
+  "NERPolicy": "Project the existing source-bound flat mentions, then actually review each block. Quarantine any block containing a shared-head group or crossing an entity/group boundary. Keep these blocks in the queue denominator.",
+  "models": {
+    "NER52": {"checkpoint": "kg_datasets/dblp/course_v4_runs/abstract_boundary_development_20261009_52/ner/checkpoint_epoch_06", "weightsSha256": "8bb90459c66c8c8247e2c4d06078e675d272dbd4387df20070856bea9c9172a3"},
+    "RE57": {"checkpoint": "kg_datasets/dblp/course_v4_runs/diverse_role_development_20261010_57/re/checkpoint_epoch_06", "weightsSha256": "1cdcdf5580a8ab8d03b2c6173ff853e6a1962fc947851518673530f3e166f687"},
+    "RE60": {"checkpoint": "kg_datasets/dblp/course_v4_runs/pair_window_development_20261010_60/re/checkpoint_epoch_06", "weightsSha256": "79beab490c31d4a41062bc805dde4745602b81d486612af9ca5448ccf70bf33a"}
+  },
+  "maxTokens": 512,
+  "trainingAllowed": false,
+  "thresholdSelectionAllowed": false,
+  "testContentAccessAllowed": false,
+  "automaticPromotionAllowed": false,
+  "oldWholeAbstractMetricsReplaced": false,
+  "independentHumanGold": false
+}

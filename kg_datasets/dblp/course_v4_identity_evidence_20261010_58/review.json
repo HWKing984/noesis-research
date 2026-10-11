@@ -1,0 +1,98 @@
+{
+  "kind": "bounded_author_authority_review_v1",
+  "reviewer": "Codex AI evidence review; not independent human verification",
+  "sourceAudit": "kg_datasets/dblp/course_v4_identity_alias_audit_20261010_57",
+  "candidateLimit": 4,
+  "selected": [
+    {
+      "publicationId": "conf/ijcnn/NguyenTNNNH24",
+      "position": 6,
+      "name": "Thanh Trung Huynh",
+      "orcidSourceValue": "0000-0003-2027-5362",
+      "candidateDblpProfile": "homepages/360/7050",
+      "candidateName": "Thanh-Trung Huynh",
+      "status": "unresolved_with_publisher_corroboration",
+      "newIdentity": null,
+      "evidence": [
+        {
+          "rawFile": "crossref_01.json",
+          "jsonPath": "message.author[5]",
+          "doi": "10.1109/IJCNN60899.2024.10651323",
+          "name": "Thanh Trung Huynh",
+          "affiliation": "Swiss Federal Institute of Technology Lausanne (EPFL),Switzerland",
+          "orcidPresent": false
+        },
+        {
+          "rawFile": "crossref_02.json",
+          "jsonPath": "message.author[3]",
+          "doi": "10.1109/KSE59128.2023.10299416",
+          "name": "Thanh-Trung Huynh",
+          "affiliation": "Ecole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne",
+          "orcidPresent": false
+        },
+        {
+          "source": "policy_and_directory_requests.json",
+          "url": "https://people.epfl.ch/thanh.huynh",
+          "httpStatus": 404,
+          "proof": "The live institutional identity page was unavailable; cached search results are not a successful live verification."
+        }
+      ],
+      "semanticBasis": "The publisher records confirm the two author-name spellings and a compatible EPFL affiliation. Neither response supplies ORCID or an institutional person identifier. Those facts corroborate but do not explicitly identify the same person or assign the unresolved publication to the DBLP profile.",
+      "prohibitedShortcut": "Do not turn shared institution, punctuation similarity, coauthor similarity, or an ORCID attached to a disambiguation page into a confirmed identity.",
+      "authorityStillNeeded": "A DBLP correction assigning this publication to the non-disambiguation PID, or an authoritative alternate-name/ORCID statement explicitly connecting both publication authors to the same person."
+    },
+    {
+      "publicationId": "journals/access/ShangHLXZ20",
+      "position": 5,
+      "name": "Ting Zhou",
+      "orcidSourceValue": "0000-0002-0420-0566",
+      "candidateDblpProfile": "homepages/144/6588",
+      "candidateName": "Tianheng Xu",
+      "status": "unresolved_name_conflict_and_single_support",
+      "newIdentity": null,
+      "semanticBasis": "The existing unique source ORCID binding points to a different name and only one supporting publication. An inferred typo or reassigned ORCID is not an identity proof; no additional page request was justified.",
+      "authorityStillNeeded": "Publisher author-specific ORCID correction or DBLP publication-to-person assignment; not another same-name search."
+    },
+    {
+      "publicationId": "journals/snam/AmbreenIAMKKH24",
+      "position": 2,
+      "name": "Muhammad Iqbal",
+      "orcidSourceValue": "0000-0001-6284-5904",
+      "candidateDblpProfile": "homepages/201/3785",
+      "candidateName": "Muhammad Waseem Iqbal 0001",
+      "status": "unresolved_exact_name_conflict",
+      "newIdentity": null,
+      "semanticBasis": "The corrected inventory consistently supports Muhammad Waseem Iqbal, but does not declare Muhammad Iqbal an alias. Dropping a middle name across a broad disambiguation name is not sufficient; no additional page request was justified.",
+      "authorityStillNeeded": "An authoritative alternate-name statement or the publisher's explicit author-specific identity mapping."
+    },
+    {
+      "publicationId": "journals/tamd/YangZXLS23",
+      "position": 1,
+      "name": "Jiachen Yang",
+      "orcidSourceValue": "0000-0003-2558-552X",
+      "candidateDblpProfile": "homepages/217/0854",
+      "candidateName": "Jiabao Wen",
+      "status": "unresolved_name_conflict_and_single_support",
+      "newIdentity": null,
+      "semanticBasis": "The existing unique source ORCID binding points to a different name and only one supporting publication. Common collaborators cannot establish an identity; no additional page request was justified.",
+      "authorityStillNeeded": "A publisher author-specific ORCID correction or DBLP publication-to-person assignment."
+    }
+  ],
+  "requestBudget": {
+    "directHTTPRequests": 8,
+    "crossrefMetadataRequests": 2,
+    "externalCandidatesProbed": 1,
+    "pdfDownloads": 0,
+    "forbiddenPageRequestsAfterRobots": 0
+  },
+  "robotsOutcome": "Both DBLP official mirrors and the ORCID public API disallow all paths. No content endpoint was fetched from these hosts. Crossref API robots returned 404 and permitted bounded metadata retrieval; EPFL robots had no disallow rules, but the requested directory page returned 404.",
+  "rejectedCachedEvidence": "Search results were leads only. They are not preserved as fresh authority responses and were not used to approve identity links.",
+  "scope": {
+    "identityLinksChanged": 0,
+    "databaseWritten": false,
+    "graphMigrated": false,
+    "modelTestContentRead": false,
+    "independentRealWorldVerification": false
+  },
+  "limitations": "The new publisher evidence is real but does not remove the identity ambiguity. All four signatures remain unresolved."
+}

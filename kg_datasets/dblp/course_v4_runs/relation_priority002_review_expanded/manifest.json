@@ -1,0 +1,15 @@
+{
+  "documents": 25,
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\annotations\\course_v4\\relation_priority002_generation_decisions.json": "11e5fd8cb90f11e81ecbd14fb909b30c773383eb4a714bb05266866c2c955ccc",
+    "D:\\a-open_source\\neo4j\\annotations\\course_v4\\relation_priority002_review_judgments.json": "0ab9c7a144ee2782c42563715ed501ff82303c0ba6b519ffa48c19de444ad3de"
+  },
+  "expanderCodeSha256": "333fe8dfe6176d3d7148242e4b0e9d7b6febe2b036e3e07a84765693cd5fa1ba",
+  "modelCallExecutedByExpander": false,
+  "notice": "This step only expands recorded AI judgments; it neither runs a model nor invents confirmations.",
+  "filesSha256": {
+    "generation_decisions.json": "11e5fd8cb90f11e81ecbd14fb909b30c773383eb4a714bb05266866c2c955ccc",
+    "review_judgments.json": "0ab9c7a144ee2782c42563715ed501ff82303c0ba6b519ffa48c19de444ad3de",
+    "review_decisions.json": "55f2eba9f11a48530a46eb7b25d22e6388bba5d5be54cb982ad4e5e35a815e70"
+  }
+}

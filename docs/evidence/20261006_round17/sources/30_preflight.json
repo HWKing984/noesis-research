@@ -1,0 +1,8 @@
+{
+  "valid": true,
+  "referencePairs": 137,
+  "pipelineCandidatePairs": 148,
+  "truncationOrRejectedPairs": 0,
+  "referenceLabelsAreModelFeatures": false,
+  "cachedNERInferenceReused": true
+}

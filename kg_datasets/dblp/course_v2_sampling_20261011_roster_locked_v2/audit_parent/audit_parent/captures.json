@@ -1,0 +1,37 @@
+{
+  "renderer": "installed_Microsoft_Edge_headless",
+  "status": "completed",
+  "finishedAt": "2026-10-10T14:38:28.0928405Z",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-ee82e0a0df81418d9fcdebbfd8da59b0",
+  "originalConsoleScreenshot": false,
+  "kind": "actual_browser_render_capture",
+  "captures": [
+    {
+      "url": "file:///D:/a-open_source/neo4j/kg_datasets/dblp/course_v2_identity_guard_20261010/09_annotation_expansion.html",
+      "sourcePage": "09_annotation_expansion.html",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2300",
+        "--screenshot=D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v2_identity_guard_20261010\\09_annotation_expansion.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-ee82e0a0df81418d9fcdebbfd8da59b0",
+        "file:///D:/a-open_source/neo4j/kg_datasets/dblp/course_v2_identity_guard_20261010/09_annotation_expansion.html"
+      ],
+      "capturedAt": "2026-10-10T14:38:28.0745022Z",
+      "viewportHeight": 2300,
+      "sourcePageSha256": "9f537a94a11504a2db9865beca0a6a1b63fe95faac2268eb3a882db8a2fa5805",
+      "bytes": 107059,
+      "sha256": "62b611fe6e9df1c4c53bea6bc2078cdbe332cb859214182d90abf5190c7ceac7",
+      "originalConsoleScreenshot": false,
+      "image": "09_annotation_expansion.png"
+    }
+  ],
+  "generatedFromRealArtifacts": true,
+  "browserVersion": "154.0.4258.62",
+  "viewportWidth": 1280
+}

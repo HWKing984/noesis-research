@@ -1,0 +1,872 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "generationResponsesSha256": "a7b5187cb5ce04245978467609da440b839d2b3b9ec4dd4e0caa422eabed11ba",
+  "judgments": [
+    {
+      "sampleId": "sample-96d9d32280b4835a70ca",
+      "verdict": "confirmed",
+      "reason": "Both named instruments have the same explicit to-classify target.",
+      "reviewOfSha256": "9d71bef1bebec70d038f11e7b844eb2123f1d309ca773b8ecf8884c5a12de2d2"
+    },
+    {
+      "sampleId": "sample-c45ca98ab4a25adc72fd",
+      "verdict": "confirmed",
+      "reason": "For links FL to the full prediction task.",
+      "reviewOfSha256": "9029514fb064892f6be613c634a1bbc3ba89b2538c7d319a079094fde6eff601"
+    },
+    {
+      "sampleId": "sample-363ba6bd744fcec78931",
+      "verdict": "confirmed",
+      "reason": "The METHOD is the beneficiary after For; it is not stated to perform retrieval.",
+      "reviewOfSha256": "af16523e214c8271cea9e0a5f4e98c63d429846032d1d7f5796af88c82561bb9"
+    },
+    {
+      "sampleId": "sample-13b087ed4a6fc2c7971a",
+      "verdict": "confirmed",
+      "reason": "Named system and expanded agents share the summarization target.",
+      "reviewOfSha256": "f09e809992dee241f69ce927520475b912cb545b7d01d9f445da67abe42a3a1c"
+    },
+    {
+      "sampleId": "sample-a2ca7258954b3e13ffbd",
+      "verdict": "confirmed",
+      "reason": "Both literal model mentions refer to the stated link predictor.",
+      "reviewOfSha256": "1b0d743530518758237ec210168866a92476a83242eb1f18497e2166df137b98"
+    },
+    {
+      "sampleId": "sample-badd85ac943d57ac8704",
+      "verdict": "confirmed",
+      "reason": "Meets alone is insufficient for a directed use claim or definite negative.",
+      "reviewOfSha256": "9ee4cac743e7eec50b3efb97707cb39ad7b80ccd4b2039e7a83568ac91b9babb"
+    },
+    {
+      "sampleId": "sample-818a7df6c45b7e2865d9",
+      "verdict": "confirmed",
+      "reason": "Power transformers are equipment in TASK, not a competing neural method.",
+      "reviewOfSha256": "8c3f4654bcc6e876328b668907a7b3c5fbf03dc84f0ef4ed23226948c1032007"
+    },
+    {
+      "sampleId": "sample-f5e99b0ece9468e05b42",
+      "verdict": "confirmed",
+      "reason": "METHOD-to-METHOD control composition is outside this schema.",
+      "reviewOfSha256": "2f96fd79d2d5a1f2d7fd96c8625ed5a1aa79526d62b5e55da8cfabf38526cc8d"
+    },
+    {
+      "sampleId": "sample-c2787266eba1c10133a1",
+      "verdict": "confirmed",
+      "reason": "No scoped tail, hence no relation instance or negative.",
+      "reviewOfSha256": "6e5aa25bd93a0ad4a7eef8103aa547e05d7fb4e600658c531bd34bf3757be7f7"
+    },
+    {
+      "sampleId": "sample-1478b6ca30de337b4b21",
+      "verdict": "confirmed",
+      "reason": "Educational datasets are unnamed, not an additional evaluation tail.",
+      "reviewOfSha256": "9b64ff0f206180a943a3fa3f381a2a2d2365643718733d130d4e485d4949a63c"
+    },
+    {
+      "sampleId": "sample-c70f43e0a3143ef460c6",
+      "verdict": "confirmed",
+      "reason": "RL-Based explicitly links instrument and trajectory target.",
+      "reviewOfSha256": "c5071161ab2aaa7ba75f5ab65928647be59ee9bda164dc1507ca9819e107ceda"
+    },
+    {
+      "sampleId": "sample-6cd8b64f22c318771f19",
+      "verdict": "confirmed",
+      "reason": "For names the complete detection target.",
+      "reviewOfSha256": "45736a5301577b0b0365a4418b97f0decb395057e0f682bdf66de92fc1359a3e"
+    },
+    {
+      "sampleId": "sample-28beec40f30a5221ee50",
+      "verdict": "confirmed",
+      "reason": "Fine-tuning describes the adapted segmenter, not a protected network.",
+      "reviewOfSha256": "e829d0fbdb4227629b3714308e7ecb8dc4d8c90fe20fc6840776ff0165b81094"
+    },
+    {
+      "sampleId": "sample-0e0d837b8e406a9e8a78",
+      "verdict": "confirmed",
+      "reason": "Named model and architecture share the restoration task.",
+      "reviewOfSha256": "e975368f74d5fe7bd27dee51b0ecdbf00d88a80b10b981f2762b27f007ab0a37"
+    },
+    {
+      "sampleId": "sample-cbcf3b91f7b510e71c5d",
+      "verdict": "confirmed",
+      "reason": "With denotes the stated control instrument.",
+      "reviewOfSha256": "92eb212469d5c208fc5f4c9055a46795da75a2bee4d1c000e24f9decb1034516"
+    },
+    {
+      "sampleId": "sample-731b94d69d11ca22b86e",
+      "verdict": "confirmed",
+      "reason": "No downstream task or benchmark is explicitly named.",
+      "reviewOfSha256": "3568b547cbeb198226000fbd058d3cfd8d69243770af292787d228d4155d0aec"
+    },
+    {
+      "sampleId": "sample-64a8b6b4f8d4598fb221",
+      "verdict": "confirmed",
+      "reason": "For supplies a direct mechanism-to-task link.",
+      "reviewOfSha256": "b1b205ae08cef3ce008a7493ea2c55cea1edd1a9cb37eecbcc75442c812ebf15"
+    },
+    {
+      "sampleId": "sample-039c250adb640b18c4bf",
+      "verdict": "confirmed",
+      "reason": "Keep ordinal classification pairs unresolved instead of spreading the segmentation claim.",
+      "reviewOfSha256": "84958b9a0ed661bbfa1a199526e2bfdd4cccd3b85664d36775d1921cf052fed0"
+    },
+    {
+      "sampleId": "sample-cd39b93304a9ee13f23b",
+      "verdict": "confirmed",
+      "reason": "An image segmentation series is input, not a named method or benchmark.",
+      "reviewOfSha256": "9ca6aaa0690c6c662a481049566edce88453851a59d0c45983e7c66ae1f4d40d"
+    },
+    {
+      "sampleId": "sample-8f764ac90b2ef9945053",
+      "verdict": "confirmed",
+      "reason": "Continual training is not an additional named METHOD in the frozen inventory.",
+      "reviewOfSha256": "8fafdf86c6dff91b8402a7bc05bdc9c7cb303a5ea1317e2c63aeb5a1dfa09591"
+    },
+    {
+      "sampleId": "sample-e1f805d7438f7078dd6e",
+      "verdict": "confirmed",
+      "reason": "With explicitly connects network and generation.",
+      "reviewOfSha256": "5095549c75f2581ee01df2452b802b67feda49a7918b976183af1cfbca8449e1"
+    },
+    {
+      "sampleId": "sample-e8505360a42be7cd1ed4",
+      "verdict": "confirmed",
+      "reason": "Both system name and instrument are linked to the same generation task.",
+      "reviewOfSha256": "1e1e659b2112d6f615fffc83ceb25b72d87a530a14e2842cb40ecf5b9e11f9da"
+    },
+    {
+      "sampleId": "sample-07d61b132d4b7ffd1a62",
+      "verdict": "confirmed",
+      "reason": "No METHOD-to-TASK/DATASET pair; do not reinterpret FL as a task.",
+      "reviewOfSha256": "a603fa52bc610c76b8f2a975b8c7cd0e213e9c8204a8f8a4f0aab1d93c49e857"
+    },
+    {
+      "sampleId": "sample-3beaeca2f9cc8596dd69",
+      "verdict": "confirmed",
+      "reason": "Based supplies direct prediction mechanism evidence.",
+      "reviewOfSha256": "c5b90a52799b1b0ef9e50e811a51b861d5977ac9436e797641dedc08c779c93b"
+    },
+    {
+      "sampleId": "sample-c5bdad4515a06719f10b",
+      "verdict": "confirmed",
+      "reason": "With links the full optimization instrument to query processing.",
+      "reviewOfSha256": "623cd48eebbc8afa29c444e4d3c3290bfdf8c373ae858f201eb6253b046bd714"
+    },
+    {
+      "sampleId": "sample-f5588a970df07e71b61f",
+      "verdict": "confirmed",
+      "reason": "Diversity is a factor, not a separate target or dataset.",
+      "reviewOfSha256": "6872913a2d3b7177d7afef1ce2dcc3529d9d606fb5bfa0f8e89c6cc5f0637e95"
+    },
+    {
+      "sampleId": "sample-d60d261d248e66a999e6",
+      "verdict": "confirmed",
+      "reason": "Using is explicit instrument evidence.",
+      "reviewOfSha256": "44af0bce58a2413e51c20bfeb8ef14120919d53d7b30afd849334298aa804de8"
+    },
+    {
+      "sampleId": "sample-7675da2bc444cff1f985",
+      "verdict": "confirmed",
+      "reason": "Satellite images are modality input, not a named evaluation dataset.",
+      "reviewOfSha256": "e23d26f1c27393e9211ccd1e538b898b6819e31903f8b35ea3a11297cfbef002"
+    },
+    {
+      "sampleId": "sample-610222ae1ef9e25af36b",
+      "verdict": "confirmed",
+      "reason": "Task name and literal operational explanation both receive the stated agents.",
+      "reviewOfSha256": "ed05ada0d22d593f4df4b34ed4ee6586cba33db3b15ef90ab614c37075d1c2fa"
+    },
+    {
+      "sampleId": "sample-b0b512bbab093378bc27",
+      "verdict": "confirmed",
+      "reason": "Robustness adjectives do not change the explicit recognition use.",
+      "reviewOfSha256": "f18af480e6e3467cdc27d78b65abde8859a2ffc9f517ed0072dc6a54ac53d9e0"
+    },
+    {
+      "sampleId": "sample-fd932c02cf5c833d4b04",
+      "verdict": "confirmed",
+      "reason": "Both explicit combined instruments serve the detection task.",
+      "reviewOfSha256": "c5a116e400bcb1ae02080a29395ce06d6324178f6564f96e2a6260779ba961ac"
+    },
+    {
+      "sampleId": "sample-d98fe49bfefbc23ee1d1",
+      "verdict": "confirmed",
+      "reason": "Linked data is not a named benchmark or computational task here.",
+      "reviewOfSha256": "bd02781aded54976ddac5e6e3e256657dc4dd2edd20f22cac2daf52180e8ee4e"
+    },
+    {
+      "sampleId": "sample-d640ec6d0ca818b9f19b",
+      "verdict": "confirmed",
+      "reason": "Do not project the named composite use onto all constituent mentions.",
+      "reviewOfSha256": "c0089307fcf7a8e1171e02e223c9172fb69a05df7537fb71d02500e92477dcf5"
+    },
+    {
+      "sampleId": "sample-2726dccffdf8812028d6",
+      "verdict": "confirmed",
+      "reason": "Experiments with the model identifies game-playing use, not a dataset relation.",
+      "reviewOfSha256": "f0dcb9ab5bad1c3481dbd282d7c3590ce1b907bdb742509dcbd6abf57c752a45"
+    },
+    {
+      "sampleId": "sample-a0acc55ea21e1ee35907",
+      "verdict": "confirmed",
+      "reason": "For is direct target evidence despite unsupervised setting.",
+      "reviewOfSha256": "1f0752359d93c634668cb895287c3700aaf081294e1e1abc3adedde385def695"
+    },
+    {
+      "sampleId": "sample-64ab2ff2f27f738ef704",
+      "verdict": "confirmed",
+      "reason": "Colon expansion explicitly states model output operation.",
+      "reviewOfSha256": "91339b221e88707c496052a2d2c05a3ef6e572a37d5c537ecd31c1f9d5c1d33a"
+    },
+    {
+      "sampleId": "sample-5ae907f083b47215e2f4",
+      "verdict": "confirmed",
+      "reason": "Long sequences are unnamed input, not a benchmark.",
+      "reviewOfSha256": "d5f9836eb1d85022b14525b29953b348031d2dff1baa53c3e92b1d3b184e5309"
+    },
+    {
+      "sampleId": "sample-0f6c103ace827bbba98b",
+      "verdict": "confirmed",
+      "reason": "Using explicitly names the instrument, unlike a bare protected object.",
+      "reviewOfSha256": "4e5c4145abc2bae14b2834a9b514b6ce90897ba3aa981db9243eb12f4ac4555e"
+    },
+    {
+      "sampleId": "sample-fd62d19e37e62e5a6d04",
+      "verdict": "confirmed",
+      "reason": "No nested enhancement TASK is invented from the frozen composite.",
+      "reviewOfSha256": "da346588c0cac96bd28634e63d9d251ffdb4e683e53d0bbc6d9bc8dfb87eea7b"
+    },
+    {
+      "sampleId": "sample-e68a32d0321121aa3d4d",
+      "verdict": "confirmed",
+      "reason": "On the named diagnostic dataset is explicit experimental application evidence.",
+      "reviewOfSha256": "ddd49ba5ad464a3cb8b80cf0acca348eb29c2106dafcfc416ac4f8d343de2089"
+    },
+    {
+      "sampleId": "sample-01f2c580d80f42c5a215",
+      "verdict": "confirmed",
+      "reason": "Method-to-method performance improvement is out of scope.",
+      "reviewOfSha256": "9589b5e579b25b7038cddfe47275a7beb6b111d3fe9e23ca8644ae44d2af3912"
+    },
+    {
+      "sampleId": "sample-23da2651e5ca12116440",
+      "verdict": "confirmed",
+      "reason": "With explicitly connects the instrument and estimation.",
+      "reviewOfSha256": "2e6b4f0ef07c4f356b829927503e45b36a264a60354565900298ed9b602abc2a"
+    },
+    {
+      "sampleId": "sample-5c3671eb051d9c5c613e",
+      "verdict": "confirmed",
+      "reason": "Floor field cutout is an unnamed input representation.",
+      "reviewOfSha256": "23209d3f19e79c0c9289e74153bf30c7570db54425ae89a4183e51745308ea6e"
+    },
+    {
+      "sampleId": "sample-6a0baf0ba6d3e4d20431",
+      "verdict": "confirmed",
+      "reason": "For links the entire hardware-qualified mechanism.",
+      "reviewOfSha256": "616d2ccc72ff5a356269cf935eacec7c2530c148d54642b274071b7f01e59a59"
+    },
+    {
+      "sampleId": "sample-4abf5fba133090f9c08b",
+      "verdict": "confirmed",
+      "reason": "By attractor reconstruction in networks separates the operation from the observed system; preserve fixed TASK types.",
+      "reviewOfSha256": "385fdc006838bf76e819c9f84aaa15c2968869fd3e89cd660082dcab75455c00"
+    },
+    {
+      "sampleId": "sample-9ff7bca170e7429b6043",
+      "verdict": "confirmed",
+      "reason": "Using LDA is the stated instrument for the named enrichment approach.",
+      "reviewOfSha256": "7bf6e4b2af7e3b362f4e40199a2eb0b2c24c22dd2df84229bc97a182ca5fe17f"
+    },
+    {
+      "sampleId": "sample-c723db82b10aef27067a",
+      "verdict": "confirmed",
+      "reason": "Both training task and downstream task are explicit; this is use, not DATASET evaluation.",
+      "reviewOfSha256": "7c17bb122eb259fe157ffebc47de2673863e3f98c1a4cb0b7f6e97e6ef462dff"
+    },
+    {
+      "sampleId": "sample-22b72c91c8483164a660",
+      "verdict": "confirmed",
+      "reason": "Hyperparameter evaluation is about task use, not an EVALUATED_ON dataset.",
+      "reviewOfSha256": "1321e3308231476e92e77ea1de5cbca8d588e73e79cee61bfdde0ae2b74bb8ce"
+    },
+    {
+      "sampleId": "sample-6d1745ac1f199115f284",
+      "verdict": "confirmed",
+      "reason": "For explicitly names the electrical distribution task.",
+      "reviewOfSha256": "04d28671ecdfd1cf9afe39a349ce75ec67f800e0bb4f63deb93c4b328d86d7e0"
+    },
+    {
+      "sampleId": "sample-1f1ba668429695693f50",
+      "verdict": "confirmed",
+      "reason": "No new application task inferred from vehicular context.",
+      "reviewOfSha256": "d2152eb85cd79fb4e69654c2e1384c4b1dc10d703d1527ecb0bafef2d25d90e7"
+    },
+    {
+      "sampleId": "sample-1d11bbfc20a1f0bef1cb",
+      "verdict": "confirmed",
+      "reason": "For provides the translation use link.",
+      "reviewOfSha256": "e7b3d407f35f410aff251b806ca3b997752d87c39eb63a7325c9c7dbe6070186"
+    },
+    {
+      "sampleId": "sample-823ed164d16f26cc3b40",
+      "verdict": "confirmed",
+      "reason": "No downstream task or named benchmark; method composition excluded.",
+      "reviewOfSha256": "8ce6f10bbc413ba2da95abd58724c26c9da87cd0a9508c9a9242ab0003573a39"
+    },
+    {
+      "sampleId": "sample-cee02e459871645b3382",
+      "verdict": "confirmed",
+      "reason": "With names the method for the streaming approach.",
+      "reviewOfSha256": "62d0a3d62065a802dbba6ca35fbf5d4282d9eda284ba6ef718f062f10c6dfa05"
+    },
+    {
+      "sampleId": "sample-8ec3d159cee0a79a5ad8",
+      "verdict": "confirmed",
+      "reason": "EHR is generic material, not an additional named dataset.",
+      "reviewOfSha256": "ab77338d2f75199e46854ef5e71bea1099dd1d4a7039a31a15e0f2b324d5c1b9"
+    },
+    {
+      "sampleId": "sample-a4e920d481f4aa2af8d0",
+      "verdict": "confirmed",
+      "reason": "No scoped relation tail.",
+      "reviewOfSha256": "947ebfdd97b2cb816f52624cd77e87c29b5bccbf57d3cf332c32a38655a90b32"
+    },
+    {
+      "sampleId": "sample-200a8e63a50d4b3a94b6",
+      "verdict": "confirmed",
+      "reason": "Named approach and expansion share the explicit forecasting target.",
+      "reviewOfSha256": "b1bca4e362afc319004876b2c97d2f8fb66178754633cc575eb2121f5670dfcb"
+    },
+    {
+      "sampleId": "sample-ce6b7879497cad19cee8",
+      "verdict": "confirmed",
+      "reason": "For explicitly states the use.",
+      "reviewOfSha256": "a19128f8e21b185272d00dcdbcc173fcf71f6f0efb463f30e7b357521a373324"
+    },
+    {
+      "sampleId": "sample-a887cda22794da0591d0",
+      "verdict": "confirmed",
+      "reason": "Cell-free massive MIMO is deployment context, no scoped tail.",
+      "reviewOfSha256": "c85a5f18b947dd79f7e84b0f4132825396a70cbb4dda01210bd4a2bbec21e8a0"
+    },
+    {
+      "sampleId": "sample-5680bca5a891044c8c4d",
+      "verdict": "confirmed",
+      "reason": "An approach to the selection task is explicit instrument evidence.",
+      "reviewOfSha256": "69c7e49aff5cc4360d7391d34fa63bcc784df9b071c46a05f2cc9d7bc9fa1868"
+    },
+    {
+      "sampleId": "sample-12414d00ad300689cd5e",
+      "verdict": "confirmed",
+      "reason": "Which learns explains the mechanism for the stated classification.",
+      "reviewOfSha256": "fea7d482f6208733be0c7221f84a27485d162fff20b2acfeaba9e840fd591118"
+    },
+    {
+      "sampleId": "sample-89a4112dcdc11e8e1348",
+      "verdict": "confirmed",
+      "reason": "No identifiable method is supplied in the title.",
+      "reviewOfSha256": "669cfc4988a24373fb6c92e9557501d5685d5025af25a4c22cf8807e09218eec"
+    },
+    {
+      "sampleId": "sample-8dc58aa664d36abed474",
+      "verdict": "confirmed",
+      "reason": "Using is explicit instrument evidence.",
+      "reviewOfSha256": "d3a68426c0b1c28a752f3558a60c80c9524ce318efd6391fcb99a3fb1146059c"
+    },
+    {
+      "sampleId": "sample-429592ae7f0fab07b39d",
+      "verdict": "confirmed",
+      "reason": "For Detecting is the task use; unnamed tweets are not DATASET.",
+      "reviewOfSha256": "ddfb00d4f25c77728dd2308e21f6f14ec3430c28729608e339e89ba6a243faab"
+    },
+    {
+      "sampleId": "sample-eebd26822e65a609beec",
+      "verdict": "confirmed",
+      "reason": "For directly names the synthesis target.",
+      "reviewOfSha256": "fd03cf7f7abee5b90c60b156a8fae989b518482f8ab8d644edf2194d657ca7ab"
+    },
+    {
+      "sampleId": "sample-fa12adc0f0ade8fc2782",
+      "verdict": "confirmed",
+      "reason": "Based On directly binds mechanism and classifier task.",
+      "reviewOfSha256": "cfd04aa48eedf3f24286c3717f56aeb4023fb0631f43c975ca6b45b2a827ee95"
+    },
+    {
+      "sampleId": "sample-db50cd0f77b36d6c5987",
+      "verdict": "confirmed",
+      "reason": "Task performance evaluation remains USED_FOR, not dataset evaluation.",
+      "reviewOfSha256": "eb2dbc9f09cee6f05fbe5284cc04568cd05bba8e3d9e936b9912becac23ee3de"
+    },
+    {
+      "sampleId": "sample-62a2abae48102031dcc4",
+      "verdict": "confirmed",
+      "reason": "For names the segmentation use; zero-shot is a regime.",
+      "reviewOfSha256": "894c422d553e2b509172ce1b23fa660fe793691f88a2abfe960d7fc3aba9ee9f"
+    },
+    {
+      "sampleId": "sample-8f8f69720ecb72d4fa4b",
+      "verdict": "confirmed",
+      "reason": "Name and architecture are explicitly for the grading task.",
+      "reviewOfSha256": "e2f47aa2fd546923103d9352a01d0adf550f4f5048678e7d32894e67b0feaad1"
+    },
+    {
+      "sampleId": "sample-1c8fbe26fc6b6b1b1ba9",
+      "verdict": "confirmed",
+      "reason": "Review context limits scientific claims but title still states the method use.",
+      "reviewOfSha256": "62018f3a0bfd16c92b1daf8ad25ec4c139817c1ad0e87559720ddb4fbf74a0ee"
+    },
+    {
+      "sampleId": "sample-6fa7f684fd611c94cb05",
+      "verdict": "confirmed",
+      "reason": "For classifying supplies the full target and input context.",
+      "reviewOfSha256": "3d2c908718cb016d55e518dcf80114907f2555b0d9c51096644da95810836e04"
+    },
+    {
+      "sampleId": "sample-d486a12a167f1029ad79",
+      "verdict": "confirmed",
+      "reason": "For links the full transformer module to identification.",
+      "reviewOfSha256": "343429f4475359563e67dd31b44498d87395fc49442a0c1d9c016a9ffae87d0d"
+    },
+    {
+      "sampleId": "sample-2af92bc9e0052a31398d",
+      "verdict": "confirmed",
+      "reason": "Based on supplies explicit mechanism evidence.",
+      "reviewOfSha256": "65d222fdb858f4078c06d6379a625e1c2de7e874a9b7df360e504032c6ca9b20"
+    },
+    {
+      "sampleId": "sample-46e15459d66c7f94deb3",
+      "verdict": "confirmed",
+      "reason": "Comparative network families are not a scoped TASK tail.",
+      "reviewOfSha256": "0a06924491b9652551f896bde56745dbb7e6af5a1804488b9f314e1a6bca9d3c"
+    },
+    {
+      "sampleId": "sample-da4ebc329efd8f66ccd2",
+      "verdict": "confirmed",
+      "reason": "For supplies a directed application link.",
+      "reviewOfSha256": "816d1d27972408c4ce36f98ccf3cb17de14a8a6a3055e21198e144c7c4f983de"
+    },
+    {
+      "sampleId": "sample-8ab48662b4974d868b10",
+      "verdict": "confirmed",
+      "reason": "For explicitly links the architecture and operation.",
+      "reviewOfSha256": "3a58dedd6c0f16d688887eb74d0be39a0d304da3c86de69040c7f16f4ddbf30d"
+    },
+    {
+      "sampleId": "sample-d748fcebf25da649a582",
+      "verdict": "confirmed",
+      "reason": "Training is not a separately frozen TASK span.",
+      "reviewOfSha256": "dcc6a3f24c4ce72c439110801d0aaf042405abf9e50918743e290440aa802159"
+    },
+    {
+      "sampleId": "sample-543ab6d0c4ebeaf9189c",
+      "verdict": "confirmed",
+      "reason": "No scoped tail.",
+      "reviewOfSha256": "498b88265082c9b034afc9d74d4fbcebf55f033797be547ab00e85e773dfefc1"
+    },
+    {
+      "sampleId": "sample-da6e7439abdb1318ce5b",
+      "verdict": "confirmed",
+      "reason": "By policy iteration supplies the second stated control instrument.",
+      "reviewOfSha256": "e129a54e206b7b02f7cab21da3b1fc8a4068e4a6519b49ec105605093e01623e"
+    },
+    {
+      "sampleId": "sample-5e1263c1f2126b54735a",
+      "verdict": "confirmed",
+      "reason": "Via explicitly names the mechanism.",
+      "reviewOfSha256": "c9907eace4d26c7903e25be8104126f033336bcb0eee4aced8bb2e7f5a68593e"
+    },
+    {
+      "sampleId": "sample-63febb59344118109d52",
+      "verdict": "confirmed",
+      "reason": "For names the mapping operation, satellite images remain unnamed input.",
+      "reviewOfSha256": "58a26fb7ad2839437f97e967c086603bdc985beea785d860bc29f83485d0a4de"
+    },
+    {
+      "sampleId": "sample-e583e12a0aadd041f6ff",
+      "verdict": "confirmed",
+      "reason": "Representational clusters are observations, not a scoped task.",
+      "reviewOfSha256": "cc1cb6e636d0162989bb73ada5904d3f5a915aa51fbcc70237998d061b9c080d"
+    },
+    {
+      "sampleId": "sample-aa16984062bbacb0ff01",
+      "verdict": "confirmed",
+      "reason": "For explicitly names the operation.",
+      "reviewOfSha256": "70c6514112272deb13f00896fbf9735a86a9ed71eb6d850ae74dadbc91b7c440"
+    },
+    {
+      "sampleId": "sample-b16c229f9311e5eafd97",
+      "verdict": "confirmed",
+      "reason": "Ensembles are not an additional TASK span.",
+      "reviewOfSha256": "f5f36875ee8410e06373442740185214d210c6d572262030ccc83fa93d9f3c65"
+    },
+    {
+      "sampleId": "sample-e0e6c25c22303a028273",
+      "verdict": "confirmed",
+      "reason": "For is direct question-answering instrument evidence.",
+      "reviewOfSha256": "c32e8183f22ca26ed00c00da6c3fbca27f8d2cbb62cd3dc217a36f038afd1f27"
+    },
+    {
+      "sampleId": "sample-9c5e27fc5978f968330c",
+      "verdict": "confirmed",
+      "reason": "With connects both stated operations to the same identifiable mechanism.",
+      "reviewOfSha256": "6b91e6d63e2b055a1f2327a79a8c56c2d3f92a5069109a6a125b8a90d0960afe"
+    },
+    {
+      "sampleId": "sample-013d49d0ccb56840f5c9",
+      "verdict": "confirmed",
+      "reason": "Based is explicit method-to-task evidence.",
+      "reviewOfSha256": "284d8c90296fc7c42a8c48a0dc1b2532b91d1a00399a09949988018f70420c52"
+    },
+    {
+      "sampleId": "sample-df9673199a48149e1c51",
+      "verdict": "confirmed",
+      "reason": "An application to a network is method-to-method and outside schema.",
+      "reviewOfSha256": "fbafe62b85c00e487c180039995ae4e62f51866d686ff395ed120e8540fcfaa5"
+    },
+    {
+      "sampleId": "sample-8dfeab21ee542af33ffc",
+      "verdict": "confirmed",
+      "reason": "Using explicitly connects architecture and SAR flood detection.",
+      "reviewOfSha256": "feecd0b498e9d175fe2eae13b7d7055ca14b756d97f34813acfda6222ec9ba84"
+    },
+    {
+      "sampleId": "sample-856f75701d79f4757f0a",
+      "verdict": "confirmed",
+      "reason": "The named transformation is for understanding, not a protection task.",
+      "reviewOfSha256": "4f6b7138f03e3ccf5846196880840e0041ffba7fe79589fe00df54e269e163e6"
+    },
+    {
+      "sampleId": "sample-95e383c32bf95542601d",
+      "verdict": "confirmed",
+      "reason": "No scoped tail; do not turn LLM beneficiary into a TASK.",
+      "reviewOfSha256": "77dce4cba9ac01173285aeaf9a7ca58a1932494d4b26dea98363be9e6e3c8d15"
+    },
+    {
+      "sampleId": "sample-f06037fc8c94809097f3",
+      "verdict": "confirmed",
+      "reason": "Through dialogue simulation for LLMs describes a reasoning procedure for the stated task.",
+      "reviewOfSha256": "2323ef6a8ff94f2f3ef6393d899cb2bf3c619385628618c432e956b67d44ce66"
+    },
+    {
+      "sampleId": "sample-950fd539c8b7e9a3cf60",
+      "verdict": "confirmed",
+      "reason": "No scoped tail.",
+      "reviewOfSha256": "d4264cbb10005bad3888ffb90ba6a86e14ed61d006beaf04f3be566e9df5f941"
+    },
+    {
+      "sampleId": "sample-c5372f9fd06ff2032da6",
+      "verdict": "confirmed",
+      "reason": "Road networks are objects, not a named dataset or TASK span.",
+      "reviewOfSha256": "c214b3d0b9fae7bb722040558965bd8c7e5599df0db1ae2e4d5fe57d66726154"
+    },
+    {
+      "sampleId": "sample-f543c09009561180f8d5",
+      "verdict": "confirmed",
+      "reason": "Overcoming bias is generic study description, no named method.",
+      "reviewOfSha256": "41da27476c456ac7844c3dc0cb16cab3368ae40b66d93ff0347d27314977762a"
+    },
+    {
+      "sampleId": "sample-a7eea9a82f65848e4402",
+      "verdict": "confirmed",
+      "reason": "For directly names the question-answering use.",
+      "reviewOfSha256": "d4923bb97b8dc1af77a199652e1a9f2e5fca14f7e4de1348c47409cf38efde7b"
+    },
+    {
+      "sampleId": "sample-d8c7e0ee6187b23f1bfe",
+      "verdict": "confirmed",
+      "reason": "Model name and expanded architecture have the same target.",
+      "reviewOfSha256": "bf8a9af1bd161ab96a11c0db64c77456062589962b39a58aaa9772a1e14d17a1"
+    },
+    {
+      "sampleId": "sample-f3eb3edb382c6d979ae5",
+      "verdict": "confirmed",
+      "reason": "Do not force event name into a benchmark.",
+      "reviewOfSha256": "d990ceec63c9205cae9aa6defb096c41ce2f0a900c43623621031ad4d5614db5"
+    },
+    {
+      "sampleId": "sample-e33526751a3b742f37cb",
+      "verdict": "confirmed",
+      "reason": "Dataset-for-method is not proof of EVALUATED_ON; preserve rare-class uncertainty.",
+      "reviewOfSha256": "d774dd75d094cbd52b1054afe9603cc0956f5908bed46f2e1e506c3f6c302584"
+    },
+    {
+      "sampleId": "sample-484a4aef857e7a6acb9a",
+      "verdict": "confirmed",
+      "reason": "Using and with directly bind both instruments to attractor learning.",
+      "reviewOfSha256": "ff7a4f6766b65e6cf69202c71d599f0e1be16a77ac98fe0074e3a15fb4a0e24a"
+    },
+    {
+      "sampleId": "sample-264af90c8ec980992310",
+      "verdict": "confirmed",
+      "reason": "Using dielectric properties and sensing names the input/instrument route.",
+      "reviewOfSha256": "f26a761a0bf7251f967647f6720fa2b56cc1185e46d710cdb4c0fbe768e6f376"
+    },
+    {
+      "sampleId": "sample-7ea20abe1dd15cafbe77",
+      "verdict": "confirmed",
+      "reason": "Using explicitly binds model and organization-specific code task.",
+      "reviewOfSha256": "26508bfa7aff257b176ca3f597ebc0da13b3402bf959dde751cb7f97e44cd8ab"
+    },
+    {
+      "sampleId": "sample-f8dab84857239c1f9b9f",
+      "verdict": "confirmed",
+      "reason": "Summaries and abstracts are input material, not named benchmarks.",
+      "reviewOfSha256": "b98686bb9173b7256eed3eb574ed98f055740ba40b2e8a96597dfcd7f989544f"
+    },
+    {
+      "sampleId": "sample-554c99563d1f8055cea0",
+      "verdict": "confirmed",
+      "reason": "Transparent coordination describes the same negotiation mechanism context.",
+      "reviewOfSha256": "3501ca1d22352dcf3eb688dabce4428e9692bc777405ba87f18d4565895d0e1e"
+    },
+    {
+      "sampleId": "sample-f19198925817d7136338",
+      "verdict": "confirmed",
+      "reason": "Both model mentions are explicitly for the full pose target.",
+      "reviewOfSha256": "0af577df2aeb7bb1bfaf9b533852f139a212cd5b3f3ef760ae5349cda62a2a14"
+    },
+    {
+      "sampleId": "sample-58756615eb806e27716d",
+      "verdict": "confirmed",
+      "reason": "Recognizer is a beneficiary of Using retrieval; reverse usage is negative, other component roles unresolved.",
+      "reviewOfSha256": "066378e4bba32340140b33a79c1142d55d291c67b23df5e39489d19f1145817a"
+    },
+    {
+      "sampleId": "sample-08cedd002181c527dda6",
+      "verdict": "confirmed",
+      "reason": "For directly names reasoning target for both mentions.",
+      "reviewOfSha256": "fd63622a94ad972a331d417a1ca6122d3dcda2097bf2cf6ff4f1eb46a35179ad"
+    },
+    {
+      "sampleId": "sample-fe9d57bbc75ef7178a5f",
+      "verdict": "confirmed",
+      "reason": "For states the application of both named and expanded model.",
+      "reviewOfSha256": "8a2e2d04b362d29c86c0137532fd1b4a05faa4fc5826ed9b6725565e43ee569e"
+    },
+    {
+      "sampleId": "sample-c56cd363f80aaede5d02",
+      "verdict": "confirmed",
+      "reason": "Using explicitly supplies the instrument.",
+      "reviewOfSha256": "c932f7fde014b4ea14735b1dbd43eb392fe7385c8da2b3766733a99655506b54"
+    },
+    {
+      "sampleId": "sample-7d893f9c1903ab292875",
+      "verdict": "confirmed",
+      "reason": "With provides direct analysis instrument evidence.",
+      "reviewOfSha256": "a2e97211aec6180b69dd7b98fd9ce0ff9d22ad58ed03a26a22618bf2282b456f"
+    },
+    {
+      "sampleId": "sample-9dc390291a7e19c6a464",
+      "verdict": "confirmed",
+      "reason": "Contextual knowledge is not a frozen identifiable METHOD.",
+      "reviewOfSha256": "ccb0a37e9c84c4080749818c1e42cabc3829538e0a9c2171a6d26ec5c97957b9"
+    },
+    {
+      "sampleId": "sample-99f9273e503f8f69aa44",
+      "verdict": "confirmed",
+      "reason": "And separates calorie-measurement technique from the ML algorithm; no reverse use inferred.",
+      "reviewOfSha256": "0b51e419a309d403cb989b5abf5aaf0967b15ad960afc61c459cad5e9d83c3f7"
+    },
+    {
+      "sampleId": "sample-0835c3106b2ddc0ab234",
+      "verdict": "confirmed",
+      "reason": "No nested method or TASK fabricated.",
+      "reviewOfSha256": "aa3d087b4eae8d03ce4ecf9f3f31bf7a6e2033fc8f3e0a45a63bc4cb51228e04"
+    },
+    {
+      "sampleId": "sample-71a1255a80ddfdb8ed5a",
+      "verdict": "confirmed",
+      "reason": "Using states the instrument even in a survey title.",
+      "reviewOfSha256": "cb4325144417bea2fb07a418cabe0064e415335a92874e7407a2dd488712367c"
+    },
+    {
+      "sampleId": "sample-c7a590064d025e161978",
+      "verdict": "confirmed",
+      "reason": "Name and expansion explicitly share recognition target.",
+      "reviewOfSha256": "7c0a59c1ec66efbfb2bf21f27f305d61d763ee85022aeeef26dcbbe42bf6d23d"
+    },
+    {
+      "sampleId": "sample-c09d6196d5b489c1510d",
+      "verdict": "confirmed",
+      "reason": "For states the application.",
+      "reviewOfSha256": "6ae4ef6fabb14f3918829257291229e0ef29c6be43bc9f3a9b42c46531d7047a"
+    },
+    {
+      "sampleId": "sample-b9a96d9cd3adc6f2a41f",
+      "verdict": "confirmed",
+      "reason": "Based on both named methods directly supplies instrument evidence.",
+      "reviewOfSha256": "0eba0318d70e9dd22ff9ce3d90c7e164de85a3887e3c4a5e73c9a3cfe98e38fa"
+    },
+    {
+      "sampleId": "sample-43cca1f306123b4bf1ed",
+      "verdict": "confirmed",
+      "reason": "For states the full constrained-robot target.",
+      "reviewOfSha256": "884b2f406df0876455979c56212c11236eba6b534c88305052f5899922e2bf40"
+    },
+    {
+      "sampleId": "sample-2868970291121eea3714",
+      "verdict": "confirmed",
+      "reason": "For directly names the prediction use.",
+      "reviewOfSha256": "489249b79556dd4e56049585f2da021b48caab3ee1bdae704f5785463972cdcc"
+    },
+    {
+      "sampleId": "sample-a5a7716ceebb35afad06",
+      "verdict": "confirmed",
+      "reason": "Do not make KG construction or recommendations a positive merely from co-occurrence.",
+      "reviewOfSha256": "0298e857d69312f086b76b4dfddb9a619f30befd50b02a7c4405b94cd379a17c"
+    },
+    {
+      "sampleId": "sample-b8de1e6395313695350c",
+      "verdict": "confirmed",
+      "reason": "Integrating data with ensemble ML supports the stated prediction task.",
+      "reviewOfSha256": "1316983117453c57e65bdc8ea33d4cce9b2b0e43ae4873c443ce9af3f22d7c5c"
+    },
+    {
+      "sampleId": "sample-dcf98146ce9fe70a4a8a",
+      "verdict": "confirmed",
+      "reason": "No separately identified scoped tail.",
+      "reviewOfSha256": "fb5f33dc00e557631c86b3cdb7ebf857ef38063c72677216fcdfba9b8288ee6d"
+    },
+    {
+      "sampleId": "sample-e33fe629ada448612a11",
+      "verdict": "confirmed",
+      "reason": "For supplies use; few-shot/cross-domain are regimes.",
+      "reviewOfSha256": "d16314aad12dbd6efc3a057a005c4706b33c5038c63c45384bbd7a4edbdb0b20"
+    },
+    {
+      "sampleId": "sample-126ba2a650f7bece5dd1",
+      "verdict": "confirmed",
+      "reason": "Method composition is not a directed pair in this schema.",
+      "reviewOfSha256": "fcf59824d7a3573db57448465353d177778954ee26e6e55f1289bb5575a85e6e"
+    },
+    {
+      "sampleId": "sample-21237ec0a6700f7c3cad",
+      "verdict": "confirmed",
+      "reason": "For binds both model mentions to super-resolution; unnamed data not benchmark.",
+      "reviewOfSha256": "3bc9923300cef79a1a2659ca156f2d850f7129d41b3b636848b0c67437c20380"
+    },
+    {
+      "sampleId": "sample-f7728adb92716ec89eff",
+      "verdict": "confirmed",
+      "reason": "For explicitly links full composite to detection.",
+      "reviewOfSha256": "6c174b774b74d65224688a9949c0f3a13ad391cf30a494b036720596745fa619"
+    },
+    {
+      "sampleId": "sample-0892023dc814c337d559",
+      "verdict": "confirmed",
+      "reason": "For supplies the task link; specimens are input rather than named DATASET.",
+      "reviewOfSha256": "d77e625f602faf288d103d5c9f50d0d05c38b9b744a47feffd155565acac4768"
+    },
+    {
+      "sampleId": "sample-911ba3e70374acc310a4",
+      "verdict": "confirmed",
+      "reason": "With explicitly states the pattern recognizer.",
+      "reviewOfSha256": "08cbe6f8bbee65bd22df07900f50403bfe5e5e97405e254e757a8c6c403bb0d6"
+    },
+    {
+      "sampleId": "sample-e4ed51bced9c3f8ba1e8",
+      "verdict": "confirmed",
+      "reason": "Predicts is a direct mechanism predicate.",
+      "reviewOfSha256": "5b255d26e1a28fe85fb0981a96d615308d62c73488c2ce26bedda4cfe615a54c"
+    },
+    {
+      "sampleId": "sample-36672a515e6dab783c9b",
+      "verdict": "confirmed",
+      "reason": "Based On states instrument of the prediction system.",
+      "reviewOfSha256": "8cd53a94e39f95b2900a8abc9fbee39325bfac0735a4ec413fcf608f079631a0"
+    },
+    {
+      "sampleId": "sample-0949f6b83a77709894b5",
+      "verdict": "confirmed",
+      "reason": "For links the entire composite to ADAS detection.",
+      "reviewOfSha256": "d8e34d5778007dfa0ff4b52fec40e01cc7a935175ed6525e1a81f4868b5cafd3"
+    },
+    {
+      "sampleId": "sample-f063594678c3254f7367",
+      "verdict": "confirmed",
+      "reason": "Intelligent applications are too generic for a frozen TASK.",
+      "reviewOfSha256": "aa438cfb20654870ec7af0ac4ee29b9781a6747fef84760dd6b69c6d5b939588"
+    },
+    {
+      "sampleId": "sample-58f34d3b4f7f9f47fffb",
+      "verdict": "confirmed",
+      "reason": "Computer architecture is a field, not a scoped TASK.",
+      "reviewOfSha256": "16a7bca7604d4e93bf7bf719e1950b24869b4222f46886f45496c22df5c43657"
+    },
+    {
+      "sampleId": "sample-5855919e63aa7ff11c41",
+      "verdict": "confirmed",
+      "reason": "No overlapping translation TASK invented.",
+      "reviewOfSha256": "8a116d61475993649fe69f08a7e70b7779a7c1da00e2e407d10a5302e92f92ae"
+    },
+    {
+      "sampleId": "sample-6c0516cc4988adc77fa1",
+      "verdict": "confirmed",
+      "reason": "Wireless constraints are setting, not a TASK or named dataset.",
+      "reviewOfSha256": "a714edb57e93febb6b2194c316bd0cb32c9be50389a9af1016ce2430e0af67ef"
+    },
+    {
+      "sampleId": "sample-d7d46c1d899d87b68c31",
+      "verdict": "confirmed",
+      "reason": "For explicitly links the model composite to VQA.",
+      "reviewOfSha256": "c02430fa39ca4325f47bd3eab5037d3e85811b60606cc76f8d8ab4812542729d"
+    },
+    {
+      "sampleId": "sample-fe16799aad07c9fd8660",
+      "verdict": "confirmed",
+      "reason": "Using explicitly supplies the full combined network instrument.",
+      "reviewOfSha256": "f1f891806cc8ec57124803348a2ae9ea3e7108311b28b1562b79af7794db9ab3"
+    },
+    {
+      "sampleId": "sample-8eeab425ef201f6d6ae9",
+      "verdict": "confirmed",
+      "reason": "Via names both mechanisms for the fusion operation.",
+      "reviewOfSha256": "16bde1dc2e87bbf2c83102313d3b6ffb70ffeedbc06745f365f7575da611ada1"
+    },
+    {
+      "sampleId": "sample-9ea078cf8c188e8bded6",
+      "verdict": "confirmed",
+      "reason": "With directly supplies the reconstruction instrument.",
+      "reviewOfSha256": "fabb4c0f1656b7a3f2d11380fe885e4af47a1399cc3fe509c8e81ff45d34c8b3"
+    },
+    {
+      "sampleId": "sample-e555241019c7a6cbe9a3",
+      "verdict": "confirmed",
+      "reason": "Electrical transformer is equipment, not a neural model.",
+      "reviewOfSha256": "0efea3d6e06b3024c7b445effef3a384d0d1175d1143c7969cde0dba587b4ba1"
+    },
+    {
+      "sampleId": "sample-ca56fc517e2fb2db13c0",
+      "verdict": "confirmed",
+      "reason": "Survey setting supplies no scoped relation tail.",
+      "reviewOfSha256": "3a9ab19075afc06f56dfad23196bc9f5d6cb2a9d74146f97793643c7ff34a060"
+    },
+    {
+      "sampleId": "sample-dcf90731e24d5a6733fb",
+      "verdict": "confirmed",
+      "reason": "Robot manipulators are hardware objects, no TASK span invented.",
+      "reviewOfSha256": "46d42d5f481a664fe8480d5afe03cddffc7f82096b9639bbfb82f9145af9c2c7"
+    },
+    {
+      "sampleId": "sample-c4e35dad9cc185a4f31b",
+      "verdict": "confirmed",
+      "reason": "For is direct use evidence for the fixed full mechanism.",
+      "reviewOfSha256": "5ecaa0c05f4da55871d261ee1bcba0c75bfb960c011061d2fa3bb4ba0e31df78"
+    },
+    {
+      "sampleId": "sample-29c7516fd199d4415c4d",
+      "verdict": "confirmed",
+      "reason": "Through states the method for the colorization task.",
+      "reviewOfSha256": "b2b9decb8b354da5a9c8da6bc1b004e7b4cf111ae38277350d2ef2db40dae3dd"
+    },
+    {
+      "sampleId": "sample-05c814356c248f4482ec",
+      "verdict": "confirmed",
+      "reason": "With directly connects network and estimation.",
+      "reviewOfSha256": "54986191b9255214cb493f3f4e05dc6214f6e1fa26fca4466db406d9e9a41f9b"
+    }
+  ]
+}

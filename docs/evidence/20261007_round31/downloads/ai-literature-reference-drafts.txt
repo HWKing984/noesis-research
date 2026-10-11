@@ -1,0 +1,5 @@
+候选文献快照，不是人工核验事实、必引清单或正式参考文献格式；引用前阅读原文。
+
+[1] Vaibhav Vavilala; Rahul Vasanth; David A. Forsyth. Denoising Monte Carlo Renders with Diffusion Models. 3DV, 2025. DOI: 10.1109/3dv66043.2025.00082
+DBLP: https://dblp.org/rec/conf/3dim/VavilalaVF25
+保存时间: 2026-10-07T14:49:58.538Z

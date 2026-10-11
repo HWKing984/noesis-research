@@ -1,0 +1,24 @@
+{
+  "kind": "dblp_orcid_identity_refinement_v1",
+  "inputSha256": {
+    "kg_datasets/dblp/dblp.xml.gz": "22f960525255e4c12b537e0d55b2d62bd6e1ec20087dec05f7688cf0c9daa3b7",
+    "kg_datasets/dblp/dblp-2023-06-28.dtd": "03ec35cb34a4227572a0e89da407b06b6e44a6cc23e19cabc3b49b702a5f897d",
+    "kg_datasets/dblp/course_v4_identity_20261007_31_recovered/manifest.json": "d418db6a7ab128894de39b170cf1e96a121694833e20ad8e381861d38604a3be",
+    "scripts/refine_author_identities.py": "f4ed0ce2bf8c94d256ab7b20be9122c8032da5877184127640151105d85675c1",
+    "tests/test_refine_author_identities.py": "9ddde01870f652771845c4bbeb31b3054513e67a9696755ee33bcf6168924bcf"
+  },
+  "baselineManifestSha256": "d418db6a7ab128894de39b170cf1e96a121694833e20ad8e381861d38604a3be",
+  "authorityURLs": [
+    "https://dblp.org/faq/1474704.html",
+    "https://blog.dblp.org/2020/07/20/dblp-and-orcid-2020/",
+    "https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier"
+  ],
+  "filesSha256": {
+    "profiles.json": "66b155d200207a3117a7908754c559a8254ada13e3b048d5b76d000be3339eed",
+    "recovery_ledger.jsonl": "55a76afa3898f3cf332c9307657096abd757aaca3e34e7eb4ec30edd67b1ef87",
+    "redirects.json": "1f41f97af27747a44dd3e2acc9701e41870f0cd14e682a51a23cfcfa28e9720a",
+    "signatures.jsonl": "284531d71af488c9497e37d8731d0404297e470f37a00c5e17e549ef6b236219",
+    "status.json": "8da708c586c359cea74501ad1f08e4ca30c7f08cfa987109d60eeb4350b41ace",
+    "summary.json": "c9f550a40470346483b2dd348df00e98ff56459b81aacea87d27e9e90bf24ba2"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "real_artifact_visualization_not_original_console_ui",
+  "filesSha256": {
+    "09_annotation_expansion.html": "ca1bc7611a3ffc07180429a156c3e83bbc80ad325ac73471580a0c679bd48d66",
+    "sources/abstract_compile_failure_20261008_33.json": "5efb63add47f3eab546319acf48371da498d0f34642987f238181aea14d6880b",
+    "sources/abstract_train_decisions_20261008_33.json": "f3083b783e42162c1e8cf228cd7bdac05ddf25621c36e42aecd44a3d7f87593f",
+    "sources/abstract_train_decisions_initial_20261008_33.json": "c11db6309ffda6b573755402063f050a1f37c1fba98d377a40c1a3c302e77e3f",
+    "sources/abstract_train_reviews_20261008_33.json": "27241ec23087e1ce794a07b874e0f899a44e668cc91ba35603399ec4d0c2e52e",
+    "sources/compile_abstract_annotations.py": "16c33870897bdcfb18cbca9219c6929f48bceb6e8a5ec32e983355e4ed8f7016",
+    "sources/review_abstract_annotations.py": "9cec0eaac451a5bf103674d0a35ae6457190584730960490b06789bf2fcd5757",
+    "sources/seal_abstract_train_20261008_round33.py": "f40c4d7f3c5cf55def11a65323b9eeec0fab9723bc295405fea1620d4ad9d4fa",
+    "sources/tests_20261008_round33_all.xml": "5bc0f4189c50ceba16f3bec906a6218015211df8e29d220807b9243fbd5c621b",
+    "sources/test_abstract_annotations.py": "67f748a7d1a2c9cd5f84d55f05b8a19cfc6d5f93347269c5db2a8a2f28c8e3e3",
+    "sources/course_abstract_train_generation_20261008_33/annotation_policy.json": "08dd2c283e70ea230474bb0fa8502a8d9f85abe5221b06a001d97ff56cd2173a",
+    "sources/course_abstract_train_generation_20261008_33/generation_receipts.jsonl": "0a3f4cba3db0dc18652bea7098f249e4a55e8edbe4de6f4b7d35c9b8e06ce5e5",
+    "sources/course_abstract_train_generation_20261008_33/manifest.json": "c523478908c884d990de60a5d7b866ea930642eb8903c438886cfd99f7960fd2",
+    "sources/course_abstract_train_generation_20261008_33/references.jsonl": "94f1796893f5cbbbad8e028aef9ae25f23f0efe306912dcbdc0be6ba41cc5d44",
+    "sources/course_abstract_train_generation_20261008_33/summary.json": "3cf294775ebc469f49dd209be7322625d4941f840f19e91bf9c16b30eac5b499",
+    "sources/course_abstract_train_reviewed_20261008_33/manifest.json": "84e6d06ad5165f4069b920cc7611e1e9ab4eecb5f04c9c741767628841ae8097",
+    "sources/course_abstract_train_reviewed_20261008_33/ner_train_candidates.jsonl": "6427e2849e13583763e19652d8e34ef078adf4f35731b4e9beeeb2449f125763",
+    "sources/course_abstract_train_reviewed_20261008_33/positive_relation_candidates.jsonl": "cc8a7aa0e8433bf6b360b61036b3e8031fb29602a61e9f339009cc65416a0273",
+    "sources/course_abstract_train_reviewed_20261008_33/references.jsonl": "94f1796893f5cbbbad8e028aef9ae25f23f0efe306912dcbdc0be6ba41cc5d44",
+    "sources/course_abstract_train_reviewed_20261008_33/reviewed_receipts.jsonl": "b5ae822b165c8cb9f2624cf18d76e8e509bd0388e5291eda203a22b8e5e068a9",
+    "sources/course_abstract_train_reviewed_20261008_33/review_prompt.json": "8c8bbddffd161051b7feb9d79050c1ba3e2866c52dd3164abf16bceaafe3ff8a",
+    "sources/course_abstract_train_reviewed_20261008_33/summary.json": "be1675098ba1b4e3548eec4acbe94c54fa14d235bfd61f2520487c3795f5c258",
+    "sources/course_abstract_train_reviewed_20261008_33/token_alignment.jsonl": "6d926a1ba88d0600ef74c980bc90a987dce0b68e364c68ba65755a3242587e52"
+  }
+}

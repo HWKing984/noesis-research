@@ -1,0 +1,73 @@
+{
+  "runManifestSha256": "7bd4820ea44f8da7dd1d5e58495eb025994cf2379fede4f85cf7e3e62156c874",
+  "trainingContractSha256": "1a69a36986f6d603091c57c05ef4ba58e13e41e0233cf1458720275cd41ba644",
+  "regressionSha256": "d224379c27d5b6eb25cbdb90fa7d91289fc5c09083913e39efc48d1ca823e211",
+  "engineeringTests": 374,
+  "regressionSeconds": 164.496,
+  "baselinePipeline": {
+    "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+    "truePositive": 50,
+    "predicted": 100,
+    "reference": 84,
+    "precision": 0.5,
+    "recall": 0.5952380952380952,
+    "f1": 0.5434782608695652
+  },
+  "candidatePipeline": {
+    "evaluationTarget": "complete_document_exposed_dev_AI_reference_not_final_test",
+    "truePositive": 50,
+    "predicted": 169,
+    "reference": 84,
+    "precision": 0.2958579881656805,
+    "recall": 0.5952380952380952,
+    "f1": 0.3952569169960474
+  },
+  "falsePositivesByDocument": {
+    "old_NER_old_RE": {
+      "sample-c7aed6adce784e82aae9": 11,
+      "sample-c24ab7542b82fab6cdc7": 7,
+      "sample-99cad010fa0f5aea712d": 7,
+      "sample-5736563134796e96b781": 5,
+      "sample-d741cb1278b46bcb73ef": 18,
+      "sample-16bd37185d1d8bbd53cb": 2
+    },
+    "old_NER_new_RE": {
+      "sample-c7aed6adce784e82aae9": 11,
+      "sample-c24ab7542b82fab6cdc7": 7,
+      "sample-99cad010fa0f5aea712d": 7,
+      "sample-5736563134796e96b781": 5,
+      "sample-d741cb1278b46bcb73ef": 18,
+      "sample-16bd37185d1d8bbd53cb": 2
+    },
+    "new_NER_old_RE": {
+      "sample-c7aed6adce784e82aae9": 40,
+      "sample-c24ab7542b82fab6cdc7": 18,
+      "sample-99cad010fa0f5aea712d": 28,
+      "sample-5736563134796e96b781": 6,
+      "sample-c34d070f70260ae08b2d": 6,
+      "sample-d741cb1278b46bcb73ef": 18,
+      "sample-16bd37185d1d8bbd53cb": 5
+    },
+    "new_NER_new_RE": {
+      "sample-c7aed6adce784e82aae9": 40,
+      "sample-c24ab7542b82fab6cdc7": 18,
+      "sample-99cad010fa0f5aea712d": 28,
+      "sample-5736563134796e96b781": 6,
+      "sample-c34d070f70260ae08b2d": 6,
+      "sample-d741cb1278b46bcb73ef": 18,
+      "sample-16bd37185d1d8bbd53cb": 3
+    }
+  },
+  "gates": {
+    "pipelinePrecisionNonRegression": false,
+    "pipelineF1NonRegression": false,
+    "pipelineRecallRegressionWithinGuard": true,
+    "referenceDATASETSupport": true,
+    "completeReferenceEVALUATED_ONSupport": false,
+    "completeDocumentCoverage": false,
+    "DATASETRecallRegressionWithinGuard": true
+  },
+  "testEvaluated": false,
+  "independentHumanGold": false,
+  "modelPromoted": false
+}

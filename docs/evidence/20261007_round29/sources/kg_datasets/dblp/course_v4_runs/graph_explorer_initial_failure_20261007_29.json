@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "previewURL": "http://127.0.0.1:8766/",
+  "checks": [
+    {"mode":"paper","httpStatus":200,"nodes":10,"edges":11},
+    {"mode":"coauthors","httpStatus":503,"localFallbackUsed":false},
+    {"mode":"methods","httpStatus":200,"nodes":63,"edges":62}
+  ],
+  "diagnostic": "Raw Neo4j coauthors diagnostic returned HTTP 400. Query concatenation formed p<>otherWITH path because the prefix lacked trailing whitespace.",
+  "correction": "Add a newline at the shared pattern/RETURN concatenation boundary, covering all graph modes.",
+  "alsoPreserved": "tests_graph_refresh_20261007_29.xml records an earlier unmatched-brace collection error.",
+  "databaseWritten": false
+}

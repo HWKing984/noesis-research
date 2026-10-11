@@ -1,0 +1,52 @@
+{
+  "baselineComparison": "INCONCLUSIVE_no_baseline",
+  "captures": [
+    {
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_search\\search_1440.png",
+      "observed": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      },
+      "sha256": "2be670835139a7efcf651347f03470c13fe3a3389fa80119e231f9cf7550ce18"
+    },
+    {
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_search\\search_768.png",
+      "observed": {
+        "width": 768,
+        "scrollWidth": 753,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      },
+      "sha256": "cb76dfbb0aecafd9506e0fd4c5ee061bfe9df00c504b9ec1c8373116aeccf872"
+    },
+    {
+      "file": "D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_v1_demo_search\\search_375.png",
+      "observed": {
+        "width": 375,
+        "scrollWidth": 360,
+        "overflow": false,
+        "error": "",
+        "results": [
+          "Integrating Attention Mechanisms into Convolutional Neural Networks for Image Classification."
+        ],
+        "labels": true
+      },
+      "sha256": "beaa888bd7589eaa8b20f2590c1a38d6c0b85f18c244d6106aa799378d1ed0eb"
+    }
+  ],
+  "exceptions": [],
+  "INP": "not_measured",
+  "networkErrors": [],
+  "status": "passed",
+  "WCAG": "not_fully_audited"
+}

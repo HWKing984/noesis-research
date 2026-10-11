@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="7" time="15.074" timestamp="2026-10-07T09:33:52.162244+08:00" hostname="HWKing"><testcase classname="tests.test_course_graph" name="test_candidates_use_predictions_and_preserve_literal_evidence" time="0.002" /><testcase classname="tests.test_course_graph" name="test_parameters_are_bounded_and_never_interpolated" time="0.001" /><testcase classname="tests.test_course_graph" name="test_neo4j_errors_never_masquerade_as_success" time="0.002" /><testcase classname="tests.test_course_graph" name="test_real_export_and_tamper_detection" time="13.746" /><testcase classname="tests.test_course_graph" name="test_scoped_idempotent_import_and_failure_receipt" time="0.038"><failure message="AssertionError: Regex pattern did not match.&#10;  Expected regex: 'counts differ'&#10;  Actual message: 'Node batch count differs'">tmp_path = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-925/test_scoped_idempotent_import_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000026BC39BE8B0&gt;
+
+    def test_scoped_idempotent_import_and_failure_receipt(tmp_path, monkeypatch):
+        node = {'kind': 'Publication', 'id': 'n', 'props': {'graphId': 'test', 'id': 'n'}}
+        counts = {'nodes': {'Publication': 1}, 'edges': {}}
+        bundle = tmp_path / 'bundle'; bundle.mkdir(); c = g.c
+        c.write_json(bundle / 'manifest.json', {})
+        monkeypatch.setattr(g, 'verify_bundle', lambda b: {'manifest': {'graphId': 'test', 'counts': counts}, 'nodes': [node], 'edges': []})
+        class Client:
+            queries = []
+            def query(self, statement, parameters):
+                self.queries.append(statement)
+                if 'RETURN g.status' in statement: return []
+                if 'UNWIND' in statement: return [{'count': len(parameters['rows'])}]
+                if 'RETURN count(n)' in statement: return [{'count': int('CoursePublication' in statement)}]
+                if 'RETURN count(r)' in statement: return [{'count': 0}]
+                return [{'id': 'test'}]
+        client = Client(); receipt = tmp_path / 'ok.json'
+        assert g.import_graph(client, bundle, receipt)['actualCounts'] == counts
+        assert all('DELETE' not in q and 'DROP' not in q for q in client.queries)
+        assert any('MERGE (n:CourseNode:CoursePublication:Publication' in q for q in client.queries)
+        with pytest.raises(FileExistsError): g.import_graph(client, bundle, receipt)
+        class Failed:
+            def query(self, *args): raise g.DatabaseUnavailable('Neo4j HTTP 401')
+        failed = tmp_path / 'failed.json'
+        with pytest.raises(g.DatabaseUnavailable): g.import_graph(Failed(), bundle, failed)
+        status = json.loads(failed.read_text())
+        assert status['status'] == 'failed' and status['batchesCommitted'] == 0 and not status['liveDatabaseImported']
+        class Incomplete(Client):
+            def query(self, statement, parameters):
+                if 'RETURN count(n)' in statement: return [{'count': 0}]
+                return super().query(statement, parameters)
+&gt;       with pytest.raises(ValueError, match='counts differ'): g.import_graph(Incomplete(), bundle, tmp_path / 'incomplete.json')
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_course_graph.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+client = &lt;test_course_graph.test_scoped_idempotent_import_and_failure_receipt.&lt;locals&gt;.Incomplete object at 0x0000026BC39C9A90&gt;
+bundle = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-925/test_scoped_idempotent_import_0/bundle')
+receipt = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-925/test_scoped_idempotent_import_0/incomplete.json')
+
+    def import_graph(client, bundle, receipt):
+        if receipt.exists(): raise FileExistsError('Preserve import receipt; use a new path to retry')
+        data = verify_bundle(bundle); manifest = data['manifest']; graph = manifest['graphId']
+        state = {'status': 'running', 'graphId': graph, 'bundleManifestSha256': c.file_sha256(bundle / 'manifest.json'),
+                 'startedAtUTC': datetime.now(UTC).isoformat(), 'batchesCommitted': 0, 'databaseReset': False}
+        receipt.parent.mkdir(parents=True, exist_ok=True); c.write_json(receipt, state)
+        try:
+            client.query('RETURN 1 AS connected', {})
+            client.query('CREATE CONSTRAINT course_node_id IF NOT EXISTS FOR (n:CourseNode) REQUIRE n.id IS UNIQUE', {})
+            client.query('CREATE CONSTRAINT course_graph_id IF NOT EXISTS FOR (g:CourseGraph) REQUIRE g.id IS UNIQUE', {})
+            existing = client.query('MATCH (g:CourseGraph {id:$graph}) RETURN g.status AS status', {'graph': graph})
+            if existing and existing[0]['status'] == 'completed':
+                state['alreadyImported'] = True
+            else:
+                client.query('MERGE (g:CourseGraph {id:$graph}) SET g.status="importing", g.manifestSha256=$sha',
+                             {'graph': graph, 'sha': state['bundleManifestSha256']})
+                # ponytail: sequential 500-row batches; add concurrent imports only for measured throughput needs.
+                for kind in KINDS:
+                    rows = [n for n in data['nodes'] if n['kind'] == kind]
+                    query = f'UNWIND $rows AS row MERGE (n:CourseNode:Course{kind}:{kind} {{id:row.id}}) ON CREATE SET n += row.props RETURN count(n) AS count'
+                    for start in range(0, len(rows), 500):
+                        batch = rows[start:start + 500]
+&gt;                       if client.query(query, {'rows': batch})[0]['count'] != len(batch): raise ValueError('Node batch count differs')
+                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                       ValueError: Node batch count differs
+
+scripts\course_graph.py:247: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-925/test_scoped_idempotent_import_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000026BC39BE8B0&gt;
+
+    def test_scoped_idempotent_import_and_failure_receipt(tmp_path, monkeypatch):
+        node = {'kind': 'Publication', 'id': 'n', 'props': {'graphId': 'test', 'id': 'n'}}
+        counts = {'nodes': {'Publication': 1}, 'edges': {}}
+        bundle = tmp_path / 'bundle'; bundle.mkdir(); c = g.c
+        c.write_json(bundle / 'manifest.json', {})
+        monkeypatch.setattr(g, 'verify_bundle', lambda b: {'manifest': {'graphId': 'test', 'counts': counts}, 'nodes': [node], 'edges': []})
+        class Client:
+            queries = []
+            def query(self, statement, parameters):
+                self.queries.append(statement)
+                if 'RETURN g.status' in statement: return []
+                if 'UNWIND' in statement: return [{'count': len(parameters['rows'])}]
+                if 'RETURN count(n)' in statement: return [{'count': int('CoursePublication' in statement)}]
+                if 'RETURN count(r)' in statement: return [{'count': 0}]
+                return [{'id': 'test'}]
+        client = Client(); receipt = tmp_path / 'ok.json'
+        assert g.import_graph(client, bundle, receipt)['actualCounts'] == counts
+        assert all('DELETE' not in q and 'DROP' not in q for q in client.queries)
+        assert any('MERGE (n:CourseNode:CoursePublication:Publication' in q for q in client.queries)
+        with pytest.raises(FileExistsError): g.import_graph(client, bundle, receipt)
+        class Failed:
+            def query(self, *args): raise g.DatabaseUnavailable('Neo4j HTTP 401')
+        failed = tmp_path / 'failed.json'
+        with pytest.raises(g.DatabaseUnavailable): g.import_graph(Failed(), bundle, failed)
+        status = json.loads(failed.read_text())
+        assert status['status'] == 'failed' and status['batchesCommitted'] == 0 and not status['liveDatabaseImported']
+        class Incomplete(Client):
+            def query(self, statement, parameters):
+                if 'RETURN count(n)' in statement: return [{'count': 0}]
+                return super().query(statement, parameters)
+&gt;       with pytest.raises(ValueError, match='counts differ'): g.import_graph(Incomplete(), bundle, tmp_path / 'incomplete.json')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'counts differ'
+E         Actual message: 'Node batch count differs'
+
+tests\test_course_graph.py:110: AssertionError</failure></testcase><testcase classname="tests.test_course_graph" name="test_live_http_validation_outage_and_read_only_contract" time="0.800" /><testcase classname="tests.test_course_graph" name="test_search_detail_and_incomplete_graph_do_not_use_local_fallback" time="0.001" /></testsuite></testsuites>

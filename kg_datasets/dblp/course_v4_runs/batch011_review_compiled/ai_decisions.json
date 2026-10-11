@@ -1,0 +1,670 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-79ad3192abdb0e82269c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Random Access in Multi-cell Networks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Reinforcement learning is explicitly for random access in multi-cell networks."
+        }
+      ],
+      "notes": "Retain communications context.\nAI self-review: RL explicitly supports multicell random access."
+    },
+    {
+      "sampleId": "sample-bdb16f1221bccc86c826",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "SAR Ship Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "SAR ship detection is explicitly deep-learning based."
+        }
+      ],
+      "notes": "SAR is task modality, not a dataset name.\nAI self-review: Deep learning explicitly supports SAR ship detection."
+    },
+    {
+      "sampleId": "sample-67bc5401fbbd3910a75e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Convolutional Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Steganalysis in the Scenario of Reuse of the Stego-Key",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The convolutional network is explicitly for steganalysis with stego-key reuse."
+        }
+      ],
+      "notes": "Improved is promotional; retain the threat scenario.\nAI self-review: CNN steganalysis keeps stego-key reuse threat context."
+    },
+    {
+      "sampleId": "sample-13953ee7a62e3a1ab8e4",
+      "entityStatus": "unresolved",
+      "entityReason": "Referential Problem does not specify the technical operation or a named strategy, so subtask coverage is uncertain.",
+      "entities": [
+        {
+          "text": "Neural Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The possible referential subproblem is not finalized.",
+      "relations": [],
+      "notes": "Low-resource is a training setting; do not invent coreference resolution.\nAI self-review: Referential problem lacks operation/strategy; partial task coverage preserved."
+    },
+    {
+      "sampleId": "sample-5cc535ed93f7e5a1fe73",
+      "entityStatus": "unresolved",
+      "entityReason": "The DMPK measurements are a prediction target but the title omits the explicit prediction-operation span.",
+      "entities": [
+        {
+          "text": "Time-Series Based Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "A concrete target/task boundary cannot be supplied by adding absent words.",
+      "relations": [],
+      "notes": "Predictive power is a performance property; no DMPK dataset is named.\nAI self-review: Predictive power is property, no literal DMPK prediction-operation span."
+    },
+    {
+      "sampleId": "sample-8ff22ab91c14d597bacb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Modular Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Long-Horizon Manipulation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Modular reinforcement learning is explicitly applied in long-horizon manipulation tasks."
+        }
+      ],
+      "notes": "Retain manipulation horizon as task planning context.\nAI self-review: Modular learner explicit for long-horizon manipulation."
+    },
+    {
+      "sampleId": "sample-682410ea6f16c6f7984d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "DGFormer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Dynamic Kernel with Gaussian Fusion Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Semantic Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "DGFormer names the segmentation approach."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The dynamic-kernel Gaussian-fusion transformer is explicitly for segmentation."
+        }
+      ],
+      "notes": "Both model mention and full architecture retained without overlap.\nAI self-review: DGFormer and Gaussian-fusion transformer explicit for segmentation."
+    },
+    {
+      "sampleId": "sample-a1e7c3cf4ea0f4bb4966",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Monotonic Optimization",
+          "label": "TASK"
+        },
+        {
+          "text": "Heterogeneous Multi-agent Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Optimal Marginal Deterministic Policy Gradient",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The contextual reinforcement-learning instrument relation remains unstated.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Heterogeneous multi-agent RL is the optimization setting, not explicitly the optimization instrument."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The policy-gradient method explicitly improves monotonic optimization."
+        }
+      ],
+      "notes": "Optimal is retained as part of the specific policy-gradient description.\nAI self-review: Gradient optimization explicit; heterogeneous RL is context, relation unresolved."
+    },
+    {
+      "sampleId": "sample-074078fc42c4d8dde36e",
+      "entityStatus": "unresolved",
+      "entityReason": "The phrase Reinforcement Learning Walk has an unusual task/method attachment and the imitation role is not fully clear.",
+      "entities": [
+        {
+          "text": "Full-Order Model Optimization Based Imitation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Humanoid Robot Reinforcement Learning Walk",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Robot-walk instrument/training role remains ambiguous.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Benchmarking imitation in robot walking does not specify whether it directly performs walking or supplies a training objective."
+        }
+      ],
+      "notes": "Benchmarking without a named benchmark does not justify DATASET or EVALUATED_ON.\nAI self-review: Humanoid walk imitation role ambiguous and no benchmark name."
+    },
+    {
+      "sampleId": "sample-dbfe2ade32c91d8b7402",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Grip Points Generation on Motorcycle Wire Harnesses Main Branch",
+          "label": "TASK"
+        },
+        {
+          "text": "Clustering",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Grip-point generation is explicitly based on clustering."
+        }
+      ],
+      "notes": "Computer vision is a broad field; the concrete clustering technique family is retained.\nAI self-review: Clustering explicitly generates harness grip points; vision broad field."
+    },
+    {
+      "sampleId": "sample-e216058cc8634bb4a487",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Multi-Agent Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Energy Management of Microgrids",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The federated multi-agent learner is explicitly for microgrid energy management."
+        }
+      ],
+      "notes": "Generic Method removed; federated/multi-agent mechanisms retained.\nAI self-review: Federated multi-agent learning explicit for microgrid management."
+    },
+    {
+      "sampleId": "sample-6bc4f46110be300634c1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Offline Multi-Agent Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Pre-training paradigm is unnamed; suboptimal data is generic input quality, not a dataset.\nAI self-review: Offline regime explicit, new paradigm and data unnamed."
+    },
+    {
+      "sampleId": "sample-61f929458fb58cc3e81a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hybrid Deep Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Remaining Useful Life Estimation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The hybrid deep network is explicitly for remaining-useful-life estimation."
+        }
+      ],
+      "notes": "Model is a generic carrier; retain hybrid composition.\nAI self-review: Hybrid deep network explicitly estimates remaining life."
+    },
+    {
+      "sampleId": "sample-54b37989fb92e8a170b7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Federated Semi-Supervised Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection in Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Federated semi-supervised learning is explicitly for autonomous-driving detection."
+        }
+      ],
+      "notes": "Keep learning mechanism and driving context.\nAI self-review: Federated semi-supervised detection in driving explicit."
+    },
+    {
+      "sampleId": "sample-be724bec89d803e19cc6",
+      "entityStatus": "unresolved",
+      "entityReason": "Child FER may abbreviate the task rather than name a method; title does not disambiguate.",
+      "entities": [
+        {
+          "text": "Child FER",
+          "label": "METHOD"
+        },
+        {
+          "text": "Facial Expression Recognition in Children",
+          "label": "TASK"
+        },
+        {
+          "text": "Secondary Image Diffusion Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Child FER category and secondary diffusion direct-recognizer role are unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "The headline name may abbreviate the task rather than identify the instrument."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Secondary diffusion may supply synthetic images rather than directly recognize expressions."
+        }
+      ],
+      "notes": "Child recognition task remains; no invented framework identity.\nAI self-review: Child FER may be task abbreviation; preserve uncertain named-method and secondary diffusion roles."
+    },
+    {
+      "sampleId": "sample-88ee1a112eea601d140b",
+      "entityStatus": "unresolved",
+      "entityReason": "Image-Text Alignment and Retrieval may share the Image-Text modifier, but the first task's continuous boundary is unresolved.",
+      "entities": [
+        {
+          "text": "Retrieval",
+          "label": "TASK"
+        },
+        {
+          "text": "Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Coordinated task coverage is not finalized.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Retrieval is explicitly using a transformer."
+        }
+      ],
+      "notes": "Do not create METHOD-only groupMentions for task coordination or insert missing words.\nAI self-review: Shared image-text context leaves task boundaries uncertain, no missing words added."
+    },
+    {
+      "sampleId": "sample-e927763a0707cb3ae0b2",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Segmentation of Nuclei in Histopathology Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Encoding-decoding Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Encoding-decoding CNNs explicitly segment nuclei in histopathology images."
+        }
+      ],
+      "notes": "Automatic removed; retain nucleus and histopathology modality.\nAI self-review: Encoding-decoding CNN explicitly segments histopathology nuclei."
+    },
+    {
+      "sampleId": "sample-0592b2486a2fba23495f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "PD-VOST",
+          "label": "METHOD"
+        },
+        {
+          "text": "Parkinson's Disease Voice Spectrogram Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Explicit named model and voice-spectrogram architecture; no diagnosis operation is stated.\nAI self-review: PD-VOST and voice-spectrogram transformer explicit, no diagnosis verb."
+    },
+    {
+      "sampleId": "sample-8e1d1afb0b1f5e01110a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Contrastive Translation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Medical Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Contrastive translation learning is explicitly for medical image segmentation."
+        }
+      ],
+      "notes": "Learning mechanism kept as one method.\nAI self-review: Contrastive translation learner explicit for medical segmentation."
+    },
+    {
+      "sampleId": "sample-ff8ff7638b9afea608c5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Positional Encoding",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Monaural Speech Enhancement",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The encoding-to-enhancement instrument role is not directly stated.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "An impact study does not itself assert positional encoding is the enhancement instrument."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Speech enhancement is explicitly transformer-based."
+        }
+      ],
+      "notes": "An architectural impact study is not itself evidence for each internal component's direct use.\nAI self-review: Encoding impact not direct instrument assertion; transformer task use explicit."
+    },
+    {
+      "sampleId": "sample-c163bf64c19307a7e4ea",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Seg-diffusion",
+          "label": "METHOD"
+        },
+        {
+          "text": "Text-to-Image Diffusion Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Semantic Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Seg-diffusion names the proposed segmentation approach."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The text-to-image diffusion model is explicitly for semantic segmentation."
+        }
+      ],
+      "notes": "Open-vocabulary is class/generalization setting outside the base segmentation task.\nAI self-review: Seg-diffusion and diffusion description explicit, open-vocabulary setting excluded."
+    },
+    {
+      "sampleId": "sample-8a5b207704f31391ff4f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Low-Light Image Enhancement",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The review explicitly concerns deep-learning low-light enhancement algorithms."
+        }
+      ],
+      "notes": "Retain low-light image condition; Algorithms is generic.\nAI self-review: Low-light condition retained; deep-learning enhancement explicit."
+    },
+    {
+      "sampleId": "sample-9cdc48f4d3f44eda510d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Quality Prediction of Online Chinese Question Answering Community Answers",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Comments are input material; question answering is part of the answer-community context inside the task, not an overlapping extra entity.\nAI self-review: Quality prediction is outer task, nested community QA not overlapping entity."
+    },
+    {
+      "sampleId": "sample-2635e0bbf553e9705a21",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Self-Supervised Radio Representation Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Multiple Tasks is unspecified; no downstream task is invented from the question.\nAI self-review: Radio self-supervision explicit; Multiple Tasks unspecified."
+    },
+    {
+      "sampleId": "sample-623e913b75eba347b88f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pulmonary Tuberculosis Detection in Chest X-Ray",
+          "label": "TASK"
+        },
+        {
+          "text": "Convolutional Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The convolutional networks explicitly detect tuberculosis in chest X-ray."
+        }
+      ],
+      "notes": "Retain disease and imaging modality; no named X-ray dataset.\nAI self-review: Chest-X-ray disease target and CNN instrument explicit, no named corpus."
+    }
+  ]
+}

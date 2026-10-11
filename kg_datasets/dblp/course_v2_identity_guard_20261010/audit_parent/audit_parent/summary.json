@@ -1,0 +1,53 @@
+{
+  "status": "priority_review_and_evidence_chain_completed_negative_scope_pending_not_training_ready",
+  "documents": 12,
+  "NERCandidateDocuments": 12,
+  "entityMentions": 177,
+  "candidatePairs": 684,
+  "relationSupport": {
+    "EVALUATED_ON": 17,
+    "UNRESOLVED": 594,
+    "USED_FOR": 68,
+    "NO_RELATION": 5
+  },
+  "RECandidatePairs": 85,
+  "RECandidateSupport": {
+    "EVALUATED_ON": 17,
+    "USED_FOR": 68
+  },
+  "totalSourcePapersWithEligibleRE": 11,
+  "sourcePapersByCandidateClass": {
+    "USED_FOR": 11,
+    "EVALUATED_ON": 5,
+    "NO_RELATION": 0
+  },
+  "parentTotalSourcePapersWithEligibleRE": 11,
+  "parentLiteralPairsExact": 50,
+  "parentLiteralPairsCasefold": 49,
+  "literalPairsExact": 55,
+  "literalPairsCasefold": 54,
+  "supportGroups": 29,
+  "taskRoleSupport": {
+    "not_applicable": 17,
+    "training_proxy": 5,
+    "background_method_use": 3,
+    "downstream_application": 55,
+    "component_operation": 5
+  },
+  "reviewedNewPairs": 5,
+  "coreferenceMentionPairs": 3,
+  "quarantinedNegativePairs": 5,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "modelPromoted": false,
+  "testContentParsed": false,
+  "createdAtUTC": "2026-10-10T13:02:21.499819+00:00",
+  "isolation": {
+    "publicationGroupAndArxivMetadataConflicts": 0,
+    "externalTrainOnlyPapers": 4,
+    "reservedTestTextOverlapChecked": false,
+    "notice": "Metadata identity isolation, not a new representative split or proof against all semantic/near-duplicate overlap. Reserved test text was not parsed."
+  },
+  "notice": "No new representative split or near-duplicate proof. Parent TRAIN identity lock inherited; only current TRAIN artifacts parsed. Five negatives remain quarantined, no accepted negative or training authorization."
+}

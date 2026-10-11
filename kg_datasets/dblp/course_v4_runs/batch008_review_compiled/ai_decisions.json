@@ -1,0 +1,654 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-0e0194efca5720b9a5e0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Distributed deep neural network training",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Distributed training is the learning mechanism; edge devices are hardware, not a benchmark.\nAI self-review: Distributed deep-network training is mechanism; edge devices hardware."
+    },
+    {
+      "sampleId": "sample-d1bdaf9c16eb86ec2491",
+      "entityStatus": "unresolved",
+      "entityReason": "The Lyapunov-based subtitle omits the head of the concrete approach, so its exact additional method boundary is uncertain.",
+      "entities": [
+        {
+          "text": "Model-Assisted Safe Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Data Center Cooling Control",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "An additional possible Lyapunov method is not finalized.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The model-assisted safe learner is explicitly for data-center cooling control."
+        }
+      ],
+      "notes": "Do not invent an omitted optimization/controller head.\nAI self-review: Lyapunov-based head still unspecified; partial safe-learning cooling role preserved."
+    },
+    {
+      "sampleId": "sample-80670bf92e9c9d4705dd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reinforcement Learning with Partially Defined Rewards and Human Feedback",
+          "label": "METHOD"
+        },
+        {
+          "text": "Energy Efficiency Recommendations",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The specified reward/feedback learning mechanism is explicitly for energy-efficiency recommendations."
+        }
+      ],
+      "notes": "Preserve both reward and feedback mechanisms in one composite method.\nAI self-review: Partial rewards/human feedback stay in full recommendation learning mechanism."
+    },
+    {
+      "sampleId": "sample-cea9896cc27f2333fa5e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Cyberattack Detection in Industrial Control Systems",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Machine-learning models are explicitly for industrial-control cyberattack detection."
+        }
+      ],
+      "notes": "Models is a generic carrier here; keep detection domain.\nAI self-review: Industrial-control cyberattack detection explicitly uses machine learning."
+    },
+    {
+      "sampleId": "sample-7bd6959c1a6dc6ef33b3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "VGG with ResNet Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Detection is explicitly based on the combined VGG-with-ResNet network."
+        }
+      ],
+      "notes": "Combined network is one composite mention, no nested duplicate methods.\nAI self-review: VGG with ResNet is one composite detector, no nested entities."
+    },
+    {
+      "sampleId": "sample-1336ca1ac6c1e8613209",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-view stereo",
+          "label": "TASK"
+        },
+        {
+          "text": "recurrent neural networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Multi-view stereo explicitly uses recurrent networks to obtain depth maps."
+        }
+      ],
+      "notes": "Consistent depth maps are output material/quality; no invented depth dataset.\nAI self-review: Recurrent networks explicitly support multiview stereo; depth maps output not corpus."
+    },
+    {
+      "sampleId": "sample-7516f9905c7bc1330f18",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Future Image Prediction of Plantar Pressure During Gait",
+          "label": "TASK"
+        },
+        {
+          "text": "Spatio-temporal Transformer",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The transformer is explicitly used to predict future plantar-pressure images during gait."
+        }
+      ],
+      "notes": "Preserve prediction object and gait context.\nAI self-review: Future pressure-image prediction keeps gait and transformer architecture."
+    },
+    {
+      "sampleId": "sample-34f108f381470e50851d",
+      "entityStatus": "unresolved",
+      "entityReason": "Multiparameter Polar Representations may be encoding outputs rather than a standalone method; title does not disambiguate.",
+      "entities": [
+        {
+          "text": "Heart Failure Assessment",
+          "label": "TASK"
+        },
+        {
+          "text": "Multiparameter Polar Representations",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The polar-representation method category is unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Polar representations are explicitly used in heart-failure assessment."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Deep learning is explicitly used for the same assessment."
+        }
+      ],
+      "notes": "Definite deep-learning assessment retained alongside provisional polar-method candidate; no eligibility until full entity role resolved.\nAI self-review: Polar representations may be encoding outputs, so standalone METHOD role must be unresolved."
+    },
+    {
+      "sampleId": "sample-3cbe4922ff4f982f42bb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "High Intraocular Pressure Detection from Frontal Eye Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The subtitle explicitly identifies a machine-learning approach to the stated pressure detection."
+        }
+      ],
+      "notes": "Retain frontal-eye modality and high-pressure condition.\nAI self-review: High pressure is condition; frontal-eye modality and machine-learning use retained."
+    },
+    {
+      "sampleId": "sample-6ba2c053b1bda320f289",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Cough-DL",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Ear-Worn Cough Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Cough-DL names the stated cough-detection model."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The deep-learning model is explicitly for ear-worn cough detection."
+        }
+      ],
+      "notes": "Generic Model is excluded; no cough dataset name.\nAI self-review: Cough-DL and family explicitly support ear-worn cough detection."
+    },
+    {
+      "sampleId": "sample-59f8c863d2e145ae4b07",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Detection of Neovascularization in Color Fundus Images",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The deep-learning network is explicitly for neovascularization detection in fundus images."
+        }
+      ],
+      "notes": "Efficient and Automatic are generic quality/automation modifiers.\nAI self-review: Fundus-neovascularization detection excludes quality/automation praise."
+    },
+    {
+      "sampleId": "sample-95e92cb7f01533bcecaf",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "CLPNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Cleft Lip and Palate Surgery Support",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "CLPNet explicitly names the surgery-support approach."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Surgery support is explicitly with deep learning."
+        }
+      ],
+      "notes": "The surgery object is retained; no patient collection is named.\nAI self-review: CLPNet and deep learning explicitly support stated surgery."
+    },
+    {
+      "sampleId": "sample-299f2dada48a27a1f370",
+      "entityStatus": "unresolved",
+      "entityReason": "Jacobian in Diffuse Optical Tomography names a mathematical object but omits whether it is computed, estimated or reconstructed.",
+      "entities": [
+        {
+          "text": "One-dimensional convolutional neural network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The missing computational task cannot be safely supplied.",
+      "relations": [],
+      "notes": "Do not invent Jacobian estimation from the noun alone.\nAI self-review: Jacobian object lacks operation; no guessed estimation task."
+    },
+    {
+      "sampleId": "sample-2ec6925959e3a76b32b1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Psychological scales are measurement instruments, not named datasets; reliability is a research property.\nAI self-review: Scale reliability property is not named benchmark or computational task."
+    },
+    {
+      "sampleId": "sample-ef11b8480f3938c18f2c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Collaborative Policy Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Open Knowledge Graph Reasoning",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Collaborative policy learning is explicitly for open knowledge-graph reasoning."
+        }
+      ],
+      "notes": "Reasoning is the task; knowledge graph is not a specific benchmark.\nAI self-review: Collaborative policy learning explicitly supports open-graph reasoning."
+    },
+    {
+      "sampleId": "sample-9915bdc4195fc9a562ac",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "ChatGPT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Financial Natural Language Processing",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The opening named-model question is not an unambiguous direct use assertion.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "The opening question does not alone fix ChatGPT's participation in the financial-NLP evaluation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Language models are explicitly evaluated on financial NLP tasks."
+        }
+      ],
+      "notes": "Financial expert is a role, not a model score or dataset.\nAI self-review: Financial-NLP language-model use explicit; ChatGPT opening question remains uncertain."
+    },
+    {
+      "sampleId": "sample-29295ea212d874aa4bd0",
+      "entityStatus": "unresolved",
+      "entityReason": "Synthetic Feedback could name the feedback material rather than a method of generating or using it.",
+      "entities": [
+        {
+          "text": "Aligning Large Language Models",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The alignment instrument is not an explicit algorithm.",
+      "relations": [],
+      "notes": "The model is the object of alignment inside the task; no nested model annotation.\nAI self-review: Feedback is possibly input material; full alignment instrument coverage unresolved."
+    },
+    {
+      "sampleId": "sample-8560c8357f0df5325e2e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Attention-based Data Augmentation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Text Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Augmentation's direct task-instrument role is insufficiently stated.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Augmentation supports text classification but is not explicitly the classifier itself."
+        }
+      ],
+      "notes": "Headline Attention is generic; lightweight is an efficiency modifier.\nAI self-review: Augmentation may support training not classifier; UNRESOLVED not negative."
+    },
+    {
+      "sampleId": "sample-6e1072e2619381c7a836",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Iterative Refinement in the Continuous Space",
+          "label": "METHOD"
+        },
+        {
+          "text": "Neural Machine Translation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Continuous-space refinement is explicitly for neural machine translation."
+        }
+      ],
+      "notes": "Non-autoregressive is an inference setting outside this task boundary.\nAI self-review: Continuous-space refinement explicit for translation; inference setting excluded."
+    },
+    {
+      "sampleId": "sample-efd8dca842b1ac0ee6a0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Event Extraction",
+          "label": "TASK"
+        },
+        {
+          "text": "Multi-turn Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Reformulation relates two tasks, not a named QA model; do not relabel a task as METHOD to create a pair.\nAI self-review: Event extraction and multiturn QA are tasks, no named QA model."
+    },
+    {
+      "sampleId": "sample-248c8d42bdf296190f39",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Evaluation efficiency is a performance concern, not a specific dataset or concrete computational evaluation operation.\nAI self-review: Evaluation efficiency is property, no benchmark."
+    },
+    {
+      "sampleId": "sample-7463672e9ac6882c7aae",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Stereotype Dataset Construction",
+          "label": "TASK"
+        },
+        {
+          "text": "Human-LLM Collaboration",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Human-LLM collaboration is explicitly used to construct the stereotype dataset."
+        }
+      ],
+      "notes": "Generic unnamed dataset is not DATASET; scalable/culturally specific do not name it.\nAI self-review: Human-LLM collaboration constructs unnamed stereotype dataset, not DATASET entity."
+    },
+    {
+      "sampleId": "sample-b303be45ef25ab2197fa",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "SYGMA",
+          "label": "METHOD"
+        },
+        {
+          "text": "Question Answering Over Knowledge Bases",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "SYGMA explicitly names the system for knowledge-base question answering."
+        }
+      ],
+      "notes": "Generalizable and modular are descriptive claims, not additional named entities.\nAI self-review: SYGMA explicitly names knowledge-base QA system."
+    },
+    {
+      "sampleId": "sample-5f462f25a7ecb49e9fe1",
+      "entityStatus": "unresolved",
+      "entityReason": "Query Intent is an object without an explicit identification/classification operation, making the task boundary uncertain.",
+      "entities": [
+        {
+          "text": "QUILL",
+          "label": "METHOD"
+        },
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Retrieval Augmentation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-stage Distillation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The implied query-intent operation is not finalized.",
+      "relations": [],
+      "notes": "No omitted verb or dataset is invented.\nAI self-review: Query intent has no explicit operation, keep named methods but partial coverage."
+    },
+    {
+      "sampleId": "sample-c177ab7f328ad6ca4d9c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LXMERT",
+          "label": "METHOD"
+        },
+        {
+          "text": "Learning Cross-Modality Encoder Representations from Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Full representation-learning-from-transformers mechanism, not bare representation outputs.\nAI self-review: Bare encoder representations may be outputs; retain full learning-from-transformers mechanism instead."
+    }
+  ]
+}

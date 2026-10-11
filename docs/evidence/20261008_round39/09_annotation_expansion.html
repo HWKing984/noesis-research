@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>关系证据补强与未晋级边界 · 第39轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>关系证据补强与未晋级边界 · 第39轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<h2>四篇已锁定train摘要 · 实体不改、关系有证据才判</h2><table><thead><tr><th>项目</th><th>实际结果</th><th>限制</th></tr></thead><tbody><tr><td>明确训练关系对</td><td>201 → 268；新增67</td><td>32 USED_FOR / 16 EVALUATED_ON / 19 NO_RELATION</td></tr><tr><td>累计关系标签</td><td>USED_FOR183 / EVALUATED_ON59 / NO_RELATION26</td><td>同会话AI参考，不是独立gold</td></tr><tr><td>已判断覆盖</td><td>14.53%，原为10.89%</td><td>1577/1845对仍未决，不训练成负例</td></tr><tr><td>新增评测证据</td><td>16跨度对 / 7源文方法–benchmark名称组合 / 3论文</td><td>重复名称相关；不是16次独立实验</td></tr><tr><td>实体与原结果</td><td>50篇NER不改，8隔离保留；旧201明确对不改</td><td>其余54篇收据原样继承；未运行模型</td></tr></tbody></table><h2>整套方法被评测，不等于每个组件被独立评测</h2><table><thead><tr><th>来源</th><th>新明确关系</th><th>仍不确定的内容</th></tr></thead><tbody><tr><td>3D segmentation：2503.01309</td><td>voxel hashing用于scene querying；filtering用于3D merging</td><td>ScanNet/SceneNN只明确评测our approach；组件benchmark边全部未决</td></tr><tr><td>RLQP：2107.10847</td><td>参数调优用途、三benchmark泛化评测、solver接受调优的角色对照</td><td>泛指RL/QP solver的其他benchmark归属不填</td></tr><tr><td>CriticGPT：2402.14245</td><td>critic理解轨迹；reward model对应Meta-World</td><td>不把critic、reward modeling和reward model全局合并</td></tr><tr><td>SmoothGuard：2510.26830</td><td>防御框架评测与过滤用途；生成/防御/接收者角色对照</td><td>不把noise/clustering组件自动说成各自被评测</td></tr></tbody></table><h2>回归与尚未完成的门槛</h2><p>367项正式回归通过；50篇严格BIO往返，268个已判对的实体标记编码通过，最大333 tokens，不截断。八篇隔离已逐篇检查并另存排查原因，检查不冒充标签修订或准入。</p><p>完整RE train仍6/58；dev仍5/19完整、主pipeline EVALUATED_ON参考0。新增标注没有产生新F1，没有重训、推理、改旧dev/test、写库、重启或新线上验收。旧权重/成绩/图包哈希核验，qualityPromotionPassed=false。</p><p>MLE工作流先补稀有监督与明确反例；下一步补完整dev证据/任务跨度一致性，锁定下一次实验后训练对照。模型可靠性、独立核验与长尾概念/作者身份仍未全部解决。</p><footer>证据页生成时间：2026-10-08T05:15:51.141018+00:00<br>来源：<div class="path">audit_state.json</div><div class="path">relation_cases.json</div><div class="path">sources/kg_datasets/dblp/course_abstract_relation_enriched_20261008_39/summary.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

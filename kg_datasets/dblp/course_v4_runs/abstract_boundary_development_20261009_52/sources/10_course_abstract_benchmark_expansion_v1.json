@@ -1,0 +1,22 @@
+{
+  "version": "abstract_train_benchmark_expansion_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44",
+  "snapshotManifestSha256": "3bbad6603684b1ea47e70ddd9193d8e037eda0d285cea7cbb84050fc21b2921f",
+  "corpusSha256": "bc88db81e0c68156c2fcacdbf8523e77b81be9b5d811163da2ed30f3edf3ca8a",
+  "splitManifestSha256": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+  "seeds": [
+    {"arxivId": "1704.04683", "title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations"},
+    {"arxivId": "1705.03551", "title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension"},
+    {"arxivId": "1809.09600", "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering"},
+    {"arxivId": "1903.00161", "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs"}
+  ],
+  "selection": "Four named reading-comprehension benchmark source papers chosen before new page responses/labels to supplement independent train DATASET documents, not by dev/test errors, labels, scores or rare-name targeting of held-out sets. Targeted training selection is biased, not a representative evaluation sample.",
+  "identityPolicy": "Before fetching, compare arXiv IDs and normalized title metadata against the whole canonical 20000-paper identity registry and current train titles/IDs. Reject any existing canonical identity rather than force train or fabricate a new paper group. Exact/normalized metadata comparison does not certify exhaustive semantic near-duplicate detection. No held-out abstract or label access.",
+  "collection": "Official arxiv.org /abs citation metadata; preserve raw HTML and exact Unicode abstract; current robots checked, minimum15.1s serial delay; match normalized source title and ID, max512tokens without truncation; disclose failure/mismatch/overlength, no automatic replacement or retry.",
+  "crawlDelaySeconds": 15.1,
+  "annotation": "Reuse whole-abstract METHOD/TASK/DATASET and flat BIO plus round44 source-scope policy. Fresh per-document AI generation then actual same-session self-review. Evidence-only positive assertions; unresolved pairs never default negative. Background dataset mention alone is not evaluation. Reference labels are AI pseudo, not independent gold.",
+  "trainingAllowed": false,
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true,
+  "independentHumanGold": false
+}

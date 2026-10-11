@@ -1,0 +1,36 @@
+{
+  "version": "abstract_relation_enrichment_v1",
+  "wholeTrainCohort": 58,
+  "nerCandidates": 50,
+  "excludedNER": 8,
+  "rejudgedRelationDocuments": 4,
+  "inheritedReceipts": 54,
+  "previousKnownPairs": 201,
+  "knownPairs": 268,
+  "additionalKnownPairs": 67,
+  "relationSupport": {
+    "EVALUATED_ON": 59,
+    "USED_FOR": 183,
+    "NO_RELATION": 26
+  },
+  "additionalSupport": {
+    "NO_RELATION": 19,
+    "USED_FOR": 32,
+    "EVALUATED_ON": 16
+  },
+  "eligiblePairs": 1845,
+  "unresolvedPairs": 1577,
+  "knownPairCoverage": 0.14525745257452574,
+  "completeRelationDocuments": 6,
+  "positiveEVALSourceDocuments": 3,
+  "maxMarkedTokens": 333,
+  "strictBIOAllNERPassed": true,
+  "NERFieldsUnchanged": true,
+  "independentHumanGold": false,
+  "devContentAccessed": false,
+  "testContentAccessed": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false
+}

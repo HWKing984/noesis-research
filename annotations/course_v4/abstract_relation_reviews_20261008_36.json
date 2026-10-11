@@ -1,0 +1,33 @@
+{
+ "provider":"OpenAI via Codex","model":"unknown_codex_model","independent":false,
+ "reviews":[
+  {"split":"train","arxivId":"2008.10400","reason":"Confirmed the explicit MNIST test accuracy for CNN/ensemble systems. Batch normalization and activation are not separately evaluated by assumption."},
+  {"split":"train","arxivId":"2208.08485","reason":"Confirmed only the complex GCN variant's two stated application tasks; generic GCN pairs retain uncertainty."},
+  {"split":"train","arxivId":"2501.02474","reason":"Confirmed our model resolves to GE-FSOD on both named datasets, not all individual components. Repeated aliases count as mentions, not distinct studies."},
+  {"split":"train","arxivId":"2501.06756","reason":"Role contrast is specific to LNSPL propagation versus EFGD placement-generation output. Keep all other anomaly/placement/transmission combinations unknown, not blanket negatives."},
+  {"split":"train","arxivId":"2107.03374","reason":"Confirmed HumanEval comparison plus repeated-sampling follow-up on the same problems. GPT-3 zero successes is still evaluated and used, not a negative. Do not evaluate the generic GPT family separately."},
+  {"split":"train","arxivId":"1606.05250","reason":"Confirmed dataset/full-name coreference and logistic regression answer-span evaluation. No named model is invented for the unspecified simple baseline."},
+  {"split":"train","arxivId":"2110.14168","reason":"Confirmed model/verifier/finetuning comparative benchmark context; do not equate the generative transformer with the verifier on all task pairs."},
+  {"split":"train","arxivId":"1609.02907","reason":"The spectral graph construction is explicitly the semi-supervised approach's method. Datasets are unnamed, so no fabricated citation-network names or evaluations."},
+  {"split":"train","arxivId":"2509.00025","reason":"Preserve LTSMs source spelling; SVM/CNN/LTSM/ResNet34 address the stated SER task. Augmentation and transfer-training role pairs remain deferred."},
+  {"split":"train","arxivId":"2008.07342","reason":"Confirmed DoubleWindowLSTM-CP prediction alias references. Correlation/dimensionality-reduction stages are not automatically declared prediction operators."},
+  {"split":"train","arxivId":"2410.14398","reason":"DNG named experiments are explicit; named base Stable Diffusion and limited NP performance do not establish absence or a separately attributed dataset evaluation."},
+  {"split":"train","arxivId":"2512.15363","reason":"CS-TDS resolves to our benchmark suite; query-method roles and multi-agent extraction are separately supported. No new dataset/entity normalization is applied."},
+  {"split":"train","arxivId":"2503.03790","reason":"The two negatives concern explicitly contrasted module outputs, not the whole DDCSR pipeline. Both modules contribute upstream/downstream but the source attributes each prediction operation to a different module."},
+  {"split":"train","arxivId":"2509.20659","reason":"Both the earlier and adapted fine-tuning approaches are used for beam prediction; inferior performance is not NO_RELATION. This is metadata annotation, not radio control implementation."},
+  {"split":"train","arxivId":"1910.12770","reason":"Confirmed UCF101 evaluation versus comparator ImageNet initialization roles in one explicit passage. These are document-supported negatives, not world-level claims that Skip-Clip was never tested elsewhere."},
+  {"split":"dev","arxivId":"1903.09296","reason":"Keep CBFL disease-incidence/patient-response target unspecified; only opening general machine-learning task claims are resolved."},
+  {"split":"dev","arxivId":"2411.06463","reason":"Confirmed pruning-input CNN/GoogleNet/ResNet/MobileNet versus RL-Pruner operator contrast. Do not invent negative relations for reinforcement-learning/pruning combinations merely because direct support is missing."},
+  {"split":"dev","arxivId":"2404.09802","reason":"Detection study explicitly compares the listed families/architectures; poorer baselines remain used. This is defensive classification, not attack generation."},
+  {"split":"dev","arxivId":"1907.02544","reason":"Confirmed only BigBiGAN gets the ImageNet evaluation. BigGAN extension and generic GAN background remain unresolved on dataset/unsupported representation pairs."},
+  {"split":"dev","arxivId":"2501.17123","reason":"All comparison models explicitly serve the same defensive detection benchmark. Unnamed data cannot become DATASET entities or EVALUATED_ON labels."},
+  {"split":"dev","arxivId":"1904.04163","reason":"Confirmed Penn Treebank perplexity and Wall Street Journal WER scopes; methods measured as a combined procedure are not isolated ablation claims. Original N-gram dataset pair remains unknown."},
+  {"split":"dev","arxivId":"2411.11752","reason":"Confirmed system-level functions separately from LLM interpretation, GenAI creation and text-to-3D creation. No broad negative component-function filling."},
+  {"split":"dev","arxivId":"2001.11639","reason":"ParkingSticker experiment explicit. PASCAL VOC remains only contextual and UNRESOLVED, preserving the prior conservative judgment instead of manufacturing a dataset negative."},
+  {"split":"dev","arxivId":"2108.00668","reason":"The five method occurrences and two task wordings name the same civilian communication completion-time objective; only bibliographic labels, no UAV policy or hardware changes."},
+  {"split":"dev","arxivId":"2207.11187","reason":"TaDaa assignment/recommendation outputs are explicit; hoped-for human issue resolution is left unknown rather than called performed or a forced negative."},
+  {"split":"dev","arxivId":"2307.15425","reason":"Resolve compared concrete SDG/GPT-3.5 model mentions only; general LLM discussion remains unknown."},
+  {"split":"dev","arxivId":"1906.08977","reason":"DAR and RNN synthesis roles are supported; prenet-to-task and postprocessor-to-spectral claims remain unknown. Unnamed Chinese corpus stays unnamed."},
+  {"split":"dev","arxivId":"2503.13503","reason":"Confirmed framework operator versus assessed LLM object distinction. All negatives are scoped to the claimed assessment operator in this abstract; no universal denial of LLM capabilities."}
+ ]
+}

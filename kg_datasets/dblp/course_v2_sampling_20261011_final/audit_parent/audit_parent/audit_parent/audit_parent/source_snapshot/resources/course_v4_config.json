@@ -1,0 +1,16 @@
+{
+  "version": "course-v4-weak-1",
+  "labelSource": "ai_pseudo",
+  "textKind": "title",
+  "seed": 20261005,
+  "sampleCounts": {"train": 1600, "dev": 200, "test": 200},
+  "splitRatios": {"train": 0.8, "dev": 0.1, "test": 0.1},
+  "batchSize": 25,
+  "entityLabels": ["METHOD", "TASK", "DATASET"],
+  "bioLabels": ["O", "B-METHOD", "I-METHOD", "B-TASK", "I-TASK", "B-DATASET", "I-DATASET"],
+  "relationPairs": {"USED_FOR": ["METHOD", "TASK"], "EVALUATED_ON": ["METHOD", "DATASET"]},
+  "relationLabels": ["USED_FOR", "EVALUATED_ON", "NO_RELATION", "UNRESOLVED"],
+  "coordinationPolicy": "separate_group_mentions_quarantine_entire_document",
+  "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+  "legacyCandidatesPolicy": "all_historical_candidate_publications_and_groups_train_only"
+}

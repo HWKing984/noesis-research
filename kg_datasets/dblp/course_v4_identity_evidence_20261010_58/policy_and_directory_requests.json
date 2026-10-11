@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://dblp.dagstuhl.de/robots.txt",
+    "requestedAtUTC": "2026-10-10T02:00:52.300144+00:00",
+    "status": 200,
+    "finalURL": "https://dblp.dagstuhl.de/robots.txt",
+    "bytes": 4125,
+    "sha256": "e7c9d8ab803235ba162d0957c6be02270e11d8c79f2a457a650ebbb090130594",
+    "text": "User-agent: AddSearchBot\nUser-agent: AgentTimes\nUser-agent: AI2Bot\nUser-agent: AI2Bot-DeepResearchEval\nUser-agent: Ai2Bot-Dolma\nUser-agent: aiHitBot\nUser-agent: AIWebIndex\nUser-agent: amazon-kendra\nUser-agent: amazon-QBusiness\nUser-agent: Amazonbot\nUser-agent: AmazonBuyForMe\nUser-agent: Amzn-SearchBot\nUser-agent: Amzn-User\nUser-agent: Andibot\nUser-agent: Anomura\nUser-agent: anthropic-ai\nUser-agent: ApifyBot\nUser-agent: ApifyWebsiteContentCrawler\nUser-agent: Applebot\nUser-agent: Applebot-Extended\nUser-agent: Aranet-SearchBot\nUser-agent: atlassian-bot\nUser-agent: Awario\nUser-agent: AzureAI-SearchBot\nUser-agent: bedrockbot\nUser-agent: bigsur.ai\nUser-agent: Bravebot\nUser-agent: Brightbot\nUser-agent: Brightbot 1.0\nUser-agent: BuddyBot\nUser-agent: Bytespider\nUser-agent: Channel3Bot\nUser-agent: ChatGLM-Spider\nUser-agent: ChatGPT Agent\nUser-agent: ChatGPT-User\nUser-agent: Claude-Code\nUser-agent: Claude-SearchBot\nUser-agent: Claude-User\nUser-agent: Claude-Web\nUser-agent: ClaudeBot\nUser-agent: Cloudflare-AutoRAG\nUser-agent: CloudVertexBot\nUser-agent: Code\nUser-agent: cohere-ai\nUser-agent: cohere-training-data-crawler\nUser-agent: Cotoyogi\nUser-agent: CragCrawler\nUser-agent: Crawl4AI\nUser-agent: Crawlspace\nUser-agent: Cursor\nUser-agent: Datenbank Crawler\nUser-agent: DeepSeekBot\nUser-agent: Devin\nUser-agent: Diffbot\nUser-agent: DuckAssistBot\nUser-agent: Echobot Bot\nUser-agent: EchoboxBot\nUser-agent: ExaBot\nUser-agent: FacebookBot\nUser-agent: facebookexternalhit\nUser-agent: Factset_spyderbot\nUser-agent: FirecrawlAgent\nUser-agent: FriendlyCrawler\nUser-agent: GeistHaus-PageFetcher\nUser-agent: Gemini-Deep-Research\nUser-agent: Google-Agent\nUser-agent: Google-CloudVertexBot\nUser-agent: Google-Extended\nUser-agent: Google-Firebase\nUser-agent: Google-Gemini-CLI\nUser-agent: Google-NotebookLM\nUser-agent: GoogleAgent-Mariner\nUser-agent: GoogleAgent-URLContext\nUser-agent: GoogleOther\nUser-agent: GoogleOther-Image\nUser-agent: GoogleOther-Video\nUser-agent: GPTBot\nUser-agent: HenkBot\nUser-agent: iAskBot\nUser-agent: iaskspider\nUser-agent: iaskspider/2.0\nUser-agent: IbouBot\nUser-agent: ICC-Crawler\nUser-agent: ImagesiftBot\nUser-agent: imageSpider\nUser-agent: img2dataset\nUser-agent: ISSCyberRiskCrawler\nUser-agent: kagi-fetcher\nUser-agent: Kangaroo Bot\nUser-agent: Kimi-User\nUser-agent: KlaviyoAIBot\nUser-agent: KunatoCrawler\nUser-agent: laion-huggingface-processor\nUser-agent: LAIONDownloader\nUser-agent: LCC\nUser-agent: LinerBot\nUser-agent: Linguee Bot\nUser-agent: LinkupBot\nUser-agent: Manus-User\nUser-agent: meta-externalagent\nUser-agent: Meta-ExternalAgent\nUser-agent: meta-externalfetcher\nUser-agent: Meta-ExternalFetcher\nUser-agent: meta-webindexer\nUser-agent: MistralAI-User\nUser-agent: MistralAI-User/1.0\nUser-agent: Mozilla-Tabstack\nUser-agent: MyCentralAIScraperBot\nUser-agent: NagetBot\nUser-agent: netEstate Imprint Crawler\nUser-agent: newsai\nUser-agent: NotebookLM\nUser-agent: NovaAct\nUser-agent: OAI-SearchBot\nUser-agent: omgili\nUser-agent: omgilibot\nUser-agent: OpenAI\nUser-agent: opencode\nUser-agent: Operator\nUser-agent: PanguBot\nUser-agent: Panscient\nUser-agent: panscient.com\nUser-agent: Perplexity-User\nUser-agent: PerplexityBot\nUser-agent: PetalBot\nUser-agent: PhindBot\nUser-agent: Poggio-Citations\nUser-agent: Poseidon Research Crawler\nUser-agent: QualifiedBot\nUser-agent: Querit-SearchBot\nUser-agent: QueritBot\nUser-agent: QuillBot\nUser-agent: quillbot.com\nUser-agent: SBIntuitionsBot\nUser-agent: Scrapy\nUser-agent: SemrushBot-OCOB\nUser-agent: SemrushBot-SWA\nUser-agent: Shap-User\nUser-agent: ShapBot\nUser-agent: Sidetrade indexer bot\nUser-agent: Spider\nUser-agent: TavilyBot\nUser-agent: Terra Cotta\nUser-agent: TerraCotta\nUser-agent: Thinkbot\nUser-agent: TikTokSpider\nUser-agent: Timpibot\nUser-agent: TongyiBot\nUser-agent: Trae\nUser-agent: TwinAgent\nUser-agent: UseAI\nUser-agent: VelenPublicWebCrawler\nUser-agent: WARDBot\nUser-agent: Webzio-Extended\nUser-agent: webzio-extended\nUser-agent: wpbot\nUser-agent: WRTNBot\nUser-agent: YaK\nUser-agent: YandexAdditional\nUser-agent: YandexAdditionalBot\nUser-agent: YiyanBot\nUser-agent: YouBot\nUser-agent: ZanistaBot\nDisallow: /\n\nUser-agent: *\nDisallow: /\n"
+  },
+  {
+    "url": "https://dblp.uni-trier.de/robots.txt",
+    "requestedAtUTC": "2026-10-10T02:00:54.736395+00:00",
+    "status": 200,
+    "finalURL": "https://dblp.uni-trier.de/robots.txt",
+    "bytes": 4125,
+    "sha256": "e7c9d8ab803235ba162d0957c6be02270e11d8c79f2a457a650ebbb090130594",
+    "text": "User-agent: AddSearchBot\nUser-agent: AgentTimes\nUser-agent: AI2Bot\nUser-agent: AI2Bot-DeepResearchEval\nUser-agent: Ai2Bot-Dolma\nUser-agent: aiHitBot\nUser-agent: AIWebIndex\nUser-agent: amazon-kendra\nUser-agent: amazon-QBusiness\nUser-agent: Amazonbot\nUser-agent: AmazonBuyForMe\nUser-agent: Amzn-SearchBot\nUser-agent: Amzn-User\nUser-agent: Andibot\nUser-agent: Anomura\nUser-agent: anthropic-ai\nUser-agent: ApifyBot\nUser-agent: ApifyWebsiteContentCrawler\nUser-agent: Applebot\nUser-agent: Applebot-Extended\nUser-agent: Aranet-SearchBot\nUser-agent: atlassian-bot\nUser-agent: Awario\nUser-agent: AzureAI-SearchBot\nUser-agent: bedrockbot\nUser-agent: bigsur.ai\nUser-agent: Bravebot\nUser-agent: Brightbot\nUser-agent: Brightbot 1.0\nUser-agent: BuddyBot\nUser-agent: Bytespider\nUser-agent: Channel3Bot\nUser-agent: ChatGLM-Spider\nUser-agent: ChatGPT Agent\nUser-agent: ChatGPT-User\nUser-agent: Claude-Code\nUser-agent: Claude-SearchBot\nUser-agent: Claude-User\nUser-agent: Claude-Web\nUser-agent: ClaudeBot\nUser-agent: Cloudflare-AutoRAG\nUser-agent: CloudVertexBot\nUser-agent: Code\nUser-agent: cohere-ai\nUser-agent: cohere-training-data-crawler\nUser-agent: Cotoyogi\nUser-agent: CragCrawler\nUser-agent: Crawl4AI\nUser-agent: Crawlspace\nUser-agent: Cursor\nUser-agent: Datenbank Crawler\nUser-agent: DeepSeekBot\nUser-agent: Devin\nUser-agent: Diffbot\nUser-agent: DuckAssistBot\nUser-agent: Echobot Bot\nUser-agent: EchoboxBot\nUser-agent: ExaBot\nUser-agent: FacebookBot\nUser-agent: facebookexternalhit\nUser-agent: Factset_spyderbot\nUser-agent: FirecrawlAgent\nUser-agent: FriendlyCrawler\nUser-agent: GeistHaus-PageFetcher\nUser-agent: Gemini-Deep-Research\nUser-agent: Google-Agent\nUser-agent: Google-CloudVertexBot\nUser-agent: Google-Extended\nUser-agent: Google-Firebase\nUser-agent: Google-Gemini-CLI\nUser-agent: Google-NotebookLM\nUser-agent: GoogleAgent-Mariner\nUser-agent: GoogleAgent-URLContext\nUser-agent: GoogleOther\nUser-agent: GoogleOther-Image\nUser-agent: GoogleOther-Video\nUser-agent: GPTBot\nUser-agent: HenkBot\nUser-agent: iAskBot\nUser-agent: iaskspider\nUser-agent: iaskspider/2.0\nUser-agent: IbouBot\nUser-agent: ICC-Crawler\nUser-agent: ImagesiftBot\nUser-agent: imageSpider\nUser-agent: img2dataset\nUser-agent: ISSCyberRiskCrawler\nUser-agent: kagi-fetcher\nUser-agent: Kangaroo Bot\nUser-agent: Kimi-User\nUser-agent: KlaviyoAIBot\nUser-agent: KunatoCrawler\nUser-agent: laion-huggingface-processor\nUser-agent: LAIONDownloader\nUser-agent: LCC\nUser-agent: LinerBot\nUser-agent: Linguee Bot\nUser-agent: LinkupBot\nUser-agent: Manus-User\nUser-agent: meta-externalagent\nUser-agent: Meta-ExternalAgent\nUser-agent: meta-externalfetcher\nUser-agent: Meta-ExternalFetcher\nUser-agent: meta-webindexer\nUser-agent: MistralAI-User\nUser-agent: MistralAI-User/1.0\nUser-agent: Mozilla-Tabstack\nUser-agent: MyCentralAIScraperBot\nUser-agent: NagetBot\nUser-agent: netEstate Imprint Crawler\nUser-agent: newsai\nUser-agent: NotebookLM\nUser-agent: NovaAct\nUser-agent: OAI-SearchBot\nUser-agent: omgili\nUser-agent: omgilibot\nUser-agent: OpenAI\nUser-agent: opencode\nUser-agent: Operator\nUser-agent: PanguBot\nUser-agent: Panscient\nUser-agent: panscient.com\nUser-agent: Perplexity-User\nUser-agent: PerplexityBot\nUser-agent: PetalBot\nUser-agent: PhindBot\nUser-agent: Poggio-Citations\nUser-agent: Poseidon Research Crawler\nUser-agent: QualifiedBot\nUser-agent: Querit-SearchBot\nUser-agent: QueritBot\nUser-agent: QuillBot\nUser-agent: quillbot.com\nUser-agent: SBIntuitionsBot\nUser-agent: Scrapy\nUser-agent: SemrushBot-OCOB\nUser-agent: SemrushBot-SWA\nUser-agent: Shap-User\nUser-agent: ShapBot\nUser-agent: Sidetrade indexer bot\nUser-agent: Spider\nUser-agent: TavilyBot\nUser-agent: Terra Cotta\nUser-agent: TerraCotta\nUser-agent: Thinkbot\nUser-agent: TikTokSpider\nUser-agent: Timpibot\nUser-agent: TongyiBot\nUser-agent: Trae\nUser-agent: TwinAgent\nUser-agent: UseAI\nUser-agent: VelenPublicWebCrawler\nUser-agent: WARDBot\nUser-agent: Webzio-Extended\nUser-agent: webzio-extended\nUser-agent: wpbot\nUser-agent: WRTNBot\nUser-agent: YaK\nUser-agent: YandexAdditional\nUser-agent: YandexAdditionalBot\nUser-agent: YiyanBot\nUser-agent: YouBot\nUser-agent: ZanistaBot\nDisallow: /\n\nUser-agent: *\nDisallow: /\n"
+  },
+  {
+    "url": "https://pub.orcid.org/robots.txt",
+    "requestedAtUTC": "2026-10-10T02:01:37.644356+00:00",
+    "status": 200,
+    "finalURL": "https://pub.orcid.org/robots.txt",
+    "bytes": 25,
+    "sha256": "efdb5938a9736727f5cce2b60355588e4fa541d19d022d222d8a09b8efd5dcce",
+    "text": "User-agent: *\nDisallow: /"
+  },
+  {
+    "url": "https://api.crossref.org/robots.txt",
+    "requestedAtUTC": "2026-10-10T02:02:12.575588+00:00",
+    "status": 404,
+    "finalURL": "https://api.crossref.org/robots.txt",
+    "bytes": 105,
+    "sha256": "e61a074ca2e4f9d188e05a2fbb207940a17a1a2edf18445b02f985e8f7e1bde1",
+    "text": "{\"status\":\"error\",\"message-type\":\"route-not-found\",\"message-version\":\"1.0.0\",\"message\":\"Route not found\"}"
+  },
+  {
+    "url": "https://people.epfl.ch/robots.txt",
+    "requestedAtUTC": "2026-10-10T02:03:42.924516+00:00",
+    "status": 200,
+    "finalURL": "https://people.epfl.ch/robots.txt",
+    "bytes": 99,
+    "sha256": "2f15987e4606501202b9d337085439339e53a374e3d194847192c12f85ba78f8",
+    "text": "# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file\n"
+  },
+  {
+    "url": "https://people.epfl.ch/thanh.huynh",
+    "requestedAtUTC": "2026-10-10T02:03:55.431393+00:00",
+    "status": 404,
+    "finalURL": "https://people.epfl.ch/thanh.huynh",
+    "bytes": 608,
+    "sha256": "22e199b89c96f2c6f14ff76f0cb5767052c605a1c3cb3164b3e622b857cfe6c8",
+    "text": "<!doctype html>\n<html>\n  <head>\n    <title>\n      EPFL - people – Error\n    </title>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n    <meta name=\"theme-color\" content=\"#ff0000\">\n\n    <link rel=\"stylesheet\" href=\"/assets/error-86dda5d3b7ea43153bcc87c53c944a94e9b3daa23c3a12a5130746711fd7a0c5.css\" />\n  </head>\n  <body>\n    <div id=\"error\">\n      <h1>404</h1>\n<h2>La page que vous cherchez n'existe pas</h2>\n<hr>\n<h2>The page you were looking for doesn't exist</h2>\n\n    </div>\n  </body>\n</html>\n"
+  }
+]

@@ -1,0 +1,8 @@
+﻿arxivId,headId,tailId,reviewTarget,taskRole,priority,evidenceHint,reviewNote
+2008.10400,e11,e13,USED_FOR,training_augmentation,high,Rotation and translation is used to augment training data.,训练增广操作，需确认 TASK 粒度
+2008.10400,e12,e13,USED_FOR,training_augmentation,high,Rotation and translation is used to augment training data.,与上一对共享同一句证据，不是独立论文
+2501.02474,e3,e4,USED_FOR,background_method_use,medium-high,While deep learning methods have achieved remarkable success in remote sensing object detection,背景用途，不是本论文 GE-FSOD 评测
+2312.03556,e24,e25,USED_FOR,downstream_application,medium-high,Our findings reveal that PVA ensures good identity preservation,先裁决 identity preservation 是否属于 TASK
+2501.06756,e10,e11,USED_FOR,component_operation,medium,"EFGD algorithm, which utilizes a diffusion process to generate optimal sensor placement strategies",组件贡献，不自动继承整体算法角色
+1606.05250,e4,e1,EVALUATED_ON,not_applicable,audit-evidence,"We build a strong logistic regression model, which achieves an F1 score of 51.0%",保留既有标签，增加 SQuAD 全称前文上下文证据
+2107.03374,e9,e5,EVALUATED_ON,not_applicable,audit-evidence,"Using this method, we solve 70.2% of our problems with 100 samples per problem.",保留既有标签，增加 HumanEval antecedent 证据

@@ -1,0 +1,9 @@
+topicId:ID(Topic),name,:LABEL
+computer-vision,Computer Vision,Topic
+generative-ai,Generative AI,Topic
+graph-neural-network,Graph Neural Network,Topic
+knowledge-graph,Knowledge Graph,Topic
+large-language-model,Large Language Model,Topic
+machine-learning,Machine Learning,Topic
+natural-language-processing,Natural Language Processing,Topic
+reinforcement-learning,Reinforcement Learning,Topic

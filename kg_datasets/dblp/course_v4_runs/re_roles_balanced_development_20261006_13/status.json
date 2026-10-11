@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "mode": "fit-dev",
+  "trainingStarted": true,
+  "testEvaluated": false,
+  "testTokenized": false,
+  "humanGold": false,
+  "devUsedForGradient": false,
+  "createdAt": "2026-10-06T06:34:09.321722+00:00",
+  "config": {
+    "seed": 20261006,
+    "batch_size": 8,
+    "learning_rate": 2e-05,
+    "max_length": 128,
+    "epochs": 6,
+    "balanced_loss": true
+  },
+  "evaluationScope": "reference_entities_dev_selected_ai_reference_not_final_test",
+  "device": "cuda",
+  "cudaVersion": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "finishedAt": "2026-10-06T06:35:13.607373+00:00",
+  "elapsedSeconds": 64.29074699999182
+}

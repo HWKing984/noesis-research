@@ -1,0 +1,23 @@
+{
+  "version": "course_v2_entity_completion_v1",
+  "parent": "kg_datasets/dblp/course_v2_semantic_revision_20261010_final",
+  "parentManifestSha256": "ea2e488c9841aa430ae925bd3cdaf026a425f4b5efa3467c5da3d95ad3191e11",
+  "externalAudit": "D:/Users/Y7000P/Downloads/v2_semantic_revision_independent_audit_20261010.md",
+  "externalAuditSha256": "05799737da6d294549a27143ee6b37317ff3c4dbf80b110da511262dd3e3be4b",
+  "rules": {
+    "USED_FOR": "The source explicitly attributes performance, use, or a stated objective to this local method actor for this literal task. Includes background method use, training proxy, component operation and downstream application, with mandatory role metadata. Do not propagate a whole-model claim to its family or components; indirect contribution or co-occurrence alone is UNRESOLVED.",
+    "EVALUATED_ON": "Explicit source-local evaluation of the named method or strategy on the named dataset. Training data, initialization sources and component participation do not establish evaluation.",
+    "NO_RELATION": "Requires evidence denying this attributed use/evaluation at the task scope, not merely assignment of another direct executor. All five inherited operator-role contrasts remain review labels but are quarantined from ordinary RE targets pending scope adjudication.",
+    "METHOD": "Literal model/algorithm families, named models, technical architectural components, training or augmentation procedures; include negated method mentions for NER without implying use. Exclude parameter values, metrics, tensor objects and unqualified anaphoric generic model/component references.",
+    "TASK": "Literal research operations/objectives, including explicit action phrases and context-resolved inpainting mentions. Exclude bare application domains, data/modalities, intermediate output objects and performance metrics; do not invent an operation from an output noun.",
+    "DATASET": "Literal named datasets, regardless of training/evaluation role. No inferred benchmark from a title or link.",
+    "migration": "Preserve every prior mention and judgment via (start,end,text,label) anchors; assign contiguous source-order IDs after additions. Enumerate all legal pairs again, leave all added pairs UNRESOLVED.",
+    "export": "Source, roles, support groups, predicate spans and attribution are audit metadata, not features available at prediction time. Partial known-pair export is NOT document-complete RE supervision. No default admission to V1 trainers."
+  },
+  "trainingAllowed": false,
+  "inferenceAllowed": false,
+  "testContentAccessAllowed": false,
+  "productionMutationAllowed": false,
+  "automaticPromotionAllowed": false,
+  "independentHumanGold": false
+}

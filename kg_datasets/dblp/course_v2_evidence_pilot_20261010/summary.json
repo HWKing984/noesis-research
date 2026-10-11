@@ -1,0 +1,86 @@
+{
+  "version": "course_v2_evidence_pilot_v1",
+  "createdAtUTC": "2026-10-10T10:59:09.775009+00:00",
+  "status": "prepared_not_training_ready",
+  "abstractInventory": {
+    "queueDocuments": 70,
+    "NEREligibleDocuments": 65,
+    "excludedNERDocuments": 5,
+    "entitySupport": {
+      "METHOD": 458,
+      "TASK": 260,
+      "DATASET": 69
+    },
+    "relationSupport": {
+      "USED_FOR": 307,
+      "EVALUATED_ON": 64,
+      "NO_RELATION": 37,
+      "UNRESOLVED": 1949
+    },
+    "sourcePapersByClass": {
+      "METHOD": 60,
+      "TASK": 61,
+      "DATASET": 23,
+      "USED_FOR": 34,
+      "EVALUATED_ON": 14,
+      "NO_RELATION": 10,
+      "UNRESOLVED": 53
+    },
+    "completeRelationDocuments": 12
+  },
+  "titleInventory": {
+    "NERDocuments": 1219,
+    "entitySupport": {
+      "METHOD": 1545,
+      "TASK": 1039,
+      "DATASET": 12
+    },
+    "relationPairs": 975,
+    "relationSupport": {
+      "USED_FOR": 937,
+      "NO_RELATION": 35,
+      "EVALUATED_ON": 3
+    }
+  },
+  "pilotInventory": {
+    "queueDocuments": 12,
+    "NEREligibleDocuments": 12,
+    "excludedNERDocuments": 0,
+    "entitySupport": {
+      "METHOD": 79,
+      "TASK": 52,
+      "DATASET": 20
+    },
+    "relationSupport": {
+      "USED_FOR": 69,
+      "EVALUATED_ON": 17,
+      "NO_RELATION": 16,
+      "UNRESOLVED": 397
+    },
+    "sourcePapersByClass": {
+      "METHOD": 12,
+      "TASK": 12,
+      "DATASET": 9,
+      "USED_FOR": 9,
+      "EVALUATED_ON": 5,
+      "NO_RELATION": 5,
+      "UNRESOLVED": 11
+    },
+    "completeRelationDocuments": 1
+  },
+  "isolation": {
+    "publicationGroupAndArxivMetadataConflicts": 0,
+    "externalTrainOnlyPapers": 21,
+    "reservedTestTextOverlapChecked": false,
+    "notice": "Metadata identity isolation, not a new representative split or proof against all semantic/near-duplicate overlap. Reserved test text was not parsed."
+  },
+  "freshlyCollectedPapers": 0,
+  "newlyAnnotatedPapers": 0,
+  "pilotReviewPending": 12,
+  "inheritedAIReferencesNotHumanGold": true,
+  "testContentParsed": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "next": "Whole-source semantic review of twelve dossiers, then a separately locked training/evaluation snapshot; no automatic fit.",
+  "V1ProtectedFilesUnchanged": true
+}

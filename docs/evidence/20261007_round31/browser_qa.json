@@ -1,0 +1,30 @@
+{
+  "interaction": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"authorId\":\"homepages/f/DavidAForsyth\",\"result\":\"Denoising Monte Carlo Renders with Diffusion Models.\\n\\n2025 · 会议论文（inproceedings） · conf/3dim/VavilalaVF25\\n\\nDBLP原始记录 DOI 查看作者、候选关系与证据\\nCooperating RPN's Improve Few-Shot Object Detection.\\n\\n2020 · 期刊文章（article） · journals/corr/abs-2011-10142\\n\\nDBLP原始记录 查看作者、候选关系与证据\\nNO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles.\\n\\n2017 · 期刊文章（article） · journals/corr/LuSFF17\\n\\nDBLP原始记录 查看作者、候选关系与证据\",\"labels\":true,\"overflow\":false}\n```"
+      }
+    ]
+  },
+  "console": {
+    "content": [
+      {
+        "type": "text",
+        "text": "## Console messages\n<no console messages found>"
+      }
+    ]
+  },
+  "network": {
+    "content": [
+      {
+        "type": "text",
+        "text": "## Network requests\nShowing 1-9 of 9 (Page 1 of 1).\nreqid=1 GET http://127.0.0.1:8765/#paper=conf%2F3dim%2FVavilalaVF25&view=paper [200]\nreqid=2 GET http://127.0.0.1:8765/api/health [200]\nreqid=3 GET http://127.0.0.1:8765/favicon.ico [204]\nreqid=4 GET http://127.0.0.1:8765/api/publication?id=conf%2F3dim%2FVavilalaVF25 [200]\nreqid=5 GET http://127.0.0.1:8765/favicon.ico [204]\nreqid=6 GET http://127.0.0.1:8765/api/graph?id=conf%2F3dim%2FVavilalaVF25&mode=paper&limit=30 [200]\nreqid=7 GET http://127.0.0.1:8765/favicon.ico [204]\nreqid=8 GET http://127.0.0.1:8765/api/publications?q=&author=&authorId=homepages%2Ff%2FDavidAForsyth&venue=&method=&task=&dataset=&year=&offset=0&limit=20 [200]\nreqid=9 GET http://127.0.0.1:8765/favicon.ico [204]"
+      }
+    ]
+  },
+  "visualRegression": "INCONCLUSIVE: no matched identity-page baseline",
+  "coreWebVitals": "not measured",
+  "fullWCAG": "not evaluated",
+  "verdict": "SHIP WITH FIXES: local functional acceptance; model semantic reliability not promoted"
+}

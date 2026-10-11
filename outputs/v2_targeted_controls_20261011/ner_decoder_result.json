@@ -1,0 +1,182 @@
+{
+  "train": {
+    "metrics": {
+      "argmax": {
+        "micro": {
+          "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+          "truePositive": 930,
+          "predicted": 947,
+          "reference": 941,
+          "precision": 0.9820485744456178,
+          "recall": 0.9883103081827843,
+          "f1": 0.9851694915254238
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 513,
+            "predicted": 522,
+            "reference": 520,
+            "precision": 0.9827586206896551,
+            "recall": 0.9865384615384616,
+            "f1": 0.9846449136276392
+          },
+          "TASK": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 344,
+            "predicted": 352,
+            "reference": 348,
+            "precision": 0.9772727272727273,
+            "recall": 0.9885057471264368,
+            "f1": 0.9828571428571429
+          },
+          "DATASET": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 73,
+            "predicted": 73,
+            "reference": 73,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "legal": {
+        "micro": {
+          "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+          "truePositive": 932,
+          "predicted": 949,
+          "reference": 941,
+          "precision": 0.982086406743941,
+          "recall": 0.9904357066950054,
+          "f1": 0.9862433862433863
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 514,
+            "predicted": 524,
+            "reference": 520,
+            "precision": 0.9809160305343512,
+            "recall": 0.9884615384615385,
+            "f1": 0.9846743295019157
+          },
+          "TASK": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 345,
+            "predicted": 352,
+            "reference": 348,
+            "precision": 0.9801136363636364,
+            "recall": 0.9913793103448276,
+            "f1": 0.9857142857142858
+          },
+          "DATASET": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 73,
+            "predicted": 73,
+            "reference": 73,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      }
+    },
+    "invalidTransitions": {
+      "argmax": 9,
+      "legal": 0
+    },
+    "evaluationScope": "in_sample_training_label_diagnostic",
+    "referenceEncodingRoundtripPassed": 65
+  },
+  "dev": {
+    "metrics": {
+      "argmax": {
+        "micro": {
+          "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+          "truePositive": 198,
+          "predicted": 339,
+          "reference": 299,
+          "precision": 0.584070796460177,
+          "recall": 0.6622073578595318,
+          "f1": 0.6206896551724138
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 134,
+            "predicted": 190,
+            "reference": 173,
+            "precision": 0.7052631578947368,
+            "recall": 0.7745664739884393,
+            "f1": 0.7382920110192838
+          },
+          "TASK": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 50,
+            "predicted": 127,
+            "reference": 103,
+            "precision": 0.3937007874015748,
+            "recall": 0.4854368932038835,
+            "f1": 0.43478260869565216
+          },
+          "DATASET": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 14,
+            "predicted": 22,
+            "reference": 23,
+            "precision": 0.6363636363636364,
+            "recall": 0.6086956521739131,
+            "f1": 0.6222222222222222
+          }
+        }
+      },
+      "legal": {
+        "micro": {
+          "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+          "truePositive": 210,
+          "predicted": 369,
+          "reference": 299,
+          "precision": 0.5691056910569106,
+          "recall": 0.7023411371237458,
+          "f1": 0.6287425149700598
+        },
+        "perClass": {
+          "METHOD": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 138,
+            "predicted": 196,
+            "reference": 173,
+            "precision": 0.7040816326530612,
+            "recall": 0.7976878612716763,
+            "f1": 0.7479674796747967
+          },
+          "TASK": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 56,
+            "predicted": 147,
+            "reference": 103,
+            "precision": 0.38095238095238093,
+            "recall": 0.5436893203883495,
+            "f1": 0.448
+          },
+          "DATASET": {
+            "evaluationTarget": "v2_abstract_dev_selected_AI_weak_reference_not_final_test",
+            "truePositive": 16,
+            "predicted": 26,
+            "reference": 23,
+            "precision": 0.6153846153846154,
+            "recall": 0.6956521739130435,
+            "f1": 0.6530612244897959
+          }
+        }
+      }
+    },
+    "invalidTransitions": {
+      "argmax": 177,
+      "legal": 0
+    },
+    "evaluationScope": "exposed_dev_decoder_comparison",
+    "referenceEncodingRoundtripPassed": 20
+  }
+}

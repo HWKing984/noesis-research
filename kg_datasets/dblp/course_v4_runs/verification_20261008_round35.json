@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-08T02:36:49.567818+00:00",
+  "engineeringTests": 363,
+  "audit": {
+    "passed": true,
+    "engineeringTests": 363,
+    "trainDocuments": 29,
+    "devDocuments": 16,
+    "devQueueDocuments": 19,
+    "datasetReferenceDocuments": 4,
+    "strictCounts": {
+      "METHOD": {
+        "FP": 15,
+        "FN": 25
+      },
+      "TASK": {
+        "FP": 34,
+        "FN": 22
+      },
+      "DATASET": {
+        "FP": 11,
+        "FN": 2
+      }
+    },
+    "allEntityAgreementDocuments": 0,
+    "devMetricsRecomputedFromSavedSpans": true,
+    "eachEpochTrainCoverageVerified": true,
+    "modelRetrained": true,
+    "relationTrained": false,
+    "testEvaluated": false,
+    "testContentConsumed": false,
+    "modelPromoted": false,
+    "qualityPromotionPassed": false,
+    "databaseWritten": false,
+    "serviceRestarted": false,
+    "productionGraphManifestSha256": "eace8e388e5cbec2369e16534870aca145000ae678641cb7fb013eddc412ca1f",
+    "runManifestSha256": "95a3c250100aa89452af0381f142f4a6b9df3e1336a1c4ed956b386e01f5a269",
+    "bestWeightsSha256": "14a1cce3d3cf5da3ac61e6bd651d14713215879b5ce679bd56ec8d2b47e87a96",
+    "evaluationTarget": "dev_ai_reference_not_human_gold",
+    "scope": "Offline candidate and immutable artifacts audited. No new live browser acceptance or pipeline/final-test performance; source integrity hashing does not consume test text semantically."
+  },
+  "immutableSourceSha256": {
+    "kg_datasets/dblp/course_v4_training_inputs_17/manifest.json": "44b4cded1460294e23d7b6d53303ddace56296fb1c0f2eacff4d009c667df9ef",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/manifest.json": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+    "kg_datasets/dblp/course_v4_graph_20261007_18_final/manifest.json": "da86ef12159470ce99d8392e5a4d5f688ea1232a84ef433ab5b58e3c062186a7",
+    "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04/model.safetensors": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03/model.safetensors": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+    "kg_datasets/dblp/course_v4_graph_production_20261007_25/manifest.json": "246e695ec3aa0ae32af5287955f9acf1a6e8502ca1c56078b8538a34eb30126b",
+    "kg_datasets/dblp/course_v4_runs/refresh_final_test_20261007_29/test_result.json": "49fad7b77c58e18afc30ad01a0c1b864e2f26db1b2e45b25f46bbbc5d617351c",
+    "docs/evidence/20261007_round30/manifest.json": "3dda8e2fee98606c60a1070b380e612d7a8bff700ced92c0de7e1b98f1b9db28"
+  },
+  "previousVerificationSha256": "bc95ad870e46e30c9b9ea854581c862ccaba1539c3e3b027e7b7114aad2d8679",
+  "evidenceManifestSha256": "10cfc12b7be11e078f1a022418e8298d3f5e74ab06e18c2b758e96ac2d3d1b40",
+  "capturesSha256": "36ded8461363e56bdf74606525c75ce30c3bd5d9ced4fadec39ea638b879aa0a",
+  "modelRetrained": true,
+  "relationTrained": false,
+  "testEvaluated": false,
+  "qualityPromotionPassed": false,
+  "reportExpansionPaused": true
+}

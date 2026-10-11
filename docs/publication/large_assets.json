@@ -1,0 +1,482 @@
+{
+  "version": 1,
+  "publicationDate": "2026-10-11",
+  "branch": "codex/project-20261011",
+  "perFileThresholdBytes": 99614720,
+  "assets": [
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_authors_20261009_51/edges.jsonl",
+      "bytes": 162236501,
+      "kind": "compressed_graph",
+      "sha256": "8476c025c5c606c75088108437c96476e670836f6a9d3eed649cf5105e049ade",
+      "archive": "kg_datasets/dblp/course_v4_graph_authors_20261009_51/edges.jsonl.gz",
+      "archiveBytes": 27230585,
+      "archiveSha256": "8ccb75a64ac2f44ded5b598765f87bbb5d44061a8ed01ffad863ec36138fb744"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_authors_20261009_51/nodes.jsonl",
+      "bytes": 175352151,
+      "kind": "compressed_graph",
+      "sha256": "9713ebd39871cef1286e6b712f791937f307e16413263bd562c7142052060e62",
+      "archive": "kg_datasets/dblp/course_v4_graph_authors_20261009_51/nodes.jsonl.gz",
+      "archiveBytes": 20804001,
+      "archiveSha256": "656be85fa4f10dda3ec7b9fdc3b6f5f89f64d8eab201c203eae7f4e1242797ce"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_concepts_20261010_58/edges.jsonl",
+      "bytes": 162236501,
+      "kind": "compressed_graph",
+      "sha256": "4ee9f5a991e0c1d75333addb314d5a0d0e14895b4a76e62d5f2fdd8fd8b109ba",
+      "archive": "kg_datasets/dblp/course_v4_graph_concepts_20261010_58/edges.jsonl.gz",
+      "archiveBytes": 27210259,
+      "archiveSha256": "79a738c1ac5221f0ef874a74c392b34c1eda8dc8ee387a69c926f11f67e99142"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_concepts_20261010_58/nodes.jsonl",
+      "bytes": 181481695,
+      "kind": "compressed_graph",
+      "sha256": "8adcc4fdb030ccf35700d1c445ff112d27a6fec61fd9fe3180350674fd8bd060",
+      "archive": "kg_datasets/dblp/course_v4_graph_concepts_20261010_58/nodes.jsonl.gz",
+      "archiveBytes": 20960265,
+      "archiveSha256": "1d683211510a9977b061bdfc67b3b38dda49bb72e93f7c08a52385573c85d45c"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_production_20261007_25/edges.jsonl",
+      "bytes": 149901561,
+      "kind": "compressed_graph",
+      "sha256": "deb7537ebe83f35eab74a052f6c27f76fa2577148e2737f01a21145975aae151",
+      "archive": "kg_datasets/dblp/course_v4_graph_production_20261007_25/edges.jsonl.gz",
+      "archiveBytes": 25628487,
+      "archiveSha256": "734df707d9b89411c2d5bff2f830557d7c145b9fdab6467b7ac617f27cd8b654"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_production_20261007_25/nodes.jsonl",
+      "bytes": 141903085,
+      "kind": "compressed_graph",
+      "sha256": "94860ff9998c2d95f1a81dd52524995a754de5ba8c614434db0b381af3cd5023",
+      "archive": "kg_datasets/dblp/course_v4_graph_production_20261007_25/nodes.jsonl.gz",
+      "archiveBytes": 18290872,
+      "archiveSha256": "638ea0efba8e6ecf84028a29e3a6a638df23bd18691bcb80408f4b9401e23238"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_quality_20261009_51/edges.jsonl",
+      "bytes": 162236501,
+      "kind": "compressed_graph",
+      "sha256": "b9f203fc1bf4475d7ab96311fe80aba39d2ef23097c68e1225a13e59179bb666",
+      "archive": "kg_datasets/dblp/course_v4_graph_quality_20261009_51/edges.jsonl.gz",
+      "archiveBytes": 27211299,
+      "archiveSha256": "659a4bc2a37126e84e2f55874f57764a5402c3c276d9212d7860d5bee02dfd70"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_quality_20261009_51/nodes.jsonl",
+      "bytes": 181487574,
+      "kind": "compressed_graph",
+      "sha256": "556306df0a4890e3fbfaf1d24a1c39bc8c08ac6a0e0d16ef582c76c563c023fd",
+      "archive": "kg_datasets/dblp/course_v4_graph_quality_20261009_51/nodes.jsonl.gz",
+      "archiveBytes": 20963813,
+      "archiveSha256": "4f01f14919b4479015995fa43479425cb416692e0113fec434300871fa27b0ad"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31/edges.jsonl",
+      "bytes": 162236493,
+      "kind": "compressed_graph",
+      "sha256": "fc9d2e0aad07b3b216581c32d0f277b29037077ba4cc095d8fd4a3bacc2baad2",
+      "archive": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31/edges.jsonl.gz",
+      "archiveBytes": 27231069,
+      "archiveSha256": "90c474aafad12d9790905cbdd5a1cf230b9d40e11173bde3b39a4f53a285574f"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31/nodes.jsonl",
+      "bytes": 175351856,
+      "kind": "compressed_graph",
+      "sha256": "13b1f53c8652a156017453afdfaba74cf92e7066118e4b227643183fc5f2c649",
+      "archive": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31/nodes.jsonl.gz",
+      "archiveBytes": 20804223,
+      "archiveSha256": "c6bc9001496613854689b716b9a85c3ee1f638951cd47ab5ccaa1a9ad6293464"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31_ready/edges.jsonl",
+      "bytes": 162236493,
+      "kind": "compressed_graph",
+      "sha256": "130836f5447f2d994130d6de0272b3ab79d4d29684474e635442de4ec1f62776",
+      "archive": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31_ready/edges.jsonl.gz",
+      "archiveBytes": 27230406,
+      "archiveSha256": "ee5b97ddfb9ec52bc2816b8dd965c96597d40938ed73f5c648cb6dcc61a88559"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31_ready/nodes.jsonl",
+      "bytes": 175351856,
+      "kind": "compressed_graph",
+      "sha256": "84041f36d0e1842266f8b77c9445fe1c2ef77c8b1a5ee472fdd6fc40933988cf",
+      "archive": "kg_datasets/dblp/course_v4_graph_resolved_20261007_31_ready/nodes.jsonl.gz",
+      "archiveBytes": 20804047,
+      "archiveSha256": "88ce57035769d67b14327a4257f935ce08350d566dd2a457d4038dafb31e6b5a"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/ner/checkpoint_epoch_01/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "0b0615cfc9926a9ebd9097376517a17ff70157ba3b6e5566f622476a7823c584"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/ner/checkpoint_epoch_02/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "e726772a54ca52d12a5f28b13b13096a788b9be3bdbd7fbe7f7e439ff223921d"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/ner/checkpoint_epoch_04/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "df93480647db1abacaefb752a89980be9a5a1527ee0ec7a5367086f707353c96"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/re/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "bbef62ba667dc5f384370704444cbf544d0d661b9e69d5abd9a78c0dc6b0fc4e"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_benchmark_development_20261008_46/re/checkpoint_epoch_06/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "9b60cbfaa8beef7ce7010d2181164507446d03c50e7c8a12d31e5bfb69b32566"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_boundary_development_20261009_52/ner/checkpoint_epoch_06/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "8bb90459c66c8c8247e2c4d06078e675d272dbd4387df20070856bea9c9172a3"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_development_20261008_35/checkpoint_epoch_01/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "31daf6393d75768ed7c57432856cd0f545be67000bbd4c540c27bee9f5064946"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_development_20261008_35/checkpoint_epoch_02/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "fcd2987188a342d31bf6c5a809acb84c7e4f547b9bb5a0ecb0629e62b001a480"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_development_20261008_35/checkpoint_epoch_03/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "ea9bfdc879c42cfda3c2fef3fc2ced6c911be9ab90dcbd256df06136bb09414a"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_development_20261008_35/checkpoint_epoch_04/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "14a1cce3d3cf5da3ac61e6bd651d14713215879b5ce679bd56ec8d2b47e87a96"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_expansion_development_20261008_37/checkpoint_epoch_01/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "38ec781825dd6b0f7a6e5fdb77f5d10cb96c5d3d0d7551e5bcf04ceb43bfba71"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_expansion_development_20261008_37/checkpoint_epoch_02/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "585c051be2aef13f9e5631fcc360fbf50b230fa72608896d7073e1a294c30aec"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_expansion_development_20261008_37/checkpoint_epoch_03/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "92e3967ce1216c5269528d801fd7b005bfaba86f3d08038dadcebc3f990257bd"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_expansion_development_20261008_37/checkpoint_epoch_05/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "82a824df6f56dc10b250e5619ed9c4b95fb0ba858b8880b9dd3b42f15113ff0a"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_ner_expansion_development_20261008_37/checkpoint_epoch_06/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "b0b58eeda157d0de5943cc5831972df724230351f086477ed22029edf839f00a"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_relation_development_20261008_36/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "f0b580cbc725eb70f3a410795c59661f3036d78dbf1c7c544400ab5629c0e7e1"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/ner/checkpoint_epoch_01/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "7332b979e57e5affc1ef41947f92f839a4e5d86104fb09ff2927a6211b88dbd5"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/ner/checkpoint_epoch_02/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "d2b33bef96270ba14e37e89bccd8dcab537fabc868e13c0f23dd65470e99ab53"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/ner/checkpoint_epoch_03/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "3b9c1df289d3b28d7af998f9f9f9b9c1a597c8fa57bd2c17112608a2906db172"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/ner/checkpoint_epoch_04/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "787be4a3b8fca406d819185fa537ec715515bfcd31e1a1ac7bf527a20b615195"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/ner/checkpoint_epoch_05/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "68953ee50367904b07d1926bf9b5e81e024060bee74fea45002d8652300cc01b"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/ner/checkpoint_epoch_06/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "6baacb7c6c7f72cbbb2799c61224771fcad9e876e28c3213a0cc6b250bc1f21e"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/re/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "50787c95498a67fff13ff7235dda3aece7130411ae2af22c1c925ffb97f5fe42"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/re/checkpoint_epoch_04/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "d38ce17aa3f4283f614bc889f2e7c4ab5c9ae5eaa1b8b8024a3449879d2f14e9"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_revised_development_20261008_42/re/checkpoint_epoch_06/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "a05e40a819b1656864770646be7db6927e8cfc468f11cab667ba29ea937d4a0d"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/abstract_role_development_20261009_54/re/checkpoint_epoch_06/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "44470a364db2b4f5660a3808c821a70bcdf7fb48d055a43f766798c8b044c1cc"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/diverse_role_development_20261010_57/re/checkpoint_epoch_06/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "1cdcdf5580a8ab8d03b2c6173ff853e6a1962fc947851518673530f3e166f687"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_01/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "4c9129c886569c9a8815ac0470c7fd1a3f026ef3b578ed7bc5382d9554855900"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_02/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "1165447b5332a6065c91a1469af4bd6e4c2f9cd2c12a99064389442d59de07bd"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/checkpoint_epoch_01/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "1e777b3fc97f61fab1b11bc6f6d884d3b956e336765e234380b081a3c4222b74"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/checkpoint_epoch_03/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "de1756bc5d592cad50087ae9b09a59a33c355a025cde6a7516ac751c18a21778"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/checkpoint_epoch_05/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "d1498733c4ba5a772d0d1cfcc233b1ba52897569de336d0b967e1c6c7bcd0fac"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_smoke_20261006_01/model/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "853458ecc122bf2256efd71406153ad0e056e7043e9544a85c00cc45013e8196"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/ner_smoke_20261006_02/model/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "853458ecc122bf2256efd71406153ad0e056e7043e9544a85c00cc45013e8196"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/pair_window_development_20261010_60/re/checkpoint_epoch_06/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "79beab490c31d4a41062bc805dde4745602b81d486612af9ca5448ccf70bf33a"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_balanced_development_20261006_11/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439706620,
+      "kind": "model_weight",
+      "sha256": "0a6c6f0057c038395c6c71d48a829f8db3a8a3fe6d5f82578c05c9a0aff53237"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_development_20261006_10/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439706620,
+      "kind": "model_weight",
+      "sha256": "31a73698c92a3c6bce690f8c8d6494dea743f158a638816cdf83ed687741cf3f"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "0c4855f8f11523bd0fcb365e4eeb73c24225900f1710bfaa15dd4f28ef2d7fd0"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_02/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "01fe8ec8733c85b327317fe4017409ac03af161863f01f92aadc0d38acbc9e60"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15/checkpoint_epoch_03/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_expanded_development_20261007_28/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "74bc5fb008e6a1d4202a7fa6dbe42aba2b2c79496a591f7c7e30e211691bb48e"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_roles_allclass_development_20261006_14/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439706620,
+      "kind": "model_weight",
+      "sha256": "de9d59f67dcf7fda31d880c31aa91c4b9ab6195c21d3961632e7368c0eaa8aee"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_roles_allclass_development_20261006_14/checkpoint_epoch_02/model.safetensors",
+      "bytes": 439706620,
+      "kind": "model_weight",
+      "sha256": "f2a595205f0724f9895c9417204873e41bb2ec87a0a5e1fabcc1ca837d497c2e"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_roles_balanced_development_20261006_13/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439706620,
+      "kind": "model_weight",
+      "sha256": "de9d59f67dcf7fda31d880c31aa91c4b9ab6195c21d3961632e7368c0eaa8aee"
+    },
+    {
+      "path": "kg_datasets/dblp/course_v4_runs/re_roles_development_20261006_12/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439706620,
+      "kind": "model_weight",
+      "sha256": "80d998a22f2cd46b3295a745d149f59b797eb2995279740b41673822800b8ee0"
+    },
+    {
+      "path": "kg_datasets/dblp/dblp.xml.gz",
+      "bytes": 1099942087,
+      "kind": "original_corpus",
+      "sha256": "22f960525255e4c12b537e0d55b2d62bd6e1ec20087dec05f7688cf0c9daa3b7"
+    },
+    {
+      "path": "kg_datasets/imdb/name.basics.tsv.gz",
+      "bytes": 309481539,
+      "kind": "original_corpus",
+      "sha256": "76c349c522e6e70efe9ceea5ec8d5fbfead768d5a3e5db345bada2313c5f1419"
+    },
+    {
+      "path": "kg_datasets/imdb/title.basics.tsv.gz",
+      "bytes": 226578110,
+      "kind": "original_corpus",
+      "sha256": "bb8a74a8828889f1df997dcd9e46a8b41c45ba14c5dd82aafe83b43a4131eb64"
+    },
+    {
+      "path": "kg_datasets/imdb/title.crew.tsv.gz",
+      "bytes": 83030663,
+      "kind": "original_corpus",
+      "sha256": "e8cd552819971d85449e9b5037ddb488898feaf9ff859d53e2b90c0e6f2d6eb9"
+    },
+    {
+      "path": "kg_datasets/imdb/title.principals.tsv.gz",
+      "bytes": 781924819,
+      "kind": "original_corpus",
+      "sha256": "123ce1d4426f08d9392fe589e7e6ae866d481ae6577d6c32bfd0deb97845f699"
+    },
+    {
+      "path": "kg_datasets/imdb/title.ratings.tsv.gz",
+      "bytes": 8648837,
+      "kind": "original_corpus",
+      "sha256": "3d35ccddc2babe527e42ae33c86b92853e2a068ad78d331f601dca773b5ce296"
+    },
+    {
+      "path": "kg_datasets/models/gliner_medium_v21_40ec4193/model.safetensors",
+      "bytes": 780735696,
+      "kind": "model_weight",
+      "sha256": "922214c0c60f7835bb5c00f52ad1769d38518d5183f85de7bc03893a8403c023"
+    },
+    {
+      "path": "kg_datasets/models/scibert_24f92d32/pytorch_model.bin",
+      "bytes": 442221694,
+      "kind": "model_weight",
+      "sha256": "e492944d88ac97dee6baa547671d3c526a3d067676883efb058311f4e5882e1a"
+    },
+    {
+      "path": "outputs/title_expansion_once_20261010/ner/checkpoint_epoch_01/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "1e777b3fc97f61fab1b11bc6f6d884d3b956e336765e234380b081a3c4222b74"
+    },
+    {
+      "path": "outputs/title_expansion_once_20261010/ner/checkpoint_epoch_03/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "de1756bc5d592cad50087ae9b09a59a33c355a025cde6a7516ac751c18a21778"
+    },
+    {
+      "path": "outputs/title_expansion_once_20261010/ner/checkpoint_epoch_05/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "d1498733c4ba5a772d0d1cfcc233b1ba52897569de336d0b967e1c6c7bcd0fac"
+    },
+    {
+      "path": "outputs/title_expansion_once_20261010/re/checkpoint_epoch_01/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "74bc5fb008e6a1d4202a7fa6dbe42aba2b2c79496a591f7c7e30e211691bb48e"
+    },
+    {
+      "path": "outputs/v2_targeted_controls_20261011/weighted_re/best_model/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "222a1c29282912d8e284413f8622ad0f4906c76308fabbf9b30e5524461429df"
+    },
+    {
+      "path": "outputs/v2_textscope_once_20261011_run/ner/best_model/model.safetensors",
+      "bytes": 437356364,
+      "kind": "model_weight",
+      "sha256": "f2a13e4607ca84f70494b0ce9c3dd8f02086f9c64e06a79d552fc62572a08538"
+    },
+    {
+      "path": "outputs/v2_textscope_once_20261011_run/re/best_model/model.safetensors",
+      "bytes": 439715836,
+      "kind": "model_weight",
+      "sha256": "24656331eb70a6379856c58ba5a399958267267cc25f58615f8fc0778295315a"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "status": "failed_no_synthetic_fallback",
+  "errorType": "ModuleNotFoundError",
+  "error": "No module named 'transformers'"
+}

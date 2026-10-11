@@ -1,0 +1,15 @@
+{
+  "provider":"OpenAI via Codex",
+  "model":"unknown_codex_model",
+  "independent":false,
+  "reviews":[
+    {"index":0,"verdict":"confirm","reason":"Fashion-MNIST is an explicit named dataset; product counts and URLs are not task or method mentions."},
+    {"index":1,"verdict":"revise","reason":"GPT is the named model family; exclude the generic descriptor language model from its name boundary. Codex and GPT are both tied to Python code-writing in this excerpt.","entities":[{"text":"Codex","label":"METHOD"},{"text":"GPT","label":"METHOD"},{"text":"Python code-writing","label":"TASK"}]},
+    {"index":2,"verdict":"confirm","reason":"HumanEval is explicitly an evaluation set; GPT-3 and GPT-J have stated scores for the program-synthesis problems. Our model is a pronoun and is not imported as Codex from the preceding excerpt."},
+    {"index":3,"verdict":"confirm","reason":"The expanded Stanford Question Answering Dataset name and SQuAD acronym are separate mentions, with reading comprehension as the explicit task."},
+    {"index":4,"verdict":"revise","reason":"The expanded benchmark name excludes the generic trailing word benchmark. The term NLU tasks does not specify an individual task in this excerpt.","entities":[{"text":"General Language Understanding Evaluation","label":"DATASET"},{"text":"GLUE","label":"DATASET"}]},
+    {"index":5,"verdict":"confirm","reason":"GSM8K is explicitly a named dataset; generic current models are not resolved to named methods."},
+    {"index":6,"verdict":"confirm","reason":"The neural-network architecture is explicitly the basis of the approach for semi-supervised learning, supporting the local USED_FOR relation."},
+    {"index":7,"verdict":"confirm","reason":"SuperGLUE and the standalone GLUE are distinct benchmarks. Preserve GLUE occurrence 2, not the substring inside SuperGLUE. Language understanding is the task description."}
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "generated_at_utc": "2026-09-10T04:13:05.192376+00:00",
+  "source": {
+    "file": "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\dblp.xml.gz",
+    "bytes": 1099942087,
+    "md5": "41abb87b4e8b8a2e3c470efd6528ad88",
+    "snapshot": "2026-09-01"
+  },
+  "filter": {
+    "record_types": [
+      "article",
+      "inproceedings"
+    ],
+    "start_year": 2015,
+    "end_year": 2025,
+    "title_rule_version": "v1",
+    "sample_method": "deterministic reservoir sampling",
+    "sample_seed": 42,
+    "topic_patterns": {
+      "machine-learning": "\\bmachine learning\\b|\\bdeep learning\\b|\\bneural networks?\\b|\\brepresentation learning\\b|\\btransfer learning\\b|\\bfederated learning\\b",
+      "large-language-model": "\\blarge language models?\\b|\\bllms?\\b|\\bfoundation models?\\b|\\btransformers?\\b",
+      "natural-language-processing": "\\bnatural language processing\\b|\\bquestion answering\\b|\\binformation extraction\\b|\\bnamed entity recognition\\b|\\btext classification\\b|\\bmachine translation\\b",
+      "computer-vision": "\\bcomputer vision\\b|\\bobject detection\\b|\\bimage segmentation\\b|\\bimage recognition\\b|\\bvisual question answering\\b",
+      "knowledge-graph": "\\bknowledge graphs?\\b|\\bsemantic web\\b|\\blinked data\\b|\\bontology\\b|\\bontologies\\b|\\bentity linking\\b|\\brelation extraction\\b",
+      "reinforcement-learning": "\\breinforcement learning\\b|\\bmulti-agent reinforcement learning\\b|\\bintelligent agents?\\b",
+      "graph-neural-network": "\\bgraph neural networks?\\b|\\bgraph convolutional networks?\\b|\\bgraph representation learning\\b",
+      "generative-ai": "\\bgenerative ai\\b|\\bgenerative artificial intelligence\\b|\\bdiffusion models?\\b|\\btext-to-image\\b|\\bimage generation\\b"
+    }
+  },
+  "source_record_counts": {
+    "article": 4436484,
+    "book": 21602,
+    "data": 26565,
+    "incollection": 71169,
+    "inproceedings": 3960008,
+    "mastersthesis": 27,
+    "phdthesis": 157239,
+    "proceedings": 65382,
+    "www": 4189705
+  },
+  "filter_counts": {
+    "invalid_year": 3,
+    "no_ai_topic_match": 4155986,
+    "selected_candidate": 579500,
+    "year_out_of_range": 3661003
+  },
+  "candidate_count": 579500,
+  "candidate_topics": {
+    "computer-vision": 39938,
+    "generative-ai": 21288,
+    "graph-neural-network": 17814,
+    "knowledge-graph": 31924,
+    "large-language-model": 109536,
+    "machine-learning": 312088,
+    "natural-language-processing": 29475,
+    "reinforcement-learning": 52265
+  },
+  "candidate_years": {
+    "2015": 8894,
+    "2016": 11863,
+    "2017": 17242,
+    "2018": 25941,
+    "2019": 36420,
+    "2020": 46114,
+    "2021": 55952,
+    "2022": 64168,
+    "2023": 81823,
+    "2024": 108011,
+    "2025": 123072
+  },
+  "selected": {
+    "publications": 20000,
+    "persons": 72694,
+    "venues": 3205,
+    "topics": 8,
+    "authored_relationships": 88762,
+    "published_in_relationships": 19998,
+    "about_relationships": 21223,
+    "publication_types": {
+      "article": 11998,
+      "inproceedings": 8002
+    },
+    "years": {
+      "2015": 287,
+      "2016": 382,
+      "2017": 570,
+      "2018": 933,
+      "2019": 1326,
+      "2020": 1580,
+      "2021": 1990,
+      "2022": 2212,
+      "2023": 2752,
+      "2024": 3794,
+      "2025": 4174
+    },
+    "topic_assignments": {
+      "computer-vision": 1334,
+      "generative-ai": 744,
+      "graph-neural-network": 637,
+      "knowledge-graph": 1160,
+      "large-language-model": 3792,
+      "machine-learning": 10805,
+      "natural-language-processing": 961,
+      "reinforcement-learning": 1790
+    },
+    "publications_without_authors": 102,
+    "publications_without_venues": 2
+  },
+  "known_limitations": [
+    "AI topics are inferred from title keyword rules, not supplied by DBLP.",
+    "Person IDs are based on normalized author names; DBLP homepage alias mapping is not applied.",
+    "CITES, EDITED, PART_OF, and derived coauthor relationships are not included in v1."
+  ]
+}

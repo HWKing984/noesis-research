@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="20" failures="0" skipped="0" tests="20" time="3.081" timestamp="2026-10-08T12:44:28.289002+08:00" hostname="HWKing"><testcase classname="" name="docs.evidence.20261007_round27.sources.tests.test_course_graph" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_graph' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round26\sources\tests\test_course_graph.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round27\sources\tests\test_course_graph.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="docs.evidence.20261007_round29.sources.tests.test_course_graph" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_graph' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round26\sources\tests\test_course_graph.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round29\sources\tests\test_course_graph.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="docs.evidence.20261007_round30.sources.tests.test_course_graph" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_graph' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round26\sources\tests\test_course_graph.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round30\sources\tests\test_course_graph.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="kg_datasets.dblp.course_v4_runs.handoff_sources_20261006_17.annotations.course_v4.test_relation_20261006" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_relation_20261006' has this __file__ attribute:
+  D:\a-open_source\neo4j\annotations\course_v4\test_relation_20261006.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\handoff_sources_20261006_17\annotations\course_v4\test_relation_20261006.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_abstract_annotations" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_abstract_annotations' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261008_round33\sources\test_abstract_annotations.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_abstract_annotations.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_abstract_relation" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_abstract_relation' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261008_round36\sources\tests\test_abstract_relation.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_abstract_relation.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_abstract_v1" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_abstract_v1' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261008_round35\sources\tests\test_abstract_v1.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_abstract_v1.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_abstracts" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_abstracts' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261008_round32\sources\test_course_abstracts.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_abstracts.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_evidence" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_evidence' has this __file__ attribute:
+  D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\audit_sources_20261006_16\tests\test_course_evidence.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_evidence.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_graph" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_graph' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round26\sources\tests\test_course_graph.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_graph.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_ner_training" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_ner_training' has this __file__ attribute:
+  D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\audit_sources_20261006_16\tests\test_course_ner_training.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_ner_training.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_refresh" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_refresh' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round28\sources\tests\test_course_refresh.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_refresh.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_refresh_evaluation" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_refresh_evaluation' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round29\sources\tests\test_course_refresh_evaluation.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_refresh_evaluation.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_relation_test" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_relation_test' has this __file__ attribute:
+  D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\handoff_sources_20261006_17\tests\test_course_relation_test.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_relation_test.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_relation_training" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_relation_training' has this __file__ attribute:
+  D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\audit_sources_20261006_16\tests\test_course_relation_training.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_relation_training.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_report" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_report' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round28\sources\tests\test_course_report.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_report.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_runtime" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_runtime' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261008_round34\sources\tests\test_course_runtime.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_runtime.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_course_ui" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_course_ui' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261007_round30\sources\tests\test_course_ui.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_course_ui.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_expanded_abstract_ner" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_expanded_abstract_ner' has this __file__ attribute:
+  D:\a-open_source\neo4j\docs\evidence\20261008_round37\sources\tests\test_expanded_abstract_ner.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_expanded_abstract_ner.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_process_dblp_ai" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_process_dblp_ai' has this __file__ attribute:
+  D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\audit_sources_20261006_16\tests\test_process_dblp_ai.py
+which is not the same as the test file we want to collect:
+  D:\a-open_source\neo4j\tests\test_process_dblp_ai.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase></testsuite></testsuites>

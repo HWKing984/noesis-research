@@ -1,0 +1,712 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-37fbcfd267c857cc8c61",
+      "entityStatus": "unresolved",
+      "entityReason": "DEKGB may name a software framework rather than an extraction/inference method; title does not give its computational role.",
+      "entities": [
+        {
+          "text": "DEKGB",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Framework role is unresolved.",
+      "relations": [],
+      "notes": "Health knowledge graph is generic artifact, not a dataset name.\nAI self-review: DEKGB framework may be software rather than algorithm; keep unresolved role."
+    },
+    {
+      "sampleId": "sample-64300d0e2fa17fa8bb4a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Mapless Navigation of Autonomous Mobile Robot",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep RL is explicitly for mapless autonomous-robot navigation."
+        }
+      ],
+      "notes": "Retain mapless/navigation context.\nAI self-review: Deep RL explicit for mapless autonomous-robot navigation."
+    },
+    {
+      "sampleId": "sample-7efe80f65ea5607cf3d4",
+      "entityStatus": "unresolved",
+      "entityReason": "The security headline is a broad goal and the composite detector contains a possible explicit task with overlapping boundary choices.",
+      "entities": [
+        {
+          "text": "Virtual Reality Network Security",
+          "label": "TASK"
+        },
+        {
+          "text": "Interpretable Deep Learning-Based Intrusion Detection System",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Task-versus-composite-method coverage remains unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "An intrusion detector may support network security, but the security phrase does not specify a concrete computational task."
+        }
+      ],
+      "notes": "Do not count a broad security aim as a settled detection task.\nAI self-review: Security aim is broad, composite detector/task overlap unresolved."
+    },
+    {
+      "sampleId": "sample-349f4f40a640086a242c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Vision Transformer",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Vision transformer application in image classification is explicitly stated."
+        }
+      ],
+      "notes": "Generic application framing does not add entities.\nAI self-review: Vision-transformer image classification explicit."
+    },
+    {
+      "sampleId": "sample-5e852368c4db3af6c035",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "X-ray Transmission Image Annotation",
+          "label": "TASK"
+        },
+        {
+          "text": "Convolutional Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Cooperative Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The qualified CNNs explicitly annotate X-ray transmission images."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Cooperative machine learning is explicitly used for the annotation."
+        }
+      ],
+      "notes": "Data-efficient is resource-efficiency praise with no specific mechanism, excluded; cooperative learning mechanism retained.\nAI self-review: Data-efficient is an evaluative resource claim, not specified training mechanism; exclude it from CNN boundary."
+    },
+    {
+      "sampleId": "sample-462f62ac394a6f3e1672",
+      "entityStatus": "unresolved",
+      "entityReason": "Mutual Information may be an optimization criterion rather than a method; its role is not clear.",
+      "entities": [
+        {
+          "text": "Variational Auto-Encoder",
+          "label": "METHOD"
+        },
+        {
+          "text": "Self-Attention",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Mutual-information category and attention's direct task role remain unsettled.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The autoencoder is explicitly improved for image generation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Self-attention improves the encoder, but is not explicitly the direct image-generation instrument."
+        }
+      ],
+      "notes": "Do not turn every statistical quantity into an algorithm.\nAI self-review: Mutual information may be objective statistic and attention role indirect; unresolved retained."
+    },
+    {
+      "sampleId": "sample-2596fe7a337c5c5711a5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Detection Plant Disease",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Machine learning is explicitly for plant-disease detection."
+        }
+      ],
+      "notes": "Retain original ungrammatical phrase; orchid is example context, not dataset.\nAI self-review: Original Detection Plant Disease literal retained, learning use explicit."
+    },
+    {
+      "sampleId": "sample-02947261b1a42d0af78d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning Architectures Extended from Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Classification of Rice Leaf Diseases",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The transfer-extended deep architectures are explicitly for rice-leaf disease classification."
+        }
+      ],
+      "notes": "One explicit extended-architecture phrase; retain plant/disease target.\nAI self-review: Transfer-extended architecture complete as one method for rice disease classification."
+    },
+    {
+      "sampleId": "sample-f7076d68990a3c1410fd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Dynamic demand minimization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Smart transformer is electrical equipment in demand control, not a neural transformer; do not mislabel hardware.\nAI self-review: Smart transformer is electrical device, not neural model; demand minimization task remains."
+    },
+    {
+      "sampleId": "sample-b1ebfbd9b9c10e232ef9",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Detection in Power Systems",
+          "label": "TASK"
+        },
+        {
+          "text": "Iterative Reinforcement Learning Based Adversarial Training",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Training-versus-detector role is not explicit.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "UNRESOLVED",
+          "reason": "Adversarial training supports robust detection but is not explicitly the detector itself."
+        }
+      ],
+      "notes": "One composite training method; Robust removed from task.\nAI self-review: Adversarial training may support detector rather than directly detect; unresolved not negative."
+    },
+    {
+      "sampleId": "sample-ff3dd7e6cd102dab6240",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Attachment Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Image Generation",
+          "label": "TASK"
+        },
+        {
+          "text": "Semantic Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Three task names, no specific generation/segmentation algorithm supplied; do not relabel tasks as methods to force relations.\nAI self-review: Recognition/generation/segmentation are tasks with unnamed implementations, no forced method pair."
+    },
+    {
+      "sampleId": "sample-e8104cf26655db1788f3",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Linguistic Summarization of Black Box Computer Vision Models",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Explainable AI is broad aim/field; models are objects inside summarization task, not instruments.\nAI self-review: Linguistic summarization is concrete task over models; models are object not instrument."
+    },
+    {
+      "sampleId": "sample-ee90aff8a47467bb47cc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "physics-based simulation",
+          "label": "METHOD"
+        },
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "EIT-based tactile sensing",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Physics-based simulation is explicitly combined for tactile sensing."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Machine learning is explicitly combined for EIT tactile sensing."
+        }
+      ],
+      "notes": "Simulation is a recognizable computational technique family; EIT is sensing context.\nAI self-review: Simulation/learning explicitly combined for EIT tactile sensing."
+    },
+    {
+      "sampleId": "sample-98d14058865607432807",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Optimization of Healthcare Process Management",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Healthcare-process management optimization explicitly uses machine learning."
+        }
+      ],
+      "notes": "Retain healthcare process object.\nAI self-review: Healthcare-process optimization explicitly uses machine learning."
+    },
+    {
+      "sampleId": "sample-78e953f2a69da96403e6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Hyperspectral Image Classification",
+          "label": "TASK"
+        },
+        {
+          "text": "Multiple Class-Based Denoising Autoencoders",
+          "label": "METHOD"
+        },
+        {
+          "text": "Mixed Pixel Training Augmentation",
+          "label": "METHOD"
+        },
+        {
+          "text": "Morphological Operations",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Training augmentation's direct classification role remains unclear.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Hyperspectral classification is explicitly deep-learning based."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The denoising autoencoders are explicitly used for hyperspectral classification."
+        },
+        {
+          "head": "e4",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Mixed-pixel augmentation supplies training data, not directly the classifier."
+        },
+        {
+          "head": "e5",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Morphological operations are explicitly used in the classification procedure."
+        }
+      ],
+      "notes": "All named families preserved in order; no named hyperspectral dataset.\nAI self-review: Autoencoders/morphology classification roles explicit; augmentation direct classifier role unresolved."
+    },
+    {
+      "sampleId": "sample-8568efb9c4c7c81efd66",
+      "entityStatus": "unresolved",
+      "entityReason": "Phenological Similarity is a criterion/property rather than clearly a method; exact additional entity coverage is uncertain.",
+      "entities": [
+        {
+          "text": "Crop Classification",
+          "label": "TASK"
+        },
+        {
+          "text": "Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The similarity-based classification method is not explicit.",
+      "relations": [],
+      "notes": "SAR imagery is generic input; segmentation remains TASK.\nAI self-review: Phenological similarity criterion not a clearly named algorithm; coverage remains unresolved."
+    },
+    {
+      "sampleId": "sample-dc41279737df3f16f081",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Airplane Recognition from Remote Sensing Images",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Convolutional Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The deep CNN explicitly recognizes airplanes from remote-sensing images."
+        }
+      ],
+      "notes": "Retain remote-sensing modality.\nAI self-review: Remote-sensing airplane recognition explicitly uses deep CNN."
+    },
+    {
+      "sampleId": "sample-7b64216b6858bb033e28",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Foundation Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Earth Monitoring",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Natural Hazard Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Cross-headline method/task roles are not directly stated.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Foundation models are explicitly for earth monitoring."
+        },
+        {
+          "head": "e1",
+          "tail": "e4",
+          "label": "UNRESOLVED",
+          "reason": "The headline and subtitle do not explicitly establish every foundation model as the hazard segmenter."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "The deep model is explicitly for segmentation, but its broad earth-monitoring role is not directly asserted."
+        },
+        {
+          "head": "e3",
+          "tail": "e4",
+          "label": "USED_FOR",
+          "reason": "Deep-learning models are explicitly for natural-hazard segmentation."
+        }
+      ],
+      "notes": "Generalizable is a quality/transfer claim, not task qualifier.\nAI self-review: Headline/subtitle cross-method/task roles not all asserted, unresolved pairs retained."
+    },
+    {
+      "sampleId": "sample-6d8aeff4241637a60bfd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph-Theoretic Deep Representation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multi-Label Remote Sensing Image Retrieval",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The graph-theoretic representation learner is explicitly for the stated image retrieval."
+        }
+      ],
+      "notes": "Novel removed; multi-label is retained as retrieval output formulation.\nAI self-review: Graph-theoretic representation learner explicit for multilabel image retrieval."
+    },
+    {
+      "sampleId": "sample-e3d1fdf1fbcb45f96516",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "CO-Detector",
+          "label": "METHOD"
+        },
+        {
+          "text": "Complex Object Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "Cross-Part Feature Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "CO-Detector explicitly names the complex-object detector."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Cross-part feature learning is explicitly used for the detector."
+        }
+      ],
+      "notes": "Remote sensing is separated context; no false remote-sensing dataset.\nAI self-review: CO-Detector and cross-part feature learner explicit for complex-object detection."
+    },
+    {
+      "sampleId": "sample-1cf9e1ad806fa093c504",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Nearest Neighbor Under-sampling",
+          "label": "METHOD"
+        },
+        {
+          "text": "Vertical Federated Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Undersampling and vertical federation are explicit methods; financial domain is a field.\nAI self-review: Nearest-neighbor undersampling and vertical federation methods, finance broad field."
+    },
+    {
+      "sampleId": "sample-d492c9b392e0e785f726",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Tourist-village ontology is a conceptual artifact for management software, not a named dataset or algorithm; no explicit extraction task.\nAI self-review: Tourism ontology conceptual artifact, checked empty scoped result."
+    },
+    {
+      "sampleId": "sample-f9e8b4d3f73d6d9cd712",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Forced Selective Information Reduction",
+          "label": "METHOD"
+        },
+        {
+          "text": "Interpreting Multi-Layered Neural Networks",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Selective information reduction explicitly interprets multilayered networks."
+        }
+      ],
+      "notes": "The neural networks are the interpretation objects within the task, not nested instrument entities.\nAI self-review: Information reduction explicitly interprets network objects; no nested instrument network."
+    },
+    {
+      "sampleId": "sample-d00c6aebf37e476dd705",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Sentiment Analysis on Healthcare Product Campaigns",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Campaign sentiment analysis explicitly combines machine-learning models."
+        }
+      ],
+      "notes": "YouTube is source/platform and lexicons unnamed resources, not a named DATASET.\nAI self-review: YouTube platform and unnamed lexicons not DATASET; learning sentiment role explicit."
+    },
+    {
+      "sampleId": "sample-e455ebc6275fb4ea2344",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Comparison of City Performances",
+          "label": "TASK"
+        },
+        {
+          "text": "Statistical Linked Data Exploration",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "City performance comparison is explicitly through statistical linked-data exploration."
+        }
+      ],
+      "notes": "Statistical exploration identifies a computational procedure; Linked Data is not a named dataset.\nAI self-review: Statistical exploration explicit comparison procedure, linked data generic representation."
+    }
+  ]
+}

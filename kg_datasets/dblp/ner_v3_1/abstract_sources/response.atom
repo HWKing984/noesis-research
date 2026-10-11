@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/3Ec0B8Qb0gBcWYRyAFRvE9PlL4o</id>
+  <title>arXiv Query: search_query=&amp;id_list=2008.10400,2208.08300,2407.18827,2510.09914,2501.06756,2303.17448,2506.05972,2208.08485,2404.01036,2501.02474&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-05T06:05:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2008.10400,2208.08300,2407.18827,2510.09914,2501.06756,2303.17448,2506.05972,2208.08485,2404.01036,2501.02474" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2303.17448v3</id>
+    <title>NN-Copula-CD: A Copula-Guided Interpretable Neural Network for Change Detection in Heterogeneous Remote Sensing Images</title>
+    <updated>2024-09-19T14:32:45Z</updated>
+    <link href="https://arxiv.org/abs/2303.17448v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.17448v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Change detection (CD) in heterogeneous remote sensing images has been widely used for disaster monitoring and land-use management. In the past decade, the heterogeneous CD problem has significantly benefited from the development of deep neural networks (DNNs). However, the purely data-driven DNNs perform like a black box where the lack of interpretability limits the trustworthiness and controllability of DNNs in most practical CD applications. As a powerful knowledge-driven tool, copula theory performs well in modeling relationships among random variables. To enhance the interpretability of existing neural networks for CD, we propose a knowledge-data-driven heterogeneous CD method based on a copula-guided neural network, named NN-Copula-CD. In our NN-Copula-CD, the mathematical characteristics of copula are employed as the loss functions to supervise a neural network to learn the dependence between bi-temporal heterogeneous superpixel pairs, and then the changed regions are identified via binary classification based on the degrees of dependence of all the superpixel pairs in the bi-temporal images. We conduct in-depth experiments on three datasets with heterogeneous images, where both quantitative and visual results demonstrate the effectiveness of our proposed NN-Copula-CD method.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-30T15:20:21Z</published>
+    <arxiv:comment>The full version of this work is submitted to IEEE TGRS</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>IEEE Transactions on Geoscience and Remote Sensing, vol. 63, pp. 1-17, 2025, Art no. 4700817</arxiv:journal_ref>
+    <author>
+      <name>Weiming Li</name>
+    </author>
+    <author>
+      <name>Xueqian Wang</name>
+    </author>
+    <author>
+      <name>Gang Li</name>
+    </author>
+    <author>
+      <name>Baocheng Geng</name>
+    </author>
+    <author>
+      <name>Pramod K. Varshney</name>
+    </author>
+    <arxiv:doi>10.1109/TGRS.2024.3524639</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TGRS.2024.3524639" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.05972v5</id>
+    <title>Domain Adaptation for Big Data in Agricultural Image Analysis: A Comprehensive Review</title>
+    <updated>2025-08-30T09:20:30Z</updated>
+    <link href="https://arxiv.org/abs/2506.05972v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.05972v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With the wide application of computer vision in agriculture, image analysis has become the key to tasks such as crop health monitoring and pest detection. However, the significant domain shifts caused by environmental changes, different crop types, and diverse data acquisition methods seriously hinder the generalization ability of the model in cross-region, cross-season, and complex agricultural scenarios. This paper explores how domain adaptation (DA) techniques can address these challenges to improve cross-domain transferability in agricultural image analysis. DA is considered a promising solution in the case of limited labeled data, insufficient model adaptability, and dynamic changes in the field environment. This paper systematically reviews the latest advances in DA in agricultural images in recent years, focusing on application scenarios such as crop health monitoring, pest and disease detection, and fruit identification, in which DA methods have significantly improved cross-domain performance. We categorize DA methods into shallow learning and deep learning methods, including supervised, semi-supervised and unsupervised strategies, and pay special attention to the adversarial learning-based techniques that perform well in complex scenarios. In addition, this paper also reviews the main public datasets of agricultural images, and evaluates their advantages and limitations in DA research. Overall, this study provides a complete framework and some key insights that can be used as a reference for the research and development of domain adaptation methods in future agricultural vision tasks.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-06T10:52:10Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Xing Hu</name>
+    </author>
+    <author>
+      <name>Siyuan Chen</name>
+    </author>
+    <author>
+      <name>Qianqian Duan</name>
+    </author>
+    <author>
+      <name>Choon Ki Ahn</name>
+    </author>
+    <author>
+      <name>Huiliang Shang</name>
+    </author>
+    <author>
+      <name>Dawei Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2008.10400v2</id>
+    <title>An Ensemble of Simple Convolutional Neural Network Models for MNIST Digit Recognition</title>
+    <updated>2020-10-05T03:49:48Z</updated>
+    <link href="https://arxiv.org/abs/2008.10400v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2008.10400v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We report that a very high accuracy on the MNIST test set can be achieved by using simple convolutional neural network (CNN) models. We use three different models with 3x3, 5x5, and 7x7 kernel size in the convolution layers. Each model consists of a set of convolution layers followed by a single fully connected layer. Every convolution layer uses batch normalization and ReLU activation, and pooling is not used. Rotation and translation is used to augment training data, which is frequently used in most image classification tasks. A majority voting using the three models independently trained on the training data set can achieve up to 99.87% accuracy on the test set, which is one of the state-of-the-art results. A two-layer ensemble, a heterogeneous ensemble of three homogeneous ensemble networks, can achieve up to 99.91% test accuracy. The results can be reproduced by using the code at: https://github.com/ansh941/MnistSimpleCNN</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-08-12T09:27:05Z</published>
+    <arxiv:comment>10 pages, 12 figures, 7 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Sanghyeon An</name>
+    </author>
+    <author>
+      <name>Minjun Lee</name>
+    </author>
+    <author>
+      <name>Sanglee Park</name>
+    </author>
+    <author>
+      <name>Heerin Yang</name>
+    </author>
+    <author>
+      <name>Jungmin So</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08300v1</id>
+    <title>Transformer-Based Deep Learning Model for Stock Price Prediction: A Case Study on Bangladesh Stock Market</title>
+    <updated>2022-08-17T14:03:28Z</updated>
+    <link href="https://arxiv.org/abs/2208.08300v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08300v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In modern capital market the price of a stock is often considered to be highly volatile and unpredictable because of various social, financial, political and other dynamic factors. With calculated and thoughtful investment, stock market can ensure a handsome profit with minimal capital investment, while incorrect prediction can easily bring catastrophic financial loss to the investors. This paper introduces the application of a recently introduced machine learning model - the Transformer model, to predict the future price of stocks of Dhaka Stock Exchange (DSE), the leading stock exchange in Bangladesh. The transformer model has been widely leveraged for natural language processing and computer vision tasks, but, to the best of our knowledge, has never been used for stock price prediction task at DSE. Recently the introduction of time2vec encoding to represent the time series features has made it possible to employ the transformer model for the stock price prediction. This paper concentrates on the application of transformer-based model to predict the price movement of eight specific stocks listed in DSE based on their historical daily and weekly data. Our experiments demonstrate promising results and acceptable root mean squared error on most of the stocks.</summary>
+    <category term="q-fin.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-17T14:03:28Z</published>
+    <arxiv:comment>16 Pages, 14 Figures (including some containing subfigures)</arxiv:comment>
+    <arxiv:primary_category term="q-fin.ST"/>
+    <arxiv:journal_ref>Preprint of an article published in [International Journal of Computational Intelligence and Applications, Volume 22, No. 01, 2023] \c{opyright} [copyright World Scientific Publishing Company] [https://www.worldscientific.com/worldscinet/ijcia]</arxiv:journal_ref>
+    <author>
+      <name>Tashreef Muhammad</name>
+    </author>
+    <author>
+      <name>Anika Bintee Aftab</name>
+    </author>
+    <author>
+      <name>Md. Mainul Ahsan</name>
+    </author>
+    <author>
+      <name>Maishameem Meherin Muhu</name>
+    </author>
+    <author>
+      <name>Muhammad Ibrahim</name>
+    </author>
+    <author>
+      <name>Shahidul Islam Khan</name>
+    </author>
+    <author>
+      <name>Mohammad Shafiul Alam</name>
+    </author>
+    <arxiv:doi>10.1142/S146902682350013X</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S146902682350013X" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08485v2</id>
+    <title>Complex-Value Spatio-temporal Graph Convolutional Neural Networks and its Applications to Electric Power Systems AI</title>
+    <updated>2022-09-22T23:47:10Z</updated>
+    <link href="https://arxiv.org/abs/2208.08485v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08485v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The effective representation, precessing, analysis, and visualization of large-scale structured data over graphs are gaining a lot of attention. So far most of the literature has focused on real-valued signals. However, signals are often sparse in the Fourier domain, and more informative and compact representations for them can be obtained using the complex envelope of their spectral components, as opposed to the original real-valued signals. Motivated by this fact, in this work we generalize graph convolutional neural networks (GCN) to the complex domain, deriving the theory that allows to incorporate a complex-valued graph shift operators (GSO) in the definition of graph filters (GF) and process complex-valued graph signals (GS). The theory developed can handle spatio-temporal complex network processes. We prove that complex-valued GCNs are stable with respect to perturbations of the underlying graph support, the bound of the transfer error and the bound of error propagation through multiply layers. Then we apply complex GCN to power grid state forecasting, power grid cyber-attack detection and localization.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-17T18:56:48Z</published>
+    <arxiv:comment>This work has been submitted to the IEEE for possible publication</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Tong Wu</name>
+    </author>
+    <author>
+      <name>Anna Scaglione</name>
+    </author>
+    <author>
+      <name>Daniel Arnold</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.09914v1</id>
+    <title>Augmenting generative models with biomedical knowledge graphs improves targeted drug discovery</title>
+    <updated>2025-10-10T23:18:20Z</updated>
+    <link href="https://arxiv.org/abs/2510.09914v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.09914v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent breakthroughs in generative modeling have demonstrated remarkable capabilities in molecular generation, yet the integration of comprehensive biomedical knowledge into these models has remained an untapped frontier. In this study, we introduce K-DREAM (Knowledge-Driven Embedding-Augmented Model), a novel framework that leverages knowledge graphs to augment diffusion-based generative models for drug discovery. By embedding structured information from large-scale knowledge graphs, K-DREAM directs molecular generation toward candidates with higher biological relevance and therapeutic suitability. This integration ensures that the generated molecules are aligned with specific therapeutic targets, moving beyond traditional heuristic-driven approaches. In targeted drug design tasks, K-DREAM generates drug candidates with improved binding affinities and predicted efficacy, surpassing current state-of-the-art generative models. It also demonstrates flexibility by producing molecules designed for multiple targets, enabling applications to complex disease mechanisms. These results highlight the utility of knowledge-enhanced generative models in rational drug design and their relevance to practical therapeutic development.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-10T23:18:20Z</published>
+    <arxiv:comment>This paper has been accepted for publication in the IEEE Transactions on Artificial Intelligence, October 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Aditya Malusare</name>
+    </author>
+    <author>
+      <name>Vineet Punyamoorty</name>
+    </author>
+    <author>
+      <name>Vaneet Aggarwal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.18827v1</id>
+    <title>Human-artificial intelligence teaming for scientific information extraction from data-driven additive manufacturing research using large language models</title>
+    <updated>2024-07-26T15:43:52Z</updated>
+    <link href="https://arxiv.org/abs/2407.18827v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.18827v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Data-driven research in Additive Manufacturing (AM) has gained significant success in recent years. This has led to a plethora of scientific literature to emerge. The knowledge in these works consists of AM and Artificial Intelligence (AI) contexts that have not been mined and formalized in an integrated way. It requires substantial effort and time to extract scientific information from these works. AM domain experts have contributed over two dozen review papers to summarize these works. However, information specific to AM and AI contexts still requires manual effort to extract. The recent success of foundation models such as BERT (Bidirectional Encoder Representations for Transformers) or GPT (Generative Pre-trained Transformers) on textual data has opened the possibility of expediting scientific information extraction. We propose a framework that enables collaboration between AM and AI experts to continuously extract scientific information from data-driven AM literature. A demonstration tool is implemented based on the proposed framework and a case study is conducted to extract information relevant to the datasets, modeling, sensing, and AM system categories. We show the ability of LLMs (Large Language Models) to expedite the extraction of relevant information from data-driven AM literature. In the future, the framework can be used to extract information from the broader design and manufacturing literature in the engineering discipline.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-26T15:43:52Z</published>
+    <arxiv:comment>11 pages, 5 Figures, 3 Tables. This paper has been accepted to be published in the proceedings of IDETC-CIE 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Mutahar Safdar</name>
+    </author>
+    <author>
+      <name>Jiarui Xie</name>
+    </author>
+    <author>
+      <name>Andrei Mircea</name>
+    </author>
+    <author>
+      <name>Yaoyao Fiona Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.02474v1</id>
+    <title>Generalization-Enhanced Few-Shot Object Detection in Remote Sensing</title>
+    <updated>2025-01-05T08:12:25Z</updated>
+    <link href="https://arxiv.org/abs/2501.02474v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.02474v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Remote sensing object detection is particularly challenging due to the high resolution, multi-scale features, and diverse ground object characteristics inherent in satellite and UAV imagery. These challenges necessitate more advanced approaches for effective object detection in such environments. While deep learning methods have achieved remarkable success in remote sensing object detection, they typically rely on large amounts of labeled data. Acquiring sufficient labeled data, particularly for novel or rare objects, is both challenging and time-consuming in remote sensing scenarios, limiting the generalization capabilities of existing models. To address these challenges, few-shot learning (FSL) has emerged as a promising approach, aiming to enable models to learn new classes from limited labeled examples. Building on this concept, few-shot object detection (FSOD) specifically targets object detection challenges in data-limited conditions. However, the generalization capability of FSOD models, particularly in remote sensing, is often constrained by the complex and diverse characteristics of the objects present in such environments. In this paper, we propose the Generalization-Enhanced Few-Shot Object Detection (GE-FSOD) model to improve the generalization capability in remote sensing FSOD tasks. Our model introduces three key innovations: the Cross-Level Fusion Pyramid Attention Network (CFPAN) for enhanced multi-scale feature representation, the Multi-Stage Refinement Region Proposal Network (MRRPN) for more accurate region proposals, and the Generalized Classification Loss (GCL) for improved classification performance in few-shot scenarios. Extensive experiments on the DIOR and NWPU VHR-10 datasets show that our model achieves state-of-the-art performance for few-shot object detection in remote sensing.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-05T08:12:25Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2015</arxiv:journal_ref>
+    <author>
+      <name>Hui Lin</name>
+    </author>
+    <author>
+      <name>Nan Li</name>
+    </author>
+    <author>
+      <name>Pengjuan Yao</name>
+    </author>
+    <author>
+      <name>Kexin Dong</name>
+    </author>
+    <author>
+      <name>Yuhan Guo</name>
+    </author>
+    <author>
+      <name>Danfeng Hong</name>
+    </author>
+    <author>
+      <name>Ying Zhang</name>
+    </author>
+    <author>
+      <name>Congcong Wen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.06756v2</id>
+    <title>Generative AI Enabled Robust Sensor Placement in Cyber-Physical Power Systems: A Graph Diffusion Approach</title>
+    <updated>2026-06-16T07:11:33Z</updated>
+    <link href="https://arxiv.org/abs/2501.06756v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.06756v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With advancements in physical power systems and network technologies, integrated Cyber-Physical Power Systems (CPPS) have significantly enhanced system monitoring and control efficiency and reliability. This integration, however, introduces complex challenges in designing coherent CPPS, particularly as few studies concurrently address the deployment of physical layers and communication connections in the cyber layer. This paper addresses these challenges by proposing a framework for robust sensor placement to optimize anomaly detection in the physical layer and enhance communication resilience in the cyber layer. We model the CPPS as an interdependent network via a graph, allowing for simultaneous consideration of both layers. Then, we adopt the Log-normal Shadowing Path Loss (LNSPL) model to ensure reliable data transmission. Additionally, we leverage the Fiedler value to measure graph resilience against line failures and three anomaly detectors to fortify system safety. However, the optimization problem is NP-hard. Therefore, we introduce the Experience Feedback Graph Diffusion (EFGD) algorithm, which utilizes a diffusion process to generate optimal sensor placement strategies. This algorithm incorporates cross-entropy gradient and experience feedback mechanisms to expedite convergence and generate higher reward strategies. Extensive simulations demonstrate that the EFGD algorithm enhances model convergence by 18.9% over existing graph diffusion methods and improves average reward by 22.90% compared to Denoising Diffusion Policy Optimization (DDPO) and 19.57% compared to Graph Diffusion Policy Optimization (GDPO), thereby significantly bolstering the robustness and reliability of CPPS operations.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-12T09:02:32Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Changyuan Zhao</name>
+    </author>
+    <author>
+      <name>Guangyuan Liu</name>
+    </author>
+    <author>
+      <name>Bin Xiang</name>
+    </author>
+    <author>
+      <name>Benoit Delinchant</name>
+    </author>
+    <author>
+      <name>Dong In Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.01036v1</id>
+    <title>Higher education assessment practice in the era of generative AI tools</title>
+    <updated>2024-04-01T10:43:50Z</updated>
+    <link href="https://arxiv.org/abs/2404.01036v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.01036v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The higher education (HE) sector benefits every nation's economy and society at large. However, their contributions are challenged by advanced technologies like generative artificial intelligence (GenAI) tools. In this paper, we provide a comprehensive assessment of GenAI tools towards assessment and pedagogic practice and, subsequently, discuss the potential impacts. This study experimented using three assessment instruments from data science, data analytics, and construction management disciplines. Our findings are two-fold: first, the findings revealed that GenAI tools exhibit subject knowledge, problem-solving, analytical, critical thinking, and presentation skills and thus can limit learning when used unethically. Secondly, the design of the assessment of certain disciplines revealed the limitations of the GenAI tools. Based on our findings, we made recommendations on how AI tools can be utilised for teaching and learning in HE.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-01T10:43:50Z</published>
+    <arxiv:comment>11 pages, 7 tables published in the Journal of Applied Learning &amp; Teaching</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>Higher education assessment practice in the era of generative AI tools. (2024). Journal of applied learning and teaching, 7(1)</arxiv:journal_ref>
+    <author>
+      <name>Bayode Ogunleye</name>
+    </author>
+    <author>
+      <name>Kudirat Ibilola Zakariyyah</name>
+    </author>
+    <author>
+      <name>Oluwaseun Ajao</name>
+    </author>
+    <author>
+      <name>Olakunle Olayinka</name>
+    </author>
+    <author>
+      <name>Hemlata Sharma</name>
+    </author>
+    <arxiv:doi>10.37074/jalt.2024.7.1.28</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.37074/jalt.2024.7.1.28" title="doi"/>
+  </entry>
+</feed>

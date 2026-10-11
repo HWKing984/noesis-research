@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "elapsedSeconds": 275.6237565000001,
+  "trainingExecuted": true,
+  "NERTrained": false,
+  "testEvaluated": false,
+  "modelPromoted": false
+}

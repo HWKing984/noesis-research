@@ -1,0 +1,15 @@
+{
+  "documents": 200,
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\holdout_generation_decisions_20261007_29_fixed.json": "fbdbe55a851e5872e1f151206597439e0638dbb5cc0d81f8ff0574d17d278c33",
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\holdout_review_judgments_20261007_29.json": "2cdadb42be094d4d20b1e864a4c85e55adc833449b89a5489a77b861575dbe3d"
+  },
+  "expanderCodeSha256": "333fe8dfe6176d3d7148242e4b0e9d7b6febe2b036e3e07a84765693cd5fa1ba",
+  "modelCallExecutedByExpander": false,
+  "notice": "This step only expands recorded AI judgments; it neither runs a model nor invents confirmations.",
+  "filesSha256": {
+    "generation_decisions.json": "fbdbe55a851e5872e1f151206597439e0638dbb5cc0d81f8ff0574d17d278c33",
+    "review_judgments.json": "2cdadb42be094d4d20b1e864a4c85e55adc833449b89a5489a77b861575dbe3d",
+    "review_decisions.json": "114da82260f2dd76bdfde1a812946e90466888d05f50910a97771f0ae6fd6e53"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "reviewedTrainDocuments": 43,
+  "previous22Unchanged": true,
+  "fullTrainDocuments": 65,
+  "oldEntities": 841,
+  "newEntities": 940,
+  "entityLabels": {
+    "TASK": 346,
+    "METHOD": 521,
+    "DATASET": 73
+  },
+  "changes": {
+    "REVISE_ENTITY": 25,
+    "ADD_ENTITY": 101,
+    "REMOVE_ENTITY": 2
+  },
+  "documentsWithEntityChanges": 36,
+  "parentPositiveCandidates": 176,
+  "retainedPositiveCandidates": 175,
+  "deferredPositiveCandidates": 1,
+  "newPositiveRelations": 0,
+  "sourceReadjudicatedRebindings": 3,
+  "legalCandidatePairs": 3367,
+  "pairLabels": {
+    "UNRESOLVED": 3192,
+    "USED_FOR": 142,
+    "EVALUATED_ON": 33
+  },
+  "confirmedNegatives": 0,
+  "independentHumanGold": false,
+  "trainingAuthorized": false,
+  "formalF1Authorized": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "devModified": false,
+  "testContentRead": false,
+  "productionModified": false,
+  "remainingWork": [
+    "Re-adjudicate deferred and new train relation pairs",
+    "Complete fixed dev20 reference adjudication",
+    "Resolve ordinary negative supervision without relabeling unknowns",
+    "Authorize a bounded experiment separately; final test stays sealed"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "micro": {
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "truePositive": 59,
+    "predicted": 155,
+    "reference": 312,
+    "precision": 0.38064516129032255,
+    "recall": 0.1891025641025641,
+    "f1": 0.25267665952890794
+  },
+  "perClass": {
+    "METHOD": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 50,
+      "predicted": 123,
+      "reference": 192,
+      "precision": 0.4065040650406504,
+      "recall": 0.2604166666666667,
+      "f1": 0.31746031746031744
+    },
+    "TASK": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 9,
+      "predicted": 32,
+      "reference": 118,
+      "precision": 0.28125,
+      "recall": 0.07627118644067797,
+      "f1": 0.12
+    },
+    "DATASET": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 0,
+      "predicted": 0,
+      "reference": 2,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "lexiconPhrases": 642,
+  "source": "unchanged_frozen_train_spans_only",
+  "humanGold": false
+}

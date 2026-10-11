@@ -1,0 +1,207 @@
+{
+  "engineeringPassed": true,
+  "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+  "testEvaluated": true,
+  "endToEndEvaluated": true,
+  "trainingStarted": false,
+  "NERTestInferenceRepeated": false,
+  "weightsUnchanged": true,
+  "humanGold": false,
+  "independentAnnotator": false,
+  "queueDocuments": 200,
+  "evaluatedDocuments": 138,
+  "excludedDocuments": 62,
+  "coverage": 0.69,
+  "zeroReferencePairDocuments": 38,
+  "referencePairs": 137,
+  "pipelineCandidatePairs": 148,
+  "moduleMetrics": {
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "entityScope": "reviewed_reference_entities",
+    "accuracy": 0.9854014598540146,
+    "positiveMicro": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 132,
+      "predicted": 133,
+      "reference": 133,
+      "precision": 0.9924812030075187,
+      "recall": 0.9924812030075187,
+      "f1": 0.9924812030075187
+    },
+    "positiveMacroF1": 0.9962121212121212,
+    "supportedPositiveClasses": [
+      "USED_FOR",
+      "EVALUATED_ON"
+    ],
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 131,
+        "predicted": 132,
+        "reference": 132,
+        "precision": 0.9924242424242424,
+        "recall": 0.9924242424242424,
+        "f1": 0.9924242424242424
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "NO_RELATION": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 3,
+        "predicted": 4,
+        "reference": 4,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75
+      }
+    },
+    "confusionLabels": [
+      "USED_FOR",
+      "EVALUATED_ON",
+      "NO_RELATION"
+    ],
+    "confusionMatrix": [
+      [
+        131,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        3
+      ]
+    ],
+    "confusionAxes": "rows_reference_columns_prediction"
+  },
+  "pipelineMetrics": {
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "entityScope": "cached_frozen_NER_predicted_entities",
+    "matching": "exact_document_directed_endpoint_spans_endpoint_types_and_relation_label",
+    "documents": 138,
+    "positiveMicro": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 82,
+      "predicted": 140,
+      "reference": 133,
+      "precision": 0.5857142857142857,
+      "recall": 0.6165413533834586,
+      "f1": 0.6007326007326007
+    },
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 82,
+        "predicted": 139,
+        "reference": 132,
+        "precision": 0.5899280575539568,
+        "recall": 0.6212121212121212,
+        "f1": 0.6051660516605166
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "positiveMacroF1": 0.3025830258302583,
+    "supportedPositiveClasses": [
+      "USED_FOR",
+      "EVALUATED_ON"
+    ],
+    "negativeDecisions": 8,
+    "notice": "All fully resolved documents including zero-reference-pair titles are scored. NO_RELATION is no edge, not pipeline true-negative accuracy. Incomplete documents are excluded and disclosed."
+  },
+  "baselineModuleMetrics": {
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "entityScope": "reviewed_reference_entities",
+    "accuracy": 0.9708029197080292,
+    "positiveMicro": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 133,
+      "predicted": 137,
+      "reference": 133,
+      "precision": 0.9708029197080292,
+      "recall": 1.0,
+      "f1": 0.9851851851851852
+    },
+    "positiveMacroF1": 0.9925373134328358,
+    "supportedPositiveClasses": [
+      "USED_FOR",
+      "EVALUATED_ON"
+    ],
+    "perClass": {
+      "USED_FOR": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 132,
+        "predicted": 136,
+        "reference": 132,
+        "precision": 0.9705882352941176,
+        "recall": 1.0,
+        "f1": 0.9850746268656716
+      },
+      "EVALUATED_ON": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 1,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "NO_RELATION": {
+        "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+        "truePositive": 0,
+        "predicted": 0,
+        "reference": 4,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusionLabels": [
+      "USED_FOR",
+      "EVALUATED_ON",
+      "NO_RELATION"
+    ],
+    "confusionMatrix": [
+      [
+        132,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        4,
+        0,
+        0
+      ]
+    ],
+    "confusionAxes": "rows_reference_columns_prediction"
+  },
+  "moduleErrorPairs": 2,
+  "pipelineErrorDocuments": 51,
+  "REWeightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1",
+  "NERWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+  "notice": "One locked RE test pass; pipeline reuses prior frozen NER test predictions, no new NER test pass. Scores on fully resolved AI-reference subset, not human gold or complete-queue accuracy. No thresholds tuned; no application quality promotion."
+}

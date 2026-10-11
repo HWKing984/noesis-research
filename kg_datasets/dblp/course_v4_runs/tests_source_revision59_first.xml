@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="14" failures="0" skipped="0" tests="15" time="0.716" timestamp="2026-10-10T10:54:04.012518+08:00" hostname="HWKing"><testcase classname="tests.test_source_annotation_revision" name="test_task_patch_preserves_unknowns_and_original" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_source_or_receipt_drift_rejected[textSha256]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_source_or_receipt_drift_rejected[upstreamReceiptSha256]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_source_or_receipt_drift_rejected[arxivId]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_invalid_entity_edit_rejected[bad_span]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_invalid_entity_edit_rejected[type]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_invalid_entity_edit_rejected[identity]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_invalid_entity_edit_rejected[stale_before]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_invalid_entity_edit_rejected[no_reason]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_invalid_entity_edit_rejected[no_change]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_invalid_entity_edit_rejected[dev_entity]" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_changed_resolved_endpoint_requires_rejudgment" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_explicit_positive_and_negative_scope" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_existing_label_conflict_not_silently_retracted" time="0.001"><error message="failed on setup with &quot;ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'&quot;">@pytest.fixture
+    def source():
+        c = revision.c
+        text = 'Graph method performs image classification on the Bench dataset.'
+        ref = {'sampleId': 'sample-fixture', 'arxivId': 'fixture', 'split': 'train',
+               'textKind': 'abstract', 'text': text, 'textSha256': c.canonical_sha256(text)}
+&gt;       ann = annotate({'mentions': {'METHOD': ['Graph method'], 'TASK': ['classification'], 'DATASET': ['Bench']}, 'entityStatus': 'complete'}, ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_source_annotation_revision.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+decision = {'entityStatus': 'complete', 'mentions': {'DATASET': ['Bench'], 'METHOD': ['Graph method'], 'TASK': ['classification']}}
+reference = {'arxivId': 'fixture', 'sampleId': 'sample-fixture', 'split': 'train', 'text': 'Graph method performs image classification on the Bench dataset.', ...}
+
+    def annotate(decision,reference):
+        text=reference['text'];entities=mention_spans(text,decision['mentions'],decision.get('excludedLiterals',[]))
+        group=[]
+        for literal in decision.get('groupMentions',[]):
+            hits=list(re.finditer(re.escape(literal),text))
+            if len(hits)!=1:raise ValueError('Group literal absent or ambiguous')
+            m=hits[0];group.append({'groupId':f'g{len(group)+1}','start':m.start(),'end':m.end(),'text':literal,'label':'METHOD'})
+        candidates=c.candidate_pairs(entities);positive={}
+        for item in decision.get('positives',[]):
+            hits=list(re.finditer(re.escape(item['evidence']),text))
+            if len(hits)!=1:raise ValueError('Evidence absent or ambiguous')
+            evidence=hits[0]
+            def endpoint(role):
+                matches=[e for e in entities if e['text']==item[role] and evidence.start()&lt;=e['start'] and e['end']&lt;=evidence.end()]
+                occurrence=item.get(role+'Occurrence')
+                if occurrence is None and len(matches)!=1:raise ValueError('Endpoint ambiguous within evidence: '+item[role])
+                if occurrence is not None and (type(occurrence)is not int or not 1&lt;=occurrence&lt;=len(matches)):raise ValueError('Invalid endpoint occurrence')
+                return matches[(occurrence or 1)-1]['entityId']
+            pair=(endpoint('head'),endpoint('tail'))
+            if pair in positive or candidates.get(pair)!=item['label']:raise ValueError('Duplicate or invalid typed positive')
+            positive[pair]={'label':item['label'],'evidence':{'start':evidence.start(),'end':evidence.end(),'text':evidence.group()},
+                'reason':'Explicit AI decision supported by the preserved excerpt; no label inferred from entity types.'}
+        relations=[{'head':h,'tail':t,**positive.get((h,t),{'label':'UNRESOLVED','evidence':None,
+            'reason':'AI deliberately deferred this pair; coexistence, alias identity, coreference or training mention alone does not certify the scoped relation.'})} for h,t in candidates]
+        entity_status=decision.get('entityStatus','complete');relation_status='unresolved' if entity_status!='complete' or any(r['label']=='UNRESOLVED' for r in relations) else 'complete'
+        response={'sampleId':reference['sampleId'],'textSha256':reference['textSha256'],'reviewOfSha256':None,
+            'entityStatus':entity_status,'entityReason':decision.get('reason',''),'entities':entities,'groupMentions':group,
+            'relationStatus':relation_status,'relationReason':'Pending semantic pair review; not a negative example.' if relation_status=='unresolved' else '',
+            'relations':relations,'notes':'Same-session AI whole-abstract candidate. '+decision.get('notes','')}
+        errors=c.validate_response(response,reference)
+&gt;       if errors:raise ValueError('; '.join(errors))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: sampleId: 'sample-fixture' does not match '^sample-[0-9a-f]{20}$'
+
+scripts\compile_abstract_annotations.py:67: ValueError</error></testcase><testcase classname="tests.test_source_annotation_revision" name="test_output_preserves_existing_and_stays_within_dataset" time="0.008" /></testsuite></testsuites>

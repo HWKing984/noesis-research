@@ -1,0 +1,18 @@
+{
+  "valid": true,
+  "rejected": [],
+  "tokenized": {
+    "dev": 167,
+    "test": 144
+  },
+  "maxTokens": {
+    "dev": 32,
+    "test": 34
+  },
+  "classSupport": {
+    "METHOD": 192,
+    "TASK": 118,
+    "DATASET": 2
+  },
+  "testQueueReviewed": 200
+}

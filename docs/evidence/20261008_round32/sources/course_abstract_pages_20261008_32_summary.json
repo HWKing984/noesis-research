@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "requestedNew": 60,
+  "freshMatched": 57,
+  "usableAbstracts": 75,
+  "bySplit": {
+    "train": 37,
+    "dev": 19,
+    "test": 19
+  },
+  "quarantinedTitleMismatches": 4,
+  "failedRequests": 0,
+  "annotated": false,
+  "trainingExecuted": false,
+  "testEvaluated": false,
+  "modelPromoted": false
+}

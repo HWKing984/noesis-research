@@ -1,0 +1,30 @@
+{
+  "target": "source_bound_local_mention_predicate_expression_AI_dev_not_document_truth",
+  "lockedQueue": 31,
+  "sourcePapers": 8,
+  "NERBlocks": 30,
+  "entities": {
+    "TASK": 46,
+    "METHOD": 64,
+    "DATASET": 15
+  },
+  "completeBlocks": 27,
+  "blockCoverage": 0.8709677419354839,
+  "eligibleReferencePairs": 125,
+  "pairStates": {
+    "USED_FOR": 47,
+    "NOT_EXPRESSED": 55,
+    "UNRESOLVED": 10,
+    "EVALUATED_ON": 13
+  },
+  "completePositiveSupport": {
+    "USED_FOR": 39,
+    "EVALUATED_ON": 13
+  },
+  "zeroPositiveCompleteBlocks": 12,
+  "trainableNegativePairs": 0,
+  "independentHumanGold": false,
+  "trainingExecuted": false,
+  "testEvaluated": false,
+  "notice": "Exposed targeted AI dev, correlated mentions/blocks. Local non-expression is not a factual negative. Original whole-abstract evaluation unchanged."
+}

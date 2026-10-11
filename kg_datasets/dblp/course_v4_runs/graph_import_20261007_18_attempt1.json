@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "graphId": "ai-literature-2fd435585d2db5c94e0a",
+  "bundleManifestSha256": "da86ef12159470ce99d8392e5a4d5f688ea1232a84ef433ab5b58e3c062186a7",
+  "startedAtUTC": "2026-10-07T01:34:40.617817+00:00",
+  "batchesCommitted": 0,
+  "databaseReset": false,
+  "error": "Neo4j HTTP 401",
+  "liveDatabaseImported": false,
+  "finishedAtUTC": "2026-10-07T01:34:40.893647+00:00"
+}

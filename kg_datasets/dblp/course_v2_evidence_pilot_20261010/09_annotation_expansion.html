@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>V2证据数据准备与隔离检查</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>V2证据数据准备与隔离检查</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>V2首批数据准备；训练、推理和上线均未执行。所有标签来自既有训练侧AI收据，等待原文复核，不是新增金标准。</p><table><thead><tr><th>历史摘要类别</th><th>提及/实体对</th><th>不同来源论文</th></tr></thead><tbody><tr><td>METHOD</td><td>458</td><td>60</td></tr><tr><td>TASK</td><td>260</td><td>61</td></tr><tr><td>DATASET</td><td>69</td><td>23</td></tr><tr><td>USED_FOR</td><td>307</td><td>34</td></tr><tr><td>EVALUATED_ON</td><td>64</td><td>14</td></tr><tr><td>NO_RELATION</td><td>37</td><td>10</td></tr><tr><td>UNRESOLVED</td><td>1949</td><td>53</td></tr></tbody></table><table><thead><tr><th>首批论文</th><th>选择分层</th></tr></thead><tbody><tr><td>2008.10400</td><td>evaluation_positive</td></tr><tr><td>2501.02474</td><td>evaluation_positive</td></tr><tr><td>2107.03374</td><td>evaluation_positive</td></tr><tr><td>1606.05250</td><td>evaluation_positive</td></tr><tr><td>2501.06756</td><td>explicit_negative</td></tr><tr><td>1903.10404</td><td>explicit_negative</td></tr><tr><td>2503.03790</td><td>explicit_negative</td></tr><tr><td>1910.12770</td><td>explicit_negative</td></tr><tr><td>1905.00537</td><td>dataset_unresolved</td></tr><tr><td>2312.03556</td><td>dataset_unresolved</td></tr><tr><td>2503.01309</td><td>dataset_unresolved</td></tr><tr><td>2010.01057</td><td>dataset_unresolved</td></tr></tbody></table><p>70篇来源、65篇NER可用、5篇隔离；12篇定向复核并非代表性测试。保留未决，题名和摘要不混标。V1保护文件未变；保留test只读二进制哈希，未解析正文。</p><footer>证据页生成时间：2026-10-10T10:59:09.775009+00:00<br>来源：<div class="path">summary.json</div><div class="path">selection_lock.json</div><div class="path">production_protection.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

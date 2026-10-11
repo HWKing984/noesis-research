@@ -1,0 +1,14 @@
+{
+  "kind": "real_local_tokenization_not_model_evaluation",
+  "NERDocumentsPassed": 65,
+  "relationPairsPassed": 175,
+  "strictBIORoundtripPassed": true,
+  "entityMarkersPassed": true,
+  "maxNERTokens": 350,
+  "maxRETokens": 354,
+  "tokenLimit": 512,
+  "truncation": false,
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "testContentRead": false
+}

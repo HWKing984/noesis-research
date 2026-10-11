@@ -1,0 +1,15 @@
+{
+  "documents": 19,
+  "selfReviewed": 19,
+  "nerEligibleClaims": 16,
+  "relationCounts": {
+    "UNRESOLVED": 656,
+    "USED_FOR": 9,
+    "EVALUATED_ON": 2
+  },
+  "devAccessed": true,
+  "testAccessed": false,
+  "modelPredictionsSeenForAnnotation": false,
+  "independentHumanGold": false,
+  "trainingExecuted": false
+}

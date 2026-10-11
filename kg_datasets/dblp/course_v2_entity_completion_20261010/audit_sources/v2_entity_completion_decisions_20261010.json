@@ -1,0 +1,67 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "documents": [
+    {
+      "arxivId": "2008.10400",
+      "textSha256": "5f1d561b2d161b2c930488c1f61d3c86ca07ff2415e0e261bc8098d46e548cda",
+      "upstreamReceiptSha256": "92393eb3555431d9987af539c3273a5f0a1d345e910fa6764cbc5b9e5d91e74d",
+      "additions": [
+        {"text": "convolution layers", "occurrence": 0, "label": "METHOD"},
+        {"text": "convolution layers", "occurrence": 1, "label": "METHOD"},
+        {"text": "fully connected layer", "occurrence": 0, "label": "METHOD"},
+        {"text": "convolution layer", "occurrence": 2, "label": "METHOD"},
+        {"text": "pooling", "occurrence": 0, "label": "METHOD"},
+        {"text": "Rotation", "occurrence": 0, "label": "METHOD"},
+        {"text": "translation", "occurrence": 0, "label": "METHOD"},
+        {"text": "augment training data", "occurrence": 0, "label": "TASK"},
+        {"text": "heterogeneous ensemble", "occurrence": 0, "label": "METHOD"},
+        {"text": "homogeneous ensemble networks", "occurrence": 0, "label": "METHOD"}
+      ],
+      "exclusions": "3x3/5x5/7x7 kernel size是参数；accuracy是指标；training/test set未额外命名数据集。pooling虽被否定仍是方法提及，不能由NER推出正关系。通用models和GitHub路径不是独立实体。",
+      "review": "逐句核对网络、卷积层/全连接层、归一化/激活/池化、旋转/平移、增广目标和三种集成描述；旧8提及保留。单数convolution layer选第三个字面出现，避免与两处复数层重叠。"
+    },
+    {
+      "arxivId": "2501.02474",
+      "textSha256": "ff56a01af2224720cc8d795cfaf3cc9502de2a5396fbc37e6c1b31f5615a38b4",
+      "upstreamReceiptSha256": "d4e57fc65eaf0f4e91dcf0d67687c378aae1098e4b81b867a1ac50a8e79425ea",
+      "additions": [{"text": "deep learning", "occurrence": 0, "label": "METHOD"}],
+      "exclusions": "multi-scale features/feature representation、region proposals是特征或输出名词，本批不把它们改写成提取/生成任务；classification performance/generalization capability是指标/能力。learn new classes描述FSL定义，不再从泛化定义发明一个与FSOD并列的任务名称。remote sensing单独为领域，UAV imagery为模态，非DATASET。",
+      "review": "逐句核对背景deep learning/FSL、FSOD任务及别名、主模型、三个组件和两个数据集。补背景方法family；不从组件for后的输出/指标名词推断新的操作任务，不自动把模型评测分配给组件。"
+    },
+    {
+      "arxivId": "2501.06756",
+      "textSha256": "d82bb4791d31a9035b37c9ed2601f856aceffd271242d8ef9f797b15e79ff4be",
+      "upstreamReceiptSha256": "10a7ffb7a7f50336ab86eba1fc617004379572d0333289249549c667c2cc6c14",
+      "additions": [
+        {"text": "enhance communication resilience", "occurrence": 0, "label": "TASK"},
+        {"text": "measure graph resilience against line failures", "occurrence": 0, "label": "TASK"},
+        {"text": "diffusion process", "occurrence": 0, "label": "METHOD"},
+        {"text": "experience feedback mechanisms", "occurrence": 0, "label": "METHOD"},
+        {"text": "graph diffusion methods", "occurrence": 0, "label": "METHOD"}
+      ],
+      "exclusions": "Fiedler value是谱指标，不将计算指标本身当算法。NP-hard是复杂度，CPPS是研究系统对象，18.9%/reward是指标。three anomaly detectors和framework是未命名指代。开头system monitoring/control效率描述领域背景，不拆孤立control；设计/部署挑战不是独立命名任务。expedite convergence和higher reward是优化效果，不另造应用任务。",
+      "review": "逐句核对两层目标、LNSPL传输、谱韧性测量、EFGD策略生成、扩散/梯度/反馈机制及对比算法。补两个明确操作目标和三个技术方法提及；保留所有旧实体，不将Fiedler指标变方法，不把整体韧性目标转移为EFGD直接用途。"
+    },
+    {
+      "arxivId": "2312.03556",
+      "textSha256": "30c195e7c374af71ae3957b0e1b4e7c166172ff95ea396b99eae331cebcdb309",
+      "upstreamReceiptSha256": "7f6232c45f970938b34de87da221167d2a59aa77837341218695ee5e394f6c8b",
+      "additions": [
+        {"text": "face generative models", "occurrence": 0, "label": "METHOD"},
+        {"text": "inpainting", "occurrence": 1, "label": "TASK"},
+        {"text": "fine-tuning", "occurrence": 0, "label": "METHOD"},
+        {"text": "inpainting", "occurrence": 2, "label": "TASK"},
+        {"text": "cross-attention module", "occurrence": 0, "label": "METHOD"},
+        {"text": "denoising network", "occurrence": 0, "label": "METHOD"},
+        {"text": "identity encoder", "occurrence": 0, "label": "METHOD"},
+        {"text": "identity encoder", "occurrence": 1, "label": "METHOD"},
+        {"text": "identity preservation", "occurrence": 0, "label": "TASK"},
+        {"text": "fine-tuning", "occurrence": 1, "label": "METHOD"}
+      ],
+      "exclusions": "virtual reality是应用领域；facial identity、beard/expression是对象/属性；parallel attention matrices是张量，不是额外具名算法。added attention modules是已述组件的泛化指代，不另当独立方法名称。identity resemblance、language-controllability/speed是效果/属性；identity preservation作为明确研究目标单独保留。HTTP/题名不补正文实体。",
+      "review": "逐句核对背景生成family、任务短称、微调两次、PVA/扩散主方法、cross-attention/denoising/encoder组件、训练数据和全部对比模型。两处裸inpainting不与旧长任务跨度重叠，encoder重复提及分别保存；CelebAHQ-IDI仍不产生评测标签。"
+    }
+  ]
+}

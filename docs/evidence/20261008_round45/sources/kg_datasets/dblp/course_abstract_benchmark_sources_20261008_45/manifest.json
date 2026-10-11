@@ -1,0 +1,43 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_benchmark_expansion_v1.json": "fda21b9c838a3071ce8eba3232c18dcb6c56c572bb1a27eaac4e6e8bf5213985",
+    "kg_datasets/dblp/ner_v1/corpus_manifest.jsonl": "bc88db81e0c68156c2fcacdbf8523e77b81be9b5d811163da2ed30f3edf3ca8a",
+    "kg_datasets/dblp/course_v4_weak/corpus_split_manifest.jsonl": "2bd57642c43bcf5be9bb7c071922720095945c88d5765c6e17469a4090b2328d",
+    "scripts/expand_train_benchmarks.py": "7822d6b9c053e2b7938abb268ea8c05c5f820d2c001b48dca1366557adfa155d",
+    "kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44/manifest.json": "3bbad6603684b1ea47e70ddd9193d8e037eda0d285cea7cbb84050fc21b2921f",
+    "kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44/train_references.jsonl": "67e37e5f20a0ac6b1fd9ba24fddd274e5ea1263dbdfb15f59ef0d648d894b0c5",
+    "kg_datasets/dblp/course_abstract_scope_inventory_reviewed_20261008_44/train_reviewed_receipts.jsonl": "06e17a7f8610011d0e1becb75307ed0e8c2db36b29b7edabf5c0e8a331bb97cb",
+    "resources/course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "scripts/course_abstract_v1.py": "1327e537f46a260a18b215899fa72341f32fd0864fb45fed5f89c30358af85a6",
+    "scripts/course_abstract_relation.py": "96aa877e8d95c34e9768460818625b9c358a14d6ca46eb7d32a4fea203a96bdf",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "scripts/collect_train_abstracts.py": "d121a9bf2a12f89d2446dc87956fc67d9b132dc728d56c8c079aaa5a20329851",
+    "scripts/collect_course_abstract_pages.py": "4aea32450612164cd82392a502093d1946e9b7161ec6cdb3c848826ba4d6d004",
+    "scripts/fetch_abstract_pilot.py": "eadc8583ce16ff7ffe72636b484b576d6494bcd810b88ec292e3038c266db620",
+    "resources/course_abstract_scope_review_v1.json": "bb08d1169bc55d74f47fdaf283d96adb6407bf710f51c62f0845c22289dc687a",
+    "resources/course_abstract_relation_v1.json": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/test_references.jsonl": "716b5cba5779d7c3b6e4bc404dba9579447b5c93768d56b0da28a70edc0bb3c1",
+    "resources/course_graph_runtime.json": "93a0beba5afdeb177afe0c6eb12567869ef8b0c502cd127b353f1dde3ccbc0fc"
+  },
+  "filesSha256": {
+    "abstracts.jsonl": "a3eedd48c2304293d430f526bbb3e3c1f9932d4c3998da3b16b5d96beea6e2b8",
+    "contract.json": "ef9850faf47d3f4a9d0e411afdc02212e6107abd333e749b46fbbaaf78ee8a54",
+    "excluded.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "page_001.html": "cd51ebfe4b870587333c3ee3022f14244ca4b5d679ba4568980ada6eff379a0a",
+    "page_002.html": "b7b6ec7c089bc8d76a18d9748db7a6394c59b591049c9ff5fa20bc05a20275be",
+    "page_003.html": "1d2aba7b7aa74242566af15165d3861311bc478db918ebf7a28ebc94d8b20ffd",
+    "page_004.html": "2b202ccf48e425addcbfd54eccaa84e0989b48767f93ec76d3ae7af46ac84985",
+    "policy.json": "9fe93ec775938702636bcd99e9162a9e69d7e8dbe319ce06f48aad6746111eda",
+    "requests.json": "628802aed06dd9ba5e90a75b06ecb9e17d99a0d941891d08f6f27332113f64ff",
+    "robots.txt": "eda2bc852443f3f29d31eb04d37b26476654dc33b29256fb882819da23d189a5",
+    "selection_lock.json": "3195b806d4b7ac50353d34a3b1652065f924785ec0be05dfe460cbcdd42abf10",
+    "summary.json": "93eb36872035266e6c803b275dee0454ce0f6579dcf3d3c5b54bf92153bd8d15",
+    "train_references.jsonl": "71500dfc71fbf86fc75d7396e4d4c994a989fb6cf5f5fc25c3b07aa14a030a2f"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "archive": "outputs/v2_sampling_audit_20261011.zip",
+  "archiveSha256": "90eac965619f09d6e3f6bf81596bbbb4f9a7e22620523840c89bf81695231084",
+  "archiveBytes": 13262621,
+  "entries": 653,
+  "zipCRCVerified": true,
+  "allEntrySha256Verified": true,
+  "allExtractedFilesUnchangedAfterReplay": true,
+  "finalIsolatedReplay": {
+    "status": "passed",
+    "sourceListingCount": 3654,
+    "eligiblePopulationCount": 3579,
+    "metadataMembers": 40,
+    "counts": {
+      "train": 12,
+      "dev": 20,
+      "test": 20
+    },
+    "samplingFrameLocked": true,
+    "contentBindingCompleted": false,
+    "acceptedNegativePairs": 0,
+    "trainingAuthorized": false,
+    "evaluationAuthorized": false,
+    "semanticIndependenceProven": false
+  },
+  "initialIsolatedReplay": {
+    "status": "passed",
+    "sourceListingCount": 3654,
+    "eligiblePopulationCount": 3597,
+    "metadataMembers": 40,
+    "counts": {
+      "train": 12,
+      "dev": 20,
+      "test": 20
+    },
+    "samplingFrameLocked": true,
+    "contentBindingCompleted": false,
+    "acceptedNegativePairs": 0,
+    "trainingAuthorized": false,
+    "evaluationAuthorized": false,
+    "semanticIndependenceProven": false
+  },
+  "parentAssertionCategories": 130,
+  "historicalExecutedTestsVerified": 239,
+  "currentFocusedExecutedTests": 58,
+  "currentTestRunId": "03f68466-044c-4dbc-a013-e3a6897fa1fe",
+  "controlledSourceFiles": 55,
+  "v1ProtectedHashesUnchanged": 6,
+  "coreJSONLByteIdenticalToParent": 6,
+  "captureHashVerified": true,
+  "negativeCandidatesPending": 1,
+  "acceptedNegativePairs": 0,
+  "newAbstractsFetched": 0,
+  "trainingExecuted": false,
+  "evaluationAuthorized": false,
+  "semanticIndependenceProven": false,
+  "externalReviewSha256": "4dc6bbf34fc14e03bef3a52bb62be1ac1f2d803a4a8e91ee6806bdcaeca46de4",
+  "notice": "Metadata sample and reviewed files only; no live Neo4j check, new model score or semantic certification."
+}

@@ -1,0 +1,21 @@
+{
+  "sourceDatasetManifestSha256": "0d0e781dbbc8f3c92eb1c99fb0b50b8d60f5f339c76f0db066e489c59ba88940",
+  "sourceResponsesPath": "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\pending_train_20261007_21\\review_compiled\\responses.jsonl",
+  "sourceResponseSha256": "ef8562ed6c97f3282f026adde90f9aee30f293da0e5fd017d3ab3220afcbaea5",
+  "previousReceiptsPath": "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\pending_train_20261007_21\\generation\\receipts.jsonl",
+  "previousReceiptSha256": "a5b0f486b3ed93c2223cc9b65a658d0bf2df876b2b00c29d09b7d3076db10ecc",
+  "filesSha256": {
+    "ner_inputs_dev.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ner_inputs_test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ner_inputs_train.jsonl": "e3f4cc4f7f2e460be376cb93cb636329b26672ca12b69ded5966bd8161057713",
+    "previous_receipts.jsonl": "a5b0f486b3ed93c2223cc9b65a658d0bf2df876b2b00c29d09b7d3076db10ecc",
+    "raw_responses.jsonl": "ef8562ed6c97f3282f026adde90f9aee30f293da0e5fd017d3ab3220afcbaea5",
+    "receipts.jsonl": "191caa8eb178c46e5b67fed0c3daacf3176d9b0e5bbe4a42748b4c0af9fa897e",
+    "relation_inputs_dev.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "relation_inputs_test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "relation_inputs_train.jsonl": "59458ea3c75afb579bcb286e01ac0ecef855d7e977a9b8e852ca9dae2d3ad2cd",
+    "summary.json": "3c40baf6f35d3f0262db3ed6fe99affce2a5b1a71d13d75132255334dc693a48"
+  },
+  "schemaVersion": "course-v4-weak-1",
+  "importerCodeSha256": "682ea6e9fea02a512e07495699d4b304305f8c6963e648a4a523aff416755e0f"
+}

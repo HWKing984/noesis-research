@@ -1,0 +1,111 @@
+{
+  "checkedAtUTC": "2026-10-06T06:22:32Z",
+  "valid": true,
+  "originalInputsUnchanged": 21,
+  "runDirectories": 156,
+  "hashedRunOutputs": 957,
+  "archivedSourceInputsVerified": true,
+  "exportVersions": 9,
+  "hashedExportFiles": 79,
+  "latestSnapshot": "course_v4_training_inputs_09",
+  "latestSnapshotManifestSha256": "9727dad008ab4750292e5bde3a2d8be2f68b7e2f3e1f0f3ed5ab64b4ec219fde",
+  "annotation": {
+    "reviewedDocuments": 883,
+    "newAnnotatedDocumentsThisTurn": 0,
+    "trainDevTest": [483, 200, 200],
+    "relationPairsTrainDevTest": [315, 162, 0],
+    "relationPairContainingPapersTrainDev": [247, 113],
+    "humanGold": false,
+    "independentBlindReview": false,
+    "notice": "Existing same-session candidate-aware AI reference labels, unchanged; no RE test labels added."
+  },
+  "relationDevelopment": {
+    "evaluationScope": "reference_entities_dev_selected_ai_reference_not_final_test",
+    "runs": [
+      {
+        "name": "re_development_20261006_10",
+        "balancedLoss": false,
+        "manifestSha256": "5ede91315edf441ec0423b54d938273bd537fc71eafb68b1910a6c067a8b1011",
+        "weightsSha256": "31a73698c92a3c6bce690f8c8d6494dea743f158a638816cdf83ed687741cf3f"
+      },
+      {
+        "name": "re_balanced_development_20261006_11",
+        "balancedLoss": true,
+        "manifestSha256": "d7085170996349d57e1dd92b1ce28124dadb7d540a7e4d2987efbd03637de70e",
+        "weightsSha256": "0a6c6f0057c038395c6c71d48a829f8db3a8a3fe6d5f82578c05c9a0aff53237"
+      }
+    ],
+    "epochsPerRun": 6,
+    "stepsPerRun": 240,
+    "eachEpochUsesEachTrainPairExactlyOnce": true,
+    "stepsConsecutive": true,
+    "encoderAndClassifierUpdatedBothRuns": true,
+    "reloadPredictionsIdenticalBothRuns": true,
+    "bestEpochBothRuns": 1,
+    "selectedMetricsRecomputedFromPredictions": true,
+    "bestPredictionsEqualTypeMajorityBaselineBothRuns": true,
+    "selectedPositivePrecision": 0.9691358024691358,
+    "selectedPositiveRecall": 1.0,
+    "selectedPositiveMicroF1": 0.9843260188087775,
+    "selectedPositiveMacroF1": 0.9920634920634921,
+    "devReferenceByClass": {"USED_FOR": 155, "EVALUATED_ON": 2, "NO_RELATION": 5},
+    "selectedConfusionMatrix": [[155, 0, 0], [0, 2, 0], [5, 0, 0]],
+    "confusionAxes": "rows_reference_columns_prediction",
+    "confusionLabels": ["USED_FOR", "EVALUATED_ON", "NO_RELATION"],
+    "negativeRecallBothSelectedModels": 0.0,
+    "negativeTruePositiveAcrossAll12Epochs": 0,
+    "trainWeightsBalancedRun": [0.35, 35.0, 8.75],
+    "evidenceAndReasonsExcludedFromModelFeatures": true,
+    "devUsedForGradient": false,
+    "testTokenized": false,
+    "testEvaluated": false,
+    "endToEndEvaluated": false,
+    "promotedToConfirmedGraphFacts": false,
+    "notice": "Training/serialization checks pass, semantic discrimination does not improve on baseline. Five negative dev pairs all false positives. RE test and pipeline not completed."
+  },
+  "frozenNERPreserved": {
+    "finalTestManifestSha256": "0e64965da7f521cebded4bf01afc6cfe3d40aeb84685bec5e1fce9d56d1a1602",
+    "weightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "noRetrainingOrRetestingThisTurn": true
+  },
+  "screenshots": {
+    "bundle": "docs/evidence/20261006_round11",
+    "newBoundPageAndSourceFiles": 29,
+    "newPNGCount": 1,
+    "newPNGVisuallyInspected": true,
+    "totalVerifiedPNGCount": 11,
+    "captureCompleted": true,
+    "sourceAndPNGSha256Verified": true,
+    "manifestSha256": "dd92cf839fd7fa3cb198c62489fec79ffc674ebf4e0b92cb1aa0fbae16d9fe3a",
+    "capturesSha256": "537d11c522f1524189a0736fef6085e2bdc738cde4870dbb40ce8ec4173d0be6",
+    "pngSha256": "0e7a65bfa73e9c35fdc8d9c18892e6e5b09fe307af5aa30746b3653946cb38f2",
+    "originalConsoleScreenshot": false,
+    "originalNeo4jScreenshot": false,
+    "notice": "Actual Edge154 browser capture of saved results. Existing 07/08/09 artifacts remain intact."
+  },
+  "tests": {
+    "passed": 320,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xmlSeconds": 47.779,
+    "xml": "tests_20261006_round11_handoff.xml",
+    "xmlSha256": "e799b49a18e282a3580ce9abce6af6c920cd765d5360988dbcd38f8fdb7be050",
+    "relationTrainerCoverage": {
+      "sameSourceUnitAndActualWeightedRunOnly": true,
+      "coveredStatements": 280,
+      "statements": 297,
+      "missingStatements": 17,
+      "percentStatementsCovered": 94.27609427609427,
+      "branchCoverageClaimed": false
+    },
+    "notice": "Regression and statement coverage, not semantic accuracy or all-course acceptance."
+  },
+  "localDocLinks": {
+    "documents": 10,
+    "checkedLinks": 182,
+    "missing": 0,
+    "scope": "README.md and docs/course_v4_*.md immediately before adding audit links"
+  },
+  "next": "Supplement train-only role-disambiguation negatives and rare classes with real title evidence and preserved provenance; redevelop before freezing RE test and end-to-end pipeline. Neo4j application remains unimplemented/unaccepted."
+}

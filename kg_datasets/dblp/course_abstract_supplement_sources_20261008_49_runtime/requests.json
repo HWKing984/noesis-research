@@ -1,0 +1,90 @@
+[
+  {
+    "arxivId": "1907.11692",
+    "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+    "url": "https://arxiv.org/abs/1907.11692",
+    "startedAtUTC": "2026-10-08T15:51:14.229246+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 160,
+    "rawResponseFile": "page_001.html",
+    "rawResponseSha256": "cc4a74f65edcc0901d5a0045ea84b771dcbf2a710e4e3f996d2b6557a6e50fa8"
+  },
+  {
+    "arxivId": "1909.11942",
+    "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations",
+    "url": "https://arxiv.org/abs/1909.11942",
+    "startedAtUTC": "2026-10-08T15:51:29.336268+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 182,
+    "rawResponseFile": "page_002.html",
+    "rawResponseSha256": "f8d6d8d507d01d0eaef3e647dc26717a5a66660d597923777c9e7fc17e09b684"
+  },
+  {
+    "arxivId": "2003.10555",
+    "title": "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators",
+    "url": "https://arxiv.org/abs/2003.10555",
+    "startedAtUTC": "2026-10-08T15:51:44.441447+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 292,
+    "rawResponseFile": "page_003.html",
+    "rawResponseSha256": "6de2efa8df48b458b05a805ae14a225df7e37fa288e65f8e5de4909dc977d66f"
+  },
+  {
+    "arxivId": "2006.03654",
+    "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
+    "url": "https://arxiv.org/abs/2006.03654",
+    "startedAtUTC": "2026-10-08T15:51:59.548929+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 424,
+    "rawResponseFile": "page_004.html",
+    "rawResponseSha256": "91a7281bee2dfe446d45ba56d15bfa93e8fb22d86425321279290cd18fa19644"
+  },
+  {
+    "arxivId": "1906.08237",
+    "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding",
+    "url": "https://arxiv.org/abs/1906.08237",
+    "startedAtUTC": "2026-10-08T15:52:14.656000+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 183,
+    "rawResponseFile": "page_005.html",
+    "rawResponseSha256": "d54bfd82ddbe4c7bdebf44b8bebfbbc47f48869f629f23f9a9bbbb0e0f51793d"
+  },
+  {
+    "arxivId": "1910.10683",
+    "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+    "url": "https://arxiv.org/abs/1910.10683",
+    "startedAtUTC": "2026-10-08T15:52:29.748014+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 204,
+    "rawResponseFile": "page_006.html",
+    "rawResponseSha256": "97f335e5e616ea5e8e398740a6a08709c6048979c47041750633c77ae66b7136"
+  },
+  {
+    "arxivId": "1910.13461",
+    "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+    "url": "https://arxiv.org/abs/1910.13461",
+    "startedAtUTC": "2026-10-08T15:52:44.840244+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 276,
+    "rawResponseFile": "page_007.html",
+    "rawResponseSha256": "8ac6c049ff91beb6e7c5e4d52a5edc0af84f7a98b7a2af13674c3b1824783246"
+  },
+  {
+    "arxivId": "1908.10084",
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    "url": "https://arxiv.org/abs/1908.10084",
+    "startedAtUTC": "2026-10-08T15:52:59.939848+00:00",
+    "status": "completed",
+    "titleMatch": true,
+    "tokens": 228,
+    "rawResponseFile": "page_008.html",
+    "rawResponseSha256": "e7939b7078738b4640f9a7b60be045c8c3c5baa7cc75358832bf78c99cfe8791"
+  }
+]

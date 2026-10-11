@@ -1,0 +1,63 @@
+{
+  "version": "abstract_eval_attribution_v1",
+  "splits": {
+    "train": {
+      "queueDocuments": 58,
+      "nerDocuments": 50,
+      "NERExcluded": 8,
+      "inspectedDocuments": 12,
+      "freshReceiptDocuments": 1,
+      "previousKnownPairs": 268,
+      "knownPairs": 267,
+      "relationSupport": {
+        "EVALUATED_ON": 58,
+        "USED_FOR": 183,
+        "NO_RELATION": 26
+      },
+      "eligiblePairs": 1845,
+      "unresolvedPairs": 1578,
+      "knownPairCoverage": 0.14471544715447154,
+      "completeRelationDocuments": 6,
+      "fullDocumentCoverage": 0.10344827586206896,
+      "completeDocumentEVALSupport": 2,
+      "inspectedEVALPairs": 59,
+      "retractedPairs": 1,
+      "evidenceRepairedPairs": 1,
+      "maxMarkedTokens": 333,
+      "strictBIORoundTripPassed": true
+    },
+    "dev": {
+      "queueDocuments": 19,
+      "nerDocuments": 16,
+      "NERExcluded": 3,
+      "inspectedDocuments": 3,
+      "freshReceiptDocuments": 1,
+      "previousKnownPairs": 335,
+      "knownPairs": 333,
+      "relationSupport": {
+        "USED_FOR": 259,
+        "NO_RELATION": 66,
+        "EVALUATED_ON": 8
+      },
+      "eligiblePairs": 432,
+      "unresolvedPairs": 99,
+      "knownPairCoverage": 0.7708333333333334,
+      "completeRelationDocuments": 7,
+      "fullDocumentCoverage": 0.3684210526315789,
+      "completeDocumentEVALSupport": 0,
+      "inspectedEVALPairs": 10,
+      "retractedPairs": 2,
+      "evidenceRepairedPairs": 0,
+      "maxMarkedTokens": 306,
+      "strictBIORoundTripPassed": true
+    }
+  },
+  "trainingExecuted": false,
+  "inferenceExecuted": false,
+  "newMetricsProduced": false,
+  "testContentAccessed": false,
+  "developmentPreviouslyExposed": true,
+  "independentHumanGold": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false
+}

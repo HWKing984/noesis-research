@@ -1,0 +1,5 @@
+# 最终NER测试证据图
+
+![最终NER测试](06_final_test.png)
+
+图注：冻结dev所选checkpoint_epoch_04，200篇测试题名全部AI自复核后，在144篇完整可用题名上评估；56篇未决排除。严格实体指标为AI参考一致性，DATASET支持2，不是人工金标准。图为真实结果的浏览器可视化截图，不是原始终端或Neo4j界面。来源/页面哈希见manifest.json，实际拍摄状态见captures.json。历史图原样保留。

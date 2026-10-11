@@ -1,0 +1,20 @@
+{
+  "status": "partial",
+  "selected": 100,
+  "usableAbstracts": 18,
+  "bySplit": {
+    "train": 18
+  },
+  "quarantinedTitleMismatches": 1,
+  "failedRequests": 5,
+  "annotated": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "policy": {
+    "license": "CC0-1.0",
+    "source_policy": "https://info.arxiv.org/help/api/tou.html",
+    "license_scope": "descriptive metadata including API title/abstract; not full-text/PDF license",
+    "policy_checked_on": "2026-10-08",
+    "redistribute_metadata": true
+  }
+}

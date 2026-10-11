@@ -1,0 +1,11 @@
+﻿{
+    "passwordRecorded":  false,
+    "renderer":  "installed_Edge_headless",
+    "error":  "Method invocation failed because [System.Convert] does not contain a method named \u0027ToHexString\u0027.",
+    "captures":  [
+
+                 ],
+    "kind":  "actual_live_application_screenshot",
+    "status":  "failed",
+    "url":  "http://127.0.0.1:8765/"
+}

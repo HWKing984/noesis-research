@@ -1,0 +1,10 @@
+{
+  "status": "failed_no_synthetic_fallback",
+  "startedAtUTC": "2026-10-10T02:08:06.633375+00:00",
+  "trainingExecuted": false,
+  "testEvaluated": false,
+  "modelPromoted": false,
+  "independentHumanGold": false,
+  "errorType": "ImportError",
+  "error": "\n requires the protobuf library but it was not found in your environment. Check out the instructions on the\ninstallation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones\nthat match your environment. Please note that you may need to restart your runtime after installation.\n"
+}

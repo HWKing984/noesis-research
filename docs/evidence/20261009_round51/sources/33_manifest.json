@@ -1,0 +1,21 @@
+{
+  "kind": "dblp_source_orcid_crosswalk_v1",
+  "inputSha256": {
+    "kg_datasets/dblp/dblp.xml.gz": "22f960525255e4c12b537e0d55b2d62bd6e1ec20087dec05f7688cf0c9daa3b7",
+    "kg_datasets/dblp/dblp-2023-06-28.dtd": "03ec35cb34a4227572a0e89da407b06b6e44a6cc23e19cabc3b49b702a5f897d",
+    "kg_datasets/dblp/course_v4_identity_20261009_51/manifest.json": "7b942c1461c45c67494d8d2fa847b9044a984d2f2c02f44b93f9bddbfecbe1e7",
+    "scripts/refine_author_crosswalk.py": "b4ef345421eeaff65df49bff4c7c64f7ac2fd836e56e706198cb7afe4e191188",
+    "scripts/refine_author_identities.py": "f4ed0ce2bf8c94d256ab7b20be9122c8032da5877184127640151105d85675c1",
+    "scripts/course_identity.py": "17cd32acbccd59a96dbec1e889416db63b7da57eed3d45de28e526397ef67621",
+    "tests/test_refine_author_crosswalk.py": "5a39a0b22c67375bd426c00556dacde28127f7185514bca7fdc1ae0772cbab04"
+  },
+  "filesSha256": {
+    "orcid_source_occurrences.jsonl": "690a4130b71e36e2b1385aed7b0f10ef85be05571da330396dc699ffcc671bd1",
+    "profiles.json": "b1f54ad1edad9e96cde27777a0761e996ae774c1e56840d98994d627ece30692",
+    "recovery_ledger.jsonl": "ec3fed2b6d1ae92c1ed2b12a4fce84c72240fc0a03ac09bdbe7aaaa59fcc8df9",
+    "redirects.json": "1f41f97af27747a44dd3e2acc9701e41870f0cd14e682a51a23cfcfa28e9720a",
+    "signatures.jsonl": "7b663f3a85a0ac1d0e736a1e168af709ee3964805b914e393b5143c9587892a5",
+    "status.json": "ec94ef8fe50b7a7d31dea245d0cbfedffee659d3924ec1bac4e9ac3f87a70277",
+    "summary.json": "b43e981773b16a00fb35c75c936c47e1c37ce480fa0ab99d5d3ace6afe2a1110"
+  }
+}

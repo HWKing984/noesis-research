@@ -1,0 +1,21 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_expansion_v1.json": "fddd961940e7e967d431490af6d058c215c3d14c84dc213b6dc18953e71f0480",
+    "resources/course_abstract_v1.json": "c046b7a0dcb7973b1d60bd4ea2ed495afc517b9830a961bfa7a0e85e89f07704",
+    "kg_datasets/dblp/course_abstract_v1_inputs_20261008_35/manifest.json": "9a691e8a7f4c76695f9763e8624f70b2cfc760e0680c4a33ae8421a2e0495e3c",
+    "kg_datasets/dblp/course_abstract_train_sources_20261008_37/manifest.json": "698a0ff6e5e451123cc382ce94f8c4add17c44ea1056c7f4253f6abe6543dbbb",
+    "kg_datasets/dblp/course_abstract_expansion_reviewed_20261008_37/manifest.json": "2fb4c86668f8c9ac0639ba53d98a360d199cd48c52cb0767a6d1ddab68070f71",
+    "scripts/train_expanded_abstract_ner.py": "08dbf51e6d87b9535bb079bf6aa383f9d83a2f81152d93bac58bc1a82b82b360",
+    "scripts/collect_train_abstracts.py": "d121a9bf2a12f89d2446dc87956fc67d9b132dc728d56c8c079aaa5a20329851",
+    "scripts/train_abstract_ner.py": "8db519cb671cf77eaefc0693ecd1cd16d9aefb388441e3288fbdce3df6b48578",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841"
+  },
+  "filesSha256": {
+    "additional_alignment.jsonl": "f5ccf07dc9e5b7ece0d9c07f4f678f857e21687d8b25e35cf2399cf81cad7660",
+    "additional_train.jsonl": "81c2e5b94bd70c780857e2aa4bf5fe54fec1453af3d704a9fa7a58efdb1ad24e",
+    "excluded_additional_train.jsonl": "16f156eafddc60df24e11f459ad54d1d32ef84a2b0728fe8dc127a59d07c352c",
+    "ner_dev.jsonl": "bebe71a241aeb55420d68901de6536dec02d4a83daa449254ece89fb73e13b30",
+    "ner_train.jsonl": "32b4d774c5ea3af62eda7a75cd10c21f411a4753b1086806bdd1f1a0787f6850",
+    "summary.json": "98c5cc8fddcc97ba93c40852bb9abd7b853928cb73f2cb601494f51fd9343014"
+  }
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DBLP 200篇实体试标 · 待人工复核</title>
+<style>
+body{font:16px/1.65 system-ui,sans-serif;max-width:1000px;margin:30px auto;padding:0 22px;background:#fafafa;color:#222}
+header,.card{background:white;border:1px solid #ddd;border-radius:10px;padding:20px;margin:16px 0}
+h1{font-size:23px}button,input,select,textarea{font:inherit;padding:7px;margin:4px;border:1px solid #aaa;border-radius:5px}
+button{cursor:pointer;background:white}button:hover{background:#eef3fa}textarea{width:95%;height:65px}
+#title{font-size:22px;white-space:pre-wrap;line-height:2;padding:15px 0;user-select:text}
+mark{color:inherit;border-bottom:3px solid #333;cursor:pointer;padding:0;background:#e8eef8}
+mark[data-label=TASK]{background:#e3f3e8}mark[data-label=DATASET]{background:#fff0cb}mark[data-label=DOMAIN]{background:#f0e5fa}
+.muted{color:#666;font-size:14px}.warning{color:#924b00}#error{color:#ad1824}#spans{font:14px/1.6 ui-monospace,monospace}
+</style>
+<header><h1>人工智能文献 · 实体试标</h1>
+<p class="warning">全部初始标注来自词典，不是金标准。请逐条核对遗漏、边界和类别；未知缩写和无命中标题尤其需要人工检查。刷新会丢失未导出的修改，请经常导出。</p>
+<label>真实标注者 <input id="reviewer" placeholder="姓名或真实人员编号"></label>
+<button id="export">导出进度 JSONL</button><label>恢复进度 <input id="import" type="file" accept=".jsonl"></label>
+<p id="progress"></p><p id="error"></p></header>
+<div class="card"><button id="prev">上一条</button><input id="jump" type="number" min="1" style="width:70px"><button id="go">跳转</button><button id="next">下一条</button>
+<p id="meta" class="muted"></p><div id="title"></div>
+<label>实体类别 <select id="label"><option>METHOD</option><option>TASK</option><option>DATASET</option><option>DOMAIN</option></select></label>
+<button id="add">选中原文后添加实体</button><button id="clear">清空本条实体</button>
+<p class="muted">METHOD 方法/模型 · TASK 任务 · DATASET 命名数据集 · DOMAIN 应用领域。点击已有色块可删除。位置按Unicode字符、右开区间。</p>
+<div id="spans"></div><label>歧义 / 修改说明<textarea id="notes"></textarea></label><br>
+<button id="review">确认本条人工复核（包括零实体标题）</button><button id="draft">退回待复核</button>
+<p class="muted">关系列表默认空，本页只标实体。关系须另行核对文字证据，不能从实体共现自动生成。</p></div>
+<script id="pilot-data" type="application/json">__PILOT_JSON__</script>
+<script>
+'use strict';
+const originals=JSON.parse(document.getElementById('pilot-data').textContent);
+let rows=structuredClone(originals), index=0, selected=null;
+const $=id=>document.getElementById(id), cp=text=>Array.from(text);
+function message(text=''){$('error').textContent=text}
+function invalidate(row){row.review_status='draft';row.reviewer='';row.reviewed_at='';row.annotation_source='human_edited_draft';row.relations=[]}
+function render(){const r=rows[index];selected=null;$('jump').value=index+1;$('jump').max=rows.length;
+ $('progress').textContent=`${index+1} / ${rows.length} · 人工复核 ${rows.filter(x=>x.review_status==='reviewed').length} 条 · 其余待复核`;
+ $('meta').textContent=`${r.publicationId} · ${r.year} · ${r.type} · ${r.topics.join(', ')} · 状态 ${r.review_status}`;
+ const box=$('title');box.replaceChildren();let cursor=0;const chars=cp(r.text);
+ r.entities.forEach((e,i)=>{box.append(document.createTextNode(chars.slice(cursor,e.start).join('')));const mark=document.createElement('mark');mark.dataset.label=e.label;mark.textContent=e.text;mark.title=e.label+' · 点击删除';
+ mark.onclick=()=>{if(confirm('删除此实体：'+e.text+'？')){r.entities.splice(i,1);invalidate(r);render()}};box.append(mark);cursor=e.end});
+ box.append(document.createTextNode(chars.slice(cursor).join('')));
+ $('spans').textContent=r.entities.map(e=>`[${e.start},${e.end}) ${e.label}: ${e.text}`).join(' | ')||'当前无实体：请人工核对是否遗漏';
+ $('notes').value=r.notes||'';message()}
+$('title').addEventListener('mouseup',()=>{const s=window.getSelection();if(!s.rangeCount||s.isCollapsed)return;
+ const range=s.getRangeAt(0), box=$('title');if(!box.contains(range.startContainer)||!box.contains(range.endContainer))return;
+ const prefix=document.createRange();prefix.selectNodeContents(box);prefix.setEnd(range.startContainer,range.startOffset);
+ let start=cp(prefix.toString()).length,end=start+cp(range.toString()).length,chars=cp(rows[index].text);
+ while(start<end&&/\s/.test(chars[start]))start++;while(end>start&&/\s/.test(chars[end-1]))end--;
+ selected={start,end};});
+$('add').onclick=()=>{const r=rows[index];if(!selected||selected.start===selected.end)return message('请先在题名内选中文字');const {start,end}=selected;
+ if(r.entities.some(e=>start<e.end&&e.start<end))return message('不能与已有实体重叠；先删除原标注再修改');
+ r.entities.push({start,end,label:$('label').value,text:cp(r.text).slice(start,end).join(''),method:'human_added'});r.entities.sort((a,b)=>a.start-b.start);invalidate(r);render()};
+$('notes').oninput=()=>{const r=rows[index];r.notes=$('notes').value;invalidate(r);$('progress').textContent='本条已修改，需重新确认复核'};
+$('clear').onclick=()=>{if(confirm('清空本条所有实体？')){rows[index].entities=[];invalidate(rows[index]);render()}};
+$('review').onclick=()=>{const reviewer=$('reviewer').value.trim();if(!reviewer)return message('请填写实际人工标注者');
+ const r=rows[index];r.notes=$('notes').value;r.review_status='reviewed';r.reviewer=reviewer;r.reviewed_at=new Date().toISOString();r.annotation_source='human_reviewed';render()};
+$('draft').onclick=()=>{invalidate(rows[index]);render()};
+$('prev').onclick=()=>{index=Math.max(0,index-1);render()};$('next').onclick=()=>{index=Math.min(rows.length-1,index+1);render()};
+$('go').onclick=()=>{const n=Number($('jump').value);if(Number.isInteger(n)&&n>=1&&n<=rows.length){index=n-1;render()}else message('跳转编号无效')};
+$('export').onclick=()=>{const blob=new Blob([rows.map(r=>JSON.stringify(r)).join('\n')+'\n'],{type:'application/x-ndjson;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='pilot_200_reviewed-progress.jsonl';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+$('import').onchange=async ev=>{try{const file=ev.target.files[0];if(!file)return;const incoming=(await file.text()).replace(/^\uFEFF/,'').split(/\r?\n/).filter(x=>x.trim()).map(x=>JSON.parse(x));
+ if(incoming.length!==originals.length)throw Error('记录数量与试标包不同');const map=new Map(incoming.map(r=>[r.publicationId,r]));if(map.size!==incoming.length)throw Error('重复论文ID');
+ for(const original of originals){const r=map.get(original.publicationId);if(!r||['text','groupId','schemaVersion','sourceCsvSha256'].some(k=>r[k]!==original[k]))throw Error('不是同一版本的试标包');
+ if(!Array.isArray(r.entities)||!Array.isArray(r.relations)||!['draft','reviewed'].includes(r.review_status))throw Error('记录结构无效');let end=0;
+ for(const e of r.entities){if(!Number.isInteger(e.start)||!Number.isInteger(e.end)||e.start<end||e.end<=e.start||e.end>cp(r.text).length||!['METHOD','TASK','DATASET','DOMAIN'].includes(e.label)||cp(r.text).slice(e.start,e.end).join('')!==e.text)throw Error('实体边界无效');end=e.end}}
+ rows=originals.map(o=>map.get(o.publicationId));render();message('已恢复；正式使用前仍需命令行校验');}catch(e){message('无法导入：'+e.message)}finally{ev.target.value=''}};
+render();
+</script></html>

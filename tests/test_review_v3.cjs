@@ -1,0 +1,34 @@
+// Real Chromium behavior; all reviewer claims below are in-memory test fixtures only.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {pathToFileURL}=require('node:url');
+const {chromium}=require(process.argv[2]||'playwright');
+const root=path.resolve(__dirname,'..'),data=process.argv[3]?path.resolve(process.argv[3]):path.join(root,'kg_datasets/dblp/ner_v3');
+const schema=JSON.parse(fs.readFileSync(path.join(root,'schemas/annotation_v3.schema.json'),'utf8'));
+async function exported(page){const pending=page.waitForEvent('download');await page.locator('#export').click();const item=await pending,stream=await item.createReadStream(),parts=[];for await(const part of stream)parts.push(part);return Buffer.concat(parts).toString().trim().split('\n').map(JSON.parse)}
+async function upload(page,rows){await page.evaluate(()=>document.getElementById('error').textContent='');await page.locator('#import').setInputFiles({name:'synthetic.jsonl',mimeType:'application/x-ndjson',buffer:Buffer.from(rows.map(r=>JSON.stringify(r)).join('\n'))});await page.waitForFunction(()=>document.getElementById('error').textContent.length>0)}
+(async()=>{const browser=await chromium.launch({headless:true});try{
+ const context=await browser.newContext({acceptDownloads:true}),page=await context.newPage(),errors=[];page.on('dialog',d=>d.accept());page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(pathToFileURL(path.join(data,'pilot20_ai_review.html')).href);
+ const original=await exported(page);assert.equal(original.length,20);assert.equal(original.reduce((n,r)=>n+r.entities.length,0),45);assert(original.every(r=>r.entity_review.status==='draft'));assert(original.flatMap(r=>r.entities).every(e=>e.origin==='ai_suggestion'));
+ assert.deepEqual(await page.locator('#mentionForm option').allTextContents(),schema.$defs.entity.properties.mentionForm.enum);
+ await page.locator('#review').click();assert.match(await page.locator('#error').textContent(),/实际人工标注者/);
+ await page.locator('#reviewer').fill('SYNTHETIC-BROWSER-V3-NOT-ACTUAL-GOLD');await page.locator('#review').click();let progress=await exported(page);
+ assert.equal(progress[0].entity_review.status,'reviewed');assert.equal(progress[0].relation_review.status,'draft');assert.equal(progress[0].entities[0].origin,'ai_suggestion');assert.deepEqual(progress[0].initialDraftProvenance,original[0].initialDraftProvenance);
+ const missing=structuredClone(original);delete missing[0].entities[0].mentionForm;await upload(page,missing);assert.match(await page.locator('#error').textContent(),/实体类别/);
+ const corrupted=structuredClone(original);corrupted[0].initialDraftProvenance.aiReviewSha256='0'.repeat(64);await upload(page,corrupted);assert.match(await page.locator('#error').textContent(),/元数据\/分区\/来源不一致/);
+ const groupIndex=original.findIndex(r=>r.entities.some(e=>e.mentionForm==='coordinated'));assert(groupIndex>=0);
+ await page.locator('#jump').fill(String(groupIndex+1));await page.locator('#go').click();assert.equal(await page.locator('.relation-select').count(),0);assert.match(await page.locator('#scopeWarnings').textContent(),/coordinated/);
+ const badGroup=structuredClone(original),g=badGroup[groupIndex];g.relations=[{head:0,tail:1,label:'USED_FOR',evidence:{start:0,end:Array.from(g.text).length,text:g.text},reason:'synthetic forbidden group propagation'}];await upload(page,badGroup);assert.match(await page.locator('#error').textContent(),/关系方向/);
+ await page.locator('#review').click();await page.locator('#relationReview').click();progress=await exported(page);assert.equal(progress[groupIndex].relation_review.status,'reviewed');assert.match(await page.locator('#scopeWarnings').textContent(),/不代表整篇论文没有关系/);
+ await page.locator('.form-select').first().selectOption('single');progress=await exported(page);assert.equal(progress[groupIndex].entity_review.status,'draft');assert.equal(progress[groupIndex].relation_review.status,'draft');assert.equal(await page.locator('.relation-select').count(),1);
+ await page.reload();const tasks=original.findIndex(r=>r.entities.length===2&&r.entities.every(e=>e.label==='TASK'));
+ await page.locator('#jump').fill(String(tasks+1));await page.locator('#go').click();assert.equal(await page.locator('.relation-select').count(),0);assert.match(await page.locator('#scopeWarnings').textContent(),/TASK→TASK/);
+ await page.goto(pathToFileURL(path.join(data,'pilot20_blind_review.html')).href);const blank=await exported(page);assert.equal(blank.length,20);assert(blank.every(r=>!r.entities.length&&!r.domains.length&&!r.relations.length&&!r.notes&&r.initialDraftProvenance.kind==='blind'&&r.initialDraftProvenance.aiReviewSha256===null));
+ await upload(page,original);assert.match(await page.locator('#error').textContent(),/元数据\/分区\/来源不一致/);
+ // A human adds a source-aligned span to the blank page, not to project JSONL.
+ await page.evaluate(()=>{const node=document.getElementById('title').firstChild,range=document.createRange();range.setStart(node,0);range.setEnd(node,10);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);document.getElementById('title').dispatchEvent(new MouseEvent('mouseup',{bubbles:true}))});
+ await page.locator('#mentionForm').selectOption('composite');await page.locator('#add').click();const manual=await exported(page);assert.equal(manual[0].entities[0].origin,'human');assert.equal(manual[0].entities[0].mentionForm,'composite');assert.equal(manual[0].entity_review.status,'draft');
+ await page.goto(pathToFileURL(path.join(data,'blind_50_a.html')).href);const a=await exported(page);await page.goto(pathToFileURL(path.join(data,'blind_50_b.html')).href);const b=await exported(page);assert.equal(a.length,50);assert.deepEqual(a,b);assert(a.every(r=>!r.entities.length&&!r.domains.length&&!r.relations.length&&!r.notes));
+ for(const [name,size] of [['pilot_review.html',200],['rare_review.html',100]]){await page.goto(pathToFileURL(path.join(data,name)).href);assert.equal((await exported(page)).length,size)}
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({passed:true,checks:['45 source-declared AI candidate spans; all draft','schema-derived mention forms','explicit reviewer required','human confirmation keeps AI initial provenance','missing form and provenance tamper rejected','group individual relationships rejected','scoped completion does not imply no other relationships','form edit invalidates entity and relation review','TASK dependency is excluded not negative','20 and 50 truly blank pages','AI progress cannot contaminate blind input','human manual span retains source offsets/form','200/100 pages load','no page errors'],real_dataset_modified:false},null,2));
+}finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});

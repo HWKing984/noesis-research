@@ -1,0 +1,146 @@
+[
+  {
+    "id": "2502.12328",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 126,
+      "end": 136,
+      "text": "PeopleJoin",
+      "label": "DATASET",
+      "matchTerm": "PeopleJoin"
+    },
+    "kept": {
+      "start": 126,
+      "end": 143,
+      "text": "PeopleJoin agents",
+      "label": "METHOD",
+      "entityId": "e3"
+    }
+  },
+  {
+    "id": "2502.09222",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 34,
+      "end": 37,
+      "text": "ASP",
+      "label": "METHOD",
+      "matchTerm": "ASP"
+    },
+    "kept": {
+      "start": 34,
+      "end": 66,
+      "text": "ASP-driven user interface design",
+      "label": "TASK",
+      "entityId": "e2"
+    }
+  },
+  {
+    "id": "2502.12031",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 513,
+      "end": 537,
+      "text": "masked latent prediction",
+      "label": "METHOD",
+      "matchTerm": "masked latent prediction"
+    },
+    "kept": {
+      "start": 513,
+      "end": 542,
+      "text": "masked latent prediction task",
+      "label": "TASK",
+      "entityId": "e6"
+    }
+  },
+  {
+    "id": "2502.00840",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 1018,
+      "end": 1043,
+      "text": "activation approximations",
+      "label": "METHOD",
+      "matchTerm": "activation approximations"
+    },
+    "kept": {
+      "start": 997,
+      "end": 1043,
+      "text": "safety evaluation of activation approximations",
+      "label": "TASK",
+      "entityId": "e11"
+    }
+  },
+  {
+    "id": "2502.00306",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 384,
+      "end": 404,
+      "text": "membership inference",
+      "label": "METHOD",
+      "matchTerm": "membership inference"
+    },
+    "kept": {
+      "start": 384,
+      "end": 404,
+      "text": "membership inference",
+      "label": "TASK",
+      "entityId": "e6"
+    }
+  },
+  {
+    "id": "2502.00306",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 642,
+      "end": 662,
+      "text": "membership inference",
+      "label": "METHOD",
+      "matchTerm": "membership inference"
+    },
+    "kept": {
+      "start": 642,
+      "end": 662,
+      "text": "membership inference",
+      "label": "TASK",
+      "entityId": "e12"
+    }
+  },
+  {
+    "id": "2502.00306",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 409,
+      "end": 424,
+      "text": "data extraction",
+      "label": "METHOD",
+      "matchTerm": "data extraction"
+    },
+    "kept": {
+      "start": 409,
+      "end": 424,
+      "text": "data extraction",
+      "label": "TASK",
+      "entityId": "e7"
+    }
+  },
+  {
+    "id": "2502.16090",
+    "type": "label_overlap",
+    "candidate": {
+      "start": 896,
+      "end": 900,
+      "text": "LLMs",
+      "label": "METHOD",
+      "matchTerm": "LLMs"
+    },
+    "kept": {
+      "start": 887,
+      "end": 930,
+      "text": "evaluate LLMs' episodic memory capabilities",
+      "label": "TASK",
+      "entityId": "e12"
+    }
+  }
+]

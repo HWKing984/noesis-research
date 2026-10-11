@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "startedAtUTC": "2026-10-11T01:09:05.619692+00:00",
+  "protocolSha256": "f95b4dd2bc74bb999c29099ed6be38e8347f270c8bc73ba0bfb2906b42f45a42",
+  "protocolFileSha256": "9750ba8e66ddfded7a4e620e135842a0dab09b677ed9c21bccc776847885bc78",
+  "sourcePages": [
+    {
+      "file": "sources/listing_0.html",
+      "sha256": "80f68196b072ecb097acc301743ee318267caf08ceaebc7197f13a09d9eb08ff",
+      "sourceURL": "https://arxiv.org/list/cs.AI/2025-02?skip=0&show=2000",
+      "status": 200,
+      "fetchedAtUTC": "2026-10-10T16:12:18.358396+00:00",
+      "reusedRecordedAcquisition": true,
+      "records": 2000,
+      "bytes": 3416393
+    },
+    {
+      "file": "sources/listing_2000.html",
+      "sha256": "9eec30fb1386b76706b08200c41655b9d75623b1d92d3858d20dd2781e9b16c2",
+      "sourceURL": "https://arxiv.org/list/cs.AI/2025-02?skip=2000&show=2000",
+      "status": 200,
+      "fetchedAtUTC": "2026-10-10T16:12:27.582953+00:00",
+      "reusedRecordedAcquisition": true,
+      "records": 1654,
+      "bytes": 2885527
+    }
+  ],
+  "abstractsFetched": 0,
+  "testContentParsed": false,
+  "notice": "Metadata listing GET only; no /abs/, /pdf/, /html/ or API abstract retrieval.",
+  "endedAtUTC": "2026-10-11T01:09:18.601543+00:00"
+}

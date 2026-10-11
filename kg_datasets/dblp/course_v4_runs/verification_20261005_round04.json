@@ -1,0 +1,59 @@
+{
+  "queue": {
+    "valid": true,
+    "documents": 2000
+  },
+  "artifacts": {
+    "checkedAt": "2026-10-05T23:14:27.7058537+08:00",
+    "valid": true,
+    "originalInputs": 21,
+    "runDirectories": 62,
+    "hashedRunOutputs": 328,
+    "exportVersions": [
+      {
+        "version": "01",
+        "files": 8
+      },
+      {
+        "version": "02",
+        "files": 8
+      },
+      {
+        "version": "03",
+        "files": 9
+      },
+      {
+        "version": "04",
+        "files": 9
+      },
+      {
+        "version": "05",
+        "files": 9
+      }
+    ],
+    "receiptDocuments": 288,
+    "pendingDocuments": 1712,
+    "pendingUnique": true,
+    "pendingAnnotatedIntersection": 0,
+    "pendingAnonymous": true,
+    "annotatedCrossSplitGroups": 0,
+    "nerDocuments": {
+      "train": 127,
+      "test": 0,
+      "dev": 104
+    },
+    "relationExamples": {
+      "train": 112,
+      "test": 0,
+      "dev": 101
+    },
+    "confirmed": 274,
+    "revised": 14,
+    "entityUnresolved": 56,
+    "relationUnresolved": 75,
+    "tests": 278,
+    "failures": 0,
+    "coveragePercent": 96.73802242609582,
+    "coreCoveragePercent": 100
+  }
+}

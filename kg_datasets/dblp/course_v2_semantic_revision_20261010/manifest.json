@@ -1,0 +1,43 @@
+{
+  "inputSha256": {
+    "resources\\course_v2_semantic_revision_v1.json": "7703f9400f1c1ae9e57d7efa437098913e75429239ef81b1dc49a46577aaaa34",
+    "annotations\\course_v4\\v2_pilot_semantic_decisions_20261010.json": "fdf229a1b47d4b33ddb1943a27cb2dc6ed306e23d84d468245441ac5d3d3baa4",
+    "annotations\\course_v4\\v2_pilot_semantic_reviews_20261010.json": "38eb190598a519740391d79e7faff56f534b5bd8061b775d71891ad9f84e5453",
+    "scripts\\review_v2_evidence_pilot.py": "9271243df7cbee304bce27ef13fdc9e640ab82726691615910a5209a896fb2fb",
+    "scripts\\prepare_v2_evidence_pilot.py": "a9f9f625be062d654ca5e34a4968d53b1996177a62cdf610c88eebc0e17f185c",
+    "scripts\\course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts\\course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "scripts\\export_course_evidence.py": "24cd3b307da7d51ae86f107f7be9d3f3ef9945ebaba5031dba43407ca7f667ad",
+    "scripts\\collect_course_abstract_pages.py": "4aea32450612164cd82392a502093d1946e9b7161ec6cdb3c848826ba4d6d004",
+    "schemas\\annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "resources\\course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0",
+    "tests\\test_v2_semantic_revision.py": "b0722117d2c58a00a1d38d9c52f9e664f4d810fa9c84bef8ebfd981ae6c09f39",
+    "kg_datasets\\dblp\\course_v2_evidence_pilot_20261010\\manifest.json": "734ae61d92d9fa36a028050dc97ec7754726b9a326ac2afcbe70ed202adec4c1",
+    "D:\\Users\\Y7000P\\Downloads\\v2_semantic_review_queue.csv": "0f8ad726726ec2b100c943ff6fc4f834224dd961df958bb92ca5dc005d505d4d",
+    "D:\\Users\\Y7000P\\Downloads\\v2_first_batch_audit_report.md": "359d17dffd8b1b32a449f5f4cfb79078307b473daa7f045c7d2d30e82a405a04",
+    "kg_datasets\\dblp\\course_abstract_train_sources_20261008_37\\page_006.html": "965d533cb1089a4b47c13472387bb45c4156ba762946b711812093651a971a11",
+    "kg_datasets\\dblp\\course_abstract_train_sources_20261008_37\\manifest.json": "698a0ff6e5e451123cc382ce94f8c4add17c44ea1056c7f4253f6abe6543dbbb",
+    "resources\\course_abstract_expansion_v1.json": "fddd961940e7e967d431490af6d058c215c3d14c84dc213b6dc18953e71f0480",
+    "kg_datasets\\dblp\\course_abstract_train_sources_20261008_37\\requests.json": "e61b56c51bbdcf202bf1de46820eab7f9b8213ae358d933d8aea217e71a91e46",
+    "kg_datasets\\dblp\\course_abstract_boundary_sources_20261009_52_retry\\page_006.html": "143825623ec0d7381bb6c2f933c57815b630ce482ca7e455d657f6f4653d383e",
+    "kg_datasets\\dblp\\course_abstract_boundary_sources_20261009_52_retry\\manifest.json": "465475e835d9b51243436c90820f31bd8f9e735eead7811ef17617aa17779d55",
+    "resources\\course_abstract_boundary_expansion_v1.json": "2afeb3de0e4f8cc0a6c6df1b1d17c8cf67a3fed72de6ce50a605a234c4e8b51b",
+    "kg_datasets\\dblp\\course_abstract_boundary_sources_20261009_52_retry\\requests.json": "1f5e6bc6cee4b3f95e09478421bef792b24b6552105d81ddd703d2b7201c86e6"
+  },
+  "filesSha256": {
+    "09_annotation_expansion.html": "eacf80d2af7e40b5e8f11b41c972745e8d6ac03c68e02dc60c1ef5b2cf033dbe",
+    "change_ledger.jsonl": "cbf7493cd124cf3488d7f02a9307a8fe49e7b0ef228191dd42eda3940fa5226f",
+    "contract.json": "3319be45b40dedeba2b7534d1996832663f3f24d973eacffc96308859e2d43ca",
+    "generation_receipts.jsonl": "0d07cc6ec0979397d3cdb962967e394e252b4f0b488bc711c1d510ff7e296924",
+    "priority_adjudications.csv": "ebc56a6e81b5ce0eee5fa8380fba6b1731166242f1536067363fa54943c79ddb",
+    "production_protection.json": "b57c445a6e41e8bcf1fb7f2d9019a7abe5a42bb450a4f3ed819ce753c26198f1",
+    "references.jsonl": "8b4bd272c2c2c52ce30e84f361c8c148d44cd0157935dd598dc1f144ca7ffe5d",
+    "relation_review.csv": "f96c0a4b128067102cb3c33f5a2ed17abd1a99632a08a51ca9502c5b8cf2b5ac",
+    "reviewed_receipts.jsonl": "1efbf42517e2e3dfae87e4306868f38c31ef799e3f59c4d0bd5747fa736e7c91",
+    "semantic_review.md": "fc148eaf522bcdc8d402ddb8a0fe1c1768d606c30fe39dcbfb9b1424479891cf",
+    "source_provenance_sidecars.jsonl": "20e620fbeebe594dfddf1def340805c0d7b6adb163d021c475add3f3f8d259fb",
+    "summary.json": "b3c0466450366e715077a8ce231cb6a145d0f611b706112c06b868e7f0735ba3",
+    "v2_first_batch_audit_report.md": "359d17dffd8b1b32a449f5f4cfb79078307b473daa7f045c7d2d30e82a405a04",
+    "v2_semantic_review_queue.csv": "0f8ad726726ec2b100c943ff6fc4f834224dd961df958bb92ca5dc005d505d4d"
+  }
+}

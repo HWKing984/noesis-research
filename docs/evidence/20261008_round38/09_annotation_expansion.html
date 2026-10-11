@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>上下文标注修复与未晋级边界 · 第38轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>上下文标注修复与未晋级边界 · 第38轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<h2>逐次出现的上下文判断 · 不修改旧标注器</h2><table><thead><tr><th>项目</th><th>实际结果</th><th>边界</th></tr></thead><tbody><tr><td>训练摘要</td><td>48 → 50 / 58；隔离10 → 8</td><td>只修订两篇已知train隔离；56篇原收据继承</td></tr><tr><td>参考提及</td><td>METHOD378 / TASK189 / DATASET44</td><td>AI参考，不是人工gold或模型预测</td></tr><tr><td>关系标签</td><td>新增6条USED_FOR，明确对195 → 201</td><td>EVALUATED_ON43 / NO_RELATION7未增加</td></tr><tr><td>未决关系</td><td>可用NER文档中1644对仍UNRESOLVED</td><td>不当负例；完整RE train6/58，dev仍5/19</td></tr><tr><td>工程回归</td><td>366项通过；50篇严格BIO往返</td><td>不是366项语义验证或模型性能晋级</td></tr></tbody></table><h2>真实修复：同词不同角色，关系端点必须重建</h2><table><thead><tr><th>原文位置</th><th>本版明确判断</th></tr></thead><tbody><tr><td>multi-LLM debiasing framework</td><td>全名为METHOD；内部debiasing仅是词法修饰，不独立断言嵌套TASK</td></tr><tr><td>for debiasing LLMs</td><td>此处debiasing为TASK；旧e13为LLMs，新e13为debiasing，不能沿用旧边</td></tr><tr><td>using machine learning (ML) methods / deploying ML</td><td>技术方法/部署家族为METHOD</td></tr><tr><td>ML Practitioners / ML community / ML development</td><td>人群、领域、工作流不传播为METHOD</td></tr></tbody></table><h2>保留失败，不混淆新数据与新成绩</h2><p>首次根目录pytest误收集历史证据副本，20个重名收集错误原XML保留；新增pytest.ini默认只收集正式tests目录，重新执行366项通过。没有删除历史文件。</p><p>本轮没有训练、推理、改dev/test、写库、重启或新线上验收。37轮NER71.28%与pipeline26.49%仍是原先的已暴露dev诊断，不是本轮新成绩。两篇解隔离不证明模型可靠性已经解决。</p><h2>仍需完成</h2><p>其余8篇语义/共用中心词歧义不强制放行；继续核对训练任务跨度/家族与研究对象，补完整dev关系证据和稀有关系支持，锁定新pipeline后再使用未暴露测试。独立核验、长尾概念/作者身份仍有限，暂不扩大图谱或自动晋级。</p><footer>证据页生成时间：2026-10-08T04:50:24.371747+00:00<br>来源：<div class="path">audit_state.json</div><div class="path">contextual_cases.json</div><div class="path">sources/kg_datasets/dblp/course_abstract_occurrence_reviewed_20261008_38/summary.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

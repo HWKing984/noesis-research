@@ -1,0 +1,15 @@
+{
+  "provider": "OpenAI via Codex",
+  "model": "unknown_codex_model",
+  "independent": false,
+  "reviews": [
+    {
+      "arxivId": "2003.10555",
+      "reason": "Actual same-session AI source review: re-read the complete original abstract, all 16 fixed spans, the full pair proposal table and each accepted literal quote. Confirm only 12 previously unknown pairs: 3 task positives and 9 local role-contrast negatives. Rejected the proposed discriminator-to-GLUE/NLU two-edge chain because the small-model example is not uniquely tied to that earlier configuration; both stay UNRESOLVED. The generator contributes to the whole system but does not execute the discriminator's direct replacement decision. No title-derived ELECTRA entity, external model facts or absence-based negative is introduced. All existing 12 known occurrence pairs stay unchanged; full document is still unresolved. This review is not independent human gold or measured model improvement."
+    },
+    {
+      "arxivId": "2006.03654",
+      "reason": "Actual same-session AI source review: re-read the whole abstract and its 25 fixed spans. The complete architecture and mask decoder have explicitly stated pre-training roles, yielding eight new task occurrence pairs. The two SuperGLUE mentions share dataset identity in one coordinated sentence, yielding three binary evaluation occurrence edges only; preserve distinct half-data, scaled/single and ensemble configurations and their own scores. Do not attach measurements to generic family/component mentions or use benchmark names as external task evidence. Preserve the source typo natural langauge and all original 19 known pairs. Unjudged pairs remain unknown, so complete-EVALUATED_ON document support is still zero. Same-session AI self-review, not independent gold."
+    }
+  ]
+}

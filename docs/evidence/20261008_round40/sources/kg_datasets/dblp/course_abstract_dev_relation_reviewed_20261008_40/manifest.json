@@ -1,0 +1,33 @@
+{
+  "inputSha256": {
+    "resources/course_abstract_dev_relations_v1.json": "2767eebcc2db05ed27a038babf1906496c26176732f16ea35af574eabec39cf3",
+    "resources/course_abstract_relation_v1.json": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+    "kg_datasets/dblp/course_abstract_relation_inputs_20261008_36/manifest.json": "8464b73aa19faf4f39d7b2f3d11251ad2b9a30ca6ecb25d95d5b66e826ae0b35",
+    "kg_datasets/dblp/course_abstract_queue_20261008_32/manifest.json": "acfe489a3c8e4d574b8fd0472008ca92bf66f2a092ad50922b7c2868b3979645",
+    "annotations/course_v4/abstract_dev_relation_decisions_20261008_40.json": "81a075c059a8d95cd4d064bd04fc00aa7ad6e8ff9a34e6945ffeddaf0bdfdea2",
+    "annotations/course_v4/abstract_dev_relation_reviews_20261008_40.json": "e7871e5e582dc616c07d255b92b07861834ec9bc38227684c70afb6cc801b73f",
+    "scripts/complete_dev_relations.py": "d7126e0eff3d6dcb3573bd2114d71ab2b7819837a478fd2e384a378b271aa538",
+    "scripts/course_abstract_relation.py": "96aa877e8d95c34e9768460818625b9c358a14d6ca46eb7d32a4fea203a96bdf",
+    "scripts/course_abstract_v1.py": "1327e537f46a260a18b215899fa72341f32fd0864fb45fed5f89c30358af85a6",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/train_course_ner.py": "aa2ff0060d74d05ee5d98df4548db49a6a9546d0a9066791e748538a2b16d841",
+    "scripts/train_course_relation.py": "1c617006b24ddeb571049d6536471e8a01fcf72430f39253eb6502f52b18dd35",
+    "schemas/annotation_course_v4.schema.json": "22340365b6af3cace10740a4a0b8d10fc516dd15b2a53c2fb3c7a6096f3aeeb5",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0"
+  },
+  "filesSha256": {
+    "additional_relation_dev.jsonl": "24981b1d701b4804f27ff7e48d06dc4b831214a9bdacea465af322bac687d33f",
+    "contract.json": "01a543c92fa08ebb7fc0fe3ede14e52393c49604b2bca387d74994e114241cb7",
+    "excluded_ner.jsonl": "e13bbf2af675c686a7b9430903ad0aa3498c3f970332032740692fd8beb60df7",
+    "full_relation_dev.jsonl": "2d4294be6eed97f16fe7ff4ea37a9daf923a1fa189823a892f82e48756e39785",
+    "generation_receipts.jsonl": "1f8404f6a05f346f1c687be2325697f71f0d4973fccc63ed79d734fcc791dd30",
+    "ner_dev.jsonl": "395eb5c8c6ddfe7782d7877a8cba1ba109680d04695770cdd7a19d8026901954",
+    "origins.jsonl": "dd39adcdb061c2d9db1a4c0e34b926df9049a58f21de799cd28e4498d73c4879",
+    "references.jsonl": "5d5b990c462c7b4673f106efc77d5e78fa73d8cf5abf7535d0676827c9cd48f2",
+    "relation_dev.jsonl": "360567eebf7d2a078b7f1bc5e2714b9e897b0900f3d26cfce565ef33c5581b68",
+    "reviewed_receipts.jsonl": "017aebe355a801475cd866d116a4b6ac143df0f7b4b17e146f67705f054f27db",
+    "summary.json": "c26432bc2a2d5c94731c75f2ec722407beb8683f9b91c9e9700fc72525109d21",
+    "token_alignment.jsonl": "08ba5223f418ea9069bc7702758e488e91cca5924851f9054b71562dfb3c8ce9"
+  }
+}

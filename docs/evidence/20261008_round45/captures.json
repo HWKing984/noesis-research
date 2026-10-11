@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "kind": "actual_browser_render_capture",
+  "captures": [
+    {
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1450",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261008_round45\\02_training.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e56ca0dff7664d79842b8719a7fefc2d",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round45/02_training.html"
+      ],
+      "capturedAt": "2026-10-08T11:59:23.0833011Z",
+      "sourcePage": "02_training.html",
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round45/02_training.html",
+      "bytes": 125502,
+      "image": "02_training.png",
+      "originalConsoleScreenshot": false,
+      "viewportHeight": 1450,
+      "sourcePageSha256": "d9aa52015dca5d4aa1d1bc82c0e881904bb2f02d47a10b29bfb81b7dd235d21b",
+      "sha256": "91eaffed4d06aebbf2bf0f489dba6ae4b3afd68cabe278c20cf86e24faed98d6"
+    },
+    {
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,1800",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261008_round45\\04_traceability.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e56ca0dff7664d79842b8719a7fefc2d",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round45/04_traceability.html"
+      ],
+      "capturedAt": "2026-10-08T11:59:24.2575029Z",
+      "sourcePage": "04_traceability.html",
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261008_round45/04_traceability.html",
+      "bytes": 143074,
+      "image": "04_traceability.png",
+      "originalConsoleScreenshot": false,
+      "viewportHeight": 1800,
+      "sourcePageSha256": "cb6ce93a7d1b817770064f305fc5d097e9fbec634945729c8dd5210be74146cf",
+      "sha256": "609e0d5d83ae07a3426015d6e480cd59bd5c23068efaa81ec319d65d113697f7"
+    }
+  ],
+  "finishedAt": "2026-10-08T11:59:24.2593572Z",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-e56ca0dff7664d79842b8719a7fefc2d",
+  "browserVersion": "154.0.4258.62",
+  "viewportWidth": 1280,
+  "generatedFromRealArtifacts": true,
+  "originalConsoleScreenshot": false,
+  "renderer": "installed_Microsoft_Edge_headless"
+}

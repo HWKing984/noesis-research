@@ -1,0 +1,19 @@
+{
+  "version": "abstract_train_scope_review_v1",
+  "snapshot": "kg_datasets/dblp/course_abstract_task_boundary_reviewed_20261008_43",
+  "snapshotManifestSha256": "401267ceeb46e8f0f0b6e25f6fdf09d9f1caaaf8654d29d21ce1f56f22bbb5a1",
+  "reviewCohort": ["2404.01036", "1804.07461", "2009.03300", "2105.15057", "2507.22101", "2510.02719", "2208.08611", "2312.14977", "1708.07747", "2406.01574", "2510.26830"],
+  "cohortPolicy": "All eight existing train NER quarantines plus all three remaining source-review caveat papers from round43, chosen before new judgments; not selected from dev/test or model errors.",
+  "goal": "Resolve existing training-side scope/boundary ambiguity where whole-source evidence and the existing broad computational TASK policy suffice; otherwise retain documented quarantine or caveat.",
+  "NERPolicy": "Reuse METHOD/TASK/DATASET and flat contiguous BIO, not a new label ontology. TASK includes explicit computational objectives and technical operations with identifiable objects, not bare academic subject names or human educational skills. Benchmarking an explicit computational object is an operation goal. Anaphoric/unnamed goals are not invented as names. Preserve source text and avoid nested entities or reconstructed shared heads.",
+  "methodPolicy": "Identifiable technical families may be METHOD even without a named product. General AI/GenAI field labels and course subjects are not automatically METHOD. A literal model-family name in a possessive or hyphenated modifier may be judged per occurrence if token boundaries allow exact BIO; do not create a method named DNN-specific or propagate all substring matches.",
+  "datasetPolicy": "Only source-named datasets/benchmark suites; do not borrow MMLU from its title, create names for fourteen unnamed datasets or treat dataset presence as an evaluation edge.",
+  "changePolicy": "Explicit source-bound decisions and actual same-session review. New complete annotation from a previously quarantined paper gets a fresh initial/review receipt and all fresh relation candidates UNRESOLVED. Existing valid spans may be edited only with all touching resolved pairs explicitly rejudged or retracted; never carry a resolved old endpoint silently. Unchanged documents keep original receipt bytes.",
+  "unknownPolicy": "UNRESOLVED never becomes NO_RELATION by default. Genuine zero-candidate documents are complete within scoped relations, not synthetic negative pairs.",
+  "testPolicy": "No semantic reading, labeling, tokenization or inference of dev/test. Copy dev as opaque bytes and verify historical manifests/weights/test binary hashes. No new metrics.",
+  "validation": "Strict BIO round-trip on all eligible train documents and exact rebuilt pair inventory. One runnable check, full regression in D-drive isolated temporary directory, real-artifact browser captures.",
+  "trainingAllowed": false,
+  "automaticPromotionAllowed": false,
+  "reportExpansionPaused": true,
+  "independentHumanGold": false
+}

@@ -1,0 +1,45 @@
+{
+  "micro": {
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "truePositive": 91,
+    "predicted": 206,
+    "reference": 359,
+    "precision": 0.441747572815534,
+    "recall": 0.25348189415041783,
+    "f1": 0.32212389380530976
+  },
+  "perClass": {
+    "METHOD": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 76,
+      "predicted": 164,
+      "reference": 208,
+      "precision": 0.4634146341463415,
+      "recall": 0.36538461538461536,
+      "f1": 0.40860215053763443
+    },
+    "TASK": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 15,
+      "predicted": 42,
+      "reference": 148,
+      "precision": 0.35714285714285715,
+      "recall": 0.10135135135135136,
+      "f1": 0.15789473684210525
+    },
+    "DATASET": {
+      "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+      "truePositive": 0,
+      "predicted": 0,
+      "reference": 3,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "method": "train_span_dictionary_longest_match",
+  "split": "dev",
+  "lexiconPhrases": 1947,
+  "testEvaluated": false,
+  "humanGold": false
+}

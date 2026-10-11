@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "trainingExecuted": false,
+  "inferenceExecuted": true,
+  "testEvaluated": false,
+  "modelPromoted": false
+}

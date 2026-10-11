@@ -1,0 +1,71 @@
+{
+  "status": "roster_fixed_dev_sources_ready_for_review_not_training_ready",
+  "samplingVerification": {
+    "status": "passed",
+    "sourceListingCount": 3654,
+    "eligiblePopulationCount": 3579,
+    "metadataMembers": 40,
+    "counts": {
+      "train": 12,
+      "dev": 20,
+      "test": 20
+    },
+    "samplingFrameLocked": true,
+    "trainingRosterLocked": true,
+    "contentBindingCompleted": false,
+    "acceptedNegativePairs": 0,
+    "trainingAuthorized": false,
+    "evaluationAuthorized": false,
+    "semanticIndependenceProven": false
+  },
+  "devVerification": {
+    "status": "dev_sources_collected_pending_annotation",
+    "requestedDevDocuments": 20,
+    "collectedDevDocuments": 20,
+    "failedDevRequests": 0,
+    "testRequests": 0,
+    "testContentParsed": false,
+    "annotatedDocuments": 0,
+    "sourceIdentityVerifiedDocuments": 20,
+    "semanticIndependenceProven": false,
+    "trainingAuthorized": false,
+    "evaluationAuthorized": false,
+    "trainingExecuted": false,
+    "verification": "passed"
+  },
+  "actualTests": 96,
+  "testRunId": "2d27b578-2a0d-42e3-b1f4-be59fcb06369",
+  "fixedFortyIdentitiesUnchanged": true,
+  "sixTrainCoreFilesUnchanged": true,
+  "v1ProtectedFileCount": 6,
+  "oldSealedArchiveUnchanged": true,
+  "acceptedNegativePairs": 0,
+  "negativeLabel": "UNRESOLVED",
+  "rosterMutationProbes": [
+    {
+      "probe": "empty",
+      "accepted": false,
+      "reason": "Training roster cannot be empty"
+    },
+    {
+      "probe": "replacement",
+      "accepted": false,
+      "reason": "Training roster changed; explicit new experiment version required"
+    },
+    {
+      "probe": "addition",
+      "accepted": false,
+      "reason": "Training roster changed; explicit new experiment version required"
+    },
+    {
+      "probe": "deletion",
+      "accepted": false,
+      "reason": "Training roster changed; explicit new experiment version required"
+    }
+  ],
+  "trainingAuthorized": false,
+  "evaluationAuthorized": false,
+  "newModelMetrics": null,
+  "testContentParsed": false,
+  "verifiedAtUTC": "2026-10-11T01:13:38.512214+00:00"
+}

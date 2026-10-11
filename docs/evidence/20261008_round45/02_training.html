@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>四篇训练基准与稀有实体支持 · 第45轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>四篇训练基准与稀有实体支持 · 第45轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>四篇阅读理解基准原论文只用于训练；在获取页面/标签前锁定种子，并按规范化题名与arXiv ID检查现有论文身份。定向训练选择有偏，不是独立、代表性评测。</p><table><thead><tr><th>训练量</th><th>第44轮</th><th>第45轮</th></tr></thead><tbody><tr><td>固定队列 / NER / 隔离</td><td>58 / 54 / 4</td><td>62 / 58 / 4</td></tr><tr><td>METHOD / TASK / DATASET</td><td>403 / 196 / 44</td><td>405 / 218 / 55</td></tr><tr><td>含DATASET论文 / 字面名称</td><td>16 / 27</td><td>20 / 31（未做别名归一）</td></tr><tr><td>明确 / 未决 / 全候选</td><td>267 / 1647 / 1914</td><td>271 / 1659 / 1930</td></tr><tr><td>完整关系文档</td><td>8</td><td>11（新增3篇零候选，不是负例）</td></tr></tbody></table><h2>真实采集与AI复核</h2><table><thead><tr><th>源论文</th><th>新增实体/关系</th></tr></thead><tbody><tr><td>1704.04683 · RACE</td><td>DATASET3 / TASK3；无命名方法，零候选</td></tr><tr><td>1705.03551 · TriviaQA</td><td>DATASET5 / TASK3 / METHOD2；3评测＋1用途，12未决</td></tr><tr><td>1809.09600 · HotpotQA</td><td>DATASET2 / TASK6；无命名方法，零候选</td></tr><tr><td>1903.00161 · DROP</td><td>DATASET1 / TASK10；无命名方法，零候选</td></tr></tbody></table><p>四个页面题名/ID匹配，169–219 tokens，无截断/失败/替换。原文、HTML、robots、请求时间与SHA保存；实际同会话自复核不是独立gold。新增31字面名称中的4个为DROP/HotpotQA/RACE/TriviaQA，重复提及不冒充独立论文。</p><p>新增评测仅3个跨度对、来自1篇论文；未增加dev EVALUATED_ON=0/覆盖7/19。没有新训练、推理或F1，不升级模型或31图。</p><footer>证据页生成时间：2026-10-08T11:58:51.506726+00:00<br>来源：<div class="path">sources/kg_datasets/dblp/course_abstract_benchmark_inputs_20261008_45/summary.json</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

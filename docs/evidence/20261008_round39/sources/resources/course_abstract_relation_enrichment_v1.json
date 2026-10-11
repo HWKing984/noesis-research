@@ -1,0 +1,17 @@
+{
+  "version": "abstract_relation_enrichment_v1",
+  "source": "kg_datasets/dblp/course_abstract_occurrence_reviewed_20261008_38",
+  "sourceManifestSha256": "dc9f22fa3dd41b550008f6d699d08ef61bd5799cd085ef4a8d2c04fd99559eab",
+  "parentRelationContract": "resources/course_abstract_relation_v1.json",
+  "parentRelationContractSha256": "b4bf482743caa9897a827ba6e59070fc867591bbee19c2909fb9d85194fd53e7",
+  "revisionCohort": ["2503.01309", "2107.10847", "2402.14245", "2510.26830"],
+  "selection": "All four NER-complete round37 TRAIN abstracts containing explicitly named DATASET entities. Previously locked train sources; no new collection, dev/test error targeting, model-score sampling or document replacement.",
+  "goal": "Reduce relation-label sparsity and inverse-argument mistakes without changing source NER. Add source-supported task/benchmark edges and specific receiver-versus-operator contrasts; do not equate component use with independent component evaluation.",
+  "entityPolicy": "All 58 source references, entity spans/status/reasons/group mentions remain unchanged; inherit non-revised receipts and previously resolved labels. Eight NER quarantines remain excluded, not all-O. Partial resolved pairs are usable only within complete NER documents.",
+  "positivePolicy": "Explicit local operator/task or named-method/benchmark attribution. Repeated proper names may refer to the same named method when the source makes the connection; count their spans but disclose correlated aliases. An evaluation of our approach alone cannot certify that each named internal component was independently evaluated.",
+  "negativePolicy": "Use only the parent's explicit_argument_role_contrast or explicit_dataset_use_contrast with literal evidence and a specific source-role explanation. An unknown pair, missing measurement, training mention, poor performance, common co-occurrence or unsupported benchmark is not a negative.",
+  "reviewPolicy": "Fresh generation plus actual same-session whole-source/pair self-review on four revised documents, with upstream receipt binding; AI pseudo labels, not independent human gold. Preserve every other receipt unchanged.",
+  "experiment": "Offline relation-label enrichment and strict NER/marked-pair encoding preflight only. No model training/inference, new scores, dev relabeling, reserved-test consumption or production mutation. A future training experiment needs its own locked input and configuration.",
+  "automaticPromotionAllowed": false,
+  "qualityPromotionPassed": false
+}

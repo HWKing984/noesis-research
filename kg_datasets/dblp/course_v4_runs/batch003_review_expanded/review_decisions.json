@@ -1,0 +1,656 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-2f5155978b196c47ea3f",
+      "entityStatus": "unresolved",
+      "entityReason": "Statistical Inferences may be a method or an analysis goal; complete flat entity coverage is not settled.",
+      "entities": [
+        {
+          "text": "Prediction of Clinical Outcomes",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Possible statistical-inference entity coverage remains unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Clinical-outcome prediction explicitly uses deep neural networks."
+        }
+      ],
+      "notes": "Interpretability is a property; no unseen inference algorithm is invented.\nAI self-review: The explicit clinical prediction/network pair is sound; statistical inference versus interpretation task coverage remains genuinely ambiguous."
+    },
+    {
+      "sampleId": "sample-f20453b6b340c68018b1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Line Parameters Estimation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Current Transformers in the line-parameter/synchronized-measurement context denotes electrical instrumentation, not an AI model. Measurements are inputs, not a named algorithm or dataset.\nAI self-review: Current transformers are electrical measurement devices here, not neural transformers; only the line-estimation operation is in scope."
+    },
+    {
+      "sampleId": "sample-b0df0cccf04721dd0ed7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Dynamic Network Provisioning",
+          "label": "TASK"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Network provisioning explicitly uses reinforcement learning."
+        }
+      ],
+      "notes": "Link Stability is an input/criterion rather than another named task or dataset.\nAI self-review: With directly connects reinforcement learning to dynamic provisioning; link stability is a criterion, not a named dataset."
+    },
+    {
+      "sampleId": "sample-5519dd7331d1fe29fbd8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Software Defect Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Temporal Hypergraph Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Defect prediction is explicitly based on the temporal hypergraph network."
+        }
+      ],
+      "notes": "Retain temporal/hypergraph architectural qualifiers.\nAI self-review: Based on establishes the defect-prediction use; temporal hypergraph is an architecture qualifier that must remain."
+    },
+    {
+      "sampleId": "sample-dbc712dea6b363d00266",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Soft-Sensor Construction",
+          "label": "TASK"
+        },
+        {
+          "text": "Adaptive Modeling",
+          "label": "METHOD"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Soft-sensor construction is explicitly based on adaptive modeling."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Transfer learning is the other explicit construction technique."
+        }
+      ],
+      "notes": "Both methods are fully written out. Manufacturing and maintenance specify context, not dataset names.\nAI self-review: Adaptive modeling and transfer learning are fully written methods, both supporting the explicit soft-sensor construction goal."
+    },
+    {
+      "sampleId": "sample-04c320e267936eb3cffb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Token Compression",
+          "label": "METHOD"
+        },
+        {
+          "text": "Compact Vision Transformers",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Compression is the stated procedure; compact vision transformers are a model family. Survey/evaluation lacks a separately specified task endpoint or named dataset.\nAI self-review: Compression and compact vision transformers are technique mentions; generic survey/evaluation and Edge AI do not name tasks or datasets."
+    },
+    {
+      "sampleId": "sample-a7430f3cf6332a016daa",
+      "entityStatus": "unresolved",
+      "entityReason": "TeslaML may name a platform/tool rather than an extraction-scope computational method.",
+      "entities": [
+        {
+          "text": "TeslaML",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Platform versus method scope is not finalized.",
+      "relations": [],
+      "notes": "Tencent is an organization; automatic steering does not identify a specific downstream task.\nAI self-review: TeslaML may be a platform rather than an algorithm; steering learning and the Tencent setting do not resolve that scope."
+    },
+    {
+      "sampleId": "sample-e5bbe330cc9d6ef3bd17",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Learnable Audio Encryption",
+          "label": "METHOD"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The learnable encryption procedure is a composite method. Outsourcing services is deployment context; no nested encryption task or dataset is invented.\nAI self-review: Learnable audio encryption is a composite procedure; outsourcing services are deployment context, not a separately asserted learning task."
+    },
+    {
+      "sampleId": "sample-de9c946896101662caf5",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hardware-Based Detection of Spectre Attacks",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The subtitle identifies machine learning as the attack-detection approach."
+        }
+      ],
+      "notes": "Hardware-based specifies detection modality; the attacked phenomenon remains within the task object.\nAI self-review: The subtitle explicitly supplies the attack-detection method; Spectre is an attack family and not a dataset."
+    },
+    {
+      "sampleId": "sample-aa82463acf1691734c3b",
+      "entityStatus": "unresolved",
+      "entityReason": "Slapo is identified as a schedule language, not unambiguously an algorithm/model.",
+      "entities": [
+        {
+          "text": "Slapo",
+          "label": "METHOD"
+        },
+        {
+          "text": "Progressive Optimization of Large Deep Learning Model Training",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The language/tool endpoint scope remains unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The proposed language is explicitly for optimization of model training, conditional on method scope."
+        }
+      ],
+      "notes": "Preserve the training-optimization object without overlapping its internal deep-learning phrase.\nAI self-review: Slapo is explicitly a language and its algorithm-versus-software status remains unresolved, despite the clear training-optimization purpose."
+    },
+    {
+      "sampleId": "sample-1f1044dff13fa5adb600",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Realtime Disaster Detection",
+          "label": "TASK"
+        },
+        {
+          "text": "GNN",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Disaster detection is explicitly through GNN models."
+        }
+      ],
+      "notes": "Disaster knowledge graphs are input resources, not an explicitly named benchmark; Models is a generic carrier.\nAI self-review: Through GNN directly supports detection; generic disaster knowledge graphs are inputs without a proper dataset name."
+    },
+    {
+      "sampleId": "sample-b7187dd0ce06f1bba9cc",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Frugal Actor-Critic",
+          "label": "METHOD"
+        },
+        {
+          "text": "Off-Policy Deep Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Sample Efficient is evaluative; off-policy is a mechanism qualifier. Unique experiences are generic training inputs, not a dataset name.\nAI self-review: Actor-critic and off-policy deep reinforcement learning are methods; sample efficiency and unique experiences are not named benchmarks."
+    },
+    {
+      "sampleId": "sample-5c25782c25ddb552540c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Translating Embedding with Local Connection",
+          "label": "METHOD"
+        },
+        {
+          "text": "Knowledge Graph Completion",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The local-connection embedding technique is explicitly for graph completion."
+        }
+      ],
+      "notes": "Retain the embedding mechanism as one method without nested duplicate spans.\nAI self-review: Keep the local-connection embedding mechanism intact and the explicit for graph-completion relation."
+    },
+    {
+      "sampleId": "sample-c80c3e967bdf663a8c29",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Fair Transport Network Design",
+          "label": "TASK"
+        },
+        {
+          "text": "Multi-Agent Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The transport-network design task explicitly uses multi-agent reinforcement learning."
+        }
+      ],
+      "notes": "Fair defines a substantive design objective, not a generic claim that the model is excellent.\nAI self-review: Fairness specifies the network-design objective; using clearly supplies the multi-agent reinforcement-learning method."
+    },
+    {
+      "sampleId": "sample-41e57f23d967a3962320",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Forecasting Financial Volatility",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Neural networks are explicitly employed in forecasting financial volatility."
+        }
+      ],
+      "notes": "No named financial dataset is supplied.\nAI self-review: Networks in forecasting supplies a direct task application, without a named financial dataset or unseen metric."
+    },
+    {
+      "sampleId": "sample-286e8d3fce7d2ac37459",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Decoding 3D Representation of Visual Imagery EEG",
+          "label": "TASK"
+        },
+        {
+          "text": "Attention-based Dual-Stream Convolutional Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The EEG-decoding task explicitly uses the attention-based dual-stream network."
+        }
+      ],
+      "notes": "EEG is the modality within the task, not a named dataset. Keep all architectural qualifiers.\nAI self-review: Keep the EEG/3D decoding object and full attention/dual-stream convolutional architecture; using explicitly links them."
+    },
+    {
+      "sampleId": "sample-b5ab820b2dc2ce46fd3e",
+      "entityStatus": "unresolved",
+      "entityReason": "Multi-agent Simulation may denote a task setting or a simulation-method family; flat task coverage is unsettled.",
+      "entities": [
+        {
+          "text": "Parameter Tuning",
+          "label": "TASK"
+        },
+        {
+          "text": "Multi-agent Simulation",
+          "label": "TASK"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The simulation endpoint role remains unresolved.",
+      "relations": [
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Parameter tuning explicitly uses reinforcement learning."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Tuning parameters for a simulation does not clearly say learning performs the simulation."
+        }
+      ],
+      "notes": "Keep the proposed simulation task without pretending every for phrase is a direct downstream use.\nAI self-review: Reinforcement learning performs parameter tuning; whether simulation is a separate task versus the tuned system remains unresolved."
+    },
+    {
+      "sampleId": "sample-6633f5fbbece43451e85",
+      "entityStatus": "unresolved",
+      "entityReason": "Integrating EEG and eye movement is a mechanism description whose standalone METHOD eligibility is uncertain, not an established separate TASK.",
+      "entities": [
+        {
+          "text": "BEI-DETR",
+          "label": "METHOD"
+        },
+        {
+          "text": "Multimodal Remote Sensing Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Coverage of the modality-integration mechanism as a separate method remains unresolved.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "BEI-DETR explicitly names the multimodal remote-sensing detection approach."
+        }
+      ],
+      "notes": "Do not promote an input-integration phrase to a downstream task merely to create a second positive relation. The literal phrase remains available in the title for later adjudication.\nAI self-review: Integrating two input modalities states the approach mechanism, not a separately established downstream task; remove the unsupported extra task and retain scope uncertainty."
+    },
+    {
+      "sampleId": "sample-449bdcaad300240f3ecb",
+      "entityStatus": "unresolved",
+      "entityReason": "The permeability-classification task cannot be cleanly separated from Classification models without an ambiguous flat boundary.",
+      "entities": [
+        {
+          "text": "Classification models",
+          "label": "METHOD"
+        },
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The classification-task endpoint is not finalized.",
+      "relations": [],
+      "notes": "CaCo-2 permeability is the modeled property; chemical information is an input, not a named dataset.\nAI self-review: The title implies permeability classification but gives no contiguous full task span; retain incomplete entity coverage rather than reconstruct words."
+    },
+    {
+      "sampleId": "sample-18a0a3184e393df917e6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Decoding Complex Traits",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Trait decoding is explicitly through machine-learning models."
+        }
+      ],
+      "notes": "Functional genomics is a field and multi-omics describes inputs; no specific algorithm or named dataset is added for either.\nAI self-review: Machine learning explicitly supports complex-trait decoding; genomics and multi-omics are fields/input categories, not named datasets."
+    },
+    {
+      "sampleId": "sample-209bfc0bdc61797319a0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hierarchical Recurrent Convolutional Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Chemical-protein Relation Extraction from Biomedical Literature",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The specified hierarchical recurrent-convolutional model is explicitly for the relation-extraction task."
+        }
+      ],
+      "notes": "Biomedical literature specifies the extraction source, not a named dataset.\nAI self-review: Retain the hierarchical recurrent-convolutional method and biomedical source/task object; for supplies the direct extraction use."
+    },
+    {
+      "sampleId": "sample-9f0faa8963d648872545",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Human Activity Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Pre-Trained Foundation Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The activity-recognition framework is explicitly based on a pretrained foundation model."
+        }
+      ],
+      "notes": "Novel and Framework are generic/evaluative carriers; pretraining specifies the method family.\nAI self-review: Pre-training is substantive method information, whereas Novel and Framework are carriers; based on supports recognition use."
+    },
+    {
+      "sampleId": "sample-725c823890b536f7d3d6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Multi-agent neurocognitive architecture",
+          "label": "METHOD"
+        },
+        {
+          "text": "pattern recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The neurocognitive architecture is the architecture of the stated pattern-recognition system."
+        }
+      ],
+      "notes": "The unnamed intelligent-agent system is not a second independently identified model.\nAI self-review: The multi-agent neurocognitive architecture belongs to the explicitly stated recognition system; the intelligent-agent wording is contextual."
+    },
+    {
+      "sampleId": "sample-f6a9dad5ee3c6e10d95e",
+      "entityStatus": "unresolved",
+      "entityReason": "Crime Trend Analytics and Prediction shares the crime-trend object; separate task boundaries and analytics scope remain ambiguous.",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Crime Trend Analytics and Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The combined task proposal is not finalized.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Machine learning is explicitly for the stated crime-trend goals, conditional on the combined task boundary."
+        }
+      ],
+      "notes": "Big Data is a generic input class; no missing words are added to separate task spans.\nAI self-review: The crime-trend coordinated tasks have shared objects and uncertain granularity; the proposed combined span remains quarantined."
+    },
+    {
+      "sampleId": "sample-9c1a8f23dc17a1dcfcb4",
+      "entityStatus": "unresolved",
+      "entityReason": "Tor traffic analysis and detection combines goals with a shared object; the flat task granularity is not settled.",
+      "entities": [
+        {
+          "text": "Tor traffic analysis and detection",
+          "label": "TASK"
+        },
+        {
+          "text": "machine learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Task boundary/type coverage remains unresolved.",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The stated traffic goals explicitly use machine learning, conditional on the task-boundary proposal."
+        }
+      ],
+      "notes": "Do not manufacture a noncontinuous Tor traffic detection phrase or label Tor as a dataset.\nAI self-review: Via supports machine-learning use, but the coordinated analysis/detection task granularity is unresolved and must not enter training."
+    }
+  ]
+}

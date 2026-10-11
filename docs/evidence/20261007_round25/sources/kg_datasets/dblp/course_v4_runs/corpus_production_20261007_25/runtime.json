@@ -1,0 +1,13 @@
+{
+  "torch": "2.8.0+cu126",
+  "transformers": "4.57.1",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "batchSize": 8,
+  "chunkSize": 256,
+  "NERMaxLength": 128,
+  "REMaxLength": 128,
+  "deterministicAlgorithms": true,
+  "gradientEnabledForModels": false,
+  "confidenceCalibrated": false
+}

@@ -1,0 +1,15 @@
+{
+  "documents": 23,
+  "inputSha256": {
+    "D:\\a-open_source\\neo4j\\kg_datasets\\dblp\\course_v4_runs\\batch014_generation_compiled\\ai_decisions.json": "a1ac0b2e0ba2eaabfa91a9873f1ccb966026428f9fe936e9a3ef2336b1b097dc",
+    "D:\\a-open_source\\neo4j\\annotations\\course_v4\\batch014_review_judgments.json": "ceaed067b71dc53b985c8b1df6b2f2a5dfcfce2a2e2334dd1c60e5e62dcc3285"
+  },
+  "expanderCodeSha256": "333fe8dfe6176d3d7148242e4b0e9d7b6febe2b036e3e07a84765693cd5fa1ba",
+  "modelCallExecutedByExpander": false,
+  "notice": "This step only expands recorded AI judgments; it neither runs a model nor invents confirmations.",
+  "filesSha256": {
+    "generation_decisions.json": "a1ac0b2e0ba2eaabfa91a9873f1ccb966026428f9fe936e9a3ef2336b1b097dc",
+    "review_judgments.json": "ceaed067b71dc53b985c8b1df6b2f2a5dfcfce2a2e2334dd1c60e5e62dcc3285",
+    "review_decisions.json": "57aa42f78599c8e35fde8f1010280a2cfc2f7cc0833e6834279d4784543229d9"
+  }
+}

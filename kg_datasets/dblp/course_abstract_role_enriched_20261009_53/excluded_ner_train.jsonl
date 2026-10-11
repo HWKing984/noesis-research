@@ -1,0 +1,5 @@
+{"sampleId": "sample-37cf886b8ccba80b9d07", "reason": "GenAI tools are unnamed and the many pedagogic assessment constructs do not map unambiguously to this extraction schema; do not turn this ambiguous document into an all-O example."}
+{"sampleId": "sample-8be4b371116f4ac27a34", "reason": "Group quarantine"}
+{"sampleId": "sample-e74ddd20535f2e0a2cac", "reason": "Unnamed LLMs, unnamed 14 datasets and unspecified NLP tasks cannot be distinguished confidently from generic mentions under the current named-entity contract."}
+{"sampleId": "sample-c0f5f63942c0bdebacf5", "reason": "This business/platform description has no specific AI method or named dataset and weak research content. Exclude from NER training rather than use an incomplete all-O sample."}
+{"sampleId": "sample-86fb36b8e8a24624b6c2", "reason": "SQuAD 1.1 and 2.0 uses a missing shared dataset head. SQuAD 2.0 is not a contiguous source span; bare 2.0 would lose its identity. Retain partial candidate spans but exclude the whole abstract from flat complete-NER training rather than silently drop the second benchmark or invent an expanded literal."}

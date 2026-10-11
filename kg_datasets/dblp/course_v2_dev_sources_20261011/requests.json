@@ -1,0 +1,222 @@
+[
+  {
+    "arxivId": "2502.12214",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.12214",
+    "startedAtUTC": "2026-10-11T01:09:58.648908+00:00",
+    "rawResponseFile": "sources/dev_2502.12214.html",
+    "rawResponseSha256": "22ca4f3d743a97b72ffb134e27c7f2fcae22968176dcd9804a565775e7d00cf0",
+    "finalURL": "https://arxiv.org/abs/2502.12214",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:00.566739+00:00"
+  },
+  {
+    "arxivId": "2502.08942",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.08942",
+    "startedAtUTC": "2026-10-11T01:10:01.849493+00:00",
+    "rawResponseFile": "sources/dev_2502.08942.html",
+    "rawResponseSha256": "65b5e825d22d750d08f0d01411ea8fc0776eebf15b2c9518b0c8a4712a0f0fa6",
+    "finalURL": "https://arxiv.org/abs/2502.08942",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:03.779551+00:00"
+  },
+  {
+    "arxivId": "2502.12328",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.12328",
+    "startedAtUTC": "2026-10-11T01:10:05.049761+00:00",
+    "rawResponseFile": "sources/dev_2502.12328.html",
+    "rawResponseSha256": "3044366a97097cf625a0cfeecb1b91417e329b997b2801b0dff2f520ddfb83a7",
+    "finalURL": "https://arxiv.org/abs/2502.12328",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:06.419979+00:00"
+  },
+  {
+    "arxivId": "2502.08754",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.08754",
+    "startedAtUTC": "2026-10-11T01:10:08.250117+00:00",
+    "rawResponseFile": "sources/dev_2502.08754.html",
+    "rawResponseSha256": "b0b50c6cae9be329c5933843b9f1612ec68a3f000e0152635d54873275e0cc0c",
+    "finalURL": "https://arxiv.org/abs/2502.08754",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:09.327922+00:00"
+  },
+  {
+    "arxivId": "2502.07158",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.07158",
+    "startedAtUTC": "2026-10-11T01:10:11.450558+00:00",
+    "rawResponseFile": "sources/dev_2502.07158.html",
+    "rawResponseSha256": "266a0b6fc5b54f917ef7ee311b7288b38422f867930a963152542a93948f0001",
+    "finalURL": "https://arxiv.org/abs/2502.07158",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:12.533596+00:00"
+  },
+  {
+    "arxivId": "2502.01282",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.01282",
+    "startedAtUTC": "2026-10-11T01:10:14.650648+00:00",
+    "rawResponseFile": "sources/dev_2502.01282.html",
+    "rawResponseSha256": "47b8fba828b85cf4e941abba99dd20dcd2dae5ec059ab414a361b62ffbb07ffd",
+    "finalURL": "https://arxiv.org/abs/2502.01282",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:15.685710+00:00"
+  },
+  {
+    "arxivId": "2502.00919",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.00919",
+    "startedAtUTC": "2026-10-11T01:10:17.851213+00:00",
+    "rawResponseFile": "sources/dev_2502.00919.html",
+    "rawResponseSha256": "71cc6731f89ae8af1364725b23e57084a831070693aa86aae6b43a6199037402",
+    "finalURL": "https://arxiv.org/abs/2502.00919",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:18.871955+00:00"
+  },
+  {
+    "arxivId": "2502.09222",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.09222",
+    "startedAtUTC": "2026-10-11T01:10:21.051427+00:00",
+    "rawResponseFile": "sources/dev_2502.09222.html",
+    "rawResponseSha256": "d783e9ecd7f38ca707d90283f1f6fec0cde8a01608f80c7cb508900556d5eefe",
+    "finalURL": "https://arxiv.org/abs/2502.09222",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:22.097923+00:00"
+  },
+  {
+    "arxivId": "2502.12031",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.12031",
+    "startedAtUTC": "2026-10-11T01:10:24.251979+00:00",
+    "rawResponseFile": "sources/dev_2502.12031.html",
+    "rawResponseSha256": "4c47b02cdc2f395a1cc1e346cacb4d4140789c42438127fffdb70aaf92a9a22f",
+    "finalURL": "https://arxiv.org/abs/2502.12031",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:25.292990+00:00"
+  },
+  {
+    "arxivId": "2502.00840",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.00840",
+    "startedAtUTC": "2026-10-11T01:10:27.452068+00:00",
+    "rawResponseFile": "sources/dev_2502.00840.html",
+    "rawResponseSha256": "fa17e18982289da0e06bcbf3c9fada4a632850e30e3bcc20d7aa490ba3ab09bf",
+    "finalURL": "https://arxiv.org/abs/2502.00840",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:28.467549+00:00"
+  },
+  {
+    "arxivId": "2502.16534",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.16534",
+    "startedAtUTC": "2026-10-11T01:10:30.652306+00:00",
+    "rawResponseFile": "sources/dev_2502.16534.html",
+    "rawResponseSha256": "9e619fa4e254928261ac83e2fb01c43a65aa3f19e6a94601f124b35ec95bb895",
+    "finalURL": "https://arxiv.org/abs/2502.16534",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:31.575783+00:00"
+  },
+  {
+    "arxivId": "2502.00306",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.00306",
+    "startedAtUTC": "2026-10-11T01:10:33.852589+00:00",
+    "rawResponseFile": "sources/dev_2502.00306.html",
+    "rawResponseSha256": "677a0f56d7b8b616c2e5956094fc458cdf862104fc889d5aa451ed553f07977a",
+    "finalURL": "https://arxiv.org/abs/2502.00306",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:34.816733+00:00"
+  },
+  {
+    "arxivId": "2502.16828",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.16828",
+    "startedAtUTC": "2026-10-11T01:10:37.053139+00:00",
+    "rawResponseFile": "sources/dev_2502.16828.html",
+    "rawResponseSha256": "e8fbc878573ac49255bdc5a4a4c3c5310b48e0c1bb9f3e2e5195926f7d4be690",
+    "finalURL": "https://arxiv.org/abs/2502.16828",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:38.135038+00:00"
+  },
+  {
+    "arxivId": "2502.21057",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.21057",
+    "startedAtUTC": "2026-10-11T01:10:40.253589+00:00",
+    "rawResponseFile": "sources/dev_2502.21057.html",
+    "rawResponseSha256": "f282b30545c52be4468aea05899f57177a08c055b5b320cffccdb5b6f11e26d8",
+    "finalURL": "https://arxiv.org/abs/2502.21057",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:41.204992+00:00"
+  },
+  {
+    "arxivId": "2502.18147",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.18147",
+    "startedAtUTC": "2026-10-11T01:10:43.453945+00:00",
+    "rawResponseFile": "sources/dev_2502.18147.html",
+    "rawResponseSha256": "f6133643b10526605bd6d0d75548db6b30e120b810e28fcd46b2079c46740dc0",
+    "finalURL": "https://arxiv.org/abs/2502.18147",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:44.486116+00:00"
+  },
+  {
+    "arxivId": "2502.16090",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.16090",
+    "startedAtUTC": "2026-10-11T01:10:46.674542+00:00",
+    "rawResponseFile": "sources/dev_2502.16090.html",
+    "rawResponseSha256": "30cae5803648c85e1cffd4e303f49e00b71247b39e56e9fad92f25d21c44d974",
+    "finalURL": "https://arxiv.org/abs/2502.16090",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:47.901960+00:00"
+  },
+  {
+    "arxivId": "2502.08922",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.08922",
+    "startedAtUTC": "2026-10-11T01:10:49.874649+00:00",
+    "rawResponseFile": "sources/dev_2502.08922.html",
+    "rawResponseSha256": "c385ce7ce95367760ffa7366321d4c055947128501f0e1a02423199709f776ae",
+    "finalURL": "https://arxiv.org/abs/2502.08922",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:57.563652+00:00"
+  },
+  {
+    "arxivId": "2502.05783",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.05783",
+    "startedAtUTC": "2026-10-11T01:10:57.565976+00:00",
+    "rawResponseFile": "sources/dev_2502.05783.html",
+    "rawResponseSha256": "9d4c0126204218eba8839bc2db100847c8e0df2efd5a5fddd579107f12853a96",
+    "finalURL": "https://arxiv.org/abs/2502.05783",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:10:58.616786+00:00"
+  },
+  {
+    "arxivId": "2502.15838",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.15838",
+    "startedAtUTC": "2026-10-11T01:11:00.766085+00:00",
+    "rawResponseFile": "sources/dev_2502.15838.html",
+    "rawResponseSha256": "d709746daf77c564165183e742fd53d0af4b1cbab2d1a09d02346142f0f6ecf8",
+    "finalURL": "https://arxiv.org/abs/2502.15838",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:11:01.971760+00:00"
+  },
+  {
+    "arxivId": "2502.14892",
+    "split": "dev",
+    "requestedURL": "https://arxiv.org/abs/2502.14892",
+    "startedAtUTC": "2026-10-11T01:11:03.966446+00:00",
+    "rawResponseFile": "sources/dev_2502.14892.html",
+    "rawResponseSha256": "a8879fcecc3cfec92920a96ff7748ba5084d03ba1470fcc0c8ceae265030d9f7",
+    "finalURL": "https://arxiv.org/abs/2502.14892",
+    "status": "completed_source_identity_only",
+    "endedAtUTC": "2026-10-11T01:11:05.077172+00:00"
+  }
+]

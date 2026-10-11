@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="6.537" timestamp="2026-10-06T22:40:39.046398+08:00" hostname="HWKing"><testcase classname="tests.test_course_relation_training" name="test_pair_encoding_has_no_reason_evidence_or_metadata_features_and_never_truncates" time="0.001"><failure message="KeyError: 'label'">def test_pair_encoding_has_no_reason_evidence_or_metadata_features_and_never_truncates():
+        class LiteralTokenizer:
+            def convert_tokens_to_ids(self, token):
+                return list(r.MARKERS.values()).index(token)+1
+    
+            def __call__(self, text, return_offsets_mapping=False, truncation=False):
+                assert truncation is False
+                tokens = list(re.finditer(r'\[unused\d+\]|\w+|[^\s]',text))
+                result = {'input_ids':[101]+[self.convert_tokens_to_ids(m.group()) if m.group() in r.MARKERS.values() else 100 for m in tokens]+[102],
+                          'attention_mask':[1]*(len(tokens)+2)}
+                if return_offsets_mapping:
+                    result['offset_mapping'] = [(0,0)]+[(m.start(),m.end()) for m in tokens]+[(0,0)]
+                return result
+        tokenizer, row = LiteralTokenizer(), example()
+        encoded = r.encode_pair(tokenizer,row,128)
+        assert encoded == r.encode_pair(tokenizer,row|{'reason':'secret answer','evidence':{'text':'answer'},'topics':['answer'],'split':'test'},128)
+        assert set(encoded['features']) == {'input_ids','attention_mask','labels'}
+        unlabeled = {key:value for key,value in row.items() if key!='label'}
+&gt;       inference = r.encode_pair(tokenizer,unlabeled,128)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_course_relation_training.py:125: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+tokenizer = &lt;test_course_relation_training.test_pair_encoding_has_no_reason_evidence_or_metadata_features_and_never_truncates.&lt;locals&gt;.LiteralTokenizer object at 0x0000018305BD8590&gt;
+row = {'head': {'end': 6, 'label': 'METHOD', 'start': 2, 'text': 'BERT'}, 'sampleId': 'synthetic_test', 'tail': {'end': 18, 'label': 'TASK', 'start': 11, 'text': 'tagging'}, 'text': '#x1F600 BERT for tagging'}
+max_length = 128
+
+    def encode_pair(tokenizer, row: dict, max_length: int) -&gt; dict:
+        marked = mark_pair(row)
+        original = tokenizer(row['text'],return_offsets_mapping=True,truncation=False)
+        c.align_bio(original['offset_mapping'], sorted([row['head'],row['tail']],key=lambda e:e['start']),row['text'])
+&gt;       if row['label'] not in allowed_labels(row['tail']['label']):
+           ^^^^^^^^^^^^
+E       KeyError: 'label'
+
+scripts\train_course_relation.py:189: KeyError</failure></testcase><testcase classname="tests.test_course_ner_training" name="test_scores_reject_duplicate_documents_invalid_or_duplicate_spans" time="0.000"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_scores_reject_duplicate_documents_invalid_or_duplicate_spans():
+        item = entity('BERT','BERT')
+        row = {'sampleId':'unique','text':'BERT','entities':[item]}
+        for rows, predictions in ([row,row],[[item],[item]]), ([row],[[item,item]]), ([row],[[item|{'label':'UNKNOWN'}]]), ([row],[[item|{'text':'wrong'}]]), ([row],[[item|{'end':99}]]):
+&gt;           with pytest.raises(ValueError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_course_ner_training.py:119: Failed</failure></testcase><testcase classname="tests.test_course_evidence" name="test_relation_evidence_rejects_invalid_probability_even_when_label_metric_matches" time="3.654"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-914/test_relation_evidence_rejects0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000018305E54770&gt;
+
+    def test_relation_evidence_rejects_invalid_probability_even_when_label_metric_matches(tmp_path, monkeypatch):
+        root = Path(__file__).resolve().parents[1]
+        run = root/'kg_datasets/dblp/course_v4_runs/re_entity_development_20261006_15'
+        read = evidence.c.read_jsonl
+        def malformed(path):
+            rows = read(path)
+            if path==run/'dev_predictions.jsonl':
+                rows[0]['probabilities']['USED_FOR']=-1.0
+            return rows
+        monkeypatch.setattr(evidence.c,'read_jsonl',malformed)
+        output=tmp_path/'never'
+&gt;       with pytest.raises(ValueError,match='probabilit'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_course_evidence.py:187: Failed</failure></testcase><testcase classname="tests.test_course_evidence" name="test_final_evidence_rejects_resealed_wrong_test_coverage" time="2.505"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('C:/Users/Y7000P/AppData/Local/Temp/pytest-of-Y7000P/pytest-914/test_final_evidence_rejects_re0')
+
+    def test_final_evidence_rejects_resealed_wrong_test_coverage(tmp_path):
+        root = Path(__file__).resolve().parents[1]
+        clone=tmp_path/'resealed_test'
+        shutil.copytree(root/'kg_datasets/dblp/course_v4_runs/ner_final_test_20261006_09',clone)
+        result=json.loads((clone/'test_result.json').read_text())
+        result.update(queueReviewed=999,documents=999,eligibleCoverage=1.0)
+        evidence.c.write_json(clone/'test_result.json',result)
+        manifest=json.loads((clone/'manifest.json').read_text())
+        manifest['filesSha256']['test_result.json']=evidence.c.file_sha256(clone/'test_result.json')
+        evidence.c.write_json(clone/'manifest.json',manifest)
+        output=tmp_path/'never'
+&gt;       with pytest.raises(ValueError,match='predictions or scope'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\test_course_evidence.py:204: Failed</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,25 @@
+{
+  "scope": "V2 semantic review data preparation, no training or production mutation",
+  "failures": [
+    {
+      "stage": "initial_pytest_collection",
+      "errorType": "ModuleNotFoundError",
+      "error": "No module named 'review_v2_evidence_pilot'",
+      "evidence": "outputs/v2_semantic_revision_preflight_20261010.xml",
+      "fix": "Use the repository's existing test-local scripts sys.path convention.",
+      "verification": "outputs/v2_semantic_revision_final_20261010.xml"
+    },
+    {
+      "stage": "initial_browser_capture_preflight",
+      "error": "Unexpected evidence bundle.",
+      "initialArtifactPreserved": "kg_datasets/dblp/course_v2_semantic_revision_20261010",
+      "cause": "New artifact manifest omitted the kind discriminator required by the existing fail-closed capture script.",
+      "fix": "Add the established manifest kind in the generator and regression check; regenerate in a distinct _final directory, preserving initial files.",
+      "finalArtifact": "kg_datasets/dblp/course_v2_semantic_revision_20261010_final",
+      "captureEvidence": "kg_datasets/dblp/course_v2_semantic_revision_20261010_final/captures.json"
+    }
+  ],
+  "finalRelatedChecks": 39,
+  "trainingExecuted": false,
+  "modelPromoted": false
+}

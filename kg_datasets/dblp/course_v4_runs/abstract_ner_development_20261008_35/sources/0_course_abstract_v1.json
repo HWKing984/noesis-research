@@ -1,0 +1,37 @@
+{
+  "version": "abstract_v1",
+  "queue": "kg_datasets/dblp/course_abstract_queue_20261008_32",
+  "queueManifestSha256": "acfe489a3c8e4d574b8fd0472008ca92bf66f2a092ad50922b7c2868b3979645",
+  "textKind": "abstract",
+  "normalization": "exact_source_unicode_no_title_concatenation",
+  "offsetUnit": "unicode_codepoint",
+  "entityLabels": ["METHOD", "TASK", "DATASET"],
+  "bioLabels": ["O", "B-METHOD", "I-METHOD", "B-TASK", "I-TASK", "B-DATASET", "I-DATASET"],
+  "maxTokens": 512,
+  "overlengthPolicy": "reject_no_truncation",
+  "splitPolicy": "original_locked_paper_groups; excerpts_not_independent_samples; external_benchmarks_train_only",
+  "annotationPolicy": "ai_pseudo; same_session_self_review_not_independent_gold; method_families_included; contextual_verbs_and_domains_excluded; coordinated_shared_heads_quarantined",
+  "relationTrainingPolicy": "reviewed_complete_ner_train_documents; individually_reviewed_positive_or_evidenced_negative_pairs_only; unresolved_masked_never_negative",
+  "relationEvaluationPolicy": "fully_resolved_documents_including_zero_positive; unknown_pairs_never_false_positive_or_true_negative; report_locked_queue_coverage",
+  "testPolicy": "reserved_no_content_consumption_or_inference_until_checkpoint_and_selection_lock",
+  "NERTraining": {
+    "seed": 20261008, "epochs": 6, "batchSize": 2, "learningRate": 0.00002,
+    "initialization": "kg_datasets/dblp/course_v4_runs/ner_development_20261006_08/checkpoint_epoch_04",
+    "initialWeightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996",
+    "selection": "strict_dev_entity_micro_f1_earliest_tie",
+    "decoder": "drop_orphan_I_no_B_repair",
+    "precision": "deterministic_eager_FP32"
+  },
+  "promotionGates": {
+    "sameDevPipelinePrecisionNonRegression": true,
+    "sameDevPipelineF1NonRegression": true,
+    "maxAbsoluteRecallRegression": 0.02,
+    "minimumReferenceDATASETDev": 10,
+    "minimumReferenceEVALUATED_ONDev": 10,
+    "minimumReferenceRareSupportFinalTest": 10,
+    "minimumDocumentCoverage": 0.8,
+    "independentHumanGoldRequired": false,
+    "automaticPromotionAllowed": false,
+    "notice": "Support minima are operational guards, not statistical proof; insufficient support permits exploratory dev training only, not reliability claims or final promotion."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "judgedDocuments": 8,
+  "completeNERClaims": 7,
+  "groupQuarantinedDocuments": 0,
+  "entityCounts": {
+    "METHOD": 58,
+    "TASK": 50,
+    "DATASET": 18
+  },
+  "relationCounts": {
+    "UNRESOLVED": 487
+  },
+  "selfReviewed": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "testEvaluated": false
+}

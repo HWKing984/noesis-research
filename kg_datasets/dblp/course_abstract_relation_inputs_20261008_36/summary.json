@@ -1,0 +1,62 @@
+{
+  "version": "abstract_relation_partial_v1",
+  "documents": {
+    "train": {
+      "queue": 37,
+      "ner": 29,
+      "knownPairDocuments": 16,
+      "knownPairs": 195,
+      "allEligiblePairs": 1108
+    },
+    "dev": {
+      "queue": 19,
+      "ner": 16,
+      "knownPairDocuments": 13,
+      "knownPairs": 242,
+      "allEligiblePairs": 432
+    }
+  },
+  "relationSupport": {
+    "train": {
+      "EVALUATED_ON": 43,
+      "USED_FOR": 145,
+      "NO_RELATION": 7
+    },
+    "dev": {
+      "USED_FOR": 202,
+      "NO_RELATION": 30,
+      "EVALUATED_ON": 10
+    }
+  },
+  "unresolvedPairs": {
+    "train": 913,
+    "dev": 190
+  },
+  "knownPairCoverage": {
+    "train": 0.1759927797833935,
+    "dev": 0.5601851851851852
+  },
+  "completeRelationDocuments": {
+    "train": 4,
+    "dev": 5
+  },
+  "NERExcluded": {
+    "train": 8,
+    "dev": 3
+  },
+  "rejudgedDocuments": {
+    "train": 15,
+    "dev": 13
+  },
+  "testConsumed": false,
+  "trainingExecuted": false,
+  "modelPromoted": false,
+  "qualityPromotionPassed": false,
+  "maxMarkedTokens": {
+    "train": 333,
+    "dev": 306
+  },
+  "partialModuleDevelopmentReady": true,
+  "fullDevDocumentCoverage": 0.2631578947368421,
+  "labelIndependence": "same_session_AI_not_human_gold; NER entities frozen; relation decisions made without RE predictions, not an independent blind NER evaluation"
+}

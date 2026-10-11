@@ -1,0 +1,37 @@
+{
+  "browserVersion": "154.0.4258.62",
+  "captures": [
+    {
+      "capturedAt": "2026-10-10T02:23:37.6374847Z",
+      "commandArguments": [
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-background-networking",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--hide-scrollbars",
+        "--force-device-scale-factor=1",
+        "--window-size=1280,2100",
+        "--screenshot=D:\\a-open_source\\neo4j\\docs\\evidence\\20261010_round58_model\\capture_full\\03_predictions.png",
+        "--user-data-dir=C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-adbcb3c0a26e400aa014feede72972b7",
+        "file:///D:/a-open_source/neo4j/docs/evidence/20261010_round58_model/capture_full/03_predictions.html"
+      ],
+      "sha256": "998cf22a2b29dbe642fde607e69fa1de717c1b32b8ed1098eff7ccad15d4406e",
+      "sourcePageSha256": "01b153cd3048aebf9e7b99dd14cbcf09bafea4b8156f48be155ad21f9e697274",
+      "viewportHeight": 2100,
+      "url": "file:///D:/a-open_source/neo4j/docs/evidence/20261010_round58_model/capture_full/03_predictions.html",
+      "image": "03_predictions.png",
+      "bytes": 202499,
+      "sourcePage": "03_predictions.html",
+      "originalConsoleScreenshot": false
+    }
+  ],
+  "kind": "actual_browser_render_capture",
+  "renderer": "installed_Microsoft_Edge_headless",
+  "generatedFromRealArtifacts": true,
+  "finishedAt": "2026-10-10T02:23:37.6461142Z",
+  "status": "completed",
+  "temporaryProfile": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\AI-Literature-KG-capture-adbcb3c0a26e400aa014feede72972b7",
+  "viewportWidth": 1280,
+  "originalConsoleScreenshot": false
+}

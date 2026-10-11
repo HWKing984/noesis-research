@@ -1,0 +1,675 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-109fadbb24ba196372b4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Networks",
+          "label": "METHOD"
+        },
+        {
+          "text": "Processing of Natural Language Texts in Information Learning Systems",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Neural networks are explicitly applied in the stated language-text processing operation."
+        }
+      ],
+      "notes": "Retain the language input and system context; no corpus name is given.\nAI self-review: Networks in language processing directly supply the method-purpose relation; retain the literal input and information-system context."
+    },
+    {
+      "sampleId": "sample-0212618a8cc89f12d1b7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Evaluation of Agricultural High-tech",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The title explicitly applies machine learning to evaluating agricultural high-tech."
+        }
+      ],
+      "notes": "Comprehensive is generic scope/quality; the assessment object is retained without inventing a rating dataset.\nAI self-review: Application in evaluation explicitly supplies machine-learning use; Comprehensive is generic and no agricultural benchmark is named."
+    },
+    {
+      "sampleId": "sample-93e4847a30389550c135",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Enriching Attributes from Knowledge Graph",
+          "label": "TASK"
+        },
+        {
+          "text": "Text-to-Image Synthesis",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Attribute enrichment is a technical subproblem and synthesis the downstream goal; generic knowledge graph input is not a named method/dataset. Fine-grained is excluded here as a detail-quality modifier.\nAI self-review: Attribute enrichment and text-image synthesis are written operations; the unnamed knowledge graph is a resource, not an algorithm or dataset name."
+    },
+    {
+      "sampleId": "sample-df324f3e40c38d76a452",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Generative AI",
+          "label": "METHOD"
+        },
+        {
+          "text": "LLM",
+          "label": "METHOD"
+        },
+        {
+          "text": "Coding Orders of Worth in Digital Political Debates",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The subtitle describes generative-AI use in coding the specified political-debate concepts."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "LLM consistency is explicitly investigated in the stated coding operation."
+        }
+      ],
+      "notes": "Inter-rater reliability and consistency are properties, not extra computational tasks or numerical results.\nAI self-review: The subtitle places LLM/generative methods in debate coding; reliability and consistency remain properties, not extra tasks or numeric results."
+    },
+    {
+      "sampleId": "sample-bce989f267da7144508c",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Weighted Flat Lattice Transformer-based Knowledge Extraction",
+          "label": "METHOD"
+        },
+        {
+          "text": "Chinese Named Entity Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The weighted lattice extraction architecture is explicitly for Chinese NER."
+        }
+      ],
+      "notes": "One composite method preserves the lattice/weight mechanism; Architecture is a generic carrier.\nAI self-review: Keep weighted lattice extraction as one transformer-based composite method; for explicitly identifies Chinese NER as its purpose."
+    },
+    {
+      "sampleId": "sample-6d9c50d44dbfbc3ee633",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Face Expression Recognition",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The subtitle explicitly identifies facial-expression recognition as the deep-learning application case."
+        }
+      ],
+      "notes": "The high-performance computer is hardware context rather than a method or dataset.\nAI self-review: Expression recognition is explicitly the deep-learning case; high-performance computing is hardware context, not an additional AI method."
+    },
+    {
+      "sampleId": "sample-afdfc03276d7198d3221",
+      "entityStatus": "unresolved",
+      "entityReason": "Determining malfunction-type influence may be a research question rather than a defined computational task.",
+      "entities": [
+        {
+          "text": "Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Potential task coverage in the influence-analysis wording is not finalized.",
+      "relations": [],
+      "notes": "The diagnostic models are inspected objects; do not invent an aviation-malfunction classification or behavior-estimation algorithm.\nAI self-review: The title investigates model behavior under malfunction types; it does not settle a separate influence-computation task or diagnostic-use assertion."
+    },
+    {
+      "sampleId": "sample-f0de430f0f61e506f068",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Hyperspectral Remote Sensing Image Classification",
+          "label": "TASK"
+        },
+        {
+          "text": "Fusion of Transfer Learning Models",
+          "label": "METHOD"
+        },
+        {
+          "text": "Crop Classification",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Hyperspectral classification is explicitly enhanced by the model-fusion procedure."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The transfer-model fusion is explicitly for crop classification."
+        }
+      ],
+      "notes": "The fusion is one composite method; no individual omitted member names or named crop dataset are added.\nAI self-review: The fully written transfer-model fusion explicitly improves hyperspectral classification and serves crop classification; no ellipted model members are inserted."
+    },
+    {
+      "sampleId": "sample-9dfe2f71f184c0758ef4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Continual Reinforcement Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Continual specifies the learning mechanism; 3D non-stationary environments are an unnamed setting, not a dataset or operation.\nAI self-review: Continual is a learning-mechanism qualifier; unnamed 3D nonstationary environments do not identify a task or benchmark."
+    },
+    {
+      "sampleId": "sample-26c512ef8a2acd1ac0b6",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Simultaneous Training of Neural Networks and Sparse Coding",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "One joint-training mechanism combines fully written technique components; generic learning from incomplete features does not specify a separate prediction/imputation task.\nAI self-review: The simultaneous training clause defines one joint mechanism with complete component names; incomplete features do not name a prediction/imputation operation."
+    },
+    {
+      "sampleId": "sample-c72aa1d9c41bf42c379e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Attention-Based Hierarchical Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Lane Change Behaviors in Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The attention-based hierarchical learner is explicitly for autonomous-driving lane changes."
+        }
+      ],
+      "notes": "Keep the attention/hierarchy mechanisms and driving setting.\nAI self-review: The attention/hierarchy/deep-RL method is explicitly for lane-changing behavior in autonomous driving; keep the maneuver context."
+    },
+    {
+      "sampleId": "sample-353672a0749149b006dd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Skeleton-Based Action Recognition",
+          "label": "TASK"
+        },
+        {
+          "text": "Shift Graph Convolutional Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Skeleton-based recognition explicitly employs the shift graph-convolutional network."
+        }
+      ],
+      "notes": "Skeleton is the task's input modality, not an algorithm or named dataset.\nAI self-review: Skeleton is a task-input modality, while the shift graph network is the explicit recognition algorithm, not a nested skeleton-based method."
+    },
+    {
+      "sampleId": "sample-889a5be3e3e1a5ebe5fb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Diffeomorphic Transformer Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The complete architectural family is explicit; no downstream task or benchmark is supplied.\nAI self-review: All qualifiers specify the transformer network family; the short title names no separate operation or resource."
+    },
+    {
+      "sampleId": "sample-6e940767e6cb1a7a5af7",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Semantic Segmentation in Remote Sensing",
+          "label": "TASK"
+        },
+        {
+          "text": "Foundation Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Remote-sensing segmentation explicitly leverages foundation-model assistance."
+        }
+      ],
+      "notes": "Generalized Few-Shot is a training/class-generalization setting outside the base task; headline verbs without objects do not identify a separate method.\nAI self-review: Foundation-model assistance is explicitly leveraged for remote-sensing segmentation; few-shot/class-generalization settings stay outside the base task."
+    },
+    {
+      "sampleId": "sample-d9365a4d0c9f5b79926d",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "OTA",
+          "label": "METHOD"
+        },
+        {
+          "text": "Optimal Transport Assignment",
+          "label": "METHOD"
+        },
+        {
+          "text": "Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "OTA names the assignment approach explicitly for object detection."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Optimal transport assignment is explicitly for object detection."
+        }
+      ],
+      "notes": "Optimal transport is a technical family name, not a removable promotional adjective.\nAI self-review: OTA and optimal-transport assignment explicitly serve detection; Optimal is integral to the technical family, not promotional quality."
+    },
+    {
+      "sampleId": "sample-26d9d58a436be922d552",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LaPA",
+          "label": "METHOD"
+        },
+        {
+          "text": "Latent Prompt Assist Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Medical Visual Question Answering",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "LaPA explicitly names the medical visual-QA approach."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The latent-prompt-assist model is explicitly for medical visual question answering."
+        }
+      ],
+      "notes": "Model supplies the head of the otherwise adjective-like description; retain latent prompt assistance and both task modalities.\nAI self-review: LaPA's full latent prompt-assist model and its acronym are separate mentions, both explicitly for medical visual QA."
+    },
+    {
+      "sampleId": "sample-0235da99f84af41414cf",
+      "entityStatus": "unresolved",
+      "entityReason": "AstroNet is associated metaphorically with astrocytes and neural networks but its method-versus-resource role is not explicit.",
+      "entities": [
+        {
+          "text": "AstroNet",
+          "label": "METHOD"
+        },
+        {
+          "text": "Artificial Neural Network",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The named AstroNet role remains unresolved.",
+      "relations": [],
+      "notes": "An astrocyte is biological context, not a dataset or computational task; do not invent a hybrid architecture from the metaphor.\nAI self-review: The AstroNet metaphor does not resolve its algorithm/resource role; the biological astrocyte is neither a dataset nor a computational task."
+    },
+    {
+      "sampleId": "sample-fb4e4afad46e35e57f45",
+      "entityStatus": "unresolved",
+      "entityReason": "Selectively Informative Description may name prompt/input content rather than a standalone algorithm.",
+      "entities": [
+        {
+          "text": "Selectively Informative Description",
+          "label": "METHOD"
+        },
+        {
+          "text": "Reduce Undesired Embedding Entanglements",
+          "label": "TASK"
+        },
+        {
+          "text": "Text-to-Image Personalization",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The description's method role and direct personalization use are not settled.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The title explicitly says the description can reduce entanglements, conditional on method scope."
+        },
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Reducing entanglement in personalization does not clearly assign the description the personalization instrument role."
+        }
+      ],
+      "notes": "Internal Undesired is retained for a contiguous literal reduction-task phrase; no description-selection model is invented.\nAI self-review: A description can be input text, not a method; retain uncertain reduction/personalization roles and no invented selection algorithm."
+    },
+    {
+      "sampleId": "sample-f0a110e6f10b87fd4bfe",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "A2-RL",
+          "label": "METHOD"
+        },
+        {
+          "text": "Aesthetics Aware Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Image Cropping",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "A2-RL names the proposed approach for image cropping."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The aesthetics-aware learning procedure is explicitly for cropping."
+        }
+      ],
+      "notes": "Aesthetic awareness defines the learning criterion, not generic quality praise.\nAI self-review: A2-RL and its complete aesthetics-aware learning description are explicitly for cropping; awareness defines the criterion rather than generic praise."
+    },
+    {
+      "sampleId": "sample-fcdf132f5816df7098b1",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Spatiotemporal Contrastive Video Representation Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Spatiotemporal contrastive training and video modality specify one representation-learning method.\nAI self-review: The spatiotemporal contrastive training mechanism and video modality identify one representation-learning method without a downstream task."
+    },
+    {
+      "sampleId": "sample-33afba3abd6c5aee6cab",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "CN-RMA",
+          "label": "METHOD"
+        },
+        {
+          "text": "Combined Network with Ray Marching Aggregation",
+          "label": "METHOD"
+        },
+        {
+          "text": "3D Indoor Object Detection from Multi-View Images",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "CN-RMA names the approach for the stated indoor multi-view 3D detection."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The ray-marching aggregation network is explicitly for that detection task."
+        }
+      ],
+      "notes": "Keep the aggregation mechanism, 3D object and multi-view input context.\nAI self-review: The ray-marching aggregation network explicitly serves indoor multi-view 3D detection; retain both name and mechanism description."
+    },
+    {
+      "sampleId": "sample-72414f5b46ef93032598",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "General Object Foundation Model",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "The explicitly described object foundation model is a method; images/videos and at Scale are modalities/scale context, not named datasets.\nAI self-review: The object foundation model is explicit; Images and Videos names modalities and at Scale a scale condition, not benchmarks."
+    },
+    {
+      "sampleId": "sample-7342e23735c790bcd0bd",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Sample Effective and Diverse Prompts",
+          "label": "TASK"
+        },
+        {
+          "text": "Text-to-Image Generation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Prompt sampling is an explicit technical subproblem; internal quality/variation criteria stay literal to avoid invented discontinuous spans. Learning to alone names no specific algorithm.\nAI self-review: Prompt sampling and image generation are literal goals; internal criteria cannot be removed by inventing a discontinuous task phrase."
+    },
+    {
+      "sampleId": "sample-27f2df3f26f90ebaa818",
+      "entityStatus": "unresolved",
+      "entityReason": "Ghost Expectation Point may be a statistical reference/parameter rather than a computational method.",
+      "entities": [
+        {
+          "text": "Ghost Expectation Point",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Financial Portfolio Management",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The expectation-point instrument role is uncertain.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Association with portfolio management does not establish the reference point as its algorithm."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Deep reinforcement learning is explicitly applied in financial portfolio management."
+        }
+      ],
+      "notes": "Do not infer a benchmark or the reference point's mathematical definition.\nAI self-review: The expectation point may be a statistic, not the portfolio algorithm; deep RL's explicit application remains conditional on complete entity coverage."
+    },
+    {
+      "sampleId": "sample-4f2a7873d405cbb38d9a",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Building HVAC Control",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Deep reinforcement learning is explicitly for building HVAC control."
+        }
+      ],
+      "notes": "HVAC is retained literally without expanding absent words or inventing a building dataset.\nAI self-review: For directly links deep RL to building HVAC control; no expansion of the acronym or building dataset is required."
+    }
+  ]
+}

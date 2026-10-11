@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "checkedAtUTC": "2026-10-07T02:51:31.701871+00:00",
+  "summary": {
+    "referenceDocuments": 2000,
+    "generationReceiptDocuments": 1608,
+    "pendingGenerationDocuments": 392,
+    "aiReviewedDocuments": 1608,
+    "humanReviewedDocuments": 0,
+    "humanGoldAvailable": false,
+    "challengeDocuments": 16,
+    "nerEligibleDocuments": 1238,
+    "relationEligibleDocuments": 1110,
+    "nerEligibleSplits": {
+      "train": 927,
+      "dev": 167,
+      "test": 144
+    },
+    "relationEligibleSplits": {
+      "train": 814,
+      "dev": 158,
+      "test": 138
+    },
+    "entitySupport": {
+      "train": {
+        "METHOD": 1176,
+        "TASK": 780,
+        "DATASET": 12
+      },
+      "dev": {
+        "METHOD": 208,
+        "TASK": 148,
+        "DATASET": 3
+      },
+      "test": {
+        "METHOD": 192,
+        "TASK": 118,
+        "DATASET": 2
+      }
+    },
+    "relationSupport": {
+      "train": {
+        "USED_FOR": 697,
+        "EVALUATED_ON": 3,
+        "NO_RELATION": 33
+      },
+      "dev": {
+        "USED_FOR": 155,
+        "EVALUATED_ON": 2,
+        "NO_RELATION": 5
+      },
+      "test": {
+        "USED_FOR": 132,
+        "EVALUATED_ON": 1,
+        "NO_RELATION": 4
+      }
+    },
+    "nerTrainingReady": true,
+    "relationTrainingReady": true,
+    "trainingStarted": false,
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "notice": "Readiness requires nonzero per-class support, not a quality guarantee. Hashes detect drift, not authentic AI execution or semantic truth."
+  },
+  "newBatchSummary": {
+    "referenceDocuments": 2000,
+    "generationReceiptDocuments": 200,
+    "pendingGenerationDocuments": 1800,
+    "aiReviewedDocuments": 200,
+    "humanReviewedDocuments": 0,
+    "humanGoldAvailable": false,
+    "challengeDocuments": 3,
+    "nerEligibleDocuments": 126,
+    "relationEligibleDocuments": 104,
+    "nerEligibleSplits": {
+      "train": 126,
+      "dev": 0,
+      "test": 0
+    },
+    "relationEligibleSplits": {
+      "train": 104,
+      "dev": 0,
+      "test": 0
+    },
+    "entitySupport": {
+      "train": {
+        "METHOD": 194,
+        "TASK": 93,
+        "DATASET": 0
+      },
+      "dev": {
+        "METHOD": 0,
+        "TASK": 0,
+        "DATASET": 0
+      },
+      "test": {
+        "METHOD": 0,
+        "TASK": 0,
+        "DATASET": 0
+      }
+    },
+    "relationSupport": {
+      "train": {
+        "USED_FOR": 93,
+        "EVALUATED_ON": 0,
+        "NO_RELATION": 1
+      },
+      "dev": {
+        "USED_FOR": 0,
+        "EVALUATED_ON": 0,
+        "NO_RELATION": 0
+      },
+      "test": {
+        "USED_FOR": 0,
+        "EVALUATED_ON": 0,
+        "NO_RELATION": 0
+      }
+    },
+    "nerTrainingReady": false,
+    "relationTrainingReady": false,
+    "trainingStarted": false,
+    "evaluationTarget": "held_out_ai_reference_agreement_not_human_gold",
+    "notice": "Readiness requires nonzero per-class support, not a quality guarantee. Hashes detect drift, not authentic AI execution or semantic truth."
+  },
+  "snapshotManifestSha256": "aa0d3969b1832b217659a86a661e25afa1ff09431471807659451863c836be57",
+  "parentManifestSha256": "731cc88f67bbc01b438fb3720e755a78dc50ac24fe4557d0238f86f101324726",
+  "runManifestSha256": "a32352d833be7be75ae08f815fda32d711aeeda6e8c5a14727d4811e262a005d",
+  "verdicts": {
+    "confirmed": 187,
+    "revised": 13
+  },
+  "newUnresolved": {
+    "entityStatus": 71,
+    "relationStatus": 93
+  },
+  "relationPairs": {
+    "train": 733,
+    "dev": 162,
+    "test": 137
+  },
+  "frozenModels": {
+    "ner": {
+      "selectionSha256": "cf30fe489da3eb4aa22c309687e86fc711b9db564586d371e4792be8902ba96d",
+      "weightsSha256": "968a594de551a1ab77a263a725fcdf487b8c559539f7452e2edeb8cf62c8d996"
+    },
+    "re": {
+      "selectionSha256": "e4010d162f525221de7da30cf4c412892564a1da894d1271a72f1ddfa1893978",
+      "weightsSha256": "082e9b3b280fe2bb9f4449205c801bcccaffbf1e661572406e5cb570e4ef6da1"
+    }
+  },
+  "tests": {
+    "tests": 345,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "devTestByteIdentical": {
+    "ner_inputs_dev.jsonl": "e1b283e5bbf4183ff589c07d73c3e72e8da3e1bb0a61c3fdd1794342133a6b87",
+    "ner_inputs_test.jsonl": "461e022d51c03807c2da4be052634033b8c4cb5e2045cf80aae21c6b114b8bd6",
+    "relation_inputs_dev.jsonl": "df0e9ab9c4e523248d844200ff3bc1c2800505b319ad7dc647c52d182d7fea45",
+    "relation_inputs_test.jsonl": "96dbabf4b2a9dbda4f22a5f792fd8ef26295289197a32d1e412ae40bf87800b1"
+  },
+  "oldReceiptsUnchanged": true,
+  "allExportRowsMatchReceipts": true,
+  "pendingOnlyTrain": true,
+  "trainingExecuted": false,
+  "modelInferenceExecuted": false,
+  "databaseWriteExecuted": false,
+  "humanGold": false,
+  "independentReviewer": false
+}

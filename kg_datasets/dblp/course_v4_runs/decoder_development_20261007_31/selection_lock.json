@@ -1,0 +1,16 @@
+{
+  "lockedAtUTC": "2026-10-07T09:07:43.606032+00:00",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/manifest.json": "7ce1cf5f4ad58bb53a12e7437460291d2451b28e900789fce213fcbf3a7699d2",
+    "kg_datasets/dblp/course_v4_runs/ner_expanded_development_20261007_28/checkpoint_epoch_05/model.safetensors": "d1498733c4ba5a772d0d1cfcc233b1ba52897569de336d0b967e1c6c7bcd0fac",
+    "kg_datasets/dblp/course_v4_training_inputs_17/ner_inputs_dev.jsonl": "e1b283e5bbf4183ff589c07d73c3e72e8da3e1bb0a61c3fdd1794342133a6b87",
+    "annotations/course_v4/decoder_dev_20261007_round31.py": "1981b4c77b0b54b1eeefaaef7976f96917f2d6dfd08f025a4d9bd7102f65743c",
+    "scripts/course_bio_constraints.py": "0e30e9386ca7eecc50aea86b9167e5aa6cfc20bb39cd825a16ebed29df1301ec",
+    "resources/course_v4_config.json": "7af9558ed93d35ce5b5ecb8394919c2d94e1c4229da9aa92c9bffe99ec7b7fd0"
+  },
+  "hypothesis": "legal maximum-emission BIO paths reduce orphan I errors without train/test labels in inference",
+  "selection": "dev micro F1 nonregression and DATASET dev F1 at least production; support3 is not reliable evaluation",
+  "testAccessed": false,
+  "trainingExecuted": false,
+  "automaticProductionPromotion": false
+}

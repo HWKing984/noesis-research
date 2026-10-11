@@ -1,0 +1,2 @@
+﻿arxivId,head,tail,priorLabel,proposedLabel,evidence,scopeQuestion,reviewStatus
+2008.10400,pooling,MNIST,UNRESOLVED,NO_RELATION,"Every convolution layer uses batch normalization and ReLU activation, and pooling is not used.","Negation grammatically describes the reported convolution architecture, not an independently stated pooling-MNIST evaluation. Do not claim an explicit pair-level negation or a universal fact.",pending_scope_adjudication

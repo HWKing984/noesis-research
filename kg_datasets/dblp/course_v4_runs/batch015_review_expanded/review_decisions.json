@@ -1,0 +1,652 @@
+{
+  "provider": "codex_session",
+  "model": "unknown_session_model",
+  "round": "candidate_aware_ai_review",
+  "decisions": [
+    {
+      "sampleId": "sample-41e3e69005510696f02f",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Semantic Loss Function",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning with Symbolic Knowledge",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Semantic loss is explicit mechanism; symbolic-knowledge learning is a compound method family, no task.\nAI self-review: Semantic loss and symbolic-knowledge learning are explicit methods, no task."
+    },
+    {
+      "sampleId": "sample-0a193559c6e5e92bda85",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Machine Translation",
+          "label": "TASK"
+        },
+        {
+          "text": "Statistical Machine Translation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Statistical translation explicitly advises the neural translation task."
+        }
+      ],
+      "notes": "Low-resource is removed; Farsi-Spanish describes the case but cannot be appended across intervening text.\nAI self-review: Statistical translation explicitly advises neural translation; resource setting excluded."
+    },
+    {
+      "sampleId": "sample-1c4a8e2a1f2f7c48f7f4",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Single Image Intrinsic Decomposition",
+          "label": "TASK"
+        },
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Transfer learning explicitly performs single-image intrinsic decomposition."
+        }
+      ],
+      "notes": "Retain single-image input and intrinsic decomposition.\nAI self-review: Transfer learning explicitly supports single-image decomposition."
+    },
+    {
+      "sampleId": "sample-94bd32674048521cfa61",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Reinforcement Learning with Noisy Exploration",
+          "label": "METHOD"
+        },
+        {
+          "text": "Autonomous Driving",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The noisy-exploration learner is explicitly for autonomous driving."
+        }
+      ],
+      "notes": "Keep the exploration mechanism.\nAI self-review: Noisy-exploration deep RL explicitly supports driving, mechanism retained."
+    },
+    {
+      "sampleId": "sample-94b031b0961c266c7499",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Link Prediction",
+          "label": "TASK"
+        },
+        {
+          "text": "Graph Neural Networks",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "GNN task-instrument assertion is not explicit in this investigation title.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Transfer learning is explicitly investigated for link prediction."
+        },
+        {
+          "head": "e3",
+          "tail": "e2",
+          "label": "UNRESOLVED",
+          "reason": "Graph neural networks are the setting; the title does not explicitly give their link-predictor role."
+        }
+      ],
+      "notes": "Do not convert every in-context method to USED_FOR.\nAI self-review: Transfer link-prediction role explicit, GNN instrument still contextual."
+    },
+    {
+      "sampleId": "sample-db5a99c93ce2eab94e98",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "evaluating the quality of wheat in a grain tank",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Computer vision system is an unnamed software tool, not a specific algorithm.\nAI self-review: Vision system unnamed software; wheat-quality assessment is concrete task."
+    },
+    {
+      "sampleId": "sample-5c9a789c1797e2fb65ca",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Reinforcement Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Autonomous Vehicles Lateral Control",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Vehicle lateral control is explicitly reinforcement-learning based."
+        }
+      ],
+      "notes": "Retain lateral control object.\nAI self-review: Lateral control explicitly reinforcement-learning based."
+    },
+    {
+      "sampleId": "sample-51f1569a870fe28a0e49",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Sentiment Analysis",
+          "label": "TASK"
+        },
+        {
+          "text": "Machine Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The sentiment model is explicitly based on machine learning."
+        },
+        {
+          "head": "e3",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "The sentiment model is explicitly based on deep learning."
+        }
+      ],
+      "notes": "Both family names fully written, no fabricated combined architecture.\nAI self-review: Sentiment model explicitly uses two fully written learning families."
+    },
+    {
+      "sampleId": "sample-b3e9c5bd669e3989c0cb",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Analog Probabilistic Spiking Neural Network with On-Chip Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Analog/probabilistic/spiking and on-chip learning define one architecture; no named hardware resource node.\nAI self-review: Analog/probabilistic/spiking and on-chip learning retained as composite."
+    },
+    {
+      "sampleId": "sample-0b59be2318b336f27135",
+      "entityStatus": "unresolved",
+      "entityReason": "Graph-Based Uncertainty Modeling and Multimodal Fusion may share the graph-based modifier across two methods; boundaries are not unambiguous.",
+      "entities": [
+        {
+          "text": "Salient Object Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Method coverage is unresolved.",
+      "relations": [],
+      "notes": "Do not silently treat the coordination as one invented named model.\nAI self-review: Graph modifier's coordinated method attachment uncertain, no invented method."
+    },
+    {
+      "sampleId": "sample-1da3a02b5113dd0f3c76",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Virtual Metrology in Multivariate Time Series",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "Virtual metrology in multivariate time series is explicitly deep-learning based."
+        }
+      ],
+      "notes": "Preserve measurement task and time-series input.\nAI self-review: Deep learning explicitly supports multivariate time-series metrology."
+    },
+    {
+      "sampleId": "sample-56592eac05e5143ef492",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "3D Dense U-Net with Two Independent Teachers",
+          "label": "METHOD"
+        },
+        {
+          "text": "Infant Brain Image Segmentation",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The two-teacher 3D U-Net is explicitly for infant-brain segmentation."
+        }
+      ],
+      "notes": "Enhanced removed; teacher composition retained.\nAI self-review: Two-teacher 3D U-Net explicit for infant-brain segmentation; Enhanced excluded."
+    },
+    {
+      "sampleId": "sample-3a75e11d883b4e4eaae8",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural network",
+          "label": "METHOD"
+        },
+        {
+          "text": "prediction of the stopping moment for text recognition in a video stream",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The neural network explicitly predicts when text recognition should stop."
+        }
+      ],
+      "notes": "Recognition is nested in the prediction object, not a separately overlapping task.\nAI self-review: Stopping-time prediction is outer task, recognition nested not duplicate."
+    },
+    {
+      "sampleId": "sample-2d6d5d95edd0ca501a35",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Domain Adaptation Transfer Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Kernel Representation Adaptation",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Two explicit learning/adaptation mechanisms, no downstream task or benchmark.\nAI self-review: Two adaptation mechanisms explicit, no task or benchmark."
+    },
+    {
+      "sampleId": "sample-65e50998cd8602ba409e",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Diabetic Retinopathy Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The deep-learning approach is explicitly to diabetic-retinopathy detection."
+        }
+      ],
+      "notes": "Disease retained, no fundus dataset inferred.\nAI self-review: Deep learner explicit for retinopathy detection."
+    },
+    {
+      "sampleId": "sample-e63ab1fbb41cb7f5af79",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Detecting Distracted Driving",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Distracted-driving detection is explicitly with deep learning."
+        }
+      ],
+      "notes": "Retain behavioral target.\nAI self-review: Distracted-driving detector explicitly uses deep learning."
+    },
+    {
+      "sampleId": "sample-0665f9de74013366e6f0",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Graph Neural Network Based Relation Learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "Abnormal Perception Information Detection in Self-Driving Scenarios",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "GNN-based relation learning is explicitly for abnormal-information detection in self-driving."
+        }
+      ],
+      "notes": "One composite method; keep perception and driving context.\nAI self-review: GNN relation-learning composite explicitly supports abnormal self-driving perception."
+    },
+    {
+      "sampleId": "sample-f62fc440a3fa4fc50410",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Machine learning",
+          "label": "METHOD"
+        },
+        {
+          "text": "coresets",
+          "label": "METHOD"
+        },
+        {
+          "text": "video segmentation of laparoscopic and robot-assisted surgery",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "The coreset's direct segmentation role is not explicit.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Machine learning is explicitly for the stated surgical-video segmentation."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Coresets may select training/input samples rather than directly segment video."
+        }
+      ],
+      "notes": "Automated/real-time removed as generic operational modifiers; surgery contexts retained.\nAI self-review: Coresets may select data not segment directly; learner relation explicit, coreset unresolved."
+    },
+    {
+      "sampleId": "sample-6cdd2adc4a94dfc2cb04",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "RL-OGM-Parking",
+          "label": "METHOD"
+        },
+        {
+          "text": "Lidar OGM-Based Hybrid Reinforcement Learning Planner",
+          "label": "METHOD"
+        },
+        {
+          "text": "Autonomous Parking",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "RL-OGM-Parking explicitly names the parking planner."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "The lidar-OGM hybrid RL planner is explicitly for autonomous parking."
+        }
+      ],
+      "notes": "OGM is representation inside method, not DATASET.\nAI self-review: OGM/lidar hybrid RL planner explicit for parking, OGM not dataset."
+    },
+    {
+      "sampleId": "sample-6256e415a30e31d7b3ac",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pedestrian Tracking",
+          "label": "TASK"
+        },
+        {
+          "text": "Deep Learning",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e2",
+          "tail": "e1",
+          "label": "USED_FOR",
+          "reason": "Pedestrian tracking is explicitly based on deep learning."
+        }
+      ],
+      "notes": "Dense crowd is an application condition separated from the base contiguous task.\nAI self-review: Pedestrian tracking deep-learning based; crowd context can't be appended across algorithm carrier."
+    },
+    {
+      "sampleId": "sample-d947301e9b82d1a92357",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "LLM",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Integration vulnerabilities/mitigation strategies are security study objects, no concrete detection/repair operation stated.\nAI self-review: LLM integration vulnerability study no defined detection/repair operation."
+    },
+    {
+      "sampleId": "sample-20470637b7ba7d411e41",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Coca",
+          "label": "METHOD"
+        },
+        {
+          "text": "Graph Neural Network",
+          "label": "METHOD"
+        },
+        {
+          "text": "Vulnerability Detection",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "unresolved",
+      "relationReason": "Coca's direct detection instrument role is not stated.",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e3",
+          "label": "UNRESOLVED",
+          "reason": "Coca improves/explains detector systems, but is not directly stated to detect vulnerabilities."
+        },
+        {
+          "head": "e2",
+          "tail": "e3",
+          "label": "USED_FOR",
+          "reason": "Vulnerability-detection systems are explicitly graph-neural-network based."
+        }
+      ],
+      "notes": "Do not equate an explanation/improvement method with the detector.\nAI self-review: Coca explains/improves detector; not itself proven detector; GNN role explicit."
+    },
+    {
+      "sampleId": "sample-492fb96aa21e6f89f532",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Large Language Models",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "Software engineering tasks are unspecified; interpreting behavior is research framing, not a named task method.\nAI self-review: Software engineering tasks unspecified, only model family settled."
+    },
+    {
+      "sampleId": "sample-e09db82c5d1a0a448700",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Pre-trained Language Model",
+          "label": "METHOD"
+        },
+        {
+          "text": "Deep Learning Framework Bug Prediction",
+          "label": "TASK"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [
+        {
+          "head": "e1",
+          "tail": "e2",
+          "label": "USED_FOR",
+          "reason": "The model's performance is explicitly investigated on deep-learning-framework bug prediction."
+        }
+      ],
+      "notes": "Deep-learning framework is the bug target, not a nested method entity.\nAI self-review: Bug prediction uses pretrained language model; deep-learning framework is bug target."
+    },
+    {
+      "sampleId": "sample-e14220c3f2e26514bd29",
+      "entityStatus": "complete",
+      "entityReason": "",
+      "entities": [
+        {
+          "text": "Neural Network Based Adaptive PID Controller",
+          "label": "METHOD"
+        }
+      ],
+      "groupMentions": [],
+      "relationStatus": "complete",
+      "relationReason": "",
+      "relations": [],
+      "notes": "One compound controller; nonlinear heat exchanger is plant/object, with no separate explicit control-task phrase.\nAI self-review: Full neural/adaptive PID controller composite retained; heat exchanger physical plant."
+    }
+  ]
+}

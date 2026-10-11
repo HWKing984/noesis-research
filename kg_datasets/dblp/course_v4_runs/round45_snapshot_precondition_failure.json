@@ -1,0 +1,10 @@
+{
+  "status": "failed_precondition_no_output_written",
+  "stage": "snapshot requested before ongoing annotation review had sealed its manifest",
+  "errorType": "FileNotFoundError",
+  "missing": "kg_datasets/dblp/course_abstract_benchmark_reviewed_20261008_45/manifest.json",
+  "target": "kg_datasets/dblp/course_abstract_benchmark_inputs_20261008_45",
+  "cause": "orchestration ordering mistake; review process was still running",
+  "fallbackUsed": false,
+  "resolution": "Await the original review process completion and verify its manifest before proceeding; do not manufacture a manifest or overwrite/restart that process."
+}

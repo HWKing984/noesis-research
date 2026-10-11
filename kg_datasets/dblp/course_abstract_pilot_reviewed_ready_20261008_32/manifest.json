@@ -1,0 +1,19 @@
+{
+  "inputSha256": {
+    "kg_datasets/dblp/course_abstract_pilot_20261008_32/manifest.json": "de4acf554742c640b837ea6b1b90fc18bc5498152c2c379a1d71f064407be8b2",
+    "annotations/course_v4/abstract_pilot_review_20261008_32.json": "aedabd69ee8adecdcc25bc4274a0f661eb6fa8ed04dbd8d0cbbfe71ed5e11c3f",
+    "scripts/review_abstract_pilot.py": "62294d6f4be76a5ff378744d6f0695c78a8e9365adb7acf2e6f2d2da3b4c3fdd",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/compile_course_ai.py": "c4cb5c68c564494006b0386d62b628ff769d8207920f9cd33aa0edd8eb8f8bce",
+    "kg_datasets/models/scibert_24f92d32/vocab.txt": "f0a650346e51ede8996710f79ba65d83fdb8da05b159f17037b74ba4e3a36c6f",
+    "kg_datasets/models/scibert_24f92d32/config.json": "488e7dbd68e27a38337ecb16358810da6df4226ac3b8880a0fde44bfdc37ccf0"
+  },
+  "filesSha256": {
+    "references.jsonl": "9b539749257df2b28b1ef77bd3a7deb5bfa97cdbef9693b77e192de0b5098632",
+    "reviewed_receipts.jsonl": "f8c9c971702b08055415db6f7c529029206953b6fec79881c642c4d83cdc5347",
+    "review_prompt.json": "9107bb444d371d10c1db47e95b02e47a5d3a5179afc1a614111ab1e487098052",
+    "summary.json": "b7049a1faafa23af8f0945c607191b797a476a0cd05350fc71a1754f275e5a39",
+    "token_alignment.jsonl": "0b3361855602855d83f33b03b28ed647f9445bc5aaf49997ec41f19aa313f8b8",
+    "train_examples.jsonl": "503bfdfe53400370b78850774fab93be5c80f9e3cb78dcd46d1484dea7d55dfa"
+  }
+}

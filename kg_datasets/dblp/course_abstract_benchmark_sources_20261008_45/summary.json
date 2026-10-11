@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "requested": 4,
+  "fetched": 4,
+  "usable": 4,
+  "excluded": 0,
+  "annotated": false,
+  "trainingExecuted": false,
+  "heldOutAbstractsAccessed": false,
+  "modelPromoted": false
+}

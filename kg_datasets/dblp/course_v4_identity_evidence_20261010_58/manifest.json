@@ -1,0 +1,19 @@
+{
+  "kind": "bounded_author_authority_evidence_v1",
+  "inputSha256": {
+    "annotations/course_v4/check_author_evidence_20261010_58.py": "02faed84a0427969efef670b782ceb9d341e0a5a008630b667e2f5f501883f43",
+    "annotations/course_v4/collect_author_evidence_20261010_58.py": "0dba18e799ff520cdea6a5d57a587986feb3dad9843e6dcb76e5c8559c2102eb",
+    "kg_datasets/dblp/course_v4_identity_alias_audit_20261010_57/manifest.json": "606bbfe87ad41b73b3c762fb73746fc14241ab2ce3673d15b886f6fe699ed792",
+    "kg_datasets/dblp/course_v4_identity_crosswalk_20261009_51/manifest.json": "a7eec07d788abcbcfb9871c46b1a82b41a6ca5dc198892dafe1befdf53659a53",
+    "scripts/course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2"
+  },
+  "filesSha256": {
+    "crossref_01.json": "3b408ca2dba622854d7d06e7a50ba10a5060bebf84f2a7836c8a08f7a04337ae",
+    "crossref_02.json": "7ae5e9952a373fb06cba9d97ac8c507d738ad0754e44fd0b360cc513a871b40e",
+    "policy_and_directory_requests.json": "aa5b2ddddbe51a2f06b049292cade11674b1ebace48920f70d5518ca85edce34",
+    "requests.json": "5afb60a15272e94b4ad102b89a760318363ff23b9888c8541a529c5ab086b4bc",
+    "review.json": "fbd2575155cd6c0d94e8f224dd55ac9d9ee454bdf7d65bd3a34a1dd26da07db8",
+    "summary.json": "788a1f8537ce7f6abd226102b2fc4e50c0d46dd9052e6d790bf3b26b71ab2a77"
+  }
+}

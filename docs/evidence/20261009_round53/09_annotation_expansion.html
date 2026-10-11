@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>训练关系证据与未决库存 · 第53轮</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#18243a;font:17px/1.55 'Microsoft YaHei',sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 38px;border-top:6px solid #2463bc}
+h1{font-size:28px;margin:10px 0 18px}h2{font-size:20px;margin:22px 0 10px}p{margin:8px 0}.tag{color:#315f9b;font-weight:bold}
+.notice{background:#fff4d7;border-left:5px solid #ba7900;padding:12px 16px}.cards{display:flex;gap:16px;margin:18px 0}
+.card{flex:1;background:#edf4fc;padding:14px 18px}.card strong{font-size:27px;display:block}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+th,td{border:1px solid #d9e2ed;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf3fa}
+code,.path{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}mark{background:#d9eaff;padding:2px 4px;border-radius:3px}
+mark.TASK{background:#dcf2e5}mark.DATASET{background:#f3e5fd}small{font-size:10px;padding-left:5px;color:#38495e}
+.title{font-size:20px;line-height:2.1;margin:12px 0}footer{border-top:1px solid #d7e1ed;margin-top:22px;padding-top:14px;font-size:12px;color:#58677d}
+svg{width:100%;max-height:315px}svg text{font:14px Consolas,monospace}
+</style><main><div class="tag">AI Literature KG · 课程实验真实结果留痕</div><h1>训练关系证据与未决库存 · 第53轮</h1>
+<p class="notice">本页由保存的真实 JSON/JSONL/XML 结果生成，供浏览器截图；不是原始终端、训练现场或 Neo4j 应用画面的仿制。AI 参考标签不是人工 gold。</p>
+<p>11篇训练摘要先锁来源、实际源文初判与同会话AI复核，再封存数据并运行旧RE；没有修改标签来适配模型输出。复用部分标注/收据/编码器，未知不填负，组件不继承整体模型评测。</p><table><thead><tr><th>库存</th><th>实际</th></tr></thead><tbody><tr><td>明确训练关系</td><td>271→386：用途288 / 评测64 / 负例34</td></tr><tr><td>本轮新增</td><td>115：用途104 / 评测3 / 角色负例8</td></tr><tr><td>未决与覆盖</td><td>1,971 / 2,357候选仍未知；已判16.38%</td></tr><tr><td>冻结库存</td><td>65篇NER / 787提及 / 5隔离；旧271关系完整行不变</td></tr><tr><td>来源支持</td><td>新增评测3条仅1论文；8负例来自3论文，重复跨度非独立样本</td></tr><tr><td>范围保护</td><td>9开发文件原字节保留；19篇保留测试只二进制哈希，不解析</td></tr></tbody></table><h2>固定11来源的新增判断</h2><table><thead><tr><th>arXiv ID</th><th>用途</th><th>评测</th><th>负例</th></tr></thead><tbody><tr><td>1903.10404</td><td>5</td><td>0</td><td>3</td></tr><tr><td>2506.20241</td><td>16</td><td>0</td><td>0</td></tr><tr><td>2407.20251</td><td>13</td><td>0</td><td>0</td></tr><tr><td>2107.09145</td><td>20</td><td>0</td><td>4</td></tr><tr><td>1903.10676</td><td>9</td><td>0</td><td>0</td></tr><tr><td>1909.03546</td><td>8</td><td>0</td><td>0</td></tr><tr><td>1909.07755</td><td>11</td><td>0</td><td>0</td></tr><tr><td>2010.12812</td><td>9</td><td>3</td><td>1</td></tr><tr><td>2010.01057</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2308.03279</td><td>13</td><td>0</td><td>0</td></tr><tr><td>1906.06127</td><td>0</td><td>0</td><td>0</td></tr></tbody></table><p>LUKE没有明确具名的被评测整体方法，不把架构组件或标题名称自动补为摘要实体/评测边；DocRED无方法实体，是零候选文档，不制造负例。训练/预训练提及、背景共现、较差性能不自动判NO_RELATION。角色负例只是本篇明确阶段/操作对象的局部对照，不是通用“不可能”断言。</p><p>旧NER收据独立绑定52输入，53只新增RE收据。390项工程回归通过（0失败/错误/跳过），不是390项语义正确性证明。没有新模型训练、开发指标或图谱导入。</p><footer>证据页生成时间：2026-10-09T04:07:04.790242+00:00<br>来源：<div class="path">D:\a-open_source\neo4j\kg_datasets\dblp\course_abstract_role_enriched_20261009_53\summary.json</div><div class="path">D:\a-open_source\neo4j\kg_datasets\dblp\course_abstract_role_enriched_20261009_53\role_ledger.jsonl</div><div class="path">D:\a-open_source\neo4j\kg_datasets\dblp\course_v4_runs\tests_20261009_round53.xml</div>
+模型/标注的时间以来源文件为准；截图拍摄时间与哈希另存 captures.json。</footer></main></html>

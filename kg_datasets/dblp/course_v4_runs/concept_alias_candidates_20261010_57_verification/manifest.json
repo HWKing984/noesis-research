@@ -1,0 +1,22 @@
+{
+  "kind": "candidate_not_graph_migration",
+  "status": "completed",
+  "inputSha256": {
+    "kg_datasets/dblp/course_v4_graph_quality_20261009_51/concept_mapping.jsonl": "c4629374b02906d37110391f18bc6d7276391a4444689c48dea229a13d61134d",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/documents.jsonl": "9de46d38f795a7d2ccff34bdf66b8b009746b6754e2ba299120617b55b6c9643",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/ner_predictions.jsonl": "b214d6a5f6ab6373b2257cb20c369d6c316149eab84783c3f0d6ba2d5280a5ac",
+    "kg_datasets/dblp/course_v4_runs/corpus_production_20261007_25/manifest.json": "9021e341e8928ad44edbff58690110cc7f109570eeaa8c73573b4eb3b6776fa7",
+    "resources/course_concept_v2.json": "d4e0eff6056a47ec881b768d1ce64b91efa8ee32589d15f22205155043541fce",
+    "resources/course_concept_candidates_v1.json": "fca89e5d31e89ea9d3222cbd2ab115cda3f535c1979bc622f6d258a2284ec2b4",
+    "scripts/propose_course_concept_aliases.py": "544c8d8e56209ebb203ba5fda3dba6d3b7ab7d37d796a26ecaeda288b7990c44",
+    "scripts/course_weak.py": "63b571a8abd891fd2609ba7cf253d936c58619024ae0f0fd566851d5520d3dc2",
+    "scripts/course_graph.py": "493b52f6a0cb2282f99f78c3df7961dbe007dd0003bef1aa2e06d91fe3d1cb57",
+    "scripts/normalize_course_concepts.py": "9f191645062501cf4df9d4aea742718839a3a530d9f5fec6f54f59614d44836a",
+    "tests/test_concept_alias_candidates.py": "7f40ae4f570fcf480529a1b36424a3d952f287434d80d162622c0c65c98ec66a"
+  },
+  "filesSha256": {
+    "groups.jsonl": "d5b69d8f68153584e57bea91b60ed3bf6061ce472d8b7f9803d616f50293d9c3",
+    "mentions.jsonl": "408445791eb17ace8516dce589e08348878c356bd1b122b15d88ed4b6737077d",
+    "summary.json": "98c8838bfe5a02a714351a26cc26041fed2c45beb672494f93ae2cb076bb4558"
+  }
+}
