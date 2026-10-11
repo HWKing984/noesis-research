@@ -1,0 +1,11 @@
+{
+  "archive": "AI-Literature-KG_20261013_submission.zip",
+  "bytes": 2175273138,
+  "sha256": "b21ea6618ef67dff3f1cd0149b16ffb1af0d42c9563b48c52d62c9ae0f86c645",
+  "members": 499,
+  "allMemberSHA256Verified": true,
+  "actualModelsIncluded": 5,
+  "secretsIncluded": false,
+  "environmentBundled": false,
+  "neo4jDistributionBundled": false
+}
