@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
 
-import { describeStep } from '../lib/agentApi.js';
 import { citationReport } from '../lib/evidence.js';
-import { renderAnswer } from '../lib/answerRender.jsx';
+import { renderAnswer } from '../lib/answerRender.js';
+import ThinkingChain from './ThinkingChain.jsx';
 import SpiralMark, { SPIRAL_PATH } from './SpiralMark.jsx';
 
 const PROMPTS = [
@@ -27,14 +27,16 @@ const USER_ICON = (
  */
 export default function AgentChat({ turns, onAsk, onCited, agentHealth, view, onView, railOpen, onToggleRail, railCount = 0 }) {
   const [draft, setDraft] = useState('');
-  const [openTraces, setOpenTraces] = useState(() => new Set());
+  // 研究笔记**默认展开**（最后一轮），历史轮默认收起；用户点过的轮次记在 flipped 里取反。
+  // 起因：过程默认收起时用户只看得到"答案 + 核查卡"，观感是"它没有思考"。
+  const [flippedTraces, setFlippedTraces] = useState(() => new Set());
 
   const busy = turns.some((t) => t.status === 'running');
   const hasThread = turns.length > 0;
   const lastIndex = turns.length - 1;
 
   const toggleTrace = (key) => {
-    setOpenTraces((prev) => {
+    setFlippedTraces((prev) => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
@@ -149,7 +151,7 @@ export default function AgentChat({ turns, onAsk, onCited, agentHealth, view, on
                 turn={turn}
                 index={index}
                 isLast={index === lastIndex}
-                traceOpen={openTraces.has(index)}
+                traceOpen={(index === lastIndex) !== flippedTraces.has(index)}
                 onToggleTrace={() => toggleTrace(index)}
                 onCited={onCited}
               />
@@ -212,10 +214,12 @@ export default function AgentChat({ turns, onAsk, onCited, agentHealth, view, on
   );
 }
 
-/** 单轮：用户气泡 + 助手气泡（过程卡 + 流式正文 + 引用核查）。 */
+/** 单轮：用户气泡 + 助手气泡（思考链 + 流式正文 + 引用核查）。 */
 function TurnView({ turn, index, isLast, traceOpen, onToggleTrace, onCited }) {
   const busy = turn.status === 'running';
-  const steps = useMemo(() => turn.events.map(describeStep).filter(Boolean), [turn.events]);
+  // 思考链：结构/交互与 NOESIS ThinkingChain 同构（见 ThinkingChain.jsx）。
+  // 推演 = turn.reasoning（reasoning_delta + 工具边界重分类，见 App.jsx）。
+  const hasChain = busy || turn.events.length > 0 || Boolean(turn.reasoning);
   const evidenceIds = useMemo(() => {
     const seen = [];
     for (const event of turn.events) {
@@ -226,9 +230,23 @@ function TurnView({ turn, index, isLast, traceOpen, onToggleTrace, onCited }) {
     return seen;
   }, [turn.events]);
   const verdict = turn.citation || (turn.answer ? citationReport(turn.answer, evidenceIds) : null);
+  // 引用上标的可读标签：把本轮的论文卡（题名 + 年份）汇总成 id → 标签，
+  // 用户 hover 上标就看到「题名（年份）」而不是一串 DBLP 键。没有标签的 id 退回裸 id ——
+  // 宁可显示得朴素，也不假装有标签。
+  const labelById = useMemo(() => {
+    const map = new Map();
+    for (const event of turn.events) {
+      for (const item of event?.summary?.paperItems || []) {
+        if (!item?.publicationId || map.has(item.publicationId)) continue;
+        const title = item.title || item.publicationId;
+        map.set(item.publicationId, item.year ? `${title}（${item.year}）` : title);
+      }
+    }
+    return map;
+  }, [turn.events]);
   const blocks = useMemo(
-    () => (turn.answer ? renderAnswer(turn.answer, verdict?.citedIds || [], onCited) : null),
-    [turn.answer, verdict, onCited],
+    () => (turn.answer ? renderAnswer(turn.answer, verdict?.citedIds || [], onCited, labelById) : null),
+    [turn.answer, verdict, onCited, labelById],
   );
   const tid = (name) => (isLast ? name : `${name}-${index}`);
 
@@ -244,37 +262,15 @@ function TurnView({ turn, index, isLast, traceOpen, onToggleTrace, onCited }) {
       <div className="message-bubble">
         <div className="message-avatar" aria-hidden="true"><SpiralMark size={30} strokeWidth={2} /></div>
         <div className="message-column">
-          <div className={`message-body--assistant ${steps.length ? 'has-trace' : ''}`}>
-            {steps.length > 0 ? (
-              <div className={`trace ${traceOpen ? 'is-open' : ''}`} data-testid={isLast ? 'agent-trace' : tid('trace')}>
-                <button type="button" className="trace-sum" data-testid="agent-trace-toggle" onClick={onToggleTrace}>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" />
-                  </svg>
-                  已执行 {steps.length} 步 · 可用证据 {evidenceIds.length} 条
-                  <span className="n">{traceOpen ? '收起' : '展开'}</span>
-                </button>
-                <div className="trace-body" data-testid="agent-steps">
-                  {steps.map((step, stepIndex) => (
-                    <div
-                      key={`${step.label}-${stepIndex}`}
-                      className={`tstep ${step.icon === 'error' ? 'is-error' : ''}`}
-                      data-testid="agent-step"
-                      data-step-icon={step.icon}
-                    >
-                      <span className="t">{step.label}</span>
-                      <span>{step.detail}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-
-            {busy && steps.length === 0 && !turn.answer ? (
-              <p style={{ color: 'var(--text-tertiary)', fontSize: 13 }} data-testid="agent-thinking">
-                正在检索图谱…
-              </p>
-            ) : null}
+          <div className={`message-body--assistant ${hasChain ? 'has-trace' : ''}`}>
+            <ThinkingChain
+              events={turn.events}
+              reasoning={turn.reasoning || ''}
+              running={busy}
+              open={traceOpen}
+              onToggle={onToggleTrace}
+              traceTestId={isLast ? 'agent-trace' : tid('trace')}
+            />
 
             {blocks ? (
               <div className="message-text" data-testid={isLast ? 'agent-answer' : tid('answer')}>

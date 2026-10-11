@@ -21,6 +21,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 for _extra in (
     REPO_ROOT,
     REPO_ROOT / "integrations" / "knowledge-graph",
+    REPO_ROOT / "integrations" / "external-sources",
     REPO_ROOT / "apps" / "api",
 ):
     if _extra.is_dir() and str(_extra) not in sys.path:

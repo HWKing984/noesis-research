@@ -12,7 +12,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173 --strictPort",
-    "test": "node --test src/lib/evidence.test.mjs src/lib/agentApi.test.mjs src/lib/answerRender.test.mjs"
+    "test": "node --test src/lib/evidence.test.mjs src/lib/agentApi.test.mjs src/lib/answerRender.test.mjs src/lib/translate.test.mjs"
   },
   "dependencies": {
     "pdfjs-dist": "4.4.168",

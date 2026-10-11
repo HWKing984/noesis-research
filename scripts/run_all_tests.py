@@ -30,6 +30,7 @@ SUITES: tuple[tuple[str, str, Path], ...] = (
     ("contracts", "offline / evidence contract", ROOT / "packages" / "contracts"),
     ("api", "http / research API (requires fastapi)", ROOT / "apps" / "api"),
     ("agent", "agent / research tools (requires deepagents)", ROOT / "services" / "research-agent"),
+    ("external", "metadata / external sources (offline + live, self-skips)", ROOT / "integrations" / "external-sources"),
     ("live", "live / knowledge graph + API (self-skips)", ROOT / "tests" / "integration"),
 )
 

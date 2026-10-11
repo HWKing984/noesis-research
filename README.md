@@ -61,11 +61,46 @@ noesis-research/
 ### 起服务
 
 ```bash
-# 一键起全部（API 8100 + Agent 8101 + 前端 4173），常驻运行
-#   LLM 配置优先取环境变量；本机开发缺省只读 NOESIS 工作树的 backend/.env（不打印、不落盘）
-python scripts/dev_serve.py start     # 前台常驻；Ctrl+C 或 stop 停止
-python scripts/dev_serve.py stop      # 按记录的 PID 停止
+# 一键起全部（KG 8765 + API 8100 + Agent 8101 + 前端 4173），常驻运行
+#   最省事：双击仓库根目录的 start.cmd（停止：双击 stop.cmd）
+#   凭据优先取环境变量；本机开发缺省只读 NOESIS 工作树的 backend/.env
+#   （LLM_* 与 NEO4J_PASSWORD 都从这里取；只读、不打印、不落盘）
+python scripts/dev_serve.py start     # 前台常驻；等端口就绪后自动开浏览器；Ctrl+C 或 stop 停止
+python scripts/dev_serve.py stop      # 只停"本次启动记录下来的、且仍在监听"的进程
+```
 
+依赖链**少一层整体就不可用**：
+
+| 层 | 地址 | 谁提供 |
+|---|---|---|
+| Neo4j Desktop | `7474` / `7687` | **thome 在 GUI 启动**（`AI-Literature-KG` 实例），本脚本不代管 |
+| AI-Literature-KG 只读应用 | `8765` | `D:\a-open_source\neo4j` 的 `scripts/course_graph.py serve`，由 `start.cmd` **尽力代起** |
+| NOESIS Research API | `8100` | 本仓库 `apps/api` |
+| 研究工作区前端 | `4173` | 本仓库 `apps/web`（同源代理到 8100，后端不开 CORS） |
+
+`start.cmd` 会先做前置检查（两个 venv、`apps/web/node_modules`、前端 `dist` 是否在；`dist` 缺失自动构建一次），
+核心端口（8100/8101/4173）被占用时直接报错退出而不抢端口，然后**并行**等待就绪（上限 `DEV_START_TIMEOUT`，默认 180s ——
+research-agent 首次导入 deepagents/langchain 冷启动实测 15~65s）。
+
+**KG 是"尽力代起"**：仓库/venv 缺失、取不到 Neo4j 密码、或 8765 已被占用时**只告警不失败** ——
+被占用时复用它且 `stop` 不会去动它；起不来时 API 按设计返回 **503**（本项目不返回离线替代数据）。
+启动器还会把 `resources/course_graph_runtime.json` 里钉住的 `graphId` 与 `KG_EXPECTED_GRAPH_ID` 比对，
+不一致就提前告警（否则会在请求时表现为 503 `kg_graph_version_mismatch`）。
+
+> 注：`start.cmd` / `stop.cmd` 保持**纯 ASCII**。cmd.exe 按系统 OEM 代码页（简中为 GBK）逐行解析批处理文件，
+> 文件里的非 ASCII 字节会被误解码并可能被当成命令分隔符，把脚本打散 —— 中文提示统一由 Python 侧输出。
+> 就绪判定用 **TCP 连通**而非 HTTP 探测：宿主注入的 `HTTP_PROXY` 会在环回上拦截 HTTP，端口已监听时 urllib 仍可能长时间报 `WinError 10061`。
+
+手动起 KG（`8765`）：
+
+```bash
+# Neo4j Desktop 里先启动 AI-Literature-KG（7474/7687）
+cd D:/a-open_source/neo4j
+NEO4J_PASSWORD=<pw> .venv-validation/Scripts/python.exe -B scripts/course_graph.py serve \
+    --database neo4j --user neo4j --port 8765     # 默认 bundle 的 graphId = ai-literature-ed16399925fac2a599ed
+```
+
+```bash
 # 业务 API
 python -m venv .venv
 .venv/Scripts/python -m pip install -r apps/api/requirements.txt

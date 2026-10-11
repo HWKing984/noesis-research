@@ -1,0 +1,874 @@
+{
+  "passed": 39,
+  "failed": 0,
+  "results": [
+    {
+      "name": "[SC1] 新链：状态胶囊存在",
+      "ok": true,
+      "detail": "true"
+    },
+    {
+      "name": "[SC1] 新链：完成文案=思考完成",
+      "ok": true,
+      "detail": "思考完成"
+    },
+    {
+      "name": "[SC1] 新链：计数=N 项且=条目数",
+      "ok": true,
+      "detail": "count=6 项 items=6"
+    },
+    {
+      "name": "[SC1] 新链：完成后自动收起",
+      "ok": true,
+      "detail": "bodyVisible=false"
+    },
+    {
+      "name": "[SC1] 新链：工具簇 5 张明细卡",
+      "ok": true,
+      "detail": "cards=5"
+    },
+    {
+      "name": "[SC1] 新链：胶囊圆角 999px（计算值）",
+      "ok": true,
+      "detail": "999px"
+    },
+    {
+      "name": "[SC1] 新链：胶囊底色=NOESIS --pill-bg 浅值",
+      "ok": true,
+      "detail": "rgb(241, 241, 243)"
+    },
+    {
+      "name": "[SC1] 新链：思考链无框（区别于现状卡片）",
+      "ok": true,
+      "detail": "border=0px"
+    },
+    {
+      "name": "[SC1] 现状：无胶囊/无状态球（问题存在）",
+      "ok": true,
+      "detail": "pill=false orb=false"
+    },
+    {
+      "name": "[SC1] 现状：6 步且默认展开（最后一轮）",
+      "ok": true,
+      "detail": "steps=6 visible=true"
+    },
+    {
+      "name": "[SC1] 现状：步骤标签为等宽字体",
+      "ok": true,
+      "detail": "mono=true"
+    },
+    {
+      "name": "[SC1] 新链：胶囊文字非等宽",
+      "ok": true,
+      "detail": "mono=false"
+    },
+    {
+      "name": "[SC1] §1 标杆：两条链齐、运行中有球、完成态收起",
+      "ok": true,
+      "detail": "{\"r1\":true,\"r2\":true,\"r1Orbs\":1,\"r1BodyVis\":true,\"r2BodyVis\":false,\"r2Label\":\"思考完成\"}"
+    },
+    {
+      "name": "[SC1] §3 契约：2 张表 / 映射 10 行 / 3 决策",
+      "ok": true,
+      "detail": "{\"tables\":2,\"mapRows\":10,\"decs\":3}"
+    },
+    {
+      "name": "[SC1] 无横向溢出",
+      "ok": true,
+      "detail": "over=0"
+    },
+    {
+      "name": "[SC1] 最小字号 >= 11px",
+      "ok": true,
+      "detail": "min=11"
+    },
+    {
+      "name": "[SC1] 无文字越界",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "[SC1] 图标 svg <= 24px",
+      "ok": true,
+      "detail": "max=16"
+    },
+    {
+      "name": "[SC1] 可点元素 >= 10",
+      "ok": true,
+      "detail": "n=16"
+    },
+    {
+      "name": "[SC1] 底部让位余量 >= 100px",
+      "ok": true,
+      "detail": "pad=118"
+    },
+    {
+      "name": "[SC2] 点胶囊 -> 展开",
+      "ok": true,
+      "detail": "res=ok vis=true"
+    },
+    {
+      "name": "[SC2] 再点 -> 收起",
+      "ok": true,
+      "detail": "res=ok vis=false"
+    },
+    {
+      "name": "[SC2] 文案切研究口径 -> 思考完成=研究完成",
+      "ok": true,
+      "detail": "label=研究完成"
+    },
+    {
+      "name": "[SC2] 切运行中 -> 深度研究中…/点阵球/展开/1 张进行中卡",
+      "ok": true,
+      "detail": "{\"label\":\"深度研究中…\",\"orbs\":2,\"vis\":true,\"loaders\":1}"
+    },
+    {
+      "name": "[SC2] 运行中计数=5 项=条目数",
+      "ok": true,
+      "detail": "count=5 项 items=5"
+    },
+    {
+      "name": "[SC2] 工具簇自动跟随到底（上 seam 亮 / 下 seam 灭）",
+      "ok": true,
+      "detail": "{\"top\":369,\"st\":true,\"sb\":false,\"h\":\"260/629\"}"
+    },
+    {
+      "name": "[SC2] 完成后保持展开（keep）",
+      "ok": true,
+      "detail": "vis=true label=研究完成"
+    },
+    {
+      "name": "[SC3] C：模型推演条目存在且为 model 类",
+      "ok": true,
+      "detail": "len=135"
+    },
+    {
+      "name": "[SC3] C：推演标签=研究推演",
+      "ok": true,
+      "detail": "研究推演"
+    },
+    {
+      "name": "[SC3] C：计数=6 项（含推演+重试+4 工具）",
+      "ok": true,
+      "detail": "count=6 项 items=6"
+    },
+    {
+      "name": "[SC4] 暗色：页面底色与浅色不同",
+      "ok": true,
+      "detail": "rgb(247, 247, 248) -> rgb(23, 23, 23)"
+    },
+    {
+      "name": "[SC4] 暗色：胶囊底色与浅色不同",
+      "ok": true,
+      "detail": "rgb(241, 241, 243) -> rgb(46, 46, 46)"
+    },
+    {
+      "name": "[SC4] 暗色：正文颜色与浅色不同",
+      "ok": true,
+      "detail": "rgb(26, 26, 28) -> rgb(236, 236, 241)"
+    },
+    {
+      "name": "[SC4] 暗色无横向溢出",
+      "ok": true,
+      "detail": "over=0"
+    },
+    {
+      "name": "[1600px] 无横向溢出",
+      "ok": true,
+      "detail": "over=0"
+    },
+    {
+      "name": "[1600px] 并排仍为两列",
+      "ok": true,
+      "detail": "605px 605px"
+    },
+    {
+      "name": "[1760px] 无横向溢出",
+      "ok": true,
+      "detail": "over=0"
+    },
+    {
+      "name": "[1760px] 并排仍为两列",
+      "ok": true,
+      "detail": "605px 605px"
+    },
+    {
+      "name": "全过程无 JS 运行时报错",
+      "ok": true,
+      "detail": "none"
+    }
+  ],
+  "data": {
+    "sc1-light-B-done": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 16,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "思考完成",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": false,
+        "orbs": 0,
+        "items": 6,
+        "cards": 5,
+        "loaders": 0,
+        "hasCluster": true,
+        "clusterClientH": 0,
+        "clusterScrollH": 0,
+        "clusterScrollTop": 0,
+        "modelLen": 0,
+        "modelLabel": "",
+        "modelIsActive": false,
+        "labelMono": false,
+        "pillBg": "rgb(241, 241, 243)",
+        "pillRadius": "999px",
+        "chainH": 42,
+        "borderW": "0px",
+        "seamTopShown": false,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 6 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 6,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 288
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(247, 247, 248)",
+        "pillBg": "rgb(241, 241, 243)",
+        "titleColor": "rgb(26, 26, 28)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "colorsLight": {
+      "docBg": "rgb(247, 247, 248)",
+      "pillBg": "rgb(241, 241, 243)",
+      "titleColor": "rgb(26, 26, 28)"
+    },
+    "sc2-click-expand": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 17,
+      "clickables": 21,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "思考完成",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": true,
+        "orbs": 0,
+        "items": 6,
+        "cards": 5,
+        "loaders": 0,
+        "hasCluster": true,
+        "clusterClientH": 260,
+        "clusterScrollH": 774,
+        "clusterScrollTop": 0,
+        "modelLen": 0,
+        "modelLabel": "",
+        "modelIsActive": false,
+        "labelMono": false,
+        "pillBg": "rgb(241, 241, 243)",
+        "pillRadius": "999px",
+        "chainH": 364,
+        "borderW": "0px",
+        "seamTopShown": false,
+        "seamBottomShown": true
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 6 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 6,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 288
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(247, 247, 248)",
+        "pillBg": "rgb(241, 241, 243)",
+        "titleColor": "rgb(26, 26, 28)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "sc2-click-collapse": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 16,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "思考完成",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": false,
+        "orbs": 0,
+        "items": 6,
+        "cards": 5,
+        "loaders": 0,
+        "hasCluster": true,
+        "clusterClientH": 0,
+        "clusterScrollH": 0,
+        "clusterScrollTop": 0,
+        "modelLen": 0,
+        "modelLabel": "",
+        "modelIsActive": false,
+        "labelMono": false,
+        "pillBg": "rgb(241, 241, 243)",
+        "pillRadius": "999px",
+        "chainH": 42,
+        "borderW": "0px",
+        "seamTopShown": false,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 6 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 6,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 288
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(247, 247, 248)",
+        "pillBg": "rgb(241, 241, 243)",
+        "titleColor": "rgb(26, 26, 28)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "sc2-copy-research": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 16,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "研究完成",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": false,
+        "orbs": 0,
+        "items": 6,
+        "cards": 5,
+        "loaders": 0,
+        "hasCluster": true,
+        "clusterClientH": 0,
+        "clusterScrollH": 0,
+        "clusterScrollTop": 0,
+        "modelLen": 0,
+        "modelLabel": "",
+        "modelIsActive": false,
+        "labelMono": false,
+        "pillBg": "rgb(241, 241, 243)",
+        "pillRadius": "999px",
+        "chainH": 42,
+        "borderW": "0px",
+        "seamTopShown": false,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 6 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 6,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 288
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(247, 247, 248)",
+        "pillBg": "rgb(241, 241, 243)",
+        "titleColor": "rgb(26, 26, 28)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "sc2-streaming": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 19,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "深度研究中…",
+        "count": "5 项",
+        "countN": 5,
+        "bodyVisible": true,
+        "orbs": 2,
+        "items": 5,
+        "cards": 3,
+        "loaders": 1,
+        "hasCluster": true,
+        "clusterClientH": 260,
+        "clusterScrollH": 629,
+        "clusterScrollTop": 369,
+        "modelLen": 0,
+        "modelLabel": "",
+        "modelIsActive": false,
+        "labelMono": false,
+        "pillBg": "rgb(241, 241, 243)",
+        "pillRadius": "999px",
+        "chainH": 364,
+        "borderW": "0px",
+        "seamTopShown": true,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 4 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 4,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 209
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(247, 247, 248)",
+        "pillBg": "rgb(241, 241, 243)",
+        "titleColor": "rgb(26, 26, 28)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "sc2-done-keep": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 21,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "研究完成",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": true,
+        "orbs": 0,
+        "items": 6,
+        "cards": 5,
+        "loaders": 0,
+        "hasCluster": true,
+        "clusterClientH": 260,
+        "clusterScrollH": 774,
+        "clusterScrollTop": 0,
+        "modelLen": 0,
+        "modelLabel": "",
+        "modelIsActive": false,
+        "labelMono": false,
+        "pillBg": "rgb(241, 241, 243)",
+        "pillRadius": "999px",
+        "chainH": 364,
+        "borderW": "0px",
+        "seamTopShown": false,
+        "seamBottomShown": true
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 6 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 6,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 288
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(247, 247, 248)",
+        "pillBg": "rgb(241, 241, 243)",
+        "titleColor": "rgb(26, 26, 28)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "sc3-C-streaming": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 19,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "深度思考中...",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": true,
+        "orbs": 3,
+        "items": 6,
+        "cards": 3,
+        "loaders": 1,
+        "hasCluster": true,
+        "clusterClientH": 260,
+        "clusterScrollH": 629,
+        "clusterScrollTop": 369,
+        "modelLen": 135,
+        "modelLabel": "研究推演",
+        "modelIsActive": true,
+        "labelMono": false,
+        "pillBg": "rgb(241, 241, 243)",
+        "pillRadius": "999px",
+        "chainH": 494,
+        "borderW": "0px",
+        "seamTopShown": true,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 4 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 4,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 209
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(247, 247, 248)",
+        "pillBg": "rgb(241, 241, 243)",
+        "titleColor": "rgb(26, 26, 28)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "sc4-dark": {
+      "vw": 1418,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 19,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "深度思考中...",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": true,
+        "orbs": 3,
+        "items": 6,
+        "cards": 3,
+        "loaders": 1,
+        "hasCluster": true,
+        "clusterClientH": 260,
+        "clusterScrollH": 629,
+        "clusterScrollTop": 369,
+        "modelLen": 135,
+        "modelLabel": "研究推演",
+        "modelIsActive": true,
+        "labelMono": false,
+        "pillBg": "rgb(46, 46, 46)",
+        "pillRadius": "999px",
+        "chainH": 494,
+        "borderW": "0px",
+        "seamTopShown": true,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 4 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 4,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 209
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(23, 23, 23)",
+        "pillBg": "rgb(46, 46, 46)",
+        "titleColor": "rgb(236, 236, 241)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "colorsDark": {
+      "docBg": "rgb(23, 23, 23)",
+      "pillBg": "rgb(46, 46, 46)",
+      "titleColor": "rgb(236, 236, 241)"
+    },
+    "sc5-1600": {
+      "vw": 1600,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 19,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "深度思考中...",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": true,
+        "orbs": 3,
+        "items": 6,
+        "cards": 3,
+        "loaders": 1,
+        "hasCluster": true,
+        "clusterClientH": 260,
+        "clusterScrollH": 629,
+        "clusterScrollTop": 369,
+        "modelLen": 135,
+        "modelLabel": "研究推演",
+        "modelIsActive": true,
+        "labelMono": false,
+        "pillBg": "rgb(46, 46, 46)",
+        "pillRadius": "999px",
+        "chainH": 494,
+        "borderW": "0px",
+        "seamTopShown": true,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 4 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 4,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 209
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(23, 23, 23)",
+        "pillBg": "rgb(46, 46, 46)",
+        "titleColor": "rgb(236, 236, 241)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    },
+    "sc5-1760": {
+      "vw": 1760,
+      "docOverflowX": 0,
+      "minFont": 11,
+      "offscreenText": [],
+      "iconMaxSvg": 16,
+      "clickables": 19,
+      "mainPadBottom": 118,
+      "neo": {
+        "hasPill": true,
+        "label": "深度思考中...",
+        "count": "6 项",
+        "countN": 6,
+        "bodyVisible": true,
+        "orbs": 3,
+        "items": 6,
+        "cards": 3,
+        "loaders": 1,
+        "hasCluster": true,
+        "clusterClientH": 260,
+        "clusterScrollH": 629,
+        "clusterScrollTop": 369,
+        "modelLen": 135,
+        "modelLabel": "研究推演",
+        "modelIsActive": true,
+        "labelMono": false,
+        "pillBg": "rgb(46, 46, 46)",
+        "pillRadius": "999px",
+        "chainH": 494,
+        "borderW": "0px",
+        "seamTopShown": true,
+        "seamBottomShown": false
+      },
+      "base": {
+        "hasPill": false,
+        "hasOrb": false,
+        "headerText": "研究笔记 · 4 步 · 可用证据 12 条收起",
+        "bodyVisible": true,
+        "steps": 4,
+        "labelMono": true,
+        "traceBorder": "1px",
+        "chainH": 209
+      },
+      "refChains": {
+        "r1": true,
+        "r2": true,
+        "r1Orbs": 1,
+        "r1BodyVis": true,
+        "r2BodyVis": false,
+        "r2Label": "思考完成"
+      },
+      "contract": {
+        "tables": 2,
+        "mapRows": 10,
+        "decs": 3
+      },
+      "themeColors": {
+        "docBg": "rgb(23, 23, 23)",
+        "pillBg": "rgb(46, 46, 46)",
+        "titleColor": "rgb(236, 236, 241)"
+      },
+      "gridCols": {
+        "layout": "both",
+        "cols": "605px 605px"
+      }
+    }
+  },
+  "jsErrors": []
+}

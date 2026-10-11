@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="init-state" content="" />
+<title>NOESIS Research · 点击翻译（钉住交互）设计原型</title>
+<style>
+  /* 本文件的 token 刻意与 apps/web/src/index.css 同名同值 —— 原型可直接对照落地。 */
+  :root{
+    --bg-primary:#fff; --bg-secondary:#f7f7f8; --bg-tertiary:#ececed; --bg-elevated:#fff; --bg-hover:#e8e8e8;
+    --text-primary:#16161a; --text-secondary:#5b5b63; --text-tertiary:#8b8b92; --text-muted:#b0b0b5;
+    --border-subtle:rgba(0,0,0,.085); --border-default:rgba(0,0,0,.14);
+    --accent:#555; --accent-dim:rgba(85,85,85,.08);
+    --ok:#1f8a4c; --ok-soft:rgba(31,138,76,.10);
+    --warn:#9a6b00; --warn-soft:rgba(154,107,0,.10);
+    --bad:#c0392b; --bad-soft:rgba(192,57,43,.09);
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    --font-mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    --radius-md:8px; --radius-lg:12px; --duration-fast:120ms;
+    --ease-spring:cubic-bezier(.16,1,.3,1);
+    --shadow-pop:0 12px 32px rgba(0,0,0,.16), 0 2px 8px rgba(0,0,0,.08);
+  }
+  html[data-theme="dark"]{
+    --bg-primary:#101013; --bg-secondary:#17171b; --bg-tertiary:#2a2a2a; --bg-elevated:#2e2e2e; --bg-hover:#333;
+    --text-primary:#f0f0f3; --text-secondary:#a6a6b0; --text-tertiary:#8b8b92; --text-muted:#52525b;
+    --border-subtle:rgba(255,255,255,.10); --border-default:rgba(255,255,255,.18);
+    --accent:#aaa; --accent-dim:rgba(170,170,170,.1);
+    --ok:#4cc47f; --ok-soft:rgba(76,196,127,.13);
+    --warn:#e2b355; --warn-soft:rgba(226,179,85,.13);
+    --bad:#ef7b6c; --bad-soft:rgba(239,123,108,.12);
+    --shadow-pop:0 14px 36px rgba(0,0,0,.5), 0 2px 8px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  /* 截图/评审用：禁用一切进场动画，避免捕捉到中间帧（headless 的虚拟时间与动画时钟不同步） */
+  html[data-static="1"], html[data-static="1"] *{animation:none !important;transition:none !important}
+  body{margin:0;background:var(--bg-secondary);color:var(--text-primary);
+    font:14px/1.7 var(--font-body); -webkit-font-smoothing:antialiased;}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+  /* ---------------- 顶栏 ---------------- */
+  .bar{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:12px 24px;background:color-mix(in srgb,var(--bg-primary) 90%,transparent);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--border-subtle);}
+  .bar .brand{font-size:13px;font-weight:600;letter-spacing:.02em}
+  .bar .brand span{color:var(--text-tertiary);font-weight:400}
+  .bar .grow{flex:1}
+  .seg{display:inline-flex;padding:2px;background:var(--bg-secondary);border:1px solid var(--border-subtle);border-radius:999px}
+  .seg button{padding:5px 13px;font-size:12.5px;border-radius:999px;color:var(--text-secondary)}
+  .seg button.on{background:var(--bg-primary);color:var(--text-primary);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+  #theme{padding:5px 12px;font-size:12.5px;border:1px solid var(--border-subtle);border-radius:999px;color:var(--text-secondary)}
+
+  /* ---------------- 版式 ---------------- */
+  .wrap{max-width:1240px;margin:0 auto;padding:22px 24px 80px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px;align-items:start}
+  .wrap[data-mode="A"]{grid-template-columns:minmax(0,1fr)}
+  .panel{background:var(--bg-primary);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden}
+  .panel + .panel{margin-top:16px}
+  .panel-h{padding:11px 16px;border-bottom:1px solid var(--border-subtle);display:flex;align-items:center;gap:10px;font-size:12px;color:var(--text-tertiary)}
+  .panel-h b{color:var(--text-primary);font-size:12.5px;font-weight:600}
+  .panel-b{padding:16px}
+
+  /* 模拟 agent 回答 */
+  .ans{font-size:15px;line-height:1.78}
+  .ans p{margin:0 0 .7em}
+  .ans h4{margin:0 0 .5em;font-size:14px;font-weight:600}
+  .ans ol{margin:.2em 0 .9em;padding-left:1.4em}
+  .ans li{margin:.5em 0}
+  .ans .cite{display:inline-flex;align-items:center;justify-content:center;min-width:17px;height:17px;padding:0 4px;
+    font:700 10.5px/1 var(--font-mono);color:var(--accent);background:var(--accent-dim);
+    border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:999px;vertical-align:1px}
+
+  /* ---------------- 可点翻译的锚点（照搬 NOESIS .term） ---------------- */
+  .term{cursor:help;color:inherit;border-bottom:1px dashed color-mix(in srgb,currentColor 42%,transparent);
+    padding-bottom:1px;transition:border-color .18s ease,color .18s ease,background .18s ease}
+  .term:hover,.term:focus-visible{border-bottom-color:var(--accent);color:var(--text-primary);
+    background:var(--accent-dim);border-radius:3px;outline:none}
+  .term.is-pinned{border-bottom-style:solid;border-bottom-color:var(--accent);background:var(--accent-dim);border-radius:3px}
+  .term.is-block{display:block;border-bottom:0;padding:6px 8px;margin:0 -8px;border-radius:6px}
+  .term.is-block:hover{background:var(--accent-dim)}
+  /* 译文已就地的锚点：换一种更轻的提示（实线下划 = 已点亮） */
+  .term.is-lit{border-bottom-style:solid;border-bottom-color:var(--accent)}
+
+  /* ---------------- 钉住浮层（照搬 NOESIS .term-pop 结构） ---------------- */
+  .term-pop{position:fixed;z-index:3000;width:360px;max-width:calc(100vw - 24px);max-height:62vh;overflow-y:auto;
+    background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:12px;padding:12px 14px 11px;
+    box-shadow:var(--shadow-pop);animation:popIn 200ms var(--ease-spring) both}
+  @keyframes popIn{from{opacity:0;transform:translateY(-4px) scale(.98)}to{opacity:1;transform:none}}
+  .pop-head{display:flex;align-items:center;gap:7px;margin-bottom:6px}
+  .pop-name{font-size:13.5px;font-weight:700;letter-spacing:.01em}
+  .pop-tag{font-size:10.5px;color:var(--text-tertiary);background:var(--bg-tertiary);border-radius:999px;padding:1.5px 7px;white-space:nowrap}
+  .pop-tag.is-mt{color:var(--warn);background:var(--warn-soft)}
+  .pop-close{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:5px;color:var(--text-tertiary)}
+  .pop-close:hover{background:var(--bg-hover);color:var(--text-primary)}
+  .pop-brief{font-size:13px;line-height:1.7;color:var(--text-primary)}
+  .pop-sec{margin-top:9px;padding-top:9px;border-top:1px solid var(--border-subtle)}
+  .pop-sec .k{font-size:10.5px;letter-spacing:.05em;color:var(--text-tertiary);margin-bottom:4px}
+  .pop-sec .v{font-size:12.5px;line-height:1.72;color:var(--text-secondary)}
+  .pop-sec .v.orig{font-family:var(--font-body);color:var(--text-tertiary)}
+  .pop-sec .v + .v{margin-top:6px}
+  .pop-hint{margin-top:9px;font-size:10.5px;color:var(--text-muted)}
+  .pop-note{margin-top:9px;padding:7px 9px;border-radius:var(--radius-md);font-size:11.5px;line-height:1.6;
+    background:var(--warn-soft);color:var(--warn);border:1px solid color-mix(in srgb,var(--warn) 26%,transparent)}
+  .pop-fail{margin-top:9px;padding:7px 9px;border-radius:var(--radius-md);font-size:11.5px;line-height:1.6;
+    background:var(--bad-soft);color:var(--bad);border:1px solid color-mix(in srgb,var(--bad) 26%,transparent)}
+  .pop-acts{display:flex;gap:7px;margin-top:10px;padding-top:9px;border-top:1px solid var(--border-subtle);flex-wrap:wrap}
+  .pop-acts button{padding:4px 9px;border:1px solid var(--border-default);border-radius:7px;background:var(--bg-secondary);
+    color:var(--text-secondary);font-size:11.5px}
+  .pop-acts button:hover{color:var(--text-primary);border-color:var(--accent)}
+  .gloss{margin-top:8px;display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+  .gloss .k{font-size:10.5px;color:var(--text-muted)}
+  .gloss .g{font:11px/1 var(--font-mono);color:var(--text-tertiary);background:var(--bg-secondary);
+    border:1px solid var(--border-subtle);border-radius:6px;padding:2px 7px}
+
+  /* ---------------- 方向 B：右栏累积对照 ---------------- */
+  .rail{background:var(--bg-primary);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden}
+  .rail-h{padding:11px 14px;border-bottom:1px solid var(--border-subtle);display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-tertiary)}
+  .rail-h b{color:var(--text-primary);font-size:12.5px}
+  .rail-h .n{margin-left:auto;font:11px/1 var(--font-mono)}
+  .rail-b{padding:12px;display:flex;flex-direction:column;gap:10px;max-height:70vh;overflow-y:auto}
+  .rcard{border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:10px 11px;background:var(--bg-secondary);
+    cursor:pointer;transition:border-color .15s}
+  .rcard:hover{border-color:var(--border-default)}
+  .rcard.is-on{border-color:var(--accent);background:var(--accent-dim)}
+  .rcard .t{font-size:12.5px;font-weight:600;line-height:1.5}
+  .rcard .s{font-size:11.5px;color:var(--text-secondary);line-height:1.6;margin-top:5px;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .rcard .m{margin-top:6px;font-size:10px;color:var(--text-muted);font-family:var(--font-mono);display:flex;gap:6px;align-items:center}
+  .rail-empty{padding:22px 14px;text-align:center;font-size:12px;color:var(--text-tertiary);line-height:1.7}
+
+  /* ---------------- 方向 C：就地双语 ---------------- */
+  .slot:empty{display:none}
+  .bi{margin:6px 0 2px;padding:7px 10px;border-radius:var(--radius-md);background:var(--bg-secondary);
+    border:1px solid var(--border-subtle);font-size:13px;line-height:1.7;color:var(--text-primary);
+    animation:popIn 200ms var(--ease-spring) both}
+  .bi .tab{font-size:10px;letter-spacing:.05em;color:var(--text-tertiary);margin-bottom:3px;display:flex;gap:8px;align-items:center}
+  .bi .tab .mt{color:var(--warn)}
+  .bi .orig{margin-top:6px;padding-top:6px;border-top:1px dashed var(--border-subtle);font-size:12px;color:var(--text-tertiary)}
+  .switch{display:inline-flex;padding:2px;background:var(--bg-secondary);border:1px solid var(--border-subtle);border-radius:999px}
+  .switch button{padding:3px 10px;font-size:11.5px;border-radius:999px;color:var(--text-secondary)}
+  .switch button.on{background:var(--bg-primary);color:var(--text-primary);font-weight:600}
+
+  .legend{margin-top:16px;font-size:11.5px;line-height:1.8;color:var(--text-tertiary)}
+  .legend b{color:var(--text-secondary)}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="brand">NOESIS Research <span>/ 点击翻译 · 交互原型</span></div>
+  <div class="grow"></div>
+  <div class="seg" id="mode">
+    <button data-mode="A" class="on">A · 钉住气泡</button>
+    <button data-mode="B">B · 钉到右栏对照</button>
+    <button data-mode="C">C · 就地双语</button>
+  </div>
+  <button id="theme">◐ 主题</button>
+</header>
+
+<div class="wrap" id="wrap" data-mode="A">
+
+  <!-- ===================== 宿主：模拟一次真实回答 ===================== -->
+  <div>
+    <div class="panel">
+      <div class="panel-h"><b>科研助手</b><span>· 把下面带虚线的部分点一下试试</span></div>
+      <div class="panel-b">
+        <div class="ans">
+          <p>这一批扩散模型的工作里，真正把「生成质量」推到可用水位的是下面这篇；它的贡献不在采样器，而在<strong>把扩散过程搬到隐空间</strong>去做。</p>
+          <h4>精选</h4>
+          <ol>
+            <li>
+              <span class="term" data-kind="title" data-text="High-Resolution Image Synthesis with Latent Diffusion Models">
+                High-Resolution Image Synthesis with Latent Diffusion Models
+              </span>
+              <span class="cite">1</span>
+              <div class="slot" data-slot="title"></div>
+              <div class="term is-block" data-kind="abstract" data-text="Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously.">
+                <span style="font-size:12px;color:var(--text-tertiary)">摘要 · </span>Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs.
+              </div>
+              <div class="slot" data-slot="abstract"></div>
+            </li>
+          </ol>
+          <p style="color:var(--text-tertiary);font-size:13px">（注释：正文里的标题与摘要都是可点锚点；证据本身不变。）</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <b>这个原型在演示什么</b>：把 NOESIS 的「钉住」交互（hover 140ms 预览 → 点击钉住 → Esc / 点外部关闭 →
+      钉住后 hover 别的词不抢）搬到本研究区，承载<b>点击翻译</b>。<br>
+      点顶部三个方向看同一批数据的三种承载方式；右边栏在 B 方向下出现。
+    </div>
+  </div>
+
+  <!-- ===================== 方向 B 的右栏 ===================== -->
+  <aside class="rail" id="rail" style="display:none">
+    <div class="rail-h"><b>翻译对照</b><span class="n" id="rail-n">0 条</span></div>
+    <div class="rail-b" id="rail-b">
+      <div class="rail-empty" id="rail-empty">点正文里的标题或摘要<br>译文会钉到这里，逐条累积</div>
+    </div>
+  </aside>
+</div>
+
+<script>
+/* =========================================================================
+   翻译数据（演示用）。真实实现里由 POST /api/translate 返回，见文末说明。
+   术语保护表命中时保留原文 —— 这是机器翻译最容易毁掉专业内容的地方。
+   ========================================================================= */
+const TRANS = {
+  'High-Resolution Image Synthesis with Latent Diffusion Models': {
+    kind: 'title',
+    zh: '基于潜在扩散模型的高分辨率图像合成',
+    gloss: [{ from: 'Latent Diffusion', keep: true }, { from: 'diffusion', zh: '扩散' }],
+  },
+  'Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously.': {
+    kind: 'abstract',
+    zh: '更深的神经网络更难训练。我们提出一个残差学习框架，来缓解「网络显著加深后训练变难」这一问题。我们显式地把层重构为关于层输入的残差函数，而不是去学习没有参照的函数。',
+    full: '更深的神经网络更难训练。我们提出一个残差学习框架，来缓解「网络显著加深后训练变难」这一问题。我们显式地把层重构为关于层输入的残差函数，而不是去学习没有参照的函数。实验表明，这些残差网络更容易优化，并且能从显著增加的深度中获得精度提升。',
+    gloss: [{ from: 'residual', zh: '残差' }, { from: 'ImageNet', keep: true }],
+  },
+};
+
+const GLOSSARY_UNCHANGED = ['ResNet', 'Transformer', 'BERT', 'GPT', 'ImageNet', 'softmax'];
+
+let mode = 'A';
+let pinnedEl = null;      // 当前钉住的锚点
+let hoverTimer = null;
+let closeTimer = null;
+let pop = null;
+let pos = null;
+let litSeen = new Set();  // 方向 C：已点亮过的锚点
+
+const wrap = document.getElementById('wrap');
+const rail = document.getElementById('rail');
+const railBody = document.getElementById('rail-b');
+const railEmpty = document.getElementById('rail-empty');
+const railN = document.getElementById('rail-n');
+const col = [];           // 方向 B 的累积卡片
+
+/* ---------- 定位：优先下方，空间不够翻上方，左右夹在视口内（照搬 placeNear） ---------- */
+function placeNear(anchorEl, popEl) {
+  if (!anchorEl || !popEl) return null;
+  const a = anchorEl.getBoundingClientRect();
+  const pw = popEl.offsetWidth, ph = popEl.offsetHeight, gap = 8;
+  let top = a.bottom + gap;
+  if (top + ph > window.innerHeight - 12) {
+    const above = a.top - gap - ph;
+    top = above >= 12 ? above : Math.max(12, window.innerHeight - ph - 12);
+  }
+  let left = a.left + a.width / 2 - pw / 2;
+  left = Math.max(12, Math.min(left, window.innerWidth - pw - 12));
+  return { top, left };
+}
+
+/* ---------- 浮层内容（TermPop 的翻译版） ---------- */
+function popHTML(anchor, pinned) {
+  const data = TRANS[anchor.dataset.text];
+  const isTitle = data.kind === 'title';
+  const head = isTitle ? '中文译名' : '中文译文';
+  const gloss = (data.gloss || []).map((g) =>
+    g.keep ? `<span class="g">${g.from} · 保留原文</span>` : `<span class="g">${g.from} → ${g.zh}</span>`
+  ).join('');
+  const failDemo = anchor.dataset.fail === '1';
+
+  return `
+    <div class="pop-head">
+      <span class="pop-name">${isTitle ? '标题翻译' : '摘要翻译'}</span>
+      <span class="pop-tag is-mt">机器翻译</span>
+      ${pinned ? '<button class="pop-close" title="关闭（Esc）" data-act="close">✕</button>' : ''}
+    </div>
+    ${failDemo
+      ? `<div class="pop-fail">翻译不可用：上游模型未响应（HTTP 503）。<br>这里<b>不会</b>把原文当译文显示。</div>`
+      : `<div class="pop-brief">${pinned && data.full ? data.full : data.zh}</div>`}
+
+    ${pinned ? `
+      <div class="pop-sec">
+        <div class="k">原文</div>
+        <div class="v orig">${anchor.dataset.text}</div>
+      </div>
+      ${gloss ? `<div class="pop-sec"><div class="k">术语处理</div><div class="gloss">${gloss}</div></div>` : ''}
+      <div class="pop-note">译文只帮你读；<b>它不是证据</b>——引用仍指向原文来源 id，翻译结果不进引用核查。</div>
+      <div class="pop-acts">
+        <button data-act="copy">复制译文</button>
+        <button data-act="retranslate">重译</button>
+        <button data-act="pin-rail">钉到右栏</button>
+      </div>
+    ` : `<div class="pop-hint">点击可钉住，方便慢慢读</div>`}
+  `;
+}
+
+function closePop({ keepPin = false } = {}) {
+  if (pop) { pop.remove(); pop = null; }
+  if (!keepPin && pinnedEl) { pinnedEl.classList.remove('is-pinned'); pinnedEl = null; }
+}
+
+function openPop(anchor, pinned) {
+  closePop({ keepPin: true });
+  pop = document.createElement('div');
+  pop.className = 'term-pop';
+  pop.innerHTML = popHTML(anchor, pinned);
+  pop.addEventListener('mouseenter', clearTimers);
+  pop.addEventListener('mouseleave', () => { if (!pinnedEl) scheduleClose(); });
+  pop.addEventListener('click', (e) => {
+    const act = e.target.closest('[data-act]')?.dataset.act;
+    if (!act) return;
+    if (act === 'close') closePop();
+    if (act === 'pin-rail') { addRailCard(anchor); closePop(); }
+    if (act === 'copy') { navigator.clipboard?.writeText(TRANS[anchor.dataset.text].zh || ''); }
+    if (act === 'retranslate') {
+      const t = pop.querySelector('.pop-brief');
+      if (t) t.textContent = '正在重译…';
+      setTimeout(() => { if (pop) t.textContent = TRANS[anchor.dataset.text].zh; }, 700);
+    }
+  });
+  document.body.appendChild(pop);
+  pos = placeNear(anchor, pop);
+  pop.style.top = (pos ? pos.top : -9999) + 'px';
+  pop.style.left = (pos ? pos.left : -9999) + 'px';
+}
+
+/* ---------- 方向 B：右栏累积 ---------- */
+function addRailCard(anchor) {
+  const data = TRANS[anchor.dataset.text];
+  if (col.some((c) => c.text === anchor.dataset.text)) return;
+  col.push({ text: anchor.dataset.text, data });
+  renderRail();
+}
+function renderRail() {
+  railN.textContent = col.length + ' 条';
+  railEmpty.style.display = col.length ? 'none' : 'block';
+  [...railBody.querySelectorAll('.rcard')].forEach((n) => n.remove());
+  col.forEach((item) => {
+    const el = document.createElement('div');
+    el.className = 'rcard';
+    el.innerHTML = `
+      <div class="t">${item.data.zh}</div>
+      ${item.data.full ? `<div class="s">${item.data.full}</div>` : ''}
+      <div class="m"><span>机器翻译</span><span>·</span><span>原文 ${item.data.kind === 'title' ? '标题' : '摘要'}</span></div>
+    `;
+    el.addEventListener('click', () => {
+      [...railBody.querySelectorAll('.rcard')].forEach((n) => n.classList.remove('is-on'));
+      el.classList.add('is-on');
+      const anchor = document.querySelector(`.term[data-text="${CSS.escape(item.text)}"]`);
+      if (anchor) { anchor.scrollIntoView({ behavior: 'smooth', block: 'center' }); pinAnchor(anchor); }
+    });
+    railBody.appendChild(el);
+  });
+}
+
+/* ---------- 方向 C：就地双语 ---------- */
+function toggleInline(anchor) {
+  // 两个锚点同属一个 <li>，必须按 kind 取各自的槽位 ——
+  // 用 parentElement.querySelector('.slot') 会拿到同一个槽，第二次调用会把
+  // 第一次插进去的译文再删掉（原型里实际发生过）。
+  const kind = anchor.dataset.kind;
+  const slot = anchor.parentElement.querySelector(`.slot[data-slot="${kind}"]`);
+  if (!slot) return;
+  const existing = slot.querySelector('.bi');
+  if (existing) { existing.remove(); anchor.classList.remove('is-lit'); return; }
+  const data = TRANS[anchor.dataset.text];
+  const box = document.createElement('div');
+  box.className = 'bi';
+  box.innerHTML = `
+    <div class="tab"><span class="mt">机器翻译</span><span>· 不改变证据</span></div>
+    <div>${data.full || data.zh}</div>
+    <div class="orig">原文：${anchor.dataset.text}</div>
+  `;
+  slot.appendChild(box);
+  anchor.classList.add('is-lit');
+  litSeen.add(anchor.dataset.text);
+}
+
+/* ---------- 锚点事件（与 NOESIS Term 同一套：hover 预览 / click 钉住 / 守卫） ---------- */
+function clearTimers() {
+  if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; }
+  if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+}
+function scheduleClose() {
+  clearTimers();
+  closeTimer = setTimeout(() => { closePop(); }, 220);
+}
+function pinAnchor(anchor) {
+  if (pinnedEl && pinnedEl !== anchor) pinnedEl.classList.remove('is-pinned');
+  pinnedEl = anchor;
+  anchor.classList.add('is-pinned');
+  openPop(anchor, true);
+}
+
+document.addEventListener('mouseover', (e) => {
+  const anchor = e.target.closest('.term');
+  if (!anchor) return;
+  clearTimers();
+  if (pinnedEl) return;                       // 钉住后 hover 不抢（与 NOESIS 一致）
+  if (mode === 'C') return;                   // 方向 C 用点击，不用 hover
+  hoverTimer = setTimeout(() => openPop(anchor, false), 140);
+});
+document.addEventListener('mouseout', (e) => {
+  const anchor = e.target.closest('.term');
+  if (!anchor || pinnedEl) return;
+  scheduleClose();
+});
+document.addEventListener('click', (e) => {
+  const anchor = e.target.closest('.term');
+  if (anchor) {
+    e.preventDefault();
+    clearTimers();
+    if (mode === 'B') { addRailCard(anchor); return; }
+    if (mode === 'C') { toggleInline(anchor); return; }
+    if (pinnedEl === anchor) closePop();      // 再点一次收起
+    else pinAnchor(anchor);
+    return;
+  }
+  if (pop && pop.contains(e.target)) return;
+  closePop();                                  // 点外部关闭（钉住态也收）
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePop(); });
+window.addEventListener('scroll', () => { if (pop && pinnedEl) openPop(pinnedEl, true); }, true);
+window.addEventListener('resize', () => { if (pop && pinnedEl) openPop(pinnedEl, true); });
+
+/* ---------- 方向切换 ---------- */
+document.getElementById('mode').addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-mode]');
+  if (!btn) return;
+  mode = btn.dataset.mode;
+  wrap.dataset.mode = mode;
+  [...document.querySelectorAll('#mode button')].forEach((b) => b.classList.toggle('on', b === btn));
+  rail.style.display = mode === 'B' ? 'block' : 'none';
+  closePop();
+  document.querySelectorAll('.bi').forEach((n) => n.remove());
+  document.querySelectorAll('.term.is-lit').forEach((n) => n.classList.remove('is-lit'));
+});
+document.getElementById('theme').addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.theme = r.dataset.theme === 'dark' ? 'light' : 'dark';
+});
+
+/* =========================================================================
+   初始状态（评审/截图用）：
+     ?mode=A|B|C   预选方向
+     ?theme=dark   暗色
+     ?demo=pop|rail|inline|fail  预置一个有内容的界面（否则默认是干净的空白态）
+   ========================================================================= */
+function setMode(next) {
+  const btn = document.querySelector(`#mode button[data-mode="${next}"]`);
+  if (btn) btn.click();
+}
+(function init() {
+  try {
+    const q = new URLSearchParams(location.search);
+    if (q.get('static')) document.documentElement.dataset.static = '1';
+    if (q.get('theme') === 'dark') document.documentElement.dataset.theme = 'dark';
+    if (q.get('mode')) setMode(q.get('mode'));
+    const demo = q.get('demo');
+    if (demo === 'pop') {
+      const a = document.querySelector('.term[data-kind="title"]');
+      if (a) pinAnchor(a);
+    } else if (demo === 'rail') {
+      document.querySelectorAll('.term').forEach((a) => addRailCard(a));
+      document.querySelector('.rcard')?.classList.add('is-on');
+    } else if (demo === 'inline') {
+      document.querySelectorAll('.term').forEach((a) => toggleInline(a));
+    } else if (demo === 'fail') {
+      const a = document.querySelector('.term[data-kind="abstract"]');
+      if (a) { a.dataset.fail = '1'; pinAnchor(a); }
+    }
+    document.querySelector('meta[name="init-state"]').content =
+      `ok demo=${demo} bi=${document.querySelectorAll('.bi').length} rail=${col.length} pop=${!!pop}`;
+  } catch (err) {
+    document.querySelector('meta[name="init-state"]').content =
+      'ERR ' + (err && err.message ? err.message : String(err));
+  }
+})();
+
+/* 演示失败态：给摘要锚点按 Shift 点击看「翻译不可用」
+   （真实实现里 503 必须如实报，绝不能把原文当译文显示） */
+document.addEventListener('click', (e) => {
+  const anchor = e.target.closest('.term');
+  if (anchor && e.shiftKey) { anchor.dataset.fail = '1'; pinAnchor(anchor); }
+}, true);
+</script>
+</body>
+</html>

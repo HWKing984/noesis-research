@@ -85,6 +85,20 @@ export function describeAgentError(error) {
   }
 }
 
+/** 工具结果的规模要点（「命中 N 篇 / N 条候选断言 / 书目 …」）——
+ * 人话层的唯一来源：describeStep 的一行式与思考链的明细卡都从这里取。 */
+export function toolOutcomeBits(summary) {
+  const bits = [];
+  if (summary.papers != null) bits.push(`命中 ${summary.papers} 篇`);
+  if (summary.assertions != null) bits.push(`${summary.assertions} 条候选断言`);
+  if (summary.nodes != null) bits.push(`${summary.nodes} 个节点`);
+  if (summary.edges != null) bits.push(`${summary.edges} 条关系`);
+  if (summary.title) bits.push(`《${String(summary.title).slice(0, 40)}》`);
+  const scope = summary.scope;
+  if (scope) bits.push(`书目 ${scope.bibliographyTitles} · 候选断言 ${scope.candidateAssertions}`);
+  return bits;
+}
+
 /** 把事件流里的一条事件压成界面上一行可读的步骤。 */
 export function describeStep(event) {
   switch (event?.type) {
@@ -102,15 +116,7 @@ export function describeStep(event) {
         .filter(([, value]) => value !== '' && value !== null && value !== undefined)
         .map(([key, value]) => `${key}=${value}`)
         .join(' · ');
-      const summary = event.summary || {};
-      const bits = [];
-      if (summary.papers != null) bits.push(`命中 ${summary.papers} 篇`);
-      if (summary.assertions != null) bits.push(`${summary.assertions} 条候选断言`);
-      if (summary.nodes != null) bits.push(`${summary.nodes} 个节点`);
-      if (summary.edges != null) bits.push(`${summary.edges} 条关系`);
-      if (summary.title) bits.push(`《${String(summary.title).slice(0, 40)}》`);
-      const scope = summary.scope;
-      if (scope) bits.push(`书目 ${scope.bibliographyTitles} · 候选断言 ${scope.candidateAssertions}`);
+      const bits = toolOutcomeBits(event.summary || {});
       const count = (event.evidenceIds || []).length;
       return {
         icon: 'tool',

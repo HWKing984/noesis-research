@@ -10,10 +10,16 @@
 {"type":"tool_call","runId":"…","tool":"search_papers","args":{…}}
 {"type":"tool_result","runId":"…","tool":"search_papers","summary":{…},"evidenceIds":[…]}
 {"type":"tool_error","runId":"…","tool":"…","message":"…"}
+{"type":"reasoning_delta","runId":"…","delta":"…"}
 {"type":"answer","runId":"…","text":"…","citation":{…}}
 {"type":"failed","runId":"…","message":"…"}
 {"type":"done","runId":"…","status":"ok|failed"}
 ```
+
+``reasoning_delta`` 是模型自带思考通道（DeepSeek reasoner 等的 ``reasoning_content``）
+的增量，**只进界面的「研究推演」区，绝不混进回答正文**；模型不给思考通道时一条
+都不会发 —— 推演区还有第二个来源：工具边界之外的模型文本由前端在收到工具步骤时
+就地重分类（见 ``apps/web/src/App.jsx``），后端回答语义保持不变。
 
 事件翻译刻意**按消息类型**判断（有没有 `tool_calls`、是不是 `tool` 消息），而不是按节点名
 —— deepagents 的图里节点名属实现细节，换版本就可能变；消息类型是稳定契约。
@@ -41,6 +47,49 @@ _DONE = "done"
 
 #: 短到不构成断言的句子不计入引用可溯率（与 CLI / 前端同一规则）。
 MIN_CLAIM_CHARS = 8
+
+#: 事件里携带的证据原文长度上限。摘要级证据必须能被用户核对，但事件流不该
+#: 因为一条 2000 字符的摘要而变成数据传输。
+MAX_EVENT_EVIDENCE_CHARS = 1200
+
+#: 一次工具调用最多带出多少条完整证据引用（多余只留在 evidenceIds 里）。
+MAX_EVENT_EVIDENCE_REFS = 12
+
+
+def extract_evidence_refs(value: Any) -> list[dict[str, Any]]:
+    """收集工具返回里的**完整**证据引用（含原文），按出现顺序且按 sourceId 去重。
+
+    与 :func:`extract_source_ids` 的区别：那个只给 id，用于统计；这个带上
+    ``evidenceText`` / ``evidenceLevel`` / ``locator``，界面靠它把「摘要级证据」
+    真的展示出来。原文按 :data:`MAX_EVENT_EVIDENCE_CHARS` 截断。
+    """
+    found: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    def visit(node: Any) -> None:
+        if isinstance(node, Mapping):
+            source_id = node.get("sourceId")
+            if (
+                isinstance(source_id, str)
+                and source_id.strip()
+                and source_id not in seen
+                and "evidenceLevel" in node
+                and len(found) < MAX_EVENT_EVIDENCE_REFS
+            ):
+                seen.add(source_id)
+                item = {str(key): value for key, value in node.items()}
+                text = str(item.get("evidenceText") or "")
+                if len(text) > MAX_EVENT_EVIDENCE_CHARS:
+                    item["evidenceText"] = text[:MAX_EVENT_EVIDENCE_CHARS].rstrip() + " …（已截断）"
+                found.append(item)
+            for item in node.values():
+                visit(item)
+        elif isinstance(node, (list, tuple)):
+            for item in node:
+                visit(item)
+
+    visit(value)
+    return found
 
 
 def extract_source_ids(value: Any) -> list[str]:
@@ -181,6 +230,21 @@ def _messages_of(update: Any) -> list[Any]:
         if isinstance(messages, (list, tuple)):
             return list(messages)
     return []
+
+
+def _reasoning_delta(chunk: Any) -> str:
+    """模型思考通道增量：``AIMessageChunk.additional_kwargs.reasoning_content``。
+
+    与回答**严格分轨**：它只进界面的「研究推演」条目，一个字都不进回答正文。
+    模型不提供思考通道时恒返回空串 —— 推演条目自然缺席，界面不造假。
+    """
+    if getattr(chunk, "type", None) != "AIMessageChunk":
+        return ""
+    kwargs = getattr(chunk, "additional_kwargs", None)
+    if not isinstance(kwargs, Mapping):
+        return ""
+    value = kwargs.get("reasoning_content")
+    return value if isinstance(value, str) and value else ""
 
 
 def _answer_delta(chunk: Any, metadata: Any = None) -> str:
@@ -352,6 +416,9 @@ def translate_chunks(
                 "args": args_for(call_id),
                 "summary": summarize_tool_result(tool_name, payload),
                 "evidenceIds": ids,
+                # 完整证据引用（含摘要原文）——界面点开引用时要看得到原文，
+                # 光有 id 等于让用户自己去猜这条证据说了什么。
+                "evidenceRefs": extract_evidence_refs(payload),
             }
         ]
 
@@ -410,6 +477,9 @@ def translate_chunks(
                 }
             # 正文增量只收根图：子代理（namespace 非空）的内部叙述不进回答
             if _namespace is None:
+                thinking = _reasoning_delta(chunk)
+                if thinking:
+                    yield {"type": "reasoning_delta", "runId": run_id, "delta": thinking}
                 delta = _answer_delta(chunk, metadata)
                 if delta:
                     streamed_tail += delta

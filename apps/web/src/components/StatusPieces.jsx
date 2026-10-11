@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { describeEvidence, evidenceState } from '../lib/evidence.js';
 
 /** 系统边界说明：把「本系统不做/做不到」直接写给用户看。className 可换皮（信息弹层里复用同一份文案）。 */
@@ -171,10 +171,32 @@ export function Loading({ label = '加载中…' }) {
  */
 export function EvidenceDrawer({ inspection, onClose, onOpenPaper }) {
   const [opened, setOpened] = useState(false);
+  // 抽屉的显隐由 body 上的 `is-drawer` 驱动（CSS: `.drawer` 默认 translateX(102%),
+  // 只有 `body.is-drawer .drawer` 才拉回屏幕内）。
+  //
+  // 2026-10-10 修：这个类此前**从未被任何代码加上** —— 抽屉一直在屏幕外，
+  // 用户点引用上标后什么都看不到。无头断言查的是 textContent，元素在屏幕外
+  // 也算"存在"，所以这个 bug 长期没暴露（是被一次 SSR 截图核对抓到的）。
+  useEffect(() => {
+    if (!inspection) return undefined;
+    document.body.classList.add('is-drawer');
+    return () => document.body.classList.remove('is-drawer');
+  }, [inspection]);
   if (!inspection) return null;
   const info = describeEvidence(inspection.reference);
   const context = inspection.context || {};
   const title = context.title || info.sourceId;
+  // 外部源证据（摘要级）要能一跳回到来源页；图谱证据仍回 DBLP 搜索。
+  const sourceUrl = typeof inspection.reference?.locator?.url === 'string' ? inspection.reference.locator.url : '';
+  const sourceHref = sourceUrl || `https://dblp.org/search?q=${encodeURIComponent(info.sourceId)}`;
+  const sourceHost = (() => {
+    if (!sourceUrl) return 'DBLP';
+    try {
+      return new URL(sourceUrl).hostname.replace(/^www\./, '');
+    } catch {
+      return '来源页';
+    }
+  })();
 
   return (
     <>
@@ -228,6 +250,27 @@ export function EvidenceDrawer({ inspection, onClose, onOpenPaper }) {
           )}
         </div>
 
+        {typeof inspection.reference?.evidenceText === 'string' && inspection.reference.evidenceText.trim() ? (
+          // 摘要级证据必须能看到原文 —— 只给 id 和"摘要级"三个字，用户没法核对。
+          <div className="excerpt" data-testid="drawer-evidence-text">
+            <div className="excerpt-k">
+              {inspection.reference.evidenceLevel === 'abstract' ? '摘要原文（外部学术源）' : '来源原文'}
+            </div>
+            <div className="excerpt-b">
+              {/* 摘要原文同时是翻译锚点：点一下看中文，钉住可对照原文/切换解释。
+                  data-tr-context = 论文题名，解释端点用它做"结合当前内容"。 */}
+              <span
+                className="tr-anchor"
+                data-tr-text={inspection.reference.evidenceText}
+                data-tr-kind="abstract"
+                data-tr-context={title}
+              >
+                {inspection.reference.evidenceText}
+              </span>
+            </div>
+          </div>
+        ) : null}
+
         <div className="note" data-testid="drawer-caveat">{info.caveat}</div>
 
         <div className="acts">
@@ -246,11 +289,11 @@ export function EvidenceDrawer({ inspection, onClose, onOpenPaper }) {
               type="button"
               data-testid="drawer-open-source"
               onClick={() => {
-                window.open(`https://dblp.org/search?q=${encodeURIComponent(info.sourceId)}`, '_blank', 'noopener');
+                window.open(sourceHref, '_blank', 'noopener');
                 setOpened(true);
               }}
             >
-              {opened ? '已在 DBLP 打开' : '在 DBLP 打开来源'}
+              {opened ? '已打开来源页' : `在 ${sourceHost} 打开来源`}
             </button>
           ) : null}
         </div>

@@ -312,7 +312,9 @@ export default function ReaderView({ api, publicationId, title }) {
           {readable ? (
             <span className="rd-badge rd-badge--ok" data-testid="reader-state-badge">全文可读 · 已缓存</span>
           ) : docRef ? (
-            <span className="rd-badge" data-testid="reader-state-badge">{docRef.status}</span>
+            <span className="rd-badge" data-testid="reader-state-badge" data-status={docRef.status}>
+              {(STATUS_COPY[docRef.status] || STATUS_COPY.none).title}
+            </span>
           ) : null}
         </div>
         {docState.loading ? (

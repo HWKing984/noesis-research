@@ -36,6 +36,8 @@ try:
     from noesis_research_agent.agent import SYSTEM_PROMPT, build_agent, build_backend
     from noesis_research_agent.config import AgentSettings, ConfigurationError
     from noesis_research_agent.tools import RESEARCH_TOOL_NAMES, build_tools
+
+    from metadata_client import ExternalNoIdentifier, ExternalRecord, ExternalUnavailable
 except Exception as exc:  # pragma: no cover - exercised by the core-only run
     _IMPORT_ERROR = f"{type(exc).__name__}: {exc}"
 
@@ -324,8 +326,94 @@ class SafetyPostureTests(unittest.TestCase):
         self.assertGreater(model.seen_messages, 0)
 
 
+class StubMetadata:
+    """Duck-typed stand-in for ``ExternalMetadataClient``: no network, no cache."""
+
+    def __init__(self, *, record: object = None, error: Exception | None = None) -> None:
+        self.record = record
+        self.error = error
+        self.calls: list[dict] = []
+
+    def lookup_publication(self, *, doi=None, urls=()):  # noqa: ANN001, ANN202
+        self.calls.append({"doi": doi, "urls": list(urls)})
+        if self.error is not None:
+            raise self.error
+        return self.record
+
+
+class AbstractToolTests(unittest.TestCase):
+    """``read_paper_abstract`` — the tool that finally lets the agent read content.
+
+    Before it existed the agent could only ever restate titles, which is why
+    every answer looked like a metadata dump.
+    """
+
+    def _invoke(self, metadata, publication_id: str = PUB_ID):
+        client, _ = build_client({"/api/publication": [(200, detail_payload())]})
+        tools = build_tools(client, graph_id=PINNED, metadata=metadata)
+        return tool_by_name(tools, "read_paper_abstract").invoke({"publication_id": publication_id})
+
+    def test_abstract_comes_back_as_abstract_level_evidence(self) -> None:
+        record = ExternalRecord(
+            source="semanticscholar",
+            doi="10.1000/example",
+            title="ShrimpFormer-X: A Transformer-Based Framework",
+            abstract="A" * 400,
+            year=2025,
+            venue="IEEE WISA",
+        )
+        result = self._invoke(StubMetadata(record=record))
+        self.assertTrue(result["available"])
+        self.assertEqual(result["evidenceLevel"], "abstract")
+        self.assertEqual(result["source"], "semanticscholar")
+        self.assertEqual(result["sourceLabel"], "Semantic Scholar")
+        self.assertEqual(result["publicationId"], PUB_ID)
+        self.assertEqual(result["evidence"]["sourceType"], "external_record")
+        self.assertEqual(result["evidence"]["sourceId"], "doi:10.1000/example")
+        self.assertEqual(result["evidence"]["evidenceLevel"], "abstract")
+        self.assertTrue(result["evidenceText"].strip())
+
+    def test_the_graph_records_doi_is_used_as_the_lookup_key(self) -> None:
+        stub = StubMetadata(record=None)
+        self._invoke(stub)
+        self.assertEqual(stub.calls[0]["doi"], "10.1000/example")
+        self.assertEqual(stub.calls[0]["urls"], ["https://doi.org/10.1000/example"])
+
+    def test_no_identifier_is_reported_as_no_identifier(self) -> None:
+        result = self._invoke(StubMetadata(error=ExternalNoIdentifier("no DOI or arXiv id")))
+        self.assertFalse(result["available"])
+        self.assertEqual(result["reason"], "no_identifier")
+
+    def test_a_record_without_an_abstract_is_reported_as_such(self) -> None:
+        result = self._invoke(StubMetadata(record=None))
+        self.assertFalse(result["available"])
+        self.assertEqual(result["reason"], "no_abstract")
+
+    def test_disabled_sources_report_disabled_not_empty(self) -> None:
+        result = self._invoke(None)
+        self.assertFalse(result["available"])
+        self.assertEqual(result["reason"], "disabled")
+
+    def test_a_source_outage_raises_instead_of_looking_like_an_empty_result(self) -> None:
+        with self.assertRaises(ExternalUnavailable):
+            self._invoke(StubMetadata(error=ExternalUnavailable("semanticscholar answered HTTP 429")))
+
+    def test_abstract_for_the_model_is_capped(self) -> None:
+        record = ExternalRecord(
+            source="openalex", doi="10.1000/example", title="t", abstract="word " * 2000,
+        )
+        result = self._invoke(StubMetadata(record=record))
+        self.assertLess(len(result["evidenceText"]), 2200)
+        self.assertIn("已截断", result["evidenceText"])
+
+
 class PromptContractTests(unittest.TestCase):
-    """The prompt is a contract; weakening it should fail a test, not go unnoticed."""
+    """The prompt is a contract; weakening it should fail a test, not go unnoticed.
+
+    2026-10-10：提示词从"禁令清单"改版为"研究工作法"。硬约束一条没删（下面第一条
+    测试守着它们），新增的三条守着改版的**意图** —— 否则下一轮很容易又滑回
+    "把工具结果原样列成清单 + 把参数抄进正文"的检索引擎形态。
+    """
 
     def test_prompt_keeps_the_hard_constraints(self) -> None:
         required = (
@@ -333,12 +421,45 @@ class PromptContractTests(unittest.TestCase):
             "候选",  # candidate stays candidate
             "title",  # evidence depth is title-only
             "CITES",  # refuse citation-count style questions
-            "meta.applied",  # echo the parameters
+            "meta.applied",  # the parameter echo exists (now shown by the UI)
             "图谱不可用",  # distinguish an outage from an empty result
         )
         for phrase in required:
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, SYSTEM_PROMPT)
+
+    def test_prompt_asks_for_a_verdict_and_a_selection(self) -> None:
+        """改版的核心：先给判断、精选少而准、说明排除理由。"""
+        for phrase in ("结论", "精选", "排除"):
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, SYSTEM_PROMPT)
+
+    def test_prompt_treats_citations_as_claim_level_not_sentence_level(self) -> None:
+        """引用按「观点」而不是按「句」—— 防止滑回"逐句硬挂 id"的啰嗦形态。"""
+        self.assertIn("观点", SYSTEM_PROMPT)
+        self.assertNotIn(
+            "挂不上来源的句子就不要写",
+            SYSTEM_PROMPT,
+            "句子级引用要求会把回答变成长清单；已改为观点级",
+        )
+
+    def test_prompt_keeps_mechanical_meta_out_of_the_prose(self) -> None:
+        """参数回显 / 证据深度 / 覆盖范围交给界面常驻展示，不再逐轮抄进正文。"""
+        self.assertIn("meta.applied", SYSTEM_PROMPT)
+        self.assertIn("界面", SYSTEM_PROMPT)
+
+    def test_prompt_knows_both_evidence_depths(self) -> None:
+        """2026-10-10: abstracts are now available, so the prompt must say so.
+
+        Without this the model keeps treating title-only evidence as the ceiling
+        and never calls ``read_paper_abstract`` — which is exactly the state that
+        made it read like a metadata lookup rather than a researcher.
+        """
+        for phrase in ("abstract", "read_paper_abstract", "摘要"):
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, SYSTEM_PROMPT)
+        # The older, stronger claim ("evidence depth is title-only") must be gone.
+        self.assertNotIn("证据深度只有题名", SYSTEM_PROMPT)
 
     def test_prompt_denies_host_filesystem_access(self) -> None:
         self.assertIn("StateBackend", SYSTEM_PROMPT)

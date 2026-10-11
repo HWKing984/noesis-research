@@ -21,6 +21,7 @@ from typing import Any, Mapping
 from langchain_core.tools import BaseTool, tool
 
 from kg_client import KGClient
+from metadata_client import ExternalMetadataClient, ExternalNoIdentifier
 
 from noesis_research_api.mapping import graph_slice, paper_summary, publication_detail
 
@@ -32,6 +33,7 @@ RESEARCH_TOOL_NAMES = (
     "search_papers",
     "get_paper",
     "get_paper_evidence",
+    "read_paper_abstract",
     "explore_graph",
 )
 
@@ -43,6 +45,10 @@ DEFAULT_GRAPH_LIMIT = 15
 
 #: 局部图谱喂给模型的节点上限（多余的只报数量，界面想要全量自己调 API）。
 MAX_GRAPH_NODES_FOR_MODEL = 12
+
+#: 摘要喂给模型的长度上限。摘要在实测里是 800–2000 字符，2000 足以覆盖一整段，
+#: 又不至于让一篇摘要把上下文挤满（工具返回值进上下文是要反复读的）。
+MAX_ABSTRACT_FOR_MODEL = 2000
 
 
 def _evidence_view(ref: Mapping[str, Any] | None) -> dict[str, Any]:
@@ -65,12 +71,19 @@ def _model_paper(item: Mapping[str, Any]) -> dict[str, Any]:
     }
 
 
-def build_tools(client: KGClient, *, graph_id: str | None = None) -> list[BaseTool]:
+def build_tools(
+    client: KGClient,
+    *,
+    graph_id: str | None = None,
+    metadata: ExternalMetadataClient | None = None,
+) -> list[BaseTool]:
     """Build the tool list bound to one read-only client.
 
     Built as a closure rather than module-level functions so the client (and the
     pinned graph id) are injected, which is also what makes the tools testable
-    without a database.
+    without a database. ``metadata`` is the abstract-level source: when it is
+    ``None`` the ``read_paper_abstract`` tool reports ``disabled`` instead of
+    pretending the paper has no abstract.
     """
 
     @tool
@@ -241,6 +254,70 @@ def build_tools(client: KGClient, *, graph_id: str | None = None) -> list[BaseTo
         }
 
     @tool
+    def read_paper_abstract(publication_id: str) -> dict[str, Any]:
+        """读一篇论文的摘要原文（来自外部学术源）。
+
+        做什么：用图谱记录里的 DOI（或 arXiv 链接）去外部学术源
+        （Semantic Scholar → OpenAlex → Crossref）取这篇论文的**摘要原文**
+        与发表信息（会议/期刊、年份）。
+
+        什么时候用：**在谈论一篇论文"做了什么"之前**。题名级证据做不到这件事。
+        用户问「它们有什么区别」「谁提出了什么」「这篇的贡献是什么」这类问题时，
+        先读摘要再回答。
+
+        返回：available=true 时给出 source（Semantic Scholar / OpenAlex / Crossref ——
+        回答里要如实写出摘要来自哪个源）、venue、year、evidenceLevel=`abstract`、
+        evidenceText（摘要原文），以及 evidence 引用（sourceId 形如 `doi:10.x/y`，
+        挂引用就用它）。
+
+        available=false 是**有依据的「没有」**，reason 说明原因：
+        `no_identifier` = 记录里既没有 DOI 也没有 arXiv 链接，无法定位外部记录；
+        `no_abstract` = 定位到了记录，但外部源没有存摘要；
+        `disabled` = 本服务未配置外部源。
+        工具**抛错**是另一回事 —— 那是外部源不可达。此时如实说查询失败，
+        绝不要说成「这篇论文没有摘要」。
+        """
+        payload = publication_detail(client.publication(publication_id), graph_id=graph_id).model_dump()
+        publication = payload.get("publication") or {}
+        resolved_id = publication.get("publicationId") or publication_id
+        base: dict[str, Any] = {
+            "publicationId": resolved_id,
+            "title": publication.get("title"),
+            "doi": publication.get("doi"),
+        }
+        if metadata is None:
+            return {
+                **base,
+                "available": False,
+                "reason": "disabled",
+                "detail": "本服务未配置外部学术源（EXTERNAL_SOURCES 为空）",
+            }
+        try:
+            record = metadata.lookup_publication(doi=publication.get("doi"), urls=publication.get("urls") or ())
+        except ExternalNoIdentifier as exc:
+            return {**base, "available": False, "reason": "no_identifier", "detail": str(exc)}
+        if record is None:
+            return {
+                **base,
+                "available": False,
+                "reason": "no_abstract",
+                "detail": "外部源已定位到该记录，但其中没有摘要",
+            }
+        return {
+            **base,
+            "available": True,
+            "source": record.source,
+            "sourceLabel": record.source_label,
+            "venue": record.venue,
+            "year": record.year,
+            "evidenceLevel": record.evidence_level,
+            "verificationStatus": "id_valid",
+            "evidenceText": record.abstract_for_model(limit=MAX_ABSTRACT_FOR_MODEL),
+            "evidence": record.evidence_ref(publication_id=resolved_id),
+            "note": "摘要来自外部源原文，可据此谈论论文做了什么；全文结论仍需读原文。",
+        }
+
+    @tool
     def explore_graph(publication_id: str, mode: str = "paper", limit: int = DEFAULT_GRAPH_LIMIT) -> dict[str, Any]:
         """探索某篇论文的局部知识图谱（有界，不是全图）。
 
@@ -278,4 +355,11 @@ def build_tools(client: KGClient, *, graph_id: str | None = None) -> list[BaseTo
             "notice": payload["notice"],
         }
 
-    return [report_graph_scope, search_papers, get_paper, get_paper_evidence, explore_graph]
+    return [
+        report_graph_scope,
+        search_papers,
+        get_paper,
+        get_paper_evidence,
+        read_paper_abstract,
+        explore_graph,
+    ]

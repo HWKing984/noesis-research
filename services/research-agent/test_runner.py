@@ -237,6 +237,39 @@ class TranslateTests(unittest.TestCase):
         deltas = [e for e in self._events(chunks) if e["type"] == "answer_delta"]
         self.assertEqual([e["delta"] for e in deltas], ["正文"])
 
+    def test_reasoning_content_streams_as_reasoning_delta_only(self) -> None:
+        """C 方向（思考链对齐）：模型的 reasoning_content 只进推演事件，
+        一个字不进回答正文 —— 与回答严格分轨。"""
+        from langchain_core.messages import AIMessageChunk, ToolMessage
+
+        call_id = "call-1"
+        chunks = [
+            ("messages", (AIMessageChunk(content="", additional_kwargs={"reasoning_content": "先拆解问题："}), {})),
+            ("messages", (AIMessageChunk(content="", additional_kwargs={"reasoning_content": "该查扩散模型。"}), {})),
+            ("messages", (AIMessageChunk(content="", tool_calls=[{"name": "search_papers", "args": {"query": "x"}, "id": call_id}]), {})),
+            ("messages", (ToolMessage(content=json.dumps(search_payload(), ensure_ascii=False), tool_call_id=call_id, name="search_papers"), {})),
+            ("messages", (AIMessageChunk(content=f"结论：命中 {PAPER_ID}。"), {})),
+        ]
+        events = self._events(chunks)
+        reasoning = "".join(e["delta"] for e in events if e["type"] == "reasoning_delta")
+        self.assertEqual(reasoning, "先拆解问题：该查扩散模型。")
+        answer = next(e for e in events if e["type"] == "answer")
+        self.assertEqual(answer["text"], f"结论：命中 {PAPER_ID}。")
+        self.assertNotIn("先拆解", answer["text"])
+
+    def test_reasoning_content_from_subgraph_is_dropped(self) -> None:
+        """子代理的思考通道同样不收 —— 与回答正文同一根部判定。"""
+        from langchain_core.messages import AIMessageChunk
+
+        sub_ns = "task:abc123"
+        chunks = [
+            (sub_ns, "messages", (AIMessageChunk(content="", additional_kwargs={"reasoning_content": "子代理思考"}), {"langgraph_checkpoint_ns": sub_ns})),
+            ("messages", (AIMessageChunk(content="", additional_kwargs={"reasoning_content": "根部思考"}), {})),
+        ]
+        events = self._events(chunks)
+        reasoning = "".join(e["delta"] for e in events if e["type"] == "reasoning_delta")
+        self.assertEqual(reasoning, "根部思考")
+
     def test_tool_json_never_streams_as_answer_even_on_messages_only(self) -> None:
         """回归（thome 报的问题）：工具返回的原始 JSON 绝不能混进回答正文。
 
@@ -275,6 +308,10 @@ class TranslateTests(unittest.TestCase):
         self.assertEqual(step["args"], {"query": "x"})
         self.assertEqual(step["evidenceIds"], [PAPER_ID])
         self.assertEqual(step["summary"]["papers"], 1)
+        # 完整证据引用随事件一起到界面（含原文），否则点开引用只有一个 id。
+        self.assertEqual(len(step["evidenceRefs"]), 1)
+        self.assertEqual(step["evidenceRefs"][0]["sourceId"], PAPER_ID)
+        self.assertEqual(step["evidenceRefs"][0]["evidenceLevel"], "title")
 
         answer = next(e for e in events if e["type"] == "answer")
         # 权威全文 = 最后一次工具结果之后的正文，旁白与工具 JSON 都不在

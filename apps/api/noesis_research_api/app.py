@@ -42,8 +42,19 @@ from kg_client import (
 
 from .document_routes import router as document_router
 from .document_store import DocumentStore
+from .explain import Explainer, ExplainBadResponse
+from .explain_routes import router as explain_router
 from .models import ErrorModel, ErrorResponse
 from .routes import router
+from .translate import (
+    FileCache,
+    LLMNotConfigured,
+    TranslateBadResponse,
+    TranslateUnavailable,
+    Translator,
+    resolve_cache_dir,
+)
+from .translate_routes import router as translate_router
 
 logger = logging.getLogger(__name__)
 
@@ -83,6 +94,14 @@ _ERROR_STATUS: tuple[tuple[type[Exception], int, str], ...] = (
     (KGInvalidRequest, 400, "invalid_request"),
     (KGNotFound, 404, "not_found"),
     (KGError, 502, "kg_bad_response"),
+    # Translation failures follow the same rule: an outage (503) must never be
+    # answered with the original text pretending to be a translation.
+    (LLMNotConfigured, 503, "llm_not_configured"),
+    (TranslateUnavailable, 503, "translate_unavailable"),
+    (TranslateBadResponse, 502, "translate_bad_response"),
+    # Explanation failures: same rule — a model outage is never answered with
+    # made-up-sounding prose; a non-conforming answer is refused outright.
+    (ExplainBadResponse, 502, "explain_bad_response"),
 )
 
 
@@ -101,6 +120,8 @@ def create_app(
     settings: Settings | None = None,
     kg_client: KGClient | None = None,
     document_store: DocumentStore | None = None,
+    translator: Translator | None = None,
+    explainer: Explainer | None = None,
 ) -> FastAPI:
     """Build the application.
 
@@ -108,7 +129,10 @@ def create_app(
     without a database: a fake transport plus a real client exercises exactly
     the code path production uses. ``document_store`` is likewise injectable
     (tests pass a temp-rooted store); production defaults to
-    ``.data/documents`` under the repository root.
+    ``.data/documents`` under the repository root. ``translator`` follows the
+    same pattern: tests inject one backed by a fake LLM transport, production
+    builds one from the shared ``LLM_*`` environment with a disk cache under
+    ``.data/translations``.
     """
     resolved = settings or Settings.from_env()
     app = FastAPI(
@@ -133,6 +157,12 @@ def create_app(
         app.state.documents = DocumentStore(
             Path(__file__).resolve().parents[3] / ".data" / "documents"
         )
+    app.state.translator = translator or Translator(
+        cache=FileCache(resolve_cache_dir()),
+    )
+    app.state.explainer = explainer or Explainer(
+        cache=FileCache(resolve_cache_dir(), required_field="brief"),
+    )
 
     for exc_type, status_code, code in _ERROR_STATUS:
         app.add_exception_handler(exc_type, _error_handler(status_code, code))
@@ -149,6 +179,8 @@ def create_app(
 
     app.include_router(router)
     app.include_router(document_router)
+    app.include_router(translate_router)
+    app.include_router(explain_router)
     return app
 
 

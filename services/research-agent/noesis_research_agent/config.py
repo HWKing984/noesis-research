@@ -38,6 +38,12 @@ class AgentSettings:
     llm_base_url: str | None
     llm_model: str
     temperature: float = DEFAULT_LLM_TEMPERATURE
+    # -- external metadata sources (abstract-level evidence) ------------------
+    #: ``None`` means "use the client's own defaults / environment".
+    external_sources: tuple[str, ...] | None = None
+    external_cache_dir: str | None = None
+    external_timeout: float | None = None
+    external_s2_api_key: str | None = None
 
     @classmethod
     def from_env(cls) -> "AgentSettings":
@@ -49,6 +55,8 @@ class AgentSettings:
         if timeout <= 0:
             timeout = DEFAULT_KG_TIMEOUT_SECONDS
 
+        from metadata_client import resolve_s2_api_key, resolve_sources  # noqa: PLC0415
+
         return cls(
             kg_base_url=resolve_base_url(),
             expected_graph_id=resolve_expected_graph_id(),
@@ -56,6 +64,10 @@ class AgentSettings:
             llm_api_key=os.environ.get(ENV_LLM_API_KEY, "").strip(),
             llm_base_url=(os.environ.get(ENV_LLM_BASE_URL, "").strip() or None),
             llm_model=os.environ.get(ENV_LLM_MODEL, "").strip(),
+            external_sources=resolve_sources(),
+            external_cache_dir=os.environ.get("EXTERNAL_CACHE_DIR", "").strip() or None,
+            external_timeout=None,
+            external_s2_api_key=resolve_s2_api_key(),
         )
 
     def missing_for_run(self) -> tuple[str, ...]:

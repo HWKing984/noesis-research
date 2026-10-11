@@ -101,6 +101,16 @@ export function createResearchApi(base = DEFAULT_API_BASE) {
     graphNeighbors: (publicationId, mode = 'paper', limit = 15, options = {}) =>
       request(base, '/api/graph/neighbors', { id: publicationId, mode, limit }, options),
 
+    // -- 点击翻译（阅读辅助；译文不是证据，校验见 lib/translate.js） --
+    /** 503/502 会带各自的 error.code，由 describeTranslateError 分开说清。 */
+    translate: (text, kind = 'text', options) =>
+      request(base, '/api/translate', undefined, {
+        ...options,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...(options?.headers || {}) },
+        body: JSON.stringify({ text, kind }),
+      }),
+
     // -- 原文阅读（paper-reader 端点；状态机见 packages/contracts/document.py） --
     /** 全文可得性：status ∈ none / 五态。`status:'none'` 表示尚未调查（不是失败）。 */
     documentStatus: (publicationId, options) =>
@@ -150,6 +160,15 @@ export function describeApiError(error) {
       return { title: '没有这条记录', detail: error.message, kind: 'not_found' };
     case 'network_error':
       return { title: '连不上研究 API', detail: error.message, kind: 'offline' };
+    // 翻译的三种失败各自可辨（与 lib/translate.js 的 describeTranslateError 呼应）
+    case 'llm_not_configured':
+      return { title: '翻译服务未配置', detail: '服务端缺少 LLM_API_KEY / LLM_MODEL（503）。', kind: 'unconfigured' };
+    case 'translate_unavailable':
+      return { title: '翻译服务不可用', detail: '上游模型未响应（503）。原文不会被当成译文显示。', kind: 'unavailable' };
+    case 'translate_bad_response':
+      return { title: '翻译结果不可信', detail: '上游没有返回可用的中文译文（502）。', kind: 'unavailable' };
+    case 'explain_bad_response':
+      return { title: '解释结果不可信', detail: '上游没有按约定结构返回可用的解释（502）。', kind: 'unavailable' };
     default:
       return { title: '请求失败', detail: `${error.code}：${error.message}`, kind: 'unknown' };
   }

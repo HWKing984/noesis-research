@@ -25,3 +25,6 @@ tmp/
 # Mirrors the `参考/` convention used in the NOESIS repository (see its THIRD_PARTY_NOTICES.md).
 # Provenance for each clone is recorded in reference/README.md.
 reference/
+
+# Assistant session workspace (memory logs) — local only
+.workbuddy/

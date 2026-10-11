@@ -1,0 +1,5 @@
+kg8765 up=True
+GET /api/health -> HTTP 503: {"error":{"code":"kg_graph_version_mismatch","message":"/api/health: graphId 'ai-literature-63686318d85cccb07afb' != pinned 'ai-literature-ed16399925fac2a599ed'"}}
+GET /api/papers/search?q=transformer&limit=3 -> HTTP 503: {"error":{"code":"kg_graph_version_mismatch","message":"/api/publications[data][0]: graphId 'ai-literature-63686318d85cccb07afb' != pinned 'ai-literature-ed16399925fac2a599ed'"}}
+GET /api/graph/stats -> HTTP 404: {"detail":"Not Found"}
+api stopped

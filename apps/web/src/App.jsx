@@ -6,6 +6,7 @@ import AgentChat from './components/AgentChat.jsx';
 import EvidenceRail from './components/EvidenceRail.jsx';
 import ReaderView from './components/ReaderView.jsx';
 import Sidebar from './components/Sidebar.jsx';
+import TranslateHost from './components/TranslatePop.jsx';
 import { SearchBar, AppliedEcho, PaperList } from './components/SearchPanel.jsx';
 import { DetailPanel, GraphPanel } from './components/InspectorPanel.jsx';
 import {
@@ -26,8 +27,21 @@ const TABS = [
   { key: 'graph', label: '局部图谱' },
 ];
 
+/**
+ * 全文可得性 → 详情栏标签。语义与 ReaderView 的五态文案一致，**只用来标注**，
+ * 不再当作进入阅读视图的闸门。
+ */
+const DOC_STATUS_LABEL = {
+  available: '全文已缓存',
+  none: '全文未调查',
+  no_oa_found: '未收录全文',
+  fetch_failed: '获取失败',
+  restricted: '版权受限',
+  publisher_link_only: '仅出版社页',
+};
+
 const IDLE_TURN = {
-  runId: null, question: '', events: [], answer: '', citation: null, status: 'idle', error: null,
+  runId: null, question: '', events: [], answer: '', reasoning: '', citation: null, status: 'idle', error: null,
 };
 
 /** 只把非空字段送给后端；空字段一律不发，保证回显与实参一致。 */
@@ -233,30 +247,40 @@ function LibraryView({ api, initialPublicationId, onConsumeInitial, inspection, 
               </span>
             ) : null}
             {selectedId ? (
-              docRef?.status === 'available' ? (
+              // 开闸：任何论文都能进阅读视图。详情栏这里只**如实标注**全文可得性，
+              // 不再拿 `available` 当入口闸门 —— 否则「上传 PDF / 重试获取」这些
+              // 兜底动作全在 ReaderView 内部，进不去就永远拿不到全文（死锁）。
+              <span
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  marginLeft: 8, marginBottom: 4, flex: '0 0 auto',
+                }}
+              >
+                {docRef ? (
+                  <span
+                    data-testid="read-full-state"
+                    data-status={docRef.status}
+                    title={docRef.detail || docRef.status}
+                    style={{
+                      fontSize: 11, padding: '2.5px 9px', borderRadius: 999,
+                      border: '1px solid var(--border-default)', background: 'var(--pill-bg)',
+                      color: 'var(--text-tertiary)', whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {DOC_STATUS_LABEL[docRef.status] || DOC_STATUS_LABEL.none}
+                  </span>
+                ) : null}
                 <button
                   type="button"
                   className="btn btn--ink"
                   data-testid="read-full-btn"
-                  style={{ marginLeft: 8, marginBottom: 4, flex: '0 0 auto' }}
+                  data-status={docRef?.status || 'loading'}
+                  style={{ flex: '0 0 auto' }}
                   onClick={() => onOpenReader?.(selectedId)}
                 >
-                  阅读全文 →
+                  {docRef?.status === 'available' ? '阅读全文 →' : '进入阅读 →'}
                 </button>
-              ) : docRef ? (
-                <span
-                  data-testid="read-full-state"
-                  title={docRef.detail || docRef.status}
-                  style={{
-                    marginLeft: 8, marginBottom: 4, flex: '0 0 auto',
-                    fontSize: 11, padding: '2.5px 9px', borderRadius: 999,
-                    border: '1px solid var(--border-default)', background: 'var(--pill-bg)',
-                    color: 'var(--text-tertiary)', whiteSpace: 'nowrap',
-                  }}
-                >
-                  {docRef.status === 'none' ? '全文未调查' : docRef.status === 'no_oa_found' ? '未收录全文' : docRef.status === 'fetch_failed' ? '获取失败' : docRef.status === 'restricted' ? '版权受限' : '仅出版社页'}
-                </span>
-              ) : null
+              </span>
             ) : null}
           </nav>
           <ErrorBanner error={graphError} onRetry={() => loadGraph(selectedId, graphMode)} />
@@ -331,7 +355,17 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
       closeStream();
       const append = (m) => {
         const event = JSON.parse(m.data);
-        setTurns((prev) => prev.map((turn, i) => (i === turnIndex ? { ...turn, events: [...turn.events, event] } : turn)));
+        setTurns((prev) => prev.map((turn, i) => {
+          if (i !== turnIndex) return turn;
+          // 工具边界 = 思考/回答的分界（C 方向思考链）：此前流式出来的正文其实是
+          // 研究计划与过渡说明，不是回答 —— 就地重分类进推演区。最终 answer 事件
+          // 仍是权威全文（后端只认"最后一次工具结果之后"的正文，语义未动）。
+          const isBoundary = event.type === 'tool_step' || event.type === 'tool_error' || event.type === 'run_retry';
+          const reasoning = isBoundary && turn.answer
+            ? (turn.reasoning ? `${turn.reasoning}\n\n` : '') + turn.answer
+            : turn.reasoning;
+          return { ...turn, events: [...turn.events, event], reasoning, answer: isBoundary ? '' : turn.answer };
+        }));
       };
       sourceRef.current = new EventSource(agentApi.eventsUrl(runId));
       const source = sourceRef.current;
@@ -340,6 +374,12 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
       source.addEventListener('tool_result', append);
       source.addEventListener('tool_error', append);
       source.addEventListener('run_retry', append);
+      source.addEventListener('reasoning_delta', (m) => {
+        const payload = JSON.parse(m.data);
+        setTurns((prev) => prev.map((turn, i) => (
+          i === turnIndex ? { ...turn, reasoning: (turn.reasoning || '') + (payload.delta || '') } : turn
+        )));
+      });
       source.addEventListener('failed', (m) => {
         const payload = JSON.parse(m.data);
         updateTurn(turnIndex, {
@@ -406,6 +446,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
             runId: turn.runId,
             question: turn.question,
             answer: turn.answer,
+            reasoning: '',
             status: 'ok',
           })),
         );
@@ -457,11 +498,28 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
     return map;
   }, [papers]);
 
+  // 事件流里带的**完整**证据引用（含摘要原文）。点开引用时要看到原文，
+  // 而不是回落到一个只有 id 的题名级 ref。
+  const evidenceRefById = useMemo(() => {
+    const map = new Map();
+    for (const turn of turns) {
+      for (const event of turn.events) {
+        for (const ref of event?.evidenceRefs || []) {
+          if (ref?.sourceId && !map.has(ref.sourceId)) map.set(ref.sourceId, ref);
+        }
+      }
+    }
+    return map;
+  }, [turns]);
+
   const onCited = useCallback(
     (id) => {
       const paper = paperTitleById.get(id);
+      const known = evidenceRefById.get(id);
       setInspection({
-        reference: {
+        // 有完整证据就用它（可能是 abstract 级、带摘要原文）；没有才回落到
+        // 「题名级、只有 id」这个最小形态 —— 不假装知道得更多。
+        reference: known || {
           sourceType: 'kg_bibliography',
           sourceId: id,
           publicationId: id,
@@ -473,7 +531,7 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
         context: { title: paper || id, publicationId: id },
       });
     },
-    [paperTitleById],
+    [paperTitleById, evidenceRefById],
   );
 
   const openPaper = useCallback((publicationId) => {
@@ -532,8 +590,18 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
                 <div className="rd-state-card">
                   <div className="rd-state-title">从一篇论文进入阅读</div>
                   <div className="rd-state-desc">
-                    阅读器一次只读一篇：在「科研助手」的回答里点引用上标，或在「论文库与图谱」打开详情后点
-                    「阅读全文」，即可进入本视图。
+                    阅读器一次只读一篇：在「论文库与图谱」选中一篇论文，点详情栏右上角的「进入阅读」即可
+                    （已缓存全文时显示「阅读全文」）。回答里的引用上标打开的是证据详情，不是阅读器。
+                  </div>
+                  <div className="rd-state-btns">
+                    <button
+                      type="button"
+                      className="btn btn--ink"
+                      data-testid="reader-empty-to-library"
+                      onClick={() => setView('library')}
+                    >
+                      去论文库选一篇 →
+                    </button>
                   </div>
                 </div>
               </div>
@@ -556,6 +624,10 @@ export default function App({ api: injectedApi, agentApi: injectedAgentApi }) {
         onClose={() => setInspection(null)}
         onOpenPaper={openPaper}
       />
+
+      {/* 点击翻译：document 级事件委托一次挂好，rail / 详情面板 / 证据抽屉里的
+          .tr-anchor 自动可用。译文不是证据 —— 不进引用核查。 */}
+      <TranslateHost api={api} />
     </div>
   );
 }

@@ -77,7 +77,13 @@ export default function EvidenceRail({ papers, onInspect, busy }) {
                     })
                   }
                 >
-                  <div className="t">{paper.title || paper.publicationId}</div>
+                  <div className="t">
+                    {/* 点击翻译锚点：标题上的点击由 TranslateHost 在 capture 阶段拦下，
+                        因此不会触发卡片的 onInspect；点卡片其余区域仍是查看证据。 */}
+                    <span className="tr-anchor" data-tr-text={paper.title || ''} data-tr-kind="title">
+                      {paper.title || paper.publicationId}
+                    </span>
+                  </div>
                   <div className="m">
                     {paper.year ? <span>{paper.year}</span> : null}
                     <span className="lv">{level}</span>

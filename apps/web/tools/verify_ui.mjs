@@ -211,7 +211,19 @@ const PROBE = `(() => {
     readerAnchors: qa('[data-testid="reader-anchors"] .rd-anchor').length,
     readFullBtn: Boolean(q('[data-testid="read-full-btn"]')),
     readFullState: q('[data-testid="read-full-state"]')?.textContent || '',
+    readerUploadBtn: Boolean(q('[data-testid="reader-upload"]')),
+    readerRetryBtn: Boolean(q('[data-testid="reader-retry"]')),
+    readerEmptyCta: Boolean(q('[data-testid="reader-empty-to-library"]')),
     drawerPresent: Boolean(q('[data-testid="evidence-drawer"]')),
+    // 元素存在 ≠ 用户看得见：抽屉默认 translateX(102%)，靠 body.is-drawer 拉回来。
+    // 2026-10-10 之前那个类从未被加上，抽屉一直停在屏幕外 —— 而这里的断言只查
+    // textContent，所以它长期"通过"。这条几何断言就是为堵这个洞加的。
+    drawerVisible: (() => {
+      const el = q('[data-testid="evidence-drawer"]');
+      if (!el) return false;
+      const rect = el.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0 && rect.left < window.innerWidth && rect.right > 0;
+    })(),
     drawerFields: q('[data-testid="drawer-fields"]')?.textContent || '',
     drawerText: q('[data-testid="evidence-drawer"]')?.textContent || '',
     errorBanner: q('[data-testid="error-banner"]')?.textContent || '',
@@ -377,6 +389,7 @@ async function main() {
     await session.waitFor(`!!document.querySelector('[data-testid="evidence-drawer"]')`, { timeout: 15000 });
     probe = await session.eval(PROBE);
     add('证据抽屉可以打开', probe.drawerPresent === true);
+    add('抽屉真的在视口里（不是滑出屏幕外）', probe.drawerVisible === true, 'body.is-drawer 是否生效');
     add('抽屉里有来源 id 与深度', probe.drawerText.includes(probe.firstSourceId) && /题名|摘要|全文/.test(probe.drawerFields), probe.firstSourceId);
     add('抽屉把「不能证明什么」写清楚', /不能证明/.test(probe.drawerText), '');
     await session.eval(`(() => { document.querySelector('[data-testid="drawer-open-paper"]').click(); return true; })()`);
@@ -400,6 +413,12 @@ async function main() {
       probe.readerEmpty.includes('从一篇论文进入阅读') || probe.readerPresent === true,
       probe.readerEmpty.slice(0, 60),
     );
+    add(
+      'reader 空态指向真实入口并给出出口按钮',
+      probe.readerPresent === true
+        || (probe.readerEmpty.includes('进入阅读') && probe.readerEmptyCta === true),
+      `empty="${probe.readerEmpty.slice(0, 50)}" cta=${probe.readerEmptyCta}`,
+    );
     // 回到论文库：视图切换会卸载 LibraryView（检索状态清空是既有行为）→ 重新检索
     await session.eval(`(() => {
       Array.from(document.querySelectorAll('[data-testid="view-tab"]'))
@@ -421,10 +440,33 @@ async function main() {
     await sleep(700); // 等 documentStatus 返回
     probe = await session.eval(PROBE);
     add(
-      '详情栏如实显示全文可得性（未调查≠可读）',
-      probe.readFullBtn === true || /全文未调查|未收录全文|获取失败|版权受限|仅出版社页/.test(probe.readFullState),
+      '详情栏恒可进入阅读，并如实标注全文可得性',
+      probe.readFullBtn === true
+        && /全文已缓存|全文未调查|未收录全文|获取失败|版权受限|仅出版社页/.test(probe.readFullState),
       `btn=${probe.readFullBtn} state=${probe.readFullState}`,
     );
+
+    // 开闸（2026-10-09）：点「进入阅读 / 阅读全文」必须真的进 reader。
+    // 之前 `available` 是入口闸门，而未就绪论文的兜底动作（上传 PDF / 重试获取）都在
+    // ReaderView 内部 —— 进不去就永远拿不到全文，形成死锁。真实点击驱动验证。
+    await session.eval(`(() => { document.querySelector('[data-testid="read-full-btn"]').click(); return true; })()`);
+    await session.waitFor(`!!document.querySelector('[data-testid="reader-view"]')`, { timeout: 15000 });
+    await sleep(900); // 等 ReaderView 的 documentStatus 返回
+    probe = await session.eval(PROBE);
+    add('点「进入阅读」真的进入阅读视图', probe.readerPresent === true, `status=${probe.readerStatus}`);
+    add(
+      '未就绪论文进 reader 走状态卡（绝不伪装可读）',
+      probe.readerStatus === 'available'
+        || /尚未调查|未收录|获取失败|受限|未获取到全文/.test(probe.readerStateBadge),
+      `status=${probe.readerStatus} badge=${probe.readerStateBadge}`,
+    );
+    if (probe.readerStatus !== 'available') {
+      add(
+        '非就绪态给出兜底动作（上传 PDF / 重试获取）',
+        probe.readerUploadBtn === true || probe.readerRetryBtn === true,
+        `upload=${probe.readerUploadBtn} retry=${probe.readerRetryBtn}`,
+      );
+    }
 
     // ---- 主界面：让 agent 真的跑一次（模型偶发"浅回答"时重试一次，两次都失败才算挂）----
     await session.eval(`(() => {
@@ -501,6 +543,10 @@ async function main() {
     add('引用结论与引用 id 自洽', consistent, `passes=${probe.citationPasses} cited=${probe.citedChips}`);
 
     // ---- 连续追问：同一会话第二轮（上下文连续性）----
+    // 侧栏会列出**历史会话**（服务端持久化，前几次验收的会话会留在列表里），
+    // 所以「总数 === 1」是环境耦合的判定 —— 改为「追问前后会话数不变」，
+    // 完成信号取「当前 active 会话的轮次显示为 2 轮」。
+    const sessionsBeforeFollowUp = probe.sessionItems;
     await session.eval(`(() => {
       const input = document.querySelector('[data-testid="agent-input"]');
       const setter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
@@ -512,16 +558,15 @@ async function main() {
     await session.waitFor(`document.querySelectorAll('.message-body--user').length >= 2`, { timeout: 30000 });
     await session.waitFor(`!!document.querySelector('[data-testid="agent-answer"]')`, { timeout: 420000 });
     await session.waitFor(
-      `(() => { const t = document.querySelector('[data-testid="agent-hint"]'); return true; })()`,
-      { timeout: 2000 },
-    );
-    // 等流结束：最后一轮的 verdict 稳定出现且侧栏会话只有 1 个（没有自动开新会话）
-    await session.waitFor(
-      `document.querySelectorAll('[data-testid="session-item"]').length === 1`,
-      { timeout: 90000 },
+      `(() => { const el = document.querySelector('.session-item.is-active'); return !!el && /2\\s*轮/.test(el.textContent); })()`,
+      { timeout: 120000 },
     );
     probe = await session.eval(PROBE);
-    add('连续追问不换会话', probe.sessionItems === 1, `会话数 ${probe.sessionItems}`);
+    add(
+      '连续追问不换会话',
+      probe.sessionItems === sessionsBeforeFollowUp,
+      `会话数 ${probe.sessionItems}（首轮后 ${sessionsBeforeFollowUp}）`,
+    );
     const userBubbles = await session.eval(`document.querySelectorAll('.message-body--user').length`);
     const assistantBubbles = await session.eval(`document.querySelectorAll('.message-body--assistant').length`);
     add('同会话两轮问答同屏', userBubbles >= 2 && assistantBubbles >= 2, `user=${userBubbles} assistant=${assistantBubbles}`);
@@ -537,6 +582,7 @@ async function main() {
     await session.waitFor(`!!document.querySelector('[data-testid="evidence-drawer"]')`, { timeout: 15000 });
     probe = await session.eval(PROBE);
     add('证据链卡片可打开抽屉', probe.drawerPresent === true);
+    add('证据链打开的抽屉也在视口里', probe.drawerVisible === true);
 
     if (SHOT) {
       const shot = await session.send('Page.captureScreenshot', { format: 'png' });

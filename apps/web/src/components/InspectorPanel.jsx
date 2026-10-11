@@ -18,7 +18,9 @@ export function DetailPanel({ detail, onInspect, onOpenPaper }) {
     <div className="space-y-4 px-5 py-4" data-testid="detail-panel">
       <div>
         <h2 className="text-[15px] font-semibold leading-snug" data-testid="detail-title">
-          {publication.title}
+          <span className="tr-anchor" data-tr-text={publication.title} data-tr-kind="title">
+            {publication.title}
+          </span>
         </h2>
         <div className="mono mt-1 text-[11px] text-[var(--ink-muted)]" data-testid="detail-id">
           {publication.publicationId}
