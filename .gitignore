@@ -46,6 +46,8 @@ kg_datasets/models/**/pytorch_model.bin
 /kg_datasets/dblp/dblp.xml.gz
 /kg_datasets/imdb/*.tsv.gz
 /outputs/AI-Literature-KG_*_submission.zip
+/outputs/AI-Literature-KG_*_FINAL.zip
+/docs/delivery/video/page@*.webm
 /outputs/delivery_relocated_*/
 
 # Oversized graph JSONL paths are listed below by the publication inventory.

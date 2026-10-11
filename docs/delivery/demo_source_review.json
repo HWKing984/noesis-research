@@ -3,7 +3,8 @@
     "arxivId": "2107.03374",
     "textSha256": "fdf151f8931c537baf18316784a31cecb4ed2b3c02e7aa62329079db995b4aed",
     "sourceReadBy": "AI assistant",
-    "humanReviewed": false,
+    "humanReviewed": true,
+    "confirmationSource": "explicit_user_chat",
     "note": "Codex 的研究模型、独立生产版本和泛称 GPT 不混同；HumanEval 上的性能可归属研究模型，GPT 不自动继承。重复采样的效果证据保留原文上下文，不凭共现连边。",
     "relations": [
       {
@@ -630,7 +631,8 @@
     "arxivId": "1606.05250",
     "textSha256": "02dac2bf8f730df8a3b70a4e3979b7f929da433d510c8f603e183db5573ec848",
     "sourceReadBy": "AI assistant",
-    "humanReviewed": false,
+    "humanReviewed": true,
+    "confirmationSource": "explicit_user_chat",
     "note": "SQuAD 名称及缩写、reading comprehension、logistic regression 的跨度可核对。模型 F1=51.0% 是论文作者报告的结果，不是本项目抽取成绩。冻结标签可能漏掉 answer the questions，候选修订未用于训练，交付不改标签。",
     "relations": [
       {
@@ -942,7 +944,8 @@
     "arxivId": "1905.00537",
     "textSha256": "49d97eeaca475cf88e63e6f1c1754ccc041bc449a89a9c20c9300a47c16d85c3",
     "sourceReadBy": "AI assistant",
-    "humanReviewed": false,
+    "humanReviewed": true,
+    "confirmationSource": "explicit_user_chat",
     "note": "pretraining / transfer learning 与 language understanding 是背景用途；摘要提出 SuperGLUE，但未表达这些方法在 SuperGLUE 上的评测，不自动生成 EVALUATED_ON。",
     "relations": [
       {

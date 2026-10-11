@@ -158,7 +158,7 @@ def main():
     original = server.RequestHandlerClass
     class DeliveryHandler(original):
         def do_GET(self):
-            static = {'/delivery-demo': 'demo.html', '/delivery-report': 'report.html'}
+            static = {'/': 'v1-home.html', '/delivery-demo': 'demo.html', '/delivery-report': 'report.html'}
             if self.path not in static:
                 return super().do_GET()
             if self.headers.get('Host') not in (f'127.0.0.1:{args.port}', f'localhost:{args.port}'):
@@ -169,7 +169,7 @@ def main():
             self.send_header('Content-Length', str(len(payload)))
             self.send_header('Cache-Control', 'no-store')
             self.send_header('X-Content-Type-Options', 'nosniff')
-            self.send_header('Content-Security-Policy', "default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; frame-ancestors 'none'; base-uri 'none'")
+            self.send_header('Content-Security-Policy', "default-src 'self'; img-src data:; connect-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; frame-ancestors 'none'; base-uri 'none'")
             self.end_headers(); self.wfile.write(payload)
     server.RequestHandlerClass = DeliveryHandler
     print(f'V1 ready: http://127.0.0.1:{args.port}/ | experimental evidence: /delivery-demo', flush=True)

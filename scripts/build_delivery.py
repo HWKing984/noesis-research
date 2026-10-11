@@ -79,6 +79,7 @@ def prepare():
     ner_test = read(ROOT/'kg_datasets/dblp/course_v4_runs/ner_final_test_20261006_09/test_result.json')
     re_test = read(ROOT/'kg_datasets/dblp/course_v4_runs/re_final_test_20261006_17/test_result.json')
     save('experiment_comparison.json', {'V1_title_historical_AI_test':{'NER':ner_test,'RE':re_test},
+                                      'referenceProvenance':read(OUT/'human_review_confirmation.json'),
                                       'V2_abstract_AI_dev':read(V2/'results.json'),
                                       'V2_bounded_controls_AI_dev':read(CONTROL/'results.json'),
                                       'crossTaskRankingAllowed':False,'fullV2PipelineF1':None,'test20Evaluated':False})
@@ -88,7 +89,14 @@ def prepare():
              '1606.05250':'SQuAD：100,000+ Questions for Machine Comprehension of Text',
              '1905.00537':'SuperGLUE：A Stickier Benchmark for General-Purpose Language Understanding Systems'}
     selected = [next(r for r in abstracts if r['arxivId']==id_) for id_ in names]
-    body = '<h1>冻结交付演示：V1 正式系统 / V2 摘要实验</h1><p><a href="/">打开 V1 实时检索</a> · <a href="/delivery-report">实验报告</a></p><p>蓝色 METHOD，绿色 TASK，黄色 DATASET。以下摘要实体及关系来自封存的 AI 弱参考，不是当前生产模型输出，也不是人工金标准。选择样例用于说明，不用于估计总体准确率。</p><h2>V1：五篇真实 Neo4j 文献</h2>'
+    provenance = read(OUT/'human_review_confirmation.json')
+    if provenance['confirmationSource'] != 'explicit_user_chat' or provenance['scope']['demoPapers'] != list(names):
+        raise ValueError('Demonstration human-review confirmation does not match frozen papers')
+    home = (ROOT/'resources/course_literature.html').read_text(encoding='utf-8')
+    if home.count('（AI参考、') != 2:
+        raise ValueError('Frozen home page reference wording changed')
+    (OUT/'v1-home.html').write_text(home.replace('（AI参考、','（AI初标后用户逐条人工审核、'),encoding='utf-8')
+    body = '<h1>冻结交付演示：V1 正式系统 / V2 摘要实验</h1><p><a href="/">打开 V1 实时检索</a> · <a href="/delivery-report">实验报告</a></p><p>蓝色 METHOD，绿色 TASK，黄色 DATASET。以下摘要实体及关系来自封存参考标签：AI 辅助初标、用户逐条人工审核，已裁决范围内作为人工复核金标准；不是当前生产模型输出。选择样例用于说明，不用于估计总体准确率。</p><h2>V1：五篇真实 Neo4j 文献</h2>'
     for d in demos:
         body += '<p><a href="/#paper='+urlencode({'id':d['publicationId']})[3:]+'&view=paper">'+html.escape(d['text'])+'</a> — '+html.escape(d['publicationId'])+'</p>'
     reviewed = []
@@ -99,7 +107,7 @@ def prepare():
             '2107.03374':'Codex 的研究模型、独立生产版本和泛称 GPT 不混同；HumanEval 上的性能可归属研究模型，GPT 不自动继承。重复采样的效果证据保留原文上下文，不凭共现连边。',
             '1606.05250':'SQuAD 名称及缩写、reading comprehension、logistic regression 的跨度可核对。模型 F1=51.0% 是论文作者报告的结果，不是本项目抽取成绩。冻结标签可能漏掉 answer the questions，候选修订未用于训练，交付不改标签。',
             '1905.00537':'pretraining / transfer learning 与 language understanding 是背景用途；摘要提出 SuperGLUE，但未表达这些方法在 SuperGLUE 上的评测，不自动生成 EVALUATED_ON。'}
-        body += '<article id="abstract-'+doc['arxivId']+'"><h2>'+html.escape(names[doc['arxivId']])+'</h2><p>来源：<a href="'+html.escape(doc['sourceURL'],quote=True)+'">'+html.escape(doc['sourceURL'])+'</a> · train 演示样例，非独立测试</p><p>'+highlight(doc['text'],doc['entities'])+'</p><p><strong>原文核对说明：</strong>'+notes[doc['arxivId']]+'</p><details open><summary>已裁决关系与原文证据（AI 弱标签）</summary>'
+        body += '<article id="abstract-'+doc['arxivId']+'"><h2>'+html.escape(names[doc['arxivId']])+'</h2><p>来源：<a href="'+html.escape(doc['sourceURL'],quote=True)+'">'+html.escape(doc['sourceURL'])+'</a> · train 演示样例，非独立测试</p><p>'+highlight(doc['text'],doc['entities'])+'</p><p><strong>原文核对说明：</strong>'+notes[doc['arxivId']]+'</p><details open><summary>已裁决关系与原文证据（用户逐条审核的人工参考）</summary>'
         unique = {}
         for r in rows:
             unique.setdefault((r['head']['text'],r['tail']['text'],r['label']),r)
@@ -110,14 +118,14 @@ def prepare():
                 if isinstance(span,dict) and 'start' in span and doc['text'][span['start']:span['end']] != span['text']:
                     raise ValueError('Relation evidence span mismatch')
             body += '<p><b>'+html.escape(r['head']['text']+' → '+r['label']+' → '+r['tail']['text'])+'</b><br>'+html.escape(str(r.get('reason','')))+'</p><pre>'+html.escape(json.dumps(evidence,ensure_ascii=False,indent=2))+'</pre>'
-        body += '</details><h3>AI 参考关系示意图（离线证据，不写入生产）</h3><svg viewBox="0 0 1000 240" role="img" aria-label="参考关系示意图"><defs><marker id="arrow'+doc['arxivId']+'" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#476580"/></marker></defs>'
+        body += '</details><h3>人工复核参考关系示意图（离线证据，不写入生产）</h3><svg viewBox="0 0 1000 240" role="img" aria-label="参考关系示意图"><defs><marker id="arrow'+doc['arxivId']+'" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#476580"/></marker></defs>'
         for i,r in enumerate(list({(r['head']['text'],r['tail']['text'],r['label']):r for r in positives}.values())[:3]):
             y = 42+i*72
             body += f'<rect x="10" y="{y-23}" width="325" height="48" rx="8" fill="#bfdbfe"/><rect x="660" y="{y-23}" width="330" height="48" rx="8" fill="'+('#fde68a' if r['tail']['label']=='DATASET' else '#bbf7d0')+f'"/><line x1="336" y1="{y}" x2="657" y2="{y}" stroke="#476580" marker-end="url(#arrow'+doc['arxivId']+f')"/><text x="24" y="{y+5}" font-size="14">'+html.escape(r['head']['text'][:43])+f'</text><text x="440" y="{y-8}" font-size="14">'+r['label']+f'</text><text x="674" y="{y+5}" font-size="14">'+html.escape(r['tail']['text'][:44])+'</text>'
-        body += '</svg><label><input type="checkbox" data-paper="'+doc['arxivId']+'">我已人工核对本篇实体、关系证据与演示限制</label></article>'
+        body += '</svg><p>人工审核状态：用户已在聊天中确认逐条审核，记录见 human_review_confirmation.json。</p><label><input type="checkbox" checked disabled data-paper="'+doc['arxivId']+'">已按用户聊天确认记录本篇人工审核（不是代替用户点击）</label></article>'
         reviewed.append({'arxivId':doc['arxivId'],'textSha256':doc['textSha256'],'sourceReadBy':'AI assistant',
-                         'humanReviewed':False,'note':notes[doc['arxivId']],'relations':rows})
-    body += '<button id="export">导出我的人工审核清单</button><script>document.getElementById("export").onclick=()=>{let rows=[...document.querySelectorAll("input[data-paper]")].map(e=>({arxivId:e.dataset.paper,humanConfirmed:e.checked}));let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify({scope:"demo_only_not_gold_dataset",reviewedAt:new Date().toISOString(),papers:rows},null,2)],{type:"application/json"}));a.download="demo-human-review.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};</script>'
+                         'humanReviewed':True,'confirmationSource':'explicit_user_chat','note':notes[doc['arxivId']],'relations':rows})
+    body += '<button id="export">导出人工审核确认清单</button><script>document.getElementById("export").onclick=()=>{let rows=[...document.querySelectorAll("input[data-paper]")].map(e=>({arxivId:e.dataset.paper,humanConfirmed:e.checked}));let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify({scope:"human_reviewed_demonstration_subset_of_frozen_Train65",confirmationSource:"explicit_user_chat",confirmationDate:"2026-10-11",exportedAt:new Date().toISOString(),papers:rows},null,2)],{type:"application/json"}));a.download="demo-human-review.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};</script>'
     (OUT/'demo.html').write_text(page('AI-Literature-KG 交付演示',body),encoding='utf-8')
     save('demo_source_review.json', reviewed)
     report()
@@ -129,8 +137,8 @@ def report():
     if source.exists():
         body = render(source.read_text(encoding='utf-8'))
         body += '<h2>附：本次真实浏览器截图</h2>'
-        for name, caption in [('02_chinese_search.png','V1 中文检索'),('03_entities_evidence.png','V1 实体及候选关系证据'),
-                              ('04_graph_paper.png','V1 真实 Neo4j 局部图'),('05_abstract_1606.05250.png','V2 冻结 AI 弱参考高亮及关系证据')]:
+        for name, caption in [('02_chinese_search.png','V1 中文检索（历史截图，标签来源以当前确认记录为准）'),('03_entities_evidence.png','V1 实体及候选关系证据'),
+                              ('04_graph_paper.png','V1 真实 Neo4j 局部图'),('05_abstract_1606.05250_final.png','V2 冻结人工复核参考高亮及关系证据')]:
             image = OUT/name
             if image.exists():
                 body += '<figure style="margin:20px 0;break-inside:avoid"><figcaption>'+caption+'</figcaption><img style="width:100%;height:auto" src="data:image/png;base64,'+base64.b64encode(image.read_bytes()).decode()+'"></figure>'
@@ -192,7 +200,7 @@ def package():
         raise ValueError('Sealed test inclusion forbidden')
     save('manifest.json', frozen)
     paths.add(OUT/'manifest.json')
-    archive = ROOT/'outputs/AI-Literature-KG_20261013_submission.zip'
+    archive = ROOT/'outputs/AI-Literature-KG_20261013_FINAL.zip'
     if archive.exists():
         raise FileExistsError('Preserve previously submitted ZIP')
     with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=1,allowZip64=True) as z:

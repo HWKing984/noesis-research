@@ -1,0 +1,18 @@
+{
+  "checkedDate": "2026-10-11",
+  "source": "actual_local_Edge_Playwright",
+  "homeReferenceWordingCorrected": true,
+  "humanReviewConfirmationSource": "explicit_user_chat",
+  "confirmedDemonstrationPapers": ["2107.03374", "1606.05250", "1905.00537"],
+  "confirmationCheckboxesDisplayedCheckedAndDisabled": true,
+  "noUserClickInvented": true,
+  "confirmationExportVerified": "demo-human-review-confirmed.json",
+  "reportPDFPrintedFromLivePage": true,
+  "fourEmbeddedImagesLoaded": true,
+  "JavaScriptErrors": [],
+  "realBrowserRecording": "video/provenance-update.webm",
+  "originalVideoPreserved": "video/demo.webm",
+  "frozenDataOrModelWeightsChanged": false,
+  "newTrainingOrEvaluationPerformed": false,
+  "test20Read": false
+}

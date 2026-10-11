@@ -1,0 +1,778 @@
+{
+  "status": "passed",
+  "liveHealth": {
+    "status": "ready",
+    "graphId": "ai-literature-63686318d85cccb07afb",
+    "source": "live_neo4j",
+    "scope": {
+      "bibliographyTitles": 20000,
+      "modelTitles": 19999,
+      "rejectedNERTitles": 1,
+      "candidateAssertions": 21497
+    },
+    "resolution": {
+      "oldPersonNodes": 72694,
+      "newPersonNodes": 75155,
+      "resolvedPersonNodes": 66093,
+      "unresolvedSignatureNodes": 9062,
+      "oldConceptNodes": 29839,
+      "newConceptNodes": 29836,
+      "controlledConceptNodes": 36,
+      "sourceConceptsGrouped": 3,
+      "authorSignatures": 88762,
+      "literalMentionsUnchanged": true,
+      "candidateAssertionCountUnchanged": true,
+      "modelReliabilityPromoted": false,
+      "controlledAliasGroups": 38,
+      "variantConceptNodes": 18,
+      "authorSignaturesUnchanged": true,
+      "liveDatabaseImported": false
+    },
+    "terminology": {
+      "version": "typed_controlled_aliases_v3",
+      "nodeLabels": {
+        "Publication": "论文/文献",
+        "Person": "作者",
+        "Venue": "会议/期刊",
+        "Concept": "概念",
+        "Mention": "实体提及",
+        "Assertion": "候选断言"
+      },
+      "entityLabels": {
+        "METHOD": "方法",
+        "TASK": "任务",
+        "DATASET": "数据集"
+      },
+      "relationshipLabels": {
+        "AUTHORED": "署名",
+        "PUBLISHED_IN": "发表于",
+        "MENTIONS": "提及",
+        "DENOTES": "指向概念",
+        "SUPPORTED_BY": "题名证据来自",
+        "HAS_HEAD": "头实体",
+        "HAS_TAIL": "尾实体",
+        "USED_FOR": "用于（候选）",
+        "EVALUATED_ON": "在数据集上评估（候选）"
+      },
+      "publicationTypes": {
+        "inproceedings": "会议论文",
+        "article": "期刊文章",
+        "proceedings": "会议论文集",
+        "book": "图书",
+        "incollection": "书中章节",
+        "phdthesis": "博士论文",
+        "mastersthesis": "硕士论文"
+      },
+      "aliases": [
+        {
+          "zh": "扩散模型",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "diffusion model",
+            "diffusion models"
+          ]
+        },
+        {
+          "zh": "知识图谱",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "knowledge graph",
+            "knowledge graphs"
+          ]
+        },
+        {
+          "zh": "图神经网络",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "graph neural network",
+            "graph neural networks"
+          ]
+        },
+        {
+          "zh": "卷积神经网络",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "convolutional neural network",
+            "convolutional neural networks"
+          ]
+        },
+        {
+          "zh": "神经网络",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "neural network",
+            "neural networks"
+          ]
+        },
+        {
+          "zh": "机器学习",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "machine learning"
+          ]
+        },
+        {
+          "zh": "深度学习",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "deep learning"
+          ]
+        },
+        {
+          "zh": "强化学习",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "reinforcement learning"
+          ]
+        },
+        {
+          "zh": "大语言模型",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "large language model",
+            "large language models"
+          ]
+        },
+        {
+          "zh": "大型语言模型",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "large language model",
+            "large language models"
+          ]
+        },
+        {
+          "zh": "对比学习",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "contrastive learning"
+          ]
+        },
+        {
+          "zh": "迁移学习",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "transfer learning"
+          ]
+        },
+        {
+          "zh": "联邦学习",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "federated learning"
+          ]
+        },
+        {
+          "zh": "自监督学习",
+          "fields": [
+            "q",
+            "method"
+          ],
+          "terms": [
+            "self-supervised learning"
+          ]
+        },
+        {
+          "zh": "命名实体识别",
+          "fields": [
+            "q",
+            "task"
+          ],
+          "terms": [
+            "named entity recognition"
+          ]
+        },
+        {
+          "zh": "关系抽取",
+          "fields": [
+            "q",
+            "task"
+          ],
+          "terms": [
+            "relation extraction"
+          ]
+        },
+        {
+          "zh": "机器翻译",
+          "fields": [
+            "q",
+            "task"
+          ],
+          "terms": [
+            "machine translation"
+          ]
+        },
+        {
+          "zh": "目标检测",
+          "fields": [
+            "q",
+            "task"
+          ],
+          "terms": [
+            "object detection"
+          ]
+        },
+        {
+          "zh": "图像分类",
+          "fields": [
+            "q",
+            "task"
+          ],
+          "terms": [
+            "image classification"
+          ]
+        },
+        {
+          "zh": "语义分割",
+          "fields": [
+            "q",
+            "task"
+          ],
+          "terms": [
+            "semantic segmentation"
+          ]
+        },
+        {
+          "zh": "推荐系统",
+          "fields": [
+            "q",
+            "task"
+          ],
+          "terms": [
+            "recommender system",
+            "recommender systems",
+            "recommendation system",
+            "recommendation systems"
+          ]
+        },
+        {
+          "zh": "AAAI会议",
+          "fields": [
+            "venue"
+          ],
+          "terms": [
+            "aaai"
+          ]
+        },
+        {
+          "zh": "大语言模型",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "large language model",
+            "large language models",
+            "llm",
+            "llms"
+          ]
+        },
+        {
+          "zh": "卷积神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "convolutional neural network",
+            "convolutional neural networks",
+            "cnn",
+            "cnns"
+          ]
+        },
+        {
+          "zh": "图神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "graph neural network",
+            "graph neural networks",
+            "gnn",
+            "gnns"
+          ]
+        },
+        {
+          "zh": "循环神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "recurrent neural network",
+            "recurrent neural networks",
+            "rnn",
+            "rnns"
+          ]
+        },
+        {
+          "zh": "深度神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "deep neural network",
+            "deep neural networks",
+            "dnn",
+            "dnns"
+          ]
+        },
+        {
+          "zh": "人工神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "artificial neural network",
+            "artificial neural networks",
+            "ann",
+            "anns"
+          ]
+        },
+        {
+          "zh": "长短期记忆网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "long short-term memory",
+            "long short term memory",
+            "lstm"
+          ]
+        },
+        {
+          "zh": "双向长短期记忆网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "bidirectional lstm",
+            "bidirectional lstms",
+            "bi-lstm",
+            "bilstm",
+            "bi-lstm"
+          ]
+        },
+        {
+          "zh": "图卷积网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "graph convolutional network",
+            "graph convolutional networks",
+            "gcn",
+            "gcns"
+          ]
+        },
+        {
+          "zh": "深度强化学习",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "deep reinforcement learning",
+            "drl"
+          ]
+        },
+        {
+          "zh": "多智能体强化学习",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "multi-agent reinforcement learning",
+            "multi agent reinforcement learning",
+            "marl"
+          ]
+        },
+        {
+          "zh": "视觉Transformer",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "vision transformer",
+            "vision transformers",
+            "vit",
+            "vits"
+          ]
+        },
+        {
+          "zh": "Transformer",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "transformer",
+            "transformers"
+          ]
+        },
+        {
+          "zh": "生成式人工智能",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "generative artificial intelligence",
+            "generative ai"
+          ]
+        },
+        {
+          "zh": "深度卷积神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "deep convolutional neural network",
+            "deep convolutional neural networks",
+            "dcnn",
+            "dcnns"
+          ]
+        },
+        {
+          "zh": "脉冲神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "spiking neural network",
+            "spiking neural networks",
+            "snn",
+            "snns"
+          ]
+        },
+        {
+          "zh": "基础模型",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "foundation model",
+            "foundation models"
+          ]
+        },
+        {
+          "zh": "多模态大语言模型",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "multimodal large language model",
+            "multimodal large language models",
+            "multimodal llm",
+            "multimodal llms"
+          ]
+        },
+        {
+          "zh": "物理信息神经网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "physics-informed neural network",
+            "physics-informed neural networks",
+            "physics informed neural network",
+            "physics informed neural networks",
+            "pinn",
+            "pinns"
+          ]
+        },
+        {
+          "zh": "支持向量机",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "support vector machine",
+            "support vector machines",
+            "svm",
+            "svms"
+          ]
+        },
+        {
+          "zh": "生成对抗网络",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "generative adversarial network",
+            "generative adversarial networks",
+            "gan",
+            "gans"
+          ]
+        },
+        {
+          "zh": "命名实体识别",
+          "fields": [
+            "task"
+          ],
+          "terms": [
+            "named entity recognition",
+            "ner"
+          ]
+        },
+        {
+          "zh": "视觉问答",
+          "fields": [
+            "task"
+          ],
+          "terms": [
+            "visual question answering",
+            "vqa"
+          ]
+        },
+        {
+          "zh": "问答",
+          "fields": [
+            "task"
+          ],
+          "terms": [
+            "question answering"
+          ]
+        },
+        {
+          "zh": "文本分类",
+          "fields": [
+            "task"
+          ],
+          "terms": [
+            "text classification"
+          ]
+        },
+        {
+          "zh": "情感分析",
+          "fields": [
+            "task"
+          ],
+          "terms": [
+            "sentiment analysis"
+          ]
+        },
+        {
+          "zh": "神经机器翻译",
+          "fields": [
+            "task"
+          ],
+          "terms": [
+            "neural machine translation",
+            "nmt"
+          ]
+        },
+        {
+          "zh": "SQuAD",
+          "fields": [
+            "dataset"
+          ],
+          "terms": [
+            "squad",
+            "stanford question answering dataset"
+          ]
+        },
+        {
+          "zh": "MMLU",
+          "fields": [
+            "dataset"
+          ],
+          "terms": [
+            "mmlu",
+            "massive multitask language understanding"
+          ]
+        },
+        {
+          "zh": "BERT",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "bert",
+            "bidirectional encoder representations from transformers"
+          ]
+        },
+        {
+          "zh": "GPT-4",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "gpt-4",
+            "gpt4",
+            "gpt 4"
+          ]
+        },
+        {
+          "zh": "GPT-4o",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "gpt-4o",
+            "gpt4o",
+            "gpt 4o"
+          ]
+        },
+        {
+          "zh": "YOLOv3",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "yolov3",
+            "yolo v3",
+            "yolo-v3"
+          ]
+        },
+        {
+          "zh": "YOLOv5",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "yolov5",
+            "yolo v5",
+            "yolo-v5"
+          ]
+        },
+        {
+          "zh": "YOLOv8",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "yolov8",
+            "yolo v8",
+            "yolo-v8"
+          ]
+        },
+        {
+          "zh": "低秩适配",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "low-rank adaptation",
+            "lora"
+          ]
+        },
+        {
+          "zh": "检索增强生成",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "retrieval-augmented generation",
+            "rag"
+          ]
+        },
+        {
+          "zh": "随机森林",
+          "fields": [
+            "method"
+          ],
+          "terms": [
+            "random forest",
+            "random forests"
+          ]
+        }
+      ]
+    },
+    "conceptVocabulary": {
+      "version": "typed_controlled_aliases_v3",
+      "sha256": "8046177aa77160b0ce78b8d10c7f2ede43e18d8ce59b9e86220292cf38756a91",
+      "aliasesAreCuratedNotFacts": true,
+      "modelReliabilityPromoted": false
+    },
+    "appCodeSha256": "6db2411dc2aa41e4792871d89ed753c36f64de409c7e91cc002ea603c7a27ebd",
+    "liveImportCompleted": true
+  },
+  "HTTPChecks": [
+    {
+      "route": "/api/health",
+      "status": 200
+    },
+    {
+      "route": "/api/publications?method=%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&limit=5",
+      "status": 200
+    },
+    {
+      "route": "/api/publication?id=conf%2Fseeda%2FVonitsanosESKM25",
+      "status": 200
+    },
+    {
+      "route": "/api/graph?id=conf%2Fseeda%2FVonitsanosESKM25&mode=paper",
+      "status": 200
+    },
+    {
+      "route": "/api/graph?id=conf%2Fseeda%2FVonitsanosESKM25&mode=coauthors",
+      "status": 200
+    },
+    {
+      "route": "/api/graph?id=conf%2Fseeda%2FVonitsanosESKM25&mode=methods",
+      "status": 200
+    },
+    {
+      "route": "/api/publications?limit=0",
+      "status": 400
+    },
+    {
+      "route": "/api/publication?id=delivery-missing-paper",
+      "status": 404
+    },
+    {
+      "route": "/api/health?unexpected=1",
+      "status": 400
+    }
+  ],
+  "graphViews": {
+    "paper": {
+      "nodes": 15,
+      "edges": 18
+    },
+    "coauthors": {
+      "nodes": 10,
+      "edges": 11
+    },
+    "methods": {
+      "nodes": 65,
+      "edges": 64
+    }
+  },
+  "modelQualityReevaluated": false,
+  "test20Read": false
+}

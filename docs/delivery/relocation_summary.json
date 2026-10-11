@@ -1,0 +1,17 @@
+{
+  "checkedDate": "2026-10-11",
+  "sourceArchive": "AI-Literature-KG_20261013_submission.zip",
+  "extractedToSeparateDirectory": true,
+  "freshValidationEnvironmentCreated": true,
+  "python": "3.13.3",
+  "dependencyInstallSucceeded": true,
+  "StartDeliveryVerifyOnlyExitCode": 0,
+  "filesVerified": 498,
+  "HTTPChecksPassed": 9,
+  "relocatedServerPort": 8767,
+  "relocatedRuntimeReceipt": "relocated_runtime_check.json",
+  "sharedExistingNeo4j": true,
+  "newEmptyDatabaseImportChecked": false,
+  "otherMachineChecked": false,
+  "note": "Relocation checked before the subsequent human-label provenance correction; corrected code gets separate regression and live checks. No model weights or frozen data changed."
+}

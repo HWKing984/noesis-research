@@ -310,6 +310,45 @@
       "notice": "One locked RE test pass; pipeline reuses prior frozen NER test predictions, no new NER test pass. Scores on fully resolved AI-reference subset, not human gold or complete-queue accuracy. No thresholds tuned; no application quality promotion."
     }
   },
+  "referenceProvenance": {
+    "confirmedDate": "2026-10-11",
+    "confirmationSource": "explicit_user_chat",
+    "reviewer": "project_user",
+    "annotationProtocol": "AI-assisted initial annotation followed by itemwise human review",
+    "referenceClassification": "human_reviewed_gold_for_adjudicated_scope",
+    "userConfirmations": [
+      "都审核了，忘了勾选了",
+      "就是人工金标准，是我一步步审核的",
+      "V2 的 Train65 和 Dev20 都已逐条审核",
+      "V1也是，AI 辅助初标、用户逐条审核的人工参考标签"
+    ],
+    "scope": {
+      "V1": "User-confirmed itemwise human review of V1 reference labels; not all 20,000 predictions",
+      "V2": "Frozen Train65 and Dev20 itemwise reviewed; UNRESOLVED pairs remain unscored",
+      "demoPapers": [
+        "2107.03374",
+        "1606.05250",
+        "1905.00537"
+      ]
+    },
+    "frozenBindings": {
+      "kg_datasets/dblp/course_v2_train65_dev20_textscope_20261011_final/manifest.json": "2b3a046f8e05d3d86d075d8b6b89b095f2cf67c372ae23b8b5d7134fa1831e84",
+      "kg_datasets/dblp/course_v4_runs/ner_final_test_20261006_09/manifest.json": "0e64965da7f521cebded4bf01afc6cfe3d40aeb84685bec5e1fce9d56d1a1602",
+      "kg_datasets/dblp/course_v4_runs/re_final_test_20261006_17/manifest.json": "ce9697e286c4532d9e6b18b114b7d96eae65432e5b4f3cadfbc4629b0d4191af",
+      "kg_datasets/dblp/course_v4_runs/ner_final_test_20261006_09/test_result.json": "5672f928646c3234141b188654140dd3f57d85ba3c24fd013442f3533a2d69ce",
+      "kg_datasets/dblp/course_v4_runs/re_final_test_20261006_17/test_result.json": "fbf939e5ef820aae7520025ca6032b602590d7e394171764718178951fcb40e0",
+      "outputs/v2_textscope_once_20261011_run/results.json": "3bf0653ddb8a3fce4ae7e57f19409a8fce3cdb499e50344d6c151b2bf296b9df",
+      "outputs/v2_targeted_controls_20261011/results.json": "5acca6cc33f50823f88baec6ed42b4b917e8a926c0616394d9cc53e0317f46db"
+    },
+    "independentSecondReviewerVerified": false,
+    "fullCorpusPredictionsHumanVerified": false,
+    "dataLabelsChanged": false,
+    "modelWeightsChanged": false,
+    "scoresRecomputed": false,
+    "test20Read": false,
+    "fullV2PipelineF1": null,
+    "originalMetadataPolicy": "Historical AI_reference/humanGold=false fields and video are retained unchanged. This sidecar records the later user confirmation, not a new evaluation or independent blind test."
+  },
   "V2_abstract_AI_dev": {
     "NER": {
       "bestEpoch": 5,
